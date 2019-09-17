@@ -1,0 +1,12 @@
+pandas
+matplotlib
+numpy
+requests
+IPython
+seaborn
+scipy
+networkx
+wordcloud
+community
+python-louvain
+dhlab
