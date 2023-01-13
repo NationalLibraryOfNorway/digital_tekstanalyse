@@ -1,14 +1,14 @@
-pandas = "*"
-matplotlib = "*"
-numpy = "*"
-requests = "*"
-ipython = "*"
-seaborn = "*"
-scipy = "*"
-networkx = "*"
-wordcloud = "*"
-community = "*"
-python-louvain = "*"
-dhlab = "*"
-wheel = "*"
-openpyxl = "*"
+pandas
+matplotlib
+numpy
+requests
+ipython
+seaborn
+scipy
+networkx
+wordcloud
+community
+python-louvain
+dhlab
+wheel
+openpyxl
