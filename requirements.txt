@@ -12,5 +12,5 @@ python-louvain
 dhlab
 wheel
 openpyxl
-# gensim
-# pyLDAvis
+gensim
+pyLDAvis
