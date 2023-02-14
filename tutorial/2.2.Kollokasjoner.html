@@ -1,0 +1,1932 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>1.4. Kollokasjoner &#8212; DH-lab dokumenter</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.6. Frekvenslister" href="2.3.Frekvenslister.html" />
+    <link rel="prev" title="1.3. Konkordanser" href="2.1.Konkordans.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">DH-lab dokumenter</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    DHLAB
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bibliography/bibliography.html">
+   DH-lab bibliografi
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Kodeeksempler–Python
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../tutorial.html">
+   1. Tutorials
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="1.0.Oppstart.html">
+     1.1. Oppstart
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.0.Bygg_korpus.html">
+     1.2. Korpusbygging
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.1.Konkordans.html">
+     1.3. Konkordanser
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1.4. Kollokasjoner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.3.Frekvenslister.html">
+     1.6. Frekvenslister
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.4.S%C3%B8k_i_aviser.html">
+     1.7. Søk i aviser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.5.n-gram_og_galakser.html">
+     1.9. N-gram og galakser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.6.sammenlign_metadata.html">
+     1.10. Sammenlign metadata
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.0.ner_og_pos.html">
+     1.12. NER og POS med Spacy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.1.ordparadigmer.html">
+     1.13. Ordparadigmer med wordbank
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.2.dispersion.html">
+     1.14. Ordfordeling
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../cookbook.html">
+   2. Cookbooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cookbook/4.0.sentiment_analysis_timeseries.html">
+     2.1. Sentimentanalyse i aviskorpus
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cookbook/4.1.topic_modelling_with_LDA.html">
+     2.2. Topic modelling med gensim og dhlab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../cookbook/4.2.natbib_query.html">
+     2.3. Søk Nasjonalbibliografiens metadata med dhlab
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/tutorial/2.2.Kollokasjoner.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftutorial/2.2.Kollokasjoner.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/tutorial/2.2.Kollokasjoner.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   1.4. Kollokasjoner
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#konstruer-et-korpus-med-dewey">
+     1.4.1. Konstruer et korpus med Dewey
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lager-kollokasjoner-fra-korpuset">
+     1.4.2. Lager kollokasjoner fra korpuset
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bygg-kollokasjon">
+       1.4.2.1. Bygg kollokasjon
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#finn-referanse">
+       1.4.2.2. 2.2. Finn referanse
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#bokhylla-aggregert">
+         1.4.2.2.1. Bokhylla aggregert
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#aggregert-korpus">
+         1.4.2.2.2. 2.2.2. Aggregert korpus
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sammenlign">
+       1.4.2.3. Sammenlign
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id1">
+         1.4.2.3.1. 2.3.1. Aggregert korpus
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#bokhylla-total">
+         1.4.2.3.2. Bokhylla total
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#kollokasjonen">
+         1.4.2.3.3. 2.3.3. Kollokasjonen
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#utfor-sammenligning">
+         1.4.2.3.4. Utfør sammenligning
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#sammenlign-med-korpus">
+         1.4.2.3.5. 2.3.5. Sammenlign med korpus
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualiser-med-en-ordsky">
+   1.5. 3. Visualiser med en ordsky
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gjenbruk-med-andre-ord-og-korpus">
+     1.5.1. 4. Gjenbruk med andre ord og korpus
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Kollokasjoner</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   1.4. Kollokasjoner
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#konstruer-et-korpus-med-dewey">
+     1.4.1. Konstruer et korpus med Dewey
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lager-kollokasjoner-fra-korpuset">
+     1.4.2. Lager kollokasjoner fra korpuset
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bygg-kollokasjon">
+       1.4.2.1. Bygg kollokasjon
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#finn-referanse">
+       1.4.2.2. 2.2. Finn referanse
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#bokhylla-aggregert">
+         1.4.2.2.1. Bokhylla aggregert
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#aggregert-korpus">
+         1.4.2.2.2. 2.2.2. Aggregert korpus
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sammenlign">
+       1.4.2.3. Sammenlign
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id1">
+         1.4.2.3.1. 2.3.1. Aggregert korpus
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#bokhylla-total">
+         1.4.2.3.2. Bokhylla total
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#kollokasjonen">
+         1.4.2.3.3. 2.3.3. Kollokasjonen
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#utfor-sammenligning">
+         1.4.2.3.4. Utfør sammenligning
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#sammenlign-med-korpus">
+         1.4.2.3.5. 2.3.5. Sammenlign med korpus
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualiser-med-en-ordsky">
+   1.5. 3. Visualiser med en ordsky
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gjenbruk-med-andre-ord-og-korpus">
+     1.5.1. 4. Gjenbruk med andre ord og korpus
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p><img alt="resources/images/dhlab-logo-nb.png" src="../_images/dhlab-logo-nb.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dhlab</span> <span class="k">as</span> <span class="nn">dh</span>
+<span class="kn">from</span> <span class="nn">dhlab.api.dhlab_api</span> <span class="kn">import</span> <span class="n">totals</span>
+<span class="kn">import</span> <span class="nn">dhlab.legacy.nbtext</span> <span class="k">as</span> <span class="nn">nb</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="kollokasjoner">
+<h1><span class="section-number">1.4. </span>Kollokasjoner<a class="headerlink" href="#kollokasjoner" title="Permalink to this headline">#</a></h1>
+<p>Kollokasjoner er assosiasjoner.</p>
+<p>I denne notebooken viser vi eksempler på undersøkelser man kan gjøre for å finne ut hvilke ord et ord opptrer sammen med innenfor et korpus.</p>
+<section id="konstruer-et-korpus-med-dewey">
+<h2><span class="section-number">1.4.1. </span>Konstruer et korpus med Dewey<a class="headerlink" href="#konstruer-et-korpus-med-dewey" title="Permalink to this headline">#</a></h2>
+<p>Se eksempelfil om <a class="reference external" href="https://nbviewer.jupyter.org/github/DH-LAB-NB/DHLAB/blob/master/1_Bygg_korpus.ipynb">Korpusbygging</a> for andre måter å definere korpus.</p>
+<p>For å finne relevant dewey-klassifikasjon kan <a class="reference external" href="http://deweysearchno.pansoft.de/webdeweysearch/index.html">Webdewey</a> være til god hjelp.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># korpus med inntil 200 bøker fra dewey 641.2 (drikkevarer) utgitt mellom 1960 og 2020</span>
+
+<span class="n">korpus</span> <span class="o">=</span> <span class="n">dh</span><span class="o">.</span><span class="n">Corpus</span><span class="p">(</span><span class="n">doctype</span><span class="o">=</span><span class="s2">&quot;digibok&quot;</span><span class="p">,</span> <span class="n">ddk</span><span class="o">=</span><span class="s2">&quot;641.2%&quot;</span><span class="p">,</span> <span class="n">from_year</span><span class="o">=</span><span class="mi">1960</span><span class="p">,</span> <span class="n">to_year</span><span class="o">=</span><span class="mi">2020</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>For å se metadata fra korpuset som dataramme brukes metoden <code class="docutils literal notranslate"><span class="pre">corpus</span></code>. Man kan bruke <code class="docutils literal notranslate"><span class="pre">head()</span></code> for å begrense antall rader som vises.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">korpus</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dhlabid</th>
+      <th>urn</th>
+      <th>title</th>
+      <th>authors</th>
+      <th>oaiid</th>
+      <th>sesamid</th>
+      <th>isbn10</th>
+      <th>city</th>
+      <th>timestamp</th>
+      <th>year</th>
+      <th>publisher</th>
+      <th>langs</th>
+      <th>subjects</th>
+      <th>ddc</th>
+      <th>genres</th>
+      <th>literaryform</th>
+      <th>doctype</th>
+      <th>ocr_creator</th>
+      <th>ocr_timestamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>100210010</td>
+      <td>URN:NBN:no-nb_digibok_2014062548118</td>
+      <td>Vinskolen : godsmak fra første klase</td>
+      <td>Salvesen , Geir</td>
+      <td>oai:nb.bibsys.no:990811552634702202</td>
+      <td>e8998ff8c5893c2bad0ad6296ea6113d</td>
+      <td></td>
+      <td>Oslo</td>
+      <td>20080101</td>
+      <td>2008</td>
+      <td>Historie &amp; kultur</td>
+      <td>nob</td>
+      <td>Vin / vin / vinproduksjon / drikkevarer</td>
+      <td>641.5635 / 641.22</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>100398213</td>
+      <td>URN:NBN:no-nb_digibok_2020011007022</td>
+      <td>Whiskyboka : en guide til whisky</td>
+      <td>Eklund , Lars Helge / Steffensen , Arnt / Dahl...</td>
+      <td>oai:nb.bibsys.no:991516513294702202</td>
+      <td>f712625782a7cafc9d27ac45cc9f9bd1</td>
+      <td></td>
+      <td>[Oslo]</td>
+      <td>20150101</td>
+      <td>2015</td>
+      <td>Front</td>
+      <td>nob</td>
+      <td>Brennevin / Whisky</td>
+      <td>641.25 / 641.25</td>
+      <td>novel</td>
+      <td>Skjønnlitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="lager-kollokasjoner-fra-korpuset">
+<h2><span class="section-number">1.4.2. </span>Lager kollokasjoner fra korpuset<a class="headerlink" href="#lager-kollokasjoner-fra-korpuset" title="Permalink to this headline">#</a></h2>
+<p>Et skrittvis eksempel.</p>
+<ol class="simple">
+<li><p>Bygg kollokasjonen</p></li>
+<li><p>Finn en referanse</p></li>
+<li><p>Sammenlign kollokasjon med referanse</p></li>
+</ol>
+<section id="bygg-kollokasjon">
+<h3><span class="section-number">1.4.2.1. </span>Bygg kollokasjon<a class="headerlink" href="#bygg-kollokasjon" title="Permalink to this headline">#</a></h3>
+<p>Kommandoen er <code class="docutils literal notranslate"><span class="pre">dh.Collocation</span></code>. Legg gjerne inn en sjekk med konkordans.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">collword</span> <span class="o">=</span> <span class="s1">&#39;rødvin&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vi utfører en konkordans for å sjekke at korpuset virker.</span>
+<span class="c1"># dh.Concordance(corpus=korpus, query=&quot;sei&quot;).show()</span>
+<span class="n">korpus</span><span class="o">.</span><span class="n">conc</span><span class="p">(</span><span class="s2">&quot;sei&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_d15e9">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_d15e9_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_d15e9_level0_col1" class="col_heading level0 col1" >concordance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_d15e9_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_d15e9_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
+      <td id="T_d15e9_row0_col1" class="data row0 col1" >vin til melstekt <b>sei</b></td>
+    </tr>
+    <tr>
+      <th id="T_d15e9_level0_row1" class="row_heading level0 row1" >3</th>
+      <td id="T_d15e9_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018042548149'>URN:NBN:no-nb_digibok_2018042548149</a></td>
+      <td id="T_d15e9_row1_col1" class="data row1 col1" >... men O HVIT FISK , nesten alt går . <b>Sei</b> , hyse , kolje , kveite , hva som helst... </td>
+    </tr>
+    <tr>
+      <th id="T_d15e9_level0_row2" class="row_heading level0 row2" >7</th>
+      <td id="T_d15e9_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020120907530'>URN:NBN:no-nb_digibok_2020120907530</a></td>
+      <td id="T_d15e9_row2_col1" class="data row2 col1" >Bedales of Borough Market 5 Bedale St , London <b>SEI</b> 9 AL</td>
+    </tr>
+    <tr>
+      <th id="T_d15e9_level0_row3" class="row_heading level0 row3" >6</th>
+      <td id="T_d15e9_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
+      <td id="T_d15e9_row3_col1" class="data row3 col1" >... Ved Bull Run gik de reint gæli . " " Men <b>sei</b> me no du Jørn , håfør ha med denna krigen... </td>
+    </tr>
+    <tr>
+      <th id="T_d15e9_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_d15e9_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
+      <td id="T_d15e9_row4_col1" class="data row4 col1" >... Så skulle ølet " skakast ned " , det vil <b>sei</b> fyllast over på tunna . Då smaka dei gjerne på ølet... </td>
+    </tr>
+    <tr>
+      <th id="T_d15e9_level0_row5" class="row_heading level0 row5" >2</th>
+      <td id="T_d15e9_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
+      <td id="T_d15e9_row5_col1" class="data row5 col1" >... den enkelte råvare og tilberedningsmetoden det handler om . <b>Sei</b> har en litt tyngre smak , ser litt gråere ut... </td>
+    </tr>
+    <tr>
+      <th id="T_d15e9_level0_row6" class="row_heading level0 row6" >1</th>
+      <td id="T_d15e9_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
+      <td id="T_d15e9_row6_col1" class="data row6 col1" >Det er ikke uten grunn at melstekt <b>sei</b> går under betegnelsen seibiff . For seiv om seien er en hvit... </td>
+    </tr>
+    <tr>
+      <th id="T_d15e9_level0_row7" class="row_heading level0 row7" >5</th>
+      <td id="T_d15e9_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
+      <td id="T_d15e9_row7_col1" class="data row7 col1" >Sjå Løksli de ligg no so fint fram mæ li , no <b>sei</b> dei at Knut vil te Mæland å... </td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>Så kan vi hente ut selve kollokasjonen, dvs. ord som står innenfor en viss avstand fra målordet.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vi legger inn variablen collword som søkeord, med 5 ord før og etter. </span>
+<span class="c1">#  Antall ord før og etter kan endres etter konteksten man vil undersøke.</span>
+<span class="c1"># Collword er lagt som variabel i cella over, slik at det er lett å gjenbruke notebooken for ulike søkeord</span>
+
+<span class="n">coll</span> <span class="o">=</span> <span class="n">korpus</span><span class="o">.</span><span class="n">coll</span><span class="p">(</span><span class="n">words</span><span class="o">=</span><span class="n">collword</span><span class="p">,</span> <span class="n">after</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">before</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">samplesize</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># For å vise topp `n` treff bruke .show().head(n)</span>
+<span class="n">coll</span><span class="o">.</span><span class="n">show</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>counts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>.</th>
+      <td>371</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>364</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>247</td>
+    </tr>
+    <tr>
+      <th>en</th>
+      <td>224</td>
+    </tr>
+    <tr>
+      <th>med</th>
+      <td>158</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Kollokasjonen ligger i en såkalt <strong>dataframe</strong> som kan undersøkes med <code class="docutils literal notranslate"><span class="pre">.head()</span></code> som ovenfor. Man får adgang til datarammen gjennom <code class="docutils literal notranslate"><span class="pre">coll</span></code> metoden.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll</span><span class="o">.</span><span class="n">coll</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;counts&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>counts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>.</th>
+      <td>371</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>364</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>247</td>
+    </tr>
+    <tr>
+      <th>en</th>
+      <td>224</td>
+    </tr>
+    <tr>
+      <th>med</th>
+      <td>158</td>
+    </tr>
+    <tr>
+      <th>er</th>
+      <td>123</td>
+    </tr>
+    <tr>
+      <th>som</th>
+      <td>110</td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>til</th>
+      <td>98</td>
+    </tr>
+    <tr>
+      <th>av</th>
+      <td>83</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="finn-referanse">
+<h3><span class="section-number">1.4.2.2. </span>2.2. Finn referanse<a class="headerlink" href="#finn-referanse" title="Permalink to this headline">#</a></h3>
+<p>Det er flere måter å sammenligne på. En er å bruke bokhylla selv om som referanse. For å hente ut ord fra bokhylla brukes kommandoen <code class="docutils literal notranslate"><span class="pre">totals(&lt;antall</span> <span class="pre">ord&gt;)</span></code>. Korpuset selv kan også benyttes, for eksempel med kommandoen <code class="docutils literal notranslate"><span class="pre">aggregate_urns(&lt;korpusdefinisjon&gt;)</span></code>.</p>
+<section id="bokhylla-aggregert">
+<h4><span class="section-number">1.4.2.2.1. </span>Bokhylla aggregert<a class="headerlink" href="#bokhylla-aggregert" title="Permalink to this headline">#</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">totals</span></code> inneholder råfrekvenser fra Nasjonalbibliotekets katalog.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tot</span> <span class="o">=</span> <span class="n">totals</span><span class="p">(</span><span class="mi">50000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tot</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>freq</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>.</th>
+      <td>7655423257</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>5052171514</td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>2531262027</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>2520268056</td>
+    </tr>
+    <tr>
+      <th>-</th>
+      <td>1314451583</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="aggregert-korpus">
+<h4><span class="section-number">1.4.2.2.2. </span>2.2.2. Aggregert korpus<a class="headerlink" href="#aggregert-korpus" title="Permalink to this headline">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dh.Counts teller tokens i hver tekst i korpus</span>
+<span class="n">dokumenter_aggregert</span> <span class="o">=</span> <span class="n">korpus</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">words</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Summerer slik at vi får totalt tokens for korpus</span>
+<span class="n">korpus_agg</span> <span class="o">=</span> <span class="n">dokumenter_aggregert</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Gjør den om til dataramme, sorterer og ser på resultatet</p>
+<ol class="simple">
+<li><p>Dataramme med kommando <code class="docutils literal notranslate"><span class="pre">frame()</span></code></p></li>
+<li><p>Sortering med <code class="docutils literal notranslate"><span class="pre">frame_sort()</span></code> definert øverst i den her notebooken.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">korpus_agg</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">frame_sort</span><span class="p">(</span><span class="n">nb</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">korpus_agg</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">korpus_agg</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>,</th>
+      <td>101992.0</td>
+    </tr>
+    <tr>
+      <th>.</th>
+      <td>100198.0</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>57767.0</td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>46178.0</td>
+    </tr>
+    <tr>
+      <th>er</th>
+      <td>36294.0</td>
+    </tr>
+    <tr>
+      <th>som</th>
+      <td>28769.0</td>
+    </tr>
+    <tr>
+      <th>en</th>
+      <td>26301.0</td>
+    </tr>
+    <tr>
+      <th>av</th>
+      <td>26272.0</td>
+    </tr>
+    <tr>
+      <th>det</th>
+      <td>23581.0</td>
+    </tr>
+    <tr>
+      <th>med</th>
+      <td>23076.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="sammenlign">
+<h3><span class="section-number">1.4.2.3. </span>Sammenlign<a class="headerlink" href="#sammenlign" title="Permalink to this headline">#</a></h3>
+<p>Vi har nå tre frekvenslister som kan sammenlignes med hverandre. For å lette sammenlign normaliseres dem. Kommandoen for normalisering er <code class="docutils literal notranslate"><span class="pre">normalize_corpus_dataframe(&lt;frekvensliste&gt;)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll</span><span class="o">.</span><span class="n">coll</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;counts&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>counts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>.</th>
+      <td>371</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>364</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>247</td>
+    </tr>
+    <tr>
+      <th>en</th>
+      <td>224</td>
+    </tr>
+    <tr>
+      <th>med</th>
+      <td>158</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>amerikanerne</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>kalt</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>kalles</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>kaldt</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Kunstnervin</th>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>1727 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll_df</span> <span class="o">=</span> <span class="n">coll</span><span class="o">.</span><span class="n">coll</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;counts&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>counts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>.</th>
+      <td>371</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>364</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>247</td>
+    </tr>
+    <tr>
+      <th>en</th>
+      <td>224</td>
+    </tr>
+    <tr>
+      <th>med</th>
+      <td>158</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>amerikanerne</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>kalt</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>kalles</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>kaldt</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Kunstnervin</th>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>1727 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span><span class="o">.</span><span class="n">normalize_corpus_dataframe</span><span class="p">(</span><span class="n">korpus_agg</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">normalize_corpus_dataframe</span><span class="p">(</span><span class="n">tot</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">normalize_corpus_dataframe</span><span class="p">(</span><span class="n">coll_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Inspiser dataene etter normalisering</p>
+<section id="id1">
+<h4><span class="section-number">1.4.2.3.1. </span>2.3.1. Aggregert korpus<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
+<p>Fyll inn verdier for <code class="docutils literal notranslate"><span class="pre">.head()</span></code> for å se mer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">korpus_agg</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>,</th>
+      <td>0.048208</td>
+    </tr>
+    <tr>
+      <th>.</th>
+      <td>0.047361</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>0.027305</td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>0.021827</td>
+    </tr>
+    <tr>
+      <th>er</th>
+      <td>0.017155</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="bokhylla-total">
+<h4><span class="section-number">1.4.2.3.2. </span>Bokhylla total<a class="headerlink" href="#bokhylla-total" title="Permalink to this headline">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tot</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>freq</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>.</th>
+      <td>0.070908</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>0.046796</td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>0.023446</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>0.023344</td>
+    </tr>
+    <tr>
+      <th>-</th>
+      <td>0.012175</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="kollokasjonen">
+<h4><span class="section-number">1.4.2.3.3. </span>2.3.3. Kollokasjonen<a class="headerlink" href="#kollokasjonen" title="Permalink to this headline">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll</span><span class="o">.</span><span class="n">coll</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>counts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>!</th>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>"</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>$</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>%</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>'</th>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Kollokasjonen <em>coll</em> har gjennomgående høyere verdier, noe som sannsynligvis skyldes at det er færre ord.</p>
+</section>
+<section id="utfor-sammenligning">
+<h4><span class="section-number">1.4.2.3.4. </span>Utfør sammenligning<a class="headerlink" href="#utfor-sammenligning" title="Permalink to this headline">#</a></h4>
+<p>For sammenligning måles forskjellen på <em>coll</em> med referansen. Forskjellen måles ved å dividere hvert ords frekvens ikollokasjonen på frekvensen ordet har i referansen.</p>
+<div class="math notranslate nohighlight">
+\[\textrm{assosiasjons-styrke}(w) = \frac{\textrm{coll}(w)}{\textrm{referanse}(w)}\]</div>
+<p>Divisjonen pr.ord gjøres av Python - resultat sorteres og legges i variabelen <code class="docutils literal notranslate"><span class="pre">coll_assoc</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll_assoc</span> <span class="o">=</span> <span class="p">(</span><span class="n">coll_df</span><span class="o">.</span><span class="n">counts</span><span class="o">**</span><span class="mf">1.0</span><span class="o">/</span><span class="n">tot</span><span class="o">.</span><span class="n">freq</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll_assoc</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>han</th>
+      <td>0.047733</td>
+    </tr>
+    <tr>
+      <th>r</th>
+      <td>0.066077</td>
+    </tr>
+    <tr>
+      <th>'</th>
+      <td>0.069777</td>
+    </tr>
+    <tr>
+      <th>a</th>
+      <td>0.097654</td>
+    </tr>
+    <tr>
+      <th>m</th>
+      <td>0.118410</td>
+    </tr>
+    <tr>
+      <th>&gt;</th>
+      <td>0.121947</td>
+    </tr>
+    <tr>
+      <th>alle</th>
+      <td>0.126860</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0.130331</td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>0.155172</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0.160745</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>0.170787</td>
+    </tr>
+    <tr>
+      <th>nå</th>
+      <td>0.182008</td>
+    </tr>
+    <tr>
+      <th>år</th>
+      <td>0.183651</td>
+    </tr>
+    <tr>
+      <th>kunne</th>
+      <td>0.186461</td>
+    </tr>
+    <tr>
+      <th>"</th>
+      <td>0.192506</td>
+    </tr>
+    <tr>
+      <th>»</th>
+      <td>0.206628</td>
+    </tr>
+    <tr>
+      <th>kom</th>
+      <td>0.209637</td>
+    </tr>
+    <tr>
+      <th>©</th>
+      <td>0.226078</td>
+    </tr>
+    <tr>
+      <th>får</th>
+      <td>0.226907</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>0.230753</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="sammenlign-med-korpus">
+<h4><span class="section-number">1.4.2.3.5. </span>2.3.5. Sammenlign med korpus<a class="headerlink" href="#sammenlign-med-korpus" title="Permalink to this headline">#</a></h4>
+<p>Her kan det være nyttig å bruke en eksponent for å dempe effekten av lavfrekvente ord.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">korpus_agg</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>,</th>
+      <td>4.820849e-02</td>
+    </tr>
+    <tr>
+      <th>.</th>
+      <td>4.736052e-02</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>2.730469e-02</td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>2.182692e-02</td>
+    </tr>
+    <tr>
+      <th>er</th>
+      <td>1.715506e-02</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>www.bourgeois-</th>
+      <td>4.726693e-07</td>
+    </tr>
+    <tr>
+      <th>www.bollinger</th>
+      <td>4.726693e-07</td>
+    </tr>
+    <tr>
+      <th>www.boerl-</th>
+      <td>4.726693e-07</td>
+    </tr>
+    <tr>
+      <th>www.besseratdebellefon</th>
+      <td>4.726693e-07</td>
+    </tr>
+    <tr>
+      <th>nura</th>
+      <td>4.726693e-07</td>
+    </tr>
+  </tbody>
+</table>
+<p>127719 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll_assoc_korp</span> <span class="o">=</span> <span class="p">(</span><span class="n">coll_df</span><span class="o">.</span><span class="n">counts</span><span class="o">**</span><span class="mf">1.2</span><span class="o">/</span><span class="n">korpus_agg</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll_assoc_korp</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>100</th>
+      <td>0.017447</td>
+    </tr>
+    <tr>
+      <th>%</th>
+      <td>0.021806</td>
+    </tr>
+    <tr>
+      <th>han</th>
+      <td>0.024867</td>
+    </tr>
+    <tr>
+      <th>'</th>
+      <td>0.025543</td>
+    </tr>
+    <tr>
+      <th>alle</th>
+      <td>0.029087</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>0.033393</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>0.034091</td>
+    </tr>
+    <tr>
+      <th>g</th>
+      <td>0.035513</td>
+    </tr>
+    <tr>
+      <th>store</th>
+      <td>0.036165</td>
+    </tr>
+    <tr>
+      <th>hvor</th>
+      <td>0.037447</td>
+    </tr>
+    <tr>
+      <th>OG</th>
+      <td>0.039604</td>
+    </tr>
+    <tr>
+      <th>får</th>
+      <td>0.039936</td>
+    </tr>
+    <tr>
+      <th>’</th>
+      <td>0.040303</td>
+    </tr>
+    <tr>
+      <th>deg</th>
+      <td>0.042399</td>
+    </tr>
+    <tr>
+      <th>nå</th>
+      <td>0.043664</td>
+    </tr>
+    <tr>
+      <th>°</th>
+      <td>0.043933</td>
+    </tr>
+    <tr>
+      <th>kunne</th>
+      <td>0.044690</td>
+    </tr>
+    <tr>
+      <th>noen</th>
+      <td>0.046052</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>0.046701</td>
+    </tr>
+    <tr>
+      <th>år</th>
+      <td>0.049013</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="visualiser-med-en-ordsky">
+<h1><span class="section-number">1.5. </span>3. Visualiser med en ordsky<a class="headerlink" href="#visualiser-med-en-ordsky" title="Permalink to this headline">#</a></h1>
+<p>Visualiseringen trives best med tall mellom 0 og 1, så assosiasjonene divideres på summen av dem for å få til det. Ordskyene lages med kommonandoen <code class="docutils literal notranslate"><span class="pre">cloud(&lt;data&gt;)</span></code>. Pass på å ikke ta med alt for mange; det kan gi feilsituasjoner.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Her viser vi de 50 viktigste ordene som er assosiert med rødvin i korpuset vårt, målt mot alle bøker i nb.no </span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">cloud</span><span class="p">(</span><span class="n">coll_assoc</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">/</span><span class="n">coll_assoc</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/2.2.Kollokasjoner_49_0.png" src="../_images/2.2.Kollokasjoner_49_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Her viser vi de 50 viktigste ordene som er assosiert med rødvin, målt mot hele &quot;Drikkevare&quot;-korpuset</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">cloud</span><span class="p">(</span><span class="n">coll_assoc_korp</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">/</span><span class="n">coll_assoc_korp</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/2.2.Kollokasjoner_50_0.png" src="../_images/2.2.Kollokasjoner_50_0.png" />
+</div>
+</div>
+<section id="gjenbruk-med-andre-ord-og-korpus">
+<h2><span class="section-number">1.5.1. </span>4. Gjenbruk med andre ord og korpus<a class="headerlink" href="#gjenbruk-med-andre-ord-og-korpus" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Bytt ut parametrene i cellen der <code class="docutils literal notranslate"><span class="pre">korpus</span></code> blir definert.</p></li>
+<li><p>Bytt ut ordet som er angitt som <code class="docutils literal notranslate"><span class="pre">collword</span></code>.</p></li>
+<li><p>Gå til <code class="docutils literal notranslate"><span class="pre">Cell</span></code> i menyen og velg <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">All</span></code>.</p></li>
+</ol>
+<p>Det er også mulig å først velge <code class="docutils literal notranslate"><span class="pre">File</span></code> og <code class="docutils literal notranslate"><span class="pre">Make</span> <span class="pre">a</span> <span class="pre">Copy</span></code>, slik at man oppretter en ny notebook før man starter.</p>
+<p>Tilbake til <a class="reference external" href="https://nbviewer.jupyter.org/github/DH-LAB-NB/DHLAB/blob/master/DHLAB_ved_Nasjonalbiblioteket.ipynb">DHLAB ved Nasjonalbiblioteket</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tutorial"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="2.1.Konkordans.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1.3. </span>Konkordanser</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="2.3.Frekvenslister.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.6. </span>Frekvenslister</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Nasjonalbiblioteket<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
