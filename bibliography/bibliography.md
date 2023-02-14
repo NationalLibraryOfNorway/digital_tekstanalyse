@@ -3,7 +3,7 @@ layout: page
 title: Bibliografi
 ---
 
-# DH-lab bibliografi
+# Bibliografi
 *Sortert ny --> gammel*
 
 
