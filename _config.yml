@@ -1,8 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: My sample book
-author: Lars Magne Tungland
+title: DH-lab dokumenter
+author: Nasjonalbiblioteket
 # logo: logo.png
 
 # Force re-execution of notebooks on each build.
@@ -30,3 +30,6 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+
+
+only_build_toc_files: true

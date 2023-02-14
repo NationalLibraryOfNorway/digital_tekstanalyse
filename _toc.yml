@@ -1,12 +1,13 @@
 format: jb-book
 root: README
 parts:
-  - caption: Tutorials
+  - caption: Kodeeksempler
     numbered: true
     chapters:
-    - glob: tutorial/*
-  - caption: DHLAB cookbook
-    numbered: true
-    chapters:
-     - glob: cookbook/*
+    - file: tutorial.md
+      sections:
+      - glob: tutorial/*
+    - file: cookbook.md
+      sections:
+      - glob: cookbook/*
 
