@@ -1,7 +1,11 @@
 format: jb-book
 root: README
 parts:
-  - caption: Kodeeksempler
+  - captions: Dokumenter
+    chapters:
+    - file: bibliography/bibliography.md
+
+  - caption: Kodeeksempler–Python
     numbered: true
     chapters:
     - file: tutorial.md
