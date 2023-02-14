@@ -1,0 +1,33 @@
+name : Update bibliography
+
+on:
+
+ workflow_dispatch:
+
+jobs:
+
+
+  
+  update:
+    name: update bibliography
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyzotero
+    - name: Get bibliographic entries
+      run: |
+        python bibliography/zotero_citations_copy.py ${{ secrets.ZOTERO_LIBRARY_CODE }} group ${{ secrets.ZOTERO_API_KEY }} bibliography/bibliography.md
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add .
+        git commit -m "update bibliography"
+        git push 
