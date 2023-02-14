@@ -1,3 +1,3 @@
-# Cookbooks
+# Kokebøker
 
-DH-lab cookbook.
+"Kokebøker", eller kode-oppskrifter for bruk av `dhlab`.
