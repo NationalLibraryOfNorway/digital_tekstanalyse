@@ -41,4 +41,4 @@ jobs:
       uses: actions/upload-pages-artifact@v1.0.7
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_build/html
+        path: ./_build/html
