@@ -1,0 +1,13 @@
+format: jb-book
+root: README
+parts:
+  - caption: Kodeeksempler
+    numbered: true
+    chapters:
+    - file: tutorial.md
+      sections:
+      - glob: tutorial/*
+    - file: cookbook.md
+      sections:
+      - glob: cookbook/*
+
