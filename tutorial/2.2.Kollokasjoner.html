@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.6. Frekvenslister" href="2.3.Frekvenslister.html" />
+    <link rel="next" title="1.5. Frekvenslister" href="2.3.Frekvenslister.html" />
     <link rel="prev" title="1.3. Konkordanser" href="2.1.Konkordans.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -160,37 +160,37 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.3.Frekvenslister.html">
-     1.6. Frekvenslister
+     1.5. Frekvenslister
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.4.S%C3%B8k_i_aviser.html">
-     1.7. Søk i aviser
+     1.6. Søk i aviser
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.5.n-gram_og_galakser.html">
-     1.9. N-gram og galakser
+     1.7. N-gram og galakser
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.6.sammenlign_metadata.html">
-     1.10. Sammenlign metadata
+     1.8. Sammenlign metadata
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.0.ner_og_pos.html">
-     1.12. NER og POS med Spacy
+     1.9. NER og POS med Spacy
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.1.ordparadigmer.html">
-     1.13. Ordparadigmer med wordbank
+     1.10. Ordparadigmer med wordbank
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.2.dispersion.html">
-     1.14. Ordfordeling
+     1.11. Ordfordeling
     </a>
    </li>
   </ul>
@@ -428,90 +428,81 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   1.4. Kollokasjoner
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#konstruer-et-korpus-med-dewey">
+   1.4.1. Konstruer et korpus med Dewey
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#konstruer-et-korpus-med-dewey">
-     1.4.1. Konstruer et korpus med Dewey
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lager-kollokasjoner-fra-korpuset">
+   1.4.2. Lager kollokasjoner fra korpuset
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bygg-kollokasjon">
+     1.4.2.1. Bygg kollokasjon
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lager-kollokasjoner-fra-korpuset">
-     1.4.2. Lager kollokasjoner fra korpuset
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finn-referanse">
+     1.4.2.2. Finn referanse
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#bygg-kollokasjon">
-       1.4.2.1. Bygg kollokasjon
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bokhylla-aggregert">
+       1.4.2.2.1. Bokhylla aggregert
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#finn-referanse">
-       1.4.2.2. 2.2. Finn referanse
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#aggregert-korpus">
+       1.4.2.2.2. Aggregert korpus
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#bokhylla-aggregert">
-         1.4.2.2.1. Bokhylla aggregert
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#aggregert-korpus">
-         1.4.2.2.2. 2.2.2. Aggregert korpus
-        </a>
-       </li>
-      </ul>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#sammenlign">
-       1.4.2.3. Sammenlign
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sammenlign">
+     1.4.2.3. Sammenlign
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       1.4.2.3.1. Aggregert korpus
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id1">
-         1.4.2.3.1. 2.3.1. Aggregert korpus
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#bokhylla-total">
-         1.4.2.3.2. Bokhylla total
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#kollokasjonen">
-         1.4.2.3.3. 2.3.3. Kollokasjonen
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#utfor-sammenligning">
-         1.4.2.3.4. Utfør sammenligning
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#sammenlign-med-korpus">
-         1.4.2.3.5. 2.3.5. Sammenlign med korpus
-        </a>
-       </li>
-      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bokhylla-total">
+       1.4.2.3.2. Bokhylla total
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#kollokasjonen">
+       1.4.2.3.3. Kollokasjonen
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#utfor-sammenligning">
+       1.4.2.3.4. Utfør sammenligning
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sammenlign-med-korpus">
+       1.4.2.3.5. 2.3.5. Sammenlign med korpus
+      </a>
      </li>
     </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#visualiser-med-en-ordsky">
-   1.5. 3. Visualiser med en ordsky
+   1.4.3. Visualiser med en ordsky
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gjenbruk-med-andre-ord-og-korpus">
-     1.5.1. 4. Gjenbruk med andre ord og korpus
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gjenbruk-med-andre-ord-og-korpus">
+   1.4.4. Gjenbruk med andre ord og korpus
+  </a>
  </li>
 </ul>
 
@@ -532,90 +523,81 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   1.4. Kollokasjoner
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#konstruer-et-korpus-med-dewey">
+   1.4.1. Konstruer et korpus med Dewey
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#konstruer-et-korpus-med-dewey">
-     1.4.1. Konstruer et korpus med Dewey
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lager-kollokasjoner-fra-korpuset">
+   1.4.2. Lager kollokasjoner fra korpuset
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bygg-kollokasjon">
+     1.4.2.1. Bygg kollokasjon
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lager-kollokasjoner-fra-korpuset">
-     1.4.2. Lager kollokasjoner fra korpuset
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finn-referanse">
+     1.4.2.2. Finn referanse
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#bygg-kollokasjon">
-       1.4.2.1. Bygg kollokasjon
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bokhylla-aggregert">
+       1.4.2.2.1. Bokhylla aggregert
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#finn-referanse">
-       1.4.2.2. 2.2. Finn referanse
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#aggregert-korpus">
+       1.4.2.2.2. Aggregert korpus
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#bokhylla-aggregert">
-         1.4.2.2.1. Bokhylla aggregert
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#aggregert-korpus">
-         1.4.2.2.2. 2.2.2. Aggregert korpus
-        </a>
-       </li>
-      </ul>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#sammenlign">
-       1.4.2.3. Sammenlign
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sammenlign">
+     1.4.2.3. Sammenlign
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       1.4.2.3.1. Aggregert korpus
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id1">
-         1.4.2.3.1. 2.3.1. Aggregert korpus
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#bokhylla-total">
-         1.4.2.3.2. Bokhylla total
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#kollokasjonen">
-         1.4.2.3.3. 2.3.3. Kollokasjonen
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#utfor-sammenligning">
-         1.4.2.3.4. Utfør sammenligning
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#sammenlign-med-korpus">
-         1.4.2.3.5. 2.3.5. Sammenlign med korpus
-        </a>
-       </li>
-      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bokhylla-total">
+       1.4.2.3.2. Bokhylla total
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#kollokasjonen">
+       1.4.2.3.3. Kollokasjonen
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#utfor-sammenligning">
+       1.4.2.3.4. Utfør sammenligning
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sammenlign-med-korpus">
+       1.4.2.3.5. 2.3.5. Sammenlign med korpus
+      </a>
      </li>
     </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#visualiser-med-en-ordsky">
-   1.5. 3. Visualiser med en ordsky
+   1.4.3. Visualiser med en ordsky
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gjenbruk-med-andre-ord-og-korpus">
-     1.5.1. 4. Gjenbruk med andre ord og korpus
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gjenbruk-med-andre-ord-og-korpus">
+   1.4.4. Gjenbruk med andre ord og korpus
+  </a>
  </li>
 </ul>
 
@@ -975,7 +957,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="finn-referanse">
-<h3><span class="section-number">1.4.2.2. </span>2.2. Finn referanse<a class="headerlink" href="#finn-referanse" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.4.2.2. </span>Finn referanse<a class="headerlink" href="#finn-referanse" title="Permalink to this headline">#</a></h3>
 <p>Det er flere måter å sammenligne på. En er å bruke bokhylla selv om som referanse. For å hente ut ord fra bokhylla brukes kommandoen <code class="docutils literal notranslate"><span class="pre">totals(&lt;antall</span> <span class="pre">ord&gt;)</span></code>. Korpuset selv kan også benyttes, for eksempel med kommandoen <code class="docutils literal notranslate"><span class="pre">aggregate_urns(&lt;korpusdefinisjon&gt;)</span></code>.</p>
 <section id="bokhylla-aggregert">
 <h4><span class="section-number">1.4.2.2.1. </span>Bokhylla aggregert<a class="headerlink" href="#bokhylla-aggregert" title="Permalink to this headline">#</a></h4>
@@ -1042,7 +1024,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="aggregert-korpus">
-<h4><span class="section-number">1.4.2.2.2. </span>2.2.2. Aggregert korpus<a class="headerlink" href="#aggregert-korpus" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">1.4.2.2.2. </span>Aggregert korpus<a class="headerlink" href="#aggregert-korpus" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dh.Counts teller tokens i hver tekst i korpus</span>
@@ -1328,7 +1310,7 @@ title="Print to PDF"
 </div>
 <p>Inspiser dataene etter normalisering</p>
 <section id="id1">
-<h4><span class="section-number">1.4.2.3.1. </span>2.3.1. Aggregert korpus<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">1.4.2.3.1. </span>Aggregert korpus<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
 <p>Fyll inn verdier for <code class="docutils literal notranslate"><span class="pre">.head()</span></code> for å se mer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1441,7 +1423,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="kollokasjonen">
-<h4><span class="section-number">1.4.2.3.3. </span>2.3.3. Kollokasjonen<a class="headerlink" href="#kollokasjonen" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">1.4.2.3.3. </span>Kollokasjonen<a class="headerlink" href="#kollokasjonen" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll</span><span class="o">.</span><span class="n">coll</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -1828,9 +1810,8 @@ title="Print to PDF"
 </section>
 </section>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="visualiser-med-en-ordsky">
-<h1><span class="section-number">1.5. </span>3. Visualiser med en ordsky<a class="headerlink" href="#visualiser-med-en-ordsky" title="Permalink to this headline">#</a></h1>
+<section id="visualiser-med-en-ordsky">
+<h2><span class="section-number">1.4.3. </span>Visualiser med en ordsky<a class="headerlink" href="#visualiser-med-en-ordsky" title="Permalink to this headline">#</a></h2>
 <p>Visualiseringen trives best med tall mellom 0 og 1, så assosiasjonene divideres på summen av dem for å få til det. Ordskyene lages med kommonandoen <code class="docutils literal notranslate"><span class="pre">cloud(&lt;data&gt;)</span></code>. Pass på å ikke ta med alt for mange; det kan gi feilsituasjoner.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1856,8 +1837,9 @@ title="Print to PDF"
 <img alt="../_images/2.2.Kollokasjoner_50_0.png" src="../_images/2.2.Kollokasjoner_50_0.png" />
 </div>
 </div>
+</section>
 <section id="gjenbruk-med-andre-ord-og-korpus">
-<h2><span class="section-number">1.5.1. </span>4. Gjenbruk med andre ord og korpus<a class="headerlink" href="#gjenbruk-med-andre-ord-og-korpus" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.4.4. </span>Gjenbruk med andre ord og korpus<a class="headerlink" href="#gjenbruk-med-andre-ord-og-korpus" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Bytt ut parametrene i cellen der <code class="docutils literal notranslate"><span class="pre">korpus</span></code> blir definert.</p></li>
 <li><p>Bytt ut ordet som er angitt som <code class="docutils literal notranslate"><span class="pre">collword</span></code>.</p></li>
@@ -1905,7 +1887,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="2.3.Frekvenslister.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.6. </span>Frekvenslister</p>
+        <p class="prev-next-title"><span class="section-number">1.5. </span>Frekvenslister</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
