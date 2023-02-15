@@ -3,7 +3,7 @@
 
 title: DH-lab dokumenter
 author: Nasjonalbiblioteket
-# logo: logo.png
+logo: resources/images/DHlab_logo_web_en_black.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
