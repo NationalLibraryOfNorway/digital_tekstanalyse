@@ -17,69 +17,33 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# Knausgårds bok Min kamp har en ganske vanlig verdi for romaner for voksne
+urn = "URN:NBN:no-nb_digibok_2021011848587"
+bok = Counts([urn])
 
-min_kamp_sttr = nb.sttr(2014032405041)
-min_kamp_sttr
+# Fra frekvenslista kan vi se at:
+    # "i" har høyere frekvens enn "," - da kan vi anta at det er en sakprosatekst
+    # "vann" er det sjette mest frekvente ordet, altså handler teksten om vann
+    # 348 punktum, dette er en kort tekst. (Punktum ligger rundt 5% av teksters lengde)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mJSONDecodeError[0m                           Traceback (most recent call last)
-File [0;32m~/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages/requests/models.py:971[0m, in [0;36mResponse.json[0;34m(self, **kwargs)[0m
-[1;32m    970[0m [38;5;28;01mtry[39;00m:
-[0;32m--> 971[0m     [38;5;28;01mreturn[39;00m [43mcomplexjson[49m[38;5;241;43m.[39;49m[43mloads[49m[43m([49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mtext[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
-[1;32m    972[0m [38;5;28;01mexcept[39;00m JSONDecodeError [38;5;28;01mas[39;00m e:
-[1;32m    973[0m     [38;5;66;03m# Catch JSON-related errors and raise as requests.JSONDecodeError[39;00m
-[1;32m    974[0m     [38;5;66;03m# This aliases json.JSONDecodeError and simplejson.JSONDecodeError[39;00m
+[0;31mAttributeError[0m                            Traceback (most recent call last)
+Cell [0;32mIn[2], line 2[0m
+[1;32m      1[0m urn [38;5;241m=[39m [38;5;124m"[39m[38;5;124mURN:NBN:no-nb_digibok_2021011848587[39m[38;5;124m"[39m
+[0;32m----> 2[0m bok [38;5;241m=[39m [43mCounts[49m[43m([49m[43m[[49m[43murn[49m[43m][49m[43m)[49m
+[1;32m      4[0m [38;5;66;03m# Fra frekvenslista kan vi se at:[39;00m
+[1;32m      5[0m     [38;5;66;03m# "i" har høyere frekvens enn "," - da kan vi anta at det er en sakprosatekst[39;00m
+[1;32m      6[0m     [38;5;66;03m# "vann" er det sjette mest frekvente ordet, altså handler teksten om vann[39;00m
+[1;32m      7[0m     [38;5;66;03m# 348 punktum, dette er en kort tekst. (Punktum ligger rundt 5% av teksters lengde)[39;00m
 
-File [0;32m~/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/json/__init__.py:346[0m, in [0;36mloads[0;34m(s, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)[0m
-[1;32m    343[0m [38;5;28;01mif[39;00m ([38;5;28mcls[39m [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m object_hook [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m
-[1;32m    344[0m         parse_int [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m parse_float [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m
-[1;32m    345[0m         parse_constant [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m object_pairs_hook [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m [38;5;129;01mnot[39;00m kw):
-[0;32m--> 346[0m     [38;5;28;01mreturn[39;00m [43m_default_decoder[49m[38;5;241;43m.[39;49m[43mdecode[49m[43m([49m[43ms[49m[43m)[49m
-[1;32m    347[0m [38;5;28;01mif[39;00m [38;5;28mcls[39m [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+File [0;32m~/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages/dhlab/text/conc_coll.py:166[0m, in [0;36mCounts.__init__[0;34m(self, corpus, words)[0m
+[1;32m    161[0m     [38;5;28mself[39m[38;5;241m.[39mcounts [38;5;241m=[39m get_document_frequencies(
+[1;32m    162[0m         urns[38;5;241m=[39murnlist(corpus), cutoff[38;5;241m=[39m[38;5;241m0[39m, words[38;5;241m=[39mwords
+[1;32m    163[0m     )
+[1;32m    165[0m     [38;5;66;03m# Include dhlab and title link in object[39;00m
+[0;32m--> 166[0m     [38;5;28mself[39m[38;5;241m.[39mtitle_dct [38;5;241m=[39m {k : v [38;5;28;01mfor[39;00m k, v [38;5;129;01min[39;00m [38;5;28mzip[39m([43mcorpus[49m[38;5;241;43m.[39;49m[43mframe[49m[38;5;241m.[39mdhlabid, corpus[38;5;241m.[39mframe[38;5;241m.[39mtitle)} 
+[1;32m    168[0m [38;5;28msuper[39m()[38;5;241m.[39m[38;5;21m__init__[39m([38;5;28mself[39m[38;5;241m.[39mcounts)
 
-File [0;32m~/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/json/decoder.py:337[0m, in [0;36mJSONDecoder.decode[0;34m(self, s, _w)[0m
-[1;32m    333[0m [38;5;250m[39m[38;5;124;03m"""Return the Python representation of ``s`` (a ``str`` instance[39;00m
-[1;32m    334[0m [38;5;124;03mcontaining a JSON document).[39;00m
-[1;32m    335[0m 
-[1;32m    336[0m [38;5;124;03m"""[39;00m
-[0;32m--> 337[0m obj, end [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mraw_decode[49m[43m([49m[43ms[49m[43m,[49m[43m [49m[43midx[49m[38;5;241;43m=[39;49m[43m_w[49m[43m([49m[43ms[49m[43m,[49m[43m [49m[38;5;241;43m0[39;49m[43m)[49m[38;5;241;43m.[39;49m[43mend[49m[43m([49m[43m)[49m[43m)[49m
-[1;32m    338[0m end [38;5;241m=[39m _w(s, end)[38;5;241m.[39mend()
-
-File [0;32m~/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/json/decoder.py:355[0m, in [0;36mJSONDecoder.raw_decode[0;34m(self, s, idx)[0m
-[1;32m    354[0m [38;5;28;01mexcept[39;00m [38;5;167;01mStopIteration[39;00m [38;5;28;01mas[39;00m err:
-[0;32m--> 355[0m     [38;5;28;01mraise[39;00m JSONDecodeError([38;5;124m"[39m[38;5;124mExpecting value[39m[38;5;124m"[39m, s, err[38;5;241m.[39mvalue) [38;5;28;01mfrom[39;00m [38;5;28mNone[39m
-[1;32m    356[0m [38;5;28;01mreturn[39;00m obj, end
-
-[0;31mJSONDecodeError[0m: Expecting value: line 1 column 1 (char 0)
-
-During handling of the above exception, another exception occurred:
-
-[0;31mJSONDecodeError[0m                           Traceback (most recent call last)
-Cell [0;32mIn[14], line 3[0m
-[1;32m      1[0m [38;5;66;03m# Knausgårds bok Min kamp har en ganske vanlig verdi for romaner for voksne[39;00m
-[0;32m----> 3[0m min_kamp_sttr [38;5;241m=[39m [43mnb[49m[38;5;241;43m.[39;49m[43msttr[49m[43m([49m[38;5;241;43m2014032405041[39;49m[43m)[49m
-[1;32m      4[0m min_kamp_sttr
-
-File [0;32m~/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages/dhlab/legacy/nbtext.py:235[0m, in [0;36msttr[0;34m(urn, chunk)[0m
-[1;32m    227[0m [38;5;250m[39m[38;5;124;03m"""Compute a standardized type/token-ratio for text identified with urn.[39;00m
-[1;32m    228[0m 
-[1;32m    229[0m [38;5;124;03m:param urn: The serial number of a URN for a book[39;00m
-[1;32m    230[0m [38;5;124;03m:param chunk: The number of words from the book to do the calculations with[39;00m
-[1;32m    231[0m [38;5;124;03m:return: The type/token-ratio as a floating point number[39;00m
-[1;32m    232[0m [38;5;124;03m"""[39;00m
-[1;32m    233[0m r [38;5;241m=[39m requests[38;5;241m.[39mget([38;5;124m"[39m[38;5;124mhttps://api.nb.no/ngram/sttr[39m[38;5;124m"[39m,
-[1;32m    234[0m                  json[38;5;241m=[39m{[38;5;124m'[39m[38;5;124murn[39m[38;5;124m'[39m: urn, [38;5;124m'[39m[38;5;124mchunk[39m[38;5;124m'[39m: chunk})
-[0;32m--> 235[0m [38;5;28;01mreturn[39;00m [43mr[49m[38;5;241;43m.[39;49m[43mjson[49m[43m([49m[43m)[49m
-
-File [0;32m~/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages/requests/models.py:975[0m, in [0;36mResponse.json[0;34m(self, **kwargs)[0m
-[1;32m    971[0m     [38;5;28;01mreturn[39;00m complexjson[38;5;241m.[39mloads([38;5;28mself[39m[38;5;241m.[39mtext, [38;5;241m*[39m[38;5;241m*[39mkwargs)
-[1;32m    972[0m [38;5;28;01mexcept[39;00m JSONDecodeError [38;5;28;01mas[39;00m e:
-[1;32m    973[0m     [38;5;66;03m# Catch JSON-related errors and raise as requests.JSONDecodeError[39;00m
-[1;32m    974[0m     [38;5;66;03m# This aliases json.JSONDecodeError and simplejson.JSONDecodeError[39;00m
-[0;32m--> 975[0m     [38;5;28;01mraise[39;00m RequestsJSONDecodeError(e[38;5;241m.[39mmsg, e[38;5;241m.[39mdoc, e[38;5;241m.[39mpos)
-
-[0;31mJSONDecodeError[0m: Expecting value: line 1 column 1 (char 0)
-JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[0;31mAttributeError[0m: 'list' object has no attribute 'frame'
+AttributeError: 'list' object has no attribute 'frame'
 
