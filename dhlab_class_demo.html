@@ -441,6 +441,16 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#corpus">
    Corpus
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conkordans">
+   Conkordans
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#frekvens">
+   Frekvens
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
@@ -475,6 +485,16 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#corpus">
    Corpus
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conkordans">
+   Conkordans
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#frekvens">
+   Frekvens
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -516,6 +536,25 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Init</span> <span class="n">signature</span><span class="p">:</span>
+<span class="n">dh</span><span class="o">.</span><span class="n">Corpus</span><span class="p">(</span>
+    <span class="n">doctype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">author</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">freetext</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">fulltext</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">from_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">to_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">from_timestamp</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">to_timestamp</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">ddk</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">subject</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">lang</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">order_by</span><span class="o">=</span><span class="s1">&#39;random&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">korpus</span> <span class="o">=</span> <span class="n">dh</span><span class="o">.</span><span class="n">Corpus</span><span class="p">(</span><span class="n">doctype</span><span class="o">=</span><span class="s2">&quot;digibok&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Dracula&quot;</span><span class="p">)</span>
@@ -525,7 +564,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">korpus</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">korpus</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
@@ -552,137 +591,66 @@ title="Print to PDF"
       <th>urn</th>
       <th>title</th>
       <th>authors</th>
-      <th>oaiid</th>
-      <th>sesamid</th>
-      <th>isbn10</th>
-      <th>city</th>
-      <th>timestamp</th>
       <th>year</th>
-      <th>publisher</th>
-      <th>langs</th>
-      <th>subjects</th>
-      <th>ddc</th>
-      <th>genres</th>
-      <th>literaryform</th>
-      <th>doctype</th>
-      <th>ocr_creator</th>
-      <th>ocr_timestamp</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>100569450</td>
-      <td>URN:NBN:no-nb_digibok_2010020103031</td>
-      <td>Bram Stoker's Dracula</td>
-      <td>Mignola , Mike / Thomas , Roy / Stoker , Bram</td>
-      <td>oai:nb.bibsys.no:999301168954702202</td>
-      <td>5a36e16d2b8ff377d70a6602727ad23b</td>
-      <td>8253514999</td>
-      <td>Oslo</td>
-      <td>19930101</td>
-      <td>1993</td>
-      <td>Semic</td>
-      <td>nob</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>Uklassifisert</td>
-      <td>digibok</td>
-      <td>nb</td>
-      <td>20060101</td>
+      <td>100276465</td>
+      <td>URN:NBN:no-nb_digibok_2016011248064</td>
+      <td>Dracula</td>
+      <td>Mucci , Michael / Valgermo , Finn / Stoker , B...</td>
+      <td>2009</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>100205172</td>
-      <td>URN:NBN:no-nb_digibok_2014052008098</td>
-      <td>Dracula</td>
-      <td>Stoker , Bram / Carling , Bjørn</td>
-      <td>oai:nb.bibsys.no:990215258544702202</td>
-      <td>bbf9693ca8667bbb6389b2abfd130f36</td>
-      <td>8252542263</td>
-      <td>[Oslo]</td>
-      <td>20020101</td>
-      <td>2002</td>
-      <td>De norske bokklubbene</td>
-      <td>nob / eng</td>
-      <td></td>
-      <td>828.9915 / 823</td>
-      <td>fiction</td>
-      <td>Skjønnlitteratur</td>
-      <td>digibok</td>
-      <td>nb</td>
-      <td>20060101</td>
+      <td>100359518</td>
+      <td>URN:NBN:no-nb_digibok_2017122268008</td>
+      <td>Dracula : av Lars Saabye Christensen : fritt e...</td>
+      <td>Christensen , Lars Saabye / Stoker , Bram</td>
+      <td>2000</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>100547952</td>
-      <td>URN:NBN:no-nb_digibok_2011071108102</td>
-      <td>Dracula</td>
-      <td>Stoker , Bram / Carling , Bjørn</td>
-      <td>oai:nb.bibsys.no:990612097404702202</td>
-      <td>cd9df84207b429b5e0bc93de7ff1645c</td>
-      <td>8205356025</td>
-      <td>[Oslo]</td>
-      <td>20060101</td>
-      <td>2006</td>
-      <td>Gyldendal</td>
-      <td>nob / eng</td>
-      <td></td>
-      <td>823</td>
-      <td>novel</td>
-      <td>Skjønnlitteratur</td>
-      <td>digibok</td>
-      <td>nb</td>
-      <td>20060101</td>
-    </tr>
-    <tr>
-      <th>3</th>
       <td>100384102</td>
       <td>URN:NBN:no-nb_digibok_2018121368009</td>
       <td>Dracula</td>
       <td>Arnesson , Malin / Stoker , Bram / Store , Gur...</td>
-      <td>oai:nb.bibsys.no:990601464004702202</td>
-      <td>9549e8279a2f54d1f74f147e29eeb92f</td>
-      <td></td>
-      <td>[Mo i Rana]</td>
-      <td>20040101</td>
       <td>2004</td>
-      <td>Nordland teater</td>
-      <td>nob</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>Faglitteratur</td>
-      <td>digibok</td>
-      <td>nb</td>
-      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>100138345</td>
+      <td>URN:NBN:no-nb_digibok_2013013008275</td>
+      <td>Dracula house</td>
+      <td>Flikke , Nina</td>
+      <td>1986</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>100149366</td>
-      <td>URN:NBN:no-nb_digibok_2013060406055</td>
+      <td>100540112</td>
+      <td>URN:NBN:no-nb_digibok_2011052408015</td>
       <td>Dracula</td>
       <td>Stoker , Bram / Carling , Bjørn</td>
-      <td>oai:nb.bibsys.no:999327977174702202</td>
-      <td>551df67579f3e31890a17d35e8689417</td>
-      <td>8259801728</td>
-      <td>[Stabekk]</td>
-      <td>19930101</td>
-      <td>1993</td>
-      <td>Bokklubben krim og spenning</td>
-      <td>nob / eng</td>
-      <td></td>
-      <td>823 / 828.9915</td>
-      <td>fiction</td>
-      <td>Skjønnlitteratur</td>
-      <td>digibok</td>
-      <td>nb</td>
-      <td>20060101</td>
+      <td>2004</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
+</div>
+</section>
+<section id="conkordans">
+<h2>Conkordans<a class="headerlink" href="#conkordans" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dh.Concordance<span class="o">??</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dh</span><span class="o">.</span><span class="n">Concordance</span><span class="p">(</span><span class="n">corpus</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -693,68 +661,81 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_ef91f">
+<table id="T_a341b">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_ef91f_level0_col0" class="col_heading level0 col0" >link</th>
-      <th id="T_ef91f_level0_col1" class="col_heading level0 col1" >concordance</th>
+      <th id="T_a341b_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_a341b_level0_col1" class="col_heading level0 col1" >concordance</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_ef91f_level0_row0" class="row_heading level0 row0" >445</th>
-      <td id="T_ef91f_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011071108102'>URN:NBN:no-nb_digibok_2011071108102</a></td>
-      <td id="T_ef91f_row0_col1" class="data row0 col1" ><b>DRACULA</b></td>
+      <th id="T_a341b_level0_row0" class="row_heading level0 row0" >102</th>
+      <td id="T_a341b_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2013060406055'>URN:NBN:no-nb_digibok_2013060406055</a></td>
+      <td id="T_a341b_row0_col1" class="data row0 col1" >... helvete , og i et manuskript blir nettopp denne <b>Dracula</b> betegnet som « wampyr » , noe vi kan forstå bare så... </td>
     </tr>
     <tr>
-      <th id="T_ef91f_level0_row1" class="row_heading level0 row1" >141</th>
-      <td id="T_ef91f_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014052008098'>URN:NBN:no-nb_digibok_2014052008098</a></td>
-      <td id="T_ef91f_row1_col1" class="data row1 col1" ><b>DRACULA</b></td>
+      <th id="T_a341b_level0_row1" class="row_heading level0 row1" >357</th>
+      <td id="T_a341b_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014052008098'>URN:NBN:no-nb_digibok_2014052008098</a></td>
+      <td id="T_a341b_row1_col1" class="data row1 col1" ><b>Dracula</b> : Dead and Loving It ( 1995 , am. , regi Mel Brooks ; Leslie Nielsen som <b>Dracula</b> )</td>
     </tr>
     <tr>
-      <th id="T_ef91f_level0_row2" class="row_heading level0 row2" >294</th>
-      <td id="T_ef91f_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014052008098'>URN:NBN:no-nb_digibok_2014052008098</a></td>
-      <td id="T_ef91f_row2_col1" class="data row2 col1" ><b>DRACULA</b> I</td>
+      <th id="T_a341b_level0_row2" class="row_heading level0 row2" >328</th>
+      <td id="T_a341b_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014052008098'>URN:NBN:no-nb_digibok_2014052008098</a></td>
+      <td id="T_a341b_row2_col1" class="data row2 col1" ><b>DRACULA</b></td>
     </tr>
     <tr>
-      <th id="T_ef91f_level0_row3" class="row_heading level0 row3" >58</th>
-      <td id="T_ef91f_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2008090904123'>URN:NBN:no-nb_digibok_2008090904123</a></td>
-      <td id="T_ef91f_row3_col1" class="data row3 col1" ><b>Dracula</b> hadde anvist . Der ventet de meg tydelig-</td>
+      <th id="T_a341b_level0_row3" class="row_heading level0 row3" >10</th>
+      <td id="T_a341b_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2013062438048'>URN:NBN:no-nb_digibok_2013062438048</a></td>
+      <td id="T_a341b_row3_col1" class="data row3 col1" >... Lucy blir et lett bytte for <b>Dracula</b> som gjør henne til sitt første offer etter ankomsten til Whitby , og... </td>
     </tr>
     <tr>
-      <th id="T_ef91f_level0_row4" class="row_heading level0 row4" >519</th>
-      <td id="T_ef91f_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011071108102'>URN:NBN:no-nb_digibok_2011071108102</a></td>
-      <td id="T_ef91f_row4_col1" class="data row4 col1" ><b>DRACULA</b></td>
+      <th id="T_a341b_level0_row4" class="row_heading level0 row4" >250</th>
+      <td id="T_a341b_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014052008098'>URN:NBN:no-nb_digibok_2014052008098</a></td>
+      <td id="T_a341b_row4_col1" class="data row4 col1" ><b>DRACULA</b> !</td>
     </tr>
     <tr>
-      <th id="T_ef91f_level0_row5" class="row_heading level0 row5" >336</th>
-      <td id="T_ef91f_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014052008098'>URN:NBN:no-nb_digibok_2014052008098</a></td>
-      <td id="T_ef91f_row5_col1" class="data row5 col1" ><b>DRACULA</b> I</td>
+      <th id="T_a341b_level0_row5" class="row_heading level0 row5" >162</th>
+      <td id="T_a341b_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014052008098'>URN:NBN:no-nb_digibok_2014052008098</a></td>
+      <td id="T_a341b_row5_col1" class="data row5 col1" ><b>DRACULA</b> i</td>
     </tr>
     <tr>
-      <th id="T_ef91f_level0_row6" class="row_heading level0 row6" >225</th>
-      <td id="T_ef91f_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014052008098'>URN:NBN:no-nb_digibok_2014052008098</a></td>
-      <td id="T_ef91f_row6_col1" class="data row6 col1" ><b>DRACULA</b></td>
+      <th id="T_a341b_level0_row6" class="row_heading level0 row6" >1</th>
+      <td id="T_a341b_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2013013008275'>URN:NBN:no-nb_digibok_2013013008275</a></td>
+      <td id="T_a341b_row6_col1" class="data row6 col1" ><b>Dracula</b> House</td>
     </tr>
     <tr>
-      <th id="T_ef91f_level0_row7" class="row_heading level0 row7" >219</th>
-      <td id="T_ef91f_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014052008098'>URN:NBN:no-nb_digibok_2014052008098</a></td>
-      <td id="T_ef91f_row7_col1" class="data row7 col1" ><b>DRACULA</b></td>
+      <th id="T_a341b_level0_row7" class="row_heading level0 row7" >76</th>
+      <td id="T_a341b_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2010020103031'>URN:NBN:no-nb_digibok_2010020103031</a></td>
+      <td id="T_a341b_row7_col1" class="data row7 col1" >... - På den andre siden av <b>Dracula</b> ny Hopkins takket ja til rollen som Dr. Abra- finner vi van Helsing... </td>
     </tr>
     <tr>
-      <th id="T_ef91f_level0_row8" class="row_heading level0 row8" >342</th>
-      <td id="T_ef91f_row8_col0" class="data row8 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014052008098'>URN:NBN:no-nb_digibok_2014052008098</a></td>
-      <td id="T_ef91f_row8_col1" class="data row8 col1" ><b>DRACULA</b> I</td>
+      <th id="T_a341b_level0_row8" class="row_heading level0 row8" >193</th>
+      <td id="T_a341b_row8_col0" class="data row8 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014052008098'>URN:NBN:no-nb_digibok_2014052008098</a></td>
+      <td id="T_a341b_row8_col1" class="data row8 col1" ><b>DRACULA</b></td>
     </tr>
     <tr>
-      <th id="T_ef91f_level0_row9" class="row_heading level0 row9" >503</th>
-      <td id="T_ef91f_row9_col0" class="data row9 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011071108102'>URN:NBN:no-nb_digibok_2011071108102</a></td>
-      <td id="T_ef91f_row9_col1" class="data row9 col1" ><b>DRACULA</b></td>
+      <th id="T_a341b_level0_row9" class="row_heading level0 row9" >235</th>
+      <td id="T_a341b_row9_col0" class="data row9 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014052008098'>URN:NBN:no-nb_digibok_2014052008098</a></td>
+      <td id="T_a341b_row9_col1" class="data row9 col1" ><b>DRACULA</b> I</td>
     </tr>
   </tbody>
 </table>
 </div></div>
+</div>
+</section>
+<section id="frekvens">
+<h2>Frekvens<a class="headerlink" href="#frekvens" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dh.Counts<span class="o">??</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dh</span><span class="o">.</span><span class="n">Counts</span><span class="p">(</span><span class="n">corpus</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">words</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -781,11 +762,11 @@ title="Print to PDF"
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Dracula</th>
       <th>Dracula : fritt etter Bram Stokers roman</th>
       <th>Dracula</th>
       <th>Bram Stoker's Dracula</th>
       <th>Dracula</th>
+      <th>Dracula house</th>
       <th>Dracula : et dansedrama i tre akter basert på Bram Stokers roman</th>
       <th>Dracula</th>
       <th>Dracula</th>
@@ -795,62 +776,62 @@ title="Print to PDF"
   <tbody>
     <tr>
       <th>.</th>
-      <td>646.0</td>
       <td>3268.0</td>
       <td>8284.0</td>
       <td>578.0</td>
-      <td>8495.0</td>
+      <td>8099.0</td>
+      <td>287.0</td>
       <td>99.0</td>
       <td>8162.0</td>
       <td>127.0</td>
       <td>30.0</td>
     </tr>
     <tr>
+      <th>:</th>
+      <td>1435.0</td>
+      <td>660.0</td>
+      <td>36.0</td>
+      <td>666.0</td>
+      <td>19.0</td>
+      <td>4.0</td>
+      <td>672.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
       <th>,</th>
-      <td>500.0</td>
       <td>1384.0</td>
       <td>9534.0</td>
       <td>368.0</td>
-      <td>9133.0</td>
+      <td>9574.0</td>
+      <td>140.0</td>
       <td>144.0</td>
       <td>9611.0</td>
       <td>80.0</td>
       <td>23.0</td>
     </tr>
     <tr>
-      <th>og</th>
-      <td>288.0</td>
-      <td>524.0</td>
-      <td>6271.0</td>
-      <td>147.0</td>
-      <td>6206.0</td>
-      <td>110.0</td>
-      <td>6312.0</td>
+      <th>er</th>
+      <td>751.0</td>
+      <td>2416.0</td>
+      <td>171.0</td>
+      <td>2423.0</td>
+      <td>41.0</td>
+      <td>26.0</td>
+      <td>2439.0</td>
       <td>0.0</td>
-      <td>17.0</td>
+      <td>3.0</td>
     </tr>
     <tr>
-      <th>i</th>
-      <td>265.0</td>
-      <td>449.0</td>
-      <td>3035.0</td>
-      <td>250.0</td>
-      <td>2137.0</td>
-      <td>77.0</td>
-      <td>2509.0</td>
-      <td>45.0</td>
-      <td>16.0</td>
-    </tr>
-    <tr>
-      <th>^</th>
-      <td>154.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>189.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>48.0</td>
+      <th>?</th>
+      <td>646.0</td>
+      <td>521.0</td>
+      <td>135.0</td>
+      <td>519.0</td>
+      <td>10.0</td>
+      <td>1.0</td>
+      <td>513.0</td>
+      <td>41.0</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -864,6 +845,18 @@ title="Print to PDF"
       <td>...</td>
       <td>...</td>
       <td>...</td>
+    </tr>
+    <tr>
+      <th>Elvestad</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
     </tr>
     <tr>
       <th>Halgeir</th>
@@ -902,18 +895,6 @@ title="Print to PDF"
       <td>2.0</td>
     </tr>
     <tr>
-      <th>Sissel</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
       <th>utgangspunktet</th>
       <td>0.0</td>
       <td>0.0</td>
@@ -927,7 +908,7 @@ title="Print to PDF"
     </tr>
   </tbody>
 </table>
-<p>21785 rows × 9 columns</p>
+<p>20199 rows × 9 columns</p>
 </div></div></div>
 </div>
 <section id="id1">
@@ -1000,43 +981,43 @@ Name: freq, Length: 50000, dtype: int64
   <tbody>
     <tr>
       <th>Dracula</th>
-      <td>0.000235</td>
+      <td>0.000289</td>
     </tr>
     <tr>
       <th>grev</th>
-      <td>0.000078</td>
+      <td>0.000057</td>
     </tr>
     <tr>
       <th>Grev</th>
-      <td>0.000046</td>
+      <td>0.000044</td>
+    </tr>
+    <tr>
+      <th>brit</th>
+      <td>0.000034</td>
+    </tr>
+    <tr>
+      <th>Reeves</th>
+      <td>0.000031</td>
     </tr>
     <tr>
       <th>tyrkerne</th>
       <td>0.000030</td>
     </tr>
     <tr>
+      <th>Hopkins</th>
+      <td>0.000030</td>
+    </tr>
+    <tr>
+      <th>Ladies</th>
+      <td>0.000027</td>
+    </tr>
+    <tr>
       <th>uverdige</th>
       <td>0.000026</td>
     </tr>
     <tr>
-      <th>vedlagte</th>
-      <td>0.000024</td>
-    </tr>
-    <tr>
-      <th>hungersnød</th>
-      <td>0.000024</td>
-    </tr>
-    <tr>
-      <th>bukket</th>
-      <td>0.000018</td>
-    </tr>
-    <tr>
-      <th>adressert</th>
-      <td>0.000018</td>
-    </tr>
-    <tr>
-      <th>Hopkins</th>
-      <td>0.000018</td>
+      <th>Fisher</th>
+      <td>0.000025</td>
     </tr>
   </tbody>
 </table>
@@ -1048,12 +1029,30 @@ Name: freq, Length: 50000, dtype: int64
 <h2>Ngram<a class="headerlink" href="#ngram" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">??</span>dh.Ngram
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dh</span><span class="o">.</span><span class="n">Ngram</span><span class="p">(</span>
+    <span class="n">words</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">from_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">to_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">doctype</span><span class="o">=</span><span class="s1">&#39;bok&#39;</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;relative&#39;</span><span class="p">,</span>
+    <span class="n">lang</span><span class="o">=</span><span class="s1">&#39;nob&#39;</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dh</span><span class="o">.</span><span class="n">Ngram</span><span class="p">([</span><span class="s2">&quot;Dracula&quot;</span><span class="p">,</span> <span class="s2">&quot;Frankenstein&quot;</span><span class="p">],</span> <span class="n">from_year</span><span class="o">=</span><span class="mi">1880</span><span class="p">,</span> <span class="n">to_year</span><span class="o">=</span><span class="mi">2020</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/dhlab_class_demo_14_0.png" src="_images/dhlab_class_demo_14_0.png" />
+<img alt="_images/dhlab_class_demo_23_0.png" src="_images/dhlab_class_demo_23_0.png" />
 </div>
 </div>
 </section>
