@@ -14,4 +14,7 @@ parts:
     - file: cookbook.md
       sections:
       - glob: cookbook/*
+  - caption: Demoer
+    chapters:
+    - file: dhlab_class_demo.ipynb
 
