@@ -33,3 +33,7 @@ html:
 
 
 only_build_toc_files: true
+
+# Add launch buttons
+launch_buttons:
+  colab_url: "https://colab.research.google.com"
