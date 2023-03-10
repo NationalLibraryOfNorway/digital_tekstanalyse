@@ -314,6 +314,24 @@ title="Launch on Binder"
       </li>
       
       <li>
+        <a href="http://hub.sprakbanken.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/NationalLibraryOfNorway/digital_tekstanalyse&urlpath=tree/digital_tekstanalyse/tutorial/4.0.experiment.ipynb&branch=main"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on JupyterHub"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="headerbtn__text-container">JupyterHub</span>
+</a>
+
+      </li>
+      
+      <li>
         <a href="https://colab.research.google.com/github/NationalLibraryOfNorway/digital_tekstanalyse/blob/main/tutorial/4.0.experiment.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
@@ -467,6 +485,68 @@ title="Print to PDF"
 <h1><span class="section-number">1.12. </span>Eksperimentelle tjenester<a class="headerlink" href="#eksperimentelle-tjenester" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>dhlab
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: dhlab in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (2.23.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pandas in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from dhlab) (1.5.3)
+Requirement already satisfied: beautifulsoup4 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from dhlab) (4.11.2)
+Requirement already satisfied: Pillow in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from dhlab) (9.4.0)
+Requirement already satisfied: matplotlib in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from dhlab) (3.7.0)
+Requirement already satisfied: requests in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from dhlab) (2.28.2)
+Requirement already satisfied: seaborn in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from dhlab) (0.12.2)
+Requirement already satisfied: python-louvain in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from dhlab) (0.16)
+Requirement already satisfied: networkx in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from dhlab) (3.0)
+Requirement already satisfied: IPython in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from dhlab) (8.10.0)
+Requirement already satisfied: soupsieve&gt;1.2 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from beautifulsoup4-&gt;dhlab) (2.3.2.post1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pygments&gt;=2.4.0 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (2.14.0)
+Requirement already satisfied: decorator in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (5.1.1)
+Requirement already satisfied: matplotlib-inline in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (0.1.6)
+Requirement already satisfied: stack-data in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (0.6.2)
+Requirement already satisfied: pickleshare in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (0.7.5)
+Requirement already satisfied: traitlets&gt;=5 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (5.9.0)
+Requirement already satisfied: jedi&gt;=0.16 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (0.18.2)
+Requirement already satisfied: backcall in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (0.2.0)
+Requirement already satisfied: pexpect&gt;4.3 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (4.8.0)
+Requirement already satisfied: prompt-toolkit&lt;3.1.0,&gt;=3.0.30 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (3.0.36)
+Requirement already satisfied: packaging&gt;=20.0 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from matplotlib-&gt;dhlab) (23.0)
+Requirement already satisfied: numpy&gt;=1.20 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from matplotlib-&gt;dhlab) (1.24.2)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from matplotlib-&gt;dhlab) (1.4.4)
+Requirement already satisfied: cycler&gt;=0.10 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from matplotlib-&gt;dhlab) (0.11.0)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from matplotlib-&gt;dhlab) (1.0.7)
+Requirement already satisfied: pyparsing&gt;=2.3.1 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from matplotlib-&gt;dhlab) (3.0.9)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from matplotlib-&gt;dhlab) (4.38.0)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from matplotlib-&gt;dhlab) (2.8.2)
+Requirement already satisfied: pytz&gt;=2020.1 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from pandas-&gt;dhlab) (2022.7.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: idna&lt;4,&gt;=2.5 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from requests-&gt;dhlab) (3.4)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from requests-&gt;dhlab) (3.0.1)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from requests-&gt;dhlab) (2022.12.7)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from requests-&gt;dhlab) (1.26.14)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.0 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from jedi&gt;=0.16-&gt;IPython-&gt;dhlab) (0.8.3)
+Requirement already satisfied: ptyprocess&gt;=0.5 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from pexpect&gt;4.3-&gt;IPython-&gt;dhlab) (0.7.0)
+Requirement already satisfied: wcwidth in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from prompt-toolkit&lt;3.1.0,&gt;=3.0.30-&gt;IPython-&gt;dhlab) (0.2.6)
+Requirement already satisfied: six&gt;=1.5 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib-&gt;dhlab) (1.16.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: executing&gt;=1.2.0 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from stack-data-&gt;IPython-&gt;dhlab) (1.2.0)
+Requirement already satisfied: asttokens&gt;=2.1.0 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from stack-data-&gt;IPython-&gt;dhlab) (2.2.1)
+Requirement already satisfied: pure-eval in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from stack-data-&gt;IPython-&gt;dhlab) (0.2.2)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dhlab.future.corpus_conc_coll</span> <span class="kn">import</span> <span class="n">Corpus</span><span class="p">,</span> <span class="n">Concordance</span><span class="p">,</span> <span class="n">Collocations</span><span class="p">,</span> <span class="n">Frequencies</span>
 </pre></div>
 </div>
@@ -522,44 +602,44 @@ title="Print to PDF"
   <tbody>
     <tr>
       <th>0</th>
-      <td>100390989</td>
-      <td>URN:NBN:no-nb_digibok_2009101304035</td>
-      <td>Økonomiske og sysselsettingsmessige virkninger...</td>
-      <td>Huse , Morten / Gustavsen , Torstein</td>
-      <td>oai:nb.bibsys.no:999903014194702202</td>
-      <td>720d1e85594042122f4bc2ca18126880</td>
-      <td></td>
-      <td>Steinkjer</td>
-      <td>19940101</td>
-      <td>1994</td>
-      <td>Nord-Trøndelagsforskning</td>
+      <td>100259622</td>
+      <td>URN:NBN:no-nb_digibok_2009072004039</td>
+      <td>Konsekvenser av oljesøl : lokalisering av olje...</td>
+      <td>Seip , Knut L.</td>
+      <td>oai:nb.bibsys.no:999108192384702202</td>
+      <td>053f309af7271c706a1a30a5eba37ab2</td>
+      <td>8241102844</td>
+      <td>Oslo</td>
+      <td>19910101</td>
+      <td>1991</td>
+      <td>Senter for industriforskning</td>
       <td>nob</td>
-      <td>vest-finnmark</td>
+      <td>Oljeforurensning / Oljevern</td>
       <td></td>
       <td></td>
-      <td>Faglitteratur</td>
+      <td>Uklassifisert</td>
       <td>digibok</td>
       <td>nb</td>
       <td>20060101</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>100570871</td>
-      <td>URN:NBN:no-nb_digibok_2009021704003</td>
-      <td>Hvordan vi ble lurt : om Bernkonvensjonen som ...</td>
-      <td>Skåret , Bjørn</td>
-      <td>oai:nb.bibsys.no:999713640104702202</td>
-      <td>f1dc191091d66d1d11e82d29450c3346</td>
-      <td>8291548021</td>
-      <td>Trysil</td>
-      <td>19970101</td>
-      <td>1997</td>
-      <td>Fregn forlag</td>
-      <td>nob</td>
+      <td>100350262</td>
+      <td>URN:NBN:no-nb_digibok_2017101048153</td>
+      <td>Bitter hjemkomst</td>
+      <td>Stewart , Isobel / Aakre , Bjørg</td>
+      <td>oai:nb.bibsys.no:998220948354702202</td>
+      <td>580e9876526d69eda1273628dc219e38</td>
+      <td>8270883352</td>
+      <td>[Oslo]</td>
+      <td>19800101</td>
+      <td>1980</td>
+      <td>Conny Stålung</td>
+      <td>nob / eng</td>
       <td></td>
-      <td></td>
-      <td></td>
-      <td>Uklassifisert</td>
+      <td>823</td>
+      <td>fiction</td>
+      <td>Skjønnlitteratur</td>
       <td>digibok</td>
       <td>nb</td>
       <td>20060101</td>
@@ -593,83 +673,83 @@ title="Print to PDF"
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Eksamensoppgaver i regning : 7. klasse</th>
-      <th>Hvordan vi ble lurt : om Bernkonvensjonen som rovdyrpolitisk verktøy</th>
-      <th>Økonomiske og sysselsettingsmessige virkninger av reiselivet : Hammerfest-regionen</th>
-      <th>Nyttekostnadsanalyse av utbedring av Risøyrenna</th>
-      <th>Fra bibelens lande : illustrerte reiseskildringer fra de interessanteste lande i verden : Palestina og Egypten, - samt fra de andre lande om talt i bibelen : 115 billeder fra 14 forskjellige lande</th>
-      <th>Graffs bok : en strek i tegningen</th>
-      <th>Forklaring til Dr. M. Luthers lille katekismus</th>
-      <th>100625485</th>
-      <th>Havbruksnæringa i Nord-Trøndelag</th>
-      <th>Sangam! : integrering og inkludering</th>
+      <th>Hellandsfolk</th>
+      <th>Konsekvenser av oljesøl : lokalisering av oljeverndepoter i Nordland fylke</th>
+      <th>Norsk luftfart gjennom 100 år</th>
+      <th>Gårdene rundt sjøen. 2</th>
+      <th>Erfaringer fra forsøk med Alternative styringsformer</th>
+      <th>Tilfellet G</th>
+      <th>Barna fra Sukhavati</th>
+      <th>Personaladministrasjon : studiehefte</th>
+      <th>Bitter hjemkomst</th>
+      <th>Isbjørnungen Uffa</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>.</th>
-      <td>1536.0</td>
-      <td>198.0</td>
+      <td>7127.0</td>
+      <td>794.0</td>
+      <td>1381.0</td>
+      <td>3730.0</td>
+      <td>493.0</td>
+      <td>10041.0</td>
+      <td>2410.0</td>
+      <td>1014.0</td>
+      <td>2620.0</td>
+      <td>204.0</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>4026.0</td>
+      <td>485.0</td>
+      <td>1003.0</td>
+      <td>2988.0</td>
+      <td>436.0</td>
+      <td>6393.0</td>
+      <td>864.0</td>
       <td>411.0</td>
-      <td>609.0</td>
-      <td>5291.0</td>
-      <td>1295.0</td>
-      <td>1144.0</td>
-      <td>2067.0</td>
-      <td>7871.0</td>
-      <td>2287.0</td>
-    </tr>
-    <tr>
-      <th>kr</th>
-      <td>444.0</td>
-      <td>0.0</td>
-      <td>22.0</td>
-      <td>13.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>2.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>?</th>
-      <td>417.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>85.0</td>
-      <td>221.0</td>
-      <td>330.0</td>
-      <td>57.0</td>
-      <td>290.0</td>
-      <td>216.0</td>
-    </tr>
-    <tr>
-      <th>Hvor</th>
-      <td>397.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>58.0</td>
-      <td>3.0</td>
-      <td>7.0</td>
-      <td>14.0</td>
-      <td>0.0</td>
-      <td>8.0</td>
+      <td>1588.0</td>
+      <td>101.0</td>
     </tr>
     <tr>
       <th>og</th>
-      <td>331.0</td>
-      <td>121.0</td>
-      <td>275.0</td>
-      <td>272.0</td>
-      <td>2008.0</td>
-      <td>280.0</td>
-      <td>820.0</td>
-      <td>1236.0</td>
-      <td>4842.0</td>
-      <td>1789.0</td>
+      <td>3173.0</td>
+      <td>382.0</td>
+      <td>706.0</td>
+      <td>1847.0</td>
+      <td>282.0</td>
+      <td>3587.0</td>
+      <td>827.0</td>
+      <td>419.0</td>
+      <td>836.0</td>
+      <td>126.0</td>
+    </tr>
+    <tr>
+      <th>det</th>
+      <td>1986.0</td>
+      <td>98.0</td>
+      <td>346.0</td>
+      <td>795.0</td>
+      <td>102.0</td>
+      <td>3360.0</td>
+      <td>545.0</td>
+      <td>253.0</td>
+      <td>495.0</td>
+      <td>40.0</td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>1755.0</td>
+      <td>334.0</td>
+      <td>765.0</td>
+      <td>1017.0</td>
+      <td>240.0</td>
+      <td>2790.0</td>
+      <td>553.0</td>
+      <td>431.0</td>
+      <td>417.0</td>
+      <td>45.0</td>
     </tr>
     <tr>
       <th>...</th>
@@ -685,7 +765,7 @@ title="Print to PDF"
       <td>...</td>
     </tr>
     <tr>
-      <th>eleven</th>
+      <th>snuser</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -695,10 +775,10 @@ title="Print to PDF"
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>45.0</td>
+      <td>4.0</td>
     </tr>
     <tr>
-      <th>verdier</th>
+      <th>isbjørnene</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -708,10 +788,10 @@ title="Print to PDF"
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>45.0</td>
+      <td>6.0</td>
     </tr>
     <tr>
-      <th>etnisk</th>
+      <th>hiet</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -721,10 +801,10 @@ title="Print to PDF"
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>51.0</td>
+      <td>10.0</td>
     </tr>
     <tr>
-      <th>holdninger</th>
+      <th>Gloria</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -734,10 +814,10 @@ title="Print to PDF"
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>73.0</td>
+      <td>23.0</td>
     </tr>
     <tr>
-      <th>SANGAM</th>
+      <th>Uffa</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -747,11 +827,11 @@ title="Print to PDF"
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>81.0</td>
+      <td>35.0</td>
     </tr>
   </tbody>
 </table>
-<p>42446 rows × 10 columns</p>
+<p>33026 rows × 10 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -785,51 +865,51 @@ title="Print to PDF"
   <tbody>
     <tr>
       <th>.</th>
-      <td>22709.0</td>
+      <td>29814.0</td>
     </tr>
     <tr>
-      <th>kr</th>
-      <td>481.0</td>
-    </tr>
-    <tr>
-      <th>?</th>
-      <td>1618.0</td>
-    </tr>
-    <tr>
-      <th>Hvor</th>
-      <td>488.0</td>
+      <th>,</th>
+      <td>18295.0</td>
     </tr>
     <tr>
       <th>og</th>
-      <td>11974.0</td>
+      <td>12185.0</td>
+    </tr>
+    <tr>
+      <th>det</th>
+      <td>8020.0</td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>8347.0</td>
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
     </tr>
     <tr>
-      <th>eleven</th>
-      <td>45.0</td>
+      <th>snuser</th>
+      <td>4.0</td>
     </tr>
     <tr>
-      <th>verdier</th>
-      <td>45.0</td>
+      <th>isbjørnene</th>
+      <td>6.0</td>
     </tr>
     <tr>
-      <th>etnisk</th>
-      <td>51.0</td>
+      <th>hiet</th>
+      <td>10.0</td>
     </tr>
     <tr>
-      <th>holdninger</th>
-      <td>73.0</td>
+      <th>Gloria</th>
+      <td>23.0</td>
     </tr>
     <tr>
-      <th>SANGAM</th>
-      <td>81.0</td>
+      <th>Uffa</th>
+      <td>35.0</td>
     </tr>
   </tbody>
 </table>
-<p>42446 rows × 1 columns</p>
+<p>33026 rows × 1 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -866,37 +946,30 @@ title="Print to PDF"
   <tbody>
     <tr>
       <th>0</th>
-      <td>100171304</td>
-      <td>URN:NBN:no-nb_digibok_2013092508070</td>
-      <td>- I alle fall som &lt;b&gt;konge&lt;/b&gt; eller dronning ...</td>
+      <td>100116319</td>
+      <td>URN:NBN:no-nb_digibok_2012101808092</td>
+      <td>... det samme som en gang var en konges valgsp...</td>
       <td>&lt;a target='_blank' href = 'https://urn.nb.no/U...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>100143430</td>
-      <td>URN:NBN:no-nb_digibok_2013040208149</td>
-      <td>Det var her i dette stræde at den før nævnte s...</td>
+      <td>100116319</td>
+      <td>URN:NBN:no-nb_digibok_2012101808092</td>
+      <td>- Han var jo soldat akkurat som kapteinen og d...</td>
       <td>&lt;a target='_blank' href = 'https://urn.nb.no/U...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>100143430</td>
-      <td>URN:NBN:no-nb_digibok_2013040208149</td>
-      <td>... Altsaa hadde denne &lt;b&gt;konge&lt;/b&gt; levet før ...</td>
+      <td>100116319</td>
+      <td>URN:NBN:no-nb_digibok_2012101808092</td>
+      <td>- Javisst , slik skal det være ... for &lt;b&gt;kong...</td>
       <td>&lt;a target='_blank' href = 'https://urn.nb.no/U...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>100143430</td>
-      <td>URN:NBN:no-nb_digibok_2013040208149</td>
-      <td>Nu kommer altsaa Jordens retmæssige &lt;b&gt;konge&lt;/...</td>
-      <td>&lt;a target='_blank' href = 'https://urn.nb.no/U...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>100143430</td>
-      <td>URN:NBN:no-nb_digibok_2013040208149</td>
-      <td>De blir enige om at ta kampen op mot den komme...</td>
+      <td>100568986</td>
+      <td>URN:NBN:no-nb_digibok_2007021201013</td>
+      <td>— Han rir som en gammal &lt;b&gt;konge&lt;/b&gt; , Johan ,...</td>
       <td>&lt;a target='_blank' href = 'https://urn.nb.no/U...</td>
     </tr>
   </tbody>
@@ -933,52 +1006,239 @@ title="Print to PDF"
   </thead>
   <tbody>
     <tr>
-      <th>over</th>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>kom</th>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>Dette</th>
+      <th>Kasper</th>
       <td>2.0</td>
     </tr>
     <tr>
-      <th>Joram</th>
+      <th>én</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>gammal</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>for</th>
       <td>2.0</td>
     </tr>
     <tr>
-      <th>Xerxes</th>
+      <th>døde</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>bare</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>Oberst</th>
       <td>1.0</td>
     </tr>
     <tr>
       <th>...</th>
-      <td>...</td>
+      <td>1.0</td>
     </tr>
     <tr>
-      <th>hans</th>
+      <th>Johan</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>—</th>
       <td>2.0</td>
     </tr>
     <tr>
-      <th>er</th>
-      <td>3.0</td>
+      <th>som</th>
+      <td>1.0</td>
     </tr>
     <tr>
-      <th>altid</th>
+      <th>fedreland</th>
       <td>2.0</td>
+    </tr>
+    <tr>
+      <th>vi</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>være</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>Trevignac</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>rir</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>sa</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>hyller</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>.</th>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>!</th>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>la</th>
+      <td>1.0</td>
     </tr>
     <tr>
       <th>det</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>snudde</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>rettet</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>skal</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>sjølkjerringa</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>hun</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>kongerike</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>Han</th>
       <td>2.0</td>
     </tr>
     <tr>
-      <th>konge</th>
+      <th>dette</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>slik</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>til</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>I</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>seiv</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>storlo</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>pekte</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>opp</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>med</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>på</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>du</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>sitt</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>Javisst</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>seg</th>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>,</th>
       <td>4.0</td>
+    </tr>
+    <tr>
+      <th>fikk</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>-</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>stadet</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>viss</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>mer</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>kapteinen</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>liv</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>høye</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>stolthet</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>stor</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>Akkurat</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>enda</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>en</th>
+      <td>3.0</td>
     </tr>
   </tbody>
 </table>
-<p>316 rows × 1 columns</p>
 </div></div></div>
 </div>
 </section>
