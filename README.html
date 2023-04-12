@@ -355,7 +355,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -371,6 +373,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy">Deploy</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -386,6 +396,15 @@ document.write(`
 <p><a class="reference external" href="https://nbviewer.org/github/NationalLibraryOfNorway/digital_tekstanalyse/tree/main/">Launch NBviewer</a></p>
 <p>Nasjonalbiblioteket har utviklet et API (Application Programming Interface) mot tekstene i NB Digital (bøker og aviser) og en funksjonalitet for bruk av API-et i Jupyter Notebook som kan benyttes av forskere. Jupyter Notebook kan benyttes uten kjennskap til programmering. Med API-et er det mulig å studere data fra de digitale tekstene for eksempel ved generering av ordfrekvenslister, konkordanser, kollokasjoner og n-grammer og ved uttrekk av navn og narrative grafer. Alle uttrekk kan gjøres på enkeltverk eller definerte korpus. Bak API-et er det en kobling til metadata slik at korpus kan defineres på bakgrunn av bibliografisk informasjon.</p>
 <p>Klikk på “launch binder”-ikonet over for å åpne repositoriet i Binder</p>
+<section id="deploy">
+<h2>Deploy<a class="headerlink" href="#deploy" title="Permalink to this heading">#</a></h2>
+<p>Bygg og deploy med ghp-import</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="o">.</span>
+<span class="c1"># pip install ghp-import</span>
+<span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
+</pre></div>
+</div>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -443,6 +462,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy">Deploy</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
