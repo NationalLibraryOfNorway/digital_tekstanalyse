@@ -15,4 +15,8 @@ openpyxl
 gensim
 pyLDAvis
 openpyxl
+
+# jupyter book
 jupyter-book
+ghp-import
+
