@@ -1,48 +1,59 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>1.12. Eksperimentelle tjenester &#8212; DH-lab dokumenter</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -50,61 +61,93 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial/4.0.experiment';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. Kokebøker" href="../cookbook.html" />
     <link rel="prev" title="1.11. Ordfordeling" href="3.2.dispersion.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/DHlab_logo_web_en_black.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">DH-lab dokumenter</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -114,437 +157,263 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../bibliography/bibliography.html">
-   Bibliografi
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography/bibliography.html">Bibliografi</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Kodeeksempler–Python
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kodeeksempler–Python</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../tutorial.html">
-   1. Læringseksempler
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="1.0.Oppstart.html">
-     1.1. Oppstart
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2.0.Bygg_korpus.html">
-     1.2. Korpusbygging
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2.1.Konkordans.html">
-     1.3. Konkordanser
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2.2.Kollokasjoner.html">
-     1.4. Kollokasjoner
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2.3.Frekvenslister.html">
-     1.5. Frekvenslister
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2.4.S%C3%B8k_i_aviser.html">
-     1.6. Søk i aviser
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2.5.n-gram_og_galakser.html">
-     1.7. N-gram og galakser
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2.6.sammenlign_metadata.html">
-     1.8. Sammenlign metadata
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3.0.ner_og_pos.html">
-     1.9. NER og POS med Spacy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3.1.ordparadigmer.html">
-     1.10. Ordparadigmer med wordbank
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3.2.dispersion.html">
-     1.11. Ordfordeling
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     1.12. Eksperimentelle tjenester
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../cookbook.html">
-   2. Kokebøker
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../cookbook/4.0.sentiment_analysis_timeseries.html">
-     2.1. Sentimentanalyse i aviskorpus
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../cookbook/4.1.topic_modelling_with_LDA.html">
-     2.2. Topic modelling med gensim og dhlab
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../cookbook/4.2.natbib_query.html">
-     2.3. Søk Nasjonalbibliografiens metadata med dhlab
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../tutorial.html">1. Læringseksempler</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1.0.Oppstart.html">1.1. Oppstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.0.Bygg_korpus.html">1.2. Korpusbygging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.Konkordans.html">1.3. Konkordanser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.Kollokasjoner.html">1.4. Kollokasjoner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3.Frekvenslister.html">1.5. Frekvenslister</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4.S%C3%B8k_i_aviser.html">1.6. Søk i aviser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5.n-gram_og_galakser.html">1.7. N-gram og galakser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6.sammenlign_metadata.html">1.8. Sammenlign metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.0.ner_og_pos.html">1.9. NER og POS med Spacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.ordparadigmer.html">1.10. Ordparadigmer med wordbank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.2.dispersion.html">1.11. Ordfordeling</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.12. Eksperimentelle tjenester</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Demoer
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook.html">2. Kokebøker</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cookbook/4.0.sentiment_analysis_timeseries.html">2.1. Sentimentanalyse i aviskorpus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cookbook/4.1.topic_modelling_with_LDA.html">2.2. Topic modelling med gensim og dhlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cookbook/4.2.natbib_query.html">2.3. Søk Nasjonalbibliografiens metadata med dhlab</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Demoer</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../dhlab_class_demo.html">
-   dhlab class demo
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../dhlab_class_demo.html">dhlab class demo</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/NationalLibraryOfNorway/digital_tekstanalyse/main?urlpath=tree/tutorial/4.0.experiment.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
+  <ul class="dropdown-menu">
       
-      <li>
-        <a href="http://hub.sprakbanken.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/NationalLibraryOfNorway/digital_tekstanalyse&urlpath=tree/digital_tekstanalyse/tutorial/4.0.experiment.ipynb&branch=main"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on JupyterHub"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_jupyterhub.svg">
-  </span>
-<span class="headerbtn__text-container">JupyterHub</span>
-</a>
-
-      </li>
       
-      <li>
-        <a href="https://colab.research.google.com/github/NationalLibraryOfNorway/digital_tekstanalyse/blob/main/tutorial/4.0.experiment.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+      
+      <li><a href="https://colab.research.google.com/github/NationalLibraryOfNorway/digital_tekstanalyse/blob/main/tutorial/4.0.experiment.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NationalLibraryOfNorway/digital_tekstanalyse" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NationalLibraryOfNorway/digital_tekstanalyse/issues/new?title=Issue%20on%20page%20%2Ftutorial/4.0.experiment.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tutorial/4.0.experiment.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/NationalLibraryOfNorway/digital_tekstanalyse"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/NationalLibraryOfNorway/digital_tekstanalyse/issues/new?title=Issue%20on%20page%20%2Ftutorial/4.0.experiment.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/tutorial/4.0.experiment.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
+</div></div>
       
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
+    </div>
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
 </div>
+</div>
+              
+              
 
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Eksperimentelle tjenester</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-</div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Eksperimentelle tjenester</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                    </div>
-                </div>
-            </div>
-            <main id="main-content" role="main">
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="eksperimentelle-tjenester">
-<h1><span class="section-number">1.12. </span>Eksperimentelle tjenester<a class="headerlink" href="#eksperimentelle-tjenester" title="Permalink to this headline">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>dhlab
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: dhlab in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (2.23.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pandas in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from dhlab) (1.5.3)
-Requirement already satisfied: beautifulsoup4 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from dhlab) (4.11.2)
-Requirement already satisfied: Pillow in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from dhlab) (9.4.0)
-Requirement already satisfied: matplotlib in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from dhlab) (3.7.0)
-Requirement already satisfied: requests in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from dhlab) (2.28.2)
-Requirement already satisfied: seaborn in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from dhlab) (0.12.2)
-Requirement already satisfied: python-louvain in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from dhlab) (0.16)
-Requirement already satisfied: networkx in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from dhlab) (3.0)
-Requirement already satisfied: IPython in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from dhlab) (8.10.0)
-Requirement already satisfied: soupsieve&gt;1.2 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from beautifulsoup4-&gt;dhlab) (2.3.2.post1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pygments&gt;=2.4.0 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (2.14.0)
-Requirement already satisfied: decorator in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (5.1.1)
-Requirement already satisfied: matplotlib-inline in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (0.1.6)
-Requirement already satisfied: stack-data in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (0.6.2)
-Requirement already satisfied: pickleshare in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (0.7.5)
-Requirement already satisfied: traitlets&gt;=5 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (5.9.0)
-Requirement already satisfied: jedi&gt;=0.16 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (0.18.2)
-Requirement already satisfied: backcall in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (0.2.0)
-Requirement already satisfied: pexpect&gt;4.3 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (4.8.0)
-Requirement already satisfied: prompt-toolkit&lt;3.1.0,&gt;=3.0.30 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from IPython-&gt;dhlab) (3.0.36)
-Requirement already satisfied: packaging&gt;=20.0 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from matplotlib-&gt;dhlab) (23.0)
-Requirement already satisfied: numpy&gt;=1.20 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from matplotlib-&gt;dhlab) (1.24.2)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from matplotlib-&gt;dhlab) (1.4.4)
-Requirement already satisfied: cycler&gt;=0.10 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from matplotlib-&gt;dhlab) (0.11.0)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from matplotlib-&gt;dhlab) (1.0.7)
-Requirement already satisfied: pyparsing&gt;=2.3.1 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from matplotlib-&gt;dhlab) (3.0.9)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from matplotlib-&gt;dhlab) (4.38.0)
-Requirement already satisfied: python-dateutil&gt;=2.7 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from matplotlib-&gt;dhlab) (2.8.2)
-Requirement already satisfied: pytz&gt;=2020.1 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from pandas-&gt;dhlab) (2022.7.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: idna&lt;4,&gt;=2.5 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from requests-&gt;dhlab) (3.4)
-Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from requests-&gt;dhlab) (3.0.1)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from requests-&gt;dhlab) (2022.12.7)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from requests-&gt;dhlab) (1.26.14)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.0 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from jedi&gt;=0.16-&gt;IPython-&gt;dhlab) (0.8.3)
-Requirement already satisfied: ptyprocess&gt;=0.5 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from pexpect&gt;4.3-&gt;IPython-&gt;dhlab) (0.7.0)
-Requirement already satisfied: wcwidth in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from prompt-toolkit&lt;3.1.0,&gt;=3.0.30-&gt;IPython-&gt;dhlab) (0.2.6)
-Requirement already satisfied: six&gt;=1.5 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib-&gt;dhlab) (1.16.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: executing&gt;=1.2.0 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from stack-data-&gt;IPython-&gt;dhlab) (1.2.0)
-Requirement already satisfied: asttokens&gt;=2.1.0 in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from stack-data-&gt;IPython-&gt;dhlab) (2.2.1)
-Requirement already satisfied: pure-eval in /home/larsm/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages (from stack-data-&gt;IPython-&gt;dhlab) (0.2.2)
-</pre></div>
-</div>
-</div>
-</div>
+<h1><span class="section-number">1.12. </span>Eksperimentelle tjenester<a class="headerlink" href="#eksperimentelle-tjenester" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dhlab.future.corpus_conc_coll</span> <span class="kn">import</span> <span class="n">Corpus</span><span class="p">,</span> <span class="n">Concordance</span><span class="p">,</span> <span class="n">Collocations</span><span class="p">,</span> <span class="n">Frequencies</span>
@@ -602,20 +471,20 @@ Requirement already satisfied: pure-eval in /home/larsm/anaconda3/envs/digital_t
   <tbody>
     <tr>
       <th>0</th>
-      <td>100259622</td>
-      <td>URN:NBN:no-nb_digibok_2009072004039</td>
-      <td>Konsekvenser av oljesøl : lokalisering av olje...</td>
-      <td>Seip , Knut L.</td>
-      <td>oai:nb.bibsys.no:999108192384702202</td>
-      <td>053f309af7271c706a1a30a5eba37ab2</td>
-      <td>8241102844</td>
-      <td>Oslo</td>
-      <td>19910101</td>
-      <td>1991</td>
-      <td>Senter for industriforskning</td>
-      <td>nob</td>
-      <td>Oljeforurensning / Oljevern</td>
+      <td>100317354</td>
+      <td>URN:NBN:no-nb_digibok_2016112948603</td>
+      <td>Planlegging i jord- og hagebruk etter deknings...</td>
+      <td>Afdal , Lars</td>
+      <td>oai:nb.bibsys.no:999422701004702202</td>
+      <td>38561e0a66ff06cd90fe425ad9e3e525</td>
       <td></td>
+      <td>Oslo</td>
+      <td>19660101</td>
+      <td>1966</td>
+      <td>Norges landbruksøkonomiske institutt</td>
+      <td>und</td>
+      <td></td>
+      <td>338.1</td>
       <td></td>
       <td>Uklassifisert</td>
       <td>digibok</td>
@@ -624,22 +493,22 @@ Requirement already satisfied: pure-eval in /home/larsm/anaconda3/envs/digital_t
     </tr>
     <tr>
       <th>1</th>
-      <td>100350262</td>
-      <td>URN:NBN:no-nb_digibok_2017101048153</td>
-      <td>Bitter hjemkomst</td>
-      <td>Stewart , Isobel / Aakre , Bjørg</td>
-      <td>oai:nb.bibsys.no:998220948354702202</td>
-      <td>580e9876526d69eda1273628dc219e38</td>
-      <td>8270883352</td>
-      <td>[Oslo]</td>
-      <td>19800101</td>
-      <td>1980</td>
-      <td>Conny Stålung</td>
-      <td>nob / eng</td>
+      <td>100494515</td>
+      <td>URN:NBN:no-nb_digibok_2013080908090</td>
+      <td>Der nordhavet bruser : guttefortelling</td>
+      <td>Mæland , Ole / Ellingsen , Jan-Fredrik</td>
+      <td>oai:nb.bibsys.no:990512292694702202</td>
+      <td>b30e28aefc53e3fd03e0985f116ab755</td>
       <td></td>
-      <td>823</td>
-      <td>fiction</td>
-      <td>Skjønnlitteratur</td>
+      <td>Oslo</td>
+      <td>19450101</td>
+      <td>1945</td>
+      <td>Rosen</td>
+      <td>nob</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Uklassifisert</td>
       <td>digibok</td>
       <td>nb</td>
       <td>20060101</td>
@@ -673,83 +542,83 @@ Requirement already satisfied: pure-eval in /home/larsm/anaconda3/envs/digital_t
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Hellandsfolk</th>
-      <th>Konsekvenser av oljesøl : lokalisering av oljeverndepoter i Nordland fylke</th>
-      <th>Norsk luftfart gjennom 100 år</th>
-      <th>Gårdene rundt sjøen. 2</th>
-      <th>Erfaringer fra forsøk med Alternative styringsformer</th>
-      <th>Tilfellet G</th>
-      <th>Barna fra Sukhavati</th>
-      <th>Personaladministrasjon : studiehefte</th>
-      <th>Bitter hjemkomst</th>
-      <th>Isbjørnungen Uffa</th>
+      <th>Titanen. 2</th>
+      <th>A Soviet grab for the High North? : USSR, Svalbard, and Northern Norway 1920-1953</th>
+      <th>Den onde hyrde : roman</th>
+      <th>Praktisk medikamentregning</th>
+      <th>Der nordhavet bruser : guttefortelling</th>
+      <th>Flukten til Egypt : legender</th>
+      <th>Leopardmannen : roman</th>
+      <th>Psykodrama og sosiometri i praksis : personlig frihet, par i samspill, den skapende gruppe</th>
+      <th>Planlegging i jord- og hagebruk etter dekningsbidragsprinsippet : kort rettleiing med eksempler beregnet på sjølstudium</th>
+      <th>Kommunikasjon på 1-2-3</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>.</th>
-      <td>7127.0</td>
-      <td>794.0</td>
-      <td>1381.0</td>
-      <td>3730.0</td>
-      <td>493.0</td>
-      <td>10041.0</td>
-      <td>2410.0</td>
-      <td>1014.0</td>
-      <td>2620.0</td>
-      <td>204.0</td>
+      <td>5890.0</td>
+      <td>2219.0</td>
+      <td>5058.0</td>
+      <td>5074.0</td>
+      <td>2535.0</td>
+      <td>144.0</td>
+      <td>4097.0</td>
+      <td>4325.0</td>
+      <td>1150.0</td>
+      <td>3091.0</td>
     </tr>
     <tr>
       <th>,</th>
-      <td>4026.0</td>
-      <td>485.0</td>
-      <td>1003.0</td>
-      <td>2988.0</td>
-      <td>436.0</td>
-      <td>6393.0</td>
-      <td>864.0</td>
-      <td>411.0</td>
-      <td>1588.0</td>
-      <td>101.0</td>
+      <td>4733.0</td>
+      <td>3485.0</td>
+      <td>4676.0</td>
+      <td>1898.0</td>
+      <td>1170.0</td>
+      <td>98.0</td>
+      <td>2871.0</td>
+      <td>3231.0</td>
+      <td>388.0</td>
+      <td>1909.0</td>
     </tr>
     <tr>
       <th>og</th>
-      <td>3173.0</td>
-      <td>382.0</td>
-      <td>706.0</td>
-      <td>1847.0</td>
-      <td>282.0</td>
-      <td>3587.0</td>
-      <td>827.0</td>
-      <td>419.0</td>
-      <td>836.0</td>
-      <td>126.0</td>
-    </tr>
-    <tr>
-      <th>det</th>
-      <td>1986.0</td>
-      <td>98.0</td>
-      <td>346.0</td>
-      <td>795.0</td>
-      <td>102.0</td>
-      <td>3360.0</td>
-      <td>545.0</td>
-      <td>253.0</td>
-      <td>495.0</td>
-      <td>40.0</td>
+      <td>3287.0</td>
+      <td>52.0</td>
+      <td>3245.0</td>
+      <td>1232.0</td>
+      <td>1190.0</td>
+      <td>116.0</td>
+      <td>1396.0</td>
+      <td>2626.0</td>
+      <td>302.0</td>
+      <td>1973.0</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>1755.0</td>
-      <td>334.0</td>
-      <td>765.0</td>
-      <td>1017.0</td>
-      <td>240.0</td>
-      <td>2790.0</td>
-      <td>553.0</td>
-      <td>431.0</td>
-      <td>417.0</td>
-      <td>45.0</td>
+      <td>2295.0</td>
+      <td>44.0</td>
+      <td>1164.0</td>
+      <td>1049.0</td>
+      <td>717.0</td>
+      <td>33.0</td>
+      <td>1285.0</td>
+      <td>2215.0</td>
+      <td>209.0</td>
+      <td>838.0</td>
+    </tr>
+    <tr>
+      <th>a</th>
+      <td>1948.0</td>
+      <td>658.0</td>
+      <td>122.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>8.0</td>
+      <td>14.0</td>
+      <td>13.0</td>
+      <td>10.0</td>
     </tr>
     <tr>
       <th>...</th>
@@ -765,7 +634,7 @@ Requirement already satisfied: pure-eval in /home/larsm/anaconda3/envs/digital_t
       <td>...</td>
     </tr>
     <tr>
-      <th>snuser</th>
+      <th>digitale</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -775,10 +644,10 @@ Requirement already satisfied: pure-eval in /home/larsm/anaconda3/envs/digital_t
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>4.0</td>
+      <td>52.0</td>
     </tr>
     <tr>
-      <th>isbjørnene</th>
+      <th>kunder</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -788,10 +657,10 @@ Requirement already satisfied: pure-eval in /home/larsm/anaconda3/envs/digital_t
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>6.0</td>
+      <td>53.0</td>
     </tr>
     <tr>
-      <th>hiet</th>
+      <th>målgruppen</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -801,10 +670,10 @@ Requirement already satisfied: pure-eval in /home/larsm/anaconda3/envs/digital_t
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>10.0</td>
+      <td>62.0</td>
     </tr>
     <tr>
-      <th>Gloria</th>
+      <th>KAP</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -814,10 +683,10 @@ Requirement already satisfied: pure-eval in /home/larsm/anaconda3/envs/digital_t
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>23.0</td>
+      <td>80.0</td>
     </tr>
     <tr>
-      <th>Uffa</th>
+      <th>Kommunikasjon</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -827,11 +696,11 @@ Requirement already satisfied: pure-eval in /home/larsm/anaconda3/envs/digital_t
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>35.0</td>
+      <td>98.0</td>
     </tr>
   </tbody>
 </table>
-<p>33026 rows × 10 columns</p>
+<p>50382 rows × 10 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -865,51 +734,51 @@ Requirement already satisfied: pure-eval in /home/larsm/anaconda3/envs/digital_t
   <tbody>
     <tr>
       <th>.</th>
-      <td>29814.0</td>
+      <td>33583.0</td>
     </tr>
     <tr>
       <th>,</th>
-      <td>18295.0</td>
+      <td>24459.0</td>
     </tr>
     <tr>
       <th>og</th>
-      <td>12185.0</td>
-    </tr>
-    <tr>
-      <th>det</th>
-      <td>8020.0</td>
+      <td>15419.0</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>8347.0</td>
+      <td>9849.0</td>
+    </tr>
+    <tr>
+      <th>a</th>
+      <td>2777.0</td>
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
     </tr>
     <tr>
-      <th>snuser</th>
-      <td>4.0</td>
+      <th>digitale</th>
+      <td>52.0</td>
     </tr>
     <tr>
-      <th>isbjørnene</th>
-      <td>6.0</td>
+      <th>kunder</th>
+      <td>53.0</td>
     </tr>
     <tr>
-      <th>hiet</th>
-      <td>10.0</td>
+      <th>målgruppen</th>
+      <td>62.0</td>
     </tr>
     <tr>
-      <th>Gloria</th>
-      <td>23.0</td>
+      <th>KAP</th>
+      <td>80.0</td>
     </tr>
     <tr>
-      <th>Uffa</th>
-      <td>35.0</td>
+      <th>Kommunikasjon</th>
+      <td>98.0</td>
     </tr>
   </tbody>
 </table>
-<p>33026 rows × 1 columns</p>
+<p>50382 rows × 1 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -946,30 +815,16 @@ Requirement already satisfied: pure-eval in /home/larsm/anaconda3/envs/digital_t
   <tbody>
     <tr>
       <th>0</th>
-      <td>100116319</td>
-      <td>URN:NBN:no-nb_digibok_2012101808092</td>
-      <td>... det samme som en gang var en konges valgsp...</td>
+      <td>100286824</td>
+      <td>URN:NBN:no-nb_digibok_2016031408061</td>
+      <td>... Den ene er da mottakeren , altså &lt;b&gt;konge&lt;...</td>
       <td>&lt;a target='_blank' href = 'https://urn.nb.no/U...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>100116319</td>
-      <td>URN:NBN:no-nb_digibok_2012101808092</td>
-      <td>- Han var jo soldat akkurat som kapteinen og d...</td>
-      <td>&lt;a target='_blank' href = 'https://urn.nb.no/U...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>100116319</td>
-      <td>URN:NBN:no-nb_digibok_2012101808092</td>
-      <td>- Javisst , slik skal det være ... for &lt;b&gt;kong...</td>
-      <td>&lt;a target='_blank' href = 'https://urn.nb.no/U...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>100568986</td>
-      <td>URN:NBN:no-nb_digibok_2007021201013</td>
-      <td>— Han rir som en gammal &lt;b&gt;konge&lt;/b&gt; , Johan ,...</td>
+      <td>100214560</td>
+      <td>URN:NBN:no-nb_digibok_2014062606088</td>
+      <td>... De tilbad det lille barnet og kalte ham fo...</td>
       <td>&lt;a target='_blank' href = 'https://urn.nb.no/U...</td>
     </tr>
   </tbody>
@@ -1006,155 +861,71 @@ Requirement already satisfied: pure-eval in /home/larsm/anaconda3/envs/digital_t
   </thead>
   <tbody>
     <tr>
-      <th>Kasper</th>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>én</th>
+      <th>eller</th>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>gammal</th>
+      <th>jødenes</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>altså</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>dronning</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>,</th>
       <td>1.0</td>
     </tr>
     <tr>
       <th>for</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>Den</th>
       <td>2.0</td>
     </tr>
     <tr>
-      <th>døde</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>bare</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>Oberst</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>Johan</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>—</th>
+      <th>andre</th>
       <td>2.0</td>
     </tr>
     <tr>
-      <th>som</th>
+      <th>hadde</th>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>fedreland</th>
+      <th>er</th>
       <td>2.0</td>
     </tr>
     <tr>
-      <th>vi</th>
+      <th>mottakeren</th>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>være</th>
+      <th>ham</th>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>Trevignac</th>
+      <th>da</th>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>rir</th>
+      <th>også</th>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>sa</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>hyller</th>
+      <th>kalte</th>
       <td>1.0</td>
     </tr>
     <tr>
       <th>.</th>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>!</th>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>la</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>det</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>snudde</th>
-      <td>1.0</td>
+      <td>5.0</td>
     </tr>
     <tr>
       <th>og</th>
-      <td>6.0</td>
-    </tr>
-    <tr>
-      <th>rettet</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>skal</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>sjølkjerringa</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>hun</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>kongerike</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>Han</th>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>dette</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>slik</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>til</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>I</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>seiv</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>storlo</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>pekte</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>opp</th>
       <td>1.0</td>
     </tr>
     <tr>
@@ -1162,80 +933,56 @@ Requirement already satisfied: pure-eval in /home/larsm/anaconda3/envs/digital_t
       <td>1.0</td>
     </tr>
     <tr>
-      <th>på</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>du</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>sitt</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>Javisst</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
       <th>seg</th>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>De</th>
       <td>2.0</td>
     </tr>
     <tr>
-      <th>,</th>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>fikk</th>
+      <th>barnet</th>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>-</th>
+      <th>ergiveren</th>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>stadet</th>
+      <th>ene</th>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>viss</th>
+      <th>lille</th>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>mer</th>
+      <th>gåver</th>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>kapteinen</th>
+      <th>det</th>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>liv</th>
+      <th>tilbad</th>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>høye</th>
+      <th>viktig</th>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>stolthet</th>
+      <th>den</th>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>stor</th>
+      <th>var</th>
       <td>1.0</td>
     </tr>
     <tr>
-      <th>Akkurat</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>enda</th>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>en</th>
-      <td>3.0</td>
+      <th>Det</th>
+      <td>2.0</td>
     </tr>
   </tbody>
 </table>
@@ -1263,50 +1010,91 @@ Requirement already satisfied: pure-eval in /home/larsm/anaconda3/envs/digital_t
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="3.2.dispersion.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1.11. </span>Ordfordeling</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="3.2.dispersion.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1.11. </span>Ordfordeling</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../cookbook.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../cookbook.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">2. </span>Kokebøker</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Nasjonalbiblioteket<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
-    
-</div>
-
-
       </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Nasjonalbiblioteket
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

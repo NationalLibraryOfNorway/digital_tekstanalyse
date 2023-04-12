@@ -1,0 +1,58 @@
+Traceback (most recent call last):
+  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Her viser vi de 50 viktigste ordene som er assosiert med rødvin i korpuset vårt, målt mot alle bøker i nb.no 
+
+nb.cloud(coll_assoc.head(50)/coll_assoc.sum())
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+Cell [0;32mIn[27], line 3[0m
+[1;32m      1[0m [38;5;66;03m# Her viser vi de 50 viktigste ordene som er assosiert med rødvin i korpuset vårt, målt mot alle bøker i nb.no [39;00m
+[0;32m----> 3[0m [43mnb[49m[38;5;241;43m.[39;49m[43mcloud[49m[43m([49m[43mcoll_assoc[49m[38;5;241;43m.[39;49m[43mhead[49m[43m([49m[38;5;241;43m50[39;49m[43m)[49m[38;5;241;43m/[39;49m[43mcoll_assoc[49m[38;5;241;43m.[39;49m[43msum[49m[43m([49m[43m)[49m[43m)[49m
+
+File [0;32m~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/dhlab/legacy/nbtext.py:1331[0m, in [0;36mcloud[0;34m(df, column, top, width, height, background, file, stretch, font_path)[0m
+[1;32m   1329[0m     column [38;5;241m=[39m df[38;5;241m.[39mcolumns[[38;5;241m0[39m]
+[1;32m   1330[0m data [38;5;241m=[39m json[38;5;241m.[39mloads(df[column][38;5;241m.[39mto_json())
+[0;32m-> 1331[0m a_cloud [38;5;241m=[39m [43mmake_cloud[49m[43m([49m[43mdata[49m[43m,[49m[43m [49m[43mtop[49m[38;5;241;43m=[39;49m[43mtop[49m[43m,[49m
+[1;32m   1332[0m [43m                     [49m[43mbackground[49m[38;5;241;43m=[39;49m[43mbackground[49m[43m,[49m[43m [49m[43mfont_path[49m[38;5;241;43m=[39;49m[43mfont_path[49m[43m,[49m
+[1;32m   1333[0m [43m                     [49m[43mstretch[49m[38;5;241;43m=[39;49m[38;5;28;43;01mlambda[39;49;00m[43m [49m[43mx[49m[43m:[49m[43m [49m[38;5;241;43m2[39;49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43m [49m[43m([49m[43mstretch[49m[43m [49m[38;5;241;43m*[39;49m[43m [49m[43mx[49m[43m)[49m[43m,[49m[43m [49m[43mwidth[49m[38;5;241;43m=[39;49m[43mwidth[49m[43m,[49m
+[1;32m   1334[0m [43m                     [49m[43mheight[49m[38;5;241;43m=[39;49m[43mheight[49m[43m)[49m
+[1;32m   1335[0m draw_cloud(a_cloud, fil[38;5;241m=[39mfile)
+
+File [0;32m~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/dhlab/legacy/nbtext.py:1305[0m, in [0;36mmake_cloud[0;34m(json_text, top, background, stretch, width, height, font_path)[0m
+[1;32m   1303[0m pairs0 [38;5;241m=[39m Counter(json_text)[38;5;241m.[39mmost_common(top)
+[1;32m   1304[0m pairs [38;5;241m=[39m {x[[38;5;241m0[39m]: stretch(x[[38;5;241m1[39m]) [38;5;28;01mfor[39;00m x [38;5;129;01min[39;00m pairs0}
+[0;32m-> 1305[0m wc [38;5;241m=[39m [43mWordCloud[49m(
+[1;32m   1306[0m     font_path[38;5;241m=[39mfont_path,
+[1;32m   1307[0m     background_color[38;5;241m=[39mbackground,
+[1;32m   1308[0m     width[38;5;241m=[39mwidth,
+[1;32m   1309[0m     [38;5;66;03m# color_func=my_colorfunc,[39;00m
+[1;32m   1310[0m     ranks_only[38;5;241m=[39m[38;5;28;01mTrue[39;00m,
+[1;32m   1311[0m     height[38;5;241m=[39mheight)[38;5;241m.[39mgenerate_from_frequencies(pairs)
+[1;32m   1312[0m [38;5;28;01mreturn[39;00m wc
+
+[0;31mNameError[0m: name 'WordCloud' is not defined
+NameError: name 'WordCloud' is not defined
+

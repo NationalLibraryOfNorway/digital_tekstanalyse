@@ -1,48 +1,59 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>1.4. Kollokasjoner &#8212; DH-lab dokumenter</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -52,61 +63,93 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial/2.2.Kollokasjoner';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1.5. Frekvenslister" href="2.3.Frekvenslister.html" />
     <link rel="prev" title="1.3. Konkordanser" href="2.1.Konkordans.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/DHlab_logo_web_en_black.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">DH-lab dokumenter</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -116,552 +159,290 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../bibliography/bibliography.html">
-   Bibliografi
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography/bibliography.html">Bibliografi</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Kodeeksempler–Python
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kodeeksempler–Python</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../tutorial.html">
-   1. Læringseksempler
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="1.0.Oppstart.html">
-     1.1. Oppstart
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2.0.Bygg_korpus.html">
-     1.2. Korpusbygging
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2.1.Konkordans.html">
-     1.3. Konkordanser
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     1.4. Kollokasjoner
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2.3.Frekvenslister.html">
-     1.5. Frekvenslister
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2.4.S%C3%B8k_i_aviser.html">
-     1.6. Søk i aviser
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2.5.n-gram_og_galakser.html">
-     1.7. N-gram og galakser
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2.6.sammenlign_metadata.html">
-     1.8. Sammenlign metadata
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3.0.ner_og_pos.html">
-     1.9. NER og POS med Spacy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3.1.ordparadigmer.html">
-     1.10. Ordparadigmer med wordbank
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3.2.dispersion.html">
-     1.11. Ordfordeling
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="4.0.experiment.html">
-     1.12. Eksperimentelle tjenester
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../cookbook.html">
-   2. Kokebøker
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../cookbook/4.0.sentiment_analysis_timeseries.html">
-     2.1. Sentimentanalyse i aviskorpus
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../cookbook/4.1.topic_modelling_with_LDA.html">
-     2.2. Topic modelling med gensim og dhlab
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../cookbook/4.2.natbib_query.html">
-     2.3. Søk Nasjonalbibliografiens metadata med dhlab
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../tutorial.html">1. Læringseksempler</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1.0.Oppstart.html">1.1. Oppstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.0.Bygg_korpus.html">1.2. Korpusbygging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.Konkordans.html">1.3. Konkordanser</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.4. Kollokasjoner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3.Frekvenslister.html">1.5. Frekvenslister</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4.S%C3%B8k_i_aviser.html">1.6. Søk i aviser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5.n-gram_og_galakser.html">1.7. N-gram og galakser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6.sammenlign_metadata.html">1.8. Sammenlign metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.0.ner_og_pos.html">1.9. NER og POS med Spacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.ordparadigmer.html">1.10. Ordparadigmer med wordbank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.2.dispersion.html">1.11. Ordfordeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.0.experiment.html">1.12. Eksperimentelle tjenester</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Demoer
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook.html">2. Kokebøker</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cookbook/4.0.sentiment_analysis_timeseries.html">2.1. Sentimentanalyse i aviskorpus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cookbook/4.1.topic_modelling_with_LDA.html">2.2. Topic modelling med gensim og dhlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cookbook/4.2.natbib_query.html">2.3. Søk Nasjonalbibliografiens metadata med dhlab</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Demoer</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../dhlab_class_demo.html">
-   dhlab class demo
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../dhlab_class_demo.html">dhlab class demo</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/NationalLibraryOfNorway/digital_tekstanalyse/main?urlpath=tree/tutorial/2.2.Kollokasjoner.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
+  <ul class="dropdown-menu">
       
-      <li>
-        <a href="http://hub.sprakbanken.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/NationalLibraryOfNorway/digital_tekstanalyse&urlpath=tree/digital_tekstanalyse/tutorial/2.2.Kollokasjoner.ipynb&branch=main"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on JupyterHub"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_jupyterhub.svg">
-  </span>
-<span class="headerbtn__text-container">JupyterHub</span>
-</a>
-
-      </li>
       
-      <li>
-        <a href="https://colab.research.google.com/github/NationalLibraryOfNorway/digital_tekstanalyse/blob/main/tutorial/2.2.Kollokasjoner.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+      
+      <li><a href="https://colab.research.google.com/github/NationalLibraryOfNorway/digital_tekstanalyse/blob/main/tutorial/2.2.Kollokasjoner.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NationalLibraryOfNorway/digital_tekstanalyse" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NationalLibraryOfNorway/digital_tekstanalyse/issues/new?title=Issue%20on%20page%20%2Ftutorial/2.2.Kollokasjoner.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tutorial/2.2.Kollokasjoner.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/NationalLibraryOfNorway/digital_tekstanalyse"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/NationalLibraryOfNorway/digital_tekstanalyse/issues/new?title=Issue%20on%20page%20%2Ftutorial/2.2.Kollokasjoner.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/tutorial/2.2.Kollokasjoner.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#konstruer-et-korpus-med-dewey">
-   1.4.1. Konstruer et korpus med Dewey
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lager-kollokasjoner-fra-korpuset">
-   1.4.2. Lager kollokasjoner fra korpuset
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bygg-kollokasjon">
-     1.4.2.1. Bygg kollokasjon
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#finn-referanse">
-     1.4.2.2. Finn referanse
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#bokhylla-aggregert">
-       1.4.2.2.1. Bokhylla aggregert
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#aggregert-korpus">
-       1.4.2.2.2. Aggregert korpus
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sammenlign">
-     1.4.2.3. Sammenlign
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       1.4.2.3.1. Aggregert korpus
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#bokhylla-total">
-       1.4.2.3.2. Bokhylla total
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#kollokasjonen">
-       1.4.2.3.3. Kollokasjonen
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#utfor-sammenligning">
-       1.4.2.3.4. Utfør sammenligning
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#sammenlign-med-korpus">
-       1.4.2.3.5. 2.3.5. Sammenlign med korpus
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visualiser-med-en-ordsky">
-   1.4.3. Visualiser med en ordsky
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gjenbruk-med-andre-ord-og-korpus">
-   1.4.4. Gjenbruk med andre ord og korpus
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Kollokasjoner</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#konstruer-et-korpus-med-dewey">
-   1.4.1. Konstruer et korpus med Dewey
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lager-kollokasjoner-fra-korpuset">
-   1.4.2. Lager kollokasjoner fra korpuset
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bygg-kollokasjon">
-     1.4.2.1. Bygg kollokasjon
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#finn-referanse">
-     1.4.2.2. Finn referanse
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#bokhylla-aggregert">
-       1.4.2.2.1. Bokhylla aggregert
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#aggregert-korpus">
-       1.4.2.2.2. Aggregert korpus
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sammenlign">
-     1.4.2.3. Sammenlign
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       1.4.2.3.1. Aggregert korpus
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#bokhylla-total">
-       1.4.2.3.2. Bokhylla total
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#kollokasjonen">
-       1.4.2.3.3. Kollokasjonen
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#utfor-sammenligning">
-       1.4.2.3.4. Utfør sammenligning
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#sammenlign-med-korpus">
-       1.4.2.3.5. 2.3.5. Sammenlign med korpus
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visualiser-med-en-ordsky">
-   1.4.3. Visualiser med en ordsky
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gjenbruk-med-andre-ord-og-korpus">
-   1.4.4. Gjenbruk med andre ord og korpus
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Kollokasjoner</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konstruer-et-korpus-med-dewey">1.4.1. Konstruer et korpus med Dewey</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lager-kollokasjoner-fra-korpuset">1.4.2. Lager kollokasjoner fra korpuset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bygg-kollokasjon">1.4.2.1. Bygg kollokasjon</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finn-referanse">1.4.2.2. Finn referanse</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bokhylla-aggregert">1.4.2.2.1. Bokhylla aggregert</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregert-korpus">1.4.2.2.2. Aggregert korpus</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sammenlign">1.4.2.3. Sammenlign</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.4.2.3.1. Aggregert korpus</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bokhylla-total">1.4.2.3.2. Bokhylla total</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#kollokasjonen">1.4.2.3.3. Kollokasjonen</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#utfor-sammenligning">1.4.2.3.4. Utfør sammenligning</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sammenlign-med-korpus">1.4.2.3.5. 2.3.5. Sammenlign med korpus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualiser-med-en-ordsky">1.4.3. Visualiser med en ordsky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gjenbruk-med-andre-ord-og-korpus">1.4.4. Gjenbruk med andre ord og korpus</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <p><img alt="resources/images/dhlab-logo-nb.png" src="../_images/dhlab-logo-nb.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -673,11 +454,11 @@ title="Print to PDF"
 </div>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="kollokasjoner">
-<h1><span class="section-number">1.4. </span>Kollokasjoner<a class="headerlink" href="#kollokasjoner" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">1.4. </span>Kollokasjoner<a class="headerlink" href="#kollokasjoner" title="Permalink to this heading">#</a></h1>
 <p>Kollokasjoner er assosiasjoner.</p>
 <p>I denne notebooken viser vi eksempler på undersøkelser man kan gjøre for å finne ut hvilke ord et ord opptrer sammen med innenfor et korpus.</p>
 <section id="konstruer-et-korpus-med-dewey">
-<h2><span class="section-number">1.4.1. </span>Konstruer et korpus med Dewey<a class="headerlink" href="#konstruer-et-korpus-med-dewey" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.4.1. </span>Konstruer et korpus med Dewey<a class="headerlink" href="#konstruer-et-korpus-med-dewey" title="Permalink to this heading">#</a></h2>
 <p>Se eksempelfil om <a class="reference external" href="https://nbviewer.jupyter.org/github/DH-LAB-NB/DHLAB/blob/master/1_Bygg_korpus.ipynb">Korpusbygging</a> for andre måter å definere korpus.</p>
 <p>For å finne relevant dewey-klassifikasjon kan <a class="reference external" href="http://deweysearchno.pansoft.de/webdeweysearch/index.html">Webdewey</a> være til god hjelp.</p>
 <div class="cell docutils container">
@@ -739,20 +520,20 @@ title="Print to PDF"
   <tbody>
     <tr>
       <th>0</th>
-      <td>100210010</td>
-      <td>URN:NBN:no-nb_digibok_2014062548118</td>
-      <td>Vinskolen : godsmak fra første klase</td>
-      <td>Salvesen , Geir</td>
-      <td>oai:nb.bibsys.no:990811552634702202</td>
-      <td>e8998ff8c5893c2bad0ad6296ea6113d</td>
+      <td>100392431</td>
+      <td>URN:NBN:no-nb_digibok_2018103007366</td>
+      <td>Ølsmaking : finn dine favorittøl</td>
+      <td>Foseid , Gustav</td>
+      <td>oai:nb.bibsys.no:991511439864702202</td>
+      <td>f702b24b9f1f2375cd9f43ca97959925</td>
       <td></td>
       <td>Oslo</td>
-      <td>20080101</td>
-      <td>2008</td>
-      <td>Historie &amp; kultur</td>
+      <td>20150101</td>
+      <td>2015</td>
+      <td>Kagge</td>
       <td>nob</td>
-      <td>Vin / vin / vinproduksjon / drikkevarer</td>
-      <td>641.5635 / 641.22</td>
+      <td></td>
+      <td>641.23 / 641.23</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -761,22 +542,22 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>1</th>
-      <td>100398213</td>
-      <td>URN:NBN:no-nb_digibok_2020011007022</td>
-      <td>Whiskyboka : en guide til whisky</td>
-      <td>Eklund , Lars Helge / Steffensen , Arnt / Dahl...</td>
-      <td>oai:nb.bibsys.no:991516513294702202</td>
-      <td>f712625782a7cafc9d27ac45cc9f9bd1</td>
+      <td>100396730</td>
+      <td>URN:NBN:no-nb_digibok_2019120307102</td>
+      <td>Damenes vinbok</td>
+      <td>Roesbjerg , Annette / Wad , Nana / P. , Maria ...</td>
+      <td>oai:nb.bibsys.no:991321759674702202</td>
+      <td>90fb6f201cec8fe7c9d033a3f814570f</td>
       <td></td>
       <td>[Oslo]</td>
-      <td>20150101</td>
-      <td>2015</td>
+      <td>20130101</td>
+      <td>2013</td>
       <td>Front</td>
-      <td>nob</td>
-      <td>Brennevin / Whisky</td>
-      <td>641.25 / 641.25</td>
-      <td>novel</td>
-      <td>Skjønnlitteratur</td>
+      <td>nob / dan</td>
+      <td></td>
+      <td>641.22 / 641.22</td>
+      <td></td>
+      <td>Faglitteratur</td>
       <td>digibok</td>
       <td>nb</td>
       <td>20060101</td>
@@ -787,15 +568,15 @@ title="Print to PDF"
 </div>
 </section>
 <section id="lager-kollokasjoner-fra-korpuset">
-<h2><span class="section-number">1.4.2. </span>Lager kollokasjoner fra korpuset<a class="headerlink" href="#lager-kollokasjoner-fra-korpuset" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.4.2. </span>Lager kollokasjoner fra korpuset<a class="headerlink" href="#lager-kollokasjoner-fra-korpuset" title="Permalink to this heading">#</a></h2>
 <p>Et skrittvis eksempel.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Bygg kollokasjonen</p></li>
 <li><p>Finn en referanse</p></li>
 <li><p>Sammenlign kollokasjon med referanse</p></li>
 </ol>
 <section id="bygg-kollokasjon">
-<h3><span class="section-number">1.4.2.1. </span>Bygg kollokasjon<a class="headerlink" href="#bygg-kollokasjon" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.4.2.1. </span>Bygg kollokasjon<a class="headerlink" href="#bygg-kollokasjon" title="Permalink to this heading">#</a></h3>
 <p>Kommandoen er <code class="docutils literal notranslate"><span class="pre">dh.Collocation</span></code>. Legg gjerne inn en sjekk med konkordans.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -815,54 +596,54 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_d15e9">
+<table id="T_37614">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_d15e9_level0_col0" class="col_heading level0 col0" >link</th>
-      <th id="T_d15e9_level0_col1" class="col_heading level0 col1" >concordance</th>
+      <th id="T_37614_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_37614_level0_col1" class="col_heading level0 col1" >concordance</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_d15e9_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_d15e9_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
-      <td id="T_d15e9_row0_col1" class="data row0 col1" >vin til melstekt <b>sei</b></td>
+      <th id="T_37614_level0_row0" class="row_heading level0 row0" >5</th>
+      <td id="T_37614_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
+      <td id="T_37614_row0_col1" class="data row0 col1" >Sjå Løksli de ligg no so fint fram mæ li , no <b>sei</b> dei at Knut vil te Mæland å... </td>
     </tr>
     <tr>
-      <th id="T_d15e9_level0_row1" class="row_heading level0 row1" >3</th>
-      <td id="T_d15e9_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018042548149'>URN:NBN:no-nb_digibok_2018042548149</a></td>
-      <td id="T_d15e9_row1_col1" class="data row1 col1" >... men O HVIT FISK , nesten alt går . <b>Sei</b> , hyse , kolje , kveite , hva som helst... </td>
+      <th id="T_37614_level0_row1" class="row_heading level0 row1" >3</th>
+      <td id="T_37614_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018042548149'>URN:NBN:no-nb_digibok_2018042548149</a></td>
+      <td id="T_37614_row1_col1" class="data row1 col1" >... men O HVIT FISK , nesten alt går . <b>Sei</b> , hyse , kolje , kveite , hva som helst... </td>
     </tr>
     <tr>
-      <th id="T_d15e9_level0_row2" class="row_heading level0 row2" >7</th>
-      <td id="T_d15e9_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020120907530'>URN:NBN:no-nb_digibok_2020120907530</a></td>
-      <td id="T_d15e9_row2_col1" class="data row2 col1" >Bedales of Borough Market 5 Bedale St , London <b>SEI</b> 9 AL</td>
+      <th id="T_37614_level0_row2" class="row_heading level0 row2" >4</th>
+      <td id="T_37614_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
+      <td id="T_37614_row2_col1" class="data row2 col1" >... Så skulle ølet " skakast ned " , det vil <b>sei</b> fyllast over på tunna . Då smaka dei gjerne på ølet... </td>
     </tr>
     <tr>
-      <th id="T_d15e9_level0_row3" class="row_heading level0 row3" >6</th>
-      <td id="T_d15e9_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
-      <td id="T_d15e9_row3_col1" class="data row3 col1" >... Ved Bull Run gik de reint gæli . " " Men <b>sei</b> me no du Jørn , håfør ha med denna krigen... </td>
+      <th id="T_37614_level0_row3" class="row_heading level0 row3" >2</th>
+      <td id="T_37614_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
+      <td id="T_37614_row3_col1" class="data row3 col1" >... den enkelte råvare og tilberedningsmetoden det handler om . <b>Sei</b> har en litt tyngre smak , ser litt gråere ut... </td>
     </tr>
     <tr>
-      <th id="T_d15e9_level0_row4" class="row_heading level0 row4" >4</th>
-      <td id="T_d15e9_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
-      <td id="T_d15e9_row4_col1" class="data row4 col1" >... Så skulle ølet " skakast ned " , det vil <b>sei</b> fyllast over på tunna . Då smaka dei gjerne på ølet... </td>
+      <th id="T_37614_level0_row4" class="row_heading level0 row4" >0</th>
+      <td id="T_37614_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
+      <td id="T_37614_row4_col1" class="data row4 col1" >vin til melstekt <b>sei</b></td>
     </tr>
     <tr>
-      <th id="T_d15e9_level0_row5" class="row_heading level0 row5" >2</th>
-      <td id="T_d15e9_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
-      <td id="T_d15e9_row5_col1" class="data row5 col1" >... den enkelte råvare og tilberedningsmetoden det handler om . <b>Sei</b> har en litt tyngre smak , ser litt gråere ut... </td>
+      <th id="T_37614_level0_row5" class="row_heading level0 row5" >6</th>
+      <td id="T_37614_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
+      <td id="T_37614_row5_col1" class="data row5 col1" >... Ved Bull Run gik de reint gæli . " " Men <b>sei</b> me no du Jørn , håfør ha med denna krigen... </td>
     </tr>
     <tr>
-      <th id="T_d15e9_level0_row6" class="row_heading level0 row6" >1</th>
-      <td id="T_d15e9_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
-      <td id="T_d15e9_row6_col1" class="data row6 col1" >Det er ikke uten grunn at melstekt <b>sei</b> går under betegnelsen seibiff . For seiv om seien er en hvit... </td>
+      <th id="T_37614_level0_row6" class="row_heading level0 row6" >1</th>
+      <td id="T_37614_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
+      <td id="T_37614_row6_col1" class="data row6 col1" >Det er ikke uten grunn at melstekt <b>sei</b> går under betegnelsen seibiff . For seiv om seien er en hvit... </td>
     </tr>
     <tr>
-      <th id="T_d15e9_level0_row7" class="row_heading level0 row7" >5</th>
-      <td id="T_d15e9_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
-      <td id="T_d15e9_row7_col1" class="data row7 col1" >Sjå Løksli de ligg no so fint fram mæ li , no <b>sei</b> dei at Knut vil te Mæland å... </td>
+      <th id="T_37614_level0_row7" class="row_heading level0 row7" >7</th>
+      <td id="T_37614_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020120907530'>URN:NBN:no-nb_digibok_2020120907530</a></td>
+      <td id="T_37614_row7_col1" class="data row7 col1" >Bedales of Borough Market 5 Bedale St , London <b>SEI</b> 9 AL</td>
     </tr>
   </tbody>
 </table>
@@ -1010,10 +791,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="finn-referanse">
-<h3><span class="section-number">1.4.2.2. </span>Finn referanse<a class="headerlink" href="#finn-referanse" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.4.2.2. </span>Finn referanse<a class="headerlink" href="#finn-referanse" title="Permalink to this heading">#</a></h3>
 <p>Det er flere måter å sammenligne på. En er å bruke bokhylla selv om som referanse. For å hente ut ord fra bokhylla brukes kommandoen <code class="docutils literal notranslate"><span class="pre">totals(&lt;antall</span> <span class="pre">ord&gt;)</span></code>. Korpuset selv kan også benyttes, for eksempel med kommandoen <code class="docutils literal notranslate"><span class="pre">aggregate_urns(&lt;korpusdefinisjon&gt;)</span></code>.</p>
 <section id="bokhylla-aggregert">
-<h4><span class="section-number">1.4.2.2.1. </span>Bokhylla aggregert<a class="headerlink" href="#bokhylla-aggregert" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">1.4.2.2.1. </span>Bokhylla aggregert<a class="headerlink" href="#bokhylla-aggregert" title="Permalink to this heading">#</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">totals</span></code> inneholder råfrekvenser fra Nasjonalbibliotekets katalog.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1077,7 +858,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="aggregert-korpus">
-<h4><span class="section-number">1.4.2.2.2. </span>Aggregert korpus<a class="headerlink" href="#aggregert-korpus" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">1.4.2.2.2. </span>Aggregert korpus<a class="headerlink" href="#aggregert-korpus" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dh.Counts teller tokens i hver tekst i korpus</span>
@@ -1095,7 +876,7 @@ title="Print to PDF"
 </div>
 </div>
 <p>Gjør den om til dataramme, sorterer og ser på resultatet</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Dataramme med kommando <code class="docutils literal notranslate"><span class="pre">frame()</span></code></p></li>
 <li><p>Sortering med <code class="docutils literal notranslate"><span class="pre">frame_sort()</span></code> definert øverst i den her notebooken.</p></li>
 </ol>
@@ -1182,7 +963,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="sammenlign">
-<h3><span class="section-number">1.4.2.3. </span>Sammenlign<a class="headerlink" href="#sammenlign" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.4.2.3. </span>Sammenlign<a class="headerlink" href="#sammenlign" title="Permalink to this heading">#</a></h3>
 <p>Vi har nå tre frekvenslister som kan sammenlignes med hverandre. For å lette sammenlign normaliseres dem. Kommandoen for normalisering er <code class="docutils literal notranslate"><span class="pre">normalize_corpus_dataframe(&lt;frekvensliste&gt;)</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1363,7 +1144,7 @@ title="Print to PDF"
 </div>
 <p>Inspiser dataene etter normalisering</p>
 <section id="id1">
-<h4><span class="section-number">1.4.2.3.1. </span>Aggregert korpus<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">1.4.2.3.1. </span>Aggregert korpus<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
 <p>Fyll inn verdier for <code class="docutils literal notranslate"><span class="pre">.head()</span></code> for å se mer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1420,7 +1201,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="bokhylla-total">
-<h4><span class="section-number">1.4.2.3.2. </span>Bokhylla total<a class="headerlink" href="#bokhylla-total" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">1.4.2.3.2. </span>Bokhylla total<a class="headerlink" href="#bokhylla-total" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tot</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -1476,7 +1257,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="kollokasjonen">
-<h4><span class="section-number">1.4.2.3.3. </span>Kollokasjonen<a class="headerlink" href="#kollokasjonen" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">1.4.2.3.3. </span>Kollokasjonen<a class="headerlink" href="#kollokasjonen" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll</span><span class="o">.</span><span class="n">coll</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -1533,7 +1314,7 @@ title="Print to PDF"
 <p>Kollokasjonen <em>coll</em> har gjennomgående høyere verdier, noe som sannsynligvis skyldes at det er færre ord.</p>
 </section>
 <section id="utfor-sammenligning">
-<h4><span class="section-number">1.4.2.3.4. </span>Utfør sammenligning<a class="headerlink" href="#utfor-sammenligning" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">1.4.2.3.4. </span>Utfør sammenligning<a class="headerlink" href="#utfor-sammenligning" title="Permalink to this heading">#</a></h4>
 <p>For sammenligning måles forskjellen på <em>coll</em> med referansen. Forskjellen måles ved å dividere hvert ords frekvens ikollokasjonen på frekvensen ordet har i referansen.</p>
 <div class="math notranslate nohighlight">
 \[\textrm{assosiasjons-styrke}(w) = \frac{\textrm{coll}(w)}{\textrm{referanse}(w)}\]</div>
@@ -1660,7 +1441,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="sammenlign-med-korpus">
-<h4><span class="section-number">1.4.2.3.5. </span>2.3.5. Sammenlign med korpus<a class="headerlink" href="#sammenlign-med-korpus" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">1.4.2.3.5. </span>2.3.5. Sammenlign med korpus<a class="headerlink" href="#sammenlign-med-korpus" title="Permalink to this heading">#</a></h4>
 <p>Her kan det være nyttig å bruke en eksponent for å dempe effekten av lavfrekvente ord.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1864,7 +1645,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="visualiser-med-en-ordsky">
-<h2><span class="section-number">1.4.3. </span>Visualiser med en ordsky<a class="headerlink" href="#visualiser-med-en-ordsky" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.4.3. </span>Visualiser med en ordsky<a class="headerlink" href="#visualiser-med-en-ordsky" title="Permalink to this heading">#</a></h2>
 <p>Visualiseringen trives best med tall mellom 0 og 1, så assosiasjonene divideres på summen av dem for å få til det. Ordskyene lages med kommonandoen <code class="docutils literal notranslate"><span class="pre">cloud(&lt;data&gt;)</span></code>. Pass på å ikke ta med alt for mange; det kan gi feilsituasjoner.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1875,7 +1656,36 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2.2.Kollokasjoner_49_0.png" src="../_images/2.2.Kollokasjoner_49_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">27</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Her viser vi de 50 viktigste ordene som er assosiert med rødvin i korpuset vårt, målt mot alle bøker i nb.no </span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">nb</span><span class="o">.</span><span class="n">cloud</span><span class="p">(</span><span class="n">coll_assoc</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">/</span><span class="n">coll_assoc</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+
+<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/dhlab/legacy/nbtext.py:1331,</span> in <span class="ni">cloud</span><span class="nt">(df, column, top, width, height, background, file, stretch, font_path)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1329</span>     <span class="n">column</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1330</span> <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">to_json</span><span class="p">())</span>
+<span class="ne">-&gt; </span><span class="mi">1331</span> <span class="n">a_cloud</span> <span class="o">=</span> <span class="n">make_cloud</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="n">top</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1332</span>                      <span class="n">background</span><span class="o">=</span><span class="n">background</span><span class="p">,</span> <span class="n">font_path</span><span class="o">=</span><span class="n">font_path</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1333</span>                      <span class="n">stretch</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">2</span> <span class="o">**</span> <span class="p">(</span><span class="n">stretch</span> <span class="o">*</span> <span class="n">x</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1334</span>                      <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1335</span> <span class="n">draw_cloud</span><span class="p">(</span><span class="n">a_cloud</span><span class="p">,</span> <span class="n">fil</span><span class="o">=</span><span class="n">file</span><span class="p">)</span>
+
+<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/dhlab/legacy/nbtext.py:1305,</span> in <span class="ni">make_cloud</span><span class="nt">(json_text, top, background, stretch, width, height, font_path)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1303</span> <span class="n">pairs0</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">json_text</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="n">top</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1304</span> <span class="n">pairs</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">stretch</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pairs0</span><span class="p">}</span>
+<span class="ne">-&gt; </span><span class="mi">1305</span> <span class="n">wc</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1306</span>     <span class="n">font_path</span><span class="o">=</span><span class="n">font_path</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1307</span>     <span class="n">background_color</span><span class="o">=</span><span class="n">background</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1308</span>     <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1309</span>     <span class="c1"># color_func=my_colorfunc,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1310</span>     <span class="n">ranks_only</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1311</span>     <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">)</span><span class="o">.</span><span class="n">generate_from_frequencies</span><span class="p">(</span><span class="n">pairs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1312</span> <span class="k">return</span> <span class="n">wc</span>
+
+<span class="ne">NameError</span>: name &#39;WordCloud&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1887,13 +1697,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2.2.Kollokasjoner_50_0.png" src="../_images/2.2.Kollokasjoner_50_0.png" />
+<img alt="../_images/40eb0edb7a085a858351b731990133ef366e5697f07f673ef8978c82a0da2060.png" src="../_images/40eb0edb7a085a858351b731990133ef366e5697f07f673ef8978c82a0da2060.png" />
 </div>
 </div>
 </section>
 <section id="gjenbruk-med-andre-ord-og-korpus">
-<h2><span class="section-number">1.4.4. </span>Gjenbruk med andre ord og korpus<a class="headerlink" href="#gjenbruk-med-andre-ord-og-korpus" title="Permalink to this headline">#</a></h2>
-<ol class="simple">
+<h2><span class="section-number">1.4.4. </span>Gjenbruk med andre ord og korpus<a class="headerlink" href="#gjenbruk-med-andre-ord-og-korpus" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
 <li><p>Bytt ut parametrene i cellen der <code class="docutils literal notranslate"><span class="pre">korpus</span></code> blir definert.</p></li>
 <li><p>Bytt ut ordet som er angitt som <code class="docutils literal notranslate"><span class="pre">collword</span></code>.</p></li>
 <li><p>Gå til <code class="docutils literal notranslate"><span class="pre">Cell</span></code> i menyen og velg <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">All</span></code>.</p></li>
@@ -1923,50 +1733,124 @@ title="Print to PDF"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="2.1.Konkordans.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1.3. </span>Konkordanser</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2.1.Konkordans.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1.3. </span>Konkordanser</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="2.3.Frekvenslister.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="2.3.Frekvenslister.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">1.5. </span>Frekvenslister</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Nasjonalbiblioteket<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
-    
-</div>
-
-
       </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konstruer-et-korpus-med-dewey">1.4.1. Konstruer et korpus med Dewey</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lager-kollokasjoner-fra-korpuset">1.4.2. Lager kollokasjoner fra korpuset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bygg-kollokasjon">1.4.2.1. Bygg kollokasjon</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finn-referanse">1.4.2.2. Finn referanse</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bokhylla-aggregert">1.4.2.2.1. Bokhylla aggregert</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregert-korpus">1.4.2.2.2. Aggregert korpus</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sammenlign">1.4.2.3. Sammenlign</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.4.2.3.1. Aggregert korpus</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bokhylla-total">1.4.2.3.2. Bokhylla total</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#kollokasjonen">1.4.2.3.3. Kollokasjonen</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#utfor-sammenligning">1.4.2.3.4. Utfør sammenligning</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sammenlign-med-korpus">1.4.2.3.5. 2.3.5. Sammenlign med korpus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualiser-med-en-ordsky">1.4.3. Visualiser med en ordsky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gjenbruk-med-andre-ord-og-korpus">1.4.4. Gjenbruk med andre ord og korpus</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Nasjonalbiblioteket
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
