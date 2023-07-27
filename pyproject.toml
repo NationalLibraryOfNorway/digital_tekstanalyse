@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "digital-tekstanalyse"
+version = "0.1.0"
+description = "Demo notebooks for dhlab"
+authors = ["Nasjonalbiblioteket <dhlab@nb.no>"]
+license = "mit"
+readme = "README.md"
+packages = [{include = "digital_tekstanalyse"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
