@@ -162,18 +162,18 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Kodeeksempler–Python</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../tutorial.html">1. Læringseksempler</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../tutorial/1.0.Oppstart.html">1.1. Oppstart</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorial/2.0.Bygg_korpus.html">1.2. Korpusbygging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorial/2.1.Konkordans.html">1.3. Konkordanser</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorial/2.2.Kollokasjoner.html">1.4. Kollokasjoner</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorial/2.3.Frekvenslister.html">1.5. Frekvenslister</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorial/2.4.S%C3%B8k_i_aviser.html">1.6. Søk i aviser</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorial/2.5.n-gram_og_galakser.html">1.7. N-gram og galakser</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorial/2.6.sammenlign_metadata.html">1.8. Sammenlign metadata</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorial/3.0.ner_og_pos.html">1.9. NER og POS med Spacy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorial/3.1.ordparadigmer.html">1.10. Ordparadigmer med wordbank</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorial/3.2.dispersion.html">1.11. Ordfordeling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorial/4.0.experiment.html">1.12. Eksperimentelle tjenester</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/1.0.Oppstart.html">1.2. Oppstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/2.0.Bygg_korpus.html">1.3. Korpus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/2.1.Konkordans.html">1.4. Konkordanser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/2.2.Kollokasjoner.html">1.5. Kollokasjoner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/2.3.Frekvenslister.html">1.6. Frekvenslister</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/2.4.S%C3%B8k_i_aviser.html">1.7. Søk i aviser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/2.5.n-gram_og_galakser.html">1.8. N-gram og galakser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/2.6.sammenlign_metadata.html">1.9. Sammenlign metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/3.0.ner_og_pos.html">1.10. NER og POS med Spacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/3.1.ordparadigmer.html">1.11. Ordparadigmer med wordbank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/3.2.dispersion.html">1.12. Ordfordeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/4.0.experiment.html">1.13. Eksperimentelle tjenester</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../cookbook.html">2. Kokebøker</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -603,28 +603,28 @@ corpus består av 3441 utgivelser
 <span class="g g-Whitespace">    </span><span class="mi">252</span>     <span class="n">right_on</span><span class="o">=</span><span class="n">docid_column</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">253</span> <span class="p">)</span>
 
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/frame.py:9428,</span> in <span class="ni">DataFrame.apply</span><span class="nt">(self, func, axis, raw, result_type, args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">9417</span> <span class="kn">from</span> <span class="nn">pandas.core.apply</span> <span class="kn">import</span> <span class="n">frame_apply</span>
-<span class="g g-Whitespace">   </span><span class="mi">9419</span> <span class="n">op</span> <span class="o">=</span> <span class="n">frame_apply</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">9420</span>     <span class="bp">self</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">9421</span>     <span class="n">func</span><span class="o">=</span><span class="n">func</span><span class="p">,</span>
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/frame.py:9423,</span> in <span class="ni">DataFrame.apply</span><span class="nt">(self, func, axis, raw, result_type, args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">9412</span> <span class="kn">from</span> <span class="nn">pandas.core.apply</span> <span class="kn">import</span> <span class="n">frame_apply</span>
+<span class="g g-Whitespace">   </span><span class="mi">9414</span> <span class="n">op</span> <span class="o">=</span> <span class="n">frame_apply</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">9415</span>     <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">9416</span>     <span class="n">func</span><span class="o">=</span><span class="n">func</span><span class="p">,</span>
    <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">9426</span>     <span class="n">kwargs</span><span class="o">=</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">9427</span> <span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">9428</span> <span class="k">return</span> <span class="n">op</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span><span class="o">.</span><span class="n">__finalize__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;apply&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">9421</span>     <span class="n">kwargs</span><span class="o">=</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">9422</span> <span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">9423</span> <span class="k">return</span> <span class="n">op</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span><span class="o">.</span><span class="n">__finalize__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;apply&quot;</span><span class="p">)</span>
 
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/apply.py:678,</span> in <span class="ni">FrameApply.apply</span><span class="nt">(self)</span>
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/apply.py:678,</span> in <span class="ni">FrameApply.apply</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">675</span> <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">676</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_raw</span><span class="p">()</span>
 <span class="ne">--&gt; </span><span class="mi">678</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_standard</span><span class="p">()</span>
 
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/apply.py:798,</span> in <span class="ni">FrameApply.apply_standard</span><span class="nt">(self)</span>
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/apply.py:798,</span> in <span class="ni">FrameApply.apply_standard</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">797</span> <span class="k">def</span> <span class="nf">apply_standard</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="ne">--&gt; </span><span class="mi">798</span>     <span class="n">results</span><span class="p">,</span> <span class="n">res_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_series_generator</span><span class="p">()</span>
 <span class="g g-Whitespace">    </span><span class="mi">800</span>     <span class="c1"># wrap results</span>
 <span class="g g-Whitespace">    </span><span class="mi">801</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">wrap_results</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">res_index</span><span class="p">)</span>
 
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/apply.py:814,</span> in <span class="ni">FrameApply.apply_series_generator</span><span class="nt">(self)</span>
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/apply.py:814,</span> in <span class="ni">FrameApply.apply_series_generator</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">811</span> <span class="k">with</span> <span class="n">option_context</span><span class="p">(</span><span class="s2">&quot;mode.chained_assignment&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
 <span class="g g-Whitespace">    </span><span class="mi">812</span>     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">series_gen</span><span class="p">):</span>
 <span class="g g-Whitespace">    </span><span class="mi">813</span>         <span class="c1"># ignore SettingWithCopy here in case the user mutates</span>
@@ -678,7 +678,7 @@ corpus består av 3441 utgivelser
 <span class="ne">--&gt; </span><span class="mi">144</span>     <span class="n">target_terms</span> <span class="o">=</span> <span class="n">terms</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">token_counts</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;inner&quot;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;terms&quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">145</span>     <span class="k">return</span> <span class="n">target_terms</span>
 
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/frame.py:9729,</span> in <span class="ni">DataFrame.join</span><span class="nt">(self, other, on, how, lsuffix, rsuffix, sort, validate)</span>
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/frame.py:9729,</span> in <span class="ni">DataFrame.join</span><span class="nt">(self, other, on, how, lsuffix, rsuffix, sort, validate)</span>
 <span class="g g-Whitespace">   </span><span class="mi">9566</span> <span class="k">def</span> <span class="nf">join</span><span class="p">(</span>
 <span class="g g-Whitespace">   </span><span class="mi">9567</span>     <span class="bp">self</span><span class="p">,</span>
 <span class="g g-Whitespace">   </span><span class="mi">9568</span>     <span class="n">other</span><span class="p">:</span> <span class="n">DataFrame</span> <span class="o">|</span> <span class="n">Series</span> <span class="o">|</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">DataFrame</span> <span class="o">|</span> <span class="n">Series</span><span class="p">],</span>
@@ -701,7 +701,7 @@ corpus består av 3441 utgivelser
 <span class="g g-Whitespace">   </span><span class="mi">9736</span>         <span class="n">validate</span><span class="o">=</span><span class="n">validate</span><span class="p">,</span>
 <span class="g g-Whitespace">   </span><span class="mi">9737</span>     <span class="p">)</span>
 
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/frame.py:9768,</span> in <span class="ni">DataFrame._join_compat</span><span class="nt">(self, other, on, how, lsuffix, rsuffix, sort, validate)</span>
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/frame.py:9768,</span> in <span class="ni">DataFrame._join_compat</span><span class="nt">(self, other, on, how, lsuffix, rsuffix, sort, validate)</span>
 <span class="g g-Whitespace">   </span><span class="mi">9758</span>     <span class="k">if</span> <span class="n">how</span> <span class="o">==</span> <span class="s2">&quot;cross&quot;</span><span class="p">:</span>
 <span class="g g-Whitespace">   </span><span class="mi">9759</span>         <span class="k">return</span> <span class="n">merge</span><span class="p">(</span>
 <span class="g g-Whitespace">   </span><span class="mi">9760</span>             <span class="bp">self</span><span class="p">,</span>
@@ -723,75 +723,77 @@ corpus består av 3441 utgivelser
 <span class="g g-Whitespace">   </span><span class="mi">9779</span> <span class="k">else</span><span class="p">:</span>
 <span class="g g-Whitespace">   </span><span class="mi">9780</span>     <span class="k">if</span> <span class="n">on</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
 
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/reshape/merge.py:156,</span> in <span class="ni">merge</span><span class="nt">(left, right, how, on, left_on, right_on, left_index, right_index, sort, suffixes, copy, indicator, validate)</span>
-<span class="g g-Whitespace">    </span><span class="mi">125</span> <span class="nd">@Substitution</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">left : DataFrame or named Series&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">126</span> <span class="nd">@Appender</span><span class="p">(</span><span class="n">_merge_doc</span><span class="p">,</span> <span class="n">indents</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">127</span> <span class="k">def</span> <span class="nf">merge</span><span class="p">(</span>
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/reshape/merge.py:162,</span> in <span class="ni">merge</span><span class="nt">(left, right, how, on, left_on, right_on, left_index, right_index, sort, suffixes, copy, indicator, validate)</span>
+<span class="g g-Whitespace">    </span><span class="mi">131</span> <span class="nd">@Substitution</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">left : DataFrame or named Series&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">132</span> <span class="nd">@Appender</span><span class="p">(</span><span class="n">_merge_doc</span><span class="p">,</span> <span class="n">indents</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span> <span class="k">def</span> <span class="nf">merge</span><span class="p">(</span>
    <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">140</span>     <span class="n">validate</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">141</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">142</span>     <span class="n">op</span> <span class="o">=</span> <span class="n">_MergeOperation</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">143</span>         <span class="n">left</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">144</span>         <span class="n">right</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">146</span>     <span class="n">validate</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">147</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">148</span>     <span class="n">op</span> <span class="o">=</span> <span class="n">_MergeOperation</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">149</span>         <span class="n">left</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">150</span>         <span class="n">right</span><span class="p">,</span>
    <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">154</span>         <span class="n">validate</span><span class="o">=</span><span class="n">validate</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">155</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">156</span>     <span class="k">return</span> <span class="n">op</span><span class="o">.</span><span class="n">get_result</span><span class="p">(</span><span class="n">copy</span><span class="o">=</span><span class="n">copy</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">160</span>         <span class="n">validate</span><span class="o">=</span><span class="n">validate</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">161</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">162</span>     <span class="k">return</span> <span class="n">op</span><span class="o">.</span><span class="n">get_result</span><span class="p">(</span><span class="n">copy</span><span class="o">=</span><span class="n">copy</span><span class="p">)</span>
 
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/reshape/merge.py:803,</span> in <span class="ni">_MergeOperation.get_result</span><span class="nt">(self, copy)</span>
-<span class="g g-Whitespace">    </span><span class="mi">800</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">indicator</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">801</span>     <span class="bp">self</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_indicator_pre_merge</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">803</span> <span class="n">join_index</span><span class="p">,</span> <span class="n">left_indexer</span><span class="p">,</span> <span class="n">right_indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_join_info</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">805</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reindex_and_concat</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">806</span>     <span class="n">join_index</span><span class="p">,</span> <span class="n">left_indexer</span><span class="p">,</span> <span class="n">right_indexer</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="n">copy</span>
-<span class="g g-Whitespace">    </span><span class="mi">807</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">808</span> <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">__finalize__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_merge_type</span><span class="p">)</span>
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/reshape/merge.py:809,</span> in <span class="ni">_MergeOperation.get_result</span><span class="nt">(self, copy)</span>
+<span class="g g-Whitespace">    </span><span class="mi">806</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">indicator</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">807</span>     <span class="bp">self</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_indicator_pre_merge</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">809</span> <span class="n">join_index</span><span class="p">,</span> <span class="n">left_indexer</span><span class="p">,</span> <span class="n">right_indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_join_info</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">811</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reindex_and_concat</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">812</span>     <span class="n">join_index</span><span class="p">,</span> <span class="n">left_indexer</span><span class="p">,</span> <span class="n">right_indexer</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="n">copy</span>
+<span class="g g-Whitespace">    </span><span class="mi">813</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">814</span> <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">__finalize__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_merge_type</span><span class="p">)</span>
 
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/reshape/merge.py:1051,</span> in <span class="ni">_MergeOperation._get_join_info</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1047</span>     <span class="n">join_index</span><span class="p">,</span> <span class="n">right_indexer</span><span class="p">,</span> <span class="n">left_indexer</span> <span class="o">=</span> <span class="n">_left_join_on_index</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1048</span>         <span class="n">right_ax</span><span class="p">,</span> <span class="n">left_ax</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">right_join_keys</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">sort</span>
-<span class="g g-Whitespace">   </span><span class="mi">1049</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1050</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1051</span>     <span class="p">(</span><span class="n">left_indexer</span><span class="p">,</span> <span class="n">right_indexer</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_join_indexers</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1053</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">right_index</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1054</span>         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">left</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/reshape/merge.py:1065,</span> in <span class="ni">_MergeOperation._get_join_info</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1061</span>     <span class="n">join_index</span><span class="p">,</span> <span class="n">right_indexer</span><span class="p">,</span> <span class="n">left_indexer</span> <span class="o">=</span> <span class="n">_left_join_on_index</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1062</span>         <span class="n">right_ax</span><span class="p">,</span> <span class="n">left_ax</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">right_join_keys</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">sort</span>
+<span class="g g-Whitespace">   </span><span class="mi">1063</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1064</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1065</span>     <span class="p">(</span><span class="n">left_indexer</span><span class="p">,</span> <span class="n">right_indexer</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_join_indexers</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1067</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">right_index</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1068</span>         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">left</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
 
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/reshape/merge.py:1024,</span> in <span class="ni">_MergeOperation._get_join_indexers</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1022</span> <span class="k">def</span> <span class="nf">_get_join_indexers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">intp</span><span class="p">],</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">intp</span><span class="p">]]:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1023</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;return the join indexers&quot;&quot;&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1024</span>     <span class="k">return</span> <span class="n">get_join_indexers</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1025</span>         <span class="bp">self</span><span class="o">.</span><span class="n">left_join_keys</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">right_join_keys</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">sort</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">how</span>
-<span class="g g-Whitespace">   </span><span class="mi">1026</span>     <span class="p">)</span>
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/reshape/merge.py:1038,</span> in <span class="ni">_MergeOperation._get_join_indexers</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1036</span> <span class="k">def</span> <span class="nf">_get_join_indexers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">intp</span><span class="p">],</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">intp</span><span class="p">]]:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1037</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;return the join indexers&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1038</span>     <span class="k">return</span> <span class="n">get_join_indexers</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1039</span>         <span class="bp">self</span><span class="o">.</span><span class="n">left_join_keys</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">right_join_keys</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">sort</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">how</span>
+<span class="g g-Whitespace">   </span><span class="mi">1040</span>     <span class="p">)</span>
 
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/reshape/merge.py:1645,</span> in <span class="ni">get_join_indexers</span><span class="nt">(left_keys, right_keys, sort, how, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1640</span> <span class="c1"># get left &amp; right join labels and num. of levels at each location</span>
-<span class="g g-Whitespace">   </span><span class="mi">1641</span> <span class="n">mapped</span> <span class="o">=</span> <span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1642</span>     <span class="n">_factorize_keys</span><span class="p">(</span><span class="n">left_keys</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">right_keys</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">sort</span><span class="o">=</span><span class="n">sort</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="n">how</span><span class="p">)</span>
-<span class="nn">   1643     for n</span> in <span class="ni">range(len</span><span class="nt">(left_keys))</span>
-<span class="g g-Whitespace">   </span><span class="mi">1644</span> <span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1645</span> <span class="n">zipped</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">mapped</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1646</span> <span class="n">llab</span><span class="p">,</span> <span class="n">rlab</span><span class="p">,</span> <span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">zipped</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1648</span> <span class="c1"># get flat i8 keys from label lists</span>
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/reshape/merge.py:1665,</span> in <span class="ni">get_join_indexers</span><span class="nt">(left_keys, right_keys, sort, how, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1660</span> <span class="c1"># get left &amp; right join labels and num. of levels at each location</span>
+<span class="g g-Whitespace">   </span><span class="mi">1661</span> <span class="n">mapped</span> <span class="o">=</span> <span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1662</span>     <span class="n">_factorize_keys</span><span class="p">(</span><span class="n">left_keys</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">right_keys</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">sort</span><span class="o">=</span><span class="n">sort</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="n">how</span><span class="p">)</span>
+<span class="nn">   1663     for n</span> in <span class="ni">range(len</span><span class="nt">(left_keys))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1664</span> <span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1665</span> <span class="n">zipped</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">mapped</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1666</span> <span class="n">llab</span><span class="p">,</span> <span class="n">rlab</span><span class="p">,</span> <span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">zipped</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1668</span> <span class="c1"># get flat i8 keys from label lists</span>
 
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/reshape/merge.py:1642,</span> in <span class="ni">&lt;genexpr&gt;</span><span class="nt">(.0)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1638</span>         <span class="k">return</span> <span class="n">_get_no_sort_one_missing_indexer</span><span class="p">(</span><span class="n">left_n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1640</span> <span class="c1"># get left &amp; right join labels and num. of levels at each location</span>
-<span class="g g-Whitespace">   </span><span class="mi">1641</span> <span class="n">mapped</span> <span class="o">=</span> <span class="p">(</span>
-<span class="ne">-&gt; </span><span class="mi">1642</span>     <span class="n">_factorize_keys</span><span class="p">(</span><span class="n">left_keys</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">right_keys</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">sort</span><span class="o">=</span><span class="n">sort</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="n">how</span><span class="p">)</span>
-<span class="nn">   1643     for n</span> in <span class="ni">range(len</span><span class="nt">(left_keys))</span>
-<span class="g g-Whitespace">   </span><span class="mi">1644</span> <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1645</span> <span class="n">zipped</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">mapped</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1646</span> <span class="n">llab</span><span class="p">,</span> <span class="n">rlab</span><span class="p">,</span> <span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">zipped</span><span class="p">)</span>
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/reshape/merge.py:1662,</span> in <span class="ni">&lt;genexpr&gt;</span><span class="nt">(.0)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1658</span>         <span class="k">return</span> <span class="n">_get_no_sort_one_missing_indexer</span><span class="p">(</span><span class="n">left_n</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1660</span> <span class="c1"># get left &amp; right join labels and num. of levels at each location</span>
+<span class="g g-Whitespace">   </span><span class="mi">1661</span> <span class="n">mapped</span> <span class="o">=</span> <span class="p">(</span>
+<span class="ne">-&gt; </span><span class="mi">1662</span>     <span class="n">_factorize_keys</span><span class="p">(</span><span class="n">left_keys</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">right_keys</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">sort</span><span class="o">=</span><span class="n">sort</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="n">how</span><span class="p">)</span>
+<span class="nn">   1663     for n</span> in <span class="ni">range(len</span><span class="nt">(left_keys))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1664</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1665</span> <span class="n">zipped</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">mapped</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1666</span> <span class="n">llab</span><span class="p">,</span> <span class="n">rlab</span><span class="p">,</span> <span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">zipped</span><span class="p">)</span>
 
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/reshape/merge.py:2395,</span> in <span class="ni">_factorize_keys</span><span class="nt">(lk, rk, sort, how)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2390</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2391</span>     <span class="c1"># Argument 1 to &quot;factorize&quot; of &quot;ObjectFactorizer&quot; has incompatible type</span>
-<span class="g g-Whitespace">   </span><span class="mi">2392</span>     <span class="c1"># &quot;Union[ndarray[Any, dtype[signedinteger[_64Bit]]],</span>
-<span class="g g-Whitespace">   </span><span class="mi">2393</span>     <span class="c1"># ndarray[Any, dtype[object_]]]&quot;; expected &quot;ndarray[Any, dtype[object_]]&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">2394</span>     <span class="n">llab</span> <span class="o">=</span> <span class="n">rizer</span><span class="o">.</span><span class="n">factorize</span><span class="p">(</span><span class="n">lk</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
-<span class="ne">-&gt; </span><span class="mi">2395</span>     <span class="n">rlab</span> <span class="o">=</span> <span class="n">rizer</span><span class="o">.</span><span class="n">factorize</span><span class="p">(</span><span class="n">rk</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
-<span class="g g-Whitespace">   </span><span class="mi">2396</span> <span class="k">assert</span> <span class="n">llab</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">intp</span><span class="p">),</span> <span class="n">llab</span><span class="o">.</span><span class="n">dtype</span>
-<span class="g g-Whitespace">   </span><span class="mi">2397</span> <span class="k">assert</span> <span class="n">rlab</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">intp</span><span class="p">),</span> <span class="n">rlab</span><span class="o">.</span><span class="n">dtype</span>
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/reshape/merge.py:2442,</span> in <span class="ni">_factorize_keys</span><span class="nt">(lk, rk, sort, how)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2435</span>     <span class="n">rlab</span> <span class="o">=</span> <span class="n">rizer</span><span class="o">.</span><span class="n">factorize</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2436</span>         <span class="n">rk</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">na_value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">lk</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">numpy_dtype</span><span class="p">),</span> <span class="n">mask</span><span class="o">=</span><span class="n">rk</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">2437</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2438</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2439</span>     <span class="c1"># Argument 1 to &quot;factorize&quot; of &quot;ObjectFactorizer&quot; has incompatible type</span>
+<span class="g g-Whitespace">   </span><span class="mi">2440</span>     <span class="c1"># &quot;Union[ndarray[Any, dtype[signedinteger[_64Bit]]],</span>
+<span class="g g-Whitespace">   </span><span class="mi">2441</span>     <span class="c1"># ndarray[Any, dtype[object_]]]&quot;; expected &quot;ndarray[Any, dtype[object_]]&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">2442</span>     <span class="n">llab</span> <span class="o">=</span> <span class="n">rizer</span><span class="o">.</span><span class="n">factorize</span><span class="p">(</span><span class="n">lk</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
+<span class="g g-Whitespace">   </span><span class="mi">2443</span>     <span class="n">rlab</span> <span class="o">=</span> <span class="n">rizer</span><span class="o">.</span><span class="n">factorize</span><span class="p">(</span><span class="n">rk</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
+<span class="g g-Whitespace">   </span><span class="mi">2444</span> <span class="k">assert</span> <span class="n">llab</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">intp</span><span class="p">),</span> <span class="n">llab</span><span class="o">.</span><span class="n">dtype</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -800,7 +802,7 @@ corpus består av 3441 utgivelser
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -840,18 +842,18 @@ corpus består av 3441 utgivelser
   <tbody>
     <tr>
       <th>0</th>
-      <td>201310897</td>
-      <td>URN:NBN:no-nb_digavis_oestsida_null_null_20021...</td>
+      <td>201310916</td>
+      <td>URN:NBN:no-nb_digavis_oestsida_null_null_20040...</td>
       <td>oestsida</td>
       <td>Kristiansand</td>
-      <td>20021204</td>
-      <td>2002</td>
+      <td>20040211</td>
+      <td>2004</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>1</td>
-      <td>3</td>
-      <td>1</td>
-      <td>2</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
@@ -864,9 +866,9 @@ corpus består av 3441 utgivelser
       <td>digavis</td>
       <td>biblioteket</td>
       <td>4</td>
+      <td>1</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
@@ -879,24 +881,24 @@ corpus består av 3441 utgivelser
       <td>digavis</td>
       <td>biblioteket</td>
       <td>4</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>201310916</td>
-      <td>URN:NBN:no-nb_digavis_oestsida_null_null_20040...</td>
-      <td>oestsida</td>
-      <td>Kristiansand</td>
-      <td>20040211</td>
-      <td>2004</td>
-      <td>digavis</td>
-      <td>biblioteket</td>
-      <td>4</td>
       <td>0</td>
       <td>1</td>
       <td>-1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>201310897</td>
+      <td>URN:NBN:no-nb_digavis_oestsida_null_null_20021...</td>
+      <td>oestsida</td>
+      <td>Kristiansand</td>
+      <td>20021204</td>
+      <td>2002</td>
+      <td>digavis</td>
+      <td>biblioteket</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>4</th>
@@ -913,99 +915,8 @@ corpus består av 3441 utgivelser
       <td>2</td>
       <td>-1</td>
     </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>5577</th>
-      <td>200486868</td>
-      <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
-      <td>faedrelandsvennen</td>
-      <td>Kristiansand</td>
-      <td>20200221</td>
-      <td>2020</td>
-      <td>digavis</td>
-      <td>biblioteket</td>
-      <td>3</td>
-      <td>0</td>
-      <td>2</td>
-      <td>-2</td>
-    </tr>
-    <tr>
-      <th>5578</th>
-      <td>200486868</td>
-      <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
-      <td>faedrelandsvennen</td>
-      <td>Kristiansand</td>
-      <td>20200221</td>
-      <td>2020</td>
-      <td>digavis</td>
-      <td>biblioteket</td>
-      <td>3</td>
-      <td>1</td>
-      <td>3</td>
-      <td>-2</td>
-    </tr>
-    <tr>
-      <th>5579</th>
-      <td>200486868</td>
-      <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
-      <td>faedrelandsvennen</td>
-      <td>Kristiansand</td>
-      <td>20200221</td>
-      <td>2020</td>
-      <td>digavis</td>
-      <td>biblioteket</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>5580</th>
-      <td>200486869</td>
-      <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
-      <td>faedrelandsvennen</td>
-      <td>Kristiansand</td>
-      <td>20200222</td>
-      <td>2020</td>
-      <td>digavis</td>
-      <td>biblioteket</td>
-      <td>1</td>
-      <td>0</td>
-      <td>2</td>
-      <td>-2</td>
-    </tr>
-    <tr>
-      <th>5581</th>
-      <td>200486869</td>
-      <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
-      <td>faedrelandsvennen</td>
-      <td>Kristiansand</td>
-      <td>20200222</td>
-      <td>2020</td>
-      <td>digavis</td>
-      <td>biblioteket</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>-1</td>
-    </tr>
   </tbody>
 </table>
-<p>5582 rows × 12 columns</p>
 </div></div></div>
 </div>
 <section id="tilbakekobling-fra-datapunkt-til-kildetekst">
@@ -1072,18 +983,18 @@ Ved å bytte ut “URN” i følgende adresse med en reell verdi kan du lese avi
   <tbody>
     <tr>
       <th>0</th>
-      <td>201310897</td>
-      <td>URN:NBN:no-nb_digavis_oestsida_null_null_20021...</td>
+      <td>201310916</td>
+      <td>URN:NBN:no-nb_digavis_oestsida_null_null_20040...</td>
       <td>oestsida</td>
       <td>Kristiansand</td>
-      <td>20021204</td>
-      <td>2002</td>
+      <td>20040211</td>
+      <td>2004</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>1</td>
-      <td>3</td>
-      <td>1</td>
-      <td>2</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
@@ -1097,9 +1008,9 @@ Ved å bytte ut “URN” i følgende adresse med en reell verdi kan du lese avi
       <td>digavis</td>
       <td>biblioteket</td>
       <td>4</td>
+      <td>1</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
@@ -1113,25 +1024,25 @@ Ved å bytte ut “URN” i følgende adresse med en reell verdi kan du lese avi
       <td>digavis</td>
       <td>biblioteket</td>
       <td>4</td>
-      <td>1</td>
       <td>0</td>
       <td>1</td>
+      <td>-1</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>201310916</td>
-      <td>URN:NBN:no-nb_digavis_oestsida_null_null_20040...</td>
+      <td>201310897</td>
+      <td>URN:NBN:no-nb_digavis_oestsida_null_null_20021...</td>
       <td>oestsida</td>
       <td>Kristiansand</td>
-      <td>20040211</td>
-      <td>2004</td>
+      <td>20021204</td>
+      <td>2002</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>4</td>
-      <td>0</td>
       <td>1</td>
-      <td>-1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>2</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
@@ -1168,82 +1079,82 @@ Ved å bytte ut “URN” i følgende adresse med en reell verdi kan du lese avi
     </tr>
     <tr>
       <th>5577</th>
-      <td>200486868</td>
+      <td>200483072</td>
       <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
       <td>faedrelandsvennen</td>
       <td>Kristiansand</td>
-      <td>20200221</td>
-      <td>2020</td>
+      <td>20021008</td>
+      <td>2002</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>3</td>
+      <td>10</td>
+      <td>1</td>
+      <td>1</td>
       <td>0</td>
-      <td>2</td>
-      <td>-2</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>5578</th>
-      <td>200486868</td>
+      <td>200486058</td>
       <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
       <td>faedrelandsvennen</td>
       <td>Kristiansand</td>
-      <td>20200221</td>
-      <td>2020</td>
+      <td>20160830</td>
+      <td>2016</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>3</td>
       <td>1</td>
-      <td>3</td>
-      <td>-2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>-1</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>5579</th>
-      <td>200486868</td>
+      <td>200485951</td>
       <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
       <td>faedrelandsvennen</td>
       <td>Kristiansand</td>
-      <td>20200221</td>
-      <td>2020</td>
+      <td>20160423</td>
+      <td>2016</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>3</td>
       <td>2</td>
       <td>1</td>
+      <td>0</td>
       <td>1</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>5580</th>
-      <td>200486869</td>
+      <td>200485951</td>
       <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
       <td>faedrelandsvennen</td>
       <td>Kristiansand</td>
-      <td>20200222</td>
-      <td>2020</td>
+      <td>20160423</td>
+      <td>2016</td>
       <td>digavis</td>
       <td>biblioteket</td>
+      <td>2</td>
       <td>1</td>
       <td>0</td>
-      <td>2</td>
-      <td>-2</td>
+      <td>1</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>5581</th>
-      <td>200486869</td>
+      <td>200482629</td>
       <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
       <td>faedrelandsvennen</td>
       <td>Kristiansand</td>
-      <td>20200222</td>
-      <td>2020</td>
+      <td>20010417</td>
+      <td>2001</td>
       <td>digavis</td>
       <td>biblioteket</td>
       <td>1</td>
+      <td>5</td>
       <td>0</td>
-      <td>1</td>
-      <td>-1</td>
+      <td>5</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
   </tbody>
@@ -1264,10 +1175,10 @@ Ved å bytte ut “URN” i følgende adresse med en reell verdi kan du lese avi
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;year&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;year&#39;&gt;
 </pre></div>
 </div>
-<img alt="../_images/810512e3f418e2dbc62e712c93f59d7c6d8bd78de71b7a07e1657c761e433bb1.png" src="../_images/810512e3f418e2dbc62e712c93f59d7c6d8bd78de71b7a07e1657c761e433bb1.png" />
+<img alt="../_images/90546ad084eb777b4f87ed8da158314331312fc9caecd994e49553f28b7b2a78.png" src="../_images/90546ad084eb777b4f87ed8da158314331312fc9caecd994e49553f28b7b2a78.png" />
 </div>
 </div>
 </section>
@@ -1324,8 +1235,8 @@ Ved å bytte ut “URN” i følgende adresse med en reell verdi kan du lese avi
 </table>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># outputfile = f&quot;sentimentanalyse_aviskorpus_{from_year}-{to_year}_{dt.date.today()}.csv&quot;</span>
-<span class="c1"># result.to_csv(outputfile)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">outputfile</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;sentimentanalyse_aviskorpus_</span><span class="si">{</span><span class="n">from_year</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">to_year</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="si">}</span><span class="s2">.csv&quot;</span>
+<span class="n">result</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">outputfile</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

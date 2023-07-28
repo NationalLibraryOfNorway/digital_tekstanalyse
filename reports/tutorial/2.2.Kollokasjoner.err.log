@@ -1,58 +1,107 @@
 Traceback (most recent call last):
-  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+  File "/home/larsm/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
     executenb(
-  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/nbclient/client.py", line 1204, in execute
+  File "/home/larsm/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/nbclient/client.py", line 1305, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/nbclient/util.py", line 84, in wrapped
-    return just_run(coro(*args, **kwargs))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/nbclient/util.py", line 62, in just_run
-    return loop.run_until_complete(coro)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+  File "/home/larsm/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+  File "/home/larsm/mambaforge/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
     return future.result()
-           ^^^^^^^^^^^^^^^
-  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/nbclient/client.py", line 663, in async_execute
+  File "/home/larsm/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/nbclient/client.py", line 705, in async_execute
     await self.async_execute_cell(
-  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/nbclient/client.py", line 965, in async_execute_cell
+  File "/home/larsm/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/nbclient/client.py", line 1058, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+  File "/home/larsm/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# Her viser vi de 50 viktigste ordene som er assosiert med rødvin i korpuset vårt, målt mot alle bøker i nb.no 
+# korpus med inntil 200 bøker fra dewey 641.2 (drikkevarer) utgitt mellom 1960 og 2020
 
-nb.cloud(coll_assoc.head(50)/coll_assoc.sum())
+korpus = dh.Corpus(doctype="digibok", ddk="641.2%", from_year=1960, to_year=2020, limit=200)
 ------------------
 
+
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mNameError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[27], line 3[0m
-[1;32m      1[0m [38;5;66;03m# Her viser vi de 50 viktigste ordene som er assosiert med rødvin i korpuset vårt, målt mot alle bøker i nb.no [39;00m
-[0;32m----> 3[0m [43mnb[49m[38;5;241;43m.[39;49m[43mcloud[49m[43m([49m[43mcoll_assoc[49m[38;5;241;43m.[39;49m[43mhead[49m[43m([49m[38;5;241;43m50[39;49m[43m)[49m[38;5;241;43m/[39;49m[43mcoll_assoc[49m[38;5;241;43m.[39;49m[43msum[49m[43m([49m[43m)[49m[43m)[49m
+[0;31mJSONDecodeError[0m                           Traceback (most recent call last)
+File [0;32m~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/requests/models.py:971[0m, in [0;36mResponse.json[0;34m(self, **kwargs)[0m
+[1;32m    970[0m [38;5;28;01mtry[39;00m:
+[0;32m--> 971[0m     [38;5;28;01mreturn[39;00m [43mcomplexjson[49m[38;5;241;43m.[39;49m[43mloads[49m[43m([49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mtext[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m    972[0m [38;5;28;01mexcept[39;00m JSONDecodeError [38;5;28;01mas[39;00m e:
+[1;32m    973[0m     [38;5;66;03m# Catch JSON-related errors and raise as requests.JSONDecodeError[39;00m
+[1;32m    974[0m     [38;5;66;03m# This aliases json.JSONDecodeError and simplejson.JSONDecodeError[39;00m
 
-File [0;32m~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/dhlab/legacy/nbtext.py:1331[0m, in [0;36mcloud[0;34m(df, column, top, width, height, background, file, stretch, font_path)[0m
-[1;32m   1329[0m     column [38;5;241m=[39m df[38;5;241m.[39mcolumns[[38;5;241m0[39m]
-[1;32m   1330[0m data [38;5;241m=[39m json[38;5;241m.[39mloads(df[column][38;5;241m.[39mto_json())
-[0;32m-> 1331[0m a_cloud [38;5;241m=[39m [43mmake_cloud[49m[43m([49m[43mdata[49m[43m,[49m[43m [49m[43mtop[49m[38;5;241;43m=[39;49m[43mtop[49m[43m,[49m
-[1;32m   1332[0m [43m                     [49m[43mbackground[49m[38;5;241;43m=[39;49m[43mbackground[49m[43m,[49m[43m [49m[43mfont_path[49m[38;5;241;43m=[39;49m[43mfont_path[49m[43m,[49m
-[1;32m   1333[0m [43m                     [49m[43mstretch[49m[38;5;241;43m=[39;49m[38;5;28;43;01mlambda[39;49;00m[43m [49m[43mx[49m[43m:[49m[43m [49m[38;5;241;43m2[39;49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43m [49m[43m([49m[43mstretch[49m[43m [49m[38;5;241;43m*[39;49m[43m [49m[43mx[49m[43m)[49m[43m,[49m[43m [49m[43mwidth[49m[38;5;241;43m=[39;49m[43mwidth[49m[43m,[49m
-[1;32m   1334[0m [43m                     [49m[43mheight[49m[38;5;241;43m=[39;49m[43mheight[49m[43m)[49m
-[1;32m   1335[0m draw_cloud(a_cloud, fil[38;5;241m=[39mfile)
+File [0;32m~/mambaforge/lib/python3.10/json/__init__.py:346[0m, in [0;36mloads[0;34m(s, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)[0m
+[1;32m    343[0m [38;5;28;01mif[39;00m ([38;5;28mcls[39m [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m object_hook [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m
+[1;32m    344[0m         parse_int [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m parse_float [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m
+[1;32m    345[0m         parse_constant [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m object_pairs_hook [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m [38;5;129;01mnot[39;00m kw):
+[0;32m--> 346[0m     [38;5;28;01mreturn[39;00m [43m_default_decoder[49m[38;5;241;43m.[39;49m[43mdecode[49m[43m([49m[43ms[49m[43m)[49m
+[1;32m    347[0m [38;5;28;01mif[39;00m [38;5;28mcls[39m [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
 
-File [0;32m~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/dhlab/legacy/nbtext.py:1305[0m, in [0;36mmake_cloud[0;34m(json_text, top, background, stretch, width, height, font_path)[0m
-[1;32m   1303[0m pairs0 [38;5;241m=[39m Counter(json_text)[38;5;241m.[39mmost_common(top)
-[1;32m   1304[0m pairs [38;5;241m=[39m {x[[38;5;241m0[39m]: stretch(x[[38;5;241m1[39m]) [38;5;28;01mfor[39;00m x [38;5;129;01min[39;00m pairs0}
-[0;32m-> 1305[0m wc [38;5;241m=[39m [43mWordCloud[49m(
-[1;32m   1306[0m     font_path[38;5;241m=[39mfont_path,
-[1;32m   1307[0m     background_color[38;5;241m=[39mbackground,
-[1;32m   1308[0m     width[38;5;241m=[39mwidth,
-[1;32m   1309[0m     [38;5;66;03m# color_func=my_colorfunc,[39;00m
-[1;32m   1310[0m     ranks_only[38;5;241m=[39m[38;5;28;01mTrue[39;00m,
-[1;32m   1311[0m     height[38;5;241m=[39mheight)[38;5;241m.[39mgenerate_from_frequencies(pairs)
-[1;32m   1312[0m [38;5;28;01mreturn[39;00m wc
+File [0;32m~/mambaforge/lib/python3.10/json/decoder.py:337[0m, in [0;36mJSONDecoder.decode[0;34m(self, s, _w)[0m
+[1;32m    333[0m [38;5;250m[39m[38;5;124;03m"""Return the Python representation of ``s`` (a ``str`` instance[39;00m
+[1;32m    334[0m [38;5;124;03mcontaining a JSON document).[39;00m
+[1;32m    335[0m 
+[1;32m    336[0m [38;5;124;03m"""[39;00m
+[0;32m--> 337[0m obj, end [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mraw_decode[49m[43m([49m[43ms[49m[43m,[49m[43m [49m[43midx[49m[38;5;241;43m=[39;49m[43m_w[49m[43m([49m[43ms[49m[43m,[49m[43m [49m[38;5;241;43m0[39;49m[43m)[49m[38;5;241;43m.[39;49m[43mend[49m[43m([49m[43m)[49m[43m)[49m
+[1;32m    338[0m end [38;5;241m=[39m _w(s, end)[38;5;241m.[39mend()
 
-[0;31mNameError[0m: name 'WordCloud' is not defined
-NameError: name 'WordCloud' is not defined
+File [0;32m~/mambaforge/lib/python3.10/json/decoder.py:355[0m, in [0;36mJSONDecoder.raw_decode[0;34m(self, s, idx)[0m
+[1;32m    354[0m [38;5;28;01mexcept[39;00m [38;5;167;01mStopIteration[39;00m [38;5;28;01mas[39;00m err:
+[0;32m--> 355[0m     [38;5;28;01mraise[39;00m JSONDecodeError([38;5;124m"[39m[38;5;124mExpecting value[39m[38;5;124m"[39m, s, err[38;5;241m.[39mvalue) [38;5;28;01mfrom[39;00m [38;5;28;01mNone[39;00m
+[1;32m    356[0m [38;5;28;01mreturn[39;00m obj, end
+
+[0;31mJSONDecodeError[0m: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+[0;31mJSONDecodeError[0m                           Traceback (most recent call last)
+Cell [0;32mIn[2], line 3[0m
+[1;32m      1[0m [38;5;66;03m# korpus med inntil 200 bøker fra dewey 641.2 (drikkevarer) utgitt mellom 1960 og 2020[39;00m
+[0;32m----> 3[0m korpus [38;5;241m=[39m [43mdh[49m[38;5;241;43m.[39;49m[43mCorpus[49m[43m([49m[43mdoctype[49m[38;5;241;43m=[39;49m[38;5;124;43m"[39;49m[38;5;124;43mdigibok[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[43mddk[49m[38;5;241;43m=[39;49m[38;5;124;43m"[39;49m[38;5;124;43m641.2[39;49m[38;5;124;43m%[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[43mfrom_year[49m[38;5;241;43m=[39;49m[38;5;241;43m1960[39;49m[43m,[49m[43m [49m[43mto_year[49m[38;5;241;43m=[39;49m[38;5;241;43m2020[39;49m[43m,[49m[43m [49m[43mlimit[49m[38;5;241;43m=[39;49m[38;5;241;43m200[39;49m[43m)[49m
+
+File [0;32m~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/dhlab/text/corpus.py:69[0m, in [0;36mCorpus.__init__[0;34m(self, doctype, author, freetext, fulltext, from_year, to_year, from_timestamp, to_timestamp, title, ddk, subject, lang, limit, order_by)[0m
+[1;32m     35[0m [38;5;28;01mif[39;00m (doctype
+[1;32m     36[0m     [38;5;129;01mor[39;00m author
+[1;32m     37[0m     [38;5;129;01mor[39;00m freetext
+[0;32m   (...)[0m
+[1;32m     44[0m     [38;5;129;01mor[39;00m ddk
+[1;32m     45[0m     [38;5;129;01mor[39;00m lang):
+[1;32m     46[0m [38;5;250m    [39m[38;5;124;03m"""Create Corpus[39;00m
+[1;32m     47[0m 
+[1;32m     48[0m [38;5;124;03m:param str doctype: ``"digibok"``, ``"digavis"``, \[39;00m
+[0;32m   (...)[0m
+[1;32m     67[0m [38;5;124;03m:param int limit: number of items to sample.[39;00m
+[1;32m     68[0m [38;5;124;03m"""[39;00m
+[0;32m---> 69[0m     [38;5;28mself[39m[38;5;241m.[39mcorpus [38;5;241m=[39m [43mdocument_corpus[49m[43m([49m
+[1;32m     70[0m [43m        [49m[43mdoctype[49m[43m,[49m
+[1;32m     71[0m [43m        [49m[43mauthor[49m[43m,[49m
+[1;32m     72[0m [43m        [49m[43mfreetext[49m[43m,[49m
+[1;32m     73[0m [43m        [49m[43mfulltext[49m[43m,[49m
+[1;32m     74[0m [43m        [49m[43mfrom_year[49m[43m,[49m
+[1;32m     75[0m [43m        [49m[43mto_year[49m[43m,[49m
+[1;32m     76[0m [43m        [49m[43mfrom_timestamp[49m[43m,[49m
+[1;32m     77[0m [43m        [49m[43mto_timestamp[49m[43m,[49m
+[1;32m     78[0m [43m        [49m[43mtitle[49m[43m,[49m
+[1;32m     79[0m [43m        [49m[43mddk[49m[43m,[49m
+[1;32m     80[0m [43m        [49m[43msubject[49m[43m,[49m
+[1;32m     81[0m [43m        [49m[43mlang[49m[43m,[49m
+[1;32m     82[0m [43m        [49m[43mlimit[49m[43m,[49m
+[1;32m     83[0m [43m        [49m[43morder_by[49m
+[1;32m     84[0m [43m    [49m[43m)[49m
+[1;32m     86[0m [38;5;28;01melse[39;00m:
+[1;32m     87[0m     [38;5;28mself[39m[38;5;241m.[39mcorpus [38;5;241m=[39m pd[38;5;241m.[39mDataFrame(columns[38;5;241m=[39m[[38;5;124m"[39m[38;5;124murn[39m[38;5;124m"[39m])
+
+File [0;32m~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/dhlab/api/dhlab_api.py:680[0m, in [0;36mdocument_corpus[0;34m(doctype, author, freetext, fulltext, from_year, to_year, from_timestamp, to_timestamp, title, ddk, subject, lang, limit, order_by)[0m
+[1;32m    676[0m params [38;5;241m=[39m {x: parms[x] [38;5;28;01mfor[39;00m x [38;5;129;01min[39;00m parms [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m parms[x] [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m}
+[1;32m    678[0m r [38;5;241m=[39m requests[38;5;241m.[39mpost(BASE_URL [38;5;241m+[39m [38;5;124m"[39m[38;5;124m/build_corpus[39m[38;5;124m"[39m, json[38;5;241m=[39mparams)
+[0;32m--> 680[0m [38;5;28;01mreturn[39;00m pd[38;5;241m.[39mDataFrame([43mr[49m[38;5;241;43m.[39;49m[43mjson[49m[43m([49m[43m)[49m)
+
+File [0;32m~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/requests/models.py:975[0m, in [0;36mResponse.json[0;34m(self, **kwargs)[0m
+[1;32m    971[0m     [38;5;28;01mreturn[39;00m complexjson[38;5;241m.[39mloads([38;5;28mself[39m[38;5;241m.[39mtext, [38;5;241m*[39m[38;5;241m*[39mkwargs)
+[1;32m    972[0m [38;5;28;01mexcept[39;00m JSONDecodeError [38;5;28;01mas[39;00m e:
+[1;32m    973[0m     [38;5;66;03m# Catch JSON-related errors and raise as requests.JSONDecodeError[39;00m
+[1;32m    974[0m     [38;5;66;03m# This aliases json.JSONDecodeError and simplejson.JSONDecodeError[39;00m
+[0;32m--> 975[0m     [38;5;28;01mraise[39;00m RequestsJSONDecodeError(e[38;5;241m.[39mmsg, e[38;5;241m.[39mdoc, e[38;5;241m.[39mpos)
+
+[0;31mJSONDecodeError[0m: Expecting value: line 1 column 1 (char 0)
 

@@ -10,12 +10,10 @@ Klikk på "launch binder"-ikonet over for å åpne repositoriet i Binder
 
 ## Deploy
 
-
-Bygg og deploy med ghp-import
+Build with jupyter-book. Deploy to gh-pages with ghp-import.
 
 ```python
 jupyter-book build .
 # pip install ghp-import
 ghp-import -n -p -f _build/html
 ```
-

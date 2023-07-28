@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1.7. N-gram og galakser &#8212; DH-lab dokumenter</title>
+    <title>1.8. N-gram og galakser &#8212; DH-lab dokumenter</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial/2.5.n-gram_og_galakser';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.8. Sammenlign metadata" href="2.6.sammenlign_metadata.html" />
-    <link rel="prev" title="1.6. Søk i aviser" href="2.4.S%C3%B8k_i_aviser.html" />
+    <link rel="next" title="1.9. Sammenlign metadata" href="2.6.sammenlign_metadata.html" />
+    <link rel="prev" title="1.7. Søk i aviser" href="2.4.S%C3%B8k_i_aviser.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -162,18 +162,18 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Kodeeksempler–Python</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../tutorial.html">1. Læringseksempler</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="1.0.Oppstart.html">1.1. Oppstart</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.0.Bygg_korpus.html">1.2. Korpusbygging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.1.Konkordans.html">1.3. Konkordanser</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2.Kollokasjoner.html">1.4. Kollokasjoner</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3.Frekvenslister.html">1.5. Frekvenslister</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.4.S%C3%B8k_i_aviser.html">1.6. Søk i aviser</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.7. N-gram og galakser</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.6.sammenlign_metadata.html">1.8. Sammenlign metadata</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.0.ner_og_pos.html">1.9. NER og POS med Spacy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.1.ordparadigmer.html">1.10. Ordparadigmer med wordbank</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.2.dispersion.html">1.11. Ordfordeling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.0.experiment.html">1.12. Eksperimentelle tjenester</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.0.Oppstart.html">1.2. Oppstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.0.Bygg_korpus.html">1.3. Korpus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.Konkordans.html">1.4. Konkordanser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.Kollokasjoner.html">1.5. Kollokasjoner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3.Frekvenslister.html">1.6. Frekvenslister</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4.S%C3%B8k_i_aviser.html">1.7. Søk i aviser</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.8. N-gram og galakser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6.sammenlign_metadata.html">1.9. Sammenlign metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.0.ner_og_pos.html">1.10. NER og POS med Spacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.ordparadigmer.html">1.11. Ordparadigmer med wordbank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.2.dispersion.html">1.12. Ordfordeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.0.experiment.html">1.13. Eksperimentelle tjenester</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook.html">2. Kokebøker</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -446,13 +446,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">1.7.1. Plotting</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataramme">1.7.1.1. Dataramme</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avis-n-gram">1.7.1.2. Avis N-gram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">1.8.1. Plotting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataramme">1.8.1.1. Dataramme</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avis-n-gram">1.8.1.2. Avis N-gram</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#n-gram-med-jokertegn">1.7.2. N-gram med jokertegn</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#galakser">1.7.3. Galakser</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#n-gram-med-jokertegn">1.8.2. N-gram med jokertegn</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#galakser">1.8.3. Galakser</a></li>
 </ul>
             </nav>
         </div>
@@ -466,7 +466,7 @@ document.write(`
                   
   <p><img alt="resources/images/dhlab-logo-nb.png" src="../_images/dhlab-logo-nb.png" /></p>
 <section class="tex2jax_ignore mathjax_ignore" id="n-gram-og-galakser">
-<h1><span class="section-number">1.7. </span>N-gram og galakser<a class="headerlink" href="#n-gram-og-galakser" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1.8. </span>N-gram og galakser<a class="headerlink" href="#n-gram-og-galakser" title="Permalink to this heading">#</a></h1>
 <p>Data kan hentes ut fra <a class="reference external" href="https://www.nb.no/sp_tjenester/beta/ngram_1/trends#ngram/query?terms=demokrati%2C+diktatur&amp;lang=all&amp;case_sens=0&amp;freq=rel&amp;corpus=bok">NB N-gram</a> ved hjelp av klassen <code class="docutils literal notranslate"><span class="pre">Ngram</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Ngram</span></code> tar følgende parametre:</p>
 <p><code class="docutils literal notranslate"><span class="pre">Ngram(</span>&#160;&#160;&#160;&#160; <span class="pre">words=[</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">&quot;han&quot;,</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">&quot;hun&quot;</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">],</span>&#160;&#160;&#160;&#160; <span class="pre">from_year=1950,</span>&#160;&#160;&#160;&#160; <span class="pre">to_year=1990,</span>&#160;&#160;&#160;&#160; <span class="pre">doctype=&quot;bok&quot;</span>&#160;&#160;&#160;&#160; <span class="pre">)</span></code></p>
@@ -495,7 +495,7 @@ document.write(`
 </li>
 </ul>
 <section id="plotting">
-<h2><span class="section-number">1.7.1. </span>Plotting<a class="headerlink" href="#plotting" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.8.1. </span>Plotting<a class="headerlink" href="#plotting" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ngram på &#39;han&#39; og &#39;hun&#39; på bøker utgitt 1950-1990</span>
@@ -512,123 +512,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/pandas/compat/_optional.py:142,</span> in <span class="ni">import_optional_dependency</span><span class="nt">(name, extra, errors, min_version)</span>
-<span class="g g-Whitespace">    </span><span class="mi">141</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">142</span>     <span class="n">module</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">143</span> <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/importlib/__init__.py:126,</span> in <span class="ni">import_module</span><span class="nt">(name, package)</span>
-<span class="g g-Whitespace">    </span><span class="mi">125</span>         <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="ne">--&gt; </span><span class="mi">126</span> <span class="k">return</span> <span class="n">_bootstrap</span><span class="o">.</span><span class="n">_gcd_import</span><span class="p">(</span><span class="n">name</span><span class="p">[</span><span class="n">level</span><span class="p">:],</span> <span class="n">package</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1206,</span> in <span class="ni">_gcd_import</span><span class="nt">(name, package, level)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1178,</span> in <span class="ni">_find_and_load</span><span class="nt">(name, import_)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1128,</span> in <span class="ni">_find_and_load_unlocked</span><span class="nt">(name, import_)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:241,</span> in <span class="ni">_call_with_frames_removed</span><span class="nt">(f, *args, **kwds)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1206,</span> in <span class="ni">_gcd_import</span><span class="nt">(name, package, level)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1178,</span> in <span class="ni">_find_and_load</span><span class="nt">(name, import_)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1142,</span> in <span class="ni">_find_and_load_unlocked</span><span class="nt">(name, import_)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Ngram på &#39;han&#39; og &#39;hun&#39; på bøker utgitt 1950-1990</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">Ngram</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">words</span><span class="o">=</span><span class="p">[</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>         <span class="s2">&quot;han&quot;</span><span class="p">,</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="s2">&quot;hun&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>         <span class="p">],</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="n">from_year</span><span class="o">=</span><span class="mi">1950</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">to_year</span><span class="o">=</span><span class="mi">1990</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">doctype</span><span class="o">=</span><span class="s2">&quot;bok&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="p">)</span>
-
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/dhlab/ngram/ngram.py:65,</span> in <span class="ni">Ngram.__init__</span><span class="nt">(self, words, from_year, to_year, doctype, mode, lang, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">61</span> <span class="k">if</span> <span class="n">doctype</span> <span class="o">==</span> <span class="s2">&quot;avis&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">62</span>     <span class="n">lang</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="ne">---&gt; </span><span class="mi">65</span> <span class="n">ngrm</span> <span class="o">=</span> <span class="n">nb_ngram</span><span class="p">(</span><span class="n">terms</span><span class="o">=</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">66</span>                 <span class="n">corpus</span><span class="o">=</span><span class="n">doctype</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span>                 <span class="n">years</span><span class="o">=</span><span class="p">(</span><span class="n">from_year</span><span class="p">,</span> <span class="n">to_year</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">68</span>                 <span class="n">smooth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">lang</span> <span class="o">=</span> <span class="n">lang</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">69</span>                 <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">70</span> <span class="n">ngrm</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">ngrm</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span> <span class="bp">self</span><span class="o">.</span><span class="n">ngram</span> <span class="o">=</span> <span class="n">ngrm</span>
-
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/dhlab/ngram/nb_ngram.py:29,</span> in <span class="ni">nb_ngram</span><span class="nt">(terms, corpus, smooth, years, mode, lang)</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="k">if</span> <span class="n">corpus</span> <span class="o">==</span> <span class="s2">&quot;avis&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span>     <span class="n">lang</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="ne">---&gt; </span><span class="mi">29</span> <span class="n">df</span> <span class="o">=</span> <span class="n">ngram_conv</span><span class="p">(</span><span class="n">get_ngram</span><span class="p">(</span><span class="n">terms</span><span class="p">,</span> <span class="n">corpus</span><span class="o">=</span><span class="n">corpus</span><span class="p">,</span> <span class="n">lang</span> <span class="o">=</span> <span class="n">lang</span><span class="p">),</span> <span class="n">smooth</span><span class="o">=</span><span class="n">smooth</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="n">years</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
-
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/dhlab/ngram/nb_ngram.py:87,</span> in <span class="ni">ngram_conv</span><span class="nt">(ngrams, smooth, years, mode)</span>
-<span class="g g-Whitespace">     </span><span class="mi">81</span>     <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="p">[]:</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span>         <span class="n">ngc</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">]]</span> \
-<span class="g g-Whitespace">     </span><span class="mi">83</span>         <span class="o">=</span> \
-<span class="g g-Whitespace">     </span><span class="mi">84</span>         <span class="p">{</span><span class="n">z</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]:</span><span class="n">z</span><span class="p">[</span><span class="n">arg</span><span class="p">]</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;values&#39;</span><span class="p">]</span> \
-<span class="g g-Whitespace">     </span><span class="mi">85</span>             <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">])</span> <span class="o">&lt;=</span> <span class="nb">int</span><span class="p">(</span><span class="n">years</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="ow">and</span> <span class="nb">int</span><span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="nb">int</span><span class="p">(</span><span class="n">years</span><span class="p">[</span><span class="mi">0</span><span class="p">])}</span>
-<span class="ne">---&gt; </span><span class="mi">87</span> <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ngc</span><span class="p">)</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="n">smooth</span><span class="p">,</span> <span class="n">win_type</span><span class="o">=</span><span class="s1">&#39;triang&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/generic.py:11697,</span> in <span class="ni">NDFrame.rolling</span><span class="nt">(self, window, min_periods, center, win_type, on, axis, closed, step, method)</span>
-<span class="g g-Whitespace">  </span><span class="mi">11694</span> <span class="n">axis</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_axis_number</span><span class="p">(</span><span class="n">axis</span><span class="p">)</span>
-<span class="g g-Whitespace">  </span><span class="mi">11696</span> <span class="k">if</span> <span class="n">win_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">&gt; </span><span class="mi">11697</span>     <span class="k">return</span> <span class="n">Window</span><span class="p">(</span>
-<span class="g g-Whitespace">  </span><span class="mi">11698</span>         <span class="bp">self</span><span class="p">,</span>
-<span class="g g-Whitespace">  </span><span class="mi">11699</span>         <span class="n">window</span><span class="o">=</span><span class="n">window</span><span class="p">,</span>
-<span class="g g-Whitespace">  </span><span class="mi">11700</span>         <span class="n">min_periods</span><span class="o">=</span><span class="n">min_periods</span><span class="p">,</span>
-<span class="g g-Whitespace">  </span><span class="mi">11701</span>         <span class="n">center</span><span class="o">=</span><span class="n">center</span><span class="p">,</span>
-<span class="g g-Whitespace">  </span><span class="mi">11702</span>         <span class="n">win_type</span><span class="o">=</span><span class="n">win_type</span><span class="p">,</span>
-<span class="g g-Whitespace">  </span><span class="mi">11703</span>         <span class="n">on</span><span class="o">=</span><span class="n">on</span><span class="p">,</span>
-<span class="g g-Whitespace">  </span><span class="mi">11704</span>         <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span>
-<span class="g g-Whitespace">  </span><span class="mi">11705</span>         <span class="n">closed</span><span class="o">=</span><span class="n">closed</span><span class="p">,</span>
-<span class="g g-Whitespace">  </span><span class="mi">11706</span>         <span class="n">step</span><span class="o">=</span><span class="n">step</span><span class="p">,</span>
-<span class="g g-Whitespace">  </span><span class="mi">11707</span>         <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span>
-<span class="g g-Whitespace">  </span><span class="mi">11708</span>     <span class="p">)</span>
-<span class="g g-Whitespace">  </span><span class="mi">11710</span> <span class="k">return</span> <span class="n">Rolling</span><span class="p">(</span>
-<span class="g g-Whitespace">  </span><span class="mi">11711</span>     <span class="bp">self</span><span class="p">,</span>
-<span class="g g-Whitespace">  </span><span class="mi">11712</span>     <span class="n">window</span><span class="o">=</span><span class="n">window</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">  </span><span class="mi">11720</span>     <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span>
-<span class="g g-Whitespace">  </span><span class="mi">11721</span> <span class="p">)</span>
-
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/window/rolling.py:160,</span> in <span class="ni">BaseWindow.__init__</span><span class="nt">(self, obj, window, min_periods, center, win_type, axis, on, closed, step, method, selection)</span>
-<span class="g g-Whitespace">    </span><span class="mi">154</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">155</span>         <span class="sa">f</span><span class="s2">&quot;invalid on specified as </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">on</span><span class="si">}</span><span class="s2">, &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">156</span>         <span class="s2">&quot;must be a column (of DataFrame), an Index or None&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">157</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">159</span> <span class="bp">self</span><span class="o">.</span><span class="n">_selection</span> <span class="o">=</span> <span class="n">selection</span>
-<span class="ne">--&gt; </span><span class="mi">160</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate</span><span class="p">()</span>
-
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/pandas/core/window/rolling.py:1138,</span> in <span class="ni">Window._validate</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1136</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">win_type</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1137</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid win_type </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">win_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1138</span> <span class="n">signal</span> <span class="o">=</span> <span class="n">import_optional_dependency</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1139</span>     <span class="s2">&quot;scipy.signal&quot;</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="s2">&quot;Scipy is required to generate window weight.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1140</span> <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1141</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scipy_weight_generator</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">signal</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">win_type</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1142</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scipy_weight_generator</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-
-<span class="nn">File ~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/pandas/compat/_optional.py:145,</span> in <span class="ni">import_optional_dependency</span><span class="nt">(name, extra, errors, min_version)</span>
-<span class="g g-Whitespace">    </span><span class="mi">143</span> <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">144</span>     <span class="k">if</span> <span class="n">errors</span> <span class="o">==</span> <span class="s2">&quot;raise&quot;</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">145</span>         <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">146</span>     <span class="k">return</span> <span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">148</span> <span class="c1"># Handle submodules: if we have submodule, grab parent module from sys.modules</span>
-
-<span class="ne">ImportError</span>: Missing optional dependency &#39;scipy.signal&#39;. Scipy is required to generate window weight. Use pip or conda to install scipy.signal.
-</pre></div>
-</div>
+<img alt="../_images/b95a1c697cb911126849cc119b1ed5f35f74c3a95545e3ccaf25f20668bdffcb.png" src="../_images/b95a1c697cb911126849cc119b1ed5f35f74c3a95545e3ccaf25f20668bdffcb.png" />
 </div>
 </div>
 <p>Visualisering kan konfigurerers med <code class="docutils literal notranslate"><span class="pre">Ngram.plot()</span></code></p>
@@ -653,11 +537,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d6eed57409698101ab61eba7fe92341dc52f8afcc21455e123f7ca4421c136c2.png" src="../_images/d6eed57409698101ab61eba7fe92341dc52f8afcc21455e123f7ca4421c136c2.png" />
+<img alt="../_images/aac8ba5fe879223a3b4e83ecfb33c3099979d4ebf0bd31a6887949d13fe4be31.png" src="../_images/aac8ba5fe879223a3b4e83ecfb33c3099979d4ebf0bd31a6887949d13fe4be31.png" />
 </div>
 </div>
 <section id="dataramme">
-<h3><span class="section-number">1.7.1.1. </span>Dataramme<a class="headerlink" href="#dataramme" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.8.1.1. </span>Dataramme<a class="headerlink" href="#dataramme" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Adgang til N-grammet som dataramme gjennom Ngram.frame</span>
@@ -728,7 +612,7 @@ document.write(`
 </div>
 </section>
 <section id="avis-n-gram">
-<h3><span class="section-number">1.7.1.2. </span>Avis N-gram<a class="headerlink" href="#avis-n-gram" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.8.1.2. </span>Avis N-gram<a class="headerlink" href="#avis-n-gram" title="Permalink to this heading">#</a></h3>
 <p>Lag N-gram basert på avis ved å sette <code class="docutils literal notranslate"><span class="pre">doctype</span></code> til <code class="docutils literal notranslate"><span class="pre">&quot;avis&quot;</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -742,13 +626,13 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5c527ddb27ab8a74c33ec0cac923b5342aaa75287393149d9963610a6a794ab9.png" src="../_images/5c527ddb27ab8a74c33ec0cac923b5342aaa75287393149d9963610a6a794ab9.png" />
+<img alt="../_images/eca46552a9cb2c5a43763e937f633e3eea6a364a4f58e6aa8208a95128b6ba46.png" src="../_images/eca46552a9cb2c5a43763e937f633e3eea6a364a4f58e6aa8208a95128b6ba46.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="n-gram-med-jokertegn">
-<h2><span class="section-number">1.7.2. </span>N-gram med jokertegn<a class="headerlink" href="#n-gram-med-jokertegn" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.8.2. </span>N-gram med jokertegn<a class="headerlink" href="#n-gram-med-jokertegn" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ngram</span><span class="p">(</span>
@@ -759,7 +643,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/54bc5ffa90bc9212a839f7a082d94589f6ea8d5eca91cca96d5f95ff38832b57.png" src="../_images/54bc5ffa90bc9212a839f7a082d94589f6ea8d5eca91cca96d5f95ff38832b57.png" />
+<img alt="../_images/3ab295f86e0e0e406c6bd4cdf97e266c9fd5a018b87463fbb764059b53687c43.png" src="../_images/3ab295f86e0e0e406c6bd4cdf97e266c9fd5a018b87463fbb764059b53687c43.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -772,12 +656,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f899282e5092541b099a4132988217a6cdedd8d64f5a968f11f788783fd73297.png" src="../_images/f899282e5092541b099a4132988217a6cdedd8d64f5a968f11f788783fd73297.png" />
+<img alt="../_images/6906a557d7cbbacb31c523aed6e4395298b8c347ad07abc867f013fd3f6d5805.png" src="../_images/6906a557d7cbbacb31c523aed6e4395298b8c347ad07abc867f013fd3f6d5805.png" />
 </div>
 </div>
 </section>
 <section id="galakser">
-<h2><span class="section-number">1.7.3. </span>Galakser<a class="headerlink" href="#galakser" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.8.3. </span>Galakser<a class="headerlink" href="#galakser" title="Permalink to this heading">#</a></h2>
 <p>Galaksene måler koblinger mellom ord, og kan brukes for å lage sett av ord til forskjellige formål, som for eksempel sentimentanalyse, eller stedsnavn.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -794,7 +678,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/dbf271d96f02ca3683295b1f9d38b83783eface16b4d0805ee67a0f8ac25a904.png" src="../_images/dbf271d96f02ca3683295b1f9d38b83783eface16b4d0805ee67a0f8ac25a904.png" />
+<img alt="../_images/5be9ca4cfc5ac474d18838c2047f2662b056a498df8c687359c1d6acf0ac0a7d.png" src="../_images/5be9ca4cfc5ac474d18838c2047f2662b056a498df8c687359c1d6acf0ac0a7d.png" />
 </div>
 </div>
 <p>Bruk kommando <code class="docutils literal notranslate"><span class="pre">show_communities</span></code> fra <code class="docutils literal notranslate"><span class="pre">gnl</span></code> for å se på clustre.</p>
@@ -805,17 +689,17 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 skummes, is, vanskelige, eld, Snø, holke, tomkasser, sne, snø, Agnsild, Kulde, Vinter, snøbyger, dårlig, barfrost, glatt, kondens, ), siles, kornsne, Vatn, minusgrader, isdekke, stov, isete, slaps, ski, hagl, tomtønner, dugg, hardpakket, Eld, skare, sludd, sno, Glod, kuldegrader, allmennkunnskaper, slud, nysne, sjøis, skiføre, fokksnø, isdannelse, rim, papir, Sludd, granskog, regn, hålke, avkjøles, ising, Ski, ,, Sno
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 slud, Snø, slaps, nysne, hagl, tomkasser, fokksnø, sludd, holke, hålke, avkjøles, dugg, is, Vatn, Sludd, stov, papir, eld, ), minusgrader, rim, barfrost, snø, tomtønner, ski, isdannelse, ,, snøbyger, skiføre, dårlig, Glod, Vinter, kondens, allmennkunnskaper, Sno, skummes, kornsne, sne, regn, Kulde, granskog, Ski, isdekke, siles, glatt, sjøis, ising, vanskelige, hardpakket, isete, Agnsild, sno, skare, Eld, kuldegrader
 
-2 Hagel, Regn, Is, Frost, lis, Hagl, Storm, Sne, Slud
+2 Frost, Hagel, Is, Slud, lis, Sne, Regn, Hagl, Storm
 
-3 ild, sørpe, overvann, svovel, rok, isvann, vann, røk, søle, småstykker, snøslaps, isflak, Blod, røyk
+3 røk, snøslaps, overvann, søle, sørpe, Blod, ild, svovel, isflak, isvann, vann, rok, småstykker, røyk
 
-4 væte, varme, snestorm, snøstorm, frost, kulde, sult, mørke, vind, fuktighet
+4 sult, væte, snøstorm, snestorm, vind, fuktighet, frost, mørke, kulde, varme
 
-5 kyst, land, himmel, hav, fjell, kontinenter, fjord
+5 fjell, kontinenter, land, hav, fjord, kyst, himmel
 
-6 pinnebrød, boller, brus, hamburgarar, hamburgere, karbonader, pølser, godteri, snacks, koteletter, Pølser, burgere, mineralvann, vørterøl, kaker, skinker, øl, polser, Kaffe, opskjær, kaffe, pizza, lettøl
+6 pølser, kaffe, pizza, snacks, koteletter, lettøl, karbonader, boller, øl, opskjær, burgere, godteri, vørterøl, kaker, hamburgere, pinnebrød, Kaffe, skinker, Pølser, brus, hamburgarar, polser, mineralvann
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
@@ -863,7 +747,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.6. </span>Søk i aviser</p>
+        <p class="prev-next-title"><span class="section-number">1.7. </span>Søk i aviser</p>
       </div>
     </a>
     <a class="right-next"
@@ -871,7 +755,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.8. </span>Sammenlign metadata</p>
+        <p class="prev-next-title"><span class="section-number">1.9. </span>Sammenlign metadata</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -893,13 +777,13 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">1.7.1. Plotting</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataramme">1.7.1.1. Dataramme</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avis-n-gram">1.7.1.2. Avis N-gram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">1.8.1. Plotting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataramme">1.8.1.1. Dataramme</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avis-n-gram">1.8.1.2. Avis N-gram</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#n-gram-med-jokertegn">1.7.2. N-gram med jokertegn</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#galakser">1.7.3. Galakser</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#n-gram-med-jokertegn">1.8.2. N-gram med jokertegn</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#galakser">1.8.3. Galakser</a></li>
 </ul>
   </nav></div>
 

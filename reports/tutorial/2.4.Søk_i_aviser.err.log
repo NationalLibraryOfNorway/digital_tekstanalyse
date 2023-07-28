@@ -1,23 +1,17 @@
 Traceback (most recent call last):
-  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+  File "/home/larsm/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
     executenb(
-  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/nbclient/client.py", line 1204, in execute
+  File "/home/larsm/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/nbclient/client.py", line 1305, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/nbclient/util.py", line 84, in wrapped
-    return just_run(coro(*args, **kwargs))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/nbclient/util.py", line 62, in just_run
-    return loop.run_until_complete(coro)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+  File "/home/larsm/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+  File "/home/larsm/mambaforge/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
     return future.result()
-           ^^^^^^^^^^^^^^^
-  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/nbclient/client.py", line 663, in async_execute
+  File "/home/larsm/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/nbclient/client.py", line 705, in async_execute
     await self.async_execute_cell(
-  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/nbclient/client.py", line 965, in async_execute_cell
+  File "/home/larsm/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/nbclient/client.py", line 1058, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/home/larsm/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+  File "/home/larsm/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
@@ -25,18 +19,19 @@ coll = korpus.coll("langrenn").sort()
 coll
 ------------------
 
+
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mAttributeError[0m                            Traceback (most recent call last)
 Cell [0;32mIn[5], line 1[0m
 [0;32m----> 1[0m coll [38;5;241m=[39m [43mkorpus[49m[38;5;241;43m.[39;49m[43mcoll[49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mlangrenn[39;49m[38;5;124;43m"[39;49m[43m)[49m[38;5;241;43m.[39;49m[43msort[49m[43m([49m[43m)[49m
 [1;32m      2[0m coll
 
-File [0;32m~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/dhlab/text/dhlab_object.py:39[0m, in [0;36mDhlabObj.sort[0;34m(self, by, asc)[0m
+File [0;32m~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/dhlab/text/dhlab_object.py:39[0m, in [0;36mDhlabObj.sort[0;34m(self, by, asc)[0m
 [1;32m     37[0m [38;5;28;01mif[39;00m by [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
 [1;32m     38[0m     by [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mframe[38;5;241m.[39mcolumns[[38;5;241m0[39m]
 [0;32m---> 39[0m [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mfrom_df[49m[43m([49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mframe[49m[38;5;241;43m.[39;49m[43msort_values[49m[43m([49m[43mby[49m[38;5;241;43m=[39;49m[43mby[49m[43m,[49m[43m [49m[43mascending[49m[38;5;241;43m=[39;49m[43masc[49m[43m)[49m[43m)[49m
 
-File [0;32m~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/dhlab/text/conc_coll.py:141[0m, in [0;36mCollocations.from_df[0;34m(cls, df)[0m
+File [0;32m~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/dhlab/text/conc_coll.py:141[0m, in [0;36mCollocations.from_df[0;34m(cls, df)[0m
 [1;32m    135[0m [38;5;250m[39m[38;5;124;03m"""Typecast DataFrame to Collocation[39;00m
 [1;32m    136[0m 
 [1;32m    137[0m [38;5;124;03m:param df: DataFrame[39;00m
@@ -47,6 +42,5 @@ File [0;32m~/mambaforge/envs/jupyterbook/lib/python3.11/site-packages/dhlab/tex
 [1;32m    142[0m obj[38;5;241m.[39mframe [38;5;241m=[39m df
 [1;32m    143[0m [38;5;28;01mreturn[39;00m obj
 
-[0;31mAttributeError[0m: property 'counts' of 'Counts' object has no setter
-AttributeError: property 'counts' of 'Counts' object has no setter
+[0;31mAttributeError[0m: can't set attribute 'counts'
 
