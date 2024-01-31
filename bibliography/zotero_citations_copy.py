@@ -20,23 +20,29 @@ def generate_citations(library_id, library_type, api_key, output_path):
     """
 
     zot = zotero.Zotero(library_id, library_type, api_key)
-    items = zot.top(limit=50)
+    #items = zot.top(limit=50)
+    items = zot.collection_items('JWSHLR3R')
+    items = [item for item in items if item['data']['itemType'] not in ['note', 'attachment']]
+
     # Reverse sort by date
-    items = sorted(items, key=lambda d: (d["meta"]["parsedDate"].split('-')[0], d['data']['creators'][0]['lastName'] ), reverse=True)
+    # items = sorted(items, key=lambda d: (d["meta"]["parsedDate"].split('-')[0], d['data']['creators'][0]['lastName'] ), reverse=True)
     formatted_citations = []
     for item in items:
-
+        
         authors = ''
         if 'creators' in item['data']:
-            authors = '; '.join(['{}, {}'.format(author['lastName'], author['firstName']) for author in item['data']['creators'] if author['creatorType'] != "editor"])
+           authors = '; '.join(['{}, {}'.format(author['lastName'], author['firstName']) for author in item['data']['creators'] if author['creatorType'] != "editor"])
     
         date = item['meta']['parsedDate'].split('-')[0] if 'parsedDate' in item['meta'] else ''
 
         if 'url' in item['data'] and len(item['data']['url']) > 0:
             title = '[{}]({})'.format(item['data']['title'], item['data']['url'])
         else:
-            title = item['data']['title']
+            print(item['data'])
 
+            title = item['data']['title']
+            # continue
+            
         pub = ''
         if 'publicationTitle' in item['data']:
             pub = item['data']['publicationTitle']
