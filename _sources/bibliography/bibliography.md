@@ -3,17 +3,21 @@ layout: page
 title: Bibliografi
 ---
 
-# Bibliografi
+# DH-lab bibliografi
 *Sortert ny --> gammel*
 
 
 Johnsen, Lars 2023. [Å bruke språkteknologi til å undersøke medisinske ord](https://www.michaeljournal.no/article/2023/02/%C3%85%20bruke%20spr%C3%A5kteknologi%20til%20%C3%A5%20unders%C3%B8ke%20medisinske%20ord). Michael. 
+
+Bastiansen, Henrik G. 2023. Når fortiden blir digital: medier, kilder og historie i digitaliseringens tid. Universitetsforlaget. 
 
 Tonne, Ingebjørg; Uri, Helene; Johnsen, Lars 2022. [Om kjønn og adjektiv: «Trond er så eksepsjonell/nydelig/skjønn/grønn»](https://septentrio.uit.no/index.php/nordlyd/article/view/6386). Nordlyd. DOI: [10.7557/12.6386](https://doi.org/10.7557/12.6386)
 
 Kveim Lie, Anne Helene; Johnsen, Lars G.; Jordheim, Helge; Ytreberg, Espen 2022. [The Rise of Health: A Collocation Analysis of Conceptual Changes in News Discourse, 1950–2010](http://berghahnjournals.com/view/journals/contributions/17/2/choc170202.xml). Contributions to the History of Concepts. DOI: [10.3167/choc.2022.170202](https://doi.org/10.3167/choc.2022.170202)
 
 Birkenes, Magnus Breder; Johnsen, Lars G.; Kåsen, Andre 2022. [Om å bygge en leksikalsk ressurs for diakron skriftspråksvariasjon](https://tidsskrift.dk/lexn/article/view/134773). LexicoNordica. 
+
+Ørjasæter, Kristin; Johnsen, Lars 2021. [Kan vi måle graden av litterært mangfold?](https://barnebokinstituttet.no/mangfold/kan-vi-male-graden-av-litteraert-mangfold/). Norsk barnebokinstitutt. 
 
 Uri, Helene; Johnsen, Lars G. 2021. [Skjønnlitteraturen: en kroppsvisitasjon](https://barnebokinstituttet.no/aktuelt/skjonnlitteraturen-en-kroppsvisitasjon/). Norsk barnebokinstitutt. Tidligere publisert i Samtiden 3/2021. 
 

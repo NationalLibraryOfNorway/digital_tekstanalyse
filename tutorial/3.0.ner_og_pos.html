@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>1.10. NER og POS med Spacy &#8212; DH-lab dokumenter</title>
   
@@ -19,48 +18,53 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial/3.0.ner_og_pos';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -75,7 +79,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -110,11 +122,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -129,9 +144,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../README.html">
+  
   
   
   
@@ -141,12 +158,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="DH-lab dokumenter - Home"/>
+    <script>document.write(`<img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark" alt="DH-lab dokumenter - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -157,7 +185,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../bibliography/bibliography.html">Bibliografi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography/bibliography.html">DH-lab bibliografi</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Kodeeksempler–Python</span></p>
 <ul class="current nav bd-sidenav">
@@ -406,20 +434,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -457,11 +487,11 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <p><img alt="resources/images/dhlab-logo-nb.png" src="../_images/dhlab-logo-nb.png" /></p>
 <section class="tex2jax_ignore mathjax_ignore" id="ner-og-pos-med-spacy">
-<h1><span class="section-number">1.10. </span>NER og POS med Spacy<a class="headerlink" href="#ner-og-pos-med-spacy" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1.10. </span>NER og POS med Spacy<a class="headerlink" href="#ner-og-pos-med-spacy" title="Link to this heading">#</a></h1>
 <p>Hent ut navn og steder fra en tekst i Nasjonalbibliotekets samling med <code class="docutils literal notranslate"><span class="pre">NER</span></code>.</p>
 <p>Finn ordklasser med <code class="docutils literal notranslate"><span class="pre">POS</span></code>.</p>
 <div class="cell docutils container">
@@ -506,7 +536,7 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
 </div>
 </div>
 <section id="ner">
-<h2><span class="section-number">1.10.1. </span>NER<a class="headerlink" href="#ner" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.10.1. </span>NER<a class="headerlink" href="#ner" title="Link to this heading">#</a></h2>
 <p>NER (Named Entity Recognition) brukes for å finne navngitte entiteter, som personer, steder, osv. i teksten.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -547,34 +577,34 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
   </thead>
   <tbody>
     <tr>
-      <th>30</th>
+      <th>33</th>
       <td>Ask</td>
       <td>PER</td>
-      <td>814</td>
+      <td>786</td>
     </tr>
     <tr>
-      <th>127</th>
+      <th>140</th>
       <td>Daniel</td>
       <td>PER</td>
       <td>115</td>
     </tr>
     <tr>
-      <th>269</th>
+      <th>293</th>
       <td>Gud</td>
       <td>PER</td>
-      <td>82</td>
+      <td>83</td>
     </tr>
     <tr>
-      <th>1344</th>
+      <th>1383</th>
       <td>mann</td>
       <td>PER</td>
-      <td>82</td>
+      <td>83</td>
     </tr>
     <tr>
-      <th>1542</th>
-      <td>s</td>
-      <td>ORG</td>
-      <td>75</td>
+      <th>200</th>
+      <td>Embla</td>
+      <td>MISC</td>
+      <td>72</td>
     </tr>
     <tr>
       <th>...</th>
@@ -583,43 +613,43 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
       <td>...</td>
     </tr>
     <tr>
-      <th>767</th>
-      <td>Uganda</td>
-      <td>LOC</td>
+      <th>775</th>
+      <td>Tiger Rag</td>
+      <td>ORG</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>764</th>
-      <td>Tyskeren</td>
-      <td>MISC</td>
+      <th>774</th>
+      <td>Théatre</td>
+      <td>ORG</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>763</th>
-      <td>Tysk</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>762</th>
-      <td>Tusen</td>
+      <th>772</th>
+      <td>Thereses</td>
       <td>PER</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>1988</th>
-      <td>übestikkelighet</td>
+      <th>771</th>
+      <td>Therese Keller</td>
       <td>PER</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2016</th>
+      <td>’ t</td>
+      <td>MISC</td>
       <td>1</td>
     </tr>
   </tbody>
 </table>
-<p>1989 rows × 3 columns</p>
+<p>2017 rows × 3 columns</p>
 </div></div></div>
 </div>
 </section>
 <section id="pos-ordklassetagging">
-<h2><span class="section-number">1.10.2. </span>POS – Ordklassetagging<a class="headerlink" href="#pos-ordklassetagging" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.10.2. </span>POS – Ordklassetagging<a class="headerlink" href="#pos-ordklassetagging" title="Link to this heading">#</a></h2>
 <p>Finn ordklasser og dependens for en tekst med <code class="docutils literal notranslate"><span class="pre">POS</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -657,85 +687,49 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
       <th>lemma</th>
       <th>pos</th>
       <th>dep</th>
-      <th>head</th>
-      <th>head_lemma</th>
-      <th>head_pos</th>
-      <th>head_head</th>
-      <th>head_head_lemma</th>
-      <th>head_head_pos</th>
       <th>frekv</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>3647</th>
+      <th>33</th>
       <td>,</td>
       <td>,</td>
       <td>PUNCT</td>
       <td>punct</td>
-      <td>skamme</td>
-      <td>skamme</td>
-      <td>VERB</td>
-      <td>henne</td>
-      <td>henne</td>
-      <td>ADV</td>
-      <td>6</td>
+      <td>10889</td>
     </tr>
     <tr>
-      <th>5017</th>
-      <td>,</td>
-      <td>,</td>
-      <td>PUNCT</td>
-      <td>punct</td>
-      <td>lagt</td>
-      <td>lægge</td>
-      <td>VERB</td>
-      <td>lagt</td>
-      <td>lægge</td>
-      <td>VERB</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>106939</th>
-      <td>nu</td>
-      <td>nu</td>
-      <td>ADV</td>
-      <td>advmod</td>
-      <td>lukker</td>
-      <td>lukke</td>
-      <td>VERB</td>
-      <td>sier</td>
-      <td>sie</td>
-      <td>VERB</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>7131</th>
-      <td>,</td>
-      <td>,</td>
-      <td>PUNCT</td>
-      <td>punct</td>
-      <td>dekket</td>
-      <td>dekke</td>
-      <td>VERB</td>
-      <td>opp</td>
-      <td>opp</td>
-      <td>ADV</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>15776</th>
+      <th>38</th>
       <td>.</td>
       <td>.</td>
       <td>PUNCT</td>
       <td>punct</td>
-      <td>Ja</td>
-      <td>ja</td>
-      <td>INTJ</td>
-      <td>Ja</td>
-      <td>ja</td>
-      <td>INTJ</td>
-      <td>4</td>
+      <td>5039</td>
+    </tr>
+    <tr>
+      <th>22212</th>
+      <td>og</td>
+      <td>og</td>
+      <td>CCONJ</td>
+      <td>cc</td>
+      <td>4397</td>
+    </tr>
+    <tr>
+      <th>13416</th>
+      <td>han</td>
+      <td>han</td>
+      <td>PRON</td>
+      <td>nsubj</td>
+      <td>4238</td>
+    </tr>
+    <tr>
+      <th>15339</th>
+      <td>i</td>
+      <td>i</td>
+      <td>ADP</td>
+      <td>case</td>
+      <td>2998</td>
     </tr>
     <tr>
       <th>...</th>
@@ -744,86 +738,50 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
       <td>...</td>
       <td>...</td>
       <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
     </tr>
     <tr>
-      <th>52817</th>
-      <td>en</td>
-      <td>en</td>
-      <td>DET</td>
-      <td>det</td>
-      <td>idé</td>
-      <td>idé</td>
+      <th>13527</th>
+      <td>hat</td>
+      <td>hat</td>
       <td>NOUN</td>
-      <td>fikk</td>
-      <td>fikk</td>
-      <td>VERB</td>
+      <td>nsubj</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>52818</th>
-      <td>en</td>
-      <td>en</td>
-      <td>DET</td>
-      <td>det</td>
-      <td>altan</td>
-      <td>altan</td>
+      <th>13525</th>
+      <td>hat</td>
+      <td>hat</td>
       <td>NOUN</td>
-      <td>vendte</td>
-      <td>vende</td>
-      <td>VERB</td>
+      <td>flat</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>52819</th>
-      <td>en</td>
-      <td>en</td>
-      <td>DET</td>
-      <td>det</td>
-      <td>blomsterkasse</td>
-      <td>blomsterkasse</td>
+      <th>13524</th>
+      <td>hat</td>
+      <td>hat</td>
       <td>NOUN</td>
-      <td>jevngod</td>
-      <td>jevngod</td>
-      <td>NOUN</td>
+      <td>conj</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>52820</th>
-      <td>en</td>
-      <td>en</td>
-      <td>DET</td>
-      <td>det</td>
-      <td>blomsterpotte</td>
-      <td>blomsterpot</td>
-      <td>NOUN</td>
-      <td>vendte</td>
-      <td>vende</td>
-      <td>VERB</td>
+      <th>13523</th>
+      <td>hastigere</td>
+      <td>hastiger</td>
+      <td>ADV</td>
+      <td>advmod:lmod</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>156534</th>
+      <th>35175</th>
       <td>♦</td>
       <td>♦</td>
-      <td>ADJ</td>
+      <td>X</td>
       <td>ROOT</td>
-      <td>♦</td>
-      <td>♦</td>
-      <td>ADJ</td>
-      <td>♦</td>
-      <td>♦</td>
-      <td>ADJ</td>
       <td>1</td>
     </tr>
   </tbody>
 </table>
-<p>156535 rows × 11 columns</p>
+<p>35176 rows × 5 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -854,11 +812,10 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="2.6.sammenlign_metadata.html"
@@ -878,10 +835,7 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -889,6 +843,7 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -919,9 +874,10 @@ By Nasjonalbiblioteket
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -945,8 +901,8 @@ By Nasjonalbiblioteket
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
