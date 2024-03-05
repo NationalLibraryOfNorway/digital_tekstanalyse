@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -494,19 +494,7 @@ document.write(`
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="kn">import</span> <span class="nn">dhlab</span> <span class="k">as</span> <span class="nn">dh</span>
-<span class="kn">from</span> <span class="nn">code.sentiment</span> <span class="kn">import</span> <span class="n">load_corpus_from_file</span><span class="p">,</span> <span class="n">compute_sentiment_analysis</span><span class="p">,</span> <span class="n">add_urls</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">dhlab</span> <span class="k">as</span> <span class="nn">dh</span>
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">code.sentiment</span> <span class="kn">import</span> <span class="n">load_corpus_from_file</span><span class="p">,</span> <span class="n">compute_sentiment_analysis</span><span class="p">,</span> <span class="n">add_urls</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;code.sentiment&#39;; &#39;code&#39; is not a package
+<span class="kn">from</span> <span class="nn">digital_tekstanalyse.sentiment</span> <span class="kn">import</span> <span class="n">load_corpus_from_file</span><span class="p">,</span> <span class="n">compute_sentiment_analysis</span><span class="p">,</span> <span class="n">add_urls</span>
 </pre></div>
 </div>
 </div>
@@ -606,6 +594,209 @@ corpus består av 3441 utgivelser
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Beregn en sentimentscore til kontekstene der nøkkelordet forekommer.</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">compute_sentiment_analysis</span><span class="p">(</span><span class="n">corpus</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Beregn en sentimentscore til kontekstene der nøkkelordet forekommer.</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">result</span> <span class="o">=</span> <span class="n">compute_sentiment_analysis</span><span class="p">(</span><span class="n">corpus</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
+
+<span class="nn">File ~/projects/digital_tekstanalyse/digital_tekstanalyse/sentiment.py:260,</span> in <span class="ni">compute_sentiment_analysis</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">258</span> <span class="k">def</span> <span class="nf">compute_sentiment_analysis</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">259</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Compute sentiment score on the input data.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">260</span>     <span class="k">return</span> <span class="n">count_and_score_target_words</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~/projects/digital_tekstanalyse/digital_tekstanalyse/sentiment.py:243,</span> in <span class="ni">count_and_score_target_words</span><span class="nt">(corpus, word)</span>
+<span class="g g-Whitespace">    </span><span class="mi">237</span> <span class="n">word_freq</span> <span class="o">=</span> <span class="n">word_freq</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">238</span>     <span class="n">conc</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;inner&quot;</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="n">docid_column</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="n">docid_column</span>
+<span class="g g-Whitespace">    </span><span class="mi">239</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">241</span> <span class="n">pos</span><span class="p">,</span> <span class="n">neg</span> <span class="o">=</span> <span class="n">load_norsentlex</span><span class="p">()</span>
+<span class="ne">--&gt; </span><span class="mi">243</span> <span class="n">word_freq</span><span class="p">[[</span><span class="s2">&quot;positive&quot;</span><span class="p">,</span> <span class="s2">&quot;negative&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">word_freq</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">244</span>     <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">score_sentiment</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">conc</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">neg</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">result_type</span><span class="o">=</span><span class="s2">&quot;expand&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">245</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">246</span> <span class="n">word_freq</span><span class="p">[</span><span class="s2">&quot;sentimentscore&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">word_freq</span><span class="p">[</span><span class="s2">&quot;positive&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">word_freq</span><span class="p">[</span><span class="s2">&quot;negative&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">248</span> <span class="n">df</span> <span class="o">=</span> <span class="n">corpus</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">249</span>     <span class="n">word_freq</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;conc&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">250</span>     <span class="n">how</span><span class="o">=</span><span class="s2">&quot;inner&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">251</span>     <span class="n">left_on</span><span class="o">=</span><span class="n">docid_column</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">252</span>     <span class="n">right_on</span><span class="o">=</span><span class="n">docid_column</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">253</span> <span class="p">)</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/frame.py:10361,</span> in <span class="ni">DataFrame.apply</span><span class="nt">(self, func, axis, raw, result_type, args, by_row, engine, engine_kwargs, **kwargs)</span>
+<span class="g g-Whitespace">  </span><span class="mi">10347</span> <span class="kn">from</span> <span class="nn">pandas.core.apply</span> <span class="kn">import</span> <span class="n">frame_apply</span>
+<span class="g g-Whitespace">  </span><span class="mi">10349</span> <span class="n">op</span> <span class="o">=</span> <span class="n">frame_apply</span><span class="p">(</span>
+<span class="g g-Whitespace">  </span><span class="mi">10350</span>     <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">  </span><span class="mi">10351</span>     <span class="n">func</span><span class="o">=</span><span class="n">func</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">  </span><span class="mi">10359</span>     <span class="n">kwargs</span><span class="o">=</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">  </span><span class="mi">10360</span> <span class="p">)</span>
+<span class="ne">&gt; </span><span class="mi">10361</span> <span class="k">return</span> <span class="n">op</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span><span class="o">.</span><span class="n">__finalize__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;apply&quot;</span><span class="p">)</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/apply.py:916,</span> in <span class="ni">FrameApply.apply</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">913</span> <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">914</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_raw</span><span class="p">(</span><span class="n">engine</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">,</span> <span class="n">engine_kwargs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">engine_kwargs</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">916</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_standard</span><span class="p">()</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/apply.py:1063,</span> in <span class="ni">FrameApply.apply_standard</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1061</span> <span class="k">def</span> <span class="nf">apply_standard</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1062</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span> <span class="o">==</span> <span class="s2">&quot;python&quot;</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1063</span>         <span class="n">results</span><span class="p">,</span> <span class="n">res_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_series_generator</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1064</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1065</span>         <span class="n">results</span><span class="p">,</span> <span class="n">res_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_series_numba</span><span class="p">()</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/apply.py:1081,</span> in <span class="ni">FrameApply.apply_series_generator</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1078</span> <span class="k">with</span> <span class="n">option_context</span><span class="p">(</span><span class="s2">&quot;mode.chained_assignment&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1079</span>     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">series_gen</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1080</span>         <span class="c1"># ignore SettingWithCopy here in case the user mutates</span>
+<span class="ne">-&gt; </span><span class="mi">1081</span>         <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1082</span>         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">ABCSeries</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1083</span>             <span class="c1"># If we have a view on v, we need to make a copy because</span>
+<span class="g g-Whitespace">   </span><span class="mi">1084</span>             <span class="c1">#  series_generator will swap out the underlying data</span>
+<span class="g g-Whitespace">   </span><span class="mi">1085</span>             <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nn">File ~/projects/digital_tekstanalyse/digital_tekstanalyse/sentiment.py:244,</span> in <span class="ni">count_and_score_target_words.&lt;locals&gt;.&lt;lambda&gt;</span><span class="nt">(x)</span>
+<span class="g g-Whitespace">    </span><span class="mi">237</span> <span class="n">word_freq</span> <span class="o">=</span> <span class="n">word_freq</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">238</span>     <span class="n">conc</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;inner&quot;</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="n">docid_column</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="n">docid_column</span>
+<span class="g g-Whitespace">    </span><span class="mi">239</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">241</span> <span class="n">pos</span><span class="p">,</span> <span class="n">neg</span> <span class="o">=</span> <span class="n">load_norsentlex</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">243</span> <span class="n">word_freq</span><span class="p">[[</span><span class="s2">&quot;positive&quot;</span><span class="p">,</span> <span class="s2">&quot;negative&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">word_freq</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+<span class="ne">--&gt; </span><span class="mi">244</span>     <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">score_sentiment</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">conc</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">neg</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">result_type</span><span class="o">=</span><span class="s2">&quot;expand&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">245</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">246</span> <span class="n">word_freq</span><span class="p">[</span><span class="s2">&quot;sentimentscore&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">word_freq</span><span class="p">[</span><span class="s2">&quot;positive&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">word_freq</span><span class="p">[</span><span class="s2">&quot;negative&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">248</span> <span class="n">df</span> <span class="o">=</span> <span class="n">corpus</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">249</span>     <span class="n">word_freq</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;conc&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">250</span>     <span class="n">how</span><span class="o">=</span><span class="s2">&quot;inner&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">251</span>     <span class="n">left_on</span><span class="o">=</span><span class="n">docid_column</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">252</span>     <span class="n">right_on</span><span class="o">=</span><span class="n">docid_column</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">253</span> <span class="p">)</span>
+
+<span class="nn">File ~/projects/digital_tekstanalyse/digital_tekstanalyse/sentiment.py:217,</span> in <span class="ni">score_sentiment</span><span class="nt">(text, positive, negative)</span>
+<span class="g g-Whitespace">    </span><span class="mi">215</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Calculate a sentiment score for the ``text`` input.&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">216</span> <span class="n">context</span> <span class="o">=</span> <span class="n">count_tokens</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">217</span> <span class="n">sent_counts</span> <span class="o">=</span> <span class="p">[</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span>     <span class="n">count_matching_tokens</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">sent_terms</span><span class="p">)</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">context</span><span class="o">.</span><span class="n">empty</span>
+<span class="g g-Whitespace">    </span><span class="mi">220</span>     <span class="k">else</span> <span class="mi">0</span>
+<span class="nn">    221     for sent_terms</span> in <span class="nt">(positive, negative)</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span> <span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span> <span class="k">return</span> <span class="n">sent_counts</span>
+
+<span class="nn">File ~/projects/digital_tekstanalyse/digital_tekstanalyse/sentiment.py:218,</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
+<span class="g g-Whitespace">    </span><span class="mi">215</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Calculate a sentiment score for the ``text`` input.&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">216</span> <span class="n">context</span> <span class="o">=</span> <span class="n">count_tokens</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">217</span> <span class="n">sent_counts</span> <span class="o">=</span> <span class="p">[</span>
+<span class="ne">--&gt; </span><span class="mi">218</span>     <span class="n">count_matching_tokens</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">sent_terms</span><span class="p">)</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">context</span><span class="o">.</span><span class="n">empty</span>
+<span class="g g-Whitespace">    </span><span class="mi">220</span>     <span class="k">else</span> <span class="mi">0</span>
+<span class="nn">    221     for sent_terms</span> in <span class="nt">(positive, negative)</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span> <span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span> <span class="k">return</span> <span class="n">sent_counts</span>
+
+<span class="nn">File ~/projects/digital_tekstanalyse/digital_tekstanalyse/sentiment.py:144,</span> in <span class="ni">count_matching_tokens</span><span class="nt">(token_counts, terms)</span>
+<span class="g g-Whitespace">    </span><span class="mi">142</span> <span class="k">def</span> <span class="nf">count_matching_tokens</span><span class="p">(</span><span class="n">token_counts</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">terms</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">143</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Combine word counts with a series of terms.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">144</span>     <span class="n">target_terms</span> <span class="o">=</span> <span class="n">terms</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">token_counts</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;inner&quot;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;terms&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">145</span>     <span class="k">return</span> <span class="n">target_terms</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/frame.py:10744,</span> in <span class="ni">DataFrame.join</span><span class="nt">(self, other, on, how, lsuffix, rsuffix, sort, validate)</span>
+<span class="g g-Whitespace">  </span><span class="mi">10734</span>     <span class="k">if</span> <span class="n">how</span> <span class="o">==</span> <span class="s2">&quot;cross&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">  </span><span class="mi">10735</span>         <span class="k">return</span> <span class="n">merge</span><span class="p">(</span>
+<span class="g g-Whitespace">  </span><span class="mi">10736</span>             <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">  </span><span class="mi">10737</span>             <span class="n">other</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">  </span><span class="mi">10742</span>             <span class="n">validate</span><span class="o">=</span><span class="n">validate</span><span class="p">,</span>
+<span class="g g-Whitespace">  </span><span class="mi">10743</span>         <span class="p">)</span>
+<span class="ne">&gt; </span><span class="mi">10744</span>     <span class="k">return</span> <span class="n">merge</span><span class="p">(</span>
+<span class="g g-Whitespace">  </span><span class="mi">10745</span>         <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">  </span><span class="mi">10746</span>         <span class="n">other</span><span class="p">,</span>
+<span class="g g-Whitespace">  </span><span class="mi">10747</span>         <span class="n">left_on</span><span class="o">=</span><span class="n">on</span><span class="p">,</span>
+<span class="g g-Whitespace">  </span><span class="mi">10748</span>         <span class="n">how</span><span class="o">=</span><span class="n">how</span><span class="p">,</span>
+<span class="g g-Whitespace">  </span><span class="mi">10749</span>         <span class="n">left_index</span><span class="o">=</span><span class="n">on</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">  </span><span class="mi">10750</span>         <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="g g-Whitespace">  </span><span class="mi">10751</span>         <span class="n">suffixes</span><span class="o">=</span><span class="p">(</span><span class="n">lsuffix</span><span class="p">,</span> <span class="n">rsuffix</span><span class="p">),</span>
+<span class="g g-Whitespace">  </span><span class="mi">10752</span>         <span class="n">sort</span><span class="o">=</span><span class="n">sort</span><span class="p">,</span>
+<span class="g g-Whitespace">  </span><span class="mi">10753</span>         <span class="n">validate</span><span class="o">=</span><span class="n">validate</span><span class="p">,</span>
+<span class="g g-Whitespace">  </span><span class="mi">10754</span>     <span class="p">)</span>
+<span class="g g-Whitespace">  </span><span class="mi">10755</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">  </span><span class="mi">10756</span>     <span class="k">if</span> <span class="n">on</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/reshape/merge.py:184,</span> in <span class="ni">merge</span><span class="nt">(left, right, how, on, left_on, right_on, left_index, right_index, sort, suffixes, copy, indicator, validate)</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">170</span>     <span class="n">op</span> <span class="o">=</span> <span class="n">_MergeOperation</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">171</span>         <span class="n">left_df</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">172</span>         <span class="n">right_df</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">182</span>         <span class="n">validate</span><span class="o">=</span><span class="n">validate</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">183</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">184</span>     <span class="k">return</span> <span class="n">op</span><span class="o">.</span><span class="n">get_result</span><span class="p">(</span><span class="n">copy</span><span class="o">=</span><span class="n">copy</span><span class="p">)</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/reshape/merge.py:886,</span> in <span class="ni">_MergeOperation.get_result</span><span class="nt">(self, copy)</span>
+<span class="g g-Whitespace">    </span><span class="mi">883</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">indicator</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">884</span>     <span class="bp">self</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_indicator_pre_merge</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">886</span> <span class="n">join_index</span><span class="p">,</span> <span class="n">left_indexer</span><span class="p">,</span> <span class="n">right_indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_join_info</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">888</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reindex_and_concat</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">889</span>     <span class="n">join_index</span><span class="p">,</span> <span class="n">left_indexer</span><span class="p">,</span> <span class="n">right_indexer</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="n">copy</span>
+<span class="g g-Whitespace">    </span><span class="mi">890</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">891</span> <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">__finalize__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_merge_type</span><span class="p">)</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/reshape/merge.py:1151,</span> in <span class="ni">_MergeOperation._get_join_info</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1147</span>     <span class="n">join_index</span><span class="p">,</span> <span class="n">right_indexer</span><span class="p">,</span> <span class="n">left_indexer</span> <span class="o">=</span> <span class="n">_left_join_on_index</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1148</span>         <span class="n">right_ax</span><span class="p">,</span> <span class="n">left_ax</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">right_join_keys</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">sort</span>
+<span class="g g-Whitespace">   </span><span class="mi">1149</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1150</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1151</span>     <span class="p">(</span><span class="n">left_indexer</span><span class="p">,</span> <span class="n">right_indexer</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_join_indexers</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1153</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">right_index</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1154</span>         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">left</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/reshape/merge.py:1125,</span> in <span class="ni">_MergeOperation._get_join_indexers</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1123</span> <span class="c1"># make mypy happy</span>
+<span class="g g-Whitespace">   </span><span class="mi">1124</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">how</span> <span class="o">!=</span> <span class="s2">&quot;asof&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1125</span> <span class="k">return</span> <span class="n">get_join_indexers</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1126</span>     <span class="bp">self</span><span class="o">.</span><span class="n">left_join_keys</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">right_join_keys</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">sort</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">how</span>
+<span class="g g-Whitespace">   </span><span class="mi">1127</span> <span class="p">)</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/reshape/merge.py:1759,</span> in <span class="ni">get_join_indexers</span><span class="nt">(left_keys, right_keys, sort, how)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1757</span>     <span class="n">_</span><span class="p">,</span> <span class="n">lidx</span><span class="p">,</span> <span class="n">ridx</span> <span class="o">=</span> <span class="n">left</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="n">how</span><span class="p">,</span> <span class="n">return_indexers</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="n">sort</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1758</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1759</span>     <span class="n">lidx</span><span class="p">,</span> <span class="n">ridx</span> <span class="o">=</span> <span class="n">get_join_indexers_non_unique</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1760</span>         <span class="n">left</span><span class="o">.</span><span class="n">_values</span><span class="p">,</span> <span class="n">right</span><span class="o">.</span><span class="n">_values</span><span class="p">,</span> <span class="n">sort</span><span class="p">,</span> <span class="n">how</span>
+<span class="g g-Whitespace">   </span><span class="mi">1761</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1763</span> <span class="k">if</span> <span class="n">lidx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">is_range_indexer</span><span class="p">(</span><span class="n">lidx</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">)):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1764</span>     <span class="n">lidx</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/reshape/merge.py:1793,</span> in <span class="ni">get_join_indexers_non_unique</span><span class="nt">(left, right, sort, how)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1770</span> <span class="k">def</span> <span class="nf">get_join_indexers_non_unique</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1771</span>     <span class="n">left</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1772</span>     <span class="n">right</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1773</span>     <span class="n">sort</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1774</span>     <span class="n">how</span><span class="p">:</span> <span class="n">JoinHow</span> <span class="o">=</span> <span class="s2">&quot;inner&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1775</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">intp</span><span class="p">],</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">intp</span><span class="p">]]:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1776</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1777</span><span class="sd">     Get join indexers for left and right.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1778</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1791</span><span class="sd">         Indexer into right.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1792</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1793</span>     <span class="n">lkey</span><span class="p">,</span> <span class="n">rkey</span><span class="p">,</span> <span class="n">count</span> <span class="o">=</span> <span class="n">_factorize_keys</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="n">sort</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1794</span>     <span class="k">if</span> <span class="n">how</span> <span class="o">==</span> <span class="s2">&quot;left&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1795</span>         <span class="n">lidx</span><span class="p">,</span> <span class="n">ridx</span> <span class="o">=</span> <span class="n">libjoin</span><span class="o">.</span><span class="n">left_outer_join</span><span class="p">(</span><span class="n">lkey</span><span class="p">,</span> <span class="n">rkey</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="n">sort</span><span class="p">)</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/reshape/merge.py:2561,</span> in <span class="ni">_factorize_keys</span><span class="nt">(lk, rk, sort)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2554</span>     <span class="n">rlab</span> <span class="o">=</span> <span class="n">rizer</span><span class="o">.</span><span class="n">factorize</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2555</span>         <span class="n">rk</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">na_value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">lk</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">numpy_dtype</span><span class="p">),</span> <span class="n">mask</span><span class="o">=</span><span class="n">rk</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">2556</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2557</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2558</span>     <span class="c1"># Argument 1 to &quot;factorize&quot; of &quot;ObjectFactorizer&quot; has incompatible type</span>
+<span class="g g-Whitespace">   </span><span class="mi">2559</span>     <span class="c1"># &quot;Union[ndarray[Any, dtype[signedinteger[_64Bit]]],</span>
+<span class="g g-Whitespace">   </span><span class="mi">2560</span>     <span class="c1"># ndarray[Any, dtype[object_]]]&quot;; expected &quot;ndarray[Any, dtype[object_]]&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">2561</span>     <span class="n">llab</span> <span class="o">=</span> <span class="n">rizer</span><span class="o">.</span><span class="n">factorize</span><span class="p">(</span><span class="n">lk</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
+<span class="g g-Whitespace">   </span><span class="mi">2562</span>     <span class="n">rlab</span> <span class="o">=</span> <span class="n">rizer</span><span class="o">.</span><span class="n">factorize</span><span class="p">(</span><span class="n">rk</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
+<span class="g g-Whitespace">   </span><span class="mi">2563</span> <span class="k">assert</span> <span class="n">llab</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">intp</span><span class="p">),</span> <span class="n">llab</span><span class="o">.</span><span class="n">dtype</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
