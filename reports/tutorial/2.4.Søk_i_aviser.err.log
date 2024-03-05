@@ -5,7 +5,7 @@ Traceback (most recent call last):
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
   File "/home/larsm/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
     return loop.run_until_complete(inner)
-  File "/home/larsm/mambaforge/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
     return future.result()
   File "/home/larsm/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/nbclient/client.py", line 709, in async_execute
     await self.async_execute_cell(
@@ -15,18 +15,32 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import dhlab.nbtext as nb
-import dhlab as dh
-from dhlab import Corpus, totals, Collocations, NgramNews, Ngram
+coll = korpus.coll("langrenn").sort()
+coll
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[1], line 1[0m
-[0;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mdhlab[39;00m[38;5;21;01m.[39;00m[38;5;21;01mnbtext[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnb[39;00m
-[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mdhlab[39;00m [38;5;28;01mas[39;00m [38;5;21;01mdh[39;00m
-[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdhlab[39;00m [38;5;28;01mimport[39;00m Corpus, totals, Collocations, NgramNews, Ngram
+[0;31mAttributeError[0m                            Traceback (most recent call last)
+Cell [0;32mIn[5], line 1[0m
+[0;32m----> 1[0m coll [38;5;241m=[39m [43mkorpus[49m[38;5;241;43m.[39;49m[43mcoll[49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mlangrenn[39;49m[38;5;124;43m"[39;49m[43m)[49m[38;5;241;43m.[39;49m[43msort[49m[43m([49m[43m)[49m
+[1;32m      2[0m coll
 
-[0;31mModuleNotFoundError[0m: No module named 'dhlab'
+File [0;32m~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/dhlab/text/dhlab_object.py:64[0m, in [0;36mDhlabObj.sort[0;34m(self, by, asc)[0m
+[1;32m     62[0m [38;5;28;01mif[39;00m by [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[1;32m     63[0m     by [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mframe[38;5;241m.[39mcolumns[[38;5;241m0[39m]
+[0;32m---> 64[0m [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mfrom_df[49m[43m([49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mframe[49m[38;5;241;43m.[39;49m[43msort_values[49m[43m([49m[43mby[49m[38;5;241;43m=[39;49m[43mby[49m[43m,[49m[43m [49m[43mascending[49m[38;5;241;43m=[39;49m[43masc[49m[43m)[49m[43m)[49m
+
+File [0;32m~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/dhlab/text/conc_coll.py:155[0m, in [0;36mCollocations.from_df[0;34m(cls, df)[0m
+[1;32m    149[0m [38;5;250m[39m[38;5;124;03m"""Typecast DataFrame to Collocation[39;00m
+[1;32m    150[0m 
+[1;32m    151[0m [38;5;124;03m:param df: DataFrame[39;00m
+[1;32m    152[0m [38;5;124;03m:return: Collocation[39;00m
+[1;32m    153[0m [38;5;124;03m"""[39;00m
+[1;32m    154[0m obj [38;5;241m=[39m Counts()
+[0;32m--> 155[0m [43mobj[49m[38;5;241;43m.[39;49m[43mcounts[49m [38;5;241m=[39m df
+[1;32m    156[0m obj[38;5;241m.[39mframe [38;5;241m=[39m df
+[1;32m    157[0m [38;5;28;01mreturn[39;00m obj
+
+[0;31mAttributeError[0m: can't set attribute 'counts'
 

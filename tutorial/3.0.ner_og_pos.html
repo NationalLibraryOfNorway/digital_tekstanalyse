@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -53,18 +53,10 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial/3.0.ner_og_pos';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -513,6 +505,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1596419/3202258208.py:4: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  my_urn = urns[1]
+</pre></div>
+</div>
+</div>
 </div>
 <p>Oversikt over modeller:<br />
 Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige modeller finnes ved å bruke <code class="docutils literal notranslate"><span class="pre">Models</span></code>. Man kan lese mer om de enkelte modellene på <a class="reference external" href="https://spacy.io/">Spacys hjemmesider</a>.</p>
@@ -541,6 +539,12 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">NER</span><span class="p">(</span><span class="n">urn</span><span class="o">=</span><span class="n">my_urn</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">&quot;nb_core_news_sm&quot;</span><span class="p">,</span> <span class="n">start_page</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">to_page</span><span class="o">=</span><span class="mi">1000000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/larsm/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/dhlab/api/dhlab_api.py:59: FutureWarning: Passing literal json to &#39;read_json&#39; is deprecated and will be removed in a future version. To read from a literal string, wrap it in a &#39;StringIO&#39; object.
+  df = pd.read_json(r.json())
 </pre></div>
 </div>
 </div>
@@ -577,34 +581,34 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
   </thead>
   <tbody>
     <tr>
-      <th>33</th>
+      <th>31</th>
       <td>Ask</td>
       <td>PER</td>
-      <td>786</td>
+      <td>785</td>
     </tr>
     <tr>
-      <th>140</th>
+      <th>137</th>
       <td>Daniel</td>
       <td>PER</td>
       <td>115</td>
     </tr>
     <tr>
-      <th>293</th>
+      <th>300</th>
       <td>Gud</td>
       <td>PER</td>
       <td>83</td>
     </tr>
     <tr>
-      <th>1383</th>
+      <th>1388</th>
       <td>mann</td>
       <td>PER</td>
-      <td>83</td>
+      <td>82</td>
     </tr>
     <tr>
-      <th>200</th>
+      <th>203</th>
       <td>Embla</td>
       <td>MISC</td>
-      <td>72</td>
+      <td>70</td>
     </tr>
     <tr>
       <th>...</th>
@@ -613,38 +617,38 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
       <td>...</td>
     </tr>
     <tr>
-      <th>775</th>
-      <td>Tiger Rag</td>
+      <th>782</th>
+      <td>Totem und Tabu</td>
       <td>ORG</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>774</th>
-      <td>Théatre</td>
-      <td>ORG</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>772</th>
-      <td>Thereses</td>
+      <th>781</th>
+      <td>Tollbodskontorsjef Fiffolo ’ s</td>
       <td>PER</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>771</th>
-      <td>Therese Keller</td>
+      <th>779</th>
+      <td>Toast-masteren</td>
+      <td>MISC</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>778</th>
+      <td>Timen snile</td>
       <td>PER</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>2016</th>
+      <th>2030</th>
       <td>’ t</td>
       <td>MISC</td>
       <td>1</td>
     </tr>
   </tbody>
 </table>
-<p>2017 rows × 3 columns</p>
+<p>2031 rows × 3 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -654,6 +658,16 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">POS</span><span class="p">(</span><span class="n">urn</span><span class="o">=</span><span class="n">urns</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">model</span><span class="o">=</span><span class="n">l</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">to_page</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1596419/4208546902.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  res = POS(urn=urns[1], model=l.models[2], to_page=10000)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/larsm/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/dhlab/api/dhlab_api.py:73: FutureWarning: Passing literal json to &#39;read_json&#39; is deprecated and will be removed in a future version. To read from a literal string, wrap it in a &#39;StringIO&#39; object.
+  df = pd.read_json(r.json())
 </pre></div>
 </div>
 </div>
@@ -687,49 +701,85 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
       <th>lemma</th>
       <th>pos</th>
       <th>dep</th>
+      <th>head</th>
+      <th>head_lemma</th>
+      <th>head_pos</th>
+      <th>head_head</th>
+      <th>head_head_lemma</th>
+      <th>head_head_pos</th>
       <th>frekv</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>33</th>
+      <th>3543</th>
       <td>,</td>
       <td>,</td>
       <td>PUNCT</td>
       <td>punct</td>
-      <td>10889</td>
+      <td>skamme</td>
+      <td>skamme</td>
+      <td>VERB</td>
+      <td>henne</td>
+      <td>henne</td>
+      <td>ADV</td>
+      <td>5</td>
     </tr>
     <tr>
-      <th>38</th>
-      <td>.</td>
-      <td>.</td>
+      <th>4914</th>
+      <td>,</td>
+      <td>,</td>
       <td>PUNCT</td>
       <td>punct</td>
-      <td>5039</td>
+      <td>lagt</td>
+      <td>lægge</td>
+      <td>VERB</td>
+      <td>lagt</td>
+      <td>lægge</td>
+      <td>VERB</td>
+      <td>4</td>
     </tr>
     <tr>
-      <th>22212</th>
-      <td>og</td>
-      <td>og</td>
-      <td>CCONJ</td>
-      <td>cc</td>
-      <td>4397</td>
+      <th>4943</th>
+      <td>,</td>
+      <td>,</td>
+      <td>PUNCT</td>
+      <td>punct</td>
+      <td>kraftig</td>
+      <td>kraftig</td>
+      <td>ADJ</td>
+      <td>kraftig</td>
+      <td>kraftig</td>
+      <td>ADJ</td>
+      <td>4</td>
     </tr>
     <tr>
-      <th>13416</th>
-      <td>han</td>
-      <td>han</td>
-      <td>PRON</td>
-      <td>nsubj</td>
-      <td>4238</td>
+      <th>20215</th>
+      <td>?</td>
+      <td>?</td>
+      <td>PUNCT</td>
+      <td>punct</td>
+      <td>ondt</td>
+      <td>ondt</td>
+      <td>ADV</td>
+      <td>ondt</td>
+      <td>ondt</td>
+      <td>ADV</td>
+      <td>4</td>
     </tr>
     <tr>
-      <th>15339</th>
-      <td>i</td>
-      <td>i</td>
-      <td>ADP</td>
-      <td>case</td>
-      <td>2998</td>
+      <th>106721</th>
+      <td>nu</td>
+      <td>nu</td>
+      <td>ADV</td>
+      <td>advmod</td>
+      <td>lukker</td>
+      <td>lukke</td>
+      <td>VERB</td>
+      <td>sier</td>
+      <td>sie</td>
+      <td>VERB</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>...</th>
@@ -738,50 +788,86 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>13527</th>
-      <td>hat</td>
-      <td>hat</td>
+      <th>52759</th>
+      <td>en</td>
+      <td>en</td>
+      <td>DET</td>
+      <td>det</td>
+      <td>lamaprest</td>
+      <td>lamaprest</td>
+      <td>ADJ</td>
+      <td>hemmelighetsfullt</td>
+      <td>hemmelighetsfullt</td>
       <td>NOUN</td>
-      <td>nsubj</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>13525</th>
-      <td>hat</td>
-      <td>hat</td>
+      <th>52760</th>
+      <td>en</td>
+      <td>en</td>
+      <td>DET</td>
+      <td>det</td>
+      <td>mann</td>
+      <td>mann</td>
       <td>NOUN</td>
-      <td>flat</td>
+      <td>lar</td>
+      <td>lar</td>
+      <td>VERB</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>13524</th>
-      <td>hat</td>
-      <td>hat</td>
+      <th>52761</th>
+      <td>en</td>
+      <td>en</td>
+      <td>DET</td>
+      <td>det</td>
+      <td>visdom</td>
+      <td>visdom</td>
       <td>NOUN</td>
-      <td>conj</td>
+      <td>utstråler</td>
+      <td>utstråler</td>
+      <td>VERB</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>13523</th>
-      <td>hastigere</td>
-      <td>hastiger</td>
-      <td>ADV</td>
-      <td>advmod:lmod</td>
+      <th>52762</th>
+      <td>en</td>
+      <td>en</td>
+      <td>DET</td>
+      <td>det</td>
+      <td>kunnskap</td>
+      <td>kunnskap</td>
+      <td>NOUN</td>
+      <td>visdom</td>
+      <td>visdom</td>
+      <td>NOUN</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>35175</th>
+      <th>156517</th>
       <td>♦</td>
       <td>♦</td>
       <td>X</td>
-      <td>ROOT</td>
+      <td>nsubj</td>
+      <td>blir</td>
+      <td>bli</td>
+      <td>VERB</td>
+      <td>blir</td>
+      <td>bli</td>
+      <td>VERB</td>
       <td>1</td>
     </tr>
   </tbody>
 </table>
-<p>35176 rows × 5 columns</p>
+<p>156518 rows × 11 columns</p>
 </div></div></div>
 </div>
 </section>

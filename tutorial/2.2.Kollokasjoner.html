@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -53,18 +53,10 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial/2.2.Kollokasjoner';</script>
@@ -518,18 +510,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">dhlab</span> <span class="k">as</span> <span class="nn">dh</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">dhlab.api.dhlab_api</span> <span class="kn">import</span> <span class="n">totals</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">dhlab.nbtext</span> <span class="k">as</span> <span class="nn">nb</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;dhlab&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="kollokasjoner">
 <h1><span class="section-number">1.5. </span>Kollokasjoner<a class="headerlink" href="#kollokasjoner" title="Link to this heading">#</a></h1>
@@ -598,20 +578,20 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>100398921</td>
-      <td>URN:NBN:no-nb_digibok_2020032648114</td>
-      <td>Whiskeyvandringer : Irland, Wales, England</td>
-      <td>Lunne , Tom / Aarseth , Ivar.</td>
-      <td>oai:nb.bibsys.no:991500048504702202</td>
-      <td>df633990f4e2191f6640da576d17411c</td>
+      <td>100368108</td>
+      <td>URN:NBN:no-nb_digibok_2018032348018</td>
+      <td>Ølboka : en guide til øl i Skandinavia</td>
+      <td>Kvig , Jørn Idar Almås / Glomsrød , Jannicke S...</td>
+      <td>oai:nb.bibsys.no:991427303864702202</td>
+      <td>d96494039ffb6a8e313aa5f33d593823</td>
       <td></td>
       <td></td>
       <td>20140101</td>
       <td>2014</td>
-      <td>Kolofon</td>
+      <td>Front</td>
       <td>nob</td>
-      <td></td>
-      <td>641.25 / 641.25</td>
+      <td>Øl / norge / bryggerier</td>
+      <td>641.23 / 641.23 / 641.230948 / 641.23</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -620,22 +600,22 @@ document.write(`
     </tr>
     <tr>
       <th>1</th>
-      <td>100398213</td>
-      <td>URN:NBN:no-nb_digibok_2020011007022</td>
-      <td>Whiskyboka : en guide til whisky</td>
-      <td>Eklund , Lars Helge / Steffensen , Arnt / Dahl...</td>
-      <td>oai:nb.bibsys.no:991516513294702202</td>
-      <td>f712625782a7cafc9d27ac45cc9f9bd1</td>
+      <td>100418445</td>
+      <td>URN:NBN:no-nb_digibok_2020091507605</td>
+      <td>Ølbrygging fra hånd til munn</td>
+      <td>Horne , Thomas / Eick , Colin / Platou , Eivin...</td>
+      <td>oai:nb.bibsys.no:991321020564702202</td>
+      <td>8ac4b08ce32959794f2a030bd207100d</td>
       <td></td>
-      <td>[Oslo]</td>
-      <td>20150101</td>
-      <td>2015</td>
-      <td>Front</td>
+      <td></td>
+      <td>20130101</td>
+      <td>2013</td>
+      <td>Kagge</td>
       <td>nob</td>
-      <td>Brennevin / Whisky</td>
-      <td>641.25 / 641.25</td>
-      <td>novel</td>
-      <td>Skjønnlitteratur</td>
+      <td>Ølbrygging / ølbrygging / øltyper / øl / mat /...</td>
+      <td>641.873 / 641.23 / 641.23 / 663.42</td>
+      <td></td>
+      <td>Faglitteratur</td>
       <td>digibok</td>
       <td>nb</td>
       <td>20060101</td>
@@ -674,54 +654,54 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_3d01c">
+<table id="T_49792">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_3d01c_level0_col0" class="col_heading level0 col0" >link</th>
-      <th id="T_3d01c_level0_col1" class="col_heading level0 col1" >concordance</th>
+      <th id="T_49792_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_49792_level0_col1" class="col_heading level0 col1" >concordance</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_3d01c_level0_row0" class="row_heading level0 row0" >3</th>
-      <td id="T_3d01c_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018042548149'>URN:NBN:no-nb_digibok_2018042548149</a></td>
-      <td id="T_3d01c_row0_col1" class="data row0 col1" >... men O HVIT FISK , nesten alt går . <b>Sei</b> , hyse , kolje , kveite , hva som helst... </td>
+      <th id="T_49792_level0_row0" class="row_heading level0 row0" >2</th>
+      <td id="T_49792_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
+      <td id="T_49792_row0_col1" class="data row0 col1" >vin til melstekt <b>sei</b></td>
     </tr>
     <tr>
-      <th id="T_3d01c_level0_row1" class="row_heading level0 row1" >5</th>
-      <td id="T_3d01c_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
-      <td id="T_3d01c_row1_col1" class="data row1 col1" >Sjå Løksli de ligg no so fint fram mæ li , no <b>sei</b> dei at Knut vil te Mæland å... </td>
+      <th id="T_49792_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_49792_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
+      <td id="T_49792_row1_col1" class="data row1 col1" >... den enkelte råvare og tilberedningsmetoden det handler om . <b>Sei</b> har en litt tyngre smak , ser litt gråere ut... </td>
     </tr>
     <tr>
-      <th id="T_3d01c_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_3d01c_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
-      <td id="T_3d01c_row2_col1" class="data row2 col1" >... den enkelte råvare og tilberedningsmetoden det handler om . <b>Sei</b> har en litt tyngre smak , ser litt gråere ut... </td>
+      <th id="T_49792_level0_row2" class="row_heading level0 row2" >3</th>
+      <td id="T_49792_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020120907530'>URN:NBN:no-nb_digibok_2020120907530</a></td>
+      <td id="T_49792_row2_col1" class="data row2 col1" >Bedales of Borough Market 5 Bedale St , London <b>SEI</b> 9 AL</td>
     </tr>
     <tr>
-      <th id="T_3d01c_level0_row3" class="row_heading level0 row3" >1</th>
-      <td id="T_3d01c_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
-      <td id="T_3d01c_row3_col1" class="data row3 col1" >Det er ikke uten grunn at melstekt <b>sei</b> går under betegnelsen seibiff . For seiv om seien er en hvit... </td>
+      <th id="T_49792_level0_row3" class="row_heading level0 row3" >0</th>
+      <td id="T_49792_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
+      <td id="T_49792_row3_col1" class="data row3 col1" >Sjå Løksli de ligg no so fint fram mæ li , no <b>sei</b> dei at Knut vil te Mæland å... </td>
     </tr>
     <tr>
-      <th id="T_3d01c_level0_row4" class="row_heading level0 row4" >0</th>
-      <td id="T_3d01c_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
-      <td id="T_3d01c_row4_col1" class="data row4 col1" >vin til melstekt <b>sei</b></td>
+      <th id="T_49792_level0_row4" class="row_heading level0 row4" >5</th>
+      <td id="T_49792_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
+      <td id="T_49792_row4_col1" class="data row4 col1" >Det er ikke uten grunn at melstekt <b>sei</b> går under betegnelsen seibiff . For seiv om seien er en hvit... </td>
     </tr>
     <tr>
-      <th id="T_3d01c_level0_row5" class="row_heading level0 row5" >7</th>
-      <td id="T_3d01c_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020120907530'>URN:NBN:no-nb_digibok_2020120907530</a></td>
-      <td id="T_3d01c_row5_col1" class="data row5 col1" >Bedales of Borough Market 5 Bedale St , London <b>SEI</b> 9 AL</td>
+      <th id="T_49792_level0_row5" class="row_heading level0 row5" >4</th>
+      <td id="T_49792_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018042548149'>URN:NBN:no-nb_digibok_2018042548149</a></td>
+      <td id="T_49792_row5_col1" class="data row5 col1" >... men O HVIT FISK , nesten alt går . <b>Sei</b> , hyse , kolje , kveite , hva som helst... </td>
     </tr>
     <tr>
-      <th id="T_3d01c_level0_row6" class="row_heading level0 row6" >6</th>
-      <td id="T_3d01c_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
-      <td id="T_3d01c_row6_col1" class="data row6 col1" >... Ved Bull Run gik de reint gæli . " " Men <b>sei</b> me no du Jørn , håfør ha med denna krigen... </td>
+      <th id="T_49792_level0_row6" class="row_heading level0 row6" >7</th>
+      <td id="T_49792_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
+      <td id="T_49792_row6_col1" class="data row6 col1" >... Ved Bull Run gik de reint gæli . " " Men <b>sei</b> me no du Jørn , håfør ha med denna krigen... </td>
     </tr>
     <tr>
-      <th id="T_3d01c_level0_row7" class="row_heading level0 row7" >4</th>
-      <td id="T_3d01c_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
-      <td id="T_3d01c_row7_col1" class="data row7 col1" >... Så skulle ølet " skakast ned " , det vil <b>sei</b> fyllast over på tunna . Då smaka dei gjerne på ølet... </td>
+      <th id="T_49792_level0_row7" class="row_heading level0 row7" >6</th>
+      <td id="T_49792_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
+      <td id="T_49792_row7_col1" class="data row7 col1" >... Så skulle ølet " skakast ned " , det vil <b>sei</b> fyllast over på tunna . Då smaka dei gjerne på ølet... </td>
     </tr>
   </tbody>
 </table>
@@ -1097,23 +1077,23 @@ document.write(`
       <td>...</td>
     </tr>
     <tr>
-      <th>amerikanerne</th>
+      <th>347</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>kalt</th>
+      <th>36</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>kalles</th>
+      <th>4.2</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>kaldt</th>
+      <th>40</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>Kunstnervin</th>
+      <th>vår</th>
       <td>1</td>
     </tr>
   </tbody>
@@ -1182,23 +1162,23 @@ document.write(`
       <td>...</td>
     </tr>
     <tr>
-      <th>amerikanerne</th>
+      <th>347</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>kalt</th>
+      <th>36</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>kalles</th>
+      <th>4.2</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>kaldt</th>
+      <th>40</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>Kunstnervin</th>
+      <th>vår</th>
       <td>1</td>
     </tr>
   </tbody>
@@ -1575,23 +1555,23 @@ document.write(`
       <td>...</td>
     </tr>
     <tr>
-      <th>www.bourgeois-</th>
+      <th>wmfmm</th>
       <td>4.726693e-07</td>
     </tr>
     <tr>
-      <th>www.bollinger</th>
+      <th>wå</th>
       <td>4.726693e-07</td>
     </tr>
     <tr>
-      <th>www.boerl-</th>
+      <th>zombier</th>
       <td>4.726693e-07</td>
     </tr>
     <tr>
-      <th>www.besseratdebellefon</th>
+      <th>vinvanskelig</th>
       <td>4.726693e-07</td>
     </tr>
     <tr>
-      <th>nura</th>
+      <th>visesanger</th>
       <td>4.726693e-07</td>
     </tr>
   </tbody>
@@ -1734,7 +1714,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ac3461052d9ab8c48e3317fcd7981067d5902ddbafb823f9f5dad8718bc1eb36.png" src="../_images/ac3461052d9ab8c48e3317fcd7981067d5902ddbafb823f9f5dad8718bc1eb36.png" />
+<img alt="../_images/2c05a2e3b498cbba4b3517bdc2d85315053dfd1439a5b3c63af4012ce63660cc.png" src="../_images/2c05a2e3b498cbba4b3517bdc2d85315053dfd1439a5b3c63af4012ce63660cc.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1746,7 +1726,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/40eb0edb7a085a858351b731990133ef366e5697f07f673ef8978c82a0da2060.png" src="../_images/40eb0edb7a085a858351b731990133ef366e5697f07f673ef8978c82a0da2060.png" />
+<img alt="../_images/40515f0060e84be57b57f5861df697d347e14264d001efdded5127d2e4130c64.png" src="../_images/40515f0060e84be57b57f5861df697d347e14264d001efdded5127d2e4130c64.png" />
 </div>
 </div>
 </section>

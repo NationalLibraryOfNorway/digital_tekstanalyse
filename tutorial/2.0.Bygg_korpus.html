@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -53,18 +53,10 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial/2.0.Bygg_korpus';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -515,18 +507,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Importer bibliotekene</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">dhlab</span> <span class="k">as</span> <span class="nn">dh</span> <span class="c1"># dhlab inneholder Corpus og andre nyttige funksjoner</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">dhlab.nbtext</span> <span class="k">as</span> <span class="nn">nb</span> <span class="c1"># Tekstverktøy</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;dhlab&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <p>Her viser vi ulike måter man kan bygge korpus fra NBs samling. Et korpus kan enten være et utvalg bøker, eller et utvalg aviser. Avgrensningen kan være metadata eller innhold i selve teksten.</p>
 <p>Den lettetste måten å definere et korpus er å bruke søk i metadata. <code class="docutils literal notranslate"><span class="pre">Corpus</span></code> har flere parametre som kan brukes til å avgrense korpuset.</p>
@@ -658,21 +638,21 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>100130215</td>
-      <td>URN:NBN:no-nb_digibok_2009051404036</td>
-      <td>Et dikt til mormor</td>
-      <td>Hjorth , Vigdis</td>
-      <td>oai:nb.bibsys.no:999010191434702202</td>
-      <td>5b562b27337f1b10334c57facd18056c</td>
-      <td>8202128862</td>
-      <td>[Oslo]</td>
-      <td>19900101</td>
-      <td>1990</td>
-      <td>Cappelen</td>
-      <td>nob</td>
-      <td>skjønnlitteratur/voksen / barnebok / ungdom / ...</td>
-      <td>839.823</td>
-      <td>fiction</td>
+      <td>100400877</td>
+      <td>URN:NBN:no-nb_digibok_2020042748027</td>
+      <td>Noveller i utvalg</td>
+      <td>Ditlevsen , Tove / Hjorth , Vigdis / Lyng , Hilde</td>
+      <td>oai:nb.bibsys.no:999919909102402202</td>
+      <td>f8b507990057396a678159a8b2805d20</td>
+      <td></td>
+      <td>Oslo</td>
+      <td>20180101</td>
+      <td>2018</td>
+      <td>Oktober</td>
+      <td>nob / dan</td>
+      <td>norsk skjønnlitteratur</td>
+      <td>839.81374</td>
+      <td>short story / text</td>
       <td>Skjønnlitteratur</td>
       <td>digibok</td>
       <td>nb</td>
@@ -680,43 +660,43 @@ document.write(`
     </tr>
     <tr>
       <th>1</th>
-      <td>100141720</td>
-      <td>URN:NBN:no-nb_digibok_2013040906028</td>
-      <td>Takk, ganske bra : en norsk roman i tre deler</td>
-      <td>Hjorth , Vigdis</td>
-      <td>oai:nb.bibsys.no:990925817304702202</td>
-      <td>7f00bdfee0f5254b9d2e1a1b40a25889</td>
+      <td>100383540</td>
+      <td>URN:NBN:no-nb_digibok_2018062807005</td>
+      <td>Hvordan bli gammel når du har vokst opp med Ro...</td>
+      <td>Harboe , Ingrid Samuelsen / Hjorth , Vigdis</td>
+      <td>oai:nb.bibsys.no:990935234754702202</td>
+      <td>d01b1820a529f82d9f087f4b761b92a7</td>
       <td></td>
-      <td>[Oslo]</td>
+      <td></td>
       <td>20090101</td>
       <td>2009</td>
-      <td>Cappelen Damm</td>
-      <td>nob</td>
-      <td></td>
-      <td>839.823</td>
-      <td>novel</td>
-      <td>Skjønnlitteratur</td>
+      <td>Dinamo forl.</td>
+      <td>mul / nob / nno</td>
+      <td>Aldring / Beat-bevegelsen / Sekstiåttere / ald...</td>
+      <td>305.24</td>
+      <td>biography</td>
+      <td>Faglitteratur</td>
       <td>digibok</td>
       <td>nb</td>
       <td>20060101</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>100403751</td>
-      <td>URN:NBN:no-nb_digibok_2020050848559</td>
-      <td>Ubehaget i kulturen</td>
-      <td>Hjorth , Vigdis / Linneberg , Arild</td>
-      <td>oai:nb.bibsys.no:999919961100402202</td>
-      <td>d7756cabad7c041cce220672a99e0f03</td>
+      <td>100179053</td>
+      <td>URN:NBN:no-nb_digibok_2013112706033</td>
+      <td>Om bare : roman</td>
+      <td>Hjorth , Vigdis</td>
+      <td>oai:nb.bibsys.no:991007318214702202</td>
+      <td>a83d3eaf3188a3fd46c172c2e5745bf6</td>
       <td></td>
-      <td></td>
-      <td>20180101</td>
-      <td>2018</td>
+      <td>[Oslo]</td>
+      <td>20100101</td>
+      <td>2010</td>
       <td>Cappelen Damm</td>
       <td>nob</td>
-      <td>Kunstnermiljøer / Kunstnarmiljø</td>
-      <td>839.8238</td>
-      <td>novel / text</td>
+      <td></td>
+      <td>839.823</td>
+      <td>novel</td>
       <td>Skjønnlitteratur</td>
       <td>digibok</td>
       <td>nb</td>
@@ -779,20 +759,20 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>100472259</td>
-      <td>URN:NBN:no-nb_digibok_2010032307024</td>
-      <td>Mandal bys historie. B. 1-2 B. 1 : Den førindu...</td>
-      <td>Eliassen , Finn-Einar</td>
-      <td>oai:nb.bibsys.no:999600462324702202</td>
-      <td>28bf58d467b6ccc3f178c9108d3cbacf</td>
-      <td>8299025613</td>
+      <td>100521428</td>
+      <td>URN:NBN:no-nb_digibok_2007052400022</td>
+      <td>Villmarksliv : med Per fra Lappoluobbal</td>
+      <td>Tufte , Thorbjørn / Gaino , Per Larsen</td>
+      <td>oai:nb.bibsys.no:999605318154702202</td>
+      <td>e0542cdae48dc1ca877e923432fa13f5</td>
+      <td>8250400283</td>
       <td></td>
-      <td>19950101</td>
-      <td>1995</td>
-      <td>Mandal kommune</td>
+      <td>19730101</td>
+      <td>1973</td>
+      <td>Grøndahl</td>
       <td>nob</td>
-      <td>Norge / Byhistorie / Historie / Lokalhistorie ...</td>
-      <td>948.3222 / 948.3222</td>
+      <td>Fiske / Jakt / Samer / samer</td>
+      <td>914.846 / 914.846 / 799</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -801,6 +781,28 @@ document.write(`
     </tr>
     <tr>
       <th>1</th>
+      <td>100262296</td>
+      <td>URN:NBN:no-nb_digibok_2014121107526</td>
+      <td>To kulturer : en sammenlignende undersøkelse a...</td>
+      <td>Vea , Jan</td>
+      <td>oai:nb.bibsys.no:990937812104702202</td>
+      <td>07c6b1a32a57eb29f9b34429ff7a3204</td>
+      <td></td>
+      <td></td>
+      <td>20090101</td>
+      <td>2009</td>
+      <td>Høyskoleforl.</td>
+      <td>nob</td>
+      <td>Historie / Norge / Kystkultur / Fiske / Fisker...</td>
+      <td>948.33 / 948.103</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>100145058</td>
       <td>URN:NBN:no-nb_digibok_2013040807102</td>
       <td>Rovdrift : en russisk trålerskipper beretter</td>
@@ -815,28 +817,6 @@ document.write(`
       <td>nob</td>
       <td>Fiskerier / Fiskerier / fiskeri / sovjet / fis...</td>
       <td>639.2 / 920</td>
-      <td></td>
-      <td>Faglitteratur</td>
-      <td>digibok</td>
-      <td>nb</td>
-      <td>20060101</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>100281890</td>
-      <td>URN:NBN:no-nb_digibok_2009080504024</td>
-      <td>Jernaldernaust på Vestvågøy i Lofoten</td>
-      <td>Nilsen , Gørill</td>
-      <td>oai:nb.bibsys.no:999804227954702202</td>
-      <td>70720140157808e4d566b8009cba9813</td>
-      <td></td>
-      <td></td>
-      <td>19980101</td>
-      <td>1998</td>
-      <td>Institutt for arkeologi, Det samfunnsvitenskap...</td>
-      <td>nob</td>
-      <td>Naust / Jernalder / Funn / Båter / Fiske / nor...</td>
-      <td>948.4454 / 725.34</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -896,60 +876,60 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>55</th>
-      <td>100048977</td>
-      <td>URN:NBN:no-nb_digibok_2007081601089</td>
-      <td>Russland er et annet sted : en kulturhistorisk...</td>
-      <td>Waage , Peter Normann</td>
-      <td>oai:nb.bibsys.no:999008744064702202</td>
-      <td>2a460127096ec268eca6b0e35868299e</td>
-      <td>8258807080 / 8273502252</td>
-      <td></td>
-      <td>19900101</td>
-      <td>1990</td>
-      <td>Aventura</td>
+      <th>91</th>
+      <td>100496606</td>
+      <td>URN:NBN:no-nb_digibok_2015031948004</td>
+      <td>Eidskog bygdebok. B. 4 : Gnr. 53-60</td>
+      <td>Engen , Jorunn Ingrid</td>
+      <td>oai:nb.bibsys.no:999601760124702202</td>
+      <td>5476cc56a1e8139cef6452cad99415c6</td>
+      <td>8299167736 / 8299167701</td>
+      <td>Skotterud</td>
+      <td>19950101</td>
+      <td>1995</td>
+      <td>Eidskog kommune</td>
       <td>nob</td>
-      <td>History / Culture / Communism / Politics / geo...</td>
-      <td>947</td>
+      <td>Bygdebøker / Norge / Historisk framstilling / ...</td>
+      <td>948.2422 / 948.2422</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
     </tr>
     <tr>
-      <th>30</th>
-      <td>100460918</td>
-      <td>URN:NBN:no-nb_digibok_2010021700090</td>
-      <td>Kartlegging av hindringer for å oppnå en mer b...</td>
-      <td>Aall , Carlo / Lafferty , William M. / Bjørnæs...</td>
-      <td>oai:nb.bibsys.no:990108141754702202</td>
-      <td>607c1280b4fd9cd914b540a1b3b6deec</td>
-      <td>8242801584</td>
-      <td>Sogndal</td>
-      <td>19980101</td>
-      <td>1998</td>
-      <td>Vestlandsforsking</td>
+      <th>6</th>
+      <td>100097622</td>
+      <td>URN:NBN:no-nb_digibok_2007112304038</td>
+      <td>Ledelse og ledere i sykehus : administrasjon a...</td>
+      <td>Holter , Elisabeth / Jansen , Anne Kari.</td>
+      <td>oai:nb.bibsys.no:991436134724702202</td>
+      <td>b7d19c7369655105461d2063ba8104cf</td>
+      <td>8251825903</td>
+      <td>[Oslo]</td>
+      <td>19900101</td>
+      <td>1990</td>
+      <td>TANO</td>
       <td>nob</td>
+      <td>organisasjonsteori / sykepleieledelse / sykehu...</td>
+      <td>362.11068</td>
       <td></td>
-      <td></td>
-      <td></td>
-      <td>Uklassifisert</td>
+      <td>Faglitteratur</td>
       <td>digibok</td>
     </tr>
     <tr>
-      <th>69</th>
-      <td>100552130</td>
-      <td>URN:NBN:no-nb_digibok_2011080908071</td>
-      <td>Metafysikk og materialisme : en innføring</td>
-      <td>Hiorth , Finngeir</td>
-      <td>oai:nb.bibsys.no:999703405674702202</td>
-      <td>90ac3f3c086c2c8c3d539a0f75fb099b</td>
-      <td>8299323924</td>
+      <th>27</th>
+      <td>100360722</td>
+      <td>URN:NBN:no-nb_digibok_2017112748055</td>
+      <td>Årets næringsliv i tekst og bilder : Dagens Næ...</td>
+      <td></td>
+      <td>oai:nb.bibsys.no:999316094534702202</td>
+      <td>20db02b7a824e7f5e4095d6dfafc17de</td>
+      <td>8273460649</td>
       <td>[Oslo]</td>
-      <td>19970101</td>
-      <td>1997</td>
-      <td>Philosophia forlag</td>
+      <td>19910101</td>
+      <td>1991</td>
+      <td>Dagens Næringsliv</td>
       <td>nob</td>
-      <td>Metafysikk / Materialisme</td>
+      <td></td>
       <td></td>
       <td></td>
       <td>Uklassifisert</td>
@@ -1008,63 +988,63 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>74</th>
-      <td>100355201</td>
-      <td>URN:NBN:no-nb_digibok_2017111748033</td>
-      <td>Det begynte en dag i slåtten i veirenna : Eids...</td>
+      <th>62</th>
+      <td>100086388</td>
+      <td>URN:NBN:no-nb_digibok_2012033008042</td>
+      <td>Ungdom og fritid : en undersøkelse av fritidsa...</td>
+      <td>Hauge , Ragnar</td>
+      <td>oai:nb.bibsys.no:998121300734702202</td>
+      <td>93d19d3cd4768204981f7f25db22b53a</td>
       <td></td>
-      <td>oai:nb.bibsys.no:998521398024702202</td>
-      <td>149fbdc786364b4e56c1f654cd1867c5</td>
+      <td>Oslo</td>
+      <td>19730101</td>
+      <td>1973</td>
       <td></td>
-      <td></td>
-      <td>19790101</td>
-      <td>1979</td>
-      <td>Idrettslaget</td>
       <td>nob</td>
+      <td>Adolescent / Leisure Activities / Sociology / ...</td>
       <td></td>
-      <td>796</td>
-      <td>festschrift</td>
-      <td>Faglitteratur</td>
+      <td></td>
+      <td>Uklassifisert</td>
       <td>digibok</td>
     </tr>
     <tr>
-      <th>72</th>
-      <td>100347417</td>
-      <td>URN:NBN:no-nb_digibok_2017092648188</td>
-      <td>Adèles hemmelighet</td>
-      <td>Ståhl , Selma / Floer , Lisbeth</td>
-      <td>oai:nb.bibsys.no:998120023774702202</td>
-      <td>2acc47b1fba3236a986d0d63d5703e56</td>
-      <td>8204008015</td>
-      <td>[Oslo]</td>
-      <td>19790101</td>
-      <td>1979</td>
-      <td>Fredhøi</td>
-      <td>nob / swe</td>
+      <th>68</th>
+      <td>100229689</td>
+      <td>URN:NBN:no-nb_digibok_2014100708137</td>
+      <td>Fortellinger for de minste</td>
+      <td>Hallesby , Mia</td>
+      <td>oai:nb.bibsys.no:999726796004702202</td>
+      <td>21faa9197efb9074c57a39f0c36eab70</td>
       <td></td>
-      <td>839.73</td>
-      <td>fiction</td>
-      <td>Skjønnlitteratur</td>
+      <td>Oslo</td>
+      <td>19610101</td>
+      <td>1961</td>
+      <td></td>
+      <td>und</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Uklassifisert</td>
       <td>digibok</td>
     </tr>
     <tr>
-      <th>84</th>
-      <td>100335108</td>
-      <td>URN:NBN:no-nb_digibok_2017052907045</td>
-      <td>Et liv i seier</td>
-      <td>An Unknown Christian / An Unknown Christian / ...</td>
-      <td>oai:nb.bibsys.no:999919860704802202</td>
-      <td>e188d0179ffe98dfe671a12040348ca9</td>
-      <td>8251003725</td>
-      <td>Stabekk</td>
-      <td>19770101</td>
-      <td>1977</td>
-      <td>Norsk litteraturselskap A/S</td>
-      <td>nob</td>
+      <th>8</th>
+      <td>100018642</td>
+      <td>URN:NBN:no-nb_digibok_2007060700012</td>
+      <td>Til karakteristikk av nutiden : foredrag holdt...</td>
+      <td>Steiner , Rudolf</td>
+      <td>oai:nb.bibsys.no:997511246564702202</td>
+      <td>4dcc8c1b66aa3e30dfcff4455a16e821</td>
       <td></td>
-      <td>269.2092</td>
-      <td>tekst</td>
-      <td>Faglitteratur</td>
+      <td>Bergen</td>
+      <td>19760101</td>
+      <td>1976</td>
+      <td>De tre funksjoner</td>
+      <td>nob</td>
+      <td>antroposofi</td>
+      <td></td>
+      <td></td>
+      <td>Uklassifisert</td>
       <td>digibok</td>
     </tr>
   </tbody>
@@ -1123,15 +1103,15 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>200150878</td>
-      <td>URN:NBN:no-nb_digavis_auraavis_null_null_20060...</td>
-      <td>auraavis</td>
+      <td>203913811</td>
+      <td>URN:NBN:no-nb_digavis_gaula_null_null_20060516...</td>
+      <td>gaula</td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>Sunndal</td>
-      <td>20060720</td>
+      <td></td>
+      <td>20060516</td>
       <td>2006</td>
       <td></td>
       <td></td>
@@ -1145,15 +1125,15 @@ document.write(`
     </tr>
     <tr>
       <th>1</th>
-      <td>203809615</td>
-      <td>URN:NBN:no-nb_digavis_samningen_null_null_2006...</td>
-      <td>samningen</td>
+      <td>203223761</td>
+      <td>URN:NBN:no-nb_digavis_stavangeraftenblad_null_...</td>
+      <td>stavangeraftenblad</td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
-      <td>20060921</td>
+      <td>Stavanger</td>
+      <td>20060329</td>
       <td>2006</td>
       <td></td>
       <td></td>
@@ -1167,15 +1147,15 @@ document.write(`
     </tr>
     <tr>
       <th>2</th>
-      <td>201741574</td>
-      <td>URN:NBN:no-nb_digavis_tonsbergsblad_null_null_...</td>
-      <td>tonsbergsblad</td>
+      <td>203479120</td>
+      <td>URN:NBN:no-nb_digavis_vestlandsnytt_null_null_...</td>
+      <td>vestlandsnytt</td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>Tønsberg</td>
-      <td>20061207</td>
+      <td></td>
+      <td>20060310</td>
       <td>2006</td>
       <td></td>
       <td></td>
@@ -1245,21 +1225,21 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>100394510</td>
-      <td>URN:NBN:no-nb_digibok_2019072907112</td>
-      <td>Levangerhistorier</td>
-      <td>Brendalsmo , Jan / Stylegar , Frans-Arne</td>
-      <td>oai:nb.bibsys.no:991334499984702202</td>
-      <td>3ee1caf1854cece47e45e1fdb5de8652</td>
+      <td>100388575</td>
+      <td>URN:NBN:no-nb_digibok_2018090407010</td>
+      <td>Landet bakom</td>
+      <td>Johansen , Dag Ove</td>
+      <td>oai:nb.bibsys.no:991431678204702202</td>
+      <td>0262f5f99f6bdb2e664172e04aaa7bf2</td>
       <td></td>
+      <td>Rognan</td>
+      <td>20140101</td>
+      <td>2014</td>
+      <td>Bondes forl.</td>
+      <td>nob</td>
+      <td>Emigrasjon / Fra Norge / Emigrasjon / Fra Norg...</td>
+      <td>979.80049457 / 979.8 / 979.8004945</td>
       <td></td>
-      <td>20130101</td>
-      <td>2013</td>
-      <td>Novus</td>
-      <td>mul / nob / nno / swe</td>
-      <td>byer / byhistorie / markedsplasser / samer / g...</td>
-      <td>948.4213 / 948.4213 / 948.4213</td>
-      <td>biography</td>
       <td>Faglitteratur</td>
       <td>digibok</td>
       <td>nb</td>
@@ -1267,42 +1247,42 @@ document.write(`
     </tr>
     <tr>
       <th>1</th>
-      <td>100291537</td>
-      <td>URN:NBN:no-nb_digibok_2016042648022</td>
-      <td>Forollhogna, Skarvan og Roltdalen</td>
-      <td>Nyaas , Arne / Sandvik , Jostein / Stabell , Erik</td>
-      <td>oai:nb.bibsys.no:990925872404702202</td>
-      <td>03c370cb82e94a2b65d928df4ae546e9</td>
+      <td>100023485</td>
+      <td>URN:NBN:no-nb_digibok_2010111108028</td>
+      <td>Samer , rein og gull i Alaska : emigrasjon av ...</td>
+      <td>Vorren , Ørnulv</td>
+      <td>oai:nb.bibsys.no:998920073114702202</td>
+      <td>43bcab8c203342aaa9513c72111ff623</td>
+      <td>8273740536 / 8273740773</td>
       <td></td>
-      <td></td>
-      <td>20090101</td>
-      <td>2009</td>
-      <td>Gyldendal</td>
+      <td>19900101</td>
+      <td>1990</td>
+      <td>Davvi media</td>
       <td>nob</td>
-      <td>Nasjonalparker / Forollhogna nasjonalpark / Sk...</td>
-      <td>914.81 / 948.24</td>
+      <td>usa / samisk historie / samer / utvandring / n...</td>
+      <td>979 / 305.89457</td>
       <td></td>
-      <td>Uklassifisert</td>
+      <td>Faglitteratur</td>
       <td>digibok</td>
       <td>nb</td>
       <td>20060101</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>100417939</td>
-      <td>URN:NBN:no-nb_digibok_2020040107019</td>
-      <td>Rondane : fjellfolk og villrein</td>
-      <td>Jordhøy , Per</td>
-      <td>oai:nb.bibsys.no:991322662614702202</td>
-      <td>44acad31ad546e5bd297feab47a5852b</td>
+      <td>100364819</td>
+      <td>URN:NBN:no-nb_digibok_2018020948033</td>
+      <td>Reinen på Hardangervidda : natur og kultur</td>
+      <td>Vaa , Johan / Bitustøyl , Kjell</td>
+      <td>oai:nb.bibsys.no:991237194454702202</td>
+      <td>8358d28bbb7a9dc5f74ad6b5ba8ac8f7</td>
       <td></td>
       <td></td>
-      <td>20130101</td>
-      <td>2013</td>
-      <td>Snøhetta forl.</td>
+      <td>20120101</td>
+      <td>2012</td>
+      <td>Villreinutvalet på Hardangervidda</td>
       <td>nno</td>
-      <td>fjell / reindrift / reindriftslandskap / Norge...</td>
-      <td>599.65 / 948.25</td>
+      <td>dyregraver / reindrift / fjell / Norge / Rein ...</td>
+      <td>639.1 / 639.1 / 948.28 / 639.11 / 639.109481</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -1313,7 +1293,7 @@ document.write(`
       <th>3</th>
       <td>100472261</td>
       <td>URN:NBN:no-nb_digibok_2010032307035</td>
-      <td>I villreinens rike : Setesdal Vesthei, Ryfylke...</td>
+      <td>I villreinens rike : Setesdal Vesthei , Ryfylk...</td>
       <td>Frøstrup , Johan Christian / Bang-Andersen , S...</td>
       <td>oai:nb.bibsys.no:990001151004702202</td>
       <td>d6e1d58a454d2c15b44d9a225d948c1d</td>
@@ -1333,20 +1313,20 @@ document.write(`
     </tr>
     <tr>
       <th>4</th>
-      <td>100391168</td>
-      <td>URN:NBN:no-nb_digibok_2018090607007</td>
-      <td>Iellemvuoge : boatsojæládus, varresvuohta ja d...</td>
-      <td>Andreassen , Lars Magne / Skarvik , Line Meret...</td>
-      <td>oai:nb.bibsys.no:991302805424702202</td>
-      <td>bca392a9fb639d273924d4aa7f622e82</td>
+      <td>100033339</td>
+      <td>URN:NBN:no-nb_digibok_2007072300047</td>
+      <td>Samekulturen : en kulturhistorisk oversikt</td>
+      <td>Vorren , Ørnulv / Manker , Ernst</td>
+      <td>oai:nb.bibsys.no:998421244384702202</td>
+      <td>5b68f75796d957e69cbca8e481904a33</td>
+      <td>8200050211</td>
       <td></td>
-      <td></td>
-      <td>20120101</td>
-      <td>2012</td>
-      <td>Árran julevsáme guovdásj</td>
-      <td>mul / nob / smj / swe</td>
-      <td>Reindrift / Forskning og etikk / Helse / Histo...</td>
-      <td>636.2 / 948</td>
+      <td>19760101</td>
+      <td>1976</td>
+      <td>Universitetsforlaget</td>
+      <td>nob</td>
+      <td>Samer / Kultur / Cultural Characteristics / Mi...</td>
+      <td>301.2 / 948.0049457 / 305.89457</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -1483,21 +1463,21 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>100394510</td>
-      <td>URN:NBN:no-nb_digibok_2019072907112</td>
-      <td>Levangerhistorier</td>
-      <td>Brendalsmo , Jan / Stylegar , Frans-Arne</td>
-      <td>oai:nb.bibsys.no:991334499984702202</td>
-      <td>3ee1caf1854cece47e45e1fdb5de8652</td>
+      <td>100388575</td>
+      <td>URN:NBN:no-nb_digibok_2018090407010</td>
+      <td>Landet bakom</td>
+      <td>Johansen , Dag Ove</td>
+      <td>oai:nb.bibsys.no:991431678204702202</td>
+      <td>0262f5f99f6bdb2e664172e04aaa7bf2</td>
       <td>NaN</td>
+      <td>Rognan</td>
+      <td>20140101</td>
+      <td>2014</td>
+      <td>Bondes forl.</td>
+      <td>nob</td>
+      <td>Emigrasjon / Fra Norge / Emigrasjon / Fra Norg...</td>
+      <td>979.80049457 / 979.8 / 979.8004945</td>
       <td>NaN</td>
-      <td>20130101</td>
-      <td>2013</td>
-      <td>Novus</td>
-      <td>mul / nob / nno / swe</td>
-      <td>byer / byhistorie / markedsplasser / samer / g...</td>
-      <td>948.4213 / 948.4213 / 948.4213</td>
-      <td>biography</td>
       <td>Faglitteratur</td>
       <td>digibok</td>
       <td>nb</td>
@@ -1505,42 +1485,42 @@ document.write(`
     </tr>
     <tr>
       <th>1</th>
-      <td>100291537</td>
-      <td>URN:NBN:no-nb_digibok_2016042648022</td>
-      <td>Forollhogna, Skarvan og Roltdalen</td>
-      <td>Nyaas , Arne / Sandvik , Jostein / Stabell , Erik</td>
-      <td>oai:nb.bibsys.no:990925872404702202</td>
-      <td>03c370cb82e94a2b65d928df4ae546e9</td>
+      <td>100023485</td>
+      <td>URN:NBN:no-nb_digibok_2010111108028</td>
+      <td>Samer , rein og gull i Alaska : emigrasjon av ...</td>
+      <td>Vorren , Ørnulv</td>
+      <td>oai:nb.bibsys.no:998920073114702202</td>
+      <td>43bcab8c203342aaa9513c72111ff623</td>
+      <td>8273740536 / 8273740773</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>20090101</td>
-      <td>2009</td>
-      <td>Gyldendal</td>
+      <td>19900101</td>
+      <td>1990</td>
+      <td>Davvi media</td>
       <td>nob</td>
-      <td>Nasjonalparker / Forollhogna nasjonalpark / Sk...</td>
-      <td>914.81 / 948.24</td>
+      <td>usa / samisk historie / samer / utvandring / n...</td>
+      <td>979 / 305.89457</td>
       <td>NaN</td>
-      <td>Uklassifisert</td>
+      <td>Faglitteratur</td>
       <td>digibok</td>
       <td>nb</td>
       <td>20060101</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>100417939</td>
-      <td>URN:NBN:no-nb_digibok_2020040107019</td>
-      <td>Rondane : fjellfolk og villrein</td>
-      <td>Jordhøy , Per</td>
-      <td>oai:nb.bibsys.no:991322662614702202</td>
-      <td>44acad31ad546e5bd297feab47a5852b</td>
+      <td>100364819</td>
+      <td>URN:NBN:no-nb_digibok_2018020948033</td>
+      <td>Reinen på Hardangervidda : natur og kultur</td>
+      <td>Vaa , Johan / Bitustøyl , Kjell</td>
+      <td>oai:nb.bibsys.no:991237194454702202</td>
+      <td>8358d28bbb7a9dc5f74ad6b5ba8ac8f7</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>20130101</td>
-      <td>2013</td>
-      <td>Snøhetta forl.</td>
+      <td>20120101</td>
+      <td>2012</td>
+      <td>Villreinutvalet på Hardangervidda</td>
       <td>nno</td>
-      <td>fjell / reindrift / reindriftslandskap / Norge...</td>
-      <td>599.65 / 948.25</td>
+      <td>dyregraver / reindrift / fjell / Norge / Rein ...</td>
+      <td>639.1 / 639.1 / 948.28 / 639.11 / 639.109481</td>
       <td>NaN</td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -1551,11 +1531,11 @@ document.write(`
       <th>3</th>
       <td>100472261</td>
       <td>URN:NBN:no-nb_digibok_2010032307035</td>
-      <td>I villreinens rike : Setesdal Vesthei, Ryfylke...</td>
+      <td>I villreinens rike : Setesdal Vesthei , Ryfylk...</td>
       <td>Frøstrup , Johan Christian / Bang-Andersen , S...</td>
       <td>oai:nb.bibsys.no:990001151004702202</td>
       <td>d6e1d58a454d2c15b44d9a225d948c1d</td>
-      <td>8.291495e+09</td>
+      <td>8291495149</td>
       <td>NaN</td>
       <td>19990101</td>
       <td>1999</td>
@@ -1571,20 +1551,20 @@ document.write(`
     </tr>
     <tr>
       <th>4</th>
-      <td>100391168</td>
-      <td>URN:NBN:no-nb_digibok_2018090607007</td>
-      <td>Iellemvuoge : boatsojæládus, varresvuohta ja d...</td>
-      <td>Andreassen , Lars Magne / Skarvik , Line Meret...</td>
-      <td>oai:nb.bibsys.no:991302805424702202</td>
-      <td>bca392a9fb639d273924d4aa7f622e82</td>
+      <td>100033339</td>
+      <td>URN:NBN:no-nb_digibok_2007072300047</td>
+      <td>Samekulturen : en kulturhistorisk oversikt</td>
+      <td>Vorren , Ørnulv / Manker , Ernst</td>
+      <td>oai:nb.bibsys.no:998421244384702202</td>
+      <td>5b68f75796d957e69cbca8e481904a33</td>
+      <td>8200050211</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>20120101</td>
-      <td>2012</td>
-      <td>Árran julevsáme guovdásj</td>
-      <td>mul / nob / smj / swe</td>
-      <td>Reindrift / Forskning og etikk / Helse / Histo...</td>
-      <td>636.2 / 948</td>
+      <td>19760101</td>
+      <td>1976</td>
+      <td>Universitetsforlaget</td>
+      <td>nob</td>
+      <td>Samer / Kultur / Cultural Characteristics / Mi...</td>
+      <td>301.2 / 948.0049457 / 305.89457</td>
       <td>NaN</td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -1714,50 +1694,6 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>URN:NBN:no-nb_digibok_2011051820014</td>
-      <td>100579548.0</td>
-      <td>Som om ingenting : bare om Vigdis Hjorth</td>
-      <td>Linneberg , Arild / Hjorth , Vigdis / Solstad ...</td>
-      <td>oai:nb.bibsys.no:990925957234702202</td>
-      <td>847bd73c3318f6874a66d0f969ba495a</td>
-      <td></td>
-      <td>[Oslo]</td>
-      <td>20090101.0</td>
-      <td>2009.0</td>
-      <td>Cappelen Damm</td>
-      <td>nob</td>
-      <td>Norsk litteratur</td>
-      <td>839.828 / 839.828</td>
-      <td>festschrift</td>
-      <td>Faglitteratur</td>
-      <td>digibok</td>
-      <td>nb</td>
-      <td>20060101.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>URN:NBN:no-nb_digibok_2014091948002</td>
-      <td>100496097.0</td>
-      <td>Leve posthornet! : Vigdis Hjorth</td>
-      <td>Horn , Ellen</td>
-      <td>oai:nb.bibsys.no:991429153194702202</td>
-      <td>e6d86eeb4ac8509533d647c9793f01dc</td>
-      <td></td>
-      <td>[Oslo]</td>
-      <td>20140101.0</td>
-      <td>2014.0</td>
-      <td>Riksteatret</td>
-      <td>nob</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>Uklassifisert</td>
-      <td>digibok</td>
-      <td>nb</td>
-      <td>20060101.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
       <td>URN:NBN:no-nb_digibok_2015090158054</td>
       <td>100267417.0</td>
       <td>Vigdis Hjorth : et forfatterportrett</td>
@@ -1779,7 +1715,7 @@ document.write(`
       <td>20060101.0</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>1</th>
       <td>URN:NBN:no-nb_digibok_2018031548382</td>
       <td>100367884.0</td>
       <td>Fryd og fare : essay om diktning og eksistens</td>
@@ -1795,6 +1731,50 @@ document.write(`
       <td>Historisk framstilling / Norsk litteratur / Li...</td>
       <td>809 / 839.824 / 809 / 839.824</td>
       <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>URN:NBN:no-nb_digibok_2014091948002</td>
+      <td>100496097.0</td>
+      <td>Leve posthornet ! : Vigdis Hjorth</td>
+      <td>Horn , Ellen</td>
+      <td>oai:nb.bibsys.no:991429153194702202</td>
+      <td>e6d86eeb4ac8509533d647c9793f01dc</td>
+      <td></td>
+      <td>[Oslo]</td>
+      <td>20140101.0</td>
+      <td>2014.0</td>
+      <td>Riksteatret</td>
+      <td>nob</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Uklassifisert</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>URN:NBN:no-nb_digibok_2011051820014</td>
+      <td>100579548.0</td>
+      <td>Som om ingenting : bare om Vigdis Hjorth</td>
+      <td>Linneberg , Arild / Hjorth , Vigdis / Solstad ...</td>
+      <td>oai:nb.bibsys.no:990925957234702202</td>
+      <td>847bd73c3318f6874a66d0f969ba495a</td>
+      <td></td>
+      <td>[Oslo]</td>
+      <td>20090101.0</td>
+      <td>2009.0</td>
+      <td>Cappelen Damm</td>
+      <td>nob</td>
+      <td>Norsk litteratur</td>
+      <td>839.828 / 839.828</td>
+      <td>festschrift</td>
       <td>Faglitteratur</td>
       <td>digibok</td>
       <td>nb</td>

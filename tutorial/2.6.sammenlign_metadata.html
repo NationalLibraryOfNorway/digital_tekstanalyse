@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -53,18 +53,10 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial/2.6.sammenlign_metadata';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -509,18 +501,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">dhlab.api.dhlab_api</span> <span class="kn">import</span> <span class="n">get_document_frequencies</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">dhlab</span> <span class="kn">import</span> <span class="n">Corpus</span><span class="p">,</span> <span class="n">Counts</span><span class="p">,</span> <span class="n">totals</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">dhlab.nbtext</span> <span class="k">as</span> <span class="nn">nb</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;dhlab&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <section id="undersok-korpus-med-metadata">
 <h2><span class="section-number">1.9.1. </span>Undersøk korpus med metadata<a class="headerlink" href="#undersok-korpus-med-metadata" title="Link to this heading">#</a></h2>
@@ -578,33 +558,33 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>Teater i krig</td>
-      <td>Bolling , Jens</td>
-      <td>1983</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Spennende år : fra krig til krig med ord og penn</td>
-      <td>Zachariassen , Aksel</td>
-      <td>1978</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Med livet som innsats : 21 nordmenns dramatisk...</td>
-      <td>Christensen , Dag</td>
+      <td>Det var noe annet under krigen : 2. verdenskri...</td>
+      <td>Eriksen , Anne</td>
       <td>1995</td>
     </tr>
     <tr>
+      <th>1</th>
+      <td>Nordmenn i dødsleirene : tusen norske soldater...</td>
+      <td>Greipsland , Torbjørn</td>
+      <td>2005</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Kongsvinger festnings historie . [ 1 ] : Vakte...</td>
+      <td>Rastad , Per Erik</td>
+      <td>1992</td>
+    </tr>
+    <tr>
       <th>3</th>
-      <td>I krig og fred</td>
-      <td>Alsvik , Ola / Haug , Jan</td>
-      <td>2001</td>
+      <td>Brennpunkt Vemork , 1940-1945</td>
+      <td>Brun , Jomar</td>
+      <td>1985</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1940 : fra nøytral til okkupert</td>
-      <td>Paulsen , Helge</td>
-      <td>1969</td>
+      <td>Stråler fra asken</td>
+      <td>Jungk , Robert / Hagerup , Anders</td>
+      <td>1960</td>
     </tr>
     <tr>
       <th>...</th>
@@ -613,38 +593,38 @@ document.write(`
       <td>...</td>
     </tr>
     <tr>
-      <th>158</th>
-      <td>Kampen mot mobiliseringstrusselen i Norge 1943-44</td>
-      <td>Moland , Arnfinn</td>
-      <td>1987</td>
-    </tr>
-    <tr>
-      <th>159</th>
-      <td>Kongsvinger festnings historie. [2] : Krigsåre...</td>
-      <td>Rastad , Per Erik</td>
-      <td>1982</td>
-    </tr>
-    <tr>
-      <th>160</th>
-      <td>Stor-Elvdal 9.april 1940-8.mai 1945 : krig og ...</td>
-      <td>Hanssen , Hans S.</td>
-      <td>1974</td>
-    </tr>
-    <tr>
       <th>161</th>
-      <td>Fars krig</td>
-      <td>Westlie , Bjørn</td>
-      <td>2008</td>
+      <td>USA og den kalde krigen : en antologi med bidr...</td>
+      <td>Williams , William Appleman / Pharo , Helge / ...</td>
+      <td>1972</td>
     </tr>
     <tr>
       <th>162</th>
-      <td>Marka og krigen : Oslomarka 1940-1945</td>
-      <td>Christensen , Trygve</td>
-      <td>1993</td>
+      <td>Krig og fred : 1660-1780</td>
+      <td>Sogner , Sølvi / Helle , Knut / Bjorli , Trond</td>
+      <td>1996</td>
+    </tr>
+    <tr>
+      <th>163</th>
+      <td>Krig og strategisk tenkning i Europa 1500-1945...</td>
+      <td>Hobson , Rolf</td>
+      <td>2005</td>
+    </tr>
+    <tr>
+      <th>164</th>
+      <td>I kamp om Narvik 1940 : Heinz , Peter , Cyril ...</td>
+      <td>Brauteset , Steinar</td>
+      <td>1987</td>
+    </tr>
+    <tr>
+      <th>165</th>
+      <td>Jakten på massemorderne : en dokumentarbok</td>
+      <td>Ulateig , Egil</td>
+      <td>2006</td>
     </tr>
   </tbody>
 </table>
-<p>163 rows × 3 columns</p>
+<p>166 rows × 3 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -687,53 +667,53 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>100030356</th>
-      <th>100036056</th>
-      <th>100511049</th>
-      <th>100154947</th>
-      <th>100339542</th>
+      <th>100002591</th>
+      <th>100013654</th>
+      <th>100466051</th>
+      <th>100555103</th>
+      <th>100137104</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>.</th>
-      <td>3206.0</td>
-      <td>7314.0</td>
-      <td>4928.0</td>
-      <td>10352.0</td>
-      <td>4909.0</td>
+      <td>4041.0</td>
+      <td>4001.0</td>
+      <td>5788.0</td>
+      <td>6791.0</td>
+      <td>2291.0</td>
     </tr>
     <tr>
       <th>,</th>
-      <td>2442.0</td>
-      <td>7541.0</td>
-      <td>3383.0</td>
-      <td>14138.0</td>
-      <td>4034.0</td>
+      <td>3143.0</td>
+      <td>2976.0</td>
+      <td>6089.0</td>
+      <td>6155.0</td>
+      <td>1796.0</td>
+    </tr>
+    <tr>
+      <th>^</th>
+      <td>1407.0</td>
+      <td>5.0</td>
+      <td>27.0</td>
+      <td>12.0</td>
+      <td>7.0</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>1871.0</td>
-      <td>3631.0</td>
-      <td>1638.0</td>
-      <td>7403.0</td>
-      <td>2536.0</td>
+      <td>1361.0</td>
+      <td>1792.0</td>
+      <td>3042.0</td>
+      <td>2026.0</td>
+      <td>1253.0</td>
     </tr>
     <tr>
-      <th>og</th>
-      <td>1681.0</td>
-      <td>3623.0</td>
-      <td>2047.0</td>
-      <td>7861.0</td>
-      <td>3465.0</td>
-    </tr>
-    <tr>
-      <th>som</th>
-      <td>1275.0</td>
-      <td>2387.0</td>
-      <td>1240.0</td>
-      <td>3506.0</td>
-      <td>1457.0</td>
+      <th>en</th>
+      <td>1127.0</td>
+      <td>1064.0</td>
+      <td>1452.0</td>
+      <td>998.0</td>
+      <td>558.0</td>
     </tr>
     <tr>
       <th>...</th>
@@ -744,48 +724,48 @@ document.write(`
       <td>...</td>
     </tr>
     <tr>
-      <th>flyet</th>
+      <th>plutonium</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>30.0</td>
+      <td>46.0</td>
     </tr>
     <tr>
-      <th>Molla</th>
+      <th>uranprosjektet</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>40.0</td>
+      <td>52.0</td>
     </tr>
     <tr>
-      <th>Anne-Sofie</th>
+      <th>uran</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>44.0</td>
+      <td>55.0</td>
     </tr>
     <tr>
-      <th>Tirpitz</th>
+      <th>tonn</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>53.0</td>
+      <td>58.0</td>
     </tr>
     <tr>
-      <th>tyskeme</th>
+      <th>Tronstad</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>120.0</td>
+      <td>164.0</td>
     </tr>
   </tbody>
 </table>
-<p>53027 rows × 5 columns</p>
+<p>53785 rows × 5 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -800,242 +780,242 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_50bc9_row0_col0, #T_50bc9_row0_col2, #T_50bc9_row0_col4, #T_50bc9_row1_col1, #T_50bc9_row1_col3 {
+#T_d1a3d_row0_col0, #T_d1a3d_row0_col1, #T_d1a3d_row0_col3, #T_d1a3d_row0_col4, #T_d1a3d_row1_col2 {
   background-color: #045599;
   color: #f1f1f1;
 }
-#T_50bc9_row0_col1 {
-  background-color: #0d5b9d;
+#T_d1a3d_row0_col2 {
+  background-color: #0f5c9d;
   color: #f1f1f1;
 }
-#T_50bc9_row0_col3 {
-  background-color: #4c85b4;
+#T_d1a3d_row1_col0 {
+  background-color: #4782b3;
   color: #f1f1f1;
 }
-#T_50bc9_row1_col0 {
-  background-color: #5087b6;
+#T_d1a3d_row1_col1 {
+  background-color: #407db0;
   color: #f1f1f1;
 }
-#T_50bc9_row1_col2 {
-  background-color: #5d90bb;
+#T_d1a3d_row1_col3 {
+  background-color: #1a64a1;
   color: #f1f1f1;
 }
-#T_50bc9_row1_col4 {
+#T_d1a3d_row1_col4 {
   background-color: #3777ac;
   color: #f1f1f1;
 }
-#T_50bc9_row2_col0 {
-  background-color: #89adcc;
-  color: #f1f1f1;
-}
-#T_50bc9_row2_col1, #T_50bc9_row3_col1 {
-  background-color: #a8c1d7;
+#T_d1a3d_row2_col0 {
+  background-color: #cad8e4;
   color: #000000;
 }
-#T_50bc9_row2_col2 {
-  background-color: #c1d1e1;
-  color: #000000;
-}
-#T_50bc9_row2_col3 {
-  background-color: #85aaca;
-  color: #f1f1f1;
-}
-#T_50bc9_row2_col4 {
-  background-color: #8fb1ce;
-  color: #000000;
-}
-#T_50bc9_row3_col0 {
-  background-color: #9cb9d3;
-  color: #000000;
-}
-#T_50bc9_row3_col2 {
-  background-color: #a9c2d8;
-  color: #000000;
-}
-#T_50bc9_row3_col3 {
-  background-color: #7ca4c7;
-  color: #f1f1f1;
-}
-#T_50bc9_row3_col4 {
-  background-color: #588db9;
-  color: #f1f1f1;
-}
-#T_50bc9_row4_col0 {
-  background-color: #c4d4e2;
-  color: #000000;
-}
-#T_50bc9_row4_col1 {
-  background-color: #dbe3eb;
-  color: #000000;
-}
-#T_50bc9_row4_col2 {
-  background-color: #d8e1ea;
-  color: #000000;
-}
-#T_50bc9_row4_col3, #T_50bc9_row5_col0 {
-  background-color: #d0dce7;
-  color: #000000;
-}
-#T_50bc9_row4_col4 {
-  background-color: #cedae6;
-  color: #000000;
-}
-#T_50bc9_row5_col1, #T_50bc9_row5_col4, #T_50bc9_row7_col1, #T_50bc9_row8_col3, #T_50bc9_row9_col0, #T_50bc9_row9_col2 {
+#T_d1a3d_row2_col1, #T_d1a3d_row2_col2, #T_d1a3d_row2_col3, #T_d1a3d_row2_col4, #T_d1a3d_row5_col3, #T_d1a3d_row9_col0, #T_d1a3d_row9_col3 {
   background-color: #f0f1f3;
   color: #000000;
 }
-#T_50bc9_row5_col2 {
-  background-color: #b6cbdd;
+#T_d1a3d_row3_col0, #T_d1a3d_row4_col3 {
+  background-color: #cedae6;
   color: #000000;
 }
-#T_50bc9_row5_col3 {
-  background-color: #c8d6e4;
+#T_d1a3d_row3_col1 {
+  background-color: #86abcb;
+  color: #f1f1f1;
+}
+#T_d1a3d_row3_col2 {
+  background-color: #7aa3c6;
+  color: #f1f1f1;
+}
+#T_d1a3d_row3_col3, #T_d1a3d_row8_col2 {
+  background-color: #a9c2d8;
   color: #000000;
 }
-#T_50bc9_row6_col0, #T_50bc9_row8_col1 {
-  background-color: #dee5ec;
-  color: #000000;
+#T_d1a3d_row3_col4 {
+  background-color: #6f9cc2;
+  color: #f1f1f1;
 }
-#T_50bc9_row6_col1 {
-  background-color: #d6e0e9;
-  color: #000000;
-}
-#T_50bc9_row6_col2 {
-  background-color: #e1e7ed;
-  color: #000000;
-}
-#T_50bc9_row6_col3, #T_50bc9_row9_col1 {
+#T_d1a3d_row4_col0 {
   background-color: #dfe6ec;
   color: #000000;
 }
-#T_50bc9_row6_col4, #T_50bc9_row9_col4 {
-  background-color: #d2dde7;
+#T_d1a3d_row4_col1 {
+  background-color: #b2c8db;
   color: #000000;
 }
-#T_50bc9_row7_col0 {
-  background-color: #e8ecf0;
+#T_d1a3d_row4_col2 {
+  background-color: #b8ccde;
   color: #000000;
 }
-#T_50bc9_row7_col2 {
-  background-color: #dde4ec;
+#T_d1a3d_row4_col4, #T_d1a3d_row6_col2 {
+  background-color: #b7cbdd;
   color: #000000;
 }
-#T_50bc9_row7_col3 {
+#T_d1a3d_row5_col0 {
+  background-color: #e6eaef;
+  color: #000000;
+}
+#T_d1a3d_row5_col1 {
+  background-color: #c6d5e3;
+  color: #000000;
+}
+#T_d1a3d_row5_col2 {
   background-color: #e2e7ed;
   color: #000000;
 }
-#T_50bc9_row7_col4 {
-  background-color: #dae2ea;
+#T_d1a3d_row5_col4 {
+  background-color: #c9d7e4;
   color: #000000;
 }
-#T_50bc9_row8_col0 {
-  background-color: #ebeef1;
+#T_d1a3d_row6_col0 {
+  background-color: #eaedf1;
   color: #000000;
 }
-#T_50bc9_row8_col2 {
-  background-color: #e3e8ee;
+#T_d1a3d_row6_col1 {
+  background-color: #d0dce7;
   color: #000000;
 }
-#T_50bc9_row8_col4 {
-  background-color: #e4e9ee;
+#T_d1a3d_row6_col3 {
+  background-color: #c2d2e1;
   color: #000000;
 }
-#T_50bc9_row9_col3 {
-  background-color: #cbd8e5;
+#T_d1a3d_row6_col4 {
+  background-color: #b0c7da;
+  color: #000000;
+}
+#T_d1a3d_row7_col0, #T_d1a3d_row8_col0 {
+  background-color: #eceef1;
+  color: #000000;
+}
+#T_d1a3d_row7_col1 {
+  background-color: #5389b7;
+  color: #f1f1f1;
+}
+#T_d1a3d_row7_col2 {
+  background-color: #4e86b5;
+  color: #f1f1f1;
+}
+#T_d1a3d_row7_col3 {
+  background-color: #98b7d1;
+  color: #000000;
+}
+#T_d1a3d_row7_col4 {
+  background-color: #95b5d0;
+  color: #000000;
+}
+#T_d1a3d_row8_col1 {
+  background-color: #bdcfdf;
+  color: #000000;
+}
+#T_d1a3d_row8_col3 {
+  background-color: #bed0e0;
+  color: #000000;
+}
+#T_d1a3d_row8_col4 {
+  background-color: #a3bed6;
+  color: #000000;
+}
+#T_d1a3d_row9_col1 {
+  background-color: #c5d5e3;
+  color: #000000;
+}
+#T_d1a3d_row9_col2 {
+  background-color: #e1e7ed;
+  color: #000000;
+}
+#T_d1a3d_row9_col4 {
+  background-color: #cfdbe6;
   color: #000000;
 }
 </style>
-<table id="T_50bc9">
+<table id="T_d1a3d">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_50bc9_level0_col0" class="col_heading level0 col0" >100030356</th>
-      <th id="T_50bc9_level0_col1" class="col_heading level0 col1" >100036056</th>
-      <th id="T_50bc9_level0_col2" class="col_heading level0 col2" >100511049</th>
-      <th id="T_50bc9_level0_col3" class="col_heading level0 col3" >100154947</th>
-      <th id="T_50bc9_level0_col4" class="col_heading level0 col4" >100339542</th>
+      <th id="T_d1a3d_level0_col0" class="col_heading level0 col0" >100002591</th>
+      <th id="T_d1a3d_level0_col1" class="col_heading level0 col1" >100013654</th>
+      <th id="T_d1a3d_level0_col2" class="col_heading level0 col2" >100466051</th>
+      <th id="T_d1a3d_level0_col3" class="col_heading level0 col3" >100555103</th>
+      <th id="T_d1a3d_level0_col4" class="col_heading level0 col4" >100137104</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_50bc9_level0_row0" class="row_heading level0 row0" >.</th>
-      <td id="T_50bc9_row0_col0" class="data row0 col0" >3206.000000</td>
-      <td id="T_50bc9_row0_col1" class="data row0 col1" >7314.000000</td>
-      <td id="T_50bc9_row0_col2" class="data row0 col2" >4928.000000</td>
-      <td id="T_50bc9_row0_col3" class="data row0 col3" >10352.000000</td>
-      <td id="T_50bc9_row0_col4" class="data row0 col4" >4909.000000</td>
+      <th id="T_d1a3d_level0_row0" class="row_heading level0 row0" >.</th>
+      <td id="T_d1a3d_row0_col0" class="data row0 col0" >4041.000000</td>
+      <td id="T_d1a3d_row0_col1" class="data row0 col1" >4001.000000</td>
+      <td id="T_d1a3d_row0_col2" class="data row0 col2" >5788.000000</td>
+      <td id="T_d1a3d_row0_col3" class="data row0 col3" >6791.000000</td>
+      <td id="T_d1a3d_row0_col4" class="data row0 col4" >2291.000000</td>
     </tr>
     <tr>
-      <th id="T_50bc9_level0_row1" class="row_heading level0 row1" >,</th>
-      <td id="T_50bc9_row1_col0" class="data row1 col0" >2442.000000</td>
-      <td id="T_50bc9_row1_col1" class="data row1 col1" >7541.000000</td>
-      <td id="T_50bc9_row1_col2" class="data row1 col2" >3383.000000</td>
-      <td id="T_50bc9_row1_col3" class="data row1 col3" >14138.000000</td>
-      <td id="T_50bc9_row1_col4" class="data row1 col4" >4034.000000</td>
+      <th id="T_d1a3d_level0_row1" class="row_heading level0 row1" >,</th>
+      <td id="T_d1a3d_row1_col0" class="data row1 col0" >3143.000000</td>
+      <td id="T_d1a3d_row1_col1" class="data row1 col1" >2976.000000</td>
+      <td id="T_d1a3d_row1_col2" class="data row1 col2" >6089.000000</td>
+      <td id="T_d1a3d_row1_col3" class="data row1 col3" >6155.000000</td>
+      <td id="T_d1a3d_row1_col4" class="data row1 col4" >1796.000000</td>
     </tr>
     <tr>
-      <th id="T_50bc9_level0_row2" class="row_heading level0 row2" >i</th>
-      <td id="T_50bc9_row2_col0" class="data row2 col0" >1871.000000</td>
-      <td id="T_50bc9_row2_col1" class="data row2 col1" >3631.000000</td>
-      <td id="T_50bc9_row2_col2" class="data row2 col2" >1638.000000</td>
-      <td id="T_50bc9_row2_col3" class="data row2 col3" >7403.000000</td>
-      <td id="T_50bc9_row2_col4" class="data row2 col4" >2536.000000</td>
+      <th id="T_d1a3d_level0_row2" class="row_heading level0 row2" >^</th>
+      <td id="T_d1a3d_row2_col0" class="data row2 col0" >1407.000000</td>
+      <td id="T_d1a3d_row2_col1" class="data row2 col1" >5.000000</td>
+      <td id="T_d1a3d_row2_col2" class="data row2 col2" >27.000000</td>
+      <td id="T_d1a3d_row2_col3" class="data row2 col3" >12.000000</td>
+      <td id="T_d1a3d_row2_col4" class="data row2 col4" >7.000000</td>
     </tr>
     <tr>
-      <th id="T_50bc9_level0_row3" class="row_heading level0 row3" >og</th>
-      <td id="T_50bc9_row3_col0" class="data row3 col0" >1681.000000</td>
-      <td id="T_50bc9_row3_col1" class="data row3 col1" >3623.000000</td>
-      <td id="T_50bc9_row3_col2" class="data row3 col2" >2047.000000</td>
-      <td id="T_50bc9_row3_col3" class="data row3 col3" >7861.000000</td>
-      <td id="T_50bc9_row3_col4" class="data row3 col4" >3465.000000</td>
+      <th id="T_d1a3d_level0_row3" class="row_heading level0 row3" >i</th>
+      <td id="T_d1a3d_row3_col0" class="data row3 col0" >1361.000000</td>
+      <td id="T_d1a3d_row3_col1" class="data row3 col1" >1792.000000</td>
+      <td id="T_d1a3d_row3_col2" class="data row3 col2" >3042.000000</td>
+      <td id="T_d1a3d_row3_col3" class="data row3 col3" >2026.000000</td>
+      <td id="T_d1a3d_row3_col4" class="data row3 col4" >1253.000000</td>
     </tr>
     <tr>
-      <th id="T_50bc9_level0_row4" class="row_heading level0 row4" >som</th>
-      <td id="T_50bc9_row4_col0" class="data row4 col0" >1275.000000</td>
-      <td id="T_50bc9_row4_col1" class="data row4 col1" >2387.000000</td>
-      <td id="T_50bc9_row4_col2" class="data row4 col2" >1240.000000</td>
-      <td id="T_50bc9_row4_col3" class="data row4 col3" >3506.000000</td>
-      <td id="T_50bc9_row4_col4" class="data row4 col4" >1457.000000</td>
+      <th id="T_d1a3d_level0_row4" class="row_heading level0 row4" >en</th>
+      <td id="T_d1a3d_row4_col0" class="data row4 col0" >1127.000000</td>
+      <td id="T_d1a3d_row4_col1" class="data row4 col1" >1064.000000</td>
+      <td id="T_d1a3d_row4_col2" class="data row4 col2" >1452.000000</td>
+      <td id="T_d1a3d_row4_col3" class="data row4 col3" >998.000000</td>
+      <td id="T_d1a3d_row4_col4" class="data row4 col4" >558.000000</td>
     </tr>
     <tr>
-      <th id="T_50bc9_level0_row5" class="row_heading level0 row5" >var</th>
-      <td id="T_50bc9_row5_col0" class="data row5 col0" >1160.000000</td>
-      <td id="T_50bc9_row5_col1" class="data row5 col1" >1914.000000</td>
-      <td id="T_50bc9_row5_col2" class="data row5 col2" >1822.000000</td>
-      <td id="T_50bc9_row5_col3" class="data row5 col3" >3906.000000</td>
-      <td id="T_50bc9_row5_col4" class="data row5 col4" >863.000000</td>
+      <th id="T_d1a3d_level0_row5" class="row_heading level0 row5" >»</th>
+      <td id="T_d1a3d_row5_col0" class="data row5 col0" >1040.000000</td>
+      <td id="T_d1a3d_row5_col1" class="data row5 col1" >717.000000</td>
+      <td id="T_d1a3d_row5_col2" class="data row5 col2" >390.000000</td>
+      <td id="T_d1a3d_row5_col3" class="data row5 col3" >22.000000</td>
+      <td id="T_d1a3d_row5_col4" class="data row5 col4" >383.000000</td>
     </tr>
     <tr>
-      <th id="T_50bc9_level0_row6" class="row_heading level0 row6" >til</th>
-      <td id="T_50bc9_row6_col0" class="data row6 col0" >1019.000000</td>
-      <td id="T_50bc9_row6_col1" class="data row6 col1" >2517.000000</td>
-      <td id="T_50bc9_row6_col2" class="data row6 col2" >1071.000000</td>
-      <td id="T_50bc9_row6_col3" class="data row6 col3" >2701.000000</td>
-      <td id="T_50bc9_row6_col4" class="data row6 col4" >1379.000000</td>
+      <th id="T_d1a3d_level0_row6" class="row_heading level0 row6" >var</th>
+      <td id="T_d1a3d_row6_col0" class="data row6 col0" >970.000000</td>
+      <td id="T_d1a3d_row6_col1" class="data row6 col1" >541.000000</td>
+      <td id="T_d1a3d_row6_col2" class="data row6 col2" >1492.000000</td>
+      <td id="T_d1a3d_row6_col3" class="data row6 col3" >1357.000000</td>
+      <td id="T_d1a3d_row6_col4" class="data row6 col4" >631.000000</td>
     </tr>
     <tr>
-      <th id="T_50bc9_level0_row7" class="row_heading level0 row7" >en</th>
-      <td id="T_50bc9_row7_col0" class="data row7 col0" >915.000000</td>
-      <td id="T_50bc9_row7_col1" class="data row7 col1" >1900.000000</td>
-      <td id="T_50bc9_row7_col2" class="data row7 col2" >1144.000000</td>
-      <td id="T_50bc9_row7_col3" class="data row7 col3" >2564.000000</td>
-      <td id="T_50bc9_row7_col4" class="data row7 col4" >1254.000000</td>
+      <th id="T_d1a3d_level0_row7" class="row_heading level0 row7" >og</th>
+      <td id="T_d1a3d_row7_col0" class="data row7 col0" >956.000000</td>
+      <td id="T_d1a3d_row7_col1" class="data row7 col1" >2664.000000</td>
+      <td id="T_d1a3d_row7_col2" class="data row7 col2" >4186.000000</td>
+      <td id="T_d1a3d_row7_col3" class="data row7 col3" >2554.000000</td>
+      <td id="T_d1a3d_row7_col4" class="data row7 col4" >890.000000</td>
     </tr>
     <tr>
-      <th id="T_50bc9_level0_row8" class="row_heading level0 row8" >å</th>
-      <td id="T_50bc9_row8_col0" class="data row8 col0" >891.000000</td>
-      <td id="T_50bc9_row8_col1" class="data row8 col1" >2330.000000</td>
-      <td id="T_50bc9_row8_col2" class="data row8 col2" >1046.000000</td>
-      <td id="T_50bc9_row8_col3" class="data row8 col3" >1828.000000</td>
-      <td id="T_50bc9_row8_col4" class="data row8 col4" >1070.000000</td>
+      <th id="T_d1a3d_level0_row8" class="row_heading level0 row8" >til</th>
+      <td id="T_d1a3d_row8_col0" class="data row8 col0" >950.000000</td>
+      <td id="T_d1a3d_row8_col1" class="data row8 col1" >877.000000</td>
+      <td id="T_d1a3d_row8_col2" class="data row8 col2" >1853.000000</td>
+      <td id="T_d1a3d_row8_col3" class="data row8 col3" >1443.000000</td>
+      <td id="T_d1a3d_row8_col4" class="data row8 col4" >753.000000</td>
     </tr>
     <tr>
-      <th id="T_50bc9_level0_row9" class="row_heading level0 row9" >av</th>
-      <td id="T_50bc9_row9_col0" class="data row9 col0" >837.000000</td>
-      <td id="T_50bc9_row9_col1" class="data row9 col1" >2303.000000</td>
-      <td id="T_50bc9_row9_col2" class="data row9 col2" >811.000000</td>
-      <td id="T_50bc9_row9_col3" class="data row9 col3" >3780.000000</td>
-      <td id="T_50bc9_row9_col4" class="data row9 col4" >1382.000000</td>
+      <th id="T_d1a3d_level0_row9" class="row_heading level0 row9" >«</th>
+      <td id="T_d1a3d_row9_col0" class="data row9 col0" >896.000000</td>
+      <td id="T_d1a3d_row9_col1" class="data row9 col1" >725.000000</td>
+      <td id="T_d1a3d_row9_col2" class="data row9 col2" >419.000000</td>
+      <td id="T_d1a3d_row9_col3" class="data row9 col3" >20.000000</td>
+      <td id="T_d1a3d_row9_col4" class="data row9 col4" >322.000000</td>
     </tr>
   </tbody>
 </table>
@@ -1049,6 +1029,99 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_corpus</span> <span class="o">=</span> <span class="n">Counts</span><span class="p">(</span><span class="n">bøker</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">count_corpus</span> <span class="o">=</span> <span class="n">Counts</span><span class="p">(</span><span class="n">bøker</span><span class="p">)</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/dhlab/text/conc_coll.py:183,</span> in <span class="ni">Counts.__init__</span><span class="nt">(self, corpus, words)</span>
+<span class="g g-Whitespace">    </span><span class="mi">171</span>     <span class="bp">self</span><span class="o">.</span><span class="n">title_dct</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">172</span> <span class="k">elif</span> <span class="n">corpus</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">173</span>     <span class="c1"># Make sure corpus is a dhlab corpus</span>
+<span class="g g-Whitespace">    </span><span class="mi">174</span>     <span class="c1"># if not, try to make it one</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">181</span>     <span class="c1"># count - if words is none result will be as if counting all words</span>
+<span class="g g-Whitespace">    </span><span class="mi">182</span>     <span class="c1"># in the corpus</span>
+<span class="ne">--&gt; </span><span class="mi">183</span>     <span class="bp">self</span><span class="o">.</span><span class="n">freq</span> <span class="o">=</span> <span class="n">get_document_frequencies</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">184</span>         <span class="n">urns</span><span class="o">=</span><span class="n">urnlist</span><span class="p">(</span><span class="n">corpus</span><span class="p">),</span> <span class="n">cutoff</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">words</span><span class="o">=</span><span class="n">words</span>
+<span class="g g-Whitespace">    </span><span class="mi">185</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">187</span>     <span class="c1"># Include dhlab and title link in object</span>
+<span class="g g-Whitespace">    </span><span class="mi">188</span>     <span class="k">try</span><span class="p">:</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/dhlab/api/dhlab_api.py:584,</span> in <span class="ni">get_document_frequencies</span><span class="nt">(urns, cutoff, words)</span>
+<span class="g g-Whitespace">    </span><span class="mi">582</span>             <span class="k">pass</span>
+<span class="g g-Whitespace">    </span><span class="mi">583</span>     <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">structure</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">584</span>     <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">586</span>     <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/generic.py:7431,</span> in <span class="ni">NDFrame.fillna</span><span class="nt">(self, value, method, axis, inplace, limit, downcast)</span>
+<span class="g g-Whitespace">   </span><span class="mi">7429</span>         <span class="n">new_data</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">_mgr</span>
+<span class="g g-Whitespace">   </span><span class="mi">7430</span>     <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">7431</span>         <span class="n">new_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mgr</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">7432</span>             <span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="n">inplace</span><span class="p">,</span> <span class="n">downcast</span><span class="o">=</span><span class="n">downcast</span>
+<span class="g g-Whitespace">   </span><span class="mi">7433</span>         <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">7434</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">ABCDataFrame</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">7435</span>     <span class="n">new_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">notna</span><span class="p">(),</span> <span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="n">_mgr</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/internals/base.py:186,</span> in <span class="ni">DataManager.fillna</span><span class="nt">(self, value, limit, inplace, downcast)</span>
+<span class="g g-Whitespace">    </span><span class="mi">182</span> <span class="k">if</span> <span class="n">limit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">183</span>     <span class="c1"># Do this validation even if we go through one of the no-op paths</span>
+<span class="g g-Whitespace">    </span><span class="mi">184</span>     <span class="n">limit</span> <span class="o">=</span> <span class="n">libalgos</span><span class="o">.</span><span class="n">validate_limit</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">186</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_with_block</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">187</span>     <span class="s2">&quot;fillna&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">188</span>     <span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">189</span>     <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">190</span>     <span class="n">inplace</span><span class="o">=</span><span class="n">inplace</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">191</span>     <span class="n">downcast</span><span class="o">=</span><span class="n">downcast</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">192</span>     <span class="n">using_cow</span><span class="o">=</span><span class="n">using_copy_on_write</span><span class="p">(),</span>
+<span class="g g-Whitespace">    </span><span class="mi">193</span>     <span class="n">already_warned</span><span class="o">=</span><span class="n">_AlreadyWarned</span><span class="p">(),</span>
+<span class="g g-Whitespace">    </span><span class="mi">194</span> <span class="p">)</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/internals/managers.py:363,</span> in <span class="ni">BaseBlockManager.apply</span><span class="nt">(self, f, align_keys, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">361</span>         <span class="n">applied</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">362</span>     <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">363</span>         <span class="n">applied</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">f</span><span class="p">)(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">364</span>     <span class="n">result_blocks</span> <span class="o">=</span> <span class="n">extend_blocks</span><span class="p">(</span><span class="n">applied</span><span class="p">,</span> <span class="n">result_blocks</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">366</span> <span class="n">out</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">from_blocks</span><span class="p">(</span><span class="n">result_blocks</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">)</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/internals/blocks.py:1692,</span> in <span class="ni">Block.fillna</span><span class="nt">(self, value, limit, inplace, downcast, using_cow, already_warned)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1686</span>     <span class="n">nbs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">putmask</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1687</span>         <span class="n">mask</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">using_cow</span><span class="o">=</span><span class="n">using_cow</span><span class="p">,</span> <span class="n">already_warned</span><span class="o">=</span><span class="n">already_warned</span>
+<span class="g g-Whitespace">   </span><span class="mi">1688</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1689</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1690</span>     <span class="c1"># without _downcast, we would break</span>
+<span class="g g-Whitespace">   </span><span class="mi">1691</span>     <span class="c1">#  test_fillna_dtype_conversion_equiv_replace</span>
+<span class="ne">-&gt; </span><span class="mi">1692</span>     <span class="n">nbs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="o">~</span><span class="n">mask</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">_downcast</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1694</span> <span class="c1"># Note: blk._maybe_downcast vs self._maybe_downcast(nbs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1695</span> <span class="c1">#  makes a difference bc blk may have object dtype, which has</span>
+<span class="g g-Whitespace">   </span><span class="mi">1696</span> <span class="c1">#  different behavior in _maybe_downcast.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1697</span> <span class="k">return</span> <span class="n">extend_blocks</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1698</span>     <span class="p">[</span>
+<span class="g g-Whitespace">   </span><span class="mi">1699</span>         <span class="n">blk</span><span class="o">.</span><span class="n">_maybe_downcast</span><span class="p">(</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1703</span>     <span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1704</span> <span class="p">)</span>
+
+<span class="nn">File ~/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/pandas/core/internals/blocks.py:1524,</span> in <span class="ni">Block.where</span><span class="nt">(self, other, cond, _downcast, using_cow)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1521</span>                 <span class="n">res_blocks</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">rbs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1522</span>             <span class="k">return</span> <span class="n">res_blocks</span>
+<span class="ne">-&gt; </span><span class="mi">1524</span> <span class="k">def</span> <span class="nf">where</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1525</span>     <span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">cond</span><span class="p">,</span> <span class="n">_downcast</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">bool</span> <span class="o">=</span> <span class="s2">&quot;infer&quot;</span><span class="p">,</span> <span class="n">using_cow</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="g g-Whitespace">   </span><span class="mi">1526</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Block</span><span class="p">]:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1527</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1528</span><span class="sd">     evaluate the block; return result block(s) from the result</span>
+<span class="g g-Whitespace">   </span><span class="mi">1529</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1539</span><span class="sd">     List[Block]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1540</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1541</span>     <span class="k">assert</span> <span class="n">cond</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">ndim</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>

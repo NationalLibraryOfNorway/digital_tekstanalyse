@@ -5,7 +5,7 @@ Traceback (most recent call last):
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
   File "/home/larsm/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
     return loop.run_until_complete(inner)
-  File "/home/larsm/mambaforge/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
     return future.result()
   File "/home/larsm/.cache/pypoetry/virtualenvs/digital-tekstanalyse-kDjkoATB-py3.10/lib/python3.10/site-packages/nbclient/client.py", line 709, in async_execute
     await self.async_execute_cell(
@@ -27,12 +27,10 @@ from code.sentiment import load_corpus_from_file, compute_sentiment_analysis, ad
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[1], line 4[0m
-[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m 
-[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mdatetime[39;00m [38;5;28;01mas[39;00m [38;5;21;01mdt[39;00m
-[0;32m----> 4[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
+Cell [0;32mIn[1], line 7[0m
+[1;32m      4[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
 [1;32m      6[0m [38;5;28;01mimport[39;00m [38;5;21;01mdhlab[39;00m [38;5;28;01mas[39;00m [38;5;21;01mdh[39;00m
-[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mcode[39;00m[38;5;21;01m.[39;00m[38;5;21;01msentiment[39;00m [38;5;28;01mimport[39;00m load_corpus_from_file, compute_sentiment_analysis, add_urls
+[0;32m----> 7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mcode[39;00m[38;5;21;01m.[39;00m[38;5;21;01msentiment[39;00m [38;5;28;01mimport[39;00m load_corpus_from_file, compute_sentiment_analysis, add_urls
 
-[0;31mModuleNotFoundError[0m: No module named 'pandas'
+[0;31mModuleNotFoundError[0m: No module named 'code.sentiment'; 'code' is not a package
 
