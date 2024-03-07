@@ -9,6 +9,7 @@ logo: resources/images/DHlab_logo_web_en_black.png
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: cache
+  timeout: 100
 
 # # Define the name of the latex output file for PDF builds
 # latex:
