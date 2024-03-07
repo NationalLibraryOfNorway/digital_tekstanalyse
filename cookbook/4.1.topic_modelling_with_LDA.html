@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2.1. Topic modelling med gensim og dhlab &#8212; DH-lab dokumenter</title>
+    <title>2.2. Topic modelling med gensim og dhlab &#8212; DH-lab dokumenter</title>
   
   
   
@@ -60,8 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'cookbook/4.1.topic_modelling_with_LDA';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.2. Søk Nasjonalbibliografiens metadata med dhlab" href="4.2.natbib_query.html" />
-    <link rel="prev" title="2. Kokebøker" href="../cookbook.html" />
+    <link rel="next" title="2.3. Søk Nasjonalbibliografiens metadata med dhlab" href="4.2.natbib_query.html" />
+    <link rel="prev" title="2.1. Sentimentanalyse i aviskorpus" href="4.0.sentiment_analysis_timeseries.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -197,8 +197,9 @@
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../cookbook.html">2. Kokebøker</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.1. Topic modelling med gensim og dhlab</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.2.natbib_query.html">2.2. Søk Nasjonalbibliografiens metadata med dhlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.0.sentiment_analysis_timeseries.html">2.1. Sentimentanalyse i aviskorpus</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.2. Topic modelling med gensim og dhlab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.2.natbib_query.html">2.3. Søk Nasjonalbibliografiens metadata med dhlab</a></li>
 </ul>
 </li>
 </ul>
@@ -467,10 +468,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chunking">2.1.1. Chunking</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-delta-tfidf">2.1.2. Find delta TFIDF</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prep-for-lda">2.1.3. Prep for LDA</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-model">2.1.4. Make model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chunking">2.2.1. Chunking</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-delta-tfidf">2.2.2. Find delta TFIDF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prep-for-lda">2.2.3. Prep for LDA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-model">2.2.4. Make model</a></li>
 </ul>
             </nav>
         </div>
@@ -483,7 +484,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="topic-modelling-med-gensim-og-dhlab">
-<h1><span class="section-number">2.1. </span>Topic modelling med gensim og dhlab<a class="headerlink" href="#topic-modelling-med-gensim-og-dhlab" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">2.2. </span>Topic modelling med gensim og dhlab<a class="headerlink" href="#topic-modelling-med-gensim-og-dhlab" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dhlab</span> <span class="k">as</span> <span class="nn">dh</span>
@@ -598,7 +599,7 @@ document.write(`
 </div>
 </div>
 <section id="chunking">
-<h2><span class="section-number">2.1.1. </span>Chunking<a class="headerlink" href="#chunking" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.2.1. </span>Chunking<a class="headerlink" href="#chunking" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Chunks </span>
@@ -643,7 +644,7 @@ document.write(`
 </div>
 </section>
 <section id="find-delta-tfidf">
-<h2><span class="section-number">2.1.2. </span>Find delta TFIDF<a class="headerlink" href="#find-delta-tfidf" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.2.2. </span>Find delta TFIDF<a class="headerlink" href="#find-delta-tfidf" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">chunks</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -1340,7 +1341,7 @@ document.write(`
 </div>
 </section>
 <section id="prep-for-lda">
-<h2><span class="section-number">2.1.3. </span>Prep for LDA<a class="headerlink" href="#prep-for-lda" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.2.3. </span>Prep for LDA<a class="headerlink" href="#prep-for-lda" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">outer_lst</span><span class="p">]</span>
@@ -1364,7 +1365,7 @@ document.write(`
 </div>
 </section>
 <section id="make-model">
-<h2><span class="section-number">2.1.4. </span>Make model<a class="headerlink" href="#make-model" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.2.4. </span>Make model<a class="headerlink" href="#make-model" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lda_model</span> <span class="o">=</span> <span class="n">gensim</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">LdaMulticore</span><span class="p">(</span>
@@ -1532,12 +1533,12 @@ if(typeof(LDAvis) !== "undefined"){
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../cookbook.html"
+       href="4.0.sentiment_analysis_timeseries.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Kokebøker</p>
+        <p class="prev-next-title"><span class="section-number">2.1. </span>Sentimentanalyse i aviskorpus</p>
       </div>
     </a>
     <a class="right-next"
@@ -1545,7 +1546,7 @@ if(typeof(LDAvis) !== "undefined"){
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.2. </span>Søk Nasjonalbibliografiens metadata med dhlab</p>
+        <p class="prev-next-title"><span class="section-number">2.3. </span>Søk Nasjonalbibliografiens metadata med dhlab</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1565,10 +1566,10 @@ if(typeof(LDAvis) !== "undefined"){
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chunking">2.1.1. Chunking</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-delta-tfidf">2.1.2. Find delta TFIDF</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prep-for-lda">2.1.3. Prep for LDA</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-model">2.1.4. Make model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chunking">2.2.1. Chunking</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-delta-tfidf">2.2.2. Find delta TFIDF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prep-for-lda">2.2.3. Prep for LDA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-model">2.2.4. Make model</a></li>
 </ul>
   </nav></div>
 
