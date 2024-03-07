@@ -9,6 +9,24 @@ packages = [{include = "digital_tekstanalyse"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+pandas = "^2.2.1"
+matplotlib = "^3.8.3"
+numpy = "^1.26.4"
+requests = "^2.31.0"
+ipython = "^8.22.2"
+seaborn = "^0.13.2"
+scipy = "^1.12.0"
+networkx = "^3.2.1"
+wordcloud = "^1.9.3"
+community = "^1.0.0b1"
+python-louvain = "^0.16"
+dhlab = "^2.31.0"
+wheel = "^0.42.0"
+openpyxl = "^3.1.2"
+gensim = "^4.3.2"
+pyldavis = "^3.4.1"
+jupyter-book = "^1.0.0"
+ghp-import = "^2.1.0"
 
 
 [tool.poetry.group.bibliography.dependencies]
