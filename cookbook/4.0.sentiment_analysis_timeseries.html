@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -42,7 +42,7 @@
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
@@ -498,6 +498,18 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">dhlab</span> <span class="k">as</span> <span class="nn">dh</span>
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">digital_tekstanalyse.sentiment</span> <span class="kn">import</span> <span class="n">load_corpus_from_file</span><span class="p">,</span> <span class="n">compute_sentiment_analysis</span><span class="p">,</span> <span class="n">add_urls</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;digital_tekstanalyse&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="sentimentanalyse-i-aviskorpus">
 <h1><span class="section-number">2.1. </span>Sentimentanalyse i aviskorpus<a class="headerlink" href="#sentimentanalyse-i-aviskorpus" title="Link to this heading">#</a></h1>
@@ -641,83 +653,83 @@ corpus består av 3441 utgivelser
   <tbody>
     <tr>
       <th>0</th>
-      <td>201310946</td>
-      <td>URN:NBN:no-nb_digavis_oestsida_null_null_20050...</td>
-      <td>oestsida</td>
+      <td>200881788</td>
+      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
+      <td>kristiansandavis</td>
       <td>Kristiansand</td>
-      <td>20050914</td>
-      <td>2005</td>
+      <td>20100204</td>
+      <td>2010</td>
       <td>digavis</td>
       <td>biblioteket</td>
       <td>1</td>
-      <td>14</td>
+      <td>107</td>
+      <td>1</td>
       <td>2</td>
-      <td>0</td>
-      <td>2</td>
+      <td>-1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>201310918</td>
-      <td>URN:NBN:no-nb_digavis_oestsida_null_null_20040...</td>
-      <td>oestsida</td>
+      <td>200881788</td>
+      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
+      <td>kristiansandavis</td>
       <td>Kristiansand</td>
-      <td>20040310</td>
-      <td>2004</td>
+      <td>20100204</td>
+      <td>2010</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>6</td>
-      <td>12</td>
-      <td>2</td>
       <td>1</td>
+      <td>108</td>
+      <td>1</td>
+      <td>0</td>
       <td>1</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>201310918</td>
-      <td>URN:NBN:no-nb_digavis_oestsida_null_null_20040...</td>
-      <td>oestsida</td>
+      <td>200881806</td>
+      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
+      <td>kristiansandavis</td>
       <td>Kristiansand</td>
-      <td>20040310</td>
-      <td>2004</td>
+      <td>20100610</td>
+      <td>2010</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>6</td>
-      <td>13</td>
-      <td>3</td>
       <td>1</td>
-      <td>2</td>
+      <td>135</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>201310918</td>
-      <td>URN:NBN:no-nb_digavis_oestsida_null_null_20040...</td>
-      <td>oestsida</td>
+      <td>200881806</td>
+      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
+      <td>kristiansandavis</td>
       <td>Kristiansand</td>
-      <td>20040310</td>
-      <td>2004</td>
+      <td>20100610</td>
+      <td>2010</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>6</td>
-      <td>8</td>
       <td>1</td>
-      <td>1</td>
+      <td>134</td>
+      <td>0</td>
+      <td>0</td>
       <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>201310918</td>
-      <td>URN:NBN:no-nb_digavis_oestsida_null_null_20040...</td>
-      <td>oestsida</td>
+      <td>200881974</td>
+      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
+      <td>kristiansandavis</td>
       <td>Kristiansand</td>
-      <td>20040310</td>
-      <td>2004</td>
+      <td>20131017</td>
+      <td>2013</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>6</td>
       <td>9</td>
-      <td>1</td>
-      <td>1</td>
+      <td>217</td>
       <td>0</td>
+      <td>2</td>
+      <td>-2</td>
     </tr>
   </tbody>
 </table>
@@ -739,7 +751,7 @@ Ved å bytte ut “URN” i følgende adresse med en reell verdi kan du lese avi
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://www.nb.no/items/URN:NBN:no-nb_digavis_oestsida_null_null_20040310_3_5_1?searchText=biblioteket
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://www.nb.no/items/URN:NBN:no-nb_digavis_kristiansandavis_null_null_20100204_4_5_1?searchText=biblioteket
 </pre></div>
 </div>
 </div>
@@ -788,87 +800,87 @@ Ved å bytte ut “URN” i følgende adresse med en reell verdi kan du lese avi
   <tbody>
     <tr>
       <th>0</th>
-      <td>201310946</td>
-      <td>URN:NBN:no-nb_digavis_oestsida_null_null_20050...</td>
-      <td>oestsida</td>
+      <td>200881788</td>
+      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
+      <td>kristiansandavis</td>
       <td>Kristiansand</td>
-      <td>20050914</td>
-      <td>2005</td>
+      <td>20100204</td>
+      <td>2010</td>
       <td>digavis</td>
       <td>biblioteket</td>
       <td>1</td>
-      <td>14</td>
+      <td>107</td>
+      <td>1</td>
       <td>2</td>
-      <td>0</td>
-      <td>2</td>
+      <td>-1</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>201310918</td>
-      <td>URN:NBN:no-nb_digavis_oestsida_null_null_20040...</td>
-      <td>oestsida</td>
+      <td>200881788</td>
+      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
+      <td>kristiansandavis</td>
       <td>Kristiansand</td>
-      <td>20040310</td>
-      <td>2004</td>
+      <td>20100204</td>
+      <td>2010</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>6</td>
-      <td>12</td>
-      <td>2</td>
       <td>1</td>
+      <td>108</td>
+      <td>1</td>
+      <td>0</td>
       <td>1</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>201310918</td>
-      <td>URN:NBN:no-nb_digavis_oestsida_null_null_20040...</td>
-      <td>oestsida</td>
+      <td>200881806</td>
+      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
+      <td>kristiansandavis</td>
       <td>Kristiansand</td>
-      <td>20040310</td>
-      <td>2004</td>
+      <td>20100610</td>
+      <td>2010</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>6</td>
-      <td>13</td>
-      <td>3</td>
       <td>1</td>
-      <td>2</td>
+      <td>135</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>201310918</td>
-      <td>URN:NBN:no-nb_digavis_oestsida_null_null_20040...</td>
-      <td>oestsida</td>
+      <td>200881806</td>
+      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
+      <td>kristiansandavis</td>
       <td>Kristiansand</td>
-      <td>20040310</td>
-      <td>2004</td>
+      <td>20100610</td>
+      <td>2010</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>6</td>
-      <td>8</td>
       <td>1</td>
-      <td>1</td>
+      <td>134</td>
+      <td>0</td>
+      <td>0</td>
       <td>0</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>201310918</td>
-      <td>URN:NBN:no-nb_digavis_oestsida_null_null_20040...</td>
-      <td>oestsida</td>
+      <td>200881974</td>
+      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
+      <td>kristiansandavis</td>
       <td>Kristiansand</td>
-      <td>20040310</td>
-      <td>2004</td>
+      <td>20131017</td>
+      <td>2013</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>6</td>
       <td>9</td>
-      <td>1</td>
-      <td>1</td>
+      <td>217</td>
       <td>0</td>
+      <td>2</td>
+      <td>-2</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
@@ -890,84 +902,84 @@ Ved å bytte ut “URN” i følgende adresse med en reell verdi kan du lese avi
     </tr>
     <tr>
       <th>5577</th>
-      <td>200486128</td>
+      <td>200486068</td>
       <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
       <td>faedrelandsvennen</td>
       <td>Kristiansand</td>
-      <td>20161121</td>
+      <td>20160910</td>
       <td>2016</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>7</td>
-      <td>6252</td>
-      <td>1</td>
+      <td>3</td>
+      <td>6179</td>
       <td>1</td>
       <td>0</td>
+      <td>1</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>5578</th>
-      <td>200486128</td>
+      <td>200484713</td>
       <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
       <td>faedrelandsvennen</td>
       <td>Kristiansand</td>
-      <td>20161121</td>
-      <td>2016</td>
+      <td>20120310</td>
+      <td>2012</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>7</td>
-      <td>6248</td>
-      <td>3</td>
       <td>2</td>
-      <td>1</td>
+      <td>5234</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>5579</th>
-      <td>200486482</td>
+      <td>200484713</td>
       <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
       <td>faedrelandsvennen</td>
       <td>Kristiansand</td>
-      <td>20180122</td>
-      <td>2018</td>
+      <td>20120310</td>
+      <td>2012</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>1</td>
-      <td>6504</td>
+      <td>2</td>
+      <td>5235</td>
       <td>0</td>
-      <td>1</td>
-      <td>-1</td>
+      <td>0</td>
+      <td>0</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>5580</th>
-      <td>200486327</td>
+      <td>200484713</td>
       <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
       <td>faedrelandsvennen</td>
       <td>Kristiansand</td>
-      <td>20170721</td>
-      <td>2017</td>
+      <td>20120310</td>
+      <td>2012</td>
       <td>digavis</td>
       <td>biblioteket</td>
       <td>2</td>
-      <td>6380</td>
+      <td>5237</td>
+      <td>2</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>2</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>5581</th>
-      <td>200486327</td>
+      <td>200484713</td>
       <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
       <td>faedrelandsvennen</td>
       <td>Kristiansand</td>
-      <td>20170721</td>
-      <td>2017</td>
+      <td>20120310</td>
+      <td>2012</td>
       <td>digavis</td>
       <td>biblioteket</td>
       <td>2</td>
-      <td>6381</td>
+      <td>5236</td>
       <td>1</td>
       <td>0</td>
       <td>1</td>

@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -42,7 +42,7 @@
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
@@ -527,50 +527,6 @@ document.write(`
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th>0</th>
-      <td>100332873</td>
-      <td>URN:NBN:no-nb_digibok_2017050848086</td>
-      <td>Toxicity , autecology and life history of Chry...</td>
-      <td>Edvardsen , Bente</td>
-      <td>oai:nb.bibsys.no:999600964344702202</td>
-      <td>6a0ae87f473b7cf521aff23c72ed3839</td>
-      <td></td>
-      <td>Oslo</td>
-      <td>19960101</td>
-      <td>1996</td>
-      <td>Section for Marine Botany, Department of Biolo...</td>
-      <td>eng</td>
-      <td>Svepeflagellater / svepeflagellater / doktorav...</td>
-      <td>589.4</td>
-      <td></td>
-      <td>Faglitteratur</td>
-      <td>digibok</td>
-      <td>nb</td>
-      <td>20060101</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>100508659</td>
-      <td>URN:NBN:no-nb_digibok_2006082500040</td>
-      <td>I Jesu navn : en årgang prekener</td>
-      <td>Gleditsch , Jens</td>
-      <td>oai:nb.bibsys.no:999500693614702202</td>
-      <td>47b36d69c636d81a430339a227d6deaf</td>
-      <td></td>
-      <td>Oslo</td>
-      <td>19280101</td>
-      <td>1928</td>
-      <td>Gyldendal</td>
-      <td>nob</td>
-      <td>kirkeåret / prekener</td>
-      <td></td>
-      <td></td>
-      <td>Uklassifisert</td>
-      <td>digibok</td>
-      <td>nb</td>
-      <td>20060101</td>
-    </tr>
   </tbody>
 </table>
 </div></div></div>
@@ -582,184 +538,72 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">JSONDecodeError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="nn">File ~/.local/lib/python3.10/site-packages/requests/models.py:971,</span> in <span class="ni">Response.json</span><span class="nt">(self, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">970</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">971</span>     <span class="k">return</span> <span class="n">complexjson</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">972</span> <span class="k">except</span> <span class="n">JSONDecodeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">973</span>     <span class="c1"># Catch JSON-related errors and raise as requests.JSONDecodeError</span>
+<span class="g g-Whitespace">    </span><span class="mi">974</span>     <span class="c1"># This aliases json.JSONDecodeError and simplejson.JSONDecodeError</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+<span class="nn">File /usr/lib/python3.10/json/__init__.py:346,</span> in <span class="ni">loads</span><span class="nt">(s, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">343</span> <span class="k">if</span> <span class="p">(</span><span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
+<span class="g g-Whitespace">    </span><span class="mi">344</span>         <span class="n">parse_int</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">parse_float</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
+<span class="g g-Whitespace">    </span><span class="mi">345</span>         <span class="n">parse_constant</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_pairs_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">kw</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">346</span>     <span class="k">return</span> <span class="n">_default_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">347</span> <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>I Jesu navn : en årgang prekener</th>
-      <th>Domskapellet : roman</th>
-      <th>Ventetid</th>
-      <th>Romeo og Julie : av William Shakespeare</th>
-      <th>Når Gud taler : om Bibelen og profetisk tjeneste</th>
-      <th>Individuell arbeidsinnvandring : utfordringer to år etter EU-utvidelsen</th>
-      <th>Regulation of cellular glutathione synthesis by dietary polyphenols</th>
-      <th>Montering og bruk av David Brown slåmaskin</th>
-      <th>Toxicity , autecology and life history of Chrysochromulina polylepis ( Haptophyta )</th>
-      <th>Bak kamera : norsk film og TV i et produksjonsperspektiv</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>,</th>
-      <td>8389.0</td>
-      <td>3822.0</td>
-      <td>3152.0</td>
-      <td>176.0</td>
-      <td>2207.0</td>
-      <td>630.0</td>
-      <td>2401.0</td>
-      <td>133.0</td>
-      <td>3379.0</td>
-      <td>5143.0</td>
-    </tr>
-    <tr>
-      <th>.</th>
-      <td>4549.0</td>
-      <td>6669.0</td>
-      <td>2438.0</td>
-      <td>225.0</td>
-      <td>2059.0</td>
-      <td>625.0</td>
-      <td>3525.0</td>
-      <td>121.0</td>
-      <td>4612.0</td>
-      <td>5964.0</td>
-    </tr>
-    <tr>
-      <th>og</th>
-      <td>3074.0</td>
-      <td>1695.0</td>
-      <td>1088.0</td>
-      <td>143.0</td>
-      <td>1842.0</td>
-      <td>513.0</td>
-      <td>0.0</td>
-      <td>83.0</td>
-      <td>7.0</td>
-      <td>3290.0</td>
-    </tr>
-    <tr>
-      <th>det</th>
-      <td>2824.0</td>
-      <td>1053.0</td>
-      <td>765.0</td>
-      <td>47.0</td>
-      <td>823.0</td>
-      <td>232.0</td>
-      <td>0.0</td>
-      <td>14.0</td>
-      <td>0.0</td>
-      <td>1320.0</td>
-    </tr>
-    <tr>
-      <th>er</th>
-      <td>2638.0</td>
-      <td>542.0</td>
-      <td>674.0</td>
-      <td>67.0</td>
-      <td>850.0</td>
-      <td>245.0</td>
-      <td>0.0</td>
-      <td>36.0</td>
-      <td>0.0</td>
-      <td>1165.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>2014</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>116.0</td>
-    </tr>
-    <tr>
-      <th>produksjon</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>118.0</td>
-    </tr>
-    <tr>
-      <th>filmproduksjon</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>139.0</td>
-    </tr>
-    <tr>
-      <th>2015</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>166.0</td>
-    </tr>
-    <tr>
-      <th>Film</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>190.0</td>
-    </tr>
-  </tbody>
-</table>
-<p>53007 rows × 10 columns</p>
-</div></div></div>
+<span class="nn">File /usr/lib/python3.10/json/decoder.py:337,</span> in <span class="ni">JSONDecoder.decode</span><span class="nt">(self, s, _w)</span>
+<span class="g g-Whitespace">    </span><span class="mi">333</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Return the Python representation of ``s`` (a ``str`` instance</span>
+<span class="g g-Whitespace">    </span><span class="mi">334</span><span class="sd"> containing a JSON document).</span>
+<span class="g g-Whitespace">    </span><span class="mi">335</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">336</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">337</span> <span class="n">obj</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_decode</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="n">_w</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">end</span><span class="p">())</span>
+<span class="g g-Whitespace">    </span><span class="mi">338</span> <span class="n">end</span> <span class="o">=</span> <span class="n">_w</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
+
+<span class="nn">File /usr/lib/python3.10/json/decoder.py:355,</span> in <span class="ni">JSONDecoder.raw_decode</span><span class="nt">(self, s, idx)</span>
+<span class="g g-Whitespace">    </span><span class="mi">354</span> <span class="k">except</span> <span class="ne">StopIteration</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">355</span>     <span class="k">raise</span> <span class="n">JSONDecodeError</span><span class="p">(</span><span class="s2">&quot;Expecting value&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">err</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">356</span> <span class="k">return</span> <span class="n">obj</span><span class="p">,</span> <span class="n">end</span>
+
+<span class="ne">JSONDecodeError</span>: Expecting value: line 1 column 1 (char 0)
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">JSONDecodeError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">c</span><span class="o">.</span><span class="n">get_freqs</span><span class="p">()</span><span class="o">.</span><span class="n">display_names</span><span class="p">()</span>
+
+<span class="nn">File ~/prosjekter/DHLAB/dhlab/future/corpus_conc_coll.py:71,</span> in <span class="ni">Corpus.get_freqs</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">     </span><span class="mi">70</span> <span class="k">def</span> <span class="nf">get_freqs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">71</span>     <span class="k">return</span> <span class="n">Frequencies</span><span class="o">.</span><span class="n">get_freqs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+<span class="nn">File ~/prosjekter/DHLAB/dhlab/future/corpus_conc_coll.py:108,</span> in <span class="ni">Frequencies.get_freqs</span><span class="nt">(self, corpus, words)</span>
+<span class="g g-Whitespace">    </span><span class="mi">106</span> <span class="nd">@classmethod</span>
+<span class="g g-Whitespace">    </span><span class="mi">107</span> <span class="k">def</span> <span class="nf">get_freqs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">corpus</span><span class="p">,</span> <span class="n">words</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">108</span>     <span class="n">res</span> <span class="o">=</span> <span class="n">get_document_frequencies</span><span class="p">(</span><span class="n">urns</span><span class="o">=</span><span class="n">urnlist</span><span class="p">(</span><span class="n">corpus</span><span class="p">),</span> <span class="n">words</span><span class="o">=</span><span class="n">words</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">109</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_title_dct</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">corpus</span><span class="o">.</span><span class="n">dhlabid</span><span class="p">,</span> <span class="n">corpus</span><span class="o">.</span><span class="n">title</span><span class="p">)}</span>
+<span class="g g-Whitespace">    </span><span class="mi">110</span>     <span class="k">return</span> <span class="n">Frequencies</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+
+<span class="nn">File ~/prosjekter/DHLAB/dhlab/api/dhlab_api.py:559,</span> in <span class="ni">get_document_frequencies</span><span class="nt">(urns, cutoff, words, sparse)</span>
+<span class="g g-Whitespace">    </span><span class="mi">557</span> <span class="n">params</span> <span class="o">=</span> <span class="nb">locals</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">558</span> <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/frequencies&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">559</span> <span class="n">result</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">560</span> <span class="c1"># check if words are passed - return differs a bit</span>
+<span class="g g-Whitespace">    </span><span class="mi">561</span> <span class="k">if</span> <span class="n">words</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File ~/.local/lib/python3.10/site-packages/requests/models.py:975,</span> in <span class="ni">Response.json</span><span class="nt">(self, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">971</span>     <span class="k">return</span> <span class="n">complexjson</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">972</span> <span class="k">except</span> <span class="n">JSONDecodeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">973</span>     <span class="c1"># Catch JSON-related errors and raise as requests.JSONDecodeError</span>
+<span class="g g-Whitespace">    </span><span class="mi">974</span>     <span class="c1"># This aliases json.JSONDecodeError and simplejson.JSONDecodeError</span>
+<span class="ne">--&gt; </span><span class="mi">975</span>     <span class="k">raise</span> <span class="n">RequestsJSONDecodeError</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">msg</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">doc</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">pos</span><span class="p">)</span>
+
+<span class="ne">JSONDecodeError</span>: Expecting value: line 1 column 1 (char 0)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -791,52 +635,52 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>,</th>
-      <td>29432.0</td>
-    </tr>
-    <tr>
       <th>.</th>
-      <td>30787.0</td>
+      <td>15660.0</td>
     </tr>
     <tr>
-      <th>og</th>
-      <td>11735.0</td>
+      <th>,</th>
+      <td>12880.0</td>
     </tr>
     <tr>
-      <th>det</th>
-      <td>7078.0</td>
+      <th>och</th>
+      <td>688.0</td>
     </tr>
     <tr>
-      <th>er</th>
-      <td>6217.0</td>
+      <th>år</th>
+      <td>913.0</td>
+    </tr>
+    <tr>
+      <th>du</th>
+      <td>512.0</td>
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
     </tr>
     <tr>
-      <th>2014</th>
-      <td>116.0</td>
+      <th>NYE</th>
+      <td>3.0</td>
     </tr>
     <tr>
-      <th>produksjon</th>
-      <td>118.0</td>
+      <th>UKJENT</th>
+      <td>3.0</td>
     </tr>
     <tr>
-      <th>filmproduksjon</th>
-      <td>139.0</td>
+      <th>WILLIAM</th>
+      <td>3.0</td>
     </tr>
     <tr>
-      <th>2015</th>
-      <td>166.0</td>
+      <th>GAMLE</th>
+      <td>6.0</td>
     </tr>
     <tr>
-      <th>Film</th>
-      <td>190.0</td>
+      <th>TESTAMENTET</th>
+      <td>9.0</td>
     </tr>
   </tbody>
 </table>
-<p>53007 rows × 1 columns</p>
+<p>49061 rows × 1 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -874,42 +718,10 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>3</td>
-      <td>100508659</td>
-      <td>URN:NBN:no-nb_digibok_2006082500040</td>
-      <td>... Mest takker vi for sannhetens &lt;b&gt;konge&lt;/b&gt;...</td>
-      <td>&lt;a target='_blank' href = 'https://urn.nb.no/U...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>8</td>
-      <td>100508659</td>
-      <td>URN:NBN:no-nb_digibok_2006082500040</td>
-      <td>Men dsr er en &lt;b&gt;konge&lt;/b&gt; over oss , Kristus ...</td>
-      <td>&lt;a target='_blank' href = 'https://urn.nb.no/U...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>7</td>
-      <td>100508659</td>
-      <td>URN:NBN:no-nb_digibok_2006082500040</td>
-      <td>... hvor meget er du skyldig ? Der var en &lt;b&gt;k...</td>
-      <td>&lt;a target='_blank' href = 'https://urn.nb.no/U...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>100508659</td>
-      <td>URN:NBN:no-nb_digibok_2006082500040</td>
-      <td>... det ganske visst en stor glede å løfte for...</td>
-      <td>&lt;a target='_blank' href = 'https://urn.nb.no/U...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>9</td>
-      <td>100136407</td>
-      <td>URN:NBN:no-nb_digibok_2013012108016</td>
-      <td>Løft hodene , dere porter , ja , løft dere , e...</td>
+      <td>0</td>
+      <td>100279411</td>
+      <td>URN:NBN:no-nb_digibok_2016011848084</td>
+      <td>... Mwaash eller Woot &lt; Mashamboy &gt; er Kubas f...</td>
       <td>&lt;a target='_blank' href = 'https://urn.nb.no/U...</td>
     </tr>
   </tbody>
@@ -946,52 +758,163 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>ikke</th>
-      <td>3.0</td>
+      <th>,</th>
+      <td>1</td>
     </tr>
     <tr>
-      <th>ørkenens</th>
-      <td>1.0</td>
+      <th>første</th>
+      <td>1</td>
     </tr>
     <tr>
-      <th>forhåbningernes</th>
-      <td>1.0</td>
+      <th>den</th>
+      <td>1</td>
     </tr>
     <tr>
-      <th>Løvenes</th>
-      <td>1.0</td>
+      <th>Kubas</th>
+      <td>1</td>
     </tr>
     <tr>
-      <th>Jesus</th>
-      <td>1.0</td>
+      <th>er</th>
+      <td>1</td>
     </tr>
     <tr>
-      <th>...</th>
-      <td>...</td>
+      <th>alle</th>
+      <td>1</td>
     </tr>
     <tr>
-      <th>med</th>
-      <td>4.0</td>
+      <th>&gt;</th>
+      <td>1</td>
     </tr>
     <tr>
-      <th>ja</th>
-      <td>2.0</td>
+      <th>i</th>
+      <td>1</td>
     </tr>
     <tr>
-      <th>ha</th>
-      <td>2.0</td>
+      <th>Mashamboy</th>
+      <td>1</td>
     </tr>
     <tr>
-      <th>konge</th>
-      <td>4.0</td>
+      <th>Kuba-kulturen</th>
+      <td>1</td>
     </tr>
     <tr>
-      <th>inn</th>
-      <td>3.0</td>
+      <th>&lt;</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>kan</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Woot</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>føre</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>sin</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>eller</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Mwaash</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>avstamning</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>.</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>tilbake</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>blir</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>Kubas</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>der</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>seremonier</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>mytiske</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>under</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>opprinnelse</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>båret</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>frem</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>De</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>sti</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>lt</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>.</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>)</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>men</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Zaire</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>tidligere</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>også</th>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
-<p>155 rows × 1 columns</p>
 </div></div></div>
 </div>
 </section>

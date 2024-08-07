@@ -15,14 +15,17 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-nb.cloud((bøker_typiske_ord/bøker_typiske_ord.sum()).head(50))
+# Her viser vi de 50 viktigste ordene som er assosiert med rødvin i korpuset vårt, målt mot alle bøker i nb.no 
+
+nb.cloud(coll_assoc.head(50)/coll_assoc.sum())
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[15], line 1[0m
-[0;32m----> 1[0m [43mnb[49m[38;5;241;43m.[39;49m[43mcloud[49m[43m([49m[43m([49m[43mbøker_typiske_ord[49m[38;5;241;43m/[39;49m[43mbøker_typiske_ord[49m[38;5;241;43m.[39;49m[43msum[49m[43m([49m[43m)[49m[43m)[49m[38;5;241;43m.[39;49m[43mhead[49m[43m([49m[38;5;241;43m50[39;49m[43m)[49m[43m)[49m
+Cell [0;32mIn[27], line 3[0m
+[1;32m      1[0m [38;5;66;03m# Her viser vi de 50 viktigste ordene som er assosiert med rødvin i korpuset vårt, målt mot alle bøker i nb.no [39;00m
+[0;32m----> 3[0m [43mnb[49m[38;5;241;43m.[39;49m[43mcloud[49m[43m([49m[43mcoll_assoc[49m[38;5;241;43m.[39;49m[43mhead[49m[43m([49m[38;5;241;43m50[39;49m[43m)[49m[38;5;241;43m/[39;49m[43mcoll_assoc[49m[38;5;241;43m.[39;49m[43msum[49m[43m([49m[43m)[49m[43m)[49m
 
 File [0;32m~/prosjekter/DHLAB/dhlab/legacy/nbtext.py:1529[0m, in [0;36mcloud[0;34m(df, column, top, width, height, background, file, stretch, font_path)[0m
 [1;32m   1527[0m     column [38;5;241m=[39m df[38;5;241m.[39mcolumns[[38;5;241m0[39m]

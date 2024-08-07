@@ -1,0 +1,85 @@
+Traceback (most recent call last):
+  File "/home/ingeridd/.local/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/ingeridd/.local/lib/python3.10/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/ingeridd/.local/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/ingeridd/.local/lib/python3.10/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/home/ingeridd/.local/lib/python3.10/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/ingeridd/.local/lib/python3.10/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+c.get_freqs().display_names()
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mJSONDecodeError[0m                           Traceback (most recent call last)
+File [0;32m~/.local/lib/python3.10/site-packages/requests/models.py:971[0m, in [0;36mResponse.json[0;34m(self, **kwargs)[0m
+[1;32m    970[0m [38;5;28;01mtry[39;00m:
+[0;32m--> 971[0m     [38;5;28;01mreturn[39;00m [43mcomplexjson[49m[38;5;241;43m.[39;49m[43mloads[49m[43m([49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mtext[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m    972[0m [38;5;28;01mexcept[39;00m JSONDecodeError [38;5;28;01mas[39;00m e:
+[1;32m    973[0m     [38;5;66;03m# Catch JSON-related errors and raise as requests.JSONDecodeError[39;00m
+[1;32m    974[0m     [38;5;66;03m# This aliases json.JSONDecodeError and simplejson.JSONDecodeError[39;00m
+
+File [0;32m/usr/lib/python3.10/json/__init__.py:346[0m, in [0;36mloads[0;34m(s, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)[0m
+[1;32m    343[0m [38;5;28;01mif[39;00m ([38;5;28mcls[39m [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m object_hook [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m
+[1;32m    344[0m         parse_int [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m parse_float [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m
+[1;32m    345[0m         parse_constant [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m object_pairs_hook [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m [38;5;129;01mnot[39;00m kw):
+[0;32m--> 346[0m     [38;5;28;01mreturn[39;00m [43m_default_decoder[49m[38;5;241;43m.[39;49m[43mdecode[49m[43m([49m[43ms[49m[43m)[49m
+[1;32m    347[0m [38;5;28;01mif[39;00m [38;5;28mcls[39m [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+
+File [0;32m/usr/lib/python3.10/json/decoder.py:337[0m, in [0;36mJSONDecoder.decode[0;34m(self, s, _w)[0m
+[1;32m    333[0m [38;5;250m[39m[38;5;124;03m"""Return the Python representation of ``s`` (a ``str`` instance[39;00m
+[1;32m    334[0m [38;5;124;03mcontaining a JSON document).[39;00m
+[1;32m    335[0m 
+[1;32m    336[0m [38;5;124;03m"""[39;00m
+[0;32m--> 337[0m obj, end [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mraw_decode[49m[43m([49m[43ms[49m[43m,[49m[43m [49m[43midx[49m[38;5;241;43m=[39;49m[43m_w[49m[43m([49m[43ms[49m[43m,[49m[43m [49m[38;5;241;43m0[39;49m[43m)[49m[38;5;241;43m.[39;49m[43mend[49m[43m([49m[43m)[49m[43m)[49m
+[1;32m    338[0m end [38;5;241m=[39m _w(s, end)[38;5;241m.[39mend()
+
+File [0;32m/usr/lib/python3.10/json/decoder.py:355[0m, in [0;36mJSONDecoder.raw_decode[0;34m(self, s, idx)[0m
+[1;32m    354[0m [38;5;28;01mexcept[39;00m [38;5;167;01mStopIteration[39;00m [38;5;28;01mas[39;00m err:
+[0;32m--> 355[0m     [38;5;28;01mraise[39;00m JSONDecodeError([38;5;124m"[39m[38;5;124mExpecting value[39m[38;5;124m"[39m, s, err[38;5;241m.[39mvalue) [38;5;28;01mfrom[39;00m [38;5;28;01mNone[39;00m
+[1;32m    356[0m [38;5;28;01mreturn[39;00m obj, end
+
+[0;31mJSONDecodeError[0m: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+[0;31mJSONDecodeError[0m                           Traceback (most recent call last)
+Cell [0;32mIn[3], line 1[0m
+[0;32m----> 1[0m [43mc[49m[38;5;241;43m.[39;49m[43mget_freqs[49m[43m([49m[43m)[49m[38;5;241m.[39mdisplay_names()
+
+File [0;32m~/prosjekter/DHLAB/dhlab/future/corpus_conc_coll.py:71[0m, in [0;36mCorpus.get_freqs[0;34m(self)[0m
+[1;32m     70[0m [38;5;28;01mdef[39;00m [38;5;21mget_freqs[39m([38;5;28mself[39m):
+[0;32m---> 71[0m     [38;5;28;01mreturn[39;00m [43mFrequencies[49m[38;5;241;43m.[39;49m[43mget_freqs[49m[43m([49m[38;5;28;43mself[39;49m[43m)[49m
+
+File [0;32m~/prosjekter/DHLAB/dhlab/future/corpus_conc_coll.py:108[0m, in [0;36mFrequencies.get_freqs[0;34m(self, corpus, words)[0m
+[1;32m    106[0m [38;5;129m@classmethod[39m
+[1;32m    107[0m [38;5;28;01mdef[39;00m [38;5;21mget_freqs[39m([38;5;28mself[39m, corpus, words[38;5;241m=[39m[38;5;28;01mNone[39;00m):
+[0;32m--> 108[0m     res [38;5;241m=[39m [43mget_document_frequencies[49m[43m([49m[43murns[49m[38;5;241;43m=[39;49m[43murnlist[49m[43m([49m[43mcorpus[49m[43m)[49m[43m,[49m[43m [49m[43mwords[49m[38;5;241;43m=[39;49m[43mwords[49m[43m)[49m
+[1;32m    109[0m     [38;5;28mself[39m[38;5;241m.[39m_title_dct [38;5;241m=[39m {k: v [38;5;28;01mfor[39;00m k, v [38;5;129;01min[39;00m [38;5;28mzip[39m(corpus[38;5;241m.[39mdhlabid, corpus[38;5;241m.[39mtitle)}
+[1;32m    110[0m     [38;5;28;01mreturn[39;00m Frequencies(res)
+
+File [0;32m~/prosjekter/DHLAB/dhlab/api/dhlab_api.py:559[0m, in [0;36mget_document_frequencies[0;34m(urns, cutoff, words, sparse)[0m
+[1;32m    557[0m params [38;5;241m=[39m [38;5;28mlocals[39m()
+[1;32m    558[0m r [38;5;241m=[39m requests[38;5;241m.[39mpost([38;5;124mf[39m[38;5;124m"[39m[38;5;132;01m{[39;00mBASE_URL[38;5;132;01m}[39;00m[38;5;124m/frequencies[39m[38;5;124m"[39m, json[38;5;241m=[39mparams)
+[0;32m--> 559[0m result [38;5;241m=[39m [43mr[49m[38;5;241;43m.[39;49m[43mjson[49m[43m([49m[43m)[49m
+[1;32m    560[0m [38;5;66;03m# check if words are passed - return differs a bit[39;00m
+[1;32m    561[0m [38;5;28;01mif[39;00m words [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+
+File [0;32m~/.local/lib/python3.10/site-packages/requests/models.py:975[0m, in [0;36mResponse.json[0;34m(self, **kwargs)[0m
+[1;32m    971[0m     [38;5;28;01mreturn[39;00m complexjson[38;5;241m.[39mloads([38;5;28mself[39m[38;5;241m.[39mtext, [38;5;241m*[39m[38;5;241m*[39mkwargs)
+[1;32m    972[0m [38;5;28;01mexcept[39;00m JSONDecodeError [38;5;28;01mas[39;00m e:
+[1;32m    973[0m     [38;5;66;03m# Catch JSON-related errors and raise as requests.JSONDecodeError[39;00m
+[1;32m    974[0m     [38;5;66;03m# This aliases json.JSONDecodeError and simplejson.JSONDecodeError[39;00m
+[0;32m--> 975[0m     [38;5;28;01mraise[39;00m RequestsJSONDecodeError(e[38;5;241m.[39mmsg, e[38;5;241m.[39mdoc, e[38;5;241m.[39mpos)
+
+[0;31mJSONDecodeError[0m: Expecting value: line 1 column 1 (char 0)
+
