@@ -69,6 +69,31 @@ def format_book_section_citation(item: dict) -> str:
     return formatted_citation
 
 
+def format_book_citation(item: dict) -> str:
+    """Harvard reference style for books:
+    
+    Author surname, initial. (Year) *Book title*. Edition. Place: Publisher.
+    """
+    citation_elements = []
+
+    citation_elements.append(format_creators(item.get("creators")))
+    citation_elements.append(f'({format_date(item.get("date"))})')
+    citation_elements.append(f"*{item.get('title')}*.")
+
+    if edition := item.get("edition"): 
+        citation_elements.append(edition + ".")
+    
+    if city := item.get("place"): 
+        citation_elements.append(city + ":")
+    if publisher := item.get("publisher"): 
+        citation_elements.append(publisher + ".")
+
+    citation_elements.append(format_url(item))
+
+    return " ".join(elem for elem in citation_elements if elem != "")
+
+
+
 def format_creators(authors: list, creator_type="author") -> str:
     """Format author names in Harvard reference style."""
     if not authors:
@@ -106,7 +131,7 @@ def format_date(date: str, full: bool = False) -> str | None:
 def format_url(data: dict) -> str | None:
     url = data.get("url")
     access_date = data.get("accessDate")
-    if url is None: 
+    if not url:
         return ""
 
     formatted_url = f"Tilgjengelig fra: {url}"
@@ -146,9 +171,8 @@ def generate_citations(library_id, library_type, api_key, output_path):
             case "journalArticle" | "conferencePaper":
                 #formatted_citation = format_article_citation(data)
                 pass
-            case "book": 
-                #formatted_citation = format_book_citation(data)
-                pass
+            case "book":
+                formatted_citation = format_book_citation(data)
             case "thesis":
                 formatted_citation = format_thesis_citation(data)
             case "bookSection":
