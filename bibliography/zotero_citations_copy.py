@@ -18,6 +18,28 @@ def format_newspaper_article_citation(item: dict) -> str:
     url = format_url(item)
     return f"{authors} ({year}) {item.get('title')}, *{item.get('publicationTitle')}*. {url}"
 
+
+def format_thesis_citation(item) -> str:
+    """Surname, Initial(s). (Year) Thesis Title in italic. Type of thesis. Institution."""
+    citation_elements = []    
+    citation_elements.append(format_creators(item.get("creators")))
+
+    if (year := format_date(item.get("date"))): 
+        citation_elements.append(f"({year})")
+        
+    if title := item.get("title"):
+        citation_elements.append(f"*{title}*.")
+        
+    if thesis_type := item.get("thesisType"):
+        citation_elements.append(thesis_type + ".")
+    
+    if institution := item.get("university"):
+        citation_elements.append(institution + ".")
+    citation_elements.append(format_url(item))
+
+    return " ".join(elem for elem in citation_elements if elem != "")
+
+
 def format_book_section_citation(item: dict) -> str:
     """Harvard reference style for book sections:
     
@@ -128,8 +150,7 @@ def generate_citations(library_id, library_type, api_key, output_path):
                 #formatted_citation = format_book_citation(data)
                 pass
             case "thesis":
-                #formatted_citation = format_thesis_citation(data)
-                pass
+                formatted_citation = format_thesis_citation(data)
             case "bookSection":
                 formatted_citation = format_book_section_citation(data)
             case "newspaperArticle":
