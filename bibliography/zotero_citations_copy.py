@@ -137,8 +137,8 @@ def format_creators(authors: list, creator_type="author") -> str:
         case 3: 
              authorlist = ", ".join(_authors[:2]) + ", og " + _authors[2]
         case _:
-             authorlist = _authors[0] + " et al"
-    return authorlist + "." if not authorlist.endswith(".") else authorlist
+             authorlist = _authors[0] + " et al."
+    return authorlist
 
 
 def format_date(date: str, full: bool = False) -> str | None:
@@ -165,7 +165,7 @@ def format_url(data: dict) -> str | None:
         return formatted_url
     
     date = format_date(access_date, full=True)
-    formatted_url += f" (Accessed: {date})" 
+    formatted_url += f" (Hentet: {date})" 
     return formatted_url
 
 
@@ -202,7 +202,6 @@ def generate_citations(library_id, library_type, api_key, output_path):
             case "bookSection":
                 formatted_citation = format_book_section_citation(data)
             case "newspaperArticle":
-                print(data)
                 formatted_citation = format_newspaper_article_citation(data)
             case _:
                 # Notes or attachments are not interesting for citation
