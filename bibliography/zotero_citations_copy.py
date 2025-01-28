@@ -93,6 +93,31 @@ def format_book_citation(item: dict) -> str:
     return " ".join(elem for elem in citation_elements if elem != "")
 
 
+def format_article_citation(item: dict) -> str:
+    """Harvard reference style for journal articles:
+
+    Surname, Initial(s). (Year) Article title, Title of journal in italics, volume(number), page. doi (if applicable)
+    Surname, Initial(s). (Year of Publication) Title of paper, Title of the conference in italics. Place and date of the conference. Place published: Publisher, Page.
+    """
+    elements = []
+    
+    elements.append(format_creators(item.get("creators")))
+    elements.append(f'({format_date(item.get("date"))})')
+    elements.append(f'"{item.get("title")}",')
+    if proceedings := item.get("proceedingsTitle"):
+        elements.append(f"*{proceedings}*,")
+    if journal := item.get("publicationTitle"):
+        elements.append(f"*{journal}*,")
+    if (volume := item.get("volume")) and (issue := item.get("issue")):
+        elements.append(f"{volume}({issue}),")
+    if pages := item.get("pages"):
+        elements.append(f"{pages}.")
+    if doi := item.get("doi"):
+        elements.append(f"doi:{doi}.")
+    
+    elements.append(format_url(item))
+
+    return " ".join(elements)
 
 def format_creators(authors: list, creator_type="author") -> str:
     """Format author names in Harvard reference style."""
@@ -169,8 +194,7 @@ def generate_citations(library_id, library_type, api_key, output_path):
         formatted_citation = ""
         match item_type:
             case "journalArticle" | "conferencePaper":
-                #formatted_citation = format_article_citation(data)
-                pass
+                formatted_citation = format_article_citation(data)
             case "book":
                 formatted_citation = format_book_citation(data)
             case "thesis":
