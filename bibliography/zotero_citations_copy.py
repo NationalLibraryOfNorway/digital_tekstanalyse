@@ -18,6 +18,34 @@ def format_newspaper_article_citation(item: dict) -> str:
     url = format_url(item)
     return f"{authors} ({year}) {item.get('title')}, *{item.get('publicationTitle')}*. {url}"
 
+def format_book_section_citation(item: dict) -> str:
+    """Harvard reference style for book sections:
+    
+    Surname, Initial(s). (Year) Title of chapter, in Surname of the editor(s), Initial(s) (ed.) Book title in italics. Edition. Place: Publisher, Page.
+    """
+    year = format_date(item.get("date"))
+    editors = format_creators(item.get("creators"), creator_type="editor")
+    book_title = item.get("bookTitle")
+    place = item.get("place")
+    publisher = item.get("publisher")
+    pages = item.get("pages")
+
+    citation_elements = [
+        format_creators(item.get("creators")), 
+        f"({year})" if year else "", 
+        f'"{item.get("title")}"', 
+        f'in {editors} (ed.)' if editors else "",
+        f'*{book_title}*.' if book_title else "",
+        item.get("edition"),
+        place + ":" if place else "",
+        publisher + "," if publisher else "",
+        pages + "." if pages else "",
+        format_url(item)
+    ]
+
+    formatted_citation = " ".join(elem for elem in citation_elements if elem != "")
+    return formatted_citation
+
 
 def format_creators(authors: list, creator_type="author") -> str:
     """Format author names in Harvard reference style."""
@@ -50,14 +78,14 @@ def format_date(date: str, full: bool = False) -> str | None:
             date  = datetime.fromisoformat(date).year
     except ValueError:
         date = date.split("-")[0]
-    return date
+    return date if date else ""
 
 
 def format_url(data: dict) -> str | None:
     url = data.get("url")
     access_date = data.get("accessDate")
     if url is None: 
-        return None
+        return ""
 
     formatted_url = f"Tilgjengelig fra: {url}"
 
@@ -103,9 +131,7 @@ def generate_citations(library_id, library_type, api_key, output_path):
                 #formatted_citation = format_thesis_citation(data)
                 pass
             case "bookSection":
-                pass
-                #print(item.get("data"))
-                #formatted_citation = format_book_section_citation(data)
+                formatted_citation = format_book_section_citation(data)
             case "newspaperArticle":
                 print(data)
                 formatted_citation = format_newspaper_article_citation(data)
