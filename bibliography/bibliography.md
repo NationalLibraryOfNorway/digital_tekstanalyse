@@ -7,53 +7,61 @@ title: Bibliografi
 *Sortert ny --> gammel*
 
 
-Bastiansen, Henrik G. 2023. Når fortiden blir digital: medier, kilder og historie i digitaliseringens tid. Universitetsforlaget. 
+Kvinnsland, Ranveig, Dale, Ingerid Løyning, og Tungland, Lars Magne (2024) "Rediscovering the 1890s: A Norwegian Poetry Corpus", *Proceedings of the Computational Humanities Research Conference 2024*, 1259-1271. Tilgjengelig fra: https://ceur-ws.org/Vol-3834/#paper24 (Hentet: 2024-12-10)
 
-Johnsen, Lars 2023. [Å bruke språkteknologi til å undersøke medisinske ord](https://www.michaeljournal.no/article/2023/02/%C3%85%20bruke%20spr%C3%A5kteknologi%20til%20%C3%A5%20unders%C3%B8ke%20medisinske%20ord). Michael. 
+Tønnessen, Jon Carlstedt and Birkenes, Magnus Breder (2025) "Providing Web Archive News Articles as Corpus Data", *Journal of Open Humanities Data*, 11(2), 1-12. Tilgjengelig fra: http://openhumanitiesdata.metajnl.com/articles/10.5334/johd.281/ (Hentet: 2025-01-27)
 
-Birkenes, Magnus Breder; Johnsen, Lars G.; Kåsen, Andre 2022. [Om å bygge en leksikalsk ressurs for diakron skriftspråksvariasjon](https://tidsskrift.dk/lexn/article/view/134773). LexicoNordica. 
+Dalen, Lars Sandved (2020) "Forsiktige forskere, engasjerte journalister", *Mediehistorisk Tidsskrift*, 34(2), 186-192. Tilgjengelig fra: https://medietidsskrift.no/wp-content/uploads/2020/12/MHT-2020-34-Sandved-Dalen-IDO.pdf (Hentet: 2025-01-28)
 
-Dalen, Lars Sandved 2020. [Forsiktige forskere, engasjerte journalister](https://www.pressetidsskrift.no/tidsskrift/medietidsskrift-nr-2-2020/). Mediehistorisk Tidsskrift. 
+Johnsen, Lars G. (2016) "Graph Analysis of Word Networks", *Extended Papers of the International Symposium on Digital Humanities (DH 2016) Växjö, Sweden, November, 7-8*, Tilgjengelig fra: https://ceur-ws.org/Vol-2021/paper6.pdf (Hentet: 2025-01-28)
 
-Karlsen, Heidi 2019. [Sub-corpus topic modeling og diskursanalyse: gruvearbeid, tråling eller kokekunst?](https://www.duo.uio.no/handle/10852/78112). Samlaren: tidsskrift för forskning om svensk och annan nordisk litteratur. 
+Johnsen, Lars G. (2019) "Eldre bøker i den digitale samlingen. Et elektronisk blikk på tekster fra perioden 1650-1850" in Bjørkøy, Asta M. B. et al. (ed.) *Litterære verdensborgere: transnasjonale perspektiver på norsk bokhistorie 1519-1850*. Oslo: Nasjonalbiblioteket, 190-214. Tilgjengelig fra: https://issuu.com/nasjonalbiblioteket/docs/nota_bene_13_layout_rz_interaktiv__002_/188 (Hentet: 2025-01-28)
 
-Uri, Helene 2018. [Hvem sa hva? Kvinner, menn og språk](https://www.gyldendal.no/sakprosa/samtid-og-debatt/hvem-sa-hva/p-10022138-no/). Gyldendal. 
+Hemstad, Ruth (2018) "Skandinavisme som omstridt begrep i nordisk offentlighet" in Hemstad, Ruth, Møller, Jes Fabricius, og Thorkildsen, Dag (ed.) *Skandinavismen: vision og virkning*. Odense: Syddansk Universitetsforlag, Tilgjengelig fra: https://www.nb.no/items/URN:NBN:no-nb_digibok_2020042448121?page=21 (Hentet: 2025-01-28)
 
-Boasson, Frode; Malvik, Anders Skare 2019. [Digital humaniora, mediehistorie og litterære subjektivitetsuttrykk. Om forholdet mellom norsk litteratur og utviklingen av den kommersielle pressen 1855–1900 i et DH‑perspektiv](http://www.idunn.no/doi/10.18261/issn.1504-288X-2019-02-03). Norsk litteraturvitenskapelig tidsskrift. DOI: [10.18261/issn.1504-288X-2019-02-03](https://doi.org/10.18261/issn.1504-288X-2019-02-03)
+Bastiansen, Henrik G. (2019) Når mediehistorien blir søkbar – og grafisk, *Mediehistorisk Tidsskrift*. Tilgjengelig fra: https://medietidsskrift.no/wp-content/uploads/2019/12/NMF-tidsskrift-32_2019_web.pdf (Hentet: 2025-01-28)
 
-Alsvik, Ola; Glad Munch-Møller, Marthe 2020. [Historiografi møter algoritmer: Maskinell fjernlesning av lokalhistoriske framstillinger av kvinnehistorie, et supplement til nærlesning?](http://www.idunn.no/doi/10.18261/issn.1894-3195-2020-03-03). Heimen. DOI: [10.18261/issn.1894-3195-2020-03-03](https://doi.org/10.18261/issn.1894-3195-2020-03-03)
+Wilkinson, Mark D. et al. (2016) "The FAIR Guiding Principles for scientific data management and stewardship", *Scientific Data*, 3(1), 160018. Tilgjengelig fra: https://www.nature.com/articles/sdata201618 (Hentet: 2024-05-06)
 
-Karlsen, Heidi 2021. [5. Kvinner i Nasjonalbibliotekets digitaliserte samlinger i perioden 1830–1880: etableringen av en minoriserende diskurs](http://www.idunn.no/doi/10.18261/9788215045320-2021-05). Universitetsforlaget. 
+Ørjasæter, Kristin and Johnsen, Lars (2021) "Kan vi måle graden av litterært mangfold?", *Norsk barnebokinstitutt*, Tilgjengelig fra: https://barnebokinstituttet.no/mangfold/kan-vi-male-graden-av-litteraert-mangfold/ (Hentet: 2024-01-31)
 
-Olsen, Jon Arild 2014. [Når mer er bedre: kvantitative litteraturstudier](https://www.idunn.no/doi/10.18261/ISSN1504-288X-2014-02-06). Norsk litteraturvitenskapelig tidsskrift. DOI: [10.18261/ISSN1504-288X-2014-02-06](https://doi.org/10.18261/ISSN1504-288X-2014-02-06)
+Bastiansen, Henrik G. (2023) *Når fortiden blir digital: medier, kilder og historie i digitaliseringens tid*. Oslo: Universitetsforlaget.
 
-Uri, Helene; Johnsen, Lars G. 2021. [Skjønnlitteraturen: en kroppsvisitasjon](https://barnebokinstituttet.no/aktuelt/skjonnlitteraturen-en-kroppsvisitasjon/). Norsk barnebokinstitutt. Tidligere publisert i Samtiden 3/2021. 
+Johnsen, Lars (2023) "Å bruke språkteknologi til å undersøke medisinske ord", *Michael*, 20(Supplement 31), 133-42. Tilgjengelig fra: https://www.michaeljournal.no/article/2023/02/%C3%85%20bruke%20spr%C3%A5kteknologi%20til%20%C3%A5%20unders%C3%B8ke%20medisinske%20ord (Hentet: 2023-02-09)
 
-Boasson, Frode Lerum; Johnsen, Lars G. 2020. [Hamsuns litterære geografi](https://septentrio.uit.no/index.php/nordlit/article/view/5725). Nordlit. DOI: [10.7557/13.5725](https://doi.org/10.7557/13.5725)
+Birkenes, Magnus Breder, Johnsen, Lars G., og Kåsen, Andre (2022) "Om å bygge en leksikalsk ressurs for diakron skriftspråksvariasjon", *LexicoNordica*, Tilgjengelig fra: https://tidsskrift.dk/lexn/article/view/134773 (Hentet: 2023-02-02)
 
-Hemstad, Ruth 2018. [Skandinavisme som omstridt begrep i nordisk offentlighet](https://www.nb.no/items/81a1839cbe2ce0cd8211dbc8080d8491?page=21). Syddansk Universitetsforlag. 
+Karlsen, Heidi (2019) "Sub-corpus topic modeling og diskursanalyse: gruvearbeid, tråling eller kokekunst?", *Samlaren: tidsskrift för forskning om svensk och annan nordisk litteratur*, 281-304. Tilgjengelig fra: https://www.duo.uio.no/handle/10852/78112 (Hentet: 2023-01-19)
 
-Johnsen, Lars G. 2019. [Eldre bøker i den digitale samlingen. Et elektronisk blikk på tekster fra perioden 1650-1850](https://issuu.com/nasjonalbiblioteket/docs/nota_bene_13_layout_rz_interaktiv__002_/188). Nasjonalbiblioteket. 
+Uri, Helene (2018) *Hvem sa hva? Kvinner, menn og språk*. Oslo: Gyldendal. Tilgjengelig fra: https://www.gyldendal.no/sakprosa/samtid-og-debatt/hvem-sa-hva/p-10022138-no/
 
-Helland, Frode 2019. [Rasismens retorikk: studier i norsk offentlighet](https://www.pax.no/rasismens-retorikk.6251805-331611.html). Pax Forlag. 
+Boasson, Frode and Malvik, Anders Skare (2019) "Digital humaniora, mediehistorie og litterære subjektivitetsuttrykk. Om forholdet mellom norsk litteratur og utviklingen av den kommersielle pressen 1855–1900 i et DH‑perspektiv", *Norsk litteraturvitenskapelig tidsskrift*, 22(2), 146-167. Tilgjengelig fra: http://www.idunn.no/doi/10.18261/issn.1504-288X-2019-02-03 (Hentet: 2023-01-19)
 
-Johnsen, Lars G. 2016. [Graph Analysis of Word Networks](https://ceur-ws.org/Vol-2021/paper6.pdf). 
+Alsvik, Ola and Glad Munch-Møller, Marthe (2020) "Historiografi møter algoritmer: Maskinell fjernlesning av lokalhistoriske framstillinger av kvinnehistorie, et supplement til nærlesning?", *Heimen*, 57(3), 201-215. Tilgjengelig fra: http://www.idunn.no/doi/10.18261/issn.1894-3195-2020-03-03 (Hentet: 2023-01-19)
 
-Bastiansen, Henrik G. 2019. [Når mediehistorien blir søkbar – og grafisk](https://www.pressetidsskrift.no/tidsskrift/mediehistorisk-tidsskrift-nr-2-2019-32/). Mediehistorisk Tidsskrift. 
+Karlsen, Heidi (2021) "5. Kvinner i Nasjonalbibliotekets digitaliserte samlinger i perioden 1830–1880: etableringen av en minoriserende diskurs" in Rees, Ellen et al. (ed.) *Minoritetsdiskurser i norsk litteratur*. Universitetsforlaget, 93-113. Tilgjengelig fra: http://www.idunn.no/doi/10.18261/9788215045320-2021-05 (Hentet: 2023-01-31)
 
-Uri, Helene 2019. [Helene Uri: Dette er en reklame for Norges stiligste nettsider](https://www.aftenposten.no/kultur/i/awkxj2/helene-uri-dette-er-en-reklametekst-for-norges-stiligste-nettside). Aftenposten. 
+Olsen, Jon Arild (2014) "Når mer er bedre: kvantitative litteraturstudier", *Norsk litteraturvitenskapelig tidsskrift*, 17(2), 139-144. Tilgjengelig fra: https://www.idunn.no/doi/10.18261/ISSN1504-288X-2014-02-06 (Hentet: 2023-01-20)
 
-Olsen, Ida Keihl 2019. [Subjektplassering i moderne norsk - en korpusbasert analyse av leddstillingsvariasjon i bokmål det siste hundreåret](https://www.duo.uio.no/handle/10852/69263). 
+Uri, Helene and Johnsen, Lars G. (2021) Skjønnlitteraturen: en kroppsvisitasjon, *Norsk barnebokinstitutt. Tidligere publisert i Samtiden 3/2021*. Tilgjengelig fra: https://barnebokinstituttet.no/aktuelt/skjonnlitteraturen-en-kroppsvisitasjon/ (Hentet: 2023-01-19)
 
-Hemstad, Ruth 2018. [Scandinavianism](http://berghahnjournals.com/view/journals/contributions/13/1/choc130102.xml). Contributions to the History of Concepts. DOI: [10.3167/choc.2018.130102](https://doi.org/10.3167/choc.2018.130102)
+Boasson, Frode Lerum and Johnsen, Lars G. (2020) "Hamsuns litterære geografi", *Nordlit*, 139-154. Tilgjengelig fra: https://septentrio.uit.no/index.php/nordlit/article/view/5725 (Hentet: 2023-01-19)
 
-Birkenes, Magnus Breder; Johnsen, Lars G.; Lindstad, Arne M.; Ostad, Johanne 2015. [From digital library to n-grams: NB N-gram](https://www.aclweb.org/anthology/W15-1839.pdf). 
+Helland, Frode (2019) *Rasismens retorikk: studier i norsk offentlighet*. Oslo: Pax Forlag. Tilgjengelig fra: https://www.pax.no/rasismens-retorikk.6251805-331611.html
 
-Bekeng-Flemmens, Haakon 2017. [Ved et tideverv](https://www.salongen.no/ved-et-tideverv/). Arr – idéhistorisk tidsskrift. 
+Uri, Helene (2019) Helene Uri: Dette er en reklame for Norges stiligste nettsider, *Aftenposten*. Tilgjengelig fra: https://www.aftenposten.no/kultur/i/awkxj2/helene-uri-dette-er-en-reklametekst-for-norges-stiligste-nettside (Hentet: 2023-01-19)
 
-Tonne, Ingebjørg; Uri, Helene; Johnsen, Lars 2022. [Om kjønn og adjektiv: «Trond er så eksepsjonell/nydelig/skjønn/grønn»](https://septentrio.uit.no/index.php/nordlyd/article/view/6386). Nordlyd. DOI: [10.7557/12.6386](https://doi.org/10.7557/12.6386)
+Olsen, Ida Keihl (2019) *Subjektplassering i moderne norsk - en korpusbasert analyse av leddstillingsvariasjon i bokmål det siste hundreåret*. Master thesis. Tilgjengelig fra: https://www.duo.uio.no/handle/10852/69263 (Hentet: 2023-01-19)
 
-Johnsen, Lars G. 2021. [Term distance, frequency and collocations](https://benjamins.com/catalog/cilt.356.02joh). John Benjamins Publishing Company. 
+Hemstad, Ruth (2018) "Scandinavianism", *Contributions to the History of Concepts*, 13(1), 1-21. Tilgjengelig fra: http://berghahnjournals.com/view/journals/contributions/13/1/choc130102.xml (Hentet: 2023-01-19)
 
-Kveim Lie, Anne Helene; Johnsen, Lars G.; Jordheim, Helge; Ytreberg, Espen 2022. [The Rise of Health: A Collocation Analysis of Conceptual Changes in News Discourse, 1950–2010](http://berghahnjournals.com/view/journals/contributions/17/2/choc170202.xml). Contributions to the History of Concepts. DOI: [10.3167/choc.2022.170202](https://doi.org/10.3167/choc.2022.170202)
+Birkenes, Magnus Breder et al. (2015) "From digital library to n-grams: NB N-gram", *I Proceedings of the 20th Nordic Conference of Computational Linguistics, 293–295. Linköping: Linköping University Electronic Press.*, Tilgjengelig fra: https://www.aclweb.org/anthology/W15-1839.pdf
+
+Bekeng-Flemmens, Haakon (2017) "Ved et tideverv", *Arr – idéhistorisk tidsskrift*, 29(2), Tilgjengelig fra: https://www.salongen.no/ved-et-tideverv/ (Hentet: 2023-01-19)
+
+Tonne, Ingebjørg, Uri, Helene, og Johnsen, Lars (2022) "Om kjønn og adjektiv: «Trond er så eksepsjonell/nydelig/skjønn/grønn»", *Nordlyd*, 46(1), Tilgjengelig fra: https://septentrio.uit.no/index.php/nordlyd/article/view/6386 (Hentet: 2023-01-19)
+
+Johnsen, Lars G. (2021) "Term distance, frequency and collocations" in Pawłowski, Adam et al. (ed.) *Current Issues in Linguistic Theory*. Amsterdam: John Benjamins Publishing Company, 22-36. Tilgjengelig fra: https://benjamins.com/catalog/cilt.356.02joh (Hentet: 2023-01-19)
+
+Kveim Lie, Anne Helene et al. (2022) "The Rise of Health: A Collocation Analysis of Conceptual Changes in News Discourse, 1950–2010", *Contributions to the History of Concepts*, 17(2), 18-40. Tilgjengelig fra: http://berghahnjournals.com/view/journals/contributions/17/2/choc170202.xml (Hentet: 2023-01-19)
 
