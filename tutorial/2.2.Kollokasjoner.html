@@ -14,32 +14,46 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=f0c89327" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=d2032c04" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=f0c89327" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/theme.css?v=a243ae73" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/bootstrap.css?v=5340d9b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?v=c786f70d" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -52,7 +66,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -60,12 +74,28 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial/2.2.Kollokasjoner';</script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/language_data.js?v=d4673a71"></script>
+    <script src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/copybutton_funcs.js?v=776a791e"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/searchtools.js?v=d24376de"></script>
+    <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?v=95180707"></script>
+    <script src="../_static/scripts/pydata-sphinx-theme.js?v=b2908668"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/scripts/bootstrap.js?v=3d67b3b1"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1.6. Frekvenslister" href="2.3.Frekvenslister.html" />
     <link rel="prev" title="1.4. Konkordanser" href="2.1.Konkordans.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -73,31 +103,16 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -105,7 +120,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -113,10 +127,15 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -125,7 +144,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -140,6 +160,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../README.html">
   
@@ -153,21 +175,17 @@
     
     
     <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="DH-lab dokumenter - Home"/>
-    <script>document.write(`<img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark" alt="DH-lab dokumenter - Home"/>`);</script>
+    <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark pst-js-only" alt="DH-lab dokumenter - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -183,7 +201,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Kodeeksempler–Python</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../tutorial.html">1. Læringseksempler</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../tutorial.html">1. Læringseksempler</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="1.0.Oppstart.html">1.2. Oppstart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.0.Bygg_korpus.html">1.3. Korpus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.1.Konkordans.html">1.4. Konkordanser</a></li>
@@ -197,13 +215,13 @@
 <li class="toctree-l2"><a class="reference internal" href="3.2.dispersion.html">1.12. Ordfordeling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.0.experiment.html">1.13. Eksperimentelle tjenester</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook.html">2. Kokebøker</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook.html">2. Kokebøker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/4.0.sentiment_analysis_timeseries.html">2.1. Sentimentanalyse i aviskorpus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/4.1.topic_modelling_with_LDA.html">2.2. Topic modelling med gensim og dhlab</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/4.2.natbib_query.html">2.3. Søk Nasjonalbibliografiens metadata med dhlab</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Demoer</span></p>
 <ul class="nav bd-sidenav">
@@ -216,14 +234,19 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -232,14 +255,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -264,14 +287,14 @@
       
       <li><a href="https://mybinder.org/v2/gh/NationalLibraryOfNorway/digital_tekstanalyse/main?urlpath=tree/tutorial/2.2.Kollokasjoner.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -282,14 +305,14 @@
       
       <li><a href="https://hub.sprakbanken.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/NationalLibraryOfNorway/digital_tekstanalyse&urlpath=tree/digital_tekstanalyse/tutorial/2.2.Kollokasjoner.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onJupyterHub"
+   title="Launch on JupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_jupyterhub.svg">
+    <img alt="JupyterHub logo" src="../_static/images/logo_jupyterhub.svg">
   </span>
 <span class="btn__text-container">JupyterHub</span>
 </a>
@@ -300,14 +323,14 @@
       
       <li><a href="https://colab.research.google.com/github/NationalLibraryOfNorway/digital_tekstanalyse/blob/main/tutorial/2.2.Kollokasjoner.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onColab"
+   title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_colab.png">
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
@@ -429,27 +452,19 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -504,9 +519,21 @@ document.write(`
   <p><img alt="resources/images/dhlab-logo-nb.png" src="../_images/dhlab-logo-nb.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dhlab</span> <span class="k">as</span> <span class="nn">dh</span>
-<span class="kn">from</span> <span class="nn">dhlab.api.dhlab_api</span> <span class="kn">import</span> <span class="n">totals</span>
-<span class="kn">import</span> <span class="nn">dhlab.nbtext</span> <span class="k">as</span> <span class="nn">nb</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dh</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dhlab.api.dhlab_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">totals</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">dhlab.nbtext</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dh</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span><span class="w"> </span><span class="nn">dhlab.api.dhlab_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">totals</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">dhlab.nbtext</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;dhlab&#39;
 </pre></div>
 </div>
 </div>
@@ -578,20 +605,20 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>100089441</td>
-      <td>URN:NBN:no-nb_digibok_2012071338024</td>
-      <td>Alt om øl</td>
-      <td>Hillesland , Jan / Åstrøm , Isidor</td>
-      <td>oai:nb.bibsys.no:990317365994702202</td>
-      <td>1781bc777ce7547b91bee5fa6cc51838</td>
-      <td>8202232341</td>
-      <td>[Oslo]</td>
-      <td>20030101</td>
-      <td>2003</td>
-      <td>Cappelen</td>
+      <td>100421311</td>
+      <td>URN:NBN:no-nb_digibok_2020092507567</td>
+      <td>Perfekte viner ! : Norges beste vinkjøp</td>
+      <td>Tennfjord , Ingvild Wedaa</td>
+      <td>oai:nb.bibsys.no:991511440284702202</td>
+      <td>5eb14770961cdcc26b20d9682fa316f4</td>
+      <td></td>
+      <td>Oslo</td>
+      <td>20150101</td>
+      <td>2015</td>
+      <td>Kagge</td>
       <td>nob</td>
-      <td>Beer / Øl / Kulturkunnskap / Historisk framsti...</td>
-      <td>641.23 / 641.23</td>
+      <td></td>
+      <td>641.22 / 641.22</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -600,20 +627,20 @@ document.write(`
     </tr>
     <tr>
       <th>1</th>
-      <td>100420731</td>
-      <td>URN:NBN:no-nb_digibok_2020100107619</td>
-      <td>Gylne dager og dype viner : en mat- og vinreis...</td>
-      <td>Hagerup , Klaus / Oftebro , Nils Ole / Karlsen...</td>
-      <td>oai:nb.bibsys.no:991321024044702202</td>
-      <td>232c473ff14a58d5cf76a99187cf2c14</td>
+      <td>100422891</td>
+      <td>URN:NBN:no-nb_digibok_2020100107551</td>
+      <td>Bobler ! : smaken av fest</td>
+      <td>Tennfjord , Ingvild Wedaa</td>
+      <td>oai:nb.bibsys.no:991421336124702202</td>
+      <td>57c571200828163beca56b8cc9936433</td>
       <td></td>
-      <td>[Oslo]</td>
-      <td>20130101</td>
-      <td>2013</td>
-      <td>Cappelen Damm</td>
+      <td>Oslo</td>
+      <td>20140101</td>
+      <td>2014</td>
+      <td>Kagge</td>
       <td>nob</td>
-      <td>kokebøker / italia / vin</td>
-      <td>641.220945 / 641.22</td>
+      <td>musserende / vin / champagne</td>
+      <td>641.22 / 641.2224</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -654,54 +681,54 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_a2413">
+<table id="T_f9ed8">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_a2413_level0_col0" class="col_heading level0 col0" >link</th>
-      <th id="T_a2413_level0_col1" class="col_heading level0 col1" >concordance</th>
+      <th id="T_f9ed8_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_f9ed8_level0_col1" class="col_heading level0 col1" >concordance</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_a2413_level0_row0" class="row_heading level0 row0" >2</th>
-      <td id="T_a2413_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
-      <td id="T_a2413_row0_col1" class="data row0 col1" >Det er ikke uten grunn at melstekt <b>sei</b> går under betegnelsen seibiff . For seiv om seien er en hvit... </td>
+      <th id="T_f9ed8_level0_row0" class="row_heading level0 row0" >6</th>
+      <td id="T_f9ed8_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
+      <td id="T_f9ed8_row0_col1" class="data row0 col1" >... den enkelte råvare og tilberedningsmetoden det handler om . <b>Sei</b> har en litt tyngre smak , ser litt gråere ut... </td>
     </tr>
     <tr>
-      <th id="T_a2413_level0_row1" class="row_heading level0 row1" >3</th>
-      <td id="T_a2413_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
-      <td id="T_a2413_row1_col1" class="data row1 col1" >... Så skulle ølet " skakast ned " , det vil <b>sei</b> fyllast over på tunna . Då smaka dei gjerne på ølet... </td>
+      <th id="T_f9ed8_level0_row1" class="row_heading level0 row1" >7</th>
+      <td id="T_f9ed8_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
+      <td id="T_f9ed8_row1_col1" class="data row1 col1" >Sjå Løksli de ligg no so fint fram mæ li , no <b>sei</b> dei at Knut vil te Mæland å... </td>
     </tr>
     <tr>
-      <th id="T_a2413_level0_row2" class="row_heading level0 row2" >7</th>
-      <td id="T_a2413_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020120907530'>URN:NBN:no-nb_digibok_2020120907530</a></td>
-      <td id="T_a2413_row2_col1" class="data row2 col1" >Bedales of Borough Market 5 Bedale St , London <b>SEI</b> 9 AL</td>
+      <th id="T_f9ed8_level0_row2" class="row_heading level0 row2" >3</th>
+      <td id="T_f9ed8_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
+      <td id="T_f9ed8_row2_col1" class="data row2 col1" >vin til melstekt <b>sei</b></td>
     </tr>
     <tr>
-      <th id="T_a2413_level0_row3" class="row_heading level0 row3" >1</th>
-      <td id="T_a2413_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
-      <td id="T_a2413_row3_col1" class="data row3 col1" >Sjå Løksli de ligg no so fint fram mæ li , no <b>sei</b> dei at Knut vil te Mæland å... </td>
+      <th id="T_f9ed8_level0_row3" class="row_heading level0 row3" >4</th>
+      <td id="T_f9ed8_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
+      <td id="T_f9ed8_row3_col1" class="data row3 col1" >Det er ikke uten grunn at melstekt <b>sei</b> går under betegnelsen seibiff . For seiv om seien er en hvit... </td>
     </tr>
     <tr>
-      <th id="T_a2413_level0_row4" class="row_heading level0 row4" >4</th>
-      <td id="T_a2413_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
-      <td id="T_a2413_row4_col1" class="data row4 col1" >... den enkelte råvare og tilberedningsmetoden det handler om . <b>Sei</b> har en litt tyngre smak , ser litt gråere ut... </td>
+      <th id="T_f9ed8_level0_row4" class="row_heading level0 row4" >1</th>
+      <td id="T_f9ed8_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018042548149'>URN:NBN:no-nb_digibok_2018042548149</a></td>
+      <td id="T_f9ed8_row4_col1" class="data row4 col1" >... men O HVIT FISK , nesten alt går . <b>Sei</b> , hyse , kolje , kveite , hva som helst... </td>
     </tr>
     <tr>
-      <th id="T_a2413_level0_row5" class="row_heading level0 row5" >0</th>
-      <td id="T_a2413_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
-      <td id="T_a2413_row5_col1" class="data row5 col1" >... Ved Bull Run gik de reint gæli . " " Men <b>sei</b> me no du Jørn , håfør ha med denna krigen... </td>
+      <th id="T_f9ed8_level0_row5" class="row_heading level0 row5" >5</th>
+      <td id="T_f9ed8_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020120907530'>URN:NBN:no-nb_digibok_2020120907530</a></td>
+      <td id="T_f9ed8_row5_col1" class="data row5 col1" >Bedales of Borough Market 5 Bedale St , London <b>SEI</b> 9 AL</td>
     </tr>
     <tr>
-      <th id="T_a2413_level0_row6" class="row_heading level0 row6" >5</th>
-      <td id="T_a2413_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018031548126'>URN:NBN:no-nb_digibok_2018031548126</a></td>
-      <td id="T_a2413_row6_col1" class="data row6 col1" >vin til melstekt <b>sei</b></td>
+      <th id="T_f9ed8_level0_row6" class="row_heading level0 row6" >2</th>
+      <td id="T_f9ed8_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
+      <td id="T_f9ed8_row6_col1" class="data row6 col1" >... Ved Bull Run gik de reint gæli . " " Men <b>sei</b> me no du Jørn , håfør ha med denna krigen... </td>
     </tr>
     <tr>
-      <th id="T_a2413_level0_row7" class="row_heading level0 row7" >6</th>
-      <td id="T_a2413_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2018042548149'>URN:NBN:no-nb_digibok_2018042548149</a></td>
-      <td id="T_a2413_row7_col1" class="data row7 col1" >... men O HVIT FISK , nesten alt går . <b>Sei</b> , hyse , kolje , kveite , hva som helst... </td>
+      <th id="T_f9ed8_level0_row7" class="row_heading level0 row7" >0</th>
+      <td id="T_f9ed8_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2020112407621'>URN:NBN:no-nb_digibok_2020112407621</a></td>
+      <td id="T_f9ed8_row7_col1" class="data row7 col1" >... Så skulle ølet " skakast ned " , det vil <b>sei</b> fyllast over på tunna . Då smaka dei gjerne på ølet... </td>
     </tr>
   </tbody>
 </table>
@@ -1077,23 +1104,23 @@ document.write(`
       <td>...</td>
     </tr>
     <tr>
-      <th>ørret</th>
+      <th>347</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>øvrig</th>
+      <th>36</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>årene</th>
+      <th>4.2</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>året</th>
+      <th>40</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>årgang</th>
+      <th>vår</th>
       <td>1</td>
     </tr>
   </tbody>
@@ -1162,23 +1189,23 @@ document.write(`
       <td>...</td>
     </tr>
     <tr>
-      <th>ørret</th>
+      <th>347</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>øvrig</th>
+      <th>36</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>årene</th>
+      <th>4.2</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>året</th>
+      <th>40</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>årgang</th>
+      <th>vår</th>
       <td>1</td>
     </tr>
   </tbody>
@@ -1555,23 +1582,23 @@ document.write(`
       <td>...</td>
     </tr>
     <tr>
-      <th>småvokste</th>
+      <th>wmfmm</th>
       <td>4.726693e-07</td>
     </tr>
     <tr>
-      <th>smørblomster</th>
+      <th>wå</th>
       <td>4.726693e-07</td>
     </tr>
     <tr>
-      <th>smørbrødmarkedet</th>
+      <th>zombier</th>
       <td>4.726693e-07</td>
     </tr>
     <tr>
-      <th>smørbrødosten</th>
+      <th>vinvanskelig</th>
       <td>4.726693e-07</td>
     </tr>
     <tr>
-      <th>smørbrødsteder</th>
+      <th>visesanger</th>
       <td>4.726693e-07</td>
     </tr>
   </tbody>
@@ -1714,42 +1741,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">27</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Her viser vi de 50 viktigste ordene som er assosiert med rødvin i korpuset vårt, målt mot alle bøker i nb.no </span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">nb</span><span class="o">.</span><span class="n">cloud</span><span class="p">(</span><span class="n">coll_assoc</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">/</span><span class="n">coll_assoc</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-
-<span class="nn">File ~/prosjekter/DHLAB/dhlab/legacy/nbtext.py:1529,</span> in <span class="ni">cloud</span><span class="nt">(df, column, top, width, height, background, file, stretch, font_path)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1527</span>     <span class="n">column</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1528</span> <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">to_json</span><span class="p">())</span>
-<span class="ne">-&gt; </span><span class="mi">1529</span> <span class="n">a_cloud</span> <span class="o">=</span> <span class="n">make_cloud</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1530</span>     <span class="n">data</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1531</span>     <span class="n">top</span><span class="o">=</span><span class="n">top</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1532</span>     <span class="n">background</span><span class="o">=</span><span class="n">background</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1533</span>     <span class="n">font_path</span><span class="o">=</span><span class="n">font_path</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1534</span>     <span class="n">stretch</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">2</span> <span class="o">**</span> <span class="p">(</span><span class="n">stretch</span> <span class="o">*</span> <span class="n">x</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1535</span>     <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1536</span>     <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1537</span> <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1538</span> <span class="n">draw_cloud</span><span class="p">(</span><span class="n">a_cloud</span><span class="p">,</span> <span class="n">fil</span><span class="o">=</span><span class="n">file</span><span class="p">)</span>
-
-<span class="nn">File ~/prosjekter/DHLAB/dhlab/legacy/nbtext.py:1493,</span> in <span class="ni">make_cloud</span><span class="nt">(json_text, top, background, stretch, width, height, font_path)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1491</span> <span class="n">pairs0</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">json_text</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="n">top</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1492</span> <span class="n">pairs</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">stretch</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pairs0</span><span class="p">}</span>
-<span class="ne">-&gt; </span><span class="mi">1493</span> <span class="n">wc</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1494</span>     <span class="n">font_path</span><span class="o">=</span><span class="n">font_path</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1495</span>     <span class="n">background_color</span><span class="o">=</span><span class="n">background</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1496</span>     <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1497</span>     <span class="c1"># color_func=my_colorfunc,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1498</span>     <span class="n">ranks_only</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1499</span>     <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1500</span> <span class="p">)</span><span class="o">.</span><span class="n">generate_from_frequencies</span><span class="p">(</span><span class="n">pairs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1501</span> <span class="k">return</span> <span class="n">wc</span>
-
-<span class="ne">NameError</span>: name &#39;WordCloud&#39; is not defined
-</pre></div>
-</div>
+<img alt="../_images/5f04fcac93727871e5634b797a8f04cc704d9e4ee28b478857fd34ef4669c9c2.png" src="../_images/5f04fcac93727871e5634b797a8f04cc704d9e4ee28b478857fd34ef4669c9c2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1804,7 +1796,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -1832,7 +1824,8 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1909,8 +1902,8 @@ By Nasjonalbiblioteket
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -14,32 +14,46 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=f0c89327" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=d2032c04" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=f0c89327" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/theme.css?v=a243ae73" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/bootstrap.css?v=5340d9b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?v=c786f70d" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -52,18 +66,34 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial/2.0.Bygg_korpus';</script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/language_data.js?v=d4673a71"></script>
+    <script src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/copybutton_funcs.js?v=776a791e"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/searchtools.js?v=d24376de"></script>
+    <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?v=95180707"></script>
+    <script src="../_static/scripts/pydata-sphinx-theme.js?v=b2908668"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/scripts/bootstrap.js?v=3d67b3b1"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1.4. Konkordanser" href="2.1.Konkordans.html" />
     <link rel="prev" title="1.2. Oppstart" href="1.0.Oppstart.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -71,31 +101,16 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -103,7 +118,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,10 +125,15 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -123,7 +142,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -138,6 +158,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../README.html">
   
@@ -151,21 +173,17 @@
     
     
     <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="DH-lab dokumenter - Home"/>
-    <script>document.write(`<img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark" alt="DH-lab dokumenter - Home"/>`);</script>
+    <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark pst-js-only" alt="DH-lab dokumenter - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -181,7 +199,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Kodeeksempler–Python</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../tutorial.html">1. Læringseksempler</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../tutorial.html">1. Læringseksempler</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="1.0.Oppstart.html">1.2. Oppstart</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">1.3. Korpus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.1.Konkordans.html">1.4. Konkordanser</a></li>
@@ -195,13 +213,13 @@
 <li class="toctree-l2"><a class="reference internal" href="3.2.dispersion.html">1.12. Ordfordeling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.0.experiment.html">1.13. Eksperimentelle tjenester</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook.html">2. Kokebøker</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook.html">2. Kokebøker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/4.0.sentiment_analysis_timeseries.html">2.1. Sentimentanalyse i aviskorpus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/4.1.topic_modelling_with_LDA.html">2.2. Topic modelling med gensim og dhlab</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/4.2.natbib_query.html">2.3. Søk Nasjonalbibliografiens metadata med dhlab</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Demoer</span></p>
 <ul class="nav bd-sidenav">
@@ -214,14 +232,19 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -230,14 +253,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -262,14 +285,14 @@
       
       <li><a href="https://mybinder.org/v2/gh/NationalLibraryOfNorway/digital_tekstanalyse/main?urlpath=tree/tutorial/2.0.Bygg_korpus.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -280,14 +303,14 @@
       
       <li><a href="https://hub.sprakbanken.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/NationalLibraryOfNorway/digital_tekstanalyse&urlpath=tree/digital_tekstanalyse/tutorial/2.0.Bygg_korpus.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onJupyterHub"
+   title="Launch on JupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_jupyterhub.svg">
+    <img alt="JupyterHub logo" src="../_static/images/logo_jupyterhub.svg">
   </span>
 <span class="btn__text-container">JupyterHub</span>
 </a>
@@ -298,14 +321,14 @@
       
       <li><a href="https://colab.research.google.com/github/NationalLibraryOfNorway/digital_tekstanalyse/blob/main/tutorial/2.0.Bygg_korpus.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onColab"
+   title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_colab.png">
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
@@ -427,27 +450,19 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -502,8 +517,20 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importer bibliotekene</span>
-<span class="kn">import</span> <span class="nn">dhlab</span> <span class="k">as</span> <span class="nn">dh</span> <span class="c1"># dhlab inneholder Corpus og andre nyttige funksjoner</span>
-<span class="kn">import</span> <span class="nn">dhlab.nbtext</span> <span class="k">as</span> <span class="nn">nb</span> <span class="c1"># Tekstverktøy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dh</span> <span class="c1"># dhlab inneholder Corpus og andre nyttige funksjoner</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">dhlab.nbtext</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span> <span class="c1"># Tekstverktøy</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Importer bibliotekene</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dh</span> <span class="c1"># dhlab inneholder Corpus og andre nyttige funksjoner</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">dhlab.nbtext</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span> <span class="c1"># Tekstverktøy</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;dhlab&#39;
 </pre></div>
 </div>
 </div>
@@ -638,43 +665,43 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>100289474</td>
-      <td>URN:NBN:no-nb_digibok_2016040508206</td>
-      <td>Forfatterne møter Kierkegaard</td>
-      <td>Sæterbakken , Stig / Dahle , Gro / Ørstavik , ...</td>
-      <td>oai:nb.bibsys.no:991313581624702202</td>
-      <td>daeb5dd26d62e6f0f148ebb2b39f350b</td>
-      <td></td>
-      <td>Oslo</td>
-      <td>20130101</td>
-      <td>2013</td>
-      <td>Forl. Press</td>
-      <td>mul / nob / dan</td>
-      <td>Resepsjon / Eksistensialisme / Nordmenn / Forf...</td>
-      <td>198.9 / 198.9 / 198.9 / 198.9092 / 198.9</td>
-      <td></td>
-      <td>Faglitteratur</td>
+      <td>100093627</td>
+      <td>URN:NBN:no-nb_digibok_2012062806027</td>
+      <td>Drama med Hilde</td>
+      <td>Hjorth , Vigdis</td>
+      <td>oai:nb.bibsys.no:998721014364702202</td>
+      <td>aaf187b65b89076390806e9af57e2085</td>
+      <td>8257405663 / 8202111013</td>
+      <td>[Oslo]</td>
+      <td>19870101</td>
+      <td>1987</td>
+      <td>Cappelen</td>
+      <td>nob</td>
+      <td>skjønnlitteratur/voksen / romaner</td>
+      <td>839.82 / 839.823</td>
+      <td>fiction</td>
+      <td>Skjønnlitteratur</td>
       <td>digibok</td>
       <td>nb</td>
       <td>20060101</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>100223880</td>
-      <td>URN:NBN:no-nb_digibok_2014090408133</td>
-      <td>Skal vi være venner ?</td>
-      <td>Vestly , Anne-Cath . / Nilsson-Brännström , Mo...</td>
-      <td>oai:nb.bibsys.no:990210682594702202</td>
-      <td>86868653012e01a7ce61f4c491a0aa8a</td>
-      <td>8252542948</td>
+      <td>100598358</td>
+      <td>URN:NBN:no-nb_digibok_2021110548154</td>
+      <td>Noveller i utvalg</td>
+      <td>Ditlevsen , Tove / Hjorth , Vigdis / Hjorth , ...</td>
+      <td>oai:nb.bibsys.no:999919973296202202</td>
+      <td>e775432809d4a756481b21f03e86814f</td>
+      <td></td>
       <td>Oslo</td>
-      <td>20020101</td>
-      <td>2002</td>
-      <td>Bokklubbens barn</td>
-      <td>nob</td>
-      <td>vennskap / barnebøker / fortellinger</td>
+      <td>2019</td>
+      <td>2019</td>
+      <td>Oktober</td>
+      <td>nob / dan</td>
       <td></td>
-      <td></td>
+      <td>839.81374</td>
+      <td>short story / text</td>
       <td>Uklassifisert</td>
       <td>digibok</td>
       <td>nb</td>
@@ -682,21 +709,21 @@ document.write(`
     </tr>
     <tr>
       <th>2</th>
-      <td>100216983</td>
-      <td>URN:NBN:no-nb_digibok_2014070705108</td>
-      <td>Pelle-Ragnar i den gule gården</td>
-      <td>Hjorth , Vigdis / Bøhn , Ingun</td>
-      <td>oai:nb.bibsys.no:998330735084702202</td>
-      <td>25deb70709965adac728a0548df02349</td>
-      <td>8202097576</td>
-      <td>[Oslo]</td>
-      <td>19830101</td>
-      <td>1983</td>
-      <td>Cappelen</td>
+      <td>100421703</td>
+      <td>URN:NBN:no-nb_digibok_2020101909013</td>
+      <td>Arv og miljø</td>
+      <td>Horn , Kjersti / Hjorth , Vigdis / Strømskag ,...</td>
+      <td>oai:nb.bibsys.no:999919980996802202</td>
+      <td>56a5bda1a8c654ff705e17912c7c0974</td>
+      <td></td>
+      <td>[Bergen]</td>
+      <td>20180101</td>
+      <td>2018</td>
+      <td>DNS</td>
       <td>nob</td>
-      <td>barnebøker / flytting / skjønnlitteratur</td>
-      <td>839.823</td>
-      <td>fiction</td>
+      <td></td>
+      <td>792.92</td>
+      <td>drama</td>
       <td>Skjønnlitteratur</td>
       <td>digibok</td>
       <td>nb</td>
@@ -759,20 +786,20 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>100281890</td>
-      <td>URN:NBN:no-nb_digibok_2009080504024</td>
-      <td>Jernaldernaust på Vestvågøy i Lofoten</td>
-      <td>Nilsen , Gørill</td>
-      <td>oai:nb.bibsys.no:999804227954702202</td>
-      <td>70720140157808e4d566b8009cba9813</td>
+      <td>100168555</td>
+      <td>URN:NBN:no-nb_digibok_2013092006059</td>
+      <td>Nessekongene : [ de store handelsdynastiene i ...</td>
+      <td>Alsvik , Hans Chr . / Knutsen , Nils M.</td>
+      <td>oai:nb.bibsys.no:998830788994702202</td>
+      <td>b8cc4cb96de22a8d1da58d66b0de4006</td>
+      <td>8205162999</td>
       <td></td>
-      <td></td>
-      <td>19980101</td>
-      <td>1998</td>
-      <td>Institutt for arkeologi, Det samfunnsvitenskap...</td>
+      <td>19880101</td>
+      <td>1988</td>
+      <td>Gyldendal</td>
       <td>nob</td>
-      <td>Naust / Jernalder / Funn / Båter / Fiske / nor...</td>
-      <td>948.4454 / 725.34</td>
+      <td>Handelssteder / Norge / Handel / Fiske / Fiske...</td>
+      <td>381.1094843 / 948.43</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -781,20 +808,20 @@ document.write(`
     </tr>
     <tr>
       <th>1</th>
-      <td>100401640</td>
-      <td>URN:NBN:no-nb_digibok_2009101900012</td>
-      <td>Mandal bys historie . B. 1-2 B. 2 : Den førind...</td>
-      <td>Eliassen , Finn-Einar</td>
-      <td>oai:nb.bibsys.no:999610861654702202</td>
-      <td>3f6b164b785fefd4820c15c2d8079b72</td>
-      <td>8299025613</td>
+      <td>100060623</td>
+      <td>URN:NBN:no-nb_digibok_2011101908102</td>
+      <td>Kystbygdene i Sogn og Fjordane : frå 1700-tale...</td>
+      <td>Førsund , Finn Borgen</td>
+      <td>oai:nb.bibsys.no:998641788084702202</td>
+      <td>4f965dd5e0de2594dd222118e385e861</td>
       <td></td>
-      <td>19950101</td>
-      <td>1995</td>
-      <td>Mandal kommune</td>
-      <td>nob</td>
-      <td>Norge / Byhistorie / Historie / Lokalhistorie ...</td>
-      <td>948.3222 / 948.3222</td>
+      <td></td>
+      <td>19860101</td>
+      <td>1986</td>
+      <td></td>
+      <td>nno</td>
+      <td>Norge / kystkultur / Lokalhistorie / sogn / fj...</td>
+      <td>948.38 / 948.38</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -803,20 +830,20 @@ document.write(`
     </tr>
     <tr>
       <th>2</th>
-      <td>100016272</td>
-      <td>URN:NBN:no-nb_digibok_2010100603053</td>
-      <td>Glommaguiden : en fiskeguide for Glomma og Ren...</td>
-      <td>Ljøstad , O. T. / Andersen , Kari / Ljøstad , ...</td>
-      <td>oai:nb.bibsys.no:999907360754702202</td>
-      <td>8d9ce145d0f973f96437b03570e4195a</td>
-      <td>8299485509</td>
-      <td></td>
-      <td>19990101</td>
-      <td>1999</td>
-      <td>O.T. Ljøstad</td>
-      <td>mul / nob / eng</td>
-      <td>fiske / friluftsliv / sportsfiske / østlandet ...</td>
-      <td>799.1 / 914.82</td>
+      <td>100321116</td>
+      <td>URN:NBN:no-nb_digibok_2017010448185</td>
+      <td>Mausund : vedlikehold og endring i et norsk fi...</td>
+      <td>Kristiansen , Aslak</td>
+      <td>oai:nb.bibsys.no:998660077414702202</td>
+      <td>b39d7b9c0a4569c645e30a33b93d2766</td>
+      <td>8200077381</td>
+      <td>Tromsø</td>
+      <td>19850101</td>
+      <td>1985</td>
+      <td>Universitetsforlaget</td>
+      <td>nob</td>
+      <td>sosialantropologi / fiske / fiskevær / Mausund...</td>
+      <td>306.094841 / 948.948.4112</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -876,63 +903,63 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>86</th>
-      <td>100140845</td>
-      <td>URN:NBN:no-nb_digibok_2009051504007</td>
-      <td>Kontorautomasjon</td>
-      <td>Grøstad , Evy Opsahl / Utengen , Inger-Kari</td>
-      <td>oai:nb.bibsys.no:999310751494702202</td>
-      <td>34002bac73068b1d39f30d56c2d24d61</td>
-      <td>8200409066</td>
-      <td>Oslo</td>
-      <td>19930101</td>
-      <td>1993</td>
-      <td>Universitetsforlaget</td>
+      <th>8</th>
+      <td>100573078</td>
+      <td>URN:NBN:no-nb_digibok_2010040803058</td>
+      <td>Vi valgte det vi ikke kjente : norske krigsdel...</td>
+      <td>Skartveit , Andreas</td>
+      <td>oai:nb.bibsys.no:999506090994702202</td>
+      <td>d9fd6f3fc5997ab5088de8704fb53917</td>
+      <td>8203290590</td>
+      <td></td>
+      <td>19950101</td>
+      <td>1995</td>
+      <td>Forum</td>
+      <td>nob</td>
+      <td>Motstandsbevegelser / Andre verdenskrig / okku...</td>
+      <td>940.548 / 948.104 / 948.1053</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>100391927</td>
+      <td>URN:NBN:no-nb_digibok_2018103007177</td>
+      <td>Redaktøren : festskrift til Thor Bjarne Bore</td>
+      <td>Hetland , Tom</td>
+      <td>oai:nb.bibsys.no:999917649604702202</td>
+      <td>3a4d5a37bf8b92e7864b17f166d6b922</td>
+      <td>8299083273</td>
+      <td></td>
+      <td>19990101</td>
+      <td>1999</td>
+      <td>Stavanger aftenblad</td>
+      <td>mul / nob / nno / swe</td>
+      <td>stavanger / aftenblad / redaktører / festskrif...</td>
+      <td>070</td>
+      <td>festschrift</td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>100597652</td>
+      <td>URN:NBN:no-nb_digibok_2021122148591</td>
+      <td>Sosialdemokratiet i Sverige mot år 2000 : et k...</td>
+      <td>Nesje, Elisabeth</td>
+      <td>oai:nb.bibsys.no:999727919654702202</td>
+      <td>f3940dea633d69a7bc8af8ae43400637</td>
+      <td></td>
+      <td>Bergen</td>
+      <td>1997</td>
+      <td>1997</td>
+      <td>LOS-senteret</td>
       <td>nob</td>
       <td></td>
       <td></td>
       <td></td>
       <td>Uklassifisert</td>
-      <td>digibok</td>
-    </tr>
-    <tr>
-      <th>53</th>
-      <td>100066637</td>
-      <td>URN:NBN:no-nb_digibok_2008012904052</td>
-      <td>Det Kollektive eventyr : en bok om Norge, Euro...</td>
-      <td>Jensen , Axel</td>
-      <td>oai:nb.bibsys.no:999423074024702202</td>
-      <td>385a88e098cfa8b3eab8c5c46bbcd86f</td>
-      <td>8203260527</td>
-      <td></td>
-      <td>19940101</td>
-      <td>1994</td>
-      <td>Aschehoug</td>
-      <td>nob</td>
-      <td>europa / europeisk / fellesskap / eu / folkere...</td>
-      <td>341.24</td>
-      <td></td>
-      <td>Faglitteratur</td>
-      <td>digibok</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>100659155</td>
-      <td>URN:NBN:no-nb_digibok_2022101448072</td>
-      <td>Att förstå Europa : mångfald och sammanhang : ...</td>
-      <td>Gren-Eklund, Gunilla</td>
-      <td>oai:nb.bibsys.no:999614156574702202</td>
-      <td>5eae0227c0bd4fdb37cf903da9147c28</td>
-      <td>9150611585</td>
-      <td></td>
-      <td>1996</td>
-      <td>1996</td>
-      <td>Uppsala universitet</td>
-      <td>swe</td>
-      <td>Humanisme / Minoriteter / europa / historie</td>
-      <td>940</td>
-      <td>conference publication</td>
-      <td>Faglitteratur</td>
       <td>digibok</td>
     </tr>
   </tbody>
@@ -988,63 +1015,63 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>25</th>
-      <td>100317220</td>
-      <td>URN:NBN:no-nb_digibok_2016112908134</td>
-      <td>Hvem drepte?</td>
-      <td>Armstrong , Charlotte / Torgersen , Einar</td>
-      <td>oai:nb.bibsys.no:990302341904702202</td>
-      <td>999c657a27b3a3214802b4d66fdc09d6</td>
-      <td></td>
+      <th>18</th>
+      <td>100295777</td>
+      <td>URN:NBN:no-nb_digibok_2016052508037</td>
+      <td>English in practice : Norwegian texts for tran...</td>
+      <td>Holtedahl , Wendy</td>
+      <td>oai:nb.bibsys.no:998030052454702202</td>
+      <td>e200cadfa58ec3f96399e7b431869521</td>
+      <td>8202017173</td>
       <td>Oslo</td>
-      <td>19600101</td>
-      <td>1960</td>
-      <td>Green</td>
-      <td>nob / eng</td>
+      <td>19790101</td>
+      <td>1979</td>
+      <td>Cappelen</td>
+      <td>mul / eng / nob</td>
+      <td>Norsk språk / Oversettelse / Engelsk språk / e...</td>
       <td></td>
-      <td>813</td>
-      <td>fiction</td>
-      <td>Skjønnlitteratur</td>
+      <td></td>
+      <td>Faglitteratur</td>
       <td>digibok</td>
     </tr>
     <tr>
-      <th>14</th>
-      <td>100003140</td>
-      <td>URN:NBN:no-nb_digibok_2007032701077</td>
-      <td>Norge rundt med Booken</td>
-      <td>Solheim , John</td>
-      <td>oai:nb.bibsys.no:999428646544702202</td>
-      <td>a8988a78c579ccdaaec3b83595d3d2cc</td>
+      <th>85</th>
+      <td>100402924</td>
+      <td>URN:NBN:no-nb_digibok_2009020204148</td>
+      <td>Wir gehen weiter : lesebok for andre års tysko...</td>
+      <td>Ericsson , Eie / Eisenberg , Christian / Lange...</td>
+      <td>oai:nb.bibsys.no:990618909104702202</td>
+      <td>afca1f955738ff5b5c47ead1118def64</td>
       <td></td>
       <td>Oslo</td>
-      <td>19620101</td>
-      <td>1962</td>
+      <td>19710101</td>
+      <td>1971</td>
       <td>Aschehoug</td>
-      <td>nob</td>
+      <td>ger</td>
       <td></td>
-      <td>920</td>
       <td></td>
-      <td>Faglitteratur</td>
+      <td></td>
+      <td>Uklassifisert</td>
       <td>digibok</td>
     </tr>
     <tr>
-      <th>23</th>
-      <td>100282539</td>
-      <td>URN:NBN:no-nb_digibok_2016021609013</td>
-      <td>Gateorienteringsløp : en idrettsfysiologisk un...</td>
-      <td>Gjerset , Asbjørn / Strømme , Sigmund B.</td>
-      <td>oai:nb.bibsys.no:998220152264702202</td>
-      <td>0b88c23b9371c38afc9f73b10907c88e</td>
-      <td>8250200292</td>
-      <td>Oslo</td>
-      <td>19740101</td>
-      <td>1974</td>
+      <th>75</th>
+      <td>100506641</td>
+      <td>URN:NBN:no-nb_digibok_2012031908124</td>
+      <td>Europa i etterkrigstiden : 9. klasse</td>
+      <td>Jensen , Ronald</td>
+      <td>oai:nb.bibsys.no:990515305114702202</td>
+      <td>62c555c800240aeb3c5dfbdb5c1cf591</td>
       <td></td>
+      <td>[Oslo]</td>
+      <td>19730101</td>
+      <td>1973</td>
+      <td>Bryne</td>
       <td>nob</td>
-      <td>orienteringssport / orientering / fysiologi</td>
-      <td>796.5 / 612.04</td>
       <td></td>
-      <td>Faglitteratur</td>
+      <td></td>
+      <td></td>
+      <td>Uklassifisert</td>
       <td>digibok</td>
     </tr>
   </tbody>
@@ -1103,15 +1130,15 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>203787798</td>
-      <td>URN:NBN:no-nb_digavis_andoyposten_null_null_20...</td>
-      <td>andoyposten</td>
+      <td>201569962</td>
+      <td>URN:NBN:no-nb_digavis_sognavis_null_null_20061...</td>
+      <td>sognavis</td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
-      <td>20060629</td>
+      <td>Sogndal</td>
+      <td>20061014</td>
       <td>2006</td>
       <td></td>
       <td></td>
@@ -1125,15 +1152,15 @@ document.write(`
     </tr>
     <tr>
       <th>1</th>
-      <td>203851091</td>
-      <td>URN:NBN:no-nb_digavis_romsdalsbudstikke_null_n...</td>
-      <td>romsdalsbudstikke</td>
+      <td>201667798</td>
+      <td>URN:NBN:no-nb_digavis_sunnmorsposten_null_null...</td>
+      <td>sunnmorsposten</td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
-      <td>20060907</td>
+      <td>Ålesund</td>
+      <td>20061220</td>
       <td>2006</td>
       <td></td>
       <td></td>
@@ -1147,15 +1174,15 @@ document.write(`
     </tr>
     <tr>
       <th>2</th>
-      <td>202139539</td>
-      <td>URN:NBN:no-nb_digavis_demokraten_null_null_200...</td>
-      <td>demokraten</td>
+      <td>200269484</td>
+      <td>URN:NBN:no-nb_digavis_budstikkaforaskerogb_nul...</td>
+      <td>budstikkaforaskerogb</td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>Fredrikstad</td>
-      <td>20060925</td>
+      <td>Asker</td>
+      <td>20061206</td>
       <td>2006</td>
       <td></td>
       <td></td>
@@ -1225,20 +1252,20 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>100417939</td>
-      <td>URN:NBN:no-nb_digibok_2020040107019</td>
-      <td>Rondane : fjellfolk og villrein</td>
-      <td>Jordhøy , Per</td>
-      <td>oai:nb.bibsys.no:991322662614702202</td>
-      <td>44acad31ad546e5bd297feab47a5852b</td>
+      <td>100472261</td>
+      <td>URN:NBN:no-nb_digibok_2010032307035</td>
+      <td>I villreinens rike : Setesdal Vesthei , Ryfylk...</td>
+      <td>Frøstrup , Johan Christian / Bang-Andersen , S...</td>
+      <td>oai:nb.bibsys.no:990001151004702202</td>
+      <td>d6e1d58a454d2c15b44d9a225d948c1d</td>
+      <td>8291495149</td>
       <td></td>
-      <td></td>
-      <td>20130101</td>
-      <td>2013</td>
-      <td>Snøhetta forl.</td>
-      <td>nno</td>
-      <td>fjell / reindrift / reindriftslandskap / Norge...</td>
-      <td>599.65 / 948.25</td>
+      <td>19990101</td>
+      <td>1999</td>
+      <td>Friluftsforl.</td>
+      <td>nob</td>
+      <td>Rein / Jakt / Landskap / Lokalhistorie / Reind...</td>
+      <td>948.3 / 799.2765</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -1247,50 +1274,6 @@ document.write(`
     </tr>
     <tr>
       <th>1</th>
-      <td>100388575</td>
-      <td>URN:NBN:no-nb_digibok_2018090407010</td>
-      <td>Landet bakom</td>
-      <td>Johansen , Dag Ove</td>
-      <td>oai:nb.bibsys.no:991431678204702202</td>
-      <td>0262f5f99f6bdb2e664172e04aaa7bf2</td>
-      <td></td>
-      <td>Rognan</td>
-      <td>20140101</td>
-      <td>2014</td>
-      <td>Bondes forl.</td>
-      <td>nob</td>
-      <td>Emigrasjon / Fra Norge / Emigrasjon / Fra Norg...</td>
-      <td>979.80049457 / 979.8 / 979.8004945</td>
-      <td></td>
-      <td>Faglitteratur</td>
-      <td>digibok</td>
-      <td>nb</td>
-      <td>20060101</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>100394510</td>
-      <td>URN:NBN:no-nb_digibok_2019072907112</td>
-      <td>Levangerhistorier</td>
-      <td>Brendalsmo , Jan / Stylegar , Frans-Arne</td>
-      <td>oai:nb.bibsys.no:991334499984702202</td>
-      <td>3ee1caf1854cece47e45e1fdb5de8652</td>
-      <td></td>
-      <td></td>
-      <td>20130101</td>
-      <td>2013</td>
-      <td>Novus</td>
-      <td>mul / nob / nno / swe</td>
-      <td>byer / byhistorie / markedsplasser / samer / g...</td>
-      <td>948.4213 / 948.4213 / 948.4213</td>
-      <td>biography</td>
-      <td>Faglitteratur</td>
-      <td>digibok</td>
-      <td>nb</td>
-      <td>20060101</td>
-    </tr>
-    <tr>
-      <th>3</th>
       <td>100365971</td>
       <td>URN:NBN:no-nb_digibok_2018030248103</td>
       <td>Om sørsamisk historie : foredrag fra seminar p...</td>
@@ -1312,21 +1295,65 @@ document.write(`
       <td>20060101</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>100472261</td>
-      <td>URN:NBN:no-nb_digibok_2010032307035</td>
-      <td>I villreinens rike : Setesdal Vesthei , Ryfylk...</td>
-      <td>Frøstrup , Johan Christian / Bang-Andersen , S...</td>
-      <td>oai:nb.bibsys.no:990001151004702202</td>
-      <td>d6e1d58a454d2c15b44d9a225d948c1d</td>
-      <td>8291495149</td>
+      <th>2</th>
+      <td>100391168</td>
+      <td>URN:NBN:no-nb_digibok_2018090607007</td>
+      <td>Iellemvuoge : boatsojæládus , varresvuohta ja ...</td>
+      <td>Andreassen , Lars Magne / Skarvik , Line Meret...</td>
+      <td>oai:nb.bibsys.no:991302805424702202</td>
+      <td>bca392a9fb639d273924d4aa7f622e82</td>
       <td></td>
-      <td>19990101</td>
-      <td>1999</td>
-      <td>Friluftsforl.</td>
+      <td></td>
+      <td>20120101</td>
+      <td>2012</td>
+      <td>Árran julevsáme guovdásj</td>
+      <td>mul / nob / smj / swe</td>
+      <td>Reindrift / Forskning og etikk / Helse / Histo...</td>
+      <td>636.2 / 948</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>100396443</td>
+      <td>URN:NBN:no-nb_digibok_2019112807031</td>
+      <td>Redningsmenn og lykkejegere : norske pionerer ...</td>
+      <td>Andersen , Roy</td>
+      <td>oai:nb.bibsys.no:991218310354702202</td>
+      <td>272f96f88d3358cf9c7dba5a4bb397e3</td>
+      <td></td>
+      <td>Oslo</td>
+      <td>20120101</td>
+      <td>2012</td>
+      <td>Aschehoug</td>
       <td>nob</td>
-      <td>Rein / Jakt / Landskap / Lokalhistorie / Reind...</td>
-      <td>948.3 / 799.2765</td>
+      <td>Emigrasjon / Fra Norge / Reindrift / Historie ...</td>
+      <td>979.8 / 979</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>100204423</td>
+      <td>URN:NBN:no-nb_digibok_2014050706037</td>
+      <td>Redningsmenn og lykkejegere : norske pionerer ...</td>
+      <td>Andersen , Roy</td>
+      <td>oai:nb.bibsys.no:991027951184702202</td>
+      <td>114a3c37757f0a13bcd1a8f9e1cd1fd6</td>
+      <td></td>
+      <td>Oslo</td>
+      <td>20110101</td>
+      <td>2011</td>
+      <td>Aschehoug</td>
+      <td>nob</td>
+      <td>Reindrift / Historie / Emigrasjon / Fra Norge ...</td>
+      <td>979.8 / 979.8 / 979.8 / 979</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -1463,20 +1490,20 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>100417939</td>
-      <td>URN:NBN:no-nb_digibok_2020040107019</td>
-      <td>Rondane : fjellfolk og villrein</td>
-      <td>Jordhøy , Per</td>
-      <td>oai:nb.bibsys.no:991322662614702202</td>
-      <td>44acad31ad546e5bd297feab47a5852b</td>
+      <td>100472261</td>
+      <td>URN:NBN:no-nb_digibok_2010032307035</td>
+      <td>I villreinens rike : Setesdal Vesthei , Ryfylk...</td>
+      <td>Frøstrup , Johan Christian / Bang-Andersen , S...</td>
+      <td>oai:nb.bibsys.no:990001151004702202</td>
+      <td>d6e1d58a454d2c15b44d9a225d948c1d</td>
+      <td>8.291495e+09</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>20130101</td>
-      <td>2013</td>
-      <td>Snøhetta forl.</td>
-      <td>nno</td>
-      <td>fjell / reindrift / reindriftslandskap / Norge...</td>
-      <td>599.65 / 948.25</td>
+      <td>19990101</td>
+      <td>1999</td>
+      <td>Friluftsforl.</td>
+      <td>nob</td>
+      <td>Rein / Jakt / Landskap / Lokalhistorie / Reind...</td>
+      <td>948.3 / 799.2765</td>
       <td>NaN</td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -1485,50 +1512,6 @@ document.write(`
     </tr>
     <tr>
       <th>1</th>
-      <td>100388575</td>
-      <td>URN:NBN:no-nb_digibok_2018090407010</td>
-      <td>Landet bakom</td>
-      <td>Johansen , Dag Ove</td>
-      <td>oai:nb.bibsys.no:991431678204702202</td>
-      <td>0262f5f99f6bdb2e664172e04aaa7bf2</td>
-      <td>NaN</td>
-      <td>Rognan</td>
-      <td>20140101</td>
-      <td>2014</td>
-      <td>Bondes forl.</td>
-      <td>nob</td>
-      <td>Emigrasjon / Fra Norge / Emigrasjon / Fra Norg...</td>
-      <td>979.80049457 / 979.8 / 979.8004945</td>
-      <td>NaN</td>
-      <td>Faglitteratur</td>
-      <td>digibok</td>
-      <td>nb</td>
-      <td>20060101</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>100394510</td>
-      <td>URN:NBN:no-nb_digibok_2019072907112</td>
-      <td>Levangerhistorier</td>
-      <td>Brendalsmo , Jan / Stylegar , Frans-Arne</td>
-      <td>oai:nb.bibsys.no:991334499984702202</td>
-      <td>3ee1caf1854cece47e45e1fdb5de8652</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>20130101</td>
-      <td>2013</td>
-      <td>Novus</td>
-      <td>mul / nob / nno / swe</td>
-      <td>byer / byhistorie / markedsplasser / samer / g...</td>
-      <td>948.4213 / 948.4213 / 948.4213</td>
-      <td>biography</td>
-      <td>Faglitteratur</td>
-      <td>digibok</td>
-      <td>nb</td>
-      <td>20060101</td>
-    </tr>
-    <tr>
-      <th>3</th>
       <td>100365971</td>
       <td>URN:NBN:no-nb_digibok_2018030248103</td>
       <td>Om sørsamisk historie : foredrag fra seminar p...</td>
@@ -1550,21 +1533,65 @@ document.write(`
       <td>20060101</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>100472261</td>
-      <td>URN:NBN:no-nb_digibok_2010032307035</td>
-      <td>I villreinens rike : Setesdal Vesthei , Ryfylk...</td>
-      <td>Frøstrup , Johan Christian / Bang-Andersen , S...</td>
-      <td>oai:nb.bibsys.no:990001151004702202</td>
-      <td>d6e1d58a454d2c15b44d9a225d948c1d</td>
-      <td>8.291495e+09</td>
+      <th>2</th>
+      <td>100391168</td>
+      <td>URN:NBN:no-nb_digibok_2018090607007</td>
+      <td>Iellemvuoge : boatsojæládus , varresvuohta ja ...</td>
+      <td>Andreassen , Lars Magne / Skarvik , Line Meret...</td>
+      <td>oai:nb.bibsys.no:991302805424702202</td>
+      <td>bca392a9fb639d273924d4aa7f622e82</td>
       <td>NaN</td>
-      <td>19990101</td>
-      <td>1999</td>
-      <td>Friluftsforl.</td>
+      <td>NaN</td>
+      <td>20120101</td>
+      <td>2012</td>
+      <td>Árran julevsáme guovdásj</td>
+      <td>mul / nob / smj / swe</td>
+      <td>Reindrift / Forskning og etikk / Helse / Histo...</td>
+      <td>636.2 / 948</td>
+      <td>NaN</td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>100396443</td>
+      <td>URN:NBN:no-nb_digibok_2019112807031</td>
+      <td>Redningsmenn og lykkejegere : norske pionerer ...</td>
+      <td>Andersen , Roy</td>
+      <td>oai:nb.bibsys.no:991218310354702202</td>
+      <td>272f96f88d3358cf9c7dba5a4bb397e3</td>
+      <td>NaN</td>
+      <td>Oslo</td>
+      <td>20120101</td>
+      <td>2012</td>
+      <td>Aschehoug</td>
       <td>nob</td>
-      <td>Rein / Jakt / Landskap / Lokalhistorie / Reind...</td>
-      <td>948.3 / 799.2765</td>
+      <td>Emigrasjon / Fra Norge / Reindrift / Historie ...</td>
+      <td>979.8 / 979</td>
+      <td>NaN</td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>100204423</td>
+      <td>URN:NBN:no-nb_digibok_2014050706037</td>
+      <td>Redningsmenn og lykkejegere : norske pionerer ...</td>
+      <td>Andersen , Roy</td>
+      <td>oai:nb.bibsys.no:991027951184702202</td>
+      <td>114a3c37757f0a13bcd1a8f9e1cd1fd6</td>
+      <td>NaN</td>
+      <td>Oslo</td>
+      <td>20110101</td>
+      <td>2011</td>
+      <td>Aschehoug</td>
+      <td>nob</td>
+      <td>Reindrift / Historie / Emigrasjon / Fra Norge ...</td>
+      <td>979.8 / 979.8 / 979.8 / 979</td>
       <td>NaN</td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -1816,7 +1843,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -1844,7 +1871,8 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1916,8 +1944,8 @@ By Nasjonalbiblioteket
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

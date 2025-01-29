@@ -14,32 +14,46 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=f0c89327" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=d2032c04" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=f0c89327" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/theme.css?v=a243ae73" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/bootstrap.css?v=5340d9b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?v=c786f70d" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -52,18 +66,34 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'bibliography/bibliography';</script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/language_data.js?v=d4673a71"></script>
+    <script src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/copybutton_funcs.js?v=776a791e"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/searchtools.js?v=d24376de"></script>
+    <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?v=95180707"></script>
+    <script src="../_static/scripts/pydata-sphinx-theme.js?v=b2908668"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/scripts/bootstrap.js?v=3d67b3b1"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1. Læringseksempler" href="../tutorial.html" />
     <link rel="prev" title="DHLAB" href="../README.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -71,31 +101,16 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -103,7 +118,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,10 +125,15 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -123,7 +142,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -138,6 +158,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../README.html">
   
@@ -151,21 +173,17 @@
     
     
     <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="DH-lab dokumenter - Home"/>
-    <script>document.write(`<img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark" alt="DH-lab dokumenter - Home"/>`);</script>
+    <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark pst-js-only" alt="DH-lab dokumenter - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -181,7 +199,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Kodeeksempler–Python</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../tutorial.html">1. Læringseksempler</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tutorial.html">1. Læringseksempler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tutorial/1.0.Oppstart.html">1.2. Oppstart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorial/2.0.Bygg_korpus.html">1.3. Korpus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorial/2.1.Konkordans.html">1.4. Konkordanser</a></li>
@@ -195,13 +213,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../tutorial/3.2.dispersion.html">1.12. Ordfordeling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorial/4.0.experiment.html">1.13. Eksperimentelle tjenester</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook.html">2. Kokebøker</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook.html">2. Kokebøker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/4.0.sentiment_analysis_timeseries.html">2.1. Sentimentanalyse i aviskorpus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/4.1.topic_modelling_with_LDA.html">2.2. Topic modelling med gensim og dhlab</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/4.2.natbib_query.html">2.3. Søk Nasjonalbibliografiens metadata med dhlab</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Demoer</span></p>
 <ul class="nav bd-sidenav">
@@ -214,14 +232,19 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -230,14 +253,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -360,24 +383,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 
 </div></div>
       
@@ -406,31 +421,63 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="dh-lab-bibliografi">
 <h1>DH-lab bibliografi<a class="headerlink" href="#dh-lab-bibliografi" title="Link to this heading">#</a></h1>
 <p><em>Sortert ny –&gt; gammel</em></p>
-<p>Bastiansen, Henrik G. 2023. Når fortiden blir digital: medier, kilder og historie i digitaliseringens tid. Universitetsforlaget.</p>
-<p>Johnsen, Lars 2023. <a class="reference external" href="https://www.michaeljournal.no/article/2023/02/%C3%85%20bruke%20spr%C3%A5kteknologi%20til%20%C3%A5%20unders%C3%B8ke%20medisinske%20ord">Å bruke språkteknologi til å undersøke medisinske ord</a>. Michael.</p>
-<p>Birkenes, Magnus Breder; Johnsen, Lars G.; Kåsen, Andre 2022. <a class="reference external" href="https://tidsskrift.dk/lexn/article/view/134773">Om å bygge en leksikalsk ressurs for diakron skriftspråksvariasjon</a>. LexicoNordica.</p>
-<p>Dalen, Lars Sandved 2020. <a class="reference external" href="https://www.pressetidsskrift.no/tidsskrift/medietidsskrift-nr-2-2020/">Forsiktige forskere, engasjerte journalister</a>. Mediehistorisk Tidsskrift.</p>
-<p>Karlsen, Heidi 2019. <a class="reference external" href="https://www.duo.uio.no/handle/10852/78112">Sub-corpus topic modeling og diskursanalyse: gruvearbeid, tråling eller kokekunst?</a>. Samlaren: tidsskrift för forskning om svensk och annan nordisk litteratur.</p>
-<p>Uri, Helene 2018. <a class="reference external" href="https://www.gyldendal.no/sakprosa/samtid-og-debatt/hvem-sa-hva/p-10022138-no/">Hvem sa hva? Kvinner, menn og språk</a>. Gyldendal.</p>
-<p>Boasson, Frode; Malvik, Anders Skare 2019. <a class="reference external" href="http://www.idunn.no/doi/10.18261/issn.1504-288X-2019-02-03">Digital humaniora, mediehistorie og litterære subjektivitetsuttrykk. Om forholdet mellom norsk litteratur og utviklingen av den kommersielle pressen 1855–1900 i et DH‑perspektiv</a>. Norsk litteraturvitenskapelig tidsskrift. DOI: <a class="reference external" href="https://doi.org/10.18261/issn.1504-288X-2019-02-03">10.18261/issn.1504-288X-2019-02-03</a></p>
-<p>Alsvik, Ola; Glad Munch-Møller, Marthe 2020. <a class="reference external" href="http://www.idunn.no/doi/10.18261/issn.1894-3195-2020-03-03">Historiografi møter algoritmer: Maskinell fjernlesning av lokalhistoriske framstillinger av kvinnehistorie, et supplement til nærlesning?</a>. Heimen. DOI: <a class="reference external" href="https://doi.org/10.18261/issn.1894-3195-2020-03-03">10.18261/issn.1894-3195-2020-03-03</a></p>
-<p>Karlsen, Heidi 2021. <a class="reference external" href="http://www.idunn.no/doi/10.18261/9788215045320-2021-05">5. Kvinner i Nasjonalbibliotekets digitaliserte samlinger i perioden 1830–1880: etableringen av en minoriserende diskurs</a>. Universitetsforlaget.</p>
-<p>Olsen, Jon Arild 2014. <a class="reference external" href="https://www.idunn.no/doi/10.18261/ISSN1504-288X-2014-02-06">Når mer er bedre: kvantitative litteraturstudier</a>. Norsk litteraturvitenskapelig tidsskrift. DOI: <a class="reference external" href="https://doi.org/10.18261/ISSN1504-288X-2014-02-06">10.18261/ISSN1504-288X-2014-02-06</a></p>
-<p>Uri, Helene; Johnsen, Lars G. 2021. <a class="reference external" href="https://barnebokinstituttet.no/aktuelt/skjonnlitteraturen-en-kroppsvisitasjon/">Skjønnlitteraturen: en kroppsvisitasjon</a>. Norsk barnebokinstitutt. Tidligere publisert i Samtiden 3/2021.</p>
-<p>Boasson, Frode Lerum; Johnsen, Lars G. 2020. <a class="reference external" href="https://septentrio.uit.no/index.php/nordlit/article/view/5725">Hamsuns litterære geografi</a>. Nordlit. DOI: <a class="reference external" href="https://doi.org/10.7557/13.5725">10.7557/13.5725</a></p>
-<p>Hemstad, Ruth 2018. <a class="reference external" href="https://www.nb.no/items/81a1839cbe2ce0cd8211dbc8080d8491?page=21">Skandinavisme som omstridt begrep i nordisk offentlighet</a>. Syddansk Universitetsforlag.</p>
-<p>Johnsen, Lars G. 2019. <a class="reference external" href="https://issuu.com/nasjonalbiblioteket/docs/nota_bene_13_layout_rz_interaktiv__002_/188">Eldre bøker i den digitale samlingen. Et elektronisk blikk på tekster fra perioden 1650-1850</a>. Nasjonalbiblioteket.</p>
-<p>Helland, Frode 2019. <a class="reference external" href="https://www.pax.no/rasismens-retorikk.6251805-331611.html">Rasismens retorikk: studier i norsk offentlighet</a>. Pax Forlag.</p>
-<p>Johnsen, Lars G. 2016. <a class="reference external" href="https://ceur-ws.org/Vol-2021/paper6.pdf">Graph Analysis of Word Networks</a>.</p>
-<p>Bastiansen, Henrik G. 2019. <a class="reference external" href="https://www.pressetidsskrift.no/tidsskrift/mediehistorisk-tidsskrift-nr-2-2019-32/">Når mediehistorien blir søkbar – og grafisk</a>. Mediehistorisk Tidsskrift.</p>
-<p>Uri, Helene 2019. <a class="reference external" href="https://www.aftenposten.no/kultur/i/awkxj2/helene-uri-dette-er-en-reklametekst-for-norges-stiligste-nettside">Helene Uri: Dette er en reklame for Norges stiligste nettsider</a>. Aftenposten.</p>
-<p>Olsen, Ida Keihl 2019. <a class="reference external" href="https://www.duo.uio.no/handle/10852/69263">Subjektplassering i moderne norsk - en korpusbasert analyse av leddstillingsvariasjon i bokmål det siste hundreåret</a>.</p>
-<p>Hemstad, Ruth 2018. <a class="reference external" href="http://berghahnjournals.com/view/journals/contributions/13/1/choc130102.xml">Scandinavianism</a>. Contributions to the History of Concepts. DOI: <a class="reference external" href="https://doi.org/10.3167/choc.2018.130102">10.3167/choc.2018.130102</a></p>
-<p>Birkenes, Magnus Breder; Johnsen, Lars G.; Lindstad, Arne M.; Ostad, Johanne 2015. <a class="reference external" href="https://www.aclweb.org/anthology/W15-1839.pdf">From digital library to n-grams: NB N-gram</a>.</p>
-<p>Bekeng-Flemmens, Haakon 2017. <a class="reference external" href="https://www.salongen.no/ved-et-tideverv/">Ved et tideverv</a>. Arr – idéhistorisk tidsskrift.</p>
-<p>Tonne, Ingebjørg; Uri, Helene; Johnsen, Lars 2022. <a class="reference external" href="https://septentrio.uit.no/index.php/nordlyd/article/view/6386">Om kjønn og adjektiv: «Trond er så eksepsjonell/nydelig/skjønn/grønn»</a>. Nordlyd. DOI: <a class="reference external" href="https://doi.org/10.7557/12.6386">10.7557/12.6386</a></p>
-<p>Johnsen, Lars G. 2021. <a class="reference external" href="https://benjamins.com/catalog/cilt.356.02joh">Term distance, frequency and collocations</a>. John Benjamins Publishing Company.</p>
-<p>Kveim Lie, Anne Helene; Johnsen, Lars G.; Jordheim, Helge; Ytreberg, Espen 2022. <a class="reference external" href="http://berghahnjournals.com/view/journals/contributions/17/2/choc170202.xml">The Rise of Health: A Collocation Analysis of Conceptual Changes in News Discourse, 1950–2010</a>. Contributions to the History of Concepts. DOI: <a class="reference external" href="https://doi.org/10.3167/choc.2022.170202">10.3167/choc.2022.170202</a></p>
+<p>Tønnessen, Jon Carlstedt and Birkenes, Magnus Breder (2025) “Providing Web Archive News Articles as Corpus Data”, <em>Journal of Open Humanities Data</em>, 11(2), 1-12.
+Tilgjengelig fra: <a class="reference external" href="http://openhumanitiesdata.metajnl.com/articles/10.5334/johd.281/">http://openhumanitiesdata.metajnl.com/articles/10.5334/johd.281/</a> (Hentet: 2025)</p>
+<p>Kvinnsland, Ranveig, Dale, Ingerid Løyning, og Tungland, Lars Magne (2024) “Rediscovering the 1890s: A Norwegian Poetry Corpus”, <em>Proceedings of the Computational Humanities Research Conference 2024</em>, 1259-1271.
+Tilgjengelig fra: <a class="reference external" href="https://ceur-ws.org/Vol-3834/#paper24">https://ceur-ws.org/Vol-3834/#paper24</a> (Hentet: 2024)</p>
+<p>Johnsen, Lars (2023) “Å bruke språkteknologi til å undersøke medisinske ord”, <em>Michael</em>, 20(Supplement 31), 133-42.
+Tilgjengelig fra: <a class="reference external" href="https://www.michaeljournal.no/article/2023/02/%C3%85%20bruke%20spr%C3%A5kteknologi%20til%20%C3%A5%20unders%C3%B8ke%20medisinske%20ord">https://www.michaeljournal.no/article/2023/02/Å bruke språkteknologi til å undersøke medisinske ord</a> (Hentet: 2023)</p>
+<p>Bastiansen, Henrik G. (2023) <em>Når fortiden blir digital: medier, kilder og historie i digitaliseringens tid</em>. Oslo: Universitetsforlaget.</p>
+<p>Tonne, Ingebjørg, Uri, Helene, og Johnsen, Lars (2022) “Om kjønn og adjektiv: «Trond er så eksepsjonell/nydelig/skjønn/grønn»”, <em>Nordlyd</em>, 46(1),
+Tilgjengelig fra: <a class="reference external" href="https://septentrio.uit.no/index.php/nordlyd/article/view/6386">https://septentrio.uit.no/index.php/nordlyd/article/view/6386</a> (Hentet: 2023)</p>
+<p>Kveim Lie, Anne Helene et al. (2022) “The Rise of Health: A Collocation Analysis of Conceptual Changes in News Discourse, 1950–2010”, <em>Contributions to the History of Concepts</em>, 17(2), 18-40.
+Tilgjengelig fra: <a class="reference external" href="http://berghahnjournals.com/view/journals/contributions/17/2/choc170202.xml">http://berghahnjournals.com/view/journals/contributions/17/2/choc170202.xml</a> (Hentet: 2023)</p>
+<p>Birkenes, Magnus Breder, Johnsen, Lars G., og Kåsen, Andre (2022) “Om å bygge en leksikalsk ressurs for diakron skriftspråksvariasjon”, <em>LexicoNordica</em>,
+Tilgjengelig fra: <a class="reference external" href="https://tidsskrift.dk/lexn/article/view/134773">https://tidsskrift.dk/lexn/article/view/134773</a> (Hentet: 2023)</p>
+<p>Ørjasæter, Kristin and Johnsen, Lars (2021) “Kan vi måle graden av litterært mangfold?”, <em>Norsk barnebokinstitutt</em>,
+Tilgjengelig fra: <a class="reference external" href="https://barnebokinstituttet.no/mangfold/kan-vi-male-graden-av-litteraert-mangfold/">https://barnebokinstituttet.no/mangfold/kan-vi-male-graden-av-litteraert-mangfold/</a> (Hentet: 2024)</p>
+<p>Uri, Helene and Johnsen, Lars G. (2021) “Skjønnlitteraturen: en kroppsvisitasjon”, <em>Norsk barnebokinstitutt. Tidligere publisert i Samtiden 3/2021</em>.
+Tilgjengelig fra: <a class="reference external" href="https://barnebokinstituttet.no/aktuelt/skjonnlitteraturen-en-kroppsvisitasjon/">https://barnebokinstituttet.no/aktuelt/skjonnlitteraturen-en-kroppsvisitasjon/</a> (Hentet: 2023)</p>
+<p>Karlsen, Heidi (2021) “5. Kvinner i Nasjonalbibliotekets digitaliserte samlinger i perioden 1830–1880: etableringen av en minoriserende diskurs” in Rees, Ellen et al. (ed.) <em>Minoritetsdiskurser i norsk litteratur</em>. 93-113.
+Tilgjengelig fra: <a class="reference external" href="http://www.idunn.no/doi/10.18261/9788215045320-2021-05">http://www.idunn.no/doi/10.18261/9788215045320-2021-05</a> (Hentet: 2023)</p>
+<p>Johnsen, Lars G. (2021) “Term distance, frequency and collocations” in Pawłowski, Adam et al. (ed.) <em>Current Issues in Linguistic Theory</em>. Amsterdam: John Benjamins Publishing Company, 22-36.
+Tilgjengelig fra: <a class="reference external" href="https://benjamins.com/catalog/cilt.356.02joh">https://benjamins.com/catalog/cilt.356.02joh</a> (Hentet: 2023)</p>
+<p>Dalen, Lars Sandved (2020) “Forsiktige forskere, engasjerte journalister”, <em>Mediehistorisk Tidsskrift</em>, 34(2), 186-192.
+Tilgjengelig fra: <a class="reference external" href="https://medietidsskrift.no/wp-content/uploads/2020/12/MHT-2020-34-Sandved-Dalen-IDO.pdf">https://medietidsskrift.no/wp-content/uploads/2020/12/MHT-2020-34-Sandved-Dalen-IDO.pdf</a> (Hentet: 2025-01-28)</p>
+<p>Boasson, Frode Lerum and Johnsen, Lars G. (2020) “Hamsuns litterære geografi”, <em>Nordlit</em>, 139-154.
+Tilgjengelig fra: <a class="reference external" href="https://septentrio.uit.no/index.php/nordlit/article/view/5725">https://septentrio.uit.no/index.php/nordlit/article/view/5725</a> (Hentet: 2023)</p>
+<p>Alsvik, Ola and Glad Munch-Møller, Marthe (2020) “Historiografi møter algoritmer: Maskinell fjernlesning av lokalhistoriske framstillinger av kvinnehistorie, et supplement til nærlesning?”, <em>Heimen</em>, 57(3), 201-215.
+Tilgjengelig fra: <a class="reference external" href="http://www.idunn.no/doi/10.18261/issn.1894-3195-2020-03-03">http://www.idunn.no/doi/10.18261/issn.1894-3195-2020-03-03</a> (Hentet: 2023)</p>
+<p>Uri, Helene (2019) “Helene Uri: Dette er en reklame for Norges stiligste nettsider”, <em>Aftenposten</em>.
+Tilgjengelig fra: <a class="reference external" href="https://www.aftenposten.no/kultur/i/awkxj2/helene-uri-dette-er-en-reklametekst-for-norges-stiligste-nettside">https://www.aftenposten.no/kultur/i/awkxj2/helene-uri-dette-er-en-reklametekst-for-norges-stiligste-nettside</a> (Hentet: 2023)</p>
+<p>Olsen, Ida Keihl (2019) <em>Subjektplassering i moderne norsk - en korpusbasert analyse av leddstillingsvariasjon i bokmål det siste hundreåret</em>. Master thesis.
+Tilgjengelig fra: <a class="reference external" href="https://www.duo.uio.no/handle/10852/69263">https://www.duo.uio.no/handle/10852/69263</a> (Hentet: 2023)</p>
+<p>Karlsen, Heidi (2019) “Sub-corpus topic modeling og diskursanalyse: gruvearbeid, tråling eller kokekunst?”, <em>Samlaren: tidsskrift för forskning om svensk och annan nordisk litteratur</em>, 281-304.
+Tilgjengelig fra: <a class="reference external" href="https://www.duo.uio.no/handle/10852/78112">https://www.duo.uio.no/handle/10852/78112</a> (Hentet: 2023)</p>
+<p>Helland, Frode (2019) <em>Rasismens retorikk: studier i norsk offentlighet</em>. Oslo: Pax Forlag.
+Tilgjengelig fra: <a class="reference external" href="https://www.pax.no/rasismens-retorikk.6251805-331611.html">https://www.pax.no/rasismens-retorikk.6251805-331611.html</a></p>
+<p>Boasson, Frode and Malvik, Anders Skare (2019) “Digital humaniora, mediehistorie og litterære subjektivitetsuttrykk. Om forholdet mellom norsk litteratur og utviklingen av den kommersielle pressen 1855–1900 i et DH‑perspektiv”, <em>Norsk litteraturvitenskapelig tidsskrift</em>, 22(2), 146-167.
+Tilgjengelig fra: <a class="reference external" href="http://www.idunn.no/doi/10.18261/issn.1504-288X-2019-02-03">http://www.idunn.no/doi/10.18261/issn.1504-288X-2019-02-03</a> (Hentet: 2023)</p>
+<p>Johnsen, Lars G. (2019) “Eldre bøker i den digitale samlingen. Et elektronisk blikk på tekster fra perioden 1650-1850” in Bjørkøy, Asta M. B. et al. (ed.) <em>Litterære verdensborgere: transnasjonale perspektiver på norsk bokhistorie 1519-1850</em>. Oslo: Nasjonalbiblioteket, 190-214.
+Tilgjengelig fra: <a class="reference external" href="https://issuu.com/nasjonalbiblioteket/docs/nota_bene_13_layout_rz_interaktiv__002_/188">https://issuu.com/nasjonalbiblioteket/docs/nota_bene_13_layout_rz_interaktiv__002_/188</a> (Hentet: 2025-01-28)</p>
+<p>Bastiansen, Henrik G. (2019) “Når mediehistorien blir søkbar – og grafisk”, <em>Mediehistorisk Tidsskrift</em>.
+Tilgjengelig fra: <a class="reference external" href="https://medietidsskrift.no/wp-content/uploads/2019/12/NMF-tidsskrift-32_2019_web.pdf">https://medietidsskrift.no/wp-content/uploads/2019/12/NMF-tidsskrift-32_2019_web.pdf</a> (Hentet: 2025-01-28)</p>
+<p>Uri, Helene (2018) <em>Hvem sa hva? Kvinner, menn og språk</em>. Oslo: Gyldendal.
+Tilgjengelig fra: <a class="reference external" href="https://www.gyldendal.no/sakprosa/samtid-og-debatt/hvem-sa-hva/p-10022138-no/">https://www.gyldendal.no/sakprosa/samtid-og-debatt/hvem-sa-hva/p-10022138-no/</a></p>
+<p>Hemstad, Ruth (2018) “Skandinavisme som omstridt begrep i nordisk offentlighet” in Hemstad, Ruth, Møller, Jes Fabricius, og Thorkildsen, Dag (ed.) <em>Skandinavismen: vision og virkning</em>. Odense: Syddansk Universitetsforlag,
+Tilgjengelig fra: <a class="reference external" href="https://www.nb.no/items/URN:NBN:no-nb_digibok_2020042448121?page=21">https://www.nb.no/items/URN:NBN:no-nb_digibok_2020042448121?page=21</a> (Hentet: 2025-01-28)</p>
+<p>Hemstad, Ruth (2018) “Scandinavianism”, <em>Contributions to the History of Concepts</em>, 13(1), 1-21.
+Tilgjengelig fra: <a class="reference external" href="http://berghahnjournals.com/view/journals/contributions/13/1/choc130102.xml">http://berghahnjournals.com/view/journals/contributions/13/1/choc130102.xml</a> (Hentet: 2023)</p>
+<p>Bekeng-Flemmens, Haakon (2017) “Ved et tideverv”, <em>Arr – idéhistorisk tidsskrift</em>, 29(2),
+Tilgjengelig fra: <a class="reference external" href="https://www.salongen.no/ved-et-tideverv/">https://www.salongen.no/ved-et-tideverv/</a> (Hentet: 2023)</p>
+<p>Wilkinson, Mark D. et al. (2016) “The FAIR Guiding Principles for scientific data management and stewardship”, <em>Scientific Data</em>, 3(1), 160018.
+Tilgjengelig fra: <a class="reference external" href="https://www.nature.com/articles/sdata201618">https://www.nature.com/articles/sdata201618</a> (Hentet: 2024)</p>
+<p>Johnsen, Lars G. (2016) “Graph Analysis of Word Networks”, <em>Extended Papers of the International Symposium on Digital Humanities (DH 2016) Växjö, Sweden, November, 7-8</em>,
+Tilgjengelig fra: <a class="reference external" href="https://ceur-ws.org/Vol-2021/paper6.pdf">https://ceur-ws.org/Vol-2021/paper6.pdf</a> (Hentet: 2025-01-28)</p>
+<p>Birkenes, Magnus Breder et al. (2015) “From digital library to n-grams: NB N-gram”, <em>I Proceedings of the 20th Nordic Conference of Computational Linguistics, 293–295. Linköping: Linköping University Electronic Press.</em>,
+Tilgjengelig fra: <a class="reference external" href="https://www.aclweb.org/anthology/W15-1839.pdf">https://www.aclweb.org/anthology/W15-1839.pdf</a></p>
+<p>Olsen, Jon Arild (2014) “Når mer er bedre: kvantitative litteraturstudier”, <em>Norsk litteraturvitenskapelig tidsskrift</em>, 17(2), 139-144.
+Tilgjengelig fra: <a class="reference external" href="https://www.idunn.no/doi/10.18261/ISSN1504-288X-2014-02-06">https://www.idunn.no/doi/10.18261/ISSN1504-288X-2014-02-06</a> (Hentet: 2023)</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -460,7 +507,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -487,8 +534,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"></div>
               
             
           </div>
@@ -533,8 +578,8 @@ By Nasjonalbiblioteket
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

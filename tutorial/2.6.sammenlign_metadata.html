@@ -14,32 +14,46 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=f0c89327" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=d2032c04" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=f0c89327" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/theme.css?v=a243ae73" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/bootstrap.css?v=5340d9b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?v=c786f70d" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -52,18 +66,34 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial/2.6.sammenlign_metadata';</script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/language_data.js?v=d4673a71"></script>
+    <script src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/copybutton_funcs.js?v=776a791e"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/searchtools.js?v=d24376de"></script>
+    <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?v=95180707"></script>
+    <script src="../_static/scripts/pydata-sphinx-theme.js?v=b2908668"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/scripts/bootstrap.js?v=3d67b3b1"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1.10. NER og POS med Spacy" href="3.0.ner_og_pos.html" />
     <link rel="prev" title="1.8. N-gram og galakser" href="2.5.n-gram_og_galakser.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -71,31 +101,16 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -103,7 +118,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,10 +125,15 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -123,7 +142,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -138,6 +158,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../README.html">
   
@@ -151,21 +173,17 @@
     
     
     <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="DH-lab dokumenter - Home"/>
-    <script>document.write(`<img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark" alt="DH-lab dokumenter - Home"/>`);</script>
+    <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark pst-js-only" alt="DH-lab dokumenter - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -181,7 +199,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Kodeeksempler–Python</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../tutorial.html">1. Læringseksempler</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../tutorial.html">1. Læringseksempler</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="1.0.Oppstart.html">1.2. Oppstart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.0.Bygg_korpus.html">1.3. Korpus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.1.Konkordans.html">1.4. Konkordanser</a></li>
@@ -195,13 +213,13 @@
 <li class="toctree-l2"><a class="reference internal" href="3.2.dispersion.html">1.12. Ordfordeling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.0.experiment.html">1.13. Eksperimentelle tjenester</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook.html">2. Kokebøker</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cookbook.html">2. Kokebøker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/4.0.sentiment_analysis_timeseries.html">2.1. Sentimentanalyse i aviskorpus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/4.1.topic_modelling_with_LDA.html">2.2. Topic modelling med gensim og dhlab</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cookbook/4.2.natbib_query.html">2.3. Søk Nasjonalbibliografiens metadata med dhlab</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Demoer</span></p>
 <ul class="nav bd-sidenav">
@@ -214,14 +232,19 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -230,14 +253,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -262,14 +285,14 @@
       
       <li><a href="https://mybinder.org/v2/gh/NationalLibraryOfNorway/digital_tekstanalyse/main?urlpath=tree/tutorial/2.6.sammenlign_metadata.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -280,14 +303,14 @@
       
       <li><a href="https://hub.sprakbanken.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/NationalLibraryOfNorway/digital_tekstanalyse&urlpath=tree/digital_tekstanalyse/tutorial/2.6.sammenlign_metadata.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onJupyterHub"
+   title="Launch on JupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_jupyterhub.svg">
+    <img alt="JupyterHub logo" src="../_static/images/logo_jupyterhub.svg">
   </span>
 <span class="btn__text-container">JupyterHub</span>
 </a>
@@ -298,14 +321,14 @@
       
       <li><a href="https://colab.research.google.com/github/NationalLibraryOfNorway/digital_tekstanalyse/blob/main/tutorial/2.6.sammenlign_metadata.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onColab"
+   title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_colab.png">
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
@@ -427,27 +450,19 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -495,9 +510,21 @@ document.write(`
 <h1><span class="section-number">1.9. </span>Sammenlign metadata<a class="headerlink" href="#sammenlign-metadata" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dhlab.api.dhlab_api</span> <span class="kn">import</span> <span class="n">get_document_frequencies</span>
-<span class="kn">from</span> <span class="nn">dhlab</span> <span class="kn">import</span> <span class="n">Corpus</span><span class="p">,</span> <span class="n">Counts</span><span class="p">,</span> <span class="n">totals</span>
-<span class="kn">import</span> <span class="nn">dhlab.nbtext</span> <span class="k">as</span> <span class="nn">nb</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dhlab.api.dhlab_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_document_frequencies</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">Corpus</span><span class="p">,</span> <span class="n">Counts</span><span class="p">,</span> <span class="n">totals</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">dhlab.nbtext</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span><span class="w"> </span><span class="nn">dhlab.api.dhlab_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_document_frequencies</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">Corpus</span><span class="p">,</span> <span class="n">Counts</span><span class="p">,</span> <span class="n">totals</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">dhlab.nbtext</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;dhlab&#39;
 </pre></div>
 </div>
 </div>
@@ -558,33 +585,33 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>Ett minutt av krigen : tjue nordmenn forteller</td>
-      <td>Stølen , Oddvar</td>
-      <td>1969</td>
+      <td>Tapte år : tilegnet Alma</td>
+      <td>Pasjkurov , Ivan</td>
+      <td>1990</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Kampene om Narvik</td>
-      <td>Waage , Johan</td>
-      <td>1961</td>
+      <td>Hvis Hitler hadde vunnet krigen : nazistenes p...</td>
+      <td>Giordano , Ralph / Seljelid , Åge</td>
+      <td>1991</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Krigens Svalbard</td>
-      <td>Fjærli , Eystein</td>
-      <td>1979</td>
+      <td>Barn under krigen</td>
+      <td>Nøkleby , Berit / Hjeltnes , Guri / Gullvåg , ...</td>
+      <td>2000</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Vi ville ikke ha dem : statens behandling av d...</td>
-      <td>Borgersrud , Lars</td>
-      <td>2005</td>
+      <td>De Nære årene : norske kvinner og menn fortell...</td>
+      <td>Jensen , Johan O. / Jensen , Johan O.</td>
+      <td>1986</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>" Unngå å irritere fienden - " : krigen i Norg...</td>
-      <td>Borgersrud , Lars</td>
-      <td>1981</td>
+      <td>Men arbeidet måtte gå : vegfolk forteller om k...</td>
+      <td>Hegdalstrand , Kjell</td>
+      <td>1995</td>
     </tr>
     <tr>
       <th>...</th>
@@ -594,33 +621,33 @@ document.write(`
     </tr>
     <tr>
       <th>161</th>
-      <td>Krig og fred : 1660-1780</td>
-      <td>Sogner , Sølvi</td>
-      <td>2005</td>
+      <td>Over grensen ? : Hjemmefrontens likvidasjoner ...</td>
+      <td>Moland , Arnfinn</td>
+      <td>1999</td>
     </tr>
     <tr>
       <th>162</th>
-      <td>Niende april : de frivillige militære styrker</td>
-      <td>Wilhelmsen , Aage A. ( Aage Adolf )</td>
-      <td>1998</td>
+      <td>Russisk rulett</td>
+      <td>Bočarov , Gennadij / Fremming , Espen</td>
+      <td>1990</td>
     </tr>
     <tr>
       <th>163</th>
-      <td>USA og den kalde krigen : en antologi med bidr...</td>
-      <td>Williams , William Appleman / Pharo , Helge / ...</td>
-      <td>1972</td>
+      <td>I Tordenskiolds kjølvann</td>
+      <td>Kavli , Guthorm</td>
+      <td>1990</td>
     </tr>
     <tr>
       <th>164</th>
-      <td>Lille-Moskva : den glemte krigen</td>
-      <td>Fjørtoft , Kjell</td>
-      <td>1983</td>
+      <td>Norsk krigsleksikon 1940-45</td>
+      <td>Dahl , Hans Fredrik / Hagen , Eirin</td>
+      <td>1995</td>
     </tr>
     <tr>
       <th>165</th>
-      <td>Barn under krigen</td>
-      <td>Nøkleby , Berit / Hjeltnes , Guri / Gullvåg , ...</td>
-      <td>2000</td>
+      <td>Nordmenn i fangenskap 1940-1945 : alfabetisk r...</td>
+      <td>Ottosen , Kristian / Knudsen , Arne</td>
+      <td>1995</td>
     </tr>
   </tbody>
 </table>
@@ -667,53 +694,53 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>100003439</th>
-      <th>100526095</th>
-      <th>100515898</th>
-      <th>100036887</th>
-      <th>100422015</th>
+      <th>100521520</th>
+      <th>100571027</th>
+      <th>100570822</th>
+      <th>100025743</th>
+      <th>100285115</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>.</th>
-      <td>3949.0</td>
-      <td>2705.0</td>
-      <td>3376.0</td>
-      <td>2189.0</td>
-      <td>10821.0</td>
+      <td>5199.0</td>
+      <td>3537.0</td>
+      <td>2521.0</td>
+      <td>6114.0</td>
+      <td>5406.0</td>
     </tr>
     <tr>
       <th>,</th>
-      <td>3026.0</td>
-      <td>1782.0</td>
-      <td>3308.0</td>
-      <td>2127.0</td>
-      <td>13499.0</td>
-    </tr>
-    <tr>
-      <th>^</th>
-      <td>2561.0</td>
-      <td>4.0</td>
-      <td>17.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>i</th>
-      <td>1482.0</td>
-      <td>964.0</td>
-      <td>1378.0</td>
-      <td>1326.0</td>
-      <td>5577.0</td>
+      <td>3362.0</td>
+      <td>2252.0</td>
+      <td>1424.0</td>
+      <td>3108.0</td>
+      <td>6932.0</td>
     </tr>
     <tr>
       <th>og</th>
-      <td>952.0</td>
-      <td>1641.0</td>
-      <td>1230.0</td>
-      <td>1324.0</td>
-      <td>4010.0</td>
+      <td>2090.0</td>
+      <td>1805.0</td>
+      <td>1001.0</td>
+      <td>3185.0</td>
+      <td>3443.0</td>
+    </tr>
+    <tr>
+      <th>var</th>
+      <td>1989.0</td>
+      <td>1198.0</td>
+      <td>962.0</td>
+      <td>1396.0</td>
+      <td>1837.0</td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>1841.0</td>
+      <td>1150.0</td>
+      <td>891.0</td>
+      <td>3010.0</td>
+      <td>3245.0</td>
     </tr>
     <tr>
       <th>...</th>
@@ -724,48 +751,48 @@ document.write(`
       <td>...</td>
     </tr>
     <tr>
-      <th>sktr</th>
+      <th>Mona</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>316.0</td>
+      <td>36.0</td>
     </tr>
     <tr>
-      <th>krigsbarn</th>
+      <th>fait</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>364.0</td>
+      <td>40.0</td>
     </tr>
     <tr>
-      <th>RA</th>
+      <th>‘</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>420.0</td>
+      <td>70.0</td>
     </tr>
     <tr>
-      <th>legg</th>
+      <th>’</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>433.0</td>
+      <td>95.0</td>
     </tr>
     <tr>
-      <th>SD</th>
+      <th>seiv</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>483.0</td>
+      <td>102.0</td>
     </tr>
   </tbody>
 </table>
-<p>42198 rows × 5 columns</p>
+<p>41977 rows × 5 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -780,250 +807,238 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_4a5a2_row0_col0, #T_4a5a2_row0_col1, #T_4a5a2_row0_col2, #T_4a5a2_row0_col3, #T_4a5a2_row1_col4 {
+#T_6860e_row0_col0, #T_6860e_row0_col1, #T_6860e_row0_col2, #T_6860e_row0_col3, #T_6860e_row1_col4 {
   background-color: #045599;
   color: #f1f1f1;
 }
-#T_4a5a2_row0_col4 {
-  background-color: #3274ab;
+#T_6860e_row0_col4 {
+  background-color: #3b79ae;
   color: #f1f1f1;
 }
-#T_4a5a2_row1_col0 {
-  background-color: #4983b3;
+#T_6860e_row1_col0 {
+  background-color: #729ec3;
   color: #f1f1f1;
 }
-#T_4a5a2_row1_col1 {
-  background-color: #548ab8;
+#T_6860e_row1_col1 {
+  background-color: #6e9bc1;
   color: #f1f1f1;
 }
-#T_4a5a2_row1_col2 {
-  background-color: #09589b;
+#T_6860e_row1_col2 {
+  background-color: #85aaca;
   color: #f1f1f1;
 }
-#T_4a5a2_row1_col3 {
-  background-color: #0a599b;
+#T_6860e_row1_col3 {
+  background-color: #7aa3c6;
   color: #f1f1f1;
 }
-#T_4a5a2_row2_col0 {
-  background-color: #6c9ac1;
-  color: #f1f1f1;
-}
-#T_4a5a2_row2_col1, #T_4a5a2_row2_col2, #T_4a5a2_row2_col3, #T_4a5a2_row2_col4, #T_4a5a2_row9_col0 {
-  background-color: #f0f1f3;
-  color: #000000;
-}
-#T_4a5a2_row3_col0 {
+#T_6860e_row2_col0 {
   background-color: #bfd0e0;
   color: #000000;
 }
-#T_4a5a2_row3_col1 {
-  background-color: #9dbad3;
+#T_6860e_row2_col1 {
+  background-color: #94b4d0;
   color: #000000;
 }
-#T_4a5a2_row3_col2 {
-  background-color: #91b2ce;
+#T_6860e_row2_col2, #T_6860e_row9_col3 {
+  background-color: #b7cbdd;
   color: #000000;
 }
-#T_4a5a2_row3_col3, #T_4a5a2_row4_col1 {
-  background-color: #6092bc;
+#T_6860e_row2_col3 {
+  background-color: #77a1c5;
   color: #f1f1f1;
 }
-#T_4a5a2_row3_col4 {
-  background-color: #8fb1ce;
-  color: #000000;
-}
-#T_4a5a2_row4_col0, #T_4a5a2_row5_col0 {
-  background-color: #e7ebef;
-  color: #000000;
-}
-#T_4a5a2_row4_col2 {
-  background-color: #9bb8d2;
-  color: #000000;
-}
-#T_4a5a2_row4_col3 {
-  background-color: #6193bd;
+#T_6860e_row2_col4 {
+  background-color: #81a7c9;
   color: #f1f1f1;
 }
-#T_4a5a2_row4_col4 {
-  background-color: #a9c2d8;
+#T_6860e_row3_col0 {
+  background-color: #c5d5e3;
   color: #000000;
 }
-#T_4a5a2_row5_col1, #T_4a5a2_row8_col2 {
-  background-color: #b2c8db;
+#T_6860e_row3_col1, #T_6860e_row7_col3, #T_6860e_row7_col4 {
+  background-color: #c6d5e3;
   color: #000000;
 }
-#T_4a5a2_row5_col2 {
-  background-color: #b6cbdd;
+#T_6860e_row3_col2 {
+  background-color: #bccedf;
   color: #000000;
 }
-#T_4a5a2_row5_col3 {
+#T_6860e_row3_col3 {
   background-color: #bed0e0;
   color: #000000;
 }
-#T_4a5a2_row5_col4 {
-  background-color: #abc3d9;
-  color: #000000;
-}
-#T_4a5a2_row6_col0 {
-  background-color: #e8ecf0;
-  color: #000000;
-}
-#T_4a5a2_row6_col1 {
-  background-color: #d8e1ea;
-  color: #000000;
-}
-#T_4a5a2_row6_col2 {
-  background-color: #eff0f2;
-  color: #000000;
-}
-#T_4a5a2_row6_col3 {
-  background-color: #e2e7ed;
-  color: #000000;
-}
-#T_4a5a2_row6_col4, #T_4a5a2_row8_col0 {
-  background-color: #eeeff2;
-  color: #000000;
-}
-#T_4a5a2_row7_col0 {
-  background-color: #eaedf1;
-  color: #000000;
-}
-#T_4a5a2_row7_col1 {
-  background-color: #bacdde;
-  color: #000000;
-}
-#T_4a5a2_row7_col2 {
-  background-color: #cfdbe6;
-  color: #000000;
-}
-#T_4a5a2_row7_col3 {
-  background-color: #aac3d8;
-  color: #000000;
-}
-#T_4a5a2_row7_col4 {
-  background-color: #c8d6e4;
-  color: #000000;
-}
-#T_4a5a2_row8_col1 {
-  background-color: #e5e9ef;
-  color: #000000;
-}
-#T_4a5a2_row8_col3 {
-  background-color: #c2d2e1;
-  color: #000000;
-}
-#T_4a5a2_row8_col4 {
-  background-color: #acc4d9;
-  color: #000000;
-}
-#T_4a5a2_row9_col1 {
+#T_6860e_row3_col4 {
   background-color: #bbcedf;
   color: #000000;
 }
-#T_4a5a2_row9_col2 {
-  background-color: #cdd9e5;
+#T_6860e_row4_col0 {
+  background-color: #cedae6;
   color: #000000;
 }
-#T_4a5a2_row9_col3 {
-  background-color: #c1d1e1;
+#T_6860e_row4_col1 {
+  background-color: #cbd8e5;
   color: #000000;
 }
-#T_4a5a2_row9_col4 {
-  background-color: #ccd9e5;
+#T_6860e_row4_col2 {
+  background-color: #c4d4e2;
+  color: #000000;
+}
+#T_6860e_row4_col3 {
+  background-color: #7ea6c7;
+  color: #f1f1f1;
+}
+#T_6860e_row4_col4 {
+  background-color: #88accb;
+  color: #f1f1f1;
+}
+#T_6860e_row5_col0 {
+  background-color: #d1dce7;
+  color: #000000;
+}
+#T_6860e_row5_col1, #T_6860e_row9_col1 {
+  background-color: #e9ecf0;
+  color: #000000;
+}
+#T_6860e_row5_col2 {
+  background-color: #dce4eb;
+  color: #000000;
+}
+#T_6860e_row5_col3 {
+  background-color: #a4bfd6;
+  color: #000000;
+}
+#T_6860e_row5_col4 {
+  background-color: #cedbe6;
+  color: #000000;
+}
+#T_6860e_row6_col0 {
+  background-color: #eceef1;
+  color: #000000;
+}
+#T_6860e_row6_col1, #T_6860e_row6_col3, #T_6860e_row6_col4, #T_6860e_row8_col0, #T_6860e_row8_col2, #T_6860e_row9_col0, #T_6860e_row9_col2 {
+  background-color: #f0f1f3;
+  color: #000000;
+}
+#T_6860e_row6_col2 {
+  background-color: #dfe6ec;
+  color: #000000;
+}
+#T_6860e_row7_col0, #T_6860e_row8_col1 {
+  background-color: #eeeff2;
+  color: #000000;
+}
+#T_6860e_row7_col1 {
+  background-color: #e0e6ed;
+  color: #000000;
+}
+#T_6860e_row7_col2 {
+  background-color: #ebeef1;
+  color: #000000;
+}
+#T_6860e_row8_col3 {
+  background-color: #b0c7da;
+  color: #000000;
+}
+#T_6860e_row8_col4 {
+  background-color: #d0dce7;
+  color: #000000;
+}
+#T_6860e_row9_col4 {
+  background-color: #d4dee8;
   color: #000000;
 }
 </style>
-<table id="T_4a5a2">
+<table id="T_6860e">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_4a5a2_level0_col0" class="col_heading level0 col0" >100003439</th>
-      <th id="T_4a5a2_level0_col1" class="col_heading level0 col1" >100526095</th>
-      <th id="T_4a5a2_level0_col2" class="col_heading level0 col2" >100515898</th>
-      <th id="T_4a5a2_level0_col3" class="col_heading level0 col3" >100036887</th>
-      <th id="T_4a5a2_level0_col4" class="col_heading level0 col4" >100422015</th>
+      <th id="T_6860e_level0_col0" class="col_heading level0 col0" >100521520</th>
+      <th id="T_6860e_level0_col1" class="col_heading level0 col1" >100571027</th>
+      <th id="T_6860e_level0_col2" class="col_heading level0 col2" >100570822</th>
+      <th id="T_6860e_level0_col3" class="col_heading level0 col3" >100025743</th>
+      <th id="T_6860e_level0_col4" class="col_heading level0 col4" >100285115</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_4a5a2_level0_row0" class="row_heading level0 row0" >.</th>
-      <td id="T_4a5a2_row0_col0" class="data row0 col0" >3949.000000</td>
-      <td id="T_4a5a2_row0_col1" class="data row0 col1" >2705.000000</td>
-      <td id="T_4a5a2_row0_col2" class="data row0 col2" >3376.000000</td>
-      <td id="T_4a5a2_row0_col3" class="data row0 col3" >2189.000000</td>
-      <td id="T_4a5a2_row0_col4" class="data row0 col4" >10821.000000</td>
+      <th id="T_6860e_level0_row0" class="row_heading level0 row0" >.</th>
+      <td id="T_6860e_row0_col0" class="data row0 col0" >5199.000000</td>
+      <td id="T_6860e_row0_col1" class="data row0 col1" >3537.000000</td>
+      <td id="T_6860e_row0_col2" class="data row0 col2" >2521.000000</td>
+      <td id="T_6860e_row0_col3" class="data row0 col3" >6114.000000</td>
+      <td id="T_6860e_row0_col4" class="data row0 col4" >5406.000000</td>
     </tr>
     <tr>
-      <th id="T_4a5a2_level0_row1" class="row_heading level0 row1" >,</th>
-      <td id="T_4a5a2_row1_col0" class="data row1 col0" >3026.000000</td>
-      <td id="T_4a5a2_row1_col1" class="data row1 col1" >1782.000000</td>
-      <td id="T_4a5a2_row1_col2" class="data row1 col2" >3308.000000</td>
-      <td id="T_4a5a2_row1_col3" class="data row1 col3" >2127.000000</td>
-      <td id="T_4a5a2_row1_col4" class="data row1 col4" >13499.000000</td>
+      <th id="T_6860e_level0_row1" class="row_heading level0 row1" >,</th>
+      <td id="T_6860e_row1_col0" class="data row1 col0" >3362.000000</td>
+      <td id="T_6860e_row1_col1" class="data row1 col1" >2252.000000</td>
+      <td id="T_6860e_row1_col2" class="data row1 col2" >1424.000000</td>
+      <td id="T_6860e_row1_col3" class="data row1 col3" >3108.000000</td>
+      <td id="T_6860e_row1_col4" class="data row1 col4" >6932.000000</td>
     </tr>
     <tr>
-      <th id="T_4a5a2_level0_row2" class="row_heading level0 row2" >^</th>
-      <td id="T_4a5a2_row2_col0" class="data row2 col0" >2561.000000</td>
-      <td id="T_4a5a2_row2_col1" class="data row2 col1" >4.000000</td>
-      <td id="T_4a5a2_row2_col2" class="data row2 col2" >17.000000</td>
-      <td id="T_4a5a2_row2_col3" class="data row2 col3" >1.000000</td>
-      <td id="T_4a5a2_row2_col4" class="data row2 col4" >1.000000</td>
+      <th id="T_6860e_level0_row2" class="row_heading level0 row2" >og</th>
+      <td id="T_6860e_row2_col0" class="data row2 col0" >2090.000000</td>
+      <td id="T_6860e_row2_col1" class="data row2 col1" >1805.000000</td>
+      <td id="T_6860e_row2_col2" class="data row2 col2" >1001.000000</td>
+      <td id="T_6860e_row2_col3" class="data row2 col3" >3185.000000</td>
+      <td id="T_6860e_row2_col4" class="data row2 col4" >3443.000000</td>
     </tr>
     <tr>
-      <th id="T_4a5a2_level0_row3" class="row_heading level0 row3" >i</th>
-      <td id="T_4a5a2_row3_col0" class="data row3 col0" >1482.000000</td>
-      <td id="T_4a5a2_row3_col1" class="data row3 col1" >964.000000</td>
-      <td id="T_4a5a2_row3_col2" class="data row3 col2" >1378.000000</td>
-      <td id="T_4a5a2_row3_col3" class="data row3 col3" >1326.000000</td>
-      <td id="T_4a5a2_row3_col4" class="data row3 col4" >5577.000000</td>
+      <th id="T_6860e_level0_row3" class="row_heading level0 row3" >var</th>
+      <td id="T_6860e_row3_col0" class="data row3 col0" >1989.000000</td>
+      <td id="T_6860e_row3_col1" class="data row3 col1" >1198.000000</td>
+      <td id="T_6860e_row3_col2" class="data row3 col2" >962.000000</td>
+      <td id="T_6860e_row3_col3" class="data row3 col3" >1396.000000</td>
+      <td id="T_6860e_row3_col4" class="data row3 col4" >1837.000000</td>
     </tr>
     <tr>
-      <th id="T_4a5a2_level0_row4" class="row_heading level0 row4" >og</th>
-      <td id="T_4a5a2_row4_col0" class="data row4 col0" >952.000000</td>
-      <td id="T_4a5a2_row4_col1" class="data row4 col1" >1641.000000</td>
-      <td id="T_4a5a2_row4_col2" class="data row4 col2" >1230.000000</td>
-      <td id="T_4a5a2_row4_col3" class="data row4 col3" >1324.000000</td>
-      <td id="T_4a5a2_row4_col4" class="data row4 col4" >4010.000000</td>
+      <th id="T_6860e_level0_row4" class="row_heading level0 row4" >i</th>
+      <td id="T_6860e_row4_col0" class="data row4 col0" >1841.000000</td>
+      <td id="T_6860e_row4_col1" class="data row4 col1" >1150.000000</td>
+      <td id="T_6860e_row4_col2" class="data row4 col2" >891.000000</td>
+      <td id="T_6860e_row4_col3" class="data row4 col3" >3010.000000</td>
+      <td id="T_6860e_row4_col4" class="data row4 col4" >3245.000000</td>
     </tr>
     <tr>
-      <th id="T_4a5a2_level0_row5" class="row_heading level0 row5" >til</th>
-      <td id="T_4a5a2_row5_col0" class="data row5 col0" >951.000000</td>
-      <td id="T_4a5a2_row5_col1" class="data row5 col1" >719.000000</td>
-      <td id="T_4a5a2_row5_col2" class="data row5 col2" >835.000000</td>
-      <td id="T_4a5a2_row5_col3" class="data row5 col3" >466.000000</td>
-      <td id="T_4a5a2_row5_col4" class="data row5 col4" >3939.000000</td>
+      <th id="T_6860e_level0_row5" class="row_heading level0 row5" >det</th>
+      <td id="T_6860e_row5_col0" class="data row5 col0" >1783.000000</td>
+      <td id="T_6860e_row5_col1" class="data row5 col1" >778.000000</td>
+      <td id="T_6860e_row5_col2" class="data row5 col2" >683.000000</td>
+      <td id="T_6860e_row5_col3" class="data row5 col3" >2044.000000</td>
+      <td id="T_6860e_row5_col4" class="data row5 col4" >1304.000000</td>
     </tr>
     <tr>
-      <th id="T_4a5a2_level0_row6" class="row_heading level0 row6" >—</th>
-      <td id="T_4a5a2_row6_col0" class="data row6 col0" >927.000000</td>
-      <td id="T_4a5a2_row6_col1" class="data row6 col1" >288.000000</td>
-      <td id="T_4a5a2_row6_col2" class="data row6 col2" >34.000000</td>
-      <td id="T_4a5a2_row6_col3" class="data row6 col3" >134.000000</td>
-      <td id="T_4a5a2_row6_col4" class="data row6 col4" >132.000000</td>
+      <th id="T_6860e_level0_row6" class="row_heading level0 row6" >jeg</th>
+      <td id="T_6860e_row6_col0" class="data row6 col0" >1333.000000</td>
+      <td id="T_6860e_row6_col1" class="data row6 col1" >695.000000</td>
+      <td id="T_6860e_row6_col2" class="data row6 col2" >661.000000</td>
+      <td id="T_6860e_row6_col3" class="data row6 col3" >111.000000</td>
+      <td id="T_6860e_row6_col4" class="data row6 col4" >358.000000</td>
     </tr>
     <tr>
-      <th id="T_4a5a2_level0_row7" class="row_heading level0 row7" >en</th>
-      <td id="T_4a5a2_row7_col0" class="data row7 col0" >902.000000</td>
-      <td id="T_4a5a2_row7_col1" class="data row7 col1" >617.000000</td>
-      <td id="T_4a5a2_row7_col2" class="data row7 col2" >482.000000</td>
-      <td id="T_4a5a2_row7_col3" class="data row7 col3" >647.000000</td>
-      <td id="T_4a5a2_row7_col4" class="data row7 col4" >2293.000000</td>
+      <th id="T_6860e_level0_row7" class="row_heading level0 row7" >på</th>
+      <td id="T_6860e_row7_col0" class="data row7 col0" >1302.000000</td>
+      <td id="T_6860e_row7_col1" class="data row7 col1" >891.000000</td>
+      <td id="T_6860e_row7_col2" class="data row7 col2" >556.000000</td>
+      <td id="T_6860e_row7_col3" class="data row7 col3" >1180.000000</td>
+      <td id="T_6860e_row7_col4" class="data row7 col4" >1527.000000</td>
     </tr>
     <tr>
-      <th id="T_4a5a2_level0_row8" class="row_heading level0 row8" >var</th>
-      <td id="T_4a5a2_row8_col0" class="data row8 col0" >859.000000</td>
-      <td id="T_4a5a2_row8_col1" class="data row8 col1" >140.000000</td>
-      <td id="T_4a5a2_row8_col2" class="data row8 col2" >901.000000</td>
-      <td id="T_4a5a2_row8_col3" class="data row8 col3" >436.000000</td>
-      <td id="T_4a5a2_row8_col4" class="data row8 col4" >3879.000000</td>
+      <th id="T_6860e_level0_row8" class="row_heading level0 row8" >som</th>
+      <td id="T_6860e_row8_col0" class="data row8 col0" >1271.000000</td>
+      <td id="T_6860e_row8_col1" class="data row8 col1" >725.000000</td>
+      <td id="T_6860e_row8_col2" class="data row8 col2" >516.000000</td>
+      <td id="T_6860e_row8_col3" class="data row8 col3" >1731.000000</td>
+      <td id="T_6860e_row8_col4" class="data row8 col4" >1253.000000</td>
     </tr>
     <tr>
-      <th id="T_4a5a2_level0_row9" class="row_heading level0 row9" >de</th>
-      <td id="T_4a5a2_row9_col0" class="data row9 col0" >825.000000</td>
-      <td id="T_4a5a2_row9_col1" class="data row9 col1" >606.000000</td>
-      <td id="T_4a5a2_row9_col2" class="data row9 col2" >520.000000</td>
-      <td id="T_4a5a2_row9_col3" class="data row9 col3" >438.000000</td>
-      <td id="T_4a5a2_row9_col4" class="data row9 col4" >2060.000000</td>
+      <th id="T_6860e_level0_row9" class="row_heading level0 row9" >en</th>
+      <td id="T_6860e_row9_col0" class="data row9 col0" >1269.000000</td>
+      <td id="T_6860e_row9_col1" class="data row9 col1" >779.000000</td>
+      <td id="T_6860e_row9_col2" class="data row9 col2" >517.000000</td>
+      <td id="T_6860e_row9_col3" class="data row9 col3" >1549.000000</td>
+      <td id="T_6860e_row9_col4" class="data row9 col4" >1154.000000</td>
     </tr>
   </tbody>
 </table>
@@ -1408,41 +1423,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">nb</span><span class="o">.</span><span class="n">cloud</span><span class="p">((</span><span class="n">bøker_typiske_ord</span><span class="o">/</span><span class="n">bøker_typiske_ord</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
-
-<span class="nn">File ~/prosjekter/DHLAB/dhlab/legacy/nbtext.py:1529,</span> in <span class="ni">cloud</span><span class="nt">(df, column, top, width, height, background, file, stretch, font_path)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1527</span>     <span class="n">column</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1528</span> <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">to_json</span><span class="p">())</span>
-<span class="ne">-&gt; </span><span class="mi">1529</span> <span class="n">a_cloud</span> <span class="o">=</span> <span class="n">make_cloud</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1530</span>     <span class="n">data</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1531</span>     <span class="n">top</span><span class="o">=</span><span class="n">top</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1532</span>     <span class="n">background</span><span class="o">=</span><span class="n">background</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1533</span>     <span class="n">font_path</span><span class="o">=</span><span class="n">font_path</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1534</span>     <span class="n">stretch</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">2</span> <span class="o">**</span> <span class="p">(</span><span class="n">stretch</span> <span class="o">*</span> <span class="n">x</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1535</span>     <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1536</span>     <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1537</span> <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1538</span> <span class="n">draw_cloud</span><span class="p">(</span><span class="n">a_cloud</span><span class="p">,</span> <span class="n">fil</span><span class="o">=</span><span class="n">file</span><span class="p">)</span>
-
-<span class="nn">File ~/prosjekter/DHLAB/dhlab/legacy/nbtext.py:1493,</span> in <span class="ni">make_cloud</span><span class="nt">(json_text, top, background, stretch, width, height, font_path)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1491</span> <span class="n">pairs0</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">json_text</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="n">top</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1492</span> <span class="n">pairs</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">stretch</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pairs0</span><span class="p">}</span>
-<span class="ne">-&gt; </span><span class="mi">1493</span> <span class="n">wc</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1494</span>     <span class="n">font_path</span><span class="o">=</span><span class="n">font_path</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1495</span>     <span class="n">background_color</span><span class="o">=</span><span class="n">background</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1496</span>     <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1497</span>     <span class="c1"># color_func=my_colorfunc,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1498</span>     <span class="n">ranks_only</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1499</span>     <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1500</span> <span class="p">)</span><span class="o">.</span><span class="n">generate_from_frequencies</span><span class="p">(</span><span class="n">pairs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1501</span> <span class="k">return</span> <span class="n">wc</span>
-
-<span class="ne">NameError</span>: name &#39;WordCloud&#39; is not defined
-</pre></div>
-</div>
+<img alt="../_images/cbdbcaf229225578436dfbd0e26e22ed2cff539fe6a4287bf2fb5172cc4ce38b.png" src="../_images/cbdbcaf229225578436dfbd0e26e22ed2cff539fe6a4287bf2fb5172cc4ce38b.png" />
 </div>
 </div>
 </section>
@@ -1475,7 +1456,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -1503,7 +1484,8 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1571,8 +1553,8 @@ By Nasjonalbiblioteket
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

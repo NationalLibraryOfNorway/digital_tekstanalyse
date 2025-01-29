@@ -14,32 +14,46 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=f0c89327" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=d2032c04" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=f0c89327" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/theme.css?v=a243ae73" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/bootstrap.css?v=5340d9b1" />
+    <link rel="stylesheet" type="text/css" href="_static/vendor/fontawesome/6.5.1/css/all.min.css?v=c786f70d" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -52,17 +66,33 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'dhlab_class_demo';</script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/language_data.js?v=d4673a71"></script>
+    <script src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/copybutton_funcs.js?v=776a791e"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/searchtools.js?v=d24376de"></script>
+    <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?v=95180707"></script>
+    <script src="_static/scripts/pydata-sphinx-theme.js?v=b2908668"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="_static/scripts/bootstrap.js?v=3d67b3b1"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="2.3. Søk Nasjonalbibliografiens metadata med dhlab" href="cookbook/4.2.natbib_query.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -70,31 +100,16 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -102,7 +117,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -110,10 +124,15 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -122,7 +141,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -137,6 +157,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="README.html">
   
@@ -150,21 +172,17 @@
     
     
     <img src="_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="DH-lab dokumenter - Home"/>
-    <script>document.write(`<img src="_static/DHlab_logo_web_en_black.png" class="logo__image only-dark" alt="DH-lab dokumenter - Home"/>`);</script>
+    <img src="_static/DHlab_logo_web_en_black.png" class="logo__image only-dark pst-js-only" alt="DH-lab dokumenter - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -180,7 +198,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Kodeeksempler–Python</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="tutorial.html">1. Læringseksempler</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tutorial.html">1. Læringseksempler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="tutorial/1.0.Oppstart.html">1.2. Oppstart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial/2.0.Bygg_korpus.html">1.3. Korpus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial/2.1.Konkordans.html">1.4. Konkordanser</a></li>
@@ -194,13 +212,13 @@
 <li class="toctree-l2"><a class="reference internal" href="tutorial/3.2.dispersion.html">1.12. Ordfordeling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial/4.0.experiment.html">1.13. Eksperimentelle tjenester</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="cookbook.html">2. Kokebøker</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="cookbook.html">2. Kokebøker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="cookbook/4.0.sentiment_analysis_timeseries.html">2.1. Sentimentanalyse i aviskorpus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cookbook/4.1.topic_modelling_with_LDA.html">2.2. Topic modelling med gensim og dhlab</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cookbook/4.2.natbib_query.html">2.3. Søk Nasjonalbibliografiens metadata med dhlab</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Demoer</span></p>
 <ul class="current nav bd-sidenav">
@@ -213,14 +231,19 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -229,14 +252,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -261,14 +284,14 @@
       
       <li><a href="https://mybinder.org/v2/gh/NationalLibraryOfNorway/digital_tekstanalyse/main?urlpath=tree/dhlab_class_demo.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -279,14 +302,14 @@
       
       <li><a href="https://hub.sprakbanken.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/NationalLibraryOfNorway/digital_tekstanalyse&urlpath=tree/digital_tekstanalyse/dhlab_class_demo.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onJupyterHub"
+   title="Launch on JupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="_static/images/logo_jupyterhub.svg">
+    <img alt="JupyterHub logo" src="_static/images/logo_jupyterhub.svg">
   </span>
 <span class="btn__text-container">JupyterHub</span>
 </a>
@@ -297,14 +320,14 @@
       
       <li><a href="https://colab.research.google.com/github/NationalLibraryOfNorway/digital_tekstanalyse/blob/main/dhlab_class_demo.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onColab"
+   title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="_static/images/logo_colab.png">
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
@@ -426,27 +449,19 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -489,7 +504,17 @@ document.write(`
 <h1>dhlab class demo<a class="headerlink" href="#dhlab-class-demo" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dhlab</span> <span class="k">as</span> <span class="nn">dh</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dh</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dh</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;dhlab&#39;
 </pre></div>
 </div>
 </div>
@@ -499,6 +524,214 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dh.Corpus<span class="o">??</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Init signature:</span>
+dh<span class=" -Color -Color-Blue">.</span>Corpus<span class=" -Color -Color-Blue">(</span>
+    doctype<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    author<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    freetext<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    fulltext<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    from_year<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    to_year<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    from_timestamp<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    to_timestamp<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    title<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    ddk<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    subject<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    lang<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    limit<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">10</span><span class=" -Color -Color-Blue">,</span>
+    order_by<span class=" -Color -Color-Blue">=&#39;random&#39;,</span>
+<span class=" -Color -Color-Blue">)</span>
+<span class=" -Color -Color-Red">Source:</span>        
+<span class=" -Color -Color-Green">class</span> Corpus<span class=" -Color -Color-Blue">(</span>DhlabObj<span class=" -Color -Color-Blue">):</span>
+    <span class=" -Color -Color-Blue">&quot;&quot;&quot;Class representing as DHLAB Corpus</span>
+
+<span class=" -Color -Color-Blue">    Primary object for working with dhlab data. Contains references to texts</span>
+<span class=" -Color -Color-Blue">    in National Library&#39;s collections and metadata about them.</span>
+<span class=" -Color -Color-Blue">    Use with `.coll`, `.conc` or `.freq` to analyse using dhlab tools.</span>
+<span class=" -Color -Color-Blue">    &quot;&quot;&quot;</span>
+    <span class=" -Color -Color-Green">def</span> __init__<span class=" -Color -Color-Blue">(</span>
+            self<span class=" -Color -Color-Blue">,</span>
+            doctype<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+            author<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+            freetext<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+            fulltext<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+            from_year<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+            to_year<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+            from_timestamp<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+            to_timestamp<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+            title<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+            ddk<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+            subject<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+            lang<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+            limit<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">10</span><span class=" -Color -Color-Blue">,</span>
+            order_by<span class=" -Color -Color-Blue">=&quot;random&quot;</span>
+            <span class=" -Color -Color-Blue">):</span>
+
+        <span class=" -Color -Color-Green">if</span> <span class=" -Color -Color-Blue">(</span>doctype
+            <span class=" -Color -Color-Green">or</span> author
+            <span class=" -Color -Color-Green">or</span> freetext
+            <span class=" -Color -Color-Green">or</span> fulltext
+            <span class=" -Color -Color-Green">or</span> from_year
+            <span class=" -Color -Color-Green">or</span> to_year
+            <span class=" -Color -Color-Green">or</span> from_timestamp
+            <span class=" -Color -Color-Green">or</span> to_timestamp
+            <span class=" -Color -Color-Green">or</span> title
+            <span class=" -Color -Color-Green">or</span> ddk
+            <span class=" -Color -Color-Green">or</span> lang<span class=" -Color -Color-Blue">):</span>
+            <span class=" -Color -Color-Blue">&quot;&quot;&quot;Create Corpus</span>
+
+<span class=" -Color -Color-Blue">        :param str doctype: ``&quot;digibok&quot;``, ``&quot;digavis&quot;``, \</span>
+<span class=" -Color -Color-Blue">            ``&quot;digitidsskrift&quot;`` or ``&quot;digistorting&quot;``</span>
+<span class=" -Color -Color-Blue">        :param str author: Name of an author.</span>
+<span class=" -Color -Color-Blue">        :param str freetext: any of the parameters, for example:\</span>
+<span class=" -Color -Color-Blue">            ``&quot;digibok AND Ibsen&quot;``.</span>
+<span class=" -Color -Color-Blue">        :param str fulltext: words within the publication.</span>
+<span class=" -Color -Color-Blue">        :param int from_year: Start year for time period of interest.</span>
+<span class=" -Color -Color-Blue">        :param int to_year: End year for time period of interest.</span>
+<span class=" -Color -Color-Blue">        :param int from_timestamp: Start date for time period of interest.</span>
+<span class=" -Color -Color-Blue">            Format: ``YYYYMMDD``, books have ``YYYY0101``</span>
+<span class=" -Color -Color-Blue">        :param int to_timestamp: End date for time period of interest.</span>
+<span class=" -Color -Color-Blue">            Format: ``YYYYMMDD``, books have ``YYYY0101``</span>
+<span class=" -Color -Color-Blue">        :param str title: Name or title of a document.</span>
+<span class=" -Color -Color-Blue">        :param str ddk: `Dewey Decimal Classification \</span>
+<span class=" -Color -Color-Blue">            &lt;https://no.wikipedia.org/wiki/Deweys_desimalklassifikasjon&gt;`\</span>
+<span class=" -Color -Color-Blue">                _ identifier.</span>
+<span class=" -Color -Color-Blue">        :param str subject: subject (keywords) of the publication.</span>
+<span class=" -Color -Color-Blue">        :param str lang: Language of the publication, as a 3-letter ISO code.</span>
+<span class=" -Color -Color-Blue">            Example: ``&quot;nob&quot;`` or ``&quot;nno&quot;``</span>
+<span class=" -Color -Color-Blue">        :param int limit: number of items to sample.</span>
+<span class=" -Color -Color-Blue">        &quot;&quot;&quot;</span>
+            self<span class=" -Color -Color-Blue">.</span>corpus <span class=" -Color -Color-Blue">=</span> document_corpus<span class=" -Color -Color-Blue">(</span>
+                doctype<span class=" -Color -Color-Blue">,</span>
+                author<span class=" -Color -Color-Blue">,</span>
+                freetext<span class=" -Color -Color-Blue">,</span>
+                fulltext<span class=" -Color -Color-Blue">,</span>
+                from_year<span class=" -Color -Color-Blue">,</span>
+                to_year<span class=" -Color -Color-Blue">,</span>
+                from_timestamp<span class=" -Color -Color-Blue">,</span>
+                to_timestamp<span class=" -Color -Color-Blue">,</span>
+                title<span class=" -Color -Color-Blue">,</span>
+                ddk<span class=" -Color -Color-Blue">,</span>
+                subject<span class=" -Color -Color-Blue">,</span>
+                lang<span class=" -Color -Color-Blue">,</span>
+                limit<span class=" -Color -Color-Blue">,</span>
+                order_by
+            <span class=" -Color -Color-Blue">)</span>
+
+        <span class=" -Color -Color-Green">else</span><span class=" -Color -Color-Blue">:</span>
+            self<span class=" -Color -Color-Blue">.</span>corpus <span class=" -Color -Color-Blue">=</span> pd<span class=" -Color -Color-Blue">.</span>DataFrame<span class=" -Color -Color-Blue">(</span>columns<span class=" -Color -Color-Blue">=[&quot;urn&quot;])</span>
+
+        super<span class=" -Color -Color-Blue">().</span>__init__<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">.</span>corpus<span class=" -Color -Color-Blue">)</span>
+        self<span class=" -Color -Color-Blue">.</span>size <span class=" -Color -Color-Blue">=</span> len<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">.</span>corpus<span class=" -Color -Color-Blue">)</span>
+        
+    <span class=" -Color -Color-Blue">@</span>classmethod
+    <span class=" -Color -Color-Green">def</span> from_identifiers<span class=" -Color -Color-Blue">(</span>cls<span class=" -Color -Color-Blue">,</span> identifiers<span class=" -Color -Color-Blue">):</span>
+        <span class=" -Color -Color-Blue">&quot;&quot;&quot;Construct Corpus from list of identifiers&quot;&quot;&quot;</span>
+        corpus <span class=" -Color -Color-Blue">=</span> Corpus<span class=" -Color -Color-Blue">()</span>
+        corpus<span class=" -Color -Color-Blue">.</span>extend_from_identifiers<span class=" -Color -Color-Blue">(</span>identifiers<span class=" -Color -Color-Blue">=</span>identifiers<span class=" -Color -Color-Blue">)</span>
+        <span class=" -Color -Color-Green">return</span> corpus
+        
+
+    <span class=" -Color -Color-Blue">@</span>classmethod
+    <span class=" -Color -Color-Green">def</span> from_df<span class=" -Color -Color-Blue">(</span>cls<span class=" -Color -Color-Blue">,</span> df<span class=" -Color -Color-Blue">,</span> check_for_urn<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">False</span><span class=" -Color -Color-Blue">):</span>
+        <span class=" -Color -Color-Blue">&quot;&quot;&quot;Typecast Pandas DataFrame to Corpus class</span>
+
+<span class=" -Color -Color-Blue">        DataFrame most contain URN column&quot;&quot;&quot;</span>
+        corpus <span class=" -Color -Color-Blue">=</span> Corpus<span class=" -Color -Color-Blue">()</span>
+        <span class=" -Color -Color-Green">if</span> check_for_urn<span class=" -Color -Color-Blue">:</span>
+            corpus<span class=" -Color -Color-Blue">.</span>corpus <span class=" -Color -Color-Blue">=</span> cls<span class=" -Color -Color-Blue">.</span>_urn_id_in_dataframe_cols<span class=" -Color -Color-Blue">(</span>df<span class=" -Color -Color-Blue">)</span>
+        <span class=" -Color -Color-Green">else</span><span class=" -Color -Color-Blue">:</span>
+            corpus<span class=" -Color -Color-Blue">.</span>corpus <span class=" -Color -Color-Blue">=</span> df
+        corpus<span class=" -Color -Color-Blue">.</span>frame <span class=" -Color -Color-Blue">=</span> corpus<span class=" -Color -Color-Blue">.</span>corpus
+        corpus<span class=" -Color -Color-Blue">.</span>size <span class=" -Color -Color-Blue">=</span> len<span class=" -Color -Color-Blue">(</span>corpus<span class=" -Color -Color-Blue">.</span>corpus<span class=" -Color -Color-Blue">)</span>
+        <span class=" -Color -Color-Green">return</span> corpus
+
+    <span class=" -Color -Color-Blue">@</span>classmethod
+    <span class=" -Color -Color-Green">def</span> from_csv<span class=" -Color -Color-Blue">(</span>cls<span class=" -Color -Color-Blue">,</span> path<span class=" -Color -Color-Blue">):</span>
+        <span class=" -Color -Color-Blue">&quot;&quot;&quot;Import corpus from csv&quot;&quot;&quot;</span>
+        df <span class=" -Color -Color-Blue">=</span> pd<span class=" -Color -Color-Blue">.</span>read_csv<span class=" -Color -Color-Blue">(</span>path<span class=" -Color -Color-Blue">)</span>
+        <span class=" -Color -Color-Green">return</span> cls<span class=" -Color -Color-Blue">.</span>from_df<span class=" -Color -Color-Blue">(</span>df<span class=" -Color -Color-Blue">)</span>
+
+    <span class=" -Color -Color-Blue">@</span>staticmethod
+    <span class=" -Color -Color-Green">def</span> _urn_id_in_dataframe_cols<span class=" -Color -Color-Blue">(</span>dataframe<span class=" -Color -Color-Blue">):</span>
+        <span class=" -Color -Color-Blue">&quot;&quot;&quot;Checks if dataframe contains URN column&quot;&quot;&quot;</span>
+        <span class=" -Color -Color-Green">if</span> <span class=" -Color -Color-Blue">&quot;urn&quot;</span> <span class=" -Color -Color-Green">in</span> dataframe<span class=" -Color -Color-Blue">.</span>columns<span class=" -Color -Color-Blue">:</span>
+            <span class=" -Color -Color-Green">if</span> dataframe<span class=" -Color -Color-Blue">.</span>urn<span class=" -Color -Color-Blue">.</span>str<span class=" -Color -Color-Blue">.</span>contains<span class=" -Color -Color-Blue">(&quot;^URN:NBN:no-nb_.+&quot;).</span>all<span class=" -Color -Color-Blue">():</span>
+                <span class=" -Color -Color-Green">return</span> dataframe
+        <span class=" -Color -Color-Green">raise</span> ValueError<span class=" -Color -Color-Blue">(&quot;No&#39;urn&#39;-column in dataframe.&quot;)</span>
+
+    <span class=" -Color -Color-Green">def</span> extend_from_identifiers<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">,</span> identifiers<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">):</span>
+        new_corpus <span class=" -Color -Color-Blue">=</span> get_metadata<span class=" -Color -Color-Blue">(</span>urnlist<span class=" -Color -Color-Blue">(</span>identifiers<span class=" -Color -Color-Blue">))</span>
+        self<span class=" -Color -Color-Blue">.</span>add<span class=" -Color -Color-Blue">(</span>new_corpus<span class=" -Color -Color-Blue">)</span>
+
+    <span class=" -Color -Color-Green">def</span> evaluate_words<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">,</span> wordbags <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">):</span>
+        df <span class=" -Color -Color-Blue">=</span> evaluate_documents<span class=" -Color -Color-Blue">(</span>wordbags <span class=" -Color -Color-Blue">=</span> wordbags<span class=" -Color -Color-Blue">,</span> urns <span class=" -Color -Color-Blue">=</span> list<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">.</span>corpus<span class=" -Color -Color-Blue">.</span>urn<span class=" -Color -Color-Blue">))</span>
+        df<span class=" -Color -Color-Blue">.</span>index <span class=" -Color -Color-Blue">=</span> df<span class=" -Color -Color-Blue">.</span>index<span class=" -Color -Color-Blue">.</span>astype<span class=" -Color -Color-Blue">(</span>int<span class=" -Color -Color-Blue">)</span>
+        cols <span class=" -Color -Color-Blue">=</span> df<span class=" -Color -Color-Blue">.</span>columns
+        df <span class=" -Color -Color-Blue">=</span> pd<span class=" -Color -Color-Blue">.</span>concat<span class=" -Color -Color-Blue">([</span>df<span class=" -Color -Color-Blue">,</span> self<span class=" -Color -Color-Blue">.</span>corpus<span class=" -Color -Color-Blue">[[&#39;dhlabid&#39;,&#39;urn&#39;]].</span>set_index<span class=" -Color -Color-Blue">(&#39;dhlabid&#39;)],</span> axis <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">)</span>
+        df <span class=" -Color -Color-Blue">=</span> df<span class=" -Color -Color-Blue">.</span>set_index<span class=" -Color -Color-Blue">(&#39;urn&#39;)</span>
+        <span class=" -Color -Color-Green">return</span> df<span class=" -Color -Color-Blue">[</span>cols<span class=" -Color -Color-Blue">].</span>fillna<span class=" -Color -Color-Blue">(</span><span class=" -Color -Color-Cyan">0</span><span class=" -Color -Color-Blue">)</span>
+
+    <span class=" -Color -Color-Green">def</span> add<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">,</span> new_corpus<span class=" -Color -Color-Blue">):</span>
+        <span class=" -Color -Color-Blue">&quot;&quot;&quot;Utility for appending Corpus or DataFrame to self&quot;&quot;&quot;</span>
+        <span class=" -Color -Color-Green">if</span> self<span class=" -Color -Color-Blue">.</span>_is_Corpus<span class=" -Color -Color-Blue">(</span>new_corpus<span class=" -Color -Color-Blue">):</span>
+            new_corpus <span class=" -Color -Color-Blue">=</span> new_corpus<span class=" -Color -Color-Blue">.</span>frame
+        self<span class=" -Color -Color-Blue">.</span>frame <span class=" -Color -Color-Blue">=</span> pd<span class=" -Color -Color-Blue">.</span>concat<span class=" -Color -Color-Blue">([</span>self<span class=" -Color -Color-Blue">.</span>frame<span class=" -Color -Color-Blue">,</span> new_corpus<span class=" -Color -Color-Blue">]).</span>drop_duplicates<span class=" -Color -Color-Blue">().</span>reset_index<span class=" -Color -Color-Blue">(</span>drop<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">True</span><span class=" -Color -Color-Blue">)</span>
+        self<span class=" -Color -Color-Blue">.</span>corpus <span class=" -Color -Color-Blue">=</span> self<span class=" -Color -Color-Blue">.</span>frame
+        self<span class=" -Color -Color-Blue">.</span>size <span class=" -Color -Color-Blue">=</span> len<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">.</span>frame<span class=" -Color -Color-Blue">)</span>
+
+    <span class=" -Color -Color-Green">def</span> sample<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">,</span> n<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">5</span><span class=" -Color -Color-Blue">):</span>
+        <span class=" -Color -Color-Blue">&quot;Create random subkorpus with `n` entries&quot;</span>
+        n <span class=" -Color -Color-Blue">=</span> min<span class=" -Color -Color-Blue">(</span>n<span class=" -Color -Color-Blue">,</span> self<span class=" -Color -Color-Blue">.</span>size<span class=" -Color -Color-Blue">)</span>
+        sample <span class=" -Color -Color-Blue">=</span> self<span class=" -Color -Color-Blue">.</span>corpus<span class=" -Color -Color-Blue">.</span>sample<span class=" -Color -Color-Blue">(</span>n<span class=" -Color -Color-Blue">).</span>copy<span class=" -Color -Color-Blue">()</span>
+        <span class=" -Color -Color-Green">return</span> self<span class=" -Color -Color-Blue">.</span>from_df<span class=" -Color -Color-Blue">(</span>sample<span class=" -Color -Color-Blue">)</span>
+
+    <span class=" -Color -Color-Green">def</span> conc<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">,</span> words<span class=" -Color -Color-Blue">,</span> window<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">20</span><span class=" -Color -Color-Blue">,</span> limit<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">500</span><span class=" -Color -Color-Blue">):</span>
+        <span class=" -Color -Color-Blue">&quot;Get concodances of `words` in corpus&quot;</span>
+        <span class=" -Color -Color-Green">return</span> dh<span class=" -Color -Color-Blue">.</span>Concordance<span class=" -Color -Color-Blue">(</span>corpus<span class=" -Color -Color-Blue">=</span>self<span class=" -Color -Color-Blue">.</span>frame<span class=" -Color -Color-Blue">,</span> query<span class=" -Color -Color-Blue">=</span>words<span class=" -Color -Color-Blue">,</span> window<span class=" -Color -Color-Blue">=</span>window<span class=" -Color -Color-Blue">,</span> limit<span class=" -Color -Color-Blue">=</span>limit<span class=" -Color -Color-Blue">)</span>
+
+    <span class=" -Color -Color-Green">def</span> coll<span class=" -Color -Color-Blue">(</span>
+        self<span class=" -Color -Color-Blue">,</span>
+        words<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+        before<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">10</span><span class=" -Color -Color-Blue">,</span>
+        after<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">10</span><span class=" -Color -Color-Blue">,</span>
+        reference<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+        samplesize<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">20000</span><span class=" -Color -Color-Blue">,</span>
+        alpha<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">False</span><span class=" -Color -Color-Blue">,</span>
+        ignore_caps<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">False</span><span class=" -Color -Color-Blue">):</span>
+        <span class=" -Color -Color-Blue">&quot;Get collocations of `words` in corpus&quot;</span>
+        <span class=" -Color -Color-Green">return</span> dh<span class=" -Color -Color-Blue">.</span>Collocations<span class=" -Color -Color-Blue">(</span>
+            corpus<span class=" -Color -Color-Blue">=</span>self<span class=" -Color -Color-Blue">.</span>frame<span class=" -Color -Color-Blue">,</span>
+            words<span class=" -Color -Color-Blue">=</span>words<span class=" -Color -Color-Blue">,</span>
+            before<span class=" -Color -Color-Blue">=</span>before<span class=" -Color -Color-Blue">,</span>
+            after<span class=" -Color -Color-Blue">=</span>after<span class=" -Color -Color-Blue">,</span>
+            reference<span class=" -Color -Color-Blue">=</span>reference<span class=" -Color -Color-Blue">,</span>
+            samplesize<span class=" -Color -Color-Blue">=</span>samplesize<span class=" -Color -Color-Blue">,</span>
+            alpha<span class=" -Color -Color-Blue">=</span>alpha<span class=" -Color -Color-Blue">,</span>
+            ignore_caps<span class=" -Color -Color-Blue">=</span>ignore_caps
+            <span class=" -Color -Color-Blue">)</span>
+
+    <span class=" -Color -Color-Green">def</span> count<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">,</span> words<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">):</span>
+        <span class=" -Color -Color-Blue">&quot;Get word frequencies for corpus&quot;</span>
+        <span class=" -Color -Color-Green">return</span> dh<span class=" -Color -Color-Blue">.</span>Counts<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">,</span> words<span class=" -Color -Color-Blue">)</span>
+    
+    <span class=" -Color -Color-Green">def</span> freq<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">,</span> words<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">):</span>
+        <span class=" -Color -Color-Blue">&quot;Get word frequencies for corpus&quot;</span>
+        <span class=" -Color -Color-Green">return</span> dh<span class=" -Color -Color-Blue">.</span>Counts<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">,</span> words<span class=" -Color -Color-Blue">)</span>
+    
+    <span class=" -Color -Color-Blue">@</span>staticmethod
+    <span class=" -Color -Color-Green">def</span> _is_Corpus<span class=" -Color -Color-Blue">(</span>corpus<span class=" -Color -Color-Blue">)</span> <span class=" -Color -Color-Blue">-&gt;</span> bool<span class=" -Color -Color-Blue">:</span>
+        <span class=" -Color -Color-Blue">&quot;&quot;&quot;Check if `input` is Corpus or DataFrame&quot;&quot;&quot;</span>
+        <span class=" -Color -Color-Green">if</span> type<span class=" -Color -Color-Blue">(</span>corpus<span class=" -Color -Color-Blue">)</span> <span class=" -Color -Color-Green">not</span> <span class=" -Color -Color-Green">in</span> <span class=" -Color -Color-Blue">[</span>DataFrame<span class=" -Color -Color-Blue">,</span> Corpus<span class=" -Color -Color-Blue">]:</span>
+            <span class=" -Color -Color-Green">raise</span> TypeError<span class=" -Color -Color-Blue">(&quot;Input is not Corpus or DataFrame&quot;)</span>
+        <span class=" -Color -Color-Green">return</span> isinstance<span class=" -Color -Color-Blue">(</span>corpus<span class=" -Color -Color-Blue">,</span> Corpus<span class=" -Color -Color-Blue">)</span>
+<span class=" -Color -Color-Red">File:</span>           ~/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages/dhlab/text/corpus.py
+<span class=" -Color -Color-Red">Type:</span>           type
+<span class=" -Color -Color-Red">Subclasses:</span>     
 </pre></div>
 </div>
 </div>
@@ -564,43 +797,43 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>100384102</td>
-      <td>URN:NBN:no-nb_digibok_2018121368009</td>
-      <td>Dracula</td>
-      <td>Arnesson , Malin / Stoker , Bram / Store , Gur...</td>
-      <td>2004</td>
+      <td>100439375</td>
+      <td>URN:NBN:no-nb_digibok_2021042058016</td>
+      <td>Dracula : av Lars Saabye Christensen : fritt e...</td>
+      <td></td>
+      <td>2000</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>100219857</td>
-      <td>URN:NBN:no-nb_digibok_2014071506008</td>
+      <td>100346414</td>
+      <td>URN:NBN:no-nb_digibok_2017091805047</td>
       <td>Dracula</td>
-      <td>Stoker , Bram / Carling , Bjørn</td>
-      <td>1980</td>
+      <td>MacDonald , Eric / Stoker , Bram</td>
+      <td>1983</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>100569450</td>
-      <td>URN:NBN:no-nb_digibok_2010020103031</td>
-      <td>Bram Stoker ' s Dracula</td>
-      <td>Mignola , Mike / Thomas , Roy / Stoker , Bram</td>
-      <td>1993</td>
+      <td>100547952</td>
+      <td>URN:NBN:no-nb_digibok_2011071108102</td>
+      <td>Dracula</td>
+      <td>Stoker , Bram / Carling , Bjørn</td>
+      <td>2006</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>100540112</td>
-      <td>URN:NBN:no-nb_digibok_2011052408015</td>
-      <td>Dracula</td>
-      <td>Stoker , Bram / Carling , Bjørn</td>
-      <td>2004</td>
+      <td>100138345</td>
+      <td>URN:NBN:no-nb_digibok_2013013008275</td>
+      <td>Dracula house</td>
+      <td>Flikke , Nina</td>
+      <td>1986</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>100359518</td>
-      <td>URN:NBN:no-nb_digibok_2017122268008</td>
-      <td>Dracula : av Lars Saabye Christensen : fritt e...</td>
-      <td>Christensen , Lars Saabye / Stoker , Bram</td>
-      <td>2000</td>
+      <td>100138409</td>
+      <td>URN:NBN:no-nb_digibok_2013013108024</td>
+      <td>Dracula</td>
+      <td>Stoker , Bram / Bringsværd , Tor Åge / Bing , ...</td>
+      <td>1974</td>
     </tr>
   </tbody>
 </table>
@@ -612,6 +845,47 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dh.Concordance<span class="o">??</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Init signature:</span> dh<span class=" -Color -Color-Blue">.</span>Concordance<span class=" -Color -Color-Blue">(</span>corpus<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span> query<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span> window<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">20</span><span class=" -Color -Color-Blue">,</span> limit<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">500</span><span class=" -Color -Color-Blue">)</span>
+<span class=" -Color -Color-Red">Source:</span>        
+<span class=" -Color -Color-Green">class</span> Concordance<span class=" -Color -Color-Blue">(</span>DhlabObj<span class=" -Color -Color-Blue">):</span>
+    <span class=" -Color -Color-Blue">&quot;&quot;&quot;Wrapper for concordance function&quot;&quot;&quot;</span>
+
+    <span class=" -Color -Color-Green">def</span> __init__<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">,</span> corpus<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span> query<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span> window<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">20</span><span class=" -Color -Color-Blue">,</span> limit<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">500</span><span class=" -Color -Color-Blue">):</span>
+        <span class=" -Color -Color-Blue">&quot;&quot;&quot;Get concordances for word(s) in corpus</span>
+
+<span class=" -Color -Color-Blue">        :param corpus: Target corpus, defaults to None</span>
+<span class=" -Color -Color-Blue">        :param query: word or list or words, defaults to None</span>
+<span class=" -Color -Color-Blue">        :param window: how many tokens to consider around the target word, \</span>
+<span class=" -Color -Color-Blue">            defaults to 20</span>
+<span class=" -Color -Color-Blue">        :param limit: limit returned hits, defaults to 500</span>
+<span class=" -Color -Color-Blue">        &quot;&quot;&quot;</span>
+
+        self<span class=" -Color -Color-Blue">.</span>concordance <span class=" -Color -Color-Blue">=</span> concordance<span class=" -Color -Color-Blue">(</span>
+            urns<span class=" -Color -Color-Blue">=</span>urnlist<span class=" -Color -Color-Blue">(</span>corpus<span class=" -Color -Color-Blue">),</span> words<span class=" -Color -Color-Blue">=</span>query<span class=" -Color -Color-Blue">,</span> window<span class=" -Color -Color-Blue">=</span>window<span class=" -Color -Color-Blue">,</span> limit<span class=" -Color -Color-Blue">=</span>limit
+        <span class=" -Color -Color-Blue">)</span>
+        self<span class=" -Color -Color-Blue">.</span>concordance<span class=" -Color -Color-Blue">[&quot;link&quot;]</span> <span class=" -Color -Color-Blue">=</span> self<span class=" -Color -Color-Blue">.</span>concordance<span class=" -Color -Color-Blue">.</span>urn<span class=" -Color -Color-Blue">.</span>apply<span class=" -Color -Color-Blue">(</span>make_link<span class=" -Color -Color-Blue">)</span>
+        self<span class=" -Color -Color-Blue">.</span>concordance <span class=" -Color -Color-Blue">=</span> self<span class=" -Color -Color-Blue">.</span>concordance<span class=" -Color -Color-Blue">[[&quot;link&quot;,</span> <span class=" -Color -Color-Blue">&quot;urn&quot;,</span> <span class=" -Color -Color-Blue">&quot;conc&quot;]]</span>
+        self<span class=" -Color -Color-Blue">.</span>concordance<span class=" -Color -Color-Blue">.</span>columns <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Blue">[&quot;link&quot;,</span> <span class=" -Color -Color-Blue">&quot;urn&quot;,</span> <span class=" -Color -Color-Blue">&quot;concordance&quot;]</span>
+        self<span class=" -Color -Color-Blue">.</span>corpus <span class=" -Color -Color-Blue">=</span> corpus
+        self<span class=" -Color -Color-Blue">.</span>size <span class=" -Color -Color-Blue">=</span> len<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">.</span>concordance<span class=" -Color -Color-Blue">)</span>
+
+        super<span class=" -Color -Color-Blue">().</span>__init__<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">.</span>concordance<span class=" -Color -Color-Blue">)</span>
+
+    <span class=" -Color -Color-Green">def</span> show<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">,</span> n<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">10</span><span class=" -Color -Color-Blue">,</span> style<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">True</span><span class=" -Color -Color-Blue">):</span>
+        <span class=" -Color -Color-Green">if</span> style<span class=" -Color -Color-Blue">:</span>
+            result <span class=" -Color -Color-Blue">=</span> self<span class=" -Color -Color-Blue">.</span>concordance<span class=" -Color -Color-Blue">.</span>sample<span class=" -Color -Color-Blue">(</span>min<span class=" -Color -Color-Blue">(</span>n<span class=" -Color -Color-Blue">,</span> self<span class=" -Color -Color-Blue">.</span>size<span class=" -Color -Color-Blue">))[</span>
+                <span class=" -Color -Color-Blue">[&quot;link&quot;,</span> <span class=" -Color -Color-Blue">&quot;concordance&quot;]</span>
+            <span class=" -Color -Color-Blue">].</span>style
+        <span class=" -Color -Color-Green">else</span><span class=" -Color -Color-Blue">:</span>
+            result <span class=" -Color -Color-Blue">=</span> self<span class=" -Color -Color-Blue">.</span>concordance<span class=" -Color -Color-Blue">.</span>sample<span class=" -Color -Color-Blue">(</span>min<span class=" -Color -Color-Blue">(</span>n<span class=" -Color -Color-Blue">,</span> self<span class=" -Color -Color-Blue">.</span>size<span class=" -Color -Color-Blue">))</span>
+        <span class=" -Color -Color-Green">return</span> result
+<span class=" -Color -Color-Red">File:</span>           ~/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages/dhlab/text/conc_coll.py
+<span class=" -Color -Color-Red">Type:</span>           type
+<span class=" -Color -Color-Red">Subclasses:</span>     
 </pre></div>
 </div>
 </div>
@@ -628,64 +902,64 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_47287">
+<table id="T_14e11">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_47287_level0_col0" class="col_heading level0 col0" >link</th>
-      <th id="T_47287_level0_col1" class="col_heading level0 col1" >concordance</th>
+      <th id="T_14e11_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_14e11_level0_col1" class="col_heading level0 col1" >concordance</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_47287_level0_row0" class="row_heading level0 row0" >202</th>
-      <td id="T_47287_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011071108102'>URN:NBN:no-nb_digibok_2011071108102</a></td>
-      <td id="T_47287_row0_col1" class="data row0 col1" ><b>DRACULA</b></td>
+      <th id="T_14e11_level0_row0" class="row_heading level0 row0" >233</th>
+      <td id="T_14e11_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014052008098'>URN:NBN:no-nb_digibok_2014052008098</a></td>
+      <td id="T_14e11_row0_col1" class="data row0 col1" ><b>DRACULA</b></td>
     </tr>
     <tr>
-      <th id="T_47287_level0_row1" class="row_heading level0 row1" >146</th>
-      <td id="T_47287_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014071506008'>URN:NBN:no-nb_digibok_2014071506008</a></td>
-      <td id="T_47287_row1_col1" class="data row1 col1" >« Grev <b>Dracula</b> ? »</td>
+      <th id="T_14e11_level0_row1" class="row_heading level0 row1" >530</th>
+      <td id="T_14e11_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011071108102'>URN:NBN:no-nb_digibok_2011071108102</a></td>
+      <td id="T_14e11_row1_col1" class="data row1 col1" ><b>DRACULA</b></td>
     </tr>
     <tr>
-      <th id="T_47287_level0_row2" class="row_heading level0 row2" >332</th>
-      <td id="T_47287_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011071108102'>URN:NBN:no-nb_digibok_2011071108102</a></td>
-      <td id="T_47287_row2_col1" class="data row2 col1" ><b>DRACULA</b></td>
+      <th id="T_14e11_level0_row2" class="row_heading level0 row2" >300</th>
+      <td id="T_14e11_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014052008098'>URN:NBN:no-nb_digibok_2014052008098</a></td>
+      <td id="T_14e11_row2_col1" class="data row2 col1" ><b>DRACULA</b> I</td>
     </tr>
     <tr>
-      <th id="T_47287_level0_row3" class="row_heading level0 row3" >300</th>
-      <td id="T_47287_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2013062438048'>URN:NBN:no-nb_digibok_2013062438048</a></td>
-      <td id="T_47287_row3_col1" class="data row3 col1" >... Lucy blir et lett bytte for <b>Dracula</b> som gjør henne til sitt første offer etter ankomsten til Whitby , og... </td>
+      <th id="T_14e11_level0_row3" class="row_heading level0 row3" >607</th>
+      <td id="T_14e11_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011071108102'>URN:NBN:no-nb_digibok_2011071108102</a></td>
+      <td id="T_14e11_row3_col1" class="data row3 col1" ><b>DRACULA</b></td>
     </tr>
     <tr>
-      <th id="T_47287_level0_row4" class="row_heading level0 row4" >155</th>
-      <td id="T_47287_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011071108102'>URN:NBN:no-nb_digibok_2011071108102</a></td>
-      <td id="T_47287_row4_col1" class="data row4 col1" ><b>DRACULA</b></td>
+      <th id="T_14e11_level0_row4" class="row_heading level0 row4" >379</th>
+      <td id="T_14e11_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014052008098'>URN:NBN:no-nb_digibok_2014052008098</a></td>
+      <td id="T_14e11_row4_col1" class="data row4 col1" ><b>DRACULA</b> !</td>
     </tr>
     <tr>
-      <th id="T_47287_level0_row5" class="row_heading level0 row5" >132</th>
-      <td id="T_47287_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011071108102'>URN:NBN:no-nb_digibok_2011071108102</a></td>
-      <td id="T_47287_row5_col1" class="data row5 col1" ><b>DRACULA</b></td>
+      <th id="T_14e11_level0_row5" class="row_heading level0 row5" >589</th>
+      <td id="T_14e11_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011071108102'>URN:NBN:no-nb_digibok_2011071108102</a></td>
+      <td id="T_14e11_row5_col1" class="data row5 col1" ><b>DRACULA</b></td>
     </tr>
     <tr>
-      <th id="T_47287_level0_row6" class="row_heading level0 row6" >203</th>
-      <td id="T_47287_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011071108102'>URN:NBN:no-nb_digibok_2011071108102</a></td>
-      <td id="T_47287_row6_col1" class="data row6 col1" ><b>DRACULA</b></td>
+      <th id="T_14e11_level0_row6" class="row_heading level0 row6" >491</th>
+      <td id="T_14e11_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011071108102'>URN:NBN:no-nb_digibok_2011071108102</a></td>
+      <td id="T_14e11_row6_col1" class="data row6 col1" ><b>DRACULA</b></td>
     </tr>
     <tr>
-      <th id="T_47287_level0_row7" class="row_heading level0 row7" >274</th>
-      <td id="T_47287_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011071108102'>URN:NBN:no-nb_digibok_2011071108102</a></td>
-      <td id="T_47287_row7_col1" class="data row7 col1" ><b>DRACULA</b></td>
+      <th id="T_14e11_level0_row7" class="row_heading level0 row7" >42</th>
+      <td id="T_14e11_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2010020103031'>URN:NBN:no-nb_digibok_2010020103031</a></td>
+      <td id="T_14e11_row7_col1" class="data row7 col1" >K <b>Dracula</b> ... ;</td>
     </tr>
     <tr>
-      <th id="T_47287_level0_row8" class="row_heading level0 row8" >72</th>
-      <td id="T_47287_row8_col0" class="data row8 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011071108102'>URN:NBN:no-nb_digibok_2011071108102</a></td>
-      <td id="T_47287_row8_col1" class="data row8 col1" ><b>DRACULA</b></td>
+      <th id="T_14e11_level0_row8" class="row_heading level0 row8" >84</th>
+      <td id="T_14e11_row8_col0" class="data row8 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2017091805047'>URN:NBN:no-nb_digibok_2017091805047</a></td>
+      <td id="T_14e11_row8_col1" class="data row8 col1" ><b>Dracula</b> ( opphisset ) :</td>
     </tr>
     <tr>
-      <th id="T_47287_level0_row9" class="row_heading level0 row9" >52</th>
-      <td id="T_47287_row9_col0" class="data row9 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2013062438048'>URN:NBN:no-nb_digibok_2013062438048</a></td>
-      <td id="T_47287_row9_col1" class="data row9 col1" >... Ringeren i Notre Dame , Gi sel le , <b>Dracula</b> og A Christmas Carol for Northern Ballet Theatre . Som... </td>
+      <th id="T_14e11_level0_row9" class="row_heading level0 row9" >610</th>
+      <td id="T_14e11_row9_col0" class="data row9 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011071108102'>URN:NBN:no-nb_digibok_2011071108102</a></td>
+      <td id="T_14e11_row9_col1" class="data row9 col1" ><b>dracula</b> !</td>
     </tr>
   </tbody>
 </table>
@@ -697,6 +971,58 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dh.Counts<span class="o">??</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Init signature:</span> dh<span class=" -Color -Color-Blue">.</span>Counts<span class=" -Color -Color-Blue">(</span>corpus<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span> words<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">)</span>
+<span class=" -Color -Color-Red">Source:</span>        
+<span class=" -Color -Color-Green">class</span> Counts<span class=" -Color -Color-Blue">(</span>DhlabObj<span class=" -Color -Color-Blue">):</span>
+    <span class=" -Color -Color-Blue">&quot;&quot;&quot;Provide counts for a corpus - shouldn&#39;t be too large&quot;&quot;&quot;</span>
+
+    <span class=" -Color -Color-Green">def</span> __init__<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">,</span> corpus<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span> words<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">):</span>
+        <span class=" -Color -Color-Blue">&quot;&quot;&quot;Get frequency list for Corpus</span>
+
+<span class=" -Color -Color-Blue">        :param corpus: target Corpus, defaults to None</span>
+<span class=" -Color -Color-Blue">        :param words: list of words to be counted, defaults to None</span>
+<span class=" -Color -Color-Blue">        &quot;&quot;&quot;</span>
+        <span class=" -Color -Color-Green">if</span> corpus <span class=" -Color -Color-Green">is</span> <span class=" -Color -Color-Green">None</span> <span class=" -Color -Color-Green">and</span> words <span class=" -Color -Color-Green">is</span> <span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">:</span>
+            self<span class=" -Color -Color-Blue">.</span>counts <span class=" -Color -Color-Blue">=</span> pd<span class=" -Color -Color-Blue">.</span>DataFrame<span class=" -Color -Color-Blue">()</span>
+            self<span class=" -Color -Color-Blue">.</span>title_dct <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Green">None</span>
+        <span class=" -Color -Color-Green">elif</span> corpus <span class=" -Color -Color-Green">is</span> <span class=" -Color -Color-Green">not</span> <span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">:</span>
+            <span class=" -Color -Color-Red"># count - if words is none result will be as if counting all words</span>
+            <span class=" -Color -Color-Red"># in the corpus</span>
+            self<span class=" -Color -Color-Blue">.</span>counts <span class=" -Color -Color-Blue">=</span> get_document_frequencies<span class=" -Color -Color-Blue">(</span>
+                urns<span class=" -Color -Color-Blue">=</span>urnlist<span class=" -Color -Color-Blue">(</span>corpus<span class=" -Color -Color-Blue">),</span> cutoff<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">0</span><span class=" -Color -Color-Blue">,</span> words<span class=" -Color -Color-Blue">=</span>words
+            <span class=" -Color -Color-Blue">)</span>
+            
+            <span class=" -Color -Color-Red"># Include dhlab and title link in object</span>
+            self<span class=" -Color -Color-Blue">.</span>title_dct <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Blue">{</span>k <span class=" -Color -Color-Blue">:</span> v <span class=" -Color -Color-Green">for</span> k<span class=" -Color -Color-Blue">,</span> v <span class=" -Color -Color-Green">in</span> zip<span class=" -Color -Color-Blue">(</span>corpus<span class=" -Color -Color-Blue">.</span>frame<span class=" -Color -Color-Blue">.</span>dhlabid<span class=" -Color -Color-Blue">,</span> corpus<span class=" -Color -Color-Blue">.</span>frame<span class=" -Color -Color-Blue">.</span>title<span class=" -Color -Color-Blue">)}</span> 
+
+        super<span class=" -Color -Color-Blue">().</span>__init__<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">.</span>counts<span class=" -Color -Color-Blue">)</span>
+
+    <span class=" -Color -Color-Green">def</span> sum<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">):</span>
+        <span class=" -Color -Color-Blue">&quot;&quot;&quot;Summarize Corpus frequencies</span>
+
+<span class=" -Color -Color-Blue">        :return: frequency list for Corpus</span>
+<span class=" -Color -Color-Blue">        &quot;&quot;&quot;</span>
+        <span class=" -Color -Color-Red">#c = Counts()</span>
+        <span class=" -Color -Color-Red">#c.counts = self.counts.sum(axis=1)</span>
+        <span class=" -Color -Color-Green">return</span> self<span class=" -Color -Color-Blue">.</span>from_df<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">.</span>counts<span class=" -Color -Color-Blue">.</span>sum<span class=" -Color -Color-Blue">(</span>axis<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">).</span>to_frame<span class=" -Color -Color-Blue">(&quot;freqs&quot;))</span>
+    
+    <span class=" -Color -Color-Green">def</span> display_names<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">):</span>
+        <span class=" -Color -Color-Blue">&quot;Display data with record names as column titles.&quot;</span>
+        <span class=" -Color -Color-Green">return</span> self<span class=" -Color -Color-Blue">.</span>frame<span class=" -Color -Color-Blue">.</span>rename<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">.</span>title_dct<span class=" -Color -Color-Blue">,</span> axis<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">)</span>
+
+    <span class=" -Color -Color-Blue">@</span>classmethod
+    <span class=" -Color -Color-Green">def</span> from_df<span class=" -Color -Color-Blue">(</span>cls<span class=" -Color -Color-Blue">,</span> df<span class=" -Color -Color-Blue">):</span>
+        obj <span class=" -Color -Color-Blue">=</span> Counts<span class=" -Color -Color-Blue">()</span>
+        obj<span class=" -Color -Color-Blue">.</span>counts <span class=" -Color -Color-Blue">=</span> df
+        obj<span class=" -Color -Color-Blue">.</span>frame <span class=" -Color -Color-Blue">=</span> df
+        <span class=" -Color -Color-Green">return</span> obj
+<span class=" -Color -Color-Red">File:</span>           ~/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages/dhlab/text/conc_coll.py
+<span class=" -Color -Color-Red">Type:</span>           type
+<span class=" -Color -Color-Red">Subclasses:</span>     
 </pre></div>
 </div>
 </div>
@@ -729,11 +1055,11 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>Dracula</th>
       <th>Dracula : fritt etter Bram Stokers roman</th>
-      <th>Bram Stoker ' s Dracula</th>
+      <th>Bram Stoker's Dracula</th>
       <th>Dracula</th>
-      <th>Dracula</th>
-      <th>Dracula : et dansedrama i tre akter basert på Bram Stokers roman</th>
+      <th>Dracula house</th>
       <th>Dracula</th>
       <th>Dracula</th>
       <th>Dracula</th>
@@ -742,58 +1068,58 @@ document.write(`
   <tbody>
     <tr>
       <th>.</th>
+      <td>646.0</td>
       <td>3268.0</td>
       <td>578.0</td>
-      <td>8099.0</td>
       <td>8495.0</td>
-      <td>99.0</td>
-      <td>8459.0</td>
-      <td>127.0</td>
-      <td>30.0</td>
-    </tr>
-    <tr>
-      <th>:</th>
-      <td>1435.0</td>
-      <td>36.0</td>
-      <td>666.0</td>
-      <td>669.0</td>
-      <td>4.0</td>
-      <td>666.0</td>
-      <td>7.0</td>
-      <td>0.0</td>
+      <td>287.0</td>
+      <td>8447.0</td>
+      <td>8162.0</td>
+      <td>832.0</td>
     </tr>
     <tr>
       <th>,</th>
+      <td>500.0</td>
       <td>1384.0</td>
       <td>368.0</td>
-      <td>9574.0</td>
       <td>9133.0</td>
-      <td>144.0</td>
-      <td>9636.0</td>
-      <td>80.0</td>
-      <td>23.0</td>
+      <td>140.0</td>
+      <td>9659.0</td>
+      <td>9611.0</td>
+      <td>678.0</td>
     </tr>
     <tr>
-      <th>er</th>
-      <td>751.0</td>
-      <td>171.0</td>
-      <td>2423.0</td>
-      <td>2428.0</td>
-      <td>26.0</td>
-      <td>2438.0</td>
+      <th>og</th>
+      <td>288.0</td>
+      <td>524.0</td>
+      <td>147.0</td>
+      <td>6206.0</td>
+      <td>151.0</td>
+      <td>6350.0</td>
+      <td>6312.0</td>
+      <td>261.0</td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>265.0</td>
+      <td>449.0</td>
+      <td>250.0</td>
+      <td>2137.0</td>
+      <td>129.0</td>
+      <td>3092.0</td>
+      <td>2509.0</td>
+      <td>187.0</td>
+    </tr>
+    <tr>
+      <th>^</th>
+      <td>154.0</td>
       <td>0.0</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>?</th>
-      <td>646.0</td>
-      <td>135.0</td>
-      <td>519.0</td>
-      <td>514.0</td>
+      <td>189.0</td>
+      <td>0.0</td>
       <td>1.0</td>
-      <td>522.0</td>
-      <td>41.0</td>
+      <td>2.0</td>
       <td>0.0</td>
+      <td>1.0</td>
     </tr>
     <tr>
       <th>...</th>
@@ -807,7 +1133,7 @@ document.write(`
       <td>...</td>
     </tr>
     <tr>
-      <th>Elvestad</th>
+      <th>forts.</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -815,10 +1141,10 @@ document.write(`
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>2.0</td>
+      <td>10.0</td>
     </tr>
     <tr>
-      <th>Halgeir</th>
+      <th>Nu</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -826,10 +1152,10 @@ document.write(`
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>2.0</td>
+      <td>13.0</td>
     </tr>
     <tr>
-      <th>Heien</th>
+      <th>Pause</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -837,10 +1163,10 @@ document.write(`
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>2.0</td>
+      <td>13.0</td>
     </tr>
     <tr>
-      <th>Sandvær</th>
+      <th>Ton</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -848,10 +1174,10 @@ document.write(`
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>2.0</td>
+      <td>17.0</td>
     </tr>
     <tr>
-      <th>utgangspunktet</th>
+      <th>onathan</th>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -859,18 +1185,18 @@ document.write(`
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>2.0</td>
+      <td>25.0</td>
     </tr>
   </tbody>
 </table>
-<p>20528 rows × 8 columns</p>
+<p>22202 rows × 8 columns</p>
 </div></div></div>
 </div>
 <section id="id1">
 <h3><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dhlab</span> <span class="kn">import</span> <span class="n">totals</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">totals</span>
 </pre></div>
 </div>
 </div>
@@ -936,19 +1262,31 @@ Name: freq, Length: 50000, dtype: int64
   <tbody>
     <tr>
       <th>Dracula</th>
-      <td>0.000198</td>
+      <td>0.000325</td>
     </tr>
     <tr>
       <th>grev</th>
-      <td>0.000055</td>
+      <td>0.000093</td>
+    </tr>
+    <tr>
+      <th>Jonathan</th>
+      <td>0.000044</td>
     </tr>
     <tr>
       <th>Grev</th>
-      <td>0.000046</td>
+      <td>0.000042</td>
+    </tr>
+    <tr>
+      <th>tyrkerne</th>
+      <td>0.000037</td>
     </tr>
     <tr>
       <th>uverdige</th>
       <td>0.000026</td>
+    </tr>
+    <tr>
+      <th>Depotbiblioteket</th>
+      <td>0.000025</td>
     </tr>
     <tr>
       <th>vedlagte</th>
@@ -959,20 +1297,8 @@ Name: freq, Length: 50000, dtype: int64
       <td>0.000024</td>
     </tr>
     <tr>
-      <th>tyrkerne</th>
-      <td>0.000022</td>
-    </tr>
-    <tr>
-      <th>bukket</th>
-      <td>0.000018</td>
-    </tr>
-    <tr>
-      <th>adressert</th>
-      <td>0.000018</td>
-    </tr>
-    <tr>
-      <th>Hopkins</th>
-      <td>0.000018</td>
+      <th>Helsing</th>
+      <td>0.000020</td>
     </tr>
   </tbody>
 </table>
@@ -985,6 +1311,112 @@ Name: freq, Length: 50000, dtype: int64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">??</span>dh.Ngram
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Init signature:</span>
+dh<span class=" -Color -Color-Blue">.</span>Ngram<span class=" -Color -Color-Blue">(</span>
+    words<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    from_year<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    to_year<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    doctype<span class=" -Color -Color-Blue">=&#39;bok&#39;,</span>
+    mode<span class=" -Color -Color-Blue">=&#39;relative&#39;,</span>
+    lang<span class=" -Color -Color-Blue">=&#39;nob&#39;,</span>
+    <span class=" -Color -Color-Blue">**</span>kwargs<span class=" -Color -Color-Blue">,</span>
+<span class=" -Color -Color-Blue">)</span>
+<span class=" -Color -Color-Red">Source:</span>        
+<span class=" -Color -Color-Green">class</span> Ngram<span class=" -Color -Color-Blue">(</span>DhlabObj<span class=" -Color -Color-Blue">):</span>
+    <span class=" -Color -Color-Blue">&quot;&quot;&quot;Top level class for ngrams&quot;&quot;&quot;</span>
+
+    <span class=" -Color -Color-Green">def</span> __init__<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">,</span>
+                 words<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+                 from_year<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+                 to_year<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+                 doctype<span class=" -Color -Color-Blue">=&#39;bok&#39;,</span>
+                 mode<span class=" -Color -Color-Blue">=&#39;relative&#39;,</span>
+                 lang<span class=" -Color -Color-Blue">=&quot;nob&quot;,</span>
+                 <span class=" -Color -Color-Blue">**</span>kwargs
+                 <span class=" -Color -Color-Blue">):</span>
+        <span class=" -Color -Color-Blue">&quot;&quot;&quot;Ngram builder class.</span>
+
+<span class=" -Color -Color-Blue">        Build Ngrams from the National Librarys collections.</span>
+<span class=" -Color -Color-Blue">        Use with book corpus or newspaper corpus.</span>
+<span class=" -Color -Color-Blue">        Lang parameter is only supported for book (`bok`) corpus.</span>
+<span class=" -Color -Color-Blue">        Defaults to `None` if doctype is `avis`.</span>
+
+<span class=" -Color -Color-Blue">        :param words: words to examine, defaults to None</span>
+<span class=" -Color -Color-Blue">        :type words: str or list of str, optional</span>
+<span class=" -Color -Color-Blue">        :param from_year: lower period cutoff, defaults to None</span>
+<span class=" -Color -Color-Blue">        :type from_year: int, optional</span>
+<span class=" -Color -Color-Blue">        :param to_year: upper period cutoff, defaults to None</span>
+<span class=" -Color -Color-Blue">        :type to_year: int, optional</span>
+<span class=" -Color -Color-Blue">        :param doctype: `bok` or `avis` , defaults to &#39;bok&#39;</span>
+<span class=" -Color -Color-Blue">        :type doctype: str, optional</span>
+<span class=" -Color -Color-Blue">        :param mode: Frequency measure, defaults to &#39;relative&#39;</span>
+<span class=" -Color -Color-Blue">        :type mode: str, optional</span>
+<span class=" -Color -Color-Blue">        :param lang: `nob`, `nno`. Only use with docytype=&#39;bok&#39;, defaults to &#39;nob&#39;</span>
+<span class=" -Color -Color-Blue">        :type lang: str, optional</span>
+<span class=" -Color -Color-Blue">        :param \**kwargs: Keyword arguments for  Ngram._ipython_display_() Ngram.plot()</span>
+<span class=" -Color -Color-Blue">        &quot;&quot;&quot;</span>
+
+        self<span class=" -Color -Color-Blue">.</span>date <span class=" -Color -Color-Blue">=</span> datetime<span class=" -Color -Color-Blue">.</span>now<span class=" -Color -Color-Blue">()</span>
+        <span class=" -Color -Color-Green">if</span> to_year <span class=" -Color -Color-Green">is</span> <span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">:</span>
+            to_year <span class=" -Color -Color-Blue">=</span> self<span class=" -Color -Color-Blue">.</span>date<span class=" -Color -Color-Blue">.</span>year
+        <span class=" -Color -Color-Green">if</span> from_year <span class=" -Color -Color-Green">is</span> <span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">:</span>
+            from_year <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Cyan">1950</span>
+
+        self<span class=" -Color -Color-Blue">.</span>from_year <span class=" -Color -Color-Blue">=</span> from_year
+        self<span class=" -Color -Color-Blue">.</span>to_year <span class=" -Color -Color-Blue">=</span> to_year
+        self<span class=" -Color -Color-Blue">.</span>words <span class=" -Color -Color-Blue">=</span> words
+        self<span class=" -Color -Color-Blue">.</span>lang <span class=" -Color -Color-Blue">=</span> lang
+        <span class=" -Color -Color-Green">if</span> doctype <span class=" -Color -Color-Green">is</span> <span class=" -Color -Color-Green">not</span> <span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">:</span>
+            <span class=" -Color -Color-Green">if</span> <span class=" -Color -Color-Blue">&#39;bok&#39;</span> <span class=" -Color -Color-Green">in</span> doctype<span class=" -Color -Color-Blue">:</span>
+                doctype <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Blue">&#39;bok&#39;</span>
+            <span class=" -Color -Color-Green">elif</span> <span class=" -Color -Color-Blue">&#39;avis&#39;</span> <span class=" -Color -Color-Green">in</span> doctype<span class=" -Color -Color-Blue">:</span>
+                doctype <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Blue">&#39;avis&#39;</span>
+            <span class=" -Color -Color-Green">else</span><span class=" -Color -Color-Blue">:</span>
+                doctype <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Blue">&#39;bok&#39;</span>
+        <span class=" -Color -Color-Green">else</span><span class=" -Color -Color-Blue">:</span>
+            doctype <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Blue">&#39;bok&#39;</span>
+
+        <span class=" -Color -Color-Red"># Set default lang for &#39;bok&#39;-corpus</span>
+        <span class=" -Color -Color-Green">if</span> doctype <span class=" -Color -Color-Blue">==</span> <span class=" -Color -Color-Blue">&quot;avis&quot;:</span>
+            lang <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Green">None</span>
+
+
+        ngrm <span class=" -Color -Color-Blue">=</span> nb_ngram<span class=" -Color -Color-Blue">(</span>terms<span class=" -Color -Color-Blue">=&#39;, &#39;.</span>join<span class=" -Color -Color-Blue">(</span>words<span class=" -Color -Color-Blue">),</span>
+                        corpus<span class=" -Color -Color-Blue">=</span>doctype<span class=" -Color -Color-Blue">,</span>
+                        years<span class=" -Color -Color-Blue">=(</span>from_year<span class=" -Color -Color-Blue">,</span> to_year<span class=" -Color -Color-Blue">),</span>
+                        smooth <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">,</span> lang <span class=" -Color -Color-Blue">=</span> lang<span class=" -Color -Color-Blue">,</span>
+                        mode<span class=" -Color -Color-Blue">=</span>mode<span class=" -Color -Color-Blue">)</span>
+        ngrm<span class=" -Color -Color-Blue">.</span>index <span class=" -Color -Color-Blue">=</span> ngrm<span class=" -Color -Color-Blue">.</span>index<span class=" -Color -Color-Blue">.</span>astype<span class=" -Color -Color-Blue">(</span>str<span class=" -Color -Color-Blue">)</span>
+        self<span class=" -Color -Color-Blue">.</span>ngram <span class=" -Color -Color-Blue">=</span> ngrm
+
+        self<span class=" -Color -Color-Blue">.</span>kwargs <span class=" -Color -Color-Blue">=</span> kwargs
+
+        super<span class=" -Color -Color-Blue">().</span>__init__<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">.</span>ngram<span class=" -Color -Color-Blue">)</span>
+
+    <span class=" -Color -Color-Green">def</span> plot<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">,</span> smooth <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Cyan">4</span><span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Blue">**</span>kwargs<span class=" -Color -Color-Blue">):</span>
+        <span class=" -Color -Color-Blue">&quot;&quot;&quot;:param smooth: smoothing the curve&quot;&quot;&quot;</span>
+        grf <span class=" -Color -Color-Blue">=</span> self<span class=" -Color -Color-Blue">.</span>ngram<span class=" -Color -Color-Blue">.</span>rolling<span class=" -Color -Color-Blue">(</span>window<span class=" -Color -Color-Blue">=</span>smooth<span class=" -Color -Color-Blue">,</span> win_type<span class=" -Color -Color-Blue">=&#39;triang&#39;).</span>mean<span class=" -Color -Color-Blue">()</span>
+        grf<span class=" -Color -Color-Blue">.</span>plot<span class=" -Color -Color-Blue">(**</span>kwargs<span class=" -Color -Color-Blue">)</span>
+
+    <span class=" -Color -Color-Green">def</span> compare<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">,</span> another_ngram<span class=" -Color -Color-Blue">):</span>
+        <span class=" -Color -Color-Blue">&quot;&quot;&quot;Divide one ngram by another - measures difference&quot;&quot;&quot;</span>
+        start_year <span class=" -Color -Color-Blue">=</span> max<span class=" -Color -Color-Blue">(</span>datetime<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">.</span>from_year<span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">),</span>
+                         datetime<span class=" -Color -Color-Blue">(</span>another_ngram<span class=" -Color -Color-Blue">.</span>from_year<span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">)).</span>year
+        end_year <span class=" -Color -Color-Blue">=</span> min<span class=" -Color -Color-Blue">(</span>datetime<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">.</span>to_year<span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">),</span> datetime<span class=" -Color -Color-Blue">(</span>another_ngram<span class=" -Color -Color-Blue">.</span>to_year<span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">,</span> <span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">)).</span>year
+        transposed_ngram <span class=" -Color -Color-Blue">=</span> self<span class=" -Color -Color-Blue">.</span>ngram<span class=" -Color -Color-Blue">.</span>loc<span class=" -Color -Color-Blue">[</span>str<span class=" -Color -Color-Blue">(</span>start_year<span class=" -Color -Color-Blue">):</span>str<span class=" -Color -Color-Blue">(</span>end_year<span class=" -Color -Color-Blue">)].</span>transpose<span class=" -Color -Color-Blue">()</span>
+        sum_other_ngram <span class=" -Color -Color-Blue">=</span> another_ngram<span class=" -Color -Color-Blue">.</span>ngram<span class=" -Color -Color-Blue">[</span>str<span class=" -Color -Color-Blue">(</span>start_year<span class=" -Color -Color-Blue">):</span>str<span class=" -Color -Color-Blue">(</span>end_year<span class=" -Color -Color-Blue">)].</span>transpose<span class=" -Color -Color-Blue">().</span>sum<span class=" -Color -Color-Blue">()</span>
+        compare <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Blue">(</span>transposed_ngram <span class=" -Color -Color-Blue">/</span> sum_other_ngram<span class=" -Color -Color-Blue">).</span>transpose<span class=" -Color -Color-Blue">()</span>
+        <span class=" -Color -Color-Green">return</span> compare
+
+    <span class=" -Color -Color-Green">def</span> _ipython_display_<span class=" -Color -Color-Blue">(</span>self<span class=" -Color -Color-Blue">):</span>
+        self<span class=" -Color -Color-Blue">.</span>plot<span class=" -Color -Color-Blue">(**</span>self<span class=" -Color -Color-Blue">.</span>kwargs<span class=" -Color -Color-Blue">)</span>
+<span class=" -Color -Color-Red">File:</span>           ~/anaconda3/envs/digital_tekstanalyse3.10/lib/python3.10/site-packages/dhlab/ngram/ngram.py
+<span class=" -Color -Color-Red">Type:</span>           type
+<span class=" -Color -Color-Red">Subclasses:</span>     NgramBook, NgramNews
 </pre></div>
 </div>
 </div>
@@ -1007,7 +1439,7 @@ Name: freq, Length: 50000, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/6ac7ffbb3d4b83f1cc19db72a5388b89750eda6e33821f1863698ba7f6f4f2d0.png" src="_images/6ac7ffbb3d4b83f1cc19db72a5388b89750eda6e33821f1863698ba7f6f4f2d0.png" />
+<img alt="_images/1c976d70a46a0db7bd0a9aeb638c18a883cea2136c713b2eb024b9a54f3956ed.png" src="_images/1c976d70a46a0db7bd0a9aeb638c18a883cea2136c713b2eb024b9a54f3956ed.png" />
 </div>
 </div>
 </section>
@@ -1040,7 +1472,7 @@ Name: freq, Length: 50000, dtype: int64
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -1059,7 +1491,8 @@ Name: freq, Length: 50000, dtype: int64
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1123,8 +1556,8 @@ By Nasjonalbiblioteket
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>
