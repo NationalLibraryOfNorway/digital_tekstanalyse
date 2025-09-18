@@ -39,4 +39,3 @@ only_build_toc_files: true
 launch_buttons:
   colab_url: "https://colab.research.google.com"
   binderhub_url: "https://mybinder.org" 
-  jupyterhub_url: "https://hub.sprakbanken.cloud"
