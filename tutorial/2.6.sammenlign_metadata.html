@@ -16,51 +16,37 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=f0c89327" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=d2032c04" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=f0c89327" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/theme.css?v=a243ae73" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/bootstrap.css?v=5340d9b1" />
-    <link rel="stylesheet" type="text/css" href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?v=c786f70d" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -72,28 +58,12 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial/2.6.sammenlign_metadata';</script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/language_data.js?v=d4673a71"></script>
-    <script src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/copybutton_funcs.js?v=776a791e"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/searchtools.js?v=d24376de"></script>
-    <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?v=95180707"></script>
-    <script src="../_static/scripts/pydata-sphinx-theme.js?v=b2908668"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
-    <script src="../_static/scripts/bootstrap.js?v=3d67b3b1"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1.10. NER og POS med Spacy" href="3.0.ner_og_pos.html" />
     <link rel="prev" title="1.8. N-gram og galakser" href="2.5.n-gram_og_galakser.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -109,8 +79,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -118,6 +99,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -125,8 +107,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -142,8 +124,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -173,17 +154,21 @@
     
     
     <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="DH-lab dokumenter - Home"/>
-    <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark pst-js-only" alt="DH-lab dokumenter - Home"/>
+    <script>document.write(`<img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark" alt="DH-lab dokumenter - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -232,14 +217,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -450,16 +430,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -513,18 +501,6 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dhlab.api.dhlab_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_document_frequencies</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">Corpus</span><span class="p">,</span> <span class="n">Counts</span><span class="p">,</span> <span class="n">totals</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">dhlab.nbtext</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span><span class="w"> </span><span class="nn">dhlab.api.dhlab_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_document_frequencies</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">Corpus</span><span class="p">,</span> <span class="n">Counts</span><span class="p">,</span> <span class="n">totals</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">dhlab.nbtext</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;dhlab&#39;
 </pre></div>
 </div>
 </div>
@@ -583,75 +559,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th>0</th>
-      <td>Tapte år : tilegnet Alma</td>
-      <td>Pasjkurov , Ivan</td>
-      <td>1990</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Hvis Hitler hadde vunnet krigen : nazistenes p...</td>
-      <td>Giordano , Ralph / Seljelid , Åge</td>
-      <td>1991</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Barn under krigen</td>
-      <td>Nøkleby , Berit / Hjeltnes , Guri / Gullvåg , ...</td>
-      <td>2000</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>De Nære årene : norske kvinner og menn fortell...</td>
-      <td>Jensen , Johan O. / Jensen , Johan O.</td>
-      <td>1986</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Men arbeidet måtte gå : vegfolk forteller om k...</td>
-      <td>Hegdalstrand , Kjell</td>
-      <td>1995</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>161</th>
-      <td>Over grensen ? : Hjemmefrontens likvidasjoner ...</td>
-      <td>Moland , Arnfinn</td>
-      <td>1999</td>
-    </tr>
-    <tr>
-      <th>162</th>
-      <td>Russisk rulett</td>
-      <td>Bočarov , Gennadij / Fremming , Espen</td>
-      <td>1990</td>
-    </tr>
-    <tr>
-      <th>163</th>
-      <td>I Tordenskiolds kjølvann</td>
-      <td>Kavli , Guthorm</td>
-      <td>1990</td>
-    </tr>
-    <tr>
-      <th>164</th>
-      <td>Norsk krigsleksikon 1940-45</td>
-      <td>Dahl , Hans Fredrik / Hagen , Eirin</td>
-      <td>1995</td>
-    </tr>
-    <tr>
-      <th>165</th>
-      <td>Nordmenn i fangenskap 1940-1945 : alfabetisk r...</td>
-      <td>Ottosen , Kristian / Knudsen , Arne</td>
-      <td>1995</td>
-    </tr>
   </tbody>
 </table>
-<p>166 rows × 3 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -665,6 +574,67 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tar de fem første og henter frekvensene for alle bøkene</span>
 
 <span class="n">bøker_dtm</span> <span class="o">=</span> <span class="n">Counts</span><span class="p">(</span><span class="n">bøker</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">DHLabApiError</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># tar de fem første og henter frekvensene for alle bøkene</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">bøker_dtm</span> <span class="o">=</span> <span class="n">Counts</span><span class="p">(</span><span class="n">bøker</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="nn">File /mnt/data/magbb/.virtualenvs/dhlab/lib/python3.12/site-packages/dhlab/text/conc_coll.py:204,</span> in <span class="ni">Counts.__init__</span><span class="nt">(self, corpus, words, cutoff, sparse)</span>
+<span class="g g-Whitespace">    </span><span class="mi">192</span>     <span class="bp">self</span><span class="o">.</span><span class="n">title_dct</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">193</span> <span class="k">elif</span> <span class="n">corpus</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">194</span>     <span class="c1"># Make sure corpus is a dhlab corpus</span>
+<span class="g g-Whitespace">    </span><span class="mi">195</span>     <span class="c1"># if not, try to make it one</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">202</span>     <span class="c1"># count - if words is none result will be as if counting all words</span>
+<span class="g g-Whitespace">    </span><span class="mi">203</span>     <span class="c1"># in the corpus</span>
+<span class="ne">--&gt; </span><span class="mi">204</span>     <span class="bp">self</span><span class="o">.</span><span class="n">freq</span> <span class="o">=</span> <span class="n">get_document_frequencies</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">205</span>         <span class="n">urns</span><span class="o">=</span><span class="n">urnlist</span><span class="p">(</span><span class="n">corpus</span><span class="p">),</span> <span class="n">cutoff</span><span class="o">=</span><span class="n">cutoff</span><span class="p">,</span> <span class="n">words</span><span class="o">=</span><span class="n">words</span><span class="p">,</span> <span class="n">sparse</span><span class="o">=</span><span class="n">sparse</span>
+<span class="g g-Whitespace">    </span><span class="mi">206</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">208</span>     <span class="c1"># Include dhlab and title link in object</span>
+<span class="g g-Whitespace">    </span><span class="mi">209</span>     <span class="k">try</span><span class="p">:</span>
+
+<span class="nn">File /mnt/data/magbb/.virtualenvs/dhlab/lib/python3.12/site-packages/dhlab/api/dhlab_api.py:569,</span> in <span class="ni">get_document_frequencies</span><span class="nt">(urns, cutoff, words, sparse)</span>
+<span class="g g-Whitespace">    </span><span class="mi">556</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Fetch frequency counts of ``words`` in documents (``urns``).</span>
+<span class="g g-Whitespace">    </span><span class="mi">557</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">558</span><span class="sd"> Call the API :py:obj:`~dhlab.constants.BASE_URL` endpoint</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">565</span><span class="sd"> :param bool sparse: create a sparse matrix for memory efficiency</span>
+<span class="g g-Whitespace">    </span><span class="mi">566</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">567</span> <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;urns&quot;</span><span class="p">:</span> <span class="n">urns</span><span class="p">,</span> <span class="s2">&quot;cutoff&quot;</span><span class="p">:</span> <span class="n">cutoff</span><span class="p">,</span> <span class="s2">&quot;words&quot;</span><span class="p">:</span> <span class="n">words</span><span class="p">}</span>
+<span class="ne">--&gt; </span><span class="mi">569</span> <span class="n">r</span> <span class="o">=</span> <span class="n">api_post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">/frequencies&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">570</span> <span class="n">result</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">572</span> <span class="c1"># check if words are passed - return differs a bit</span>
+
+<span class="nn">File /mnt/data/magbb/.virtualenvs/dhlab/lib/python3.12/site-packages/dhlab/api/utils.py:35,</span> in <span class="ni">api_post</span><span class="nt">(url, json, session)</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span> <span class="k">def</span><span class="w"> </span><span class="nf">api_post</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">35</span>     <span class="k">return</span> <span class="n">api_request</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">json</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">)</span>
+
+<span class="nn">File /mnt/data/magbb/.virtualenvs/dhlab/lib/python3.12/site-packages/dhlab/api/utils.py:27,</span> in <span class="ni">api_request</span><span class="nt">(method, url, params, json, session)</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="n">res</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">json</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">27</span> <span class="n">validate_response_status</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="k">return</span> <span class="n">res</span>
+
+<span class="nn">File /mnt/data/magbb/.virtualenvs/dhlab/lib/python3.12/site-packages/dhlab/api/utils.py:8,</span> in <span class="ni">validate_response_status</span><span class="nt">(response)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="k">def</span><span class="w"> </span><span class="nf">validate_response_status</span><span class="p">(</span><span class="n">response</span><span class="p">:</span> <span class="n">requests</span><span class="o">.</span><span class="n">Response</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">8</span>         <span class="k">raise</span> <span class="n">DHLabApiError</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>             <span class="sa">f</span><span class="s2">&quot;Status code: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">reason</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>             <span class="o">+</span> <span class="s2">&quot;There is an error connecting to the DHLab API. This is most likely not an error in your code,&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>             <span class="o">+</span> <span class="s2">&quot; but with the DHLab library or API. Try running the code again, and if that doesn&#39;t work, try to&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>             <span class="o">+</span> <span class="s2">&quot; reinstall/update the dhlab package (e.g. by running: &#39;pip install --upgrade dhlab&#39;).</span><span class="se">\n</span><span class="s2">If the error&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>             <span class="o">+</span> <span class="s2">&quot; persists, then please leave an issue at https://github.com/NationalLibraryOfNorway/DHLAB/issues/.&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>         <span class="p">)</span>
+
+<span class="ne">DHLabApiError</span>: Status code: 500: INTERNAL SERVER ERROR
+
+<span class="n">There</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">error</span> <span class="n">connecting</span> <span class="n">to</span> <span class="n">the</span> <span class="n">DHLab</span> <span class="n">API</span><span class="o">.</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">most</span> <span class="n">likely</span> <span class="ow">not</span> <span class="n">an</span> <span class="n">error</span> <span class="ow">in</span> <span class="n">your</span> <span class="n">code</span><span class="p">,</span> <span class="n">but</span> <span class="k">with</span> <span class="n">the</span> <span class="n">DHLab</span> <span class="n">library</span> <span class="ow">or</span> <span class="n">API</span><span class="o">.</span> <span class="n">Try</span> <span class="n">running</span> <span class="n">the</span> <span class="n">code</span> <span class="n">again</span><span class="p">,</span> <span class="ow">and</span> <span class="k">if</span> <span class="n">that</span> <span class="n">doesn</span><span class="s1">&#39;t work, try to reinstall/update the dhlab package (e.g. by running: &#39;</span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">dhlab</span><span class="s1">&#39;).</span>
+<span class="n">If</span> <span class="n">the</span> <span class="n">error</span> <span class="n">persists</span><span class="p">,</span> <span class="n">then</span> <span class="n">please</span> <span class="n">leave</span> <span class="n">an</span> <span class="n">issue</span> <span class="n">at</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">NationalLibraryOfNorway</span><span class="o">/</span><span class="n">DHLAB</span><span class="o">/</span><span class="n">issues</span><span class="o">/.</span>
 </pre></div>
 </div>
 </div>
@@ -1484,8 +1454,7 @@
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1553,8 +1522,8 @@ By Nasjonalbiblioteket
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

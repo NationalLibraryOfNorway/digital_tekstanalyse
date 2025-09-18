@@ -16,51 +16,37 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=f0c89327" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=d2032c04" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=f0c89327" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/theme.css?v=a243ae73" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/bootstrap.css?v=5340d9b1" />
-    <link rel="stylesheet" type="text/css" href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?v=c786f70d" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -72,28 +58,12 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial/2.4.Søk_i_aviser';</script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/language_data.js?v=d4673a71"></script>
-    <script src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/copybutton_funcs.js?v=776a791e"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/searchtools.js?v=d24376de"></script>
-    <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?v=95180707"></script>
-    <script src="../_static/scripts/pydata-sphinx-theme.js?v=b2908668"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
-    <script src="../_static/scripts/bootstrap.js?v=3d67b3b1"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1.8. N-gram og galakser" href="2.5.n-gram_og_galakser.html" />
     <link rel="prev" title="1.6. Frekvenslister" href="2.3.Frekvenslister.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -109,8 +79,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -118,6 +99,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -125,8 +107,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -142,8 +124,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -173,17 +154,21 @@
     
     
     <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="DH-lab dokumenter - Home"/>
-    <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark pst-js-only" alt="DH-lab dokumenter - Home"/>
+    <script>document.write(`<img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark" alt="DH-lab dokumenter - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -232,14 +217,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -450,16 +430,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -509,18 +497,6 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">dhlab.nbtext</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dh</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">Corpus</span><span class="p">,</span> <span class="n">totals</span><span class="p">,</span> <span class="n">Collocations</span><span class="p">,</span> <span class="n">NgramNews</span><span class="p">,</span> <span class="n">Ngram</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">dhlab.nbtext</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dh</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">Corpus</span><span class="p">,</span> <span class="n">totals</span><span class="p">,</span> <span class="n">Collocations</span><span class="p">,</span> <span class="n">NgramNews</span><span class="p">,</span> <span class="n">Ngram</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;dhlab&#39;
 </pre></div>
 </div>
 </div>
@@ -604,64 +580,64 @@
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_971d7">
+<table id="T_9a81a">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_971d7_level0_col0" class="col_heading level0 col0" >link</th>
-      <th id="T_971d7_level0_col1" class="col_heading level0 col1" >concordance</th>
+      <th id="T_9a81a_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_9a81a_level0_col1" class="col_heading level0 col1" >concordance</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_971d7_level0_row0" class="row_heading level0 row0" >67</th>
-      <td id="T_971d7_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940217_135_80_1'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940217_135_80_1</a></td>
-      <td id="T_971d7_row0_col1" class="data row0 col1" >... 10.00 - 17.50 OL-studio m / 10.30 <b>Langrenn</b> , 10 km menn , ca. 11.45 Alpint , super G menn... </td>
+      <th id="T_9a81a_level0_row0" class="row_heading level0 row0" >78</th>
+      <td id="T_9a81a_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940224_135_93_2'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940224_135_93_2</a></td>
+      <td id="T_9a81a_row0_col1" class="data row0 col1" >... i natten . Am . serie . 14.00 : <b>Langrenn</b> . 30 km klasisk . kvinner . 14.30 : Alpint... </td>
     </tr>
     <tr>
-      <th id="T_971d7_level0_row1" class="row_heading level0 row1" >12</th>
-      <td id="T_971d7_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940204_135_58_1'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940204_135_58_1</a></td>
-      <td id="T_971d7_row1_col1" class="data row1 col1" >... 50 km <b>langrenn</b> . 27.2 . Avslutningsseremoni . Ring 61 1 1 04 92 , e . kl. 16. (... </td>
+      <th id="T_9a81a_level0_row1" class="row_heading level0 row1" >23</th>
+      <td id="T_9a81a_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940214_135_74_1'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940214_135_74_1</a></td>
+      <td id="T_9a81a_row1_col1" class="data row1 col1" >... Aking , single , menn 10.30 - 12.40 : <b>Langrenn</b> , 30 km fri menn 11.00 - 12.80 : Alpint... </td>
     </tr>
     <tr>
-      <th id="T_971d7_level0_row2" class="row_heading level0 row2" >22</th>
-      <td id="T_971d7_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940225_135_95_2'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940225_135_95_2</a></td>
-      <td id="T_971d7_row2_col1" class="data row2 col1" >... : Alpint , slalåm , menn . 10.00 : <b>Langrenn</b> , 50 km , menn . 13.00 : Alpint ,... </td>
+      <th id="T_9a81a_level0_row2" class="row_heading level0 row2" >85</th>
+      <td id="T_9a81a_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940110_135_14_1'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940110_135_14_1</a></td>
+      <td id="T_9a81a_row2_col1" class="data row2 col1" >... januar 1994 <b>langrenn</b> og kombinert Husk Holmenkollsøndagen 13. mars 1994 ! ( f ) SKIFORENINGEN itødipoflcil . Tlf 22 92... </td>
     </tr>
     <tr>
-      <th id="T_971d7_level0_row3" class="row_heading level0 row3" >19</th>
-      <td id="T_971d7_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940201_135_52_1'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940201_135_52_1</a></td>
-      <td id="T_971d7_row3_col1" class="data row3 col1" >... TO 51 * 48 ° t ' n P M 3 « 72 79 Alpint , <b>langrenn</b> og kombi- ' 6 v - OL-blll... </td>
+      <th id="T_9a81a_level0_row3" class="row_heading level0 row3" >68</th>
+      <td id="T_9a81a_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940114_135_23_2'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940114_135_23_2</a></td>
+      <td id="T_9a81a_row3_col1" class="data row3 col1" >Velkommen til World Cup <b>langrenn</b> og kombinert 15. og 16. januar A ^ H » . HOLMEN L. rta . ^... </td>
     </tr>
     <tr>
-      <th id="T_971d7_level0_row4" class="row_heading level0 row4" >9</th>
-      <td id="T_971d7_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940105_135_6_1'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940105_135_6_1</a></td>
-      <td id="T_971d7_row4_col1" class="data row4 col1" >... 0988 Oslo Tlf 22 10 92 10 Fax 22 10 92 50 Vinn billetter til 30 km <b>langrenn</b> for menn... </td>
+      <th id="T_9a81a_level0_row4" class="row_heading level0 row4" >33</th>
+      <td id="T_9a81a_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940212_135_72_1'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940212_135_72_1</a></td>
+      <td id="T_9a81a_row4_col1" class="data row4 col1" >... Sdndagsmorron . Underholdning . 09.45 : OS Lillehammer . <b>Langrenn</b> 1 5 km kvinner . Utfor menn . 11.45 -... </td>
     </tr>
     <tr>
-      <th id="T_971d7_level0_row5" class="row_heading level0 row5" >26</th>
-      <td id="T_971d7_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940220_135_85_1'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940220_135_85_1</a></td>
-      <td id="T_971d7_row5_col1" class="data row5 col1" >... Kombinert lørdag ( plassering hopp og <b>langrenn</b> I parentas ) : Gull : Fred Borre Lundberg , Norge ( 1... </td>
+      <th id="T_9a81a_level0_row5" class="row_heading level0 row5" >30</th>
+      <td id="T_9a81a_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940205_135_60_1'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940205_135_60_1</a></td>
+      <td id="T_9a81a_row5_col1" class="data row5 col1" >... To av de store gullfavorittene i <b>langrenn</b> på Llllehammer har valgt fjell- og taxfree-byen Livigno for OLoppladningen . Og de... </td>
     </tr>
     <tr>
-      <th id="T_971d7_level0_row6" class="row_heading level0 row6" >16</th>
-      <td id="T_971d7_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940220_135_85_1'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940220_135_85_1</a></td>
-      <td id="T_971d7_row6_col1" class="data row6 col1" >... 4 x 10 km stafett , <b>langrenn</b> , menn . T . 94 21 75 50. BUSSTUR / RETUR Oslo-Lillehammer... </td>
+      <th id="T_9a81a_level0_row6" class="row_heading level0 row6" >101</th>
+      <td id="T_9a81a_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940205_135_60_1'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940205_135_60_1</a></td>
+      <td id="T_9a81a_row6_col1" class="data row6 col1" >... - Livet er mer enn sport , sier Smirnov , som kanskje er den største favoritten i <b>langrenn</b> . Side... </td>
     </tr>
     <tr>
-      <th id="T_971d7_level0_row7" class="row_heading level0 row7" >4</th>
-      <td id="T_971d7_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940223_135_91_2'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940223_135_91_2</a></td>
-      <td id="T_971d7_row7_col1" class="data row7 col1" >... rs * fi ? t ^ ^ 30 km <b>langrenn</b> klassisk kvinner WTwTiWirM MlWM ^ ? ^ ? ? ^... </td>
+      <th id="T_9a81a_level0_row7" class="row_heading level0 row7" >28</th>
+      <td id="T_9a81a_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940118_135_28_1'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940118_135_28_1</a></td>
+      <td id="T_9a81a_row7_col1" class="data row7 col1" >... selges . » ° PP 120 m herre <b>langrenn</b> selges samlel . gl bud og llf.nr , « au 01 ones , rit... </td>
     </tr>
     <tr>
-      <th id="T_971d7_level0_row8" class="row_heading level0 row8" >8</th>
-      <td id="T_971d7_row8_col0" class="data row8 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940214_135_75_2'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940214_135_75_2</a></td>
-      <td id="T_971d7_row8_col1" class="data row8 col1" >... 1 0.30 <b>Langrenn</b> , 5 km klassisk , kvinner 1 1 .00 Alpint , super G , kvinner 12.30 Freestyle... </td>
+      <th id="T_9a81a_level0_row8" class="row_heading level0 row8" >21</th>
+      <td id="T_9a81a_row8_col0" class="data row8 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940207_135_62_1'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940207_135_62_1</a></td>
+      <td id="T_9a81a_row8_col1" class="data row8 col1" >... Billetter selges ordinær pris 15.2 <b>Langrenn</b> 5 km kvinner 19.2 Kunstløp herrer fri 21.2 <b>Langrenn</b> stafett kvinner 24.2 Kortbane skøyter... </td>
     </tr>
     <tr>
-      <th id="T_971d7_level0_row9" class="row_heading level0 row9" >106</th>
-      <td id="T_971d7_row9_col0" class="data row9 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940221_135_87_2'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940221_135_87_2</a></td>
-      <td id="T_971d7_row9_col1" class="data row9 col1" >10.00 - 17.50 : OL studio 10.30 : <b>langrenn</b> . 4 xlo km stafett , menn . 12.30 : 1... </td>
+      <th id="T_9a81a_level0_row9" class="row_heading level0 row9" >59</th>
+      <td id="T_9a81a_row9_col0" class="data row9 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_aftenposten_null_null_19940207_135_62_1'>URN:NBN:no-nb_digavis_aftenposten_null_null_19940207_135_62_1</a></td>
+      <td id="T_9a81a_row9_col1" class="data row9 col1" >... Det er ikke som i alpint og <b>langrenn</b> , idretter med generasjonstradisjoner . Vi har startet selv , og nå... </td>
     </tr>
   </tbody>
 </table>
@@ -702,51 +678,51 @@
   <tbody>
     <tr>
       <th>.</th>
-      <td>127</td>
+      <td>185</td>
     </tr>
     <tr>
       <th>,</th>
-      <td>122</td>
+      <td>181</td>
     </tr>
     <tr>
       <th>og</th>
-      <td>41</td>
+      <td>56</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>38</td>
+      <td>45</td>
     </tr>
     <tr>
       <th>km</th>
-      <td>34</td>
+      <td>45</td>
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
     </tr>
     <tr>
-      <th>USA</th>
+      <th>voksne</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>VI</th>
+      <th>vunnet</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>VM</th>
+      <th>våre</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>V_ilh__j__</th>
+      <th>være</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>Travpark</th>
+      <th>været</th>
       <td>1</td>
     </tr>
   </tbody>
 </table>
-<p>765 rows × 1 columns</p>
+<p>851 rows × 1 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -759,26 +735,26 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Grenoble     0.000017
-15.2         0.000017
-14.2         0.000017
-NM-gull      0.000016
-13.2         0.000015
-Rokke        0.000015
-jaktstart    0.000012
-fristil      0.000012
-Kombinert    0.000009
-trønderen    0.000009
-FJELL        0.000009
-roing        0.000009
-Brå          0.000009
-olympisk     0.000009
-hockey       0.000008
-Dæhlie       0.000008
-BUI          0.000008
-domineres    0.000008
-Ticket       0.000008
-key          0.000008
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14.2            0.000025
+x5              0.000020
+15.2            0.000017
+hockey          0.000017
+OL-gull         0.000016
+13.2            0.000015
+Rokke           0.000015
+Kunstløp        0.000014
+kv.             0.000013
+bill.           0.000012
+fristil         0.000012
+Holmenkollen    0.000011
+oppvisning      0.000010
+idretter        0.000010
+stafett         0.000010
+komb            0.000009
+kv              0.000009
+Katastrofe      0.000009
+roing           0.000009
+Brå             0.000009
 dtype: float64
 </pre></div>
 </div>
@@ -794,7 +770,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/29e1805742369c4941843914981bec4497b98501963d178edd9694e0dbaf4976.png" src="../_images/29e1805742369c4941843914981bec4497b98501963d178edd9694e0dbaf4976.png" />
+<img alt="../_images/c521325d4b3350badcc33e8574b0706ca6d80b71527b2e4db3ab6bbc98c31093.png" src="../_images/c521325d4b3350badcc33e8574b0706ca6d80b71527b2e4db3ab6bbc98c31093.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -831,7 +807,7 @@ dtype: float64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: &gt;
 </pre></div>
 </div>
-<img alt="../_images/ce9ec1e74668b7016b9700515442257dfbed0b3967ca38ef7e1947f041b40640.png" src="../_images/ce9ec1e74668b7016b9700515442257dfbed0b3967ca38ef7e1947f041b40640.png" />
+<img alt="../_images/9743bcdbc59b22278537a41119461055ffe64269feddc966c6ed69664d3c855a.png" src="../_images/9743bcdbc59b22278537a41119461055ffe64269feddc966c6ed69664d3c855a.png" />
 </div>
 </div>
 <p>Tilbake til <a class="reference external" href="https://nbviewer.jupyter.org/github/DH-LAB-NB/DHLAB/blob/master/DHLAB_ved_Nasjonalbiblioteket.ipynb">DHLAB ved Nasjonalbiblioteket</a></p>
@@ -893,8 +869,7 @@ dtype: float64
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -957,8 +932,8 @@ By Nasjonalbiblioteket
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
