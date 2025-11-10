@@ -10,11 +10,16 @@ title: Bibliografi
 Tønnessen, Jon Carlstedt and Birkenes, Magnus Breder (2025) "Providing Web Archive News Articles as Corpus Data", *Journal of Open Humanities Data*, 11(2), 1-12. 
 Tilgjengelig fra: http://openhumanitiesdata.metajnl.com/articles/10.5334/johd.281/ (Hentet: 2025)
 
+Malvik, Anders Skare et al. (2024) "ImagiNation-korpuset", *Edda*, 111(3), 120-137. 
+Tilgjengelig fra: https://doi.org/10.18261/edda.111.3.3 (Hentet: 2025-11-10)
+
 Kvinnsland, Ranveig, Dale, Ingerid Løyning, og Tungland, Lars Magne (2024) "Rediscovering the 1890s: A Norwegian Poetry Corpus", *Proceedings of the Computational Humanities Research Conference 2024*, 1259-1271. 
 Tilgjengelig fra: https://ceur-ws.org/Vol-3834/#paper24 (Hentet: 2024)
 
 Johnsen, Lars (2023) "Å bruke språkteknologi til å undersøke medisinske ord", *Michael*, 20(Supplement 31), 133-42. 
 Tilgjengelig fra: https://www.michaeljournal.no/article/2023/02/%C3%85%20bruke%20spr%C3%A5kteknologi%20til%20%C3%A5%20unders%C3%B8ke%20medisinske%20ord (Hentet: 2023)
+
+Birkenes, Magnus Breder, Johnsen, Lars, og Kåsen, Andre (2023) "NB DH-LAB: A corpus infrastructure for social sciences and humanities computing", 30-34. 
 
 Bastiansen, Henrik G. (2023) *Når fortiden blir digital: medier, kilder og historie i digitaliseringens tid*. Oslo: Universitetsforlaget. 
 
