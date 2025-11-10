@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -485,7 +485,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_98975/3202258208.py:4: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_10820/3202258208.py:4: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
   my_urn = urns[1]
 </pre></div>
 </div>
@@ -522,7 +522,7 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/mnt/data/magbb/.virtualenvs/dhlab/lib/python3.12/site-packages/dhlab/api/dhlab_api.py:80: FutureWarning: Passing literal json to &#39;read_json&#39; is deprecated and will be removed in a future version. To read from a literal string, wrap it in a &#39;StringIO&#39; object.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/ingeridd/prosjekter/digital_tekstanalyse/.venv/lib/python3.12/site-packages/dhlab/api/dhlab_api.py:80: FutureWarning: Passing literal json to &#39;read_json&#39; is deprecated and will be removed in a future version. To read from a literal string, wrap it in a &#39;StringIO&#39; object.
   return pd.read_json(resp.json())
 </pre></div>
 </div>
@@ -560,595 +560,74 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <th>31</th>
       <td>Ask</td>
       <td>PER</td>
-      <td>18</td>
+      <td>785</td>
     </tr>
     <tr>
-      <th>9</th>
-      <td>Embla</td>
-      <td>MISC</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <th>40</th>
-      <td>Sangen om den røde rubin</td>
-      <td>MISC</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>Mykle</td>
+      <th>137</th>
+      <td>Daniel</td>
       <td>PER</td>
-      <td>4</td>
+      <td>115</td>
     </tr>
     <tr>
-      <th>77</th>
-      <td>norsk</td>
-      <td>MISC</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>36</th>
-      <td>Pedagogisk opplegg</td>
-      <td>ORG</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>Kompetansemål</td>
-      <td>ORG</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>Kjærligheten</td>
-      <td>MISC</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>81</th>
-      <td>r</td>
-      <td>ORG</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Finner</td>
+      <th>300</th>
+      <td>Gud</td>
       <td>PER</td>
-      <td>2</td>
+      <td>83</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>Asks</td>
-      <td>PER</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>54</th>
-      <td>Vedlegg</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>71</th>
-      <td>kua kjut</td>
-      <td>LOC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>70</th>
-      <td>kristendommen</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>69</th>
-      <td>jSff</td>
-      <td>LOC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>68</th>
-      <td>j &lt; MJ</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>55</th>
-      <td>aaatoaV.kaa aaakks</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>56</th>
-      <td>ai tart air ha *</td>
-      <td>ORG</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>57</th>
-      <td>apa</td>
-      <td>ORG</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>67</th>
-      <td>j</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>66</th>
-      <td>ilhiatttt4</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>59</th>
-      <td>fe.l</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>65</th>
-      <td>il bjran nf ut</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>64</th>
-      <td>ijilatol</td>
-      <td>LOC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>72</th>
-      <td>kunsters</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>63</th>
-      <td>hsHJt</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>62</th>
-      <td>gjeldedne normene</td>
-      <td>LOC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>61</th>
-      <td>fr. k</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>60</th>
-      <td>fet</td>
-      <td>ORG</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>52</th>
-      <td>Ute</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>58</th>
-      <td>av sentrale</td>
-      <td>LOC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>89</th>
-      <td>tauuiM it</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>95</th>
-      <td>wm eaakt il tine a</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>94</th>
-      <td>visuell</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>93</th>
-      <td>vg 3 )</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>92</th>
-      <td>vg 2 )</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>91</th>
-      <td>verdt</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>90</th>
-      <td>vedlegg</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>88</th>
-      <td>tat * lt</td>
-      <td>LOC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>87</th>
-      <td>tart .</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>86</th>
-      <td>tanas</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>53</th>
-      <td>Uten en tråd</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>84</th>
-      <td>t</td>
-      <td>ORG</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>83</th>
-      <td>r s</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>82</th>
-      <td>r d</td>
-      <td>ORG</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>80</th>
-      <td>pedagogisk</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>79</th>
-      <td>norske</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>78</th>
-      <td>norsk Kompetansemål</td>
-      <td>ORG</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>76</th>
-      <td>n mi</td>
-      <td>ORG</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>75</th>
+      <th>1388</th>
       <td>mann</td>
       <td>PER</td>
+      <td>82</td>
+    </tr>
+    <tr>
+      <th>203</th>
+      <td>Embla</td>
+      <td>MISC</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>778</th>
+      <td>Timen snile</td>
+      <td>PER</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>74</th>
-      <td>makthavernes</td>
+      <th>777</th>
+      <td>Tillat</td>
+      <td>PER</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>776</th>
+      <td>Tiger Rag</td>
       <td>ORG</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>73</th>
-      <td>las aadra</td>
+      <th>775</th>
+      <td>Théatre Frangais</td>
+      <td>PER</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>790</th>
+      <td>Tuileri-haven</td>
       <td>LOC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>85</th>
-      <td>t lm Ul fe</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>Les romanen</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>Kjærlighet er noe ikke andre ikke vet om .</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>Karl Ove Knausgårds</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>Jens Bjørneboe</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>Jan</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>J</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>Ina</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>Hl4.Ua kas fp</td>
-      <td>ORG</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>High eten</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>Hai</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>96</th>
-      <td>Øystein Rottem</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>Frankrike</td>
-      <td>LOC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>Fordypningsoppgaver</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Ask Burlefot</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Dramaets</td>
-      <td>ORG</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Den Økonomiske .</td>
-      <td>ORG</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Den Økonomiske</td>
-      <td>LOC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Clsfatasj oat hias</td>
-      <td>ORG</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Christian Krogh</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Bergen</td>
-      <td>LOC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>♦ t</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>Gjennomføre</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>Ut</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>50</th>
-      <td>UntaM</td>
-      <td>LOC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>49</th>
-      <td>Ulpk aSart fe</td>
-      <td>ORG</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>48</th>
-      <td>Ul</td>
-      <td>LOC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>47</th>
-      <td>Studentlag</td>
-      <td>LOC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>46</th>
-      <td>Sosialistisk</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>45</th>
-      <td>Sosialisme</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>44</th>
-      <td>Snl</td>
-      <td>ORG</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>43</th>
-      <td>Skjønnlitterært</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>42</th>
-      <td>Sangen om den røde rubin utleverte sine litterære</td>
-      <td>MISC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>Mia</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>Samfunnets</td>
-      <td>LOC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>Sak UthtWn</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>37</th>
-      <td>RIKSTEATRET</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>35</th>
-      <td>Pedagogisk</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>34</th>
-      <td>Parken</td>
-      <td>LOC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>33</th>
-      <td>Norge</td>
-      <td>LOC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>Nord-Norge</td>
-      <td>LOC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>Nasjonalbiblioteket</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>Mykles</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>Mt w Iwnwtt</td>
-      <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>Mr</td>
-      <td>ORG</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>41</th>
-      <td>Sangen om den røde rubin forbudt i</td>
-      <td>MISC</td>
       <td>1</td>
     </tr>
   </tbody>
 </table>
+<p>2031 rows × 3 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -1162,11 +641,11 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_98975/4208546902.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_10820/4208546902.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
   res = POS(urn=urns[1], model=l.models[2], to_page=10000)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/mnt/data/magbb/.virtualenvs/dhlab/lib/python3.12/site-packages/dhlab/api/dhlab_api.py:100: FutureWarning: Passing literal json to &#39;read_json&#39; is deprecated and will be removed in a future version. To read from a literal string, wrap it in a &#39;StringIO&#39; object.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/ingeridd/prosjekter/digital_tekstanalyse/.venv/lib/python3.12/site-packages/dhlab/api/dhlab_api.py:100: FutureWarning: Passing literal json to &#39;read_json&#39; is deprecated and will be removed in a future version. To read from a literal string, wrap it in a &#39;StringIO&#39; object.
   return pd.read_json(resp.json())
 </pre></div>
 </div>
@@ -1212,74 +691,74 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
   </thead>
   <tbody>
     <tr>
-      <th>107</th>
+      <th>3543</th>
       <td>,</td>
       <td>,</td>
       <td>PUNCT</td>
       <td>punct</td>
-      <td>farlig</td>
-      <td>farlig</td>
+      <td>skamme</td>
+      <td>skamme</td>
+      <td>VERB</td>
+      <td>henne</td>
+      <td>henne</td>
+      <td>ADV</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>4943</th>
+      <td>,</td>
+      <td>,</td>
+      <td>PUNCT</td>
+      <td>punct</td>
+      <td>kraftig</td>
+      <td>kraftig</td>
       <td>ADJ</td>
-      <td>rørende</td>
-      <td>rørende</td>
+      <td>kraftig</td>
+      <td>kraftig</td>
       <td>ADJ</td>
       <td>4</td>
     </tr>
     <tr>
-      <th>2316</th>
-      <td>»</td>
-      <td>»</td>
-      <td>PUNCT</td>
-      <td>punct</td>
-      <td>l</td>
-      <td>l</td>
-      <td>X</td>
-      <td>krl</td>
-      <td>krl</td>
-      <td>NOUN</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>74</th>
-      <td>*</td>
-      <td>*</td>
-      <td>SYM</td>
-      <td>punct</td>
-      <td>■</td>
-      <td>enti■eter</td>
-      <td>NOUN</td>
-      <td>#</td>
-      <td>#</td>
-      <td>PROPN</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>111</th>
+      <th>4914</th>
       <td>,</td>
       <td>,</td>
       <td>PUNCT</td>
       <td>punct</td>
-      <td>ikke</td>
-      <td>ikke</td>
-      <td>ADV</td>
-      <td>klar</td>
-      <td>klar</td>
-      <td>ADJ</td>
-      <td>3</td>
+      <td>lagt</td>
+      <td>lægge</td>
+      <td>VERB</td>
+      <td>lagt</td>
+      <td>lægge</td>
+      <td>VERB</td>
+      <td>4</td>
     </tr>
     <tr>
-      <th>2325</th>
-      <td>»</td>
-      <td>»</td>
+      <th>20215</th>
+      <td>?</td>
+      <td>?</td>
       <td>PUNCT</td>
       <td>punct</td>
-      <td>U</td>
-      <td>U</td>
-      <td>PROPN</td>
-      <td>aka</td>
-      <td>aka</td>
+      <td>ondt</td>
+      <td>ondt</td>
       <td>ADV</td>
-      <td>2</td>
+      <td>ondt</td>
+      <td>ondt</td>
+      <td>ADV</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>106721</th>
+      <td>nu</td>
+      <td>nu</td>
+      <td>ADV</td>
+      <td>advmod</td>
+      <td>lukker</td>
+      <td>lukke</td>
+      <td>VERB</td>
+      <td>sier</td>
+      <td>sie</td>
+      <td>VERB</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1296,78 +775,78 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
       <td>...</td>
     </tr>
     <tr>
-      <th>806</th>
-      <td>både</td>
-      <td>både</td>
-      <td>ADV</td>
-      <td>advmod</td>
-      <td>kvinnefrigjøring</td>
-      <td>kvinnefrigjøring</td>
+      <th>52760</th>
+      <td>en</td>
+      <td>en</td>
+      <td>DET</td>
+      <td>det</td>
+      <td>mann</td>
+      <td>mann</td>
       <td>NOUN</td>
-      <td>tanker</td>
-      <td>tanke</td>
-      <td>NOUN</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>807</th>
-      <td>bøkene</td>
-      <td>bøk</td>
-      <td>NOUN</td>
-      <td>nmod</td>
-      <td>av</td>
-      <td>av</td>
-      <td>X</td>
-      <td>Sangen</td>
-      <td>sang</td>
-      <td>NOUN</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>808</th>
-      <td>bør</td>
-      <td>burde</td>
-      <td>AUX</td>
-      <td>aux</td>
-      <td>være</td>
-      <td>være</td>
-      <td>VERB</td>
-      <td>oppfatninger</td>
-      <td>oppfatning</td>
-      <td>NOUN</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>809</th>
-      <td>bøyest</td>
-      <td>bøyest</td>
-      <td>ADV</td>
-      <td>advmod</td>
-      <td>setter</td>
-      <td>sette</td>
-      <td>VERB</td>
-      <td>setter</td>
-      <td>sette</td>
+      <td>lar</td>
+      <td>lar</td>
       <td>VERB</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>800</th>
-      <td>bryllupet</td>
-      <td>bryllupet</td>
+      <th>52761</th>
+      <td>en</td>
+      <td>en</td>
+      <td>DET</td>
+      <td>det</td>
+      <td>visdom</td>
+      <td>visdom</td>
       <td>NOUN</td>
-      <td>nmod</td>
-      <td>Embla</td>
-      <td>Embla</td>
-      <td>PROPN</td>
-      <td>holder</td>
-      <td>holde</td>
+      <td>utstråler</td>
+      <td>utstråler</td>
+      <td>VERB</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>52762</th>
+      <td>en</td>
+      <td>en</td>
+      <td>DET</td>
+      <td>det</td>
+      <td>kunnskap</td>
+      <td>kunnskap</td>
+      <td>NOUN</td>
+      <td>visdom</td>
+      <td>visdom</td>
+      <td>NOUN</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>52763</th>
+      <td>en</td>
+      <td>en</td>
+      <td>DET</td>
+      <td>det</td>
+      <td>undring</td>
+      <td>undring</td>
+      <td>NOUN</td>
+      <td>komme</td>
+      <td>komme</td>
+      <td>VERB</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>52754</th>
+      <td>en</td>
+      <td>en</td>
+      <td>DET</td>
+      <td>det</td>
+      <td>musikkens</td>
+      <td>musikk</td>
+      <td>NOUN</td>
+      <td>hadde</td>
+      <td>hadde</td>
       <td>VERB</td>
       <td>1</td>
     </tr>
   </tbody>
 </table>
-<p>2369 rows × 11 columns</p>
+<p>156518 rows × 11 columns</p>
 </div></div></div>
 </div>
 </section>

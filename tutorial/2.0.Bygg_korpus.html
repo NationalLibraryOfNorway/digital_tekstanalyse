@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -486,6 +486,18 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Importer bibliotekene</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dh</span> <span class="c1"># dhlab inneholder Corpus og andre nyttige funksjoner</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">dhlab.nbtext</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span> <span class="c1"># Tekstverktøy</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;dhlab.nbtext&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>Her viser vi ulike måter man kan bygge korpus fra NBs samling. Et korpus kan enten være et utvalg bøker, eller et utvalg aviser. Avgrensningen kan være metadata eller innhold i selve teksten.</p>
 <p>Den lettetste måten å definere et korpus er å bruke søk i metadata. <code class="docutils literal notranslate"><span class="pre">Corpus</span></code> har flere parametre som kan brukes til å avgrense korpuset.</p>
@@ -617,42 +629,42 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>100640602</td>
-      <td>URN:NBN:no-nb_pliktmonografi_000000479</td>
-      <td>Endelig sommer</td>
-      <td>Ambjørnsen , Ingvar / Majid , Shazia / Loe , E...</td>
-      <td>oai:nb.bibsys.no:999920146303102202</td>
-      <td>bc5a2c41eb165363789e6d9cd18627ac</td>
+      <td>100403751</td>
+      <td>URN:NBN:no-nb_digibok_2020050848559</td>
+      <td>Ubehaget i kulturen</td>
+      <td>Hjorth , Vigdis / Linneberg , Arild</td>
+      <td>oai:nb.bibsys.no:999919961100402202</td>
+      <td>d7756cabad7c041cce220672a99e0f03</td>
       <td></td>
-      <td>Oslo</td>
-      <td>2021</td>
-      <td>2021</td>
+      <td></td>
+      <td>20180101</td>
+      <td>2018</td>
       <td>Cappelen Damm</td>
       <td>nob</td>
-      <td>Norske noveller / Samlinger / Norske noveller ...</td>
-      <td>839.823008</td>
-      <td>fiction / tekst</td>
+      <td>Kunstnermiljøer / Kunstnarmiljø</td>
+      <td>839.8238</td>
+      <td>novel / text</td>
       <td>Skjønnlitteratur</td>
       <td>digibok</td>
-      <td></td>
-      <td></td>
+      <td>nb</td>
+      <td>20060101</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>100391675</td>
-      <td>URN:NBN:no-nb_digibok_2018102207021</td>
-      <td>Leve posthornet ! : roman</td>
+      <td>100501151</td>
+      <td>URN:NBN:no-nb_digibok_2007111201053</td>
+      <td>Fransk åpning : roman</td>
       <td>Hjorth , Vigdis</td>
-      <td>oai:nb.bibsys.no:991224636334702202</td>
-      <td>2cd64275535e167e30e84d5591691121</td>
-      <td></td>
+      <td>oai:nb.bibsys.no:999208796594702202</td>
+      <td>0271176d4f0784ffb7ea604b371cca3f</td>
+      <td>8257409421 / 8202134994</td>
       <td>[Oslo]</td>
-      <td>20120101</td>
-      <td>2012</td>
-      <td>Cappelen Damm</td>
+      <td>19920101</td>
+      <td>1992</td>
+      <td>Cappelen</td>
       <td>nob</td>
-      <td>norsk / litteratur / norske / romaner / 2010-t...</td>
-      <td>839.82 / 839.82 / 839.8238 / 839.823</td>
+      <td>norsk / litteratur / norske / romaner / erotis...</td>
+      <td>839.823</td>
       <td>novel</td>
       <td>Skjønnlitteratur</td>
       <td>digibok</td>
@@ -661,19 +673,19 @@ document.write(`
     </tr>
     <tr>
       <th>2</th>
-      <td>100193587</td>
-      <td>URN:NBN:no-nb_digibok_2014022706020</td>
-      <td>Fordeler og ulemper ved å være til : roman</td>
+      <td>100204996</td>
+      <td>URN:NBN:no-nb_digibok_2014051906169</td>
+      <td>Tredve dager i Sandefjord : roman</td>
       <td>Hjorth , Vigdis</td>
-      <td>oai:nb.bibsys.no:990925944504702202</td>
-      <td>d25394b7d5bf0135776f24abe00acbc2</td>
+      <td>oai:nb.bibsys.no:991142013744702202</td>
+      <td>e0d62143c91075bf6120cfe8060d38ac</td>
       <td></td>
       <td>[Oslo]</td>
-      <td>20090101</td>
-      <td>2009</td>
+      <td>20110101</td>
+      <td>2011</td>
       <td>Cappelen Damm</td>
       <td>nob</td>
-      <td></td>
+      <td>fengsel / innsatte / skjønnlitteratur / norske...</td>
       <td>839.823</td>
       <td>novel</td>
       <td>Skjønnlitteratur</td>
@@ -738,20 +750,20 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>100002314</td>
-      <td>URN:NBN:no-nb_digibok_2007030701056</td>
-      <td>Fangstmenn på de to hav</td>
-      <td>Norderval , Monrad</td>
-      <td>oai:nb.bibsys.no:999624344854702202</td>
-      <td>0000372b963beab2b790ba91f1c21e92</td>
-      <td></td>
-      <td></td>
-      <td>19570101</td>
-      <td>1957</td>
-      <td>Misjonsselskapets forlag</td>
+      <td>100023492</td>
+      <td>URN:NBN:no-nb_digibok_2010111108036</td>
+      <td>Flekkerøya i eldre og nyere tid : naturforhold...</td>
+      <td>Rudolfsen , R. M.</td>
+      <td>oai:nb.bibsys.no:999200300174702202</td>
+      <td>beefefd19788857522497738855a6eea</td>
+      <td>8299253306</td>
+      <td>[Flekkerøy]</td>
+      <td>19910101</td>
+      <td>1991</td>
+      <td>Flekkerøy historielag</td>
       <td>nob</td>
-      <td>geografi/historie / arktis / fangst / fiske / ...</td>
-      <td>919.8</td>
+      <td>Slektshistorie / Lokalhistorie / oddernes / kr...</td>
+      <td>948.3211</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -760,28 +772,6 @@ document.write(`
     </tr>
     <tr>
       <th>1</th>
-      <td>100659676</td>
-      <td>URN:NBN:no-nb_digibok_2022111748021</td>
-      <td>Kapteinsgården i Lærdal : livet på gården og p...</td>
-      <td>Flinder , Ida Marie Refsum</td>
-      <td>oai:nb.bibsys.no:990601415814702202</td>
-      <td>f6121a803fcc38d6e9df6d5fddac162a</td>
-      <td></td>
-      <td>Oslo</td>
-      <td>2000</td>
-      <td>2000</td>
-      <td>Astrup Fearnley A/S</td>
-      <td>nob</td>
-      <td>Lokalhistorie / Laks / Fiske / Sportsfiske</td>
-      <td>948.3815</td>
-      <td></td>
-      <td>Faglitteratur</td>
-      <td>digibok</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>2</th>
       <td>100606567</td>
       <td>URN:NBN:no-nb_digibok_2021101148545</td>
       <td>Fiskerne i Gaza</td>
@@ -797,6 +787,28 @@ document.write(`
       <td>Fiskerier / Palestina-spørsmålet / Politikk / ...</td>
       <td>956.943</td>
       <td>text</td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>100168555</td>
+      <td>URN:NBN:no-nb_digibok_2013092006059</td>
+      <td>Nessekongene : [ de store handelsdynastiene i ...</td>
+      <td>Alsvik , Hans Chr . / Knutsen , Nils M.</td>
+      <td>oai:nb.bibsys.no:998830788994702202</td>
+      <td>b8cc4cb96de22a8d1da58d66b0de4006</td>
+      <td>8205162999</td>
+      <td></td>
+      <td>19880101</td>
+      <td>1988</td>
+      <td>Gyldendal</td>
+      <td>nob</td>
+      <td>Handelssteder / Norge / Handel / Fiske / Fiske...</td>
+      <td>381.1094843 / 948.43</td>
+      <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
       <td>nb</td>
@@ -855,62 +867,62 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>55</th>
-      <td>100487706</td>
-      <td>URN:NBN:no-nb_digibok_2010112405036</td>
-      <td>Praha : den magiske byen</td>
-      <td>Thor , Clas / Newth , Eirik</td>
-      <td>oai:nb.bibsys.no:999203247204702202</td>
-      <td>a96710ff76bf5395548cf38ce0177f33</td>
-      <td>8257409308 / 8210034758</td>
-      <td>Oslo</td>
-      <td>19920101</td>
-      <td>1992</td>
-      <td>Tiden</td>
-      <td>nob / swe</td>
-      <td>tsjekkoslovakia / geografi / praha / reiser</td>
-      <td>914.3704</td>
+      <th>2</th>
+      <td>100020329</td>
+      <td>URN:NBN:no-nb_digibok_2010101808041</td>
+      <td>Helse-, sosial- og trygdesektoren som etterkri...</td>
+      <td>Haave , Per / Nordby , Trond</td>
+      <td>oai:nb.bibsys.no:999101314064702202</td>
+      <td>c505291c87e295af4b7283c95cbb02af</td>
       <td></td>
-      <td>Uklassifisert</td>
-      <td>digibok</td>
-    </tr>
-    <tr>
-      <th>80</th>
-      <td>100459382</td>
-      <td>URN:NBN:no-nb_digibok_2010021103005</td>
-      <td>Ord for alt. A : Språkbok</td>
-      <td>Tørjesen , Torill Wiiger / Aass , Torunn Eide</td>
-      <td>oai:nb.bibsys.no:999819067454702202</td>
-      <td>f568206dfd358d7e06069d07ceb1f4e7</td>
-      <td>8202171237</td>
-      <td>[Oslo]</td>
-      <td>19980101</td>
-      <td>1998</td>
-      <td>Cappelen</td>
-      <td>nno</td>
-      <td>norsk / grunnskole / lærebøker</td>
-      <td></td>
-      <td></td>
-      <td>Uklassifisert</td>
-      <td>digibok</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>100209794</td>
-      <td>URN:NBN:no-nb_digibok_2014061308041</td>
-      <td>Oljealder : 1965-1995</td>
-      <td>Tamnes , Rolf</td>
-      <td>oai:nb.bibsys.no:999728883494702202</td>
-      <td>0f997436d01a27457cd059702ad3d1f6</td>
-      <td>8200228932 / 8200226395</td>
-      <td></td>
-      <td>19970101</td>
-      <td>1997</td>
-      <td>Universitetsforl.</td>
+      <td>Bergen</td>
+      <td>19900101</td>
+      <td>1990</td>
+      <td>Norsk senter for forskning i ledelse, organisa...</td>
       <td>nob</td>
-      <td>Foreign policy / International relations / Int...</td>
-      <td>327.481 / 327.481</td>
       <td></td>
+      <td></td>
+      <td></td>
+      <td>Uklassifisert</td>
+      <td>digibok</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>100559850</td>
+      <td>URN:NBN:no-nb_digibok_2009060204025</td>
+      <td>Fra ord til utsagn : studie- og arbeidsbok i n...</td>
+      <td>Johnsen , Egil Børre / Solheim , Bjørn Elling</td>
+      <td>oai:nb.bibsys.no:999107241994702202</td>
+      <td>a4451930ad311bede7d0223f7634a4c0</td>
+      <td>8203136974</td>
+      <td>[Oslo]</td>
+      <td>19910101</td>
+      <td>1991</td>
+      <td>Aschehoug</td>
+      <td>nob</td>
+      <td>språkkunnskap / norsk / språk / lærebøker / fo...</td>
+      <td></td>
+      <td></td>
+      <td>Uklassifisert</td>
+      <td>digibok</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>100260496</td>
+      <td>URN:NBN:no-nb_digibok_2015030606064</td>
+      <td>Mannen og verket</td>
+      <td>Taksdal , Asgjerd / Aasen , Ivar</td>
+      <td>oai:nb.bibsys.no:999606502614702202</td>
+      <td>a948ecb439cc7cef3bc47345aa43818e</td>
+      <td></td>
+      <td>Oslo</td>
+      <td>19960101</td>
+      <td>1996</td>
+      <td>Ivar Aasen-året 1996</td>
+      <td>nno</td>
+      <td>nynorsk / norsk / språk / historie / nynorske ...</td>
+      <td>839.8209</td>
+      <td>biography</td>
       <td>Faglitteratur</td>
       <td>digibok</td>
     </tr>
@@ -967,63 +979,63 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>71</th>
-      <td>100664429</td>
-      <td>URN:NBN:no-nb_digibok_2021072248516</td>
-      <td>Norsk historie 1536-1814 : vegar til sjølvstende</td>
-      <td>Dyrvik, Ståle</td>
-      <td>oai:nb.bibsys.no:991126399924702202</td>
-      <td>dfc2b1c29cc35653c9ba2b0abe03b357</td>
+      <th>81</th>
+      <td>100708480</td>
+      <td>URN:NBN:no-nb_pliktmonografi_000022934</td>
+      <td>14-åringer og konfirmasjon Ungdomsundersøkelse...</td>
+      <td>Birkedal, Erling</td>
+      <td>oai:nb.bibsys.no:999920419669502202</td>
+      <td>64b42c3c486d39fcbf573244fb1582a8</td>
       <td></td>
       <td></td>
+      <td>20190101</td>
+      <td>2019</td>
+      <td>Vitenskapelig høgskole</td>
+      <td>nob</td>
+      <td></td>
+      <td></td>
+      <td>tekst</td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>100126848</td>
+      <td>URN:NBN:no-nb_digibok_2012121108087</td>
+      <td>Grunnkurs for brannkonstabel. H. 2</td>
+      <td></td>
+      <td>oai:nb.bibsys.no:991118711314702202</td>
+      <td>5b2aabfee11e23eb29421dc789fb72c3</td>
+      <td></td>
+      <td>Oslo</td>
+      <td>20110101</td>
       <td>2011</td>
-      <td>2011</td>
-      <td>Samlaget</td>
-      <td>nno</td>
-      <td>Historie / Norge / Nyere tid / Oppslagsbøker /...</td>
-      <td>948.103 / 948.1 / 948.102 / 948.1 / 948.1</td>
+      <td>Gyldendal undervisning</td>
+      <td>nob</td>
+      <td>brannvernteknikk</td>
+      <td>628.92</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
     </tr>
     <tr>
-      <th>20</th>
-      <td>100229375</td>
-      <td>URN:NBN:no-nb_digibok_2014101638109</td>
-      <td>XXX</td>
-      <td>Viken , Anne</td>
-      <td>oai:nb.bibsys.no:991016807914702202</td>
-      <td>00097c42b7a8558bedc20f9ca5f79342</td>
+      <th>34</th>
+      <td>100278494</td>
+      <td>URN:NBN:no-nb_digibok_2016012106038</td>
+      <td>Dødsspillet : en biografi om motstandsmannen G...</td>
+      <td>Rougthvedt , Bernt</td>
+      <td>oai:nb.bibsys.no:991216957944702202</td>
+      <td>fdebc3cf9b7d6a47a7ca00e292f7ee2b</td>
       <td></td>
-      <td>Oslo</td>
-      <td>20100101</td>
-      <td>2010</td>
-      <td>Flamme forl.</td>
-      <td>nob</td>
       <td></td>
-      <td>839.821</td>
-      <td>poetry</td>
-      <td>Skjønnlitteratur</td>
-      <td>digibok</td>
-    </tr>
-    <tr>
-      <th>94</th>
-      <td>100607710</td>
-      <td>URN:NBN:no-nb_digibok_2021120148609</td>
-      <td>Et hav av minner</td>
-      <td>Valpy, Fiona / Foss, Guri</td>
-      <td>oai:nb.bibsys.no:999919933575602202</td>
-      <td>4bd8123b5438a04f1331cd0983924716</td>
-      <td></td>
-      <td>Oslo</td>
-      <td>2018</td>
-      <td>2018</td>
+      <td>20120101</td>
+      <td>2012</td>
       <td>Cappelen Damm</td>
-      <td>nob / eng</td>
-      <td></td>
-      <td>823.92</td>
-      <td>novel</td>
-      <td>Skjønnlitteratur</td>
+      <td>nob</td>
+      <td>Andre verdenskrig / Historie / Motstandskamp /...</td>
+      <td>948.105 / 948.1053 / 940.5485092 / 940.53481 /...</td>
+      <td>biography</td>
+      <td>Faglitteratur</td>
       <td>digibok</td>
     </tr>
   </tbody>
@@ -1082,15 +1094,15 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>204038625</td>
-      <td>URN:NBN:no-nb_digavis_ostlendingen_null_null_2...</td>
-      <td>ostlendingen</td>
+      <td>203510020</td>
+      <td>URN:NBN:no-nb_digavis_agderposten_null_null_20...</td>
+      <td>agderposten</td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>20061212</td>
+      <td>20061211</td>
       <td>2006</td>
       <td></td>
       <td></td>
@@ -1104,15 +1116,15 @@ document.write(`
     </tr>
     <tr>
       <th>1</th>
-      <td>203591050</td>
-      <td>URN:NBN:no-nb_digavis_ostlandetsblad_null_null...</td>
-      <td>ostlandetsblad</td>
+      <td>203643045</td>
+      <td>URN:NBN:no-nb_digavis_sortrondelag_null_null_2...</td>
+      <td>sortrondelag</td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>20061229</td>
+      <td>20061214</td>
       <td>2006</td>
       <td></td>
       <td></td>
@@ -1126,15 +1138,15 @@ document.write(`
     </tr>
     <tr>
       <th>2</th>
-      <td>202679594</td>
-      <td>URN:NBN:no-nb_digavis_porsgrunnsdagblad_null_n...</td>
-      <td>porsgrunnsdagblad</td>
+      <td>202855729</td>
+      <td>URN:NBN:no-nb_digavis_vaartland_null_null_2006...</td>
+      <td>vaartland</td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>Porsgrunn</td>
-      <td>20061215</td>
+      <td>Oslo</td>
+      <td>20061230</td>
       <td>2006</td>
       <td></td>
       <td></td>
@@ -1204,20 +1216,20 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>100365971</td>
-      <td>URN:NBN:no-nb_digibok_2018030248103</td>
-      <td>Om sørsamisk historie : foredrag fra seminar p...</td>
-      <td>Lyngman , Susanne</td>
-      <td>oai:nb.bibsys.no:990715892284702202</td>
-      <td>880a89550bf8b4c936eba2b1af050d3a</td>
+      <td>100204423</td>
+      <td>URN:NBN:no-nb_digibok_2014050706037</td>
+      <td>Redningsmenn og lykkejegere : norske pionerer ...</td>
+      <td>Andersen , Roy</td>
+      <td>oai:nb.bibsys.no:991027951184702202</td>
+      <td>114a3c37757f0a13bcd1a8f9e1cd1fd6</td>
       <td></td>
-      <td></td>
-      <td>20070101</td>
-      <td>2007</td>
-      <td>Stiftelsen Saemien Sijte</td>
-      <td>mul / nob / swe / nno</td>
-      <td>Sørsamer / Historie / Samisk kulturminner / Sa...</td>
-      <td>948 / 948</td>
+      <td>Oslo</td>
+      <td>20110101</td>
+      <td>2011</td>
+      <td>Aschehoug</td>
+      <td>nob</td>
+      <td>Reindrift / Historie / Emigrasjon / Fra Norge ...</td>
+      <td>979.8 / 979.8 / 979.8 / 979</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -1226,20 +1238,20 @@ document.write(`
     </tr>
     <tr>
       <th>1</th>
-      <td>100472261</td>
-      <td>URN:NBN:no-nb_digibok_2010032307035</td>
-      <td>I villreinens rike : Setesdal Vesthei , Ryfylk...</td>
-      <td>Frøstrup , Johan Christian / Bang-Andersen , S...</td>
-      <td>oai:nb.bibsys.no:990001151004702202</td>
-      <td>d6e1d58a454d2c15b44d9a225d948c1d</td>
-      <td>8291495149</td>
+      <td>100097331</td>
+      <td>URN:NBN:no-nb_digibok_2012080208310</td>
+      <td>Det samiske perspektivet i verdensarven Røros ...</td>
+      <td>Fjellheim , Jenny</td>
+      <td>oai:nb.bibsys.no:990711075504702202</td>
+      <td>2019d516c913357805a28a600fce78f0</td>
       <td></td>
-      <td>19990101</td>
-      <td>1999</td>
-      <td>Friluftsforl.</td>
+      <td>[Røros]</td>
+      <td>20070101</td>
+      <td>2007</td>
+      <td>Rørosmuseet</td>
       <td>nob</td>
-      <td>Rein / Jakt / Landskap / Lokalhistorie / Reind...</td>
-      <td>948.3 / 799.2765</td>
+      <td>Verdensarv / Kulturminnevern / Samer / Samiske...</td>
+      <td>948.41</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -1248,20 +1260,20 @@ document.write(`
     </tr>
     <tr>
       <th>2</th>
-      <td>100364819</td>
-      <td>URN:NBN:no-nb_digibok_2018020948033</td>
-      <td>Reinen på Hardangervidda : natur og kultur</td>
-      <td>Vaa , Johan / Bitustøyl , Kjell</td>
-      <td>oai:nb.bibsys.no:991237194454702202</td>
-      <td>8358d28bbb7a9dc5f74ad6b5ba8ac8f7</td>
+      <td>100182647</td>
+      <td>URN:NBN:no-nb_digibok_2013120906074</td>
+      <td>Sjøsamene ved Varangerfjorden : en kortfattet ...</td>
+      <td>Bjørkli , Thorbjørn / Schanche , Kjersti</td>
+      <td>oai:nb.bibsys.no:990600856224702202</td>
+      <td>31ee1b96b77a9497d98ac57759a8bf05</td>
+      <td>8277460066</td>
       <td></td>
-      <td></td>
-      <td>20120101</td>
-      <td>2012</td>
-      <td>Villreinutvalet på Hardangervidda</td>
-      <td>nno</td>
-      <td>dyregraver / reindrift / fjell / Norge / Rein ...</td>
-      <td>639.1 / 639.1 / 948.28 / 639.11 / 639.109481</td>
+      <td>20050101</td>
+      <td>2005</td>
+      <td>Várjjat sámi musea</td>
+      <td>nob</td>
+      <td>Historie / Norge / Sjøsamer / Samer / Sjøsamer...</td>
+      <td>948.46</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -1270,21 +1282,21 @@ document.write(`
     </tr>
     <tr>
       <th>3</th>
-      <td>100120396</td>
-      <td>URN:NBN:no-nb_digibok_2012111607025</td>
-      <td>Veodalen : en dal og dens folk</td>
-      <td>Henriksen , Vera</td>
-      <td>oai:nb.bibsys.no:990115559984702202</td>
-      <td>aaa1f2bfad4f575a72f9f451b9d3d287</td>
-      <td>8202208904</td>
+      <td>100574355</td>
+      <td>URN:NBN:no-nb_digibok_2008102204133</td>
+      <td>Samenes kultur og historie - samepolitikk i No...</td>
+      <td>Lund , Jann T.</td>
+      <td>oai:nb.bibsys.no:990006624024702202</td>
+      <td>36c4a8d641dcb05cfee4046e43fd02ad</td>
       <td></td>
-      <td>20010101</td>
-      <td>2001</td>
-      <td>Cappelen</td>
+      <td></td>
+      <td>20000101</td>
+      <td>2000</td>
+      <td>Nordisk samisk institutt</td>
       <td>nob</td>
-      <td>Norge / turisthytter / seterdrift / reindrift ...</td>
-      <td>948.2513</td>
-      <td></td>
+      <td>samer / samepolitikk / norge / sverige / samis...</td>
+      <td>323.119455 / 948.0049457</td>
+      <td>conference publication</td>
       <td>Faglitteratur</td>
       <td>digibok</td>
       <td>nb</td>
@@ -1292,20 +1304,20 @@ document.write(`
     </tr>
     <tr>
       <th>4</th>
-      <td>100251490</td>
-      <td>URN:NBN:no-nb_digibok_2014110607503</td>
-      <td>Tundraens folk</td>
-      <td>Ravna , Øyvind / Kerner , Karl N. / Olsen , Ro...</td>
-      <td>oai:nb.bibsys.no:990112932924702202</td>
-      <td>5f9905f7ad3e3fedb4a4a2d0d1d35eba</td>
-      <td>8252926010</td>
-      <td>[Oslo]</td>
-      <td>20010101</td>
-      <td>2001</td>
-      <td>Landbruksforl.</td>
-      <td>mul / nob / sme</td>
-      <td>Kolasamer / Urbefolkninger / Reindriftsnæring ...</td>
-      <td>947</td>
+      <td>100396443</td>
+      <td>URN:NBN:no-nb_digibok_2019112807031</td>
+      <td>Redningsmenn og lykkejegere : norske pionerer ...</td>
+      <td>Andersen , Roy</td>
+      <td>oai:nb.bibsys.no:991218310354702202</td>
+      <td>272f96f88d3358cf9c7dba5a4bb397e3</td>
+      <td></td>
+      <td>Oslo</td>
+      <td>20120101</td>
+      <td>2012</td>
+      <td>Aschehoug</td>
+      <td>nob</td>
+      <td>Emigrasjon / Fra Norge / Reindrift / Historie ...</td>
+      <td>979.8 / 979</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -1442,20 +1454,20 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>100365971</td>
-      <td>URN:NBN:no-nb_digibok_2018030248103</td>
-      <td>Om sørsamisk historie : foredrag fra seminar p...</td>
-      <td>Lyngman , Susanne</td>
-      <td>oai:nb.bibsys.no:990715892284702202</td>
-      <td>880a89550bf8b4c936eba2b1af050d3a</td>
+      <td>100204423</td>
+      <td>URN:NBN:no-nb_digibok_2014050706037</td>
+      <td>Redningsmenn og lykkejegere : norske pionerer ...</td>
+      <td>Andersen , Roy</td>
+      <td>oai:nb.bibsys.no:991027951184702202</td>
+      <td>114a3c37757f0a13bcd1a8f9e1cd1fd6</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>20070101</td>
-      <td>2007</td>
-      <td>Stiftelsen Saemien Sijte</td>
-      <td>mul / nob / swe / nno</td>
-      <td>Sørsamer / Historie / Samisk kulturminner / Sa...</td>
-      <td>948 / 948</td>
+      <td>Oslo</td>
+      <td>20110101</td>
+      <td>2011</td>
+      <td>Aschehoug</td>
+      <td>nob</td>
+      <td>Reindrift / Historie / Emigrasjon / Fra Norge ...</td>
+      <td>979.8 / 979.8 / 979.8 / 979</td>
       <td>NaN</td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -1464,20 +1476,20 @@ document.write(`
     </tr>
     <tr>
       <th>1</th>
-      <td>100472261</td>
-      <td>URN:NBN:no-nb_digibok_2010032307035</td>
-      <td>I villreinens rike : Setesdal Vesthei , Ryfylk...</td>
-      <td>Frøstrup , Johan Christian / Bang-Andersen , S...</td>
-      <td>oai:nb.bibsys.no:990001151004702202</td>
-      <td>d6e1d58a454d2c15b44d9a225d948c1d</td>
-      <td>8.291495e+09</td>
+      <td>100097331</td>
+      <td>URN:NBN:no-nb_digibok_2012080208310</td>
+      <td>Det samiske perspektivet i verdensarven Røros ...</td>
+      <td>Fjellheim , Jenny</td>
+      <td>oai:nb.bibsys.no:990711075504702202</td>
+      <td>2019d516c913357805a28a600fce78f0</td>
       <td>NaN</td>
-      <td>19990101</td>
-      <td>1999</td>
-      <td>Friluftsforl.</td>
+      <td>[Røros]</td>
+      <td>20070101</td>
+      <td>2007</td>
+      <td>Rørosmuseet</td>
       <td>nob</td>
-      <td>Rein / Jakt / Landskap / Lokalhistorie / Reind...</td>
-      <td>948.3 / 799.2765</td>
+      <td>Verdensarv / Kulturminnevern / Samer / Samiske...</td>
+      <td>948.41</td>
       <td>NaN</td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -1486,20 +1498,20 @@ document.write(`
     </tr>
     <tr>
       <th>2</th>
-      <td>100364819</td>
-      <td>URN:NBN:no-nb_digibok_2018020948033</td>
-      <td>Reinen på Hardangervidda : natur og kultur</td>
-      <td>Vaa , Johan / Bitustøyl , Kjell</td>
-      <td>oai:nb.bibsys.no:991237194454702202</td>
-      <td>8358d28bbb7a9dc5f74ad6b5ba8ac8f7</td>
+      <td>100182647</td>
+      <td>URN:NBN:no-nb_digibok_2013120906074</td>
+      <td>Sjøsamene ved Varangerfjorden : en kortfattet ...</td>
+      <td>Bjørkli , Thorbjørn / Schanche , Kjersti</td>
+      <td>oai:nb.bibsys.no:990600856224702202</td>
+      <td>31ee1b96b77a9497d98ac57759a8bf05</td>
+      <td>8.277460e+09</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>20120101</td>
-      <td>2012</td>
-      <td>Villreinutvalet på Hardangervidda</td>
-      <td>nno</td>
-      <td>dyregraver / reindrift / fjell / Norge / Rein ...</td>
-      <td>639.1 / 639.1 / 948.28 / 639.11 / 639.109481</td>
+      <td>20050101</td>
+      <td>2005</td>
+      <td>Várjjat sámi musea</td>
+      <td>nob</td>
+      <td>Historie / Norge / Sjøsamer / Samer / Sjøsamer...</td>
+      <td>948.46</td>
       <td>NaN</td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -1508,21 +1520,21 @@ document.write(`
     </tr>
     <tr>
       <th>3</th>
-      <td>100120396</td>
-      <td>URN:NBN:no-nb_digibok_2012111607025</td>
-      <td>Veodalen : en dal og dens folk</td>
-      <td>Henriksen , Vera</td>
-      <td>oai:nb.bibsys.no:990115559984702202</td>
-      <td>aaa1f2bfad4f575a72f9f451b9d3d287</td>
-      <td>8.202209e+09</td>
+      <td>100574355</td>
+      <td>URN:NBN:no-nb_digibok_2008102204133</td>
+      <td>Samenes kultur og historie - samepolitikk i No...</td>
+      <td>Lund , Jann T.</td>
+      <td>oai:nb.bibsys.no:990006624024702202</td>
+      <td>36c4a8d641dcb05cfee4046e43fd02ad</td>
       <td>NaN</td>
-      <td>20010101</td>
-      <td>2001</td>
-      <td>Cappelen</td>
+      <td>NaN</td>
+      <td>20000101</td>
+      <td>2000</td>
+      <td>Nordisk samisk institutt</td>
       <td>nob</td>
-      <td>Norge / turisthytter / seterdrift / reindrift ...</td>
-      <td>948.2513</td>
-      <td>NaN</td>
+      <td>samer / samepolitikk / norge / sverige / samis...</td>
+      <td>323.119455 / 948.0049457</td>
+      <td>conference publication</td>
       <td>Faglitteratur</td>
       <td>digibok</td>
       <td>nb</td>
@@ -1530,20 +1542,20 @@ document.write(`
     </tr>
     <tr>
       <th>4</th>
-      <td>100251490</td>
-      <td>URN:NBN:no-nb_digibok_2014110607503</td>
-      <td>Tundraens folk</td>
-      <td>Ravna , Øyvind / Kerner , Karl N. / Olsen , Ro...</td>
-      <td>oai:nb.bibsys.no:990112932924702202</td>
-      <td>5f9905f7ad3e3fedb4a4a2d0d1d35eba</td>
-      <td>8.252926e+09</td>
-      <td>[Oslo]</td>
-      <td>20010101</td>
-      <td>2001</td>
-      <td>Landbruksforl.</td>
-      <td>mul / nob / sme</td>
-      <td>Kolasamer / Urbefolkninger / Reindriftsnæring ...</td>
-      <td>947</td>
+      <td>100396443</td>
+      <td>URN:NBN:no-nb_digibok_2019112807031</td>
+      <td>Redningsmenn og lykkejegere : norske pionerer ...</td>
+      <td>Andersen , Roy</td>
+      <td>oai:nb.bibsys.no:991218310354702202</td>
+      <td>272f96f88d3358cf9c7dba5a4bb397e3</td>
+      <td>NaN</td>
+      <td>Oslo</td>
+      <td>20120101</td>
+      <td>2012</td>
+      <td>Aschehoug</td>
+      <td>nob</td>
+      <td>Emigrasjon / Fra Norge / Reindrift / Historie ...</td>
+      <td>979.8 / 979</td>
       <td>NaN</td>
       <td>Faglitteratur</td>
       <td>digibok</td>
