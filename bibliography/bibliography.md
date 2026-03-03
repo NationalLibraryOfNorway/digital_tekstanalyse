@@ -10,6 +10,8 @@ title: Bibliografi
 Tønnessen, Jon Carlstedt and Birkenes, Magnus Breder (2025) "Providing Web Archive News Articles as Corpus Data", *Journal of Open Humanities Data*, 11(2), 1-12. 
 Tilgjengelig fra: http://openhumanitiesdata.metajnl.com/articles/10.5334/johd.281/ (Hentet: 2025)
 
+Sverdljuk, Jana (2025) "Representations of Indigenous peoples and the construction of Norwegian identity in America: A corpus-based study" in Hemstad, Ruth and Rasmussen, Terje (ed.) *Nordic Transatlantic Crossings*. London: Routledge, 81-97. 
+
 Malvik, Anders Skare et al. (2024) "ImagiNation-korpuset", *Edda*, 111(3), 120-137. 
 Tilgjengelig fra: https://doi.org/10.18261/edda.111.3.3 (Hentet: 2025-11-10)
 
