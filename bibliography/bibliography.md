@@ -7,10 +7,20 @@ title: Bibliografi
 *Sortert ny --> gammel*
 
 
+Sælthun, Sigurd and Sandring, Vetle Lars Wisløff (2026) "Shifting Narratives of the Alta controversy: Innovations in Memory Studies Using Natural Language Processing", *Memory Studies*, 17506980251409270. 
+Tilgjengelig fra: https://doi.org/10.1177/17506980251409270 (Hentet: 2026-03-03)
+
 Tønnessen, Jon Carlstedt and Birkenes, Magnus Breder (2025) "Providing Web Archive News Articles as Corpus Data", *Journal of Open Humanities Data*, 11(2), 1-12. 
 Tilgjengelig fra: http://openhumanitiesdata.metajnl.com/articles/10.5334/johd.281/ (Hentet: 2025)
 
 Sverdljuk, Jana (2025) "Representations of Indigenous peoples and the construction of Norwegian identity in America: A corpus-based study" in Hemstad, Ruth and Rasmussen, Terje (ed.) *Nordic Transatlantic Crossings*. London: Routledge, 81-97. 
+
+Skogmo, Siri Fürst et al. (2025) "Oversatt litteratur på kartet: Digitale metoder og tverrfaglig samarbeid i bibliografisk oversettelsesforskning", *Nordisk tidsskrift for oversettelses- og tolkeforskning*, 1(2), 51-70. 
+
+Opach, Tomasz et al. (2025) "Digital Literary Mapping: Exploring User Needs and Pedagogical Potentials in Literary Geographies with the ImagiNation Map Tool", *Cartography and Geographic Information Science*, 1-18. 
+Tilgjengelig fra: https://doi.org/10.1080/15230406.2025.2588459
+
+Roald, Marie, Birkenes, Magnus Breder, og Johnsen, Lars G. Bagøien (2024) "Visual Navigation of Digital Libraries: Retrieval and Classification of Images in the National Library of Norway's Digitised Book Collection", *arXiv preprint*, 
 
 Malvik, Anders Skare et al. (2024) "ImagiNation-korpuset", *Edda*, 111(3), 120-137. 
 Tilgjengelig fra: https://doi.org/10.18261/edda.111.3.3 (Hentet: 2025-11-10)
@@ -18,8 +28,15 @@ Tilgjengelig fra: https://doi.org/10.18261/edda.111.3.3 (Hentet: 2025-11-10)
 Kvinnsland, Ranveig, Dale, Ingerid Løyning, og Tungland, Lars Magne (2024) "Rediscovering the 1890s: A Norwegian Poetry Corpus", *Proceedings of the Computational Humanities Research Conference 2024*, 1259-1271. 
 Tilgjengelig fra: https://ceur-ws.org/Vol-3834/#paper24 (Hentet: 2024)
 
+Johnsen, Lars G (2024) "Bibliografiske nettverk: en digital analyse av siteringer" in Sivesind, Kirsten (ed.) *Hvordan studere utdanningspolitikk? Tekster, teorier, tilnærminger*. 157-184. 
+
 Johnsen, Lars (2023) "Å bruke språkteknologi til å undersøke medisinske ord", *Michael*, 20(Supplement 31), 133-42. 
 Tilgjengelig fra: https://www.michaeljournal.no/article/2023/02/%C3%85%20bruke%20spr%C3%A5kteknologi%20til%20%C3%A5%20unders%C3%B8ke%20medisinske%20ord (Hentet: 2023)
+
+Hanssen, Jens-Morten (2023) "Jon Fosse på den globale scenen: En dataanalyse", *Teatervitenskapelige studier*, 
+
+Hanssen, Jens-Morten (2023) "The Rise of Digital Humanities Approaches to Ibsen Studies", *Ibsen Studies*, 23(2), 214-229. 
+Tilgjengelig fra: https://doi.org/10.1080/15021866.2023.2268357
 
 Birkenes, Magnus Breder, Johnsen, Lars, og Kåsen, Andre (2023) "NB DH-LAB: A corpus infrastructure for social sciences and humanities computing", 30-34. 
 
