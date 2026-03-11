@@ -10,7 +10,7 @@ from typing import Generator, List, Union
 import dhlab as dh
 from dhlab.api.dhlab_api import concordance, get_chunks_para
 from dhlab.constants import BASE_URL
-from dhlab.nbtokenizer import tokenize
+from nb_tokenizer import tokenize
 
 
 # File handling util functions
