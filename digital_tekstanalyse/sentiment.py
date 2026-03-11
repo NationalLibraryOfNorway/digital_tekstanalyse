@@ -131,7 +131,7 @@ def count_terms_in_doc(
         df = pd.DataFrame(result, columns=cols)
     except requests.exceptions.JSONDecodeError as e:
         logging.error(f"Couldn't decode JSON object: {e}")
-        logging.info(f"Returning empty dataframe instead of word counts")
+        logging.info("Returning empty dataframe instead of word counts")
         df = pd.DataFrame(columns=cols)
 
     df = df.drop("urncount", axis=1)
