@@ -115,9 +115,7 @@ def group_index_terms(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def count_terms_in_doc(
-    urns: List[str],
-    words: Union[list, str],
-    docid_column="dhlabid"
+    urns: List[str], words: Union[list, str], docid_column="dhlabid"
 ):
     """Similar functionality as ``dhlab.api.dhlab_api.get_document_frequencies``,
     except the dataframe isn't pivoted.
@@ -187,9 +185,7 @@ def coll_sentiment(coll, word="barnevern", return_score_only=False):
 
 
 def sentiment_by_place(
-    cities=["Kristiansand", "Stavanger"],
-    from_year=1999,
-    to_year=2010
+    cities=["Kristiansand", "Stavanger"], from_year=1999, to_year=2010
 ):
 
     for city in cities:
@@ -261,6 +257,7 @@ def compute_sentiment_analysis(*args, **kwargs):
 
 
 # DUMPING GROUND
+
 
 # Unnecessary function
 def unpivot(frame):
