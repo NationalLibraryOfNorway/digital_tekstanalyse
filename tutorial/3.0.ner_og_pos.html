@@ -16,41 +16,44 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -64,6 +67,7 @@
     <link rel="prev" title="1.9. Sammenlign metadata" href="2.6.sammenlign_metadata.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -79,19 +83,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -99,7 +92,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -107,8 +99,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -124,7 +116,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -142,7 +135,7 @@
     
   
 
-<a class="navbar-brand logo" href="../README.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
@@ -154,28 +147,24 @@
     
     
     <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="DH-lab dokumenter - Home"/>
-    <script>document.write(`<img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark" alt="DH-lab dokumenter - Home"/>`);</script>
+    <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark pst-js-only" alt="DH-lab dokumenter - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../README.html">
-                    DHLAB
+                <a class="reference internal" href="../index.html">
+                    DH-lab – digital tekstanalyse
                 </a>
             </li>
         </ul>
@@ -211,9 +200,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -392,7 +386,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -406,25 +400,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -480,13 +466,7 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bygg et korpus basert Agnar Mykle og hent ut urn-kolonnen som liste</span>
 <span class="n">urns</span> <span class="o">=</span> <span class="n">Corpus</span><span class="p">(</span><span class="n">doctype</span><span class="o">=</span><span class="s2">&quot;digibok&quot;</span><span class="p">,</span> <span class="n">author</span><span class="o">=</span><span class="s2">&quot;mykle&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;røde&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">urn</span>
 <span class="c1"># Hent ut en urn</span>
-<span class="n">my_urn</span> <span class="o">=</span> <span class="n">urns</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_10820/3202258208.py:4: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
-  my_urn = urns[1]
+<span class="n">my_urn</span> <span class="o">=</span> <span class="n">urns</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -522,7 +502,7 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/ingeridd/prosjekter/digital_tekstanalyse/.venv/lib/python3.12/site-packages/dhlab/api/dhlab_api.py:80: FutureWarning: Passing literal json to &#39;read_json&#39; is deprecated and will be removed in a future version. To read from a literal string, wrap it in a &#39;StringIO&#39; object.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/koding/dhlab_stuff/digital_tekstanalyse/.venv/lib/python3.13/site-packages/dhlab/api/dhlab_api.py:80: FutureWarning: Passing literal json to &#39;read_json&#39; is deprecated and will be removed in a future version. To read from a literal string, wrap it in a &#39;StringIO&#39; object.
   return pd.read_json(resp.json())
 </pre></div>
 </div>
@@ -560,34 +540,34 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
   </thead>
   <tbody>
     <tr>
-      <th>31</th>
+      <th>27</th>
       <td>Ask</td>
       <td>PER</td>
-      <td>785</td>
+      <td>781</td>
     </tr>
     <tr>
-      <th>137</th>
+      <th>134</th>
       <td>Daniel</td>
       <td>PER</td>
       <td>115</td>
     </tr>
     <tr>
-      <th>300</th>
+      <th>281</th>
       <td>Gud</td>
       <td>PER</td>
-      <td>83</td>
+      <td>84</td>
     </tr>
     <tr>
-      <th>1388</th>
+      <th>1335</th>
       <td>mann</td>
       <td>PER</td>
-      <td>82</td>
+      <td>80</td>
     </tr>
     <tr>
-      <th>203</th>
+      <th>196</th>
       <td>Embla</td>
       <td>MISC</td>
-      <td>70</td>
+      <td>68</td>
     </tr>
     <tr>
       <th>...</th>
@@ -596,38 +576,38 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
       <td>...</td>
     </tr>
     <tr>
-      <th>778</th>
-      <td>Timen snile</td>
+      <th>14</th>
+      <td>Anders Taraldsen</td>
       <td>PER</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>777</th>
-      <td>Tillat</td>
+      <th>17</th>
+      <td>Arbeideravisen</td>
+      <td>LOC</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Arbeiderbevegelsen</td>
       <td>PER</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>776</th>
-      <td>Tiger Rag</td>
+      <th>19</th>
+      <td>Arbeiderbladet</td>
       <td>ORG</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>775</th>
-      <td>Théatre Frangais</td>
+      <th>20</th>
+      <td>Arbeideren</td>
       <td>PER</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>790</th>
-      <td>Tuileri-haven</td>
-      <td>LOC</td>
       <td>1</td>
     </tr>
   </tbody>
 </table>
-<p>2031 rows × 3 columns</p>
+<p>1983 rows × 3 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -636,16 +616,12 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
 <p>Finn ordklasser og dependens for en tekst med <code class="docutils literal notranslate"><span class="pre">POS</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">POS</span><span class="p">(</span><span class="n">urn</span><span class="o">=</span><span class="n">urns</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">model</span><span class="o">=</span><span class="n">l</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">to_page</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">POS</span><span class="p">(</span><span class="n">urn</span><span class="o">=</span><span class="n">urns</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">model</span><span class="o">=</span><span class="n">l</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">to_page</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_10820/4208546902.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
-  res = POS(urn=urns[1], model=l.models[2], to_page=10000)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/ingeridd/prosjekter/digital_tekstanalyse/.venv/lib/python3.12/site-packages/dhlab/api/dhlab_api.py:100: FutureWarning: Passing literal json to &#39;read_json&#39; is deprecated and will be removed in a future version. To read from a literal string, wrap it in a &#39;StringIO&#39; object.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/koding/dhlab_stuff/digital_tekstanalyse/.venv/lib/python3.13/site-packages/dhlab/api/dhlab_api.py:100: FutureWarning: Passing literal json to &#39;read_json&#39; is deprecated and will be removed in a future version. To read from a literal string, wrap it in a &#39;StringIO&#39; object.
   return pd.read_json(resp.json())
 </pre></div>
 </div>
@@ -691,63 +667,7 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
   </thead>
   <tbody>
     <tr>
-      <th>3543</th>
-      <td>,</td>
-      <td>,</td>
-      <td>PUNCT</td>
-      <td>punct</td>
-      <td>skamme</td>
-      <td>skamme</td>
-      <td>VERB</td>
-      <td>henne</td>
-      <td>henne</td>
-      <td>ADV</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>4943</th>
-      <td>,</td>
-      <td>,</td>
-      <td>PUNCT</td>
-      <td>punct</td>
-      <td>kraftig</td>
-      <td>kraftig</td>
-      <td>ADJ</td>
-      <td>kraftig</td>
-      <td>kraftig</td>
-      <td>ADJ</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>4914</th>
-      <td>,</td>
-      <td>,</td>
-      <td>PUNCT</td>
-      <td>punct</td>
-      <td>lagt</td>
-      <td>lægge</td>
-      <td>VERB</td>
-      <td>lagt</td>
-      <td>lægge</td>
-      <td>VERB</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>20215</th>
-      <td>?</td>
-      <td>?</td>
-      <td>PUNCT</td>
-      <td>punct</td>
-      <td>ondt</td>
-      <td>ondt</td>
-      <td>ADV</td>
-      <td>ondt</td>
-      <td>ondt</td>
-      <td>ADV</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>106721</th>
+      <th>106602</th>
       <td>nu</td>
       <td>nu</td>
       <td>ADV</td>
@@ -758,6 +678,62 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
       <td>sier</td>
       <td>sie</td>
       <td>VERB</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>4860</th>
+      <td>,</td>
+      <td>,</td>
+      <td>PUNCT</td>
+      <td>punct</td>
+      <td>lagt</td>
+      <td>lægge</td>
+      <td>VERB</td>
+      <td>lagt</td>
+      <td>lægge</td>
+      <td>VERB</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>153445</th>
+      <td>»</td>
+      <td>»</td>
+      <td>PUNCT</td>
+      <td>punct</td>
+      <td>syk</td>
+      <td>syk</td>
+      <td>ADV</td>
+      <td>syk</td>
+      <td>syk</td>
+      <td>ADV</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>15677</th>
+      <td>.</td>
+      <td>.</td>
+      <td>PUNCT</td>
+      <td>punct</td>
+      <td>Ja</td>
+      <td>ja</td>
+      <td>INTJ</td>
+      <td>Ja</td>
+      <td>ja</td>
+      <td>INTJ</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2067</th>
+      <td>,</td>
+      <td>,</td>
+      <td>PUNCT</td>
+      <td>punct</td>
+      <td>lykkelig</td>
+      <td>lykkelig</td>
+      <td>ADJ</td>
+      <td>Matt</td>
+      <td>Matt</td>
+      <td>PROPN</td>
       <td>4</td>
     </tr>
     <tr>
@@ -775,78 +751,78 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
       <td>...</td>
     </tr>
     <tr>
-      <th>52760</th>
+      <th>52838</th>
       <td>en</td>
       <td>en</td>
       <td>DET</td>
       <td>det</td>
-      <td>mann</td>
-      <td>mann</td>
+      <td>lavvokst</td>
+      <td>lavvokst</td>
       <td>NOUN</td>
-      <td>lar</td>
-      <td>lar</td>
+      <td>inngav</td>
+      <td>inngav</td>
       <td>VERB</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>52761</th>
+      <th>52839</th>
       <td>en</td>
       <td>en</td>
       <td>DET</td>
       <td>det</td>
-      <td>visdom</td>
-      <td>visdom</td>
-      <td>NOUN</td>
-      <td>utstråler</td>
-      <td>utstråler</td>
+      <td>vever</td>
+      <td>veve</td>
+      <td>VERB</td>
+      <td>virket</td>
+      <td>virke</td>
       <td>VERB</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>52762</th>
+      <th>52840</th>
       <td>en</td>
       <td>en</td>
       <td>DET</td>
       <td>det</td>
-      <td>kunnskap</td>
-      <td>kunnskap</td>
+      <td>måte</td>
+      <td>måte</td>
       <td>NOUN</td>
-      <td>visdom</td>
-      <td>visdom</td>
+      <td>kontrasterte</td>
+      <td>kontrastert</td>
       <td>NOUN</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>52763</th>
+      <th>52841</th>
       <td>en</td>
       <td>en</td>
       <td>DET</td>
       <td>det</td>
-      <td>undring</td>
-      <td>undring</td>
+      <td>aura</td>
+      <td>aura</td>
       <td>NOUN</td>
-      <td>komme</td>
-      <td>komme</td>
-      <td>VERB</td>
+      <td>latiner</td>
+      <td>latin</td>
+      <td>NOUN</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>52754</th>
+      <th>52832</th>
       <td>en</td>
       <td>en</td>
       <td>DET</td>
       <td>det</td>
-      <td>musikkens</td>
-      <td>musikk</td>
+      <td>pung</td>
+      <td>pung</td>
       <td>NOUN</td>
-      <td>hadde</td>
-      <td>hadde</td>
-      <td>VERB</td>
+      <td>pung</td>
+      <td>pung</td>
+      <td>NOUN</td>
       <td>1</td>
     </tr>
   </tbody>
 </table>
-<p>156518 rows × 11 columns</p>
+<p>156536 rows × 11 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -907,14 +883,16 @@ Dhlab støtter Per januar 2023 språkene norsk, dansk og engelsk. Tilgjengelige 
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ner">1.10.1. NER</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pos-ordklassetagging">1.10.2. POS – Ordklassetagging</a></li>
@@ -966,8 +944,8 @@ By Nasjonalbiblioteket
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

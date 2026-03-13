@@ -1,0 +1,1718 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; DH-lab dokumenter</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_build_fresh/_build/.jupyter_cache/executed/639b03069dac11d55d28a5f6568c626d/base';</script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="DH-lab dokumenter - Home"/>
+    <img src="../../../../../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark pst-js-only" alt="DH-lab dokumenter - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../../index.html">
+                    DH-lab – digital tekstanalyse
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../bibliography/bibliography.html">DH-lab bibliografi</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kodeeksempler–Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../tutorial.html">1. Læringseksempler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/1.0.Oppstart.html">1.2. Oppstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.0.Bygg_korpus.html">1.3. Korpus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.1.Konkordans.html">1.4. Konkordanser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.2.Kollokasjoner.html">1.5. Kollokasjoner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.3.Frekvenslister.html">1.6. Frekvenslister</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.4.S%C3%B8k_i_aviser.html">1.7. Søk i aviser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.5.n-gram_og_galakser.html">1.8. N-gram og galakser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.6.sammenlign_metadata.html">1.9. Sammenlign metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/3.0.ner_og_pos.html">1.10. NER og POS med Spacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/3.1.ordparadigmer.html">1.11. Ordparadigmer med wordbank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/3.2.dispersion.html">1.12. Ordfordeling</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../cookbook.html">2. Kokebøker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../cookbook/4.0.sentiment_analysis_timeseries.html">2.1. Sentimentanalyse i aviskorpus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../cookbook/4.1.topic_modelling_with_LDA.html">2.2. Topic modelling med gensim og dhlab</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/NationalLibraryOfNorway/digital_tekstanalyse/main?urlpath=tree/_build_fresh/_build/.jupyter_cache/executed/639b03069dac11d55d28a5f6568c626d/base.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/NationalLibraryOfNorway/digital_tekstanalyse/blob/main/_build_fresh/_build/.jupyter_cache/executed/639b03069dac11d55d28a5f6568c626d/base.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NationalLibraryOfNorway/digital_tekstanalyse" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NationalLibraryOfNorway/digital_tekstanalyse/issues/new?title=Issue%20on%20page%20%2F_build_fresh/_build/.jupyter_cache/executed/639b03069dac11d55d28a5f6568c626d/base.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../../_sources/_build_fresh/_build/.jupyter_cache/executed/639b03069dac11d55d28a5f6568c626d/base.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dh</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dhlab.api.dhlab_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">totals</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">nbtext</span> <span class="k">as</span> <span class="n">nb</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># korpus med inntil 50 bøker fra dewey 641 (mat og drikke) utgitt mellom 1960 og 2020</span>
+
+<span class="n">korpus</span> <span class="o">=</span> <span class="n">dh</span><span class="o">.</span><span class="n">Corpus</span><span class="p">(</span><span class="n">ddk</span><span class="o">=</span><span class="s2">&quot;641*&quot;</span><span class="p">,</span> <span class="n">doctype</span><span class="o">=</span><span class="s2">&quot;digibok&quot;</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">korpus</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dhlabid</th>
+      <th>urn</th>
+      <th>title</th>
+      <th>authors</th>
+      <th>oaiid</th>
+      <th>sesamid</th>
+      <th>isbn10</th>
+      <th>city</th>
+      <th>timestamp</th>
+      <th>year</th>
+      <th>publisher</th>
+      <th>langs</th>
+      <th>subjects</th>
+      <th>ddc</th>
+      <th>genres</th>
+      <th>literaryform</th>
+      <th>doctype</th>
+      <th>ocr_creator</th>
+      <th>ocr_timestamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>100433299</td>
+      <td>URN:NBN:no-nb_digibok_2021011907576</td>
+      <td>Magevennlig mat : lavFODMAP : kokeboka for deg...</td>
+      <td>Edin , Julia Døhlen / Døhlen , Espen Edin</td>
+      <td>oai:nb.bibsys.no:991509321114702202</td>
+      <td>88fb22d487fa4cdf813f0393a02123bb</td>
+      <td></td>
+      <td>[Oslo]</td>
+      <td>20150101</td>
+      <td>2015</td>
+      <td>Cappelen Damm</td>
+      <td>nob</td>
+      <td>matlaging / mageproblemer / fodmap</td>
+      <td>641.5631 / 641.563</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>100501604</td>
+      <td>URN:NBN:no-nb_digibok_2007112201099</td>
+      <td>Matglede</td>
+      <td>Kielland , Ruth Marcussen</td>
+      <td>oai:nb.bibsys.no:999106591254702202</td>
+      <td>103dfbfebcd99698141cbdef29ad0341</td>
+      <td>8205201978 / 8252520561</td>
+      <td>[Oslo]</td>
+      <td>19910101</td>
+      <td>1991</td>
+      <td>Gyldendal</td>
+      <td>nob</td>
+      <td>kokebøker</td>
+      <td>641.5</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">collword</span> <span class="o">=</span> <span class="s1">&#39;rødvin&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vi utfører en konkordans for å sjekke at korpuset virker.</span>
+<span class="c1"># dh.Concordance(corpus=korpus, query=&quot;sei&quot;).show()</span>
+<span class="n">korpus</span><span class="o">.</span><span class="n">conc</span><span class="p">(</span><span class="s2">&quot;sei&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_34804">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_34804_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_34804_level0_col1" class="col_heading level0 col1" >concordance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_34804_level0_row0" class="row_heading level0 row0" >2</th>
+      <td id="T_34804_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007112201099'>URN:NBN:no-nb_digibok_2007112201099</a></td>
+      <td id="T_34804_row0_col1" class="data row0 col1" >IV2 kg pale ( <b>sei</b> ) IV2 l vann</td>
+    </tr>
+    <tr>
+      <th id="T_34804_level0_row1" class="row_heading level0 row1" >84</th>
+      <td id="T_34804_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2017010648124'>URN:NBN:no-nb_digibok_2017010648124</a></td>
+      <td id="T_34804_row1_col1" class="data row1 col1" >bovine , and porcine proteinases . J . <b>Sei</b> . Food . Agric . press ) .</td>
+    </tr>
+    <tr>
+      <th id="T_34804_level0_row2" class="row_heading level0 row2" >43</th>
+      <td id="T_34804_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011030803010'>URN:NBN:no-nb_digibok_2011030803010</a></td>
+      <td id="T_34804_row2_col1" class="data row2 col1" >... klare å komme langt inn , så både her og i visse saltvannsstrømmer kan større <b>sei</b> fiskes fra land .</td>
+    </tr>
+    <tr>
+      <th id="T_34804_level0_row3" class="row_heading level0 row3" >20</th>
+      <td id="T_34804_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2015042348028'>URN:NBN:no-nb_digibok_2015042348028</a></td>
+      <td id="T_34804_row3_col1" class="data row3 col1" >... gjedde , 2 løk abbor , flyndre , torsk eller <b>sei</b> abbor , flyndre , makrell , torsk eller 2... </td>
+    </tr>
+    <tr>
+      <th id="T_34804_level0_row4" class="row_heading level0 row4" >86</th>
+      <td id="T_34804_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2021021007602'>URN:NBN:no-nb_digibok_2021021007602</a></td>
+      <td id="T_34804_row4_col1" class="data row4 col1" >200 g fersk eller frossen filet av <b>sei</b> eller torsk 4 poteter</td>
+    </tr>
+    <tr>
+      <th id="T_34804_level0_row5" class="row_heading level0 row5" >68</th>
+      <td id="T_34804_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_pliktmonografi_000027143'>URN:NBN:no-nb_pliktmonografi_000027143</a></td>
+      <td id="T_34804_row5_col1" class="data row5 col1" >... 400 g filet av f.eks torsk eller <b>sei</b> Fres grønnsaker et par minutter i smør i en stor kjele mens... </td>
+    </tr>
+    <tr>
+      <th id="T_34804_level0_row6" class="row_heading level0 row6" >70</th>
+      <td id="T_34804_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011030803010'>URN:NBN:no-nb_digibok_2011030803010</a></td>
+      <td id="T_34804_row6_col1" class="data row6 col1" ><b>Sei</b> i rømmesaus</td>
+    </tr>
+    <tr>
+      <th id="T_34804_level0_row7" class="row_heading level0 row7" >16</th>
+      <td id="T_34804_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2017082348021'>URN:NBN:no-nb_digibok_2017082348021</a></td>
+      <td id="T_34804_row7_col1" class="data row7 col1" >Stell og steik <b>sei</b> som forklart ovanfor . Server seibiff med steikt lauk .</td>
+    </tr>
+    <tr>
+      <th id="T_34804_level0_row8" class="row_heading level0 row8" >29</th>
+      <td id="T_34804_row8_col0" class="data row8 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2017010648124'>URN:NBN:no-nb_digibok_2017010648124</a></td>
+      <td id="T_34804_row8_col1" class="data row8 col1" >diarrhea in calves led rnilk replacer . Can . J . Anim . <b>Sei</b> . 49 : 305 , 1969.</td>
+    </tr>
+    <tr>
+      <th id="T_34804_level0_row9" class="row_heading level0 row9" >11</th>
+      <td id="T_34804_row9_col0" class="data row9 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011030803010'>URN:NBN:no-nb_digibok_2011030803010</a></td>
+      <td id="T_34804_row9_col1" class="data row9 col1" >Oppskrifter på <b>sei</b></td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vi legger inn variablen collword som søkeord, med 5 ord før og etter. </span>
+<span class="c1">#  Antall ord før og etter kan endres etter konteksten man vil undersøke.</span>
+<span class="c1"># Collword er lagt som variabel i cella over, slik at det er lett å gjenbruke notebooken for ulike søkeord</span>
+
+<span class="n">coll</span> <span class="o">=</span> <span class="n">korpus</span><span class="o">.</span><span class="n">coll</span><span class="p">(</span><span class="n">words</span><span class="o">=</span><span class="n">collword</span><span class="p">,</span> <span class="n">after</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">before</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">samplesize</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># For å vise topp `n` treff bruke .show().head(n)</span>
+<span class="n">coll</span><span class="o">.</span><span class="n">show</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>counts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>dl</th>
+      <td>122</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>108</td>
+    </tr>
+    <tr>
+      <th>.</th>
+      <td>106</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>92</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>89</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll</span><span class="o">.</span><span class="n">coll</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;counts&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>counts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>dl</th>
+      <td>122</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>108</td>
+    </tr>
+    <tr>
+      <th>.</th>
+      <td>106</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>92</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>89</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>87</td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>63</td>
+    </tr>
+    <tr>
+      <th>en</th>
+      <td>43</td>
+    </tr>
+    <tr>
+      <th>med</th>
+      <td>33</td>
+    </tr>
+    <tr>
+      <th>ss</th>
+      <td>28</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tot</span> <span class="o">=</span> <span class="n">totals</span><span class="p">(</span><span class="mi">50000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tot</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>freq</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>.</th>
+      <td>7655423257</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>5052171514</td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>2531262027</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>2520268056</td>
+    </tr>
+    <tr>
+      <th>-</th>
+      <td>1314451583</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dh.Counts teller tokens i hver tekst i korpus</span>
+<span class="n">dokumenter_aggregert</span> <span class="o">=</span> <span class="n">korpus</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">words</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Summerer slik at vi får totalt tokens for korpus</span>
+<span class="n">korpus_agg</span> <span class="o">=</span> <span class="n">dokumenter_aggregert</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">korpus_agg</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">frame_sort</span><span class="p">(</span><span class="n">nb</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">korpus_agg</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">korpus_agg</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>.</th>
+      <td>130687</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>99945</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>82952</td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>64064</td>
+    </tr>
+    <tr>
+      <th>med</th>
+      <td>35683</td>
+    </tr>
+    <tr>
+      <th>til</th>
+      <td>30498</td>
+    </tr>
+    <tr>
+      <th>er</th>
+      <td>30239</td>
+    </tr>
+    <tr>
+      <th>en</th>
+      <td>25947</td>
+    </tr>
+    <tr>
+      <th>av</th>
+      <td>25087</td>
+    </tr>
+    <tr>
+      <th>på</th>
+      <td>24693</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll</span><span class="o">.</span><span class="n">coll</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;counts&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>counts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>dl</th>
+      <td>122</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>108</td>
+    </tr>
+    <tr>
+      <th>.</th>
+      <td>106</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>92</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>89</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>hvitløkkløfter</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>hvitløksfedd</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>hvitpepperkorn</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Mosten</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>!</th>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>862 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll_df</span> <span class="o">=</span> <span class="n">coll</span><span class="o">.</span><span class="n">coll</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;counts&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>counts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>dl</th>
+      <td>122</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>108</td>
+    </tr>
+    <tr>
+      <th>.</th>
+      <td>106</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>92</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>89</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>hvitløkkløfter</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>hvitløksfedd</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>hvitpepperkorn</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Mosten</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>!</th>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>862 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span><span class="o">.</span><span class="n">normalize_corpus_dataframe</span><span class="p">(</span><span class="n">korpus_agg</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">normalize_corpus_dataframe</span><span class="p">(</span><span class="n">tot</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">normalize_corpus_dataframe</span><span class="p">(</span><span class="n">coll_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">korpus_agg</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>.</th>
+      <td>0.054504</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>0.041683</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>0.034596</td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>0.026718</td>
+    </tr>
+    <tr>
+      <th>med</th>
+      <td>0.014882</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tot</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>freq</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>.</th>
+      <td>0.070908</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>0.046796</td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>0.023446</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>0.023344</td>
+    </tr>
+    <tr>
+      <th>-</th>
+      <td>0.012175</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll</span><span class="o">.</span><span class="n">coll</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>counts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>!</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>%</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>'</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>(</th>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>)</th>
+      <td>16</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll_assoc</span> <span class="o">=</span> <span class="p">(</span><span class="n">coll_df</span><span class="o">.</span><span class="n">counts</span><span class="o">**</span><span class="mf">1.0</span><span class="o">/</span><span class="n">tot</span><span class="o">.</span><span class="n">freq</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll_assoc</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>timian</th>
+      <td>3203.673338</td>
+    </tr>
+    <tr>
+      <th>hvitvin</th>
+      <td>2484.872240</td>
+    </tr>
+    <tr>
+      <th>dl</th>
+      <td>2068.115939</td>
+    </tr>
+    <tr>
+      <th>buljong</th>
+      <td>1893.517473</td>
+    </tr>
+    <tr>
+      <th>eddik</th>
+      <td>1012.163391</td>
+    </tr>
+    <tr>
+      <th>burgunder</th>
+      <td>909.053282</td>
+    </tr>
+    <tr>
+      <th>kylling</th>
+      <td>723.024847</td>
+    </tr>
+    <tr>
+      <th>Tilsett</th>
+      <td>721.455472</td>
+    </tr>
+    <tr>
+      <th>Rens</th>
+      <td>710.985229</td>
+    </tr>
+    <tr>
+      <th>alkoholen</th>
+      <td>695.823191</td>
+    </tr>
+    <tr>
+      <th>hvitløk</th>
+      <td>684.052590</td>
+    </tr>
+    <tr>
+      <th>finhakket</th>
+      <td>677.826767</td>
+    </tr>
+    <tr>
+      <th>kanel</th>
+      <td>592.364523</td>
+    </tr>
+    <tr>
+      <th>hvetemel</th>
+      <td>563.964309</td>
+    </tr>
+    <tr>
+      <th>Kok</th>
+      <td>524.740942</td>
+    </tr>
+    <tr>
+      <th>Curacao</th>
+      <td>492.278000</td>
+    </tr>
+    <tr>
+      <th>tomater</th>
+      <td>465.204114</td>
+    </tr>
+    <tr>
+      <th>konjakk</th>
+      <td>432.512703</td>
+    </tr>
+    <tr>
+      <th>Vinmonopolets</th>
+      <td>424.149894</td>
+    </tr>
+    <tr>
+      <th>Hell</th>
+      <td>393.080611</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">korpus_agg</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>.</th>
+      <td>0.054504</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>0.041683</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>0.034596</td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>0.026718</td>
+    </tr>
+    <tr>
+      <th>med</th>
+      <td>0.014882</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>eggnudlene</th>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>storfelever</th>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>gagnlegare</th>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>cateringvirksomheter</th>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>kaldeste</th>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>124014 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll_assoc_korp</span> <span class="o">=</span> <span class="p">(</span><span class="n">coll_df</span><span class="o">.</span><span class="n">counts</span><span class="o">**</span><span class="mf">1.2</span><span class="o">/</span><span class="n">korpus_agg</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coll_assoc_korp</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ca.</th>
+      <td>0.031865</td>
+    </tr>
+    <tr>
+      <th>skal</th>
+      <td>0.041399</td>
+    </tr>
+    <tr>
+      <th>vi</th>
+      <td>0.052083</td>
+    </tr>
+    <tr>
+      <th>Legg</th>
+      <td>0.055557</td>
+    </tr>
+    <tr>
+      <th>*</th>
+      <td>0.058861</td>
+    </tr>
+    <tr>
+      <th>etter</th>
+      <td>0.061036</td>
+    </tr>
+    <tr>
+      <th>:</th>
+      <td>0.075639</td>
+    </tr>
+    <tr>
+      <th>°</th>
+      <td>0.078831</td>
+    </tr>
+    <tr>
+      <th>om</th>
+      <td>0.080771</td>
+    </tr>
+    <tr>
+      <th>vil</th>
+      <td>0.085918</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>0.085956</td>
+    </tr>
+    <tr>
+      <th>ut</th>
+      <td>0.086047</td>
+    </tr>
+    <tr>
+      <th>mer</th>
+      <td>0.086682</td>
+    </tr>
+    <tr>
+      <th>andre</th>
+      <td>0.08959</td>
+    </tr>
+    <tr>
+      <th>men</th>
+      <td>0.093036</td>
+    </tr>
+    <tr>
+      <th>side</th>
+      <td>0.093321</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>0.094773</td>
+    </tr>
+    <tr>
+      <th>!</th>
+      <td>0.096845</td>
+    </tr>
+    <tr>
+      <th>ikke</th>
+      <td>0.097388</td>
+    </tr>
+    <tr>
+      <th>små</th>
+      <td>0.098409</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Her viser vi de 50 viktigste ordene som er assosiert med rødvin i korpuset vårt, målt mot alle bøker i nb.no </span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">cloud</span><span class="p">(</span><span class="n">coll_assoc</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">/</span><span class="n">coll_assoc</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../../_images/7009c9754ad4b9a20945270c6d5a3635b09b9d415ba48344355104ebe62c2c39.png" src="../../../../../_images/7009c9754ad4b9a20945270c6d5a3635b09b9d415ba48344355104ebe62c2c39.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Her viser vi de 50 viktigste ordene som er assosiert med rødvin, målt mot hele &quot;Drikkevare&quot;-korpuset</span>
+
+<span class="n">nb</span><span class="o">.</span><span class="n">cloud</span><span class="p">(</span><span class="n">coll_assoc_korp</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">/</span><span class="n">coll_assoc_korp</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../../_images/c9dc3ffd5609c42c7165c365bacc636db2564aae7a54d820e3f495c6177217fe.png" src="../../../../../_images/c9dc3ffd5609c42c7165c365bacc636db2564aae7a54d820e3f495c6177217fe.png" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./_build_fresh/_build/.jupyter_cache/executed/639b03069dac11d55d28a5f6568c626d"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Nasjonalbiblioteket
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

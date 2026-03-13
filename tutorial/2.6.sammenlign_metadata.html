@@ -16,41 +16,44 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -64,6 +67,7 @@
     <link rel="prev" title="1.8. N-gram og galakser" href="2.5.n-gram_og_galakser.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -79,19 +83,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -99,7 +92,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -107,8 +99,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -124,7 +116,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -142,7 +135,7 @@
     
   
 
-<a class="navbar-brand logo" href="../README.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
@@ -154,28 +147,24 @@
     
     
     <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="DH-lab dokumenter - Home"/>
-    <script>document.write(`<img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark" alt="DH-lab dokumenter - Home"/>`);</script>
+    <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark pst-js-only" alt="DH-lab dokumenter - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../README.html">
-                    DHLAB
+                <a class="reference internal" href="../index.html">
+                    DH-lab – digital tekstanalyse
                 </a>
             </li>
         </ul>
@@ -211,9 +200,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -392,7 +386,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -406,25 +400,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -476,19 +462,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dhlab.api.dhlab_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_document_frequencies</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">Corpus</span><span class="p">,</span> <span class="n">Counts</span><span class="p">,</span> <span class="n">totals</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">dhlab.nbtext</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span><span class="w"> </span><span class="nn">dhlab.api.dhlab_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_document_frequencies</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">Corpus</span><span class="p">,</span> <span class="n">Counts</span><span class="p">,</span> <span class="n">totals</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">dhlab.nbtext</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;dhlab.nbtext&#39;
+<span class="kn">from</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">nbtext</span> <span class="k">as</span> <span class="n">nb</span>
 </pre></div>
 </div>
 </div>
@@ -549,183 +523,183 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>Krabbekrigen og gjenerobringen av Jämtland 165...</td>
-      <td>Johnsen , Arne Odd</td>
-      <td>1967</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Kvinne blant krigsherrer : Afghanistans modigs...</td>
-      <td>Joya , Malalai / O ' Keefe , Derrick / Jensen ...</td>
-      <td>2009</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Kongsvingeravtalen 1809 : spiren til norsk sel...</td>
-      <td>Alnæs , Karsten / Hagerud , Trond</td>
-      <td>2009</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Nordens løve : Karl 12. i Norge : felttogene i...</td>
-      <td>Bjerke , Alf E. / Hauge , Andreas</td>
-      <td>1992</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Biafra : som jeg ser det</td>
-      <td>Rosen , Carl Gustaf von / Norstrøm , Øyvind</td>
-      <td>1969</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Militær motstand i nord 1940-45 : jakten på Ti...</td>
-      <td>Pedersen , Gunnar</td>
-      <td>1982</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Tortur , flukt og gisler til tross : hemmelige...</td>
-      <td>Nygaard , Herluf</td>
-      <td>1982</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Kavaleristen</td>
-      <td>Aarset , Ane-Charlotte Five / Revhaug , Bernt ...</td>
-      <td>2007</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Brystkaramellene : fra XU til Grini</td>
-      <td>Fodstad , Bjørg</td>
-      <td>2001</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Fellesskap i krig og fred : erindringer 1940-45</td>
-      <td>Gerhardsen , Einar</td>
-      <td>1982</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Frederikshalds krigshistorie : 1658 , 1659 , 1...</td>
-      <td>Krag , Hans Peter Schnitler</td>
-      <td>2003</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>Minner fra Solferino</td>
-      <td>Dunant , Henri / Thorvaldsen , Siren</td>
-      <td>1999</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>Sola 1930-2000 . B. 1 : Hverdagsliv , krigen 1...</td>
-      <td>Skjørestad , Per</td>
-      <td>2002</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>Så kom krigen til Brandbu : et 50 års minne</td>
-      <td>Stenersen , Helge</td>
-      <td>1990</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>Fra hesterygg til stridsvogn</td>
-      <td>Frøystad , Ivar</td>
-      <td>1979</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>Kristiansand i krig 9. april 1940</td>
-      <td>Mæsel , Knut</td>
-      <td>1995</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>Mer enn 1000 dager : blant fanger og voktere i...</td>
-      <td>Viken , Kaare</td>
-      <td>1984</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>Tyske soldater på flukt</td>
-      <td>Heide , Eivind</td>
-      <td>1988</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>Norge i krig</td>
-      <td>Auberg , Arne</td>
-      <td>1965</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>Kodenavn Curveball : om spioner , løgner og kr...</td>
-      <td>Drogin , Bob / Fosser , Per Einar / Aspen , Nina</td>
+      <td>Det hendte under krigen : en familiefortelling-</td>
+      <td>Wiksaas , Arnfinn</td>
       <td>2008</td>
     </tr>
     <tr>
-      <th>20</th>
-      <td>[ Sør-Varangers historie ] . [ 4 ] : Sør-Varan...</td>
-      <td></td>
-      <td>1999</td>
+      <th>1</th>
+      <td>Ulvetiden : krig og samarbeid</td>
+      <td>Fjørtoft , Kjell</td>
+      <td>1990</td>
     </tr>
     <tr>
-      <th>21</th>
+      <th>2</th>
+      <td>En bondegård opplever krigen</td>
+      <td>Steine , Martha</td>
+      <td>1980</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Ensom krig mot Gestapo</td>
+      <td>Skogen , Olav</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Kast ikke kortene : i sanitetet- og utenfor , ...</td>
+      <td>Kreyberg , Leiv</td>
+      <td>1978</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Inger Gulbrandsen : ungdomstid i fangeleir</td>
+      <td>Lund , Maria Konow / Myhr , Eirik</td>
+      <td>1998</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Spenningenes land : Nord-Norge etter 1945</td>
+      <td>Lorås , Jostein / Lorås , Jostein</td>
+      <td>1997</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Kryssild : mitt liv som flyktning : Burundi - ...</td>
+      <td>Ngendakurio , John Bosco / Holmedahl , Jostein</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>D-dagen : den allierte invasjonen i Normandie ...</td>
+      <td>Tamelander , Michael / Zetterling , Niklas / R...</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Moskva 1941 : en by i krig</td>
+      <td>Braithwaite , Rodric / Carlsen , Carsten</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Sjømenn i krig : krigsseilere forteller</td>
+      <td>Wilhelmsen , Aage A. ( Aage Adolf )</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Ti i krig</td>
+      <td>Taraldsen , Kristen</td>
+      <td>1998</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Kampen om Norge : tyskernes bilder fra det nor...</td>
+      <td>Olsen , Per Erik</td>
+      <td>2008</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Stråler fra asken</td>
+      <td>Jungk , Robert / Hagerup , Anders</td>
+      <td>1960</td>
+    </tr>
+    <tr>
+      <th>14</th>
       <td>Etterkrigshistorie : emner fra norsk historie ...</td>
       <td></td>
       <td>1973</td>
     </tr>
     <tr>
-      <th>22</th>
-      <td>Kald krig og varme vennskap : erindringer fra ...</td>
-      <td>Johansen , Jahn Otto</td>
-      <td>2000</td>
+      <th>15</th>
+      <td>1940 : fra nøytral til okkupert</td>
+      <td>Paulsen , Helge</td>
+      <td>1969</td>
     </tr>
     <tr>
-      <th>23</th>
-      <td>Norge i krig 1940-1945 : frigjøringsjubileet 1...</td>
-      <td></td>
-      <td>1995</td>
+      <th>16</th>
+      <td>Vardan og armenernes krig</td>
+      <td>Eghishē / Lindeman , Fredrik Otto</td>
+      <td>1992</td>
     </tr>
     <tr>
-      <th>24</th>
-      <td>Tordenskiold : Peter Wessel og hans tid</td>
-      <td>Eilstrup , Per / Hegland , Jon Rustung</td>
-      <td>1968</td>
+      <th>17</th>
+      <td>En bedre dag i morgen : en barnesoldat forteller</td>
+      <td>Beah , Ishmael / Hidle , Mie</td>
+      <td>2007</td>
     </tr>
     <tr>
-      <th>25</th>
+      <th>18</th>
+      <td>Handelsflåten i krig 1939-1945</td>
+      <td>Nilsen , Tore L. / Thowsen , Atle</td>
+      <td>1990</td>
+    </tr>
+    <tr>
+      <th>19</th>
       <td>Balkan-ekspressen : fragmenter fra den andre s...</td>
       <td>Drakulić , Slavenka / Henriksen , Ginni Schuls...</td>
       <td>1994</td>
     </tr>
     <tr>
+      <th>20</th>
+      <td>Partisanen</td>
+      <td>Hirsti , Reidar</td>
+      <td>1990</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Krigen mot siouxene : nordmenn mot indianere 1...</td>
+      <td>Skarstein , Karl Jakob</td>
+      <td>2005</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>En historiebok om Levanger : fortellinger , in...</td>
+      <td>Eklo , Asbjørn D. K.</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>De historiske hendelsene i Moss i 1814 : krig ...</td>
+      <td>Edfeldt , Per</td>
+      <td>2004</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Berlevåg i krig og fred : fra okkupasjon og ru...</td>
+      <td>Bergheim , Geir</td>
+      <td>1994</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Barn av Hiroshima</td>
+      <td>Vesaas , Halldis Moren / Osada , Arata / Roalk...</td>
+      <td>1982</td>
+    </tr>
+    <tr>
       <th>26</th>
-      <td>" Men seier ' n var vår " : søkelys på omveltn...</td>
-      <td>Gogstad , Anders Chr .</td>
-      <td>2003</td>
+      <td>Sjøfolk i krig : haugalendinger ser tilbake - ...</td>
+      <td>Bjørkelund , Leif M.</td>
+      <td>1995</td>
     </tr>
     <tr>
       <th>27</th>
-      <td>Hvem kan glemme dette ? : barn i Terezín 1941-...</td>
-      <td>Gaarder , Inger Margrethe / Zdekauerova , Dori...</td>
-      <td>1984</td>
+      <td>Krigen og Fyllingsdalen 1940-1945</td>
+      <td>Kvinge , Kåre / Hemmingsen , Jan</td>
+      <td>2001</td>
     </tr>
     <tr>
       <th>28</th>
-      <td>Den tredje front</td>
-      <td>Liversidge , Douglas / Schøning , Einar Th .</td>
-      <td>1961</td>
+      <td>Krigen i Norge 1940</td>
+      <td>Christophersen , Bjørn</td>
+      <td>1965</td>
     </tr>
     <tr>
       <th>29</th>
-      <td>Minner fra krigen : Våpenstaben / D 13 og 100 ...</td>
-      <td>Graff , Kjell</td>
-      <td>1991</td>
+      <td>830 S : med illegal avlytting og sikringstjene...</td>
+      <td>Kristoffersen , Terje</td>
+      <td>2006</td>
     </tr>
   </tbody>
 </table>
@@ -771,53 +745,53 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>100035999</th>
-      <th>100039493</th>
-      <th>100134522</th>
-      <th>100191584</th>
-      <th>100271808</th>
+      <th>100525957</th>
+      <th>100464888</th>
+      <th>100141056</th>
+      <th>100159643</th>
+      <th>100287961</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>,</th>
-      <td>1501</td>
-      <td>6235</td>
-      <td>4095</td>
-      <td>1804</td>
-      <td>1173</td>
+      <th>.</th>
+      <td>3721</td>
+      <td>10545</td>
+      <td>1874</td>
+      <td>2601</td>
+      <td>958</td>
     </tr>
     <tr>
-      <th>.</th>
-      <td>1438</td>
-      <td>10111</td>
-      <td>4695</td>
-      <td>3299</td>
-      <td>1324</td>
+      <th>,</th>
+      <td>3110</td>
+      <td>3434</td>
+      <td>2475</td>
+      <td>2165</td>
+      <td>1021</td>
     </tr>
     <tr>
       <th>og</th>
-      <td>1002</td>
-      <td>3547</td>
-      <td>2933</td>
-      <td>1641</td>
-      <td>978</td>
+      <td>2176</td>
+      <td>3284</td>
+      <td>1795</td>
+      <td>1784</td>
+      <td>655</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>943</td>
-      <td>4049</td>
-      <td>2590</td>
-      <td>1801</td>
-      <td>868</td>
+      <td>1658</td>
+      <td>3653</td>
+      <td>1017</td>
+      <td>1286</td>
+      <td>334</td>
     </tr>
     <tr>
-      <th>som</th>
-      <td>799</td>
-      <td>1318</td>
-      <td>1643</td>
-      <td>919</td>
-      <td>408</td>
+      <th>var</th>
+      <td>1199</td>
+      <td>551</td>
+      <td>1063</td>
+      <td>1184</td>
+      <td>476</td>
     </tr>
     <tr>
       <th>...</th>
@@ -828,7 +802,7 @@ document.write(`
       <td>...</td>
     </tr>
     <tr>
-      <th>flodbølge</th>
+      <th>overlevering</th>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -836,23 +810,23 @@ document.write(`
       <td>0</td>
     </tr>
     <tr>
-      <th>slottene</th>
+      <th>troppssjef</th>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>rennestenene</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
+      <td>4</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>hollåndsk-engelska</th>
+      <th>tolvårsrikets</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>stårkt</th>
       <td>0</td>
       <td>1</td>
       <td>0</td>
@@ -860,16 +834,16 @@ document.write(`
       <td>0</td>
     </tr>
     <tr>
-      <th>luksusbil</th>
+      <th>Holand</th>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>2</td>
       <td>0</td>
       <td>0</td>
     </tr>
   </tbody>
 </table>
-<p>35275 rows × 5 columns</p>
+<p>33629 rows × 5 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -884,242 +858,250 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_7c10b_row0_col0, #T_7c10b_row1_col1, #T_7c10b_row1_col2, #T_7c10b_row1_col3, #T_7c10b_row1_col4 {
+#T_e629b_row0_col0, #T_e629b_row0_col1, #T_e629b_row0_col3, #T_e629b_row1_col2, #T_e629b_row1_col4 {
   background-color: #045599;
   color: #f1f1f1;
 }
-#T_7c10b_row0_col1 {
+#T_e629b_row0_col2 {
+  background-color: #4d85b5;
+  color: #f1f1f1;
+}
+#T_e629b_row0_col4 {
+  background-color: #15609f;
+  color: #f1f1f1;
+}
+#T_e629b_row1_col0 {
+  background-color: #3777ac;
+  color: #f1f1f1;
+}
+#T_e629b_row1_col1 {
+  background-color: #acc4d9;
+  color: #000000;
+}
+#T_e629b_row1_col3 {
+  background-color: #3b79ae;
+  color: #f1f1f1;
+}
+#T_e629b_row2_col0 {
+  background-color: #86abcb;
+  color: #f1f1f1;
+}
+#T_e629b_row2_col1 {
+  background-color: #afc6da;
+  color: #000000;
+}
+#T_e629b_row2_col2 {
+  background-color: #568bb8;
+  color: #f1f1f1;
+}
+#T_e629b_row2_col3 {
   background-color: #6c99c0;
   color: #f1f1f1;
 }
-#T_7c10b_row0_col2 {
-  background-color: #286da7;
+#T_e629b_row2_col4 {
+  background-color: #6897bf;
   color: #f1f1f1;
 }
-#T_7c10b_row0_col3, #T_7c10b_row3_col3 {
-  background-color: #91b2ce;
-  color: #000000;
-}
-#T_7c10b_row0_col4 {
-  background-color: #276ca6;
-  color: #f1f1f1;
-}
-#T_7c10b_row1_col0 {
-  background-color: #135f9f;
-  color: #f1f1f1;
-}
-#T_7c10b_row2_col0 {
-  background-color: #7aa3c6;
-  color: #f1f1f1;
-}
-#T_7c10b_row2_col1 {
+#T_e629b_row3_col0 {
   background-color: #b3c8dc;
   color: #000000;
 }
-#T_7c10b_row2_col2 {
-  background-color: #6d9bc1;
-  color: #f1f1f1;
-}
-#T_7c10b_row2_col3 {
-  background-color: #9fbcd4;
+#T_e629b_row3_col1 {
+  background-color: #a7c0d7;
   color: #000000;
 }
-#T_7c10b_row2_col4 {
-  background-color: #548ab8;
-  color: #f1f1f1;
-}
-#T_7c10b_row3_col0 {
-  background-color: #88accb;
-  color: #f1f1f1;
-}
-#T_7c10b_row3_col1 {
-  background-color: #a6c0d7;
-  color: #000000;
-}
-#T_7c10b_row3_col2 {
-  background-color: #83a9c9;
-  color: #f1f1f1;
-}
-#T_7c10b_row3_col4 {
-  background-color: #6e9bc1;
-  color: #f1f1f1;
-}
-#T_7c10b_row4_col0 {
-  background-color: #abc3d9;
-  color: #000000;
-}
-#T_7c10b_row4_col1, #T_7c10b_row5_col3 {
-  background-color: #eff0f2;
-  color: #000000;
-}
-#T_7c10b_row4_col2 {
-  background-color: #bccedf;
-  color: #000000;
-}
-#T_7c10b_row4_col3 {
-  background-color: #e4e9ee;
-  color: #000000;
-}
-#T_7c10b_row4_col4 {
-  background-color: #dae2ea;
-  color: #000000;
-}
-#T_7c10b_row5_col0 {
-  background-color: #d4dee8;
-  color: #000000;
-}
-#T_7c10b_row5_col1 {
-  background-color: #e8ecf0;
-  color: #000000;
-}
-#T_7c10b_row5_col2 {
-  background-color: #9bb8d2;
-  color: #000000;
-}
-#T_7c10b_row5_col4, #T_7c10b_row8_col1, #T_7c10b_row8_col3, #T_7c10b_row9_col0, #T_7c10b_row9_col1, #T_7c10b_row9_col2 {
-  background-color: #f0f1f3;
-  color: #000000;
-}
-#T_7c10b_row6_col0, #T_7c10b_row6_col1 {
-  background-color: #dce4eb;
-  color: #000000;
-}
-#T_7c10b_row6_col2 {
+#T_e629b_row3_col2 {
   background-color: #b6cadd;
   color: #000000;
 }
-#T_7c10b_row6_col3, #T_7c10b_row7_col0 {
-  background-color: #dde4ec;
+#T_e629b_row3_col3 {
+  background-color: #aac3d8;
   color: #000000;
 }
-#T_7c10b_row6_col4, #T_7c10b_row8_col4 {
-  background-color: #d8e1ea;
+#T_e629b_row3_col4 {
+  background-color: #bfd0e0;
   color: #000000;
 }
-#T_7c10b_row7_col1 {
-  background-color: #c6d5e3;
+#T_e629b_row4_col0 {
+  background-color: #dae2ea;
   color: #000000;
 }
-#T_7c10b_row7_col2 {
-  background-color: #b9cdde;
+#T_e629b_row4_col1, #T_e629b_row6_col2, #T_e629b_row6_col3, #T_e629b_row6_col4, #T_e629b_row8_col3, #T_e629b_row9_col0 {
+  background-color: #f0f1f3;
   color: #000000;
 }
-#T_7c10b_row7_col3 {
-  background-color: #d9e1ea;
+#T_e629b_row4_col2 {
+  background-color: #b0c7da;
   color: #000000;
 }
-#T_7c10b_row7_col4 {
-  background-color: #cbd8e5;
+#T_e629b_row4_col3 {
+  background-color: #b7cbdd;
   color: #000000;
 }
-#T_7c10b_row8_col0 {
-  background-color: #ebeef1;
+#T_e629b_row4_col4 {
+  background-color: #98b7d1;
   color: #000000;
 }
-#T_7c10b_row8_col2 {
+#T_e629b_row5_col0 {
+  background-color: #dce4eb;
+  color: #000000;
+}
+#T_e629b_row5_col1 {
+  background-color: #bccedf;
+  color: #000000;
+}
+#T_e629b_row5_col2, #T_e629b_row5_col4, #T_e629b_row6_col0, #T_e629b_row8_col4 {
+  background-color: #dfe6ec;
+  color: #000000;
+}
+#T_e629b_row5_col3 {
+  background-color: #dbe3eb;
+  color: #000000;
+}
+#T_e629b_row6_col1 {
   background-color: #cfdbe6;
   color: #000000;
 }
-#T_7c10b_row9_col3 {
-  background-color: #e1e7ed;
+#T_e629b_row7_col0 {
+  background-color: #e8ecf0;
   color: #000000;
 }
-#T_7c10b_row9_col4 {
-  background-color: #e7ebef;
+#T_e629b_row7_col1 {
+  background-color: #bdcfdf;
   color: #000000;
+}
+#T_e629b_row7_col2 {
+  background-color: #d6e0e9;
+  color: #000000;
+}
+#T_e629b_row7_col3 {
+  background-color: #dae3eb;
+  color: #000000;
+}
+#T_e629b_row7_col4 {
+  background-color: #cdd9e5;
+  color: #000000;
+}
+#T_e629b_row8_col0 {
+  background-color: #eaedf1;
+  color: #000000;
+}
+#T_e629b_row8_col1 {
+  background-color: #d8e1ea;
+  color: #000000;
+}
+#T_e629b_row8_col2 {
+  background-color: #c5d5e3;
+  color: #000000;
+}
+#T_e629b_row9_col1 {
+  background-color: #bbcedf;
+  color: #000000;
+}
+#T_e629b_row9_col2 {
+  background-color: #b6cbdd;
+  color: #000000;
+}
+#T_e629b_row9_col3 {
+  background-color: #cedbe6;
+  color: #000000;
+}
+#T_e629b_row9_col4 {
+  background-color: #8cafcd;
+  color: #f1f1f1;
 }
 </style>
-<table id="T_7c10b">
+<table id="T_e629b">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_7c10b_level0_col0" class="col_heading level0 col0" >100035999</th>
-      <th id="T_7c10b_level0_col1" class="col_heading level0 col1" >100039493</th>
-      <th id="T_7c10b_level0_col2" class="col_heading level0 col2" >100134522</th>
-      <th id="T_7c10b_level0_col3" class="col_heading level0 col3" >100191584</th>
-      <th id="T_7c10b_level0_col4" class="col_heading level0 col4" >100271808</th>
+      <th id="T_e629b_level0_col0" class="col_heading level0 col0" >100525957</th>
+      <th id="T_e629b_level0_col1" class="col_heading level0 col1" >100464888</th>
+      <th id="T_e629b_level0_col2" class="col_heading level0 col2" >100141056</th>
+      <th id="T_e629b_level0_col3" class="col_heading level0 col3" >100159643</th>
+      <th id="T_e629b_level0_col4" class="col_heading level0 col4" >100287961</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_7c10b_level0_row0" class="row_heading level0 row0" >,</th>
-      <td id="T_7c10b_row0_col0" class="data row0 col0" >1501</td>
-      <td id="T_7c10b_row0_col1" class="data row0 col1" >6235</td>
-      <td id="T_7c10b_row0_col2" class="data row0 col2" >4095</td>
-      <td id="T_7c10b_row0_col3" class="data row0 col3" >1804</td>
-      <td id="T_7c10b_row0_col4" class="data row0 col4" >1173</td>
+      <th id="T_e629b_level0_row0" class="row_heading level0 row0" >.</th>
+      <td id="T_e629b_row0_col0" class="data row0 col0" >3721</td>
+      <td id="T_e629b_row0_col1" class="data row0 col1" >10545</td>
+      <td id="T_e629b_row0_col2" class="data row0 col2" >1874</td>
+      <td id="T_e629b_row0_col3" class="data row0 col3" >2601</td>
+      <td id="T_e629b_row0_col4" class="data row0 col4" >958</td>
     </tr>
     <tr>
-      <th id="T_7c10b_level0_row1" class="row_heading level0 row1" >.</th>
-      <td id="T_7c10b_row1_col0" class="data row1 col0" >1438</td>
-      <td id="T_7c10b_row1_col1" class="data row1 col1" >10111</td>
-      <td id="T_7c10b_row1_col2" class="data row1 col2" >4695</td>
-      <td id="T_7c10b_row1_col3" class="data row1 col3" >3299</td>
-      <td id="T_7c10b_row1_col4" class="data row1 col4" >1324</td>
+      <th id="T_e629b_level0_row1" class="row_heading level0 row1" >,</th>
+      <td id="T_e629b_row1_col0" class="data row1 col0" >3110</td>
+      <td id="T_e629b_row1_col1" class="data row1 col1" >3434</td>
+      <td id="T_e629b_row1_col2" class="data row1 col2" >2475</td>
+      <td id="T_e629b_row1_col3" class="data row1 col3" >2165</td>
+      <td id="T_e629b_row1_col4" class="data row1 col4" >1021</td>
     </tr>
     <tr>
-      <th id="T_7c10b_level0_row2" class="row_heading level0 row2" >og</th>
-      <td id="T_7c10b_row2_col0" class="data row2 col0" >1002</td>
-      <td id="T_7c10b_row2_col1" class="data row2 col1" >3547</td>
-      <td id="T_7c10b_row2_col2" class="data row2 col2" >2933</td>
-      <td id="T_7c10b_row2_col3" class="data row2 col3" >1641</td>
-      <td id="T_7c10b_row2_col4" class="data row2 col4" >978</td>
+      <th id="T_e629b_level0_row2" class="row_heading level0 row2" >og</th>
+      <td id="T_e629b_row2_col0" class="data row2 col0" >2176</td>
+      <td id="T_e629b_row2_col1" class="data row2 col1" >3284</td>
+      <td id="T_e629b_row2_col2" class="data row2 col2" >1795</td>
+      <td id="T_e629b_row2_col3" class="data row2 col3" >1784</td>
+      <td id="T_e629b_row2_col4" class="data row2 col4" >655</td>
     </tr>
     <tr>
-      <th id="T_7c10b_level0_row3" class="row_heading level0 row3" >i</th>
-      <td id="T_7c10b_row3_col0" class="data row3 col0" >943</td>
-      <td id="T_7c10b_row3_col1" class="data row3 col1" >4049</td>
-      <td id="T_7c10b_row3_col2" class="data row3 col2" >2590</td>
-      <td id="T_7c10b_row3_col3" class="data row3 col3" >1801</td>
-      <td id="T_7c10b_row3_col4" class="data row3 col4" >868</td>
+      <th id="T_e629b_level0_row3" class="row_heading level0 row3" >i</th>
+      <td id="T_e629b_row3_col0" class="data row3 col0" >1658</td>
+      <td id="T_e629b_row3_col1" class="data row3 col1" >3653</td>
+      <td id="T_e629b_row3_col2" class="data row3 col2" >1017</td>
+      <td id="T_e629b_row3_col3" class="data row3 col3" >1286</td>
+      <td id="T_e629b_row3_col4" class="data row3 col4" >334</td>
     </tr>
     <tr>
-      <th id="T_7c10b_level0_row4" class="row_heading level0 row4" >som</th>
-      <td id="T_7c10b_row4_col0" class="data row4 col0" >799</td>
-      <td id="T_7c10b_row4_col1" class="data row4 col1" >1318</td>
-      <td id="T_7c10b_row4_col2" class="data row4 col2" >1643</td>
-      <td id="T_7c10b_row4_col3" class="data row4 col3" >919</td>
-      <td id="T_7c10b_row4_col4" class="data row4 col4" >408</td>
+      <th id="T_e629b_level0_row4" class="row_heading level0 row4" >var</th>
+      <td id="T_e629b_row4_col0" class="data row4 col0" >1199</td>
+      <td id="T_e629b_row4_col1" class="data row4 col1" >551</td>
+      <td id="T_e629b_row4_col2" class="data row4 col2" >1063</td>
+      <td id="T_e629b_row4_col3" class="data row4 col3" >1184</td>
+      <td id="T_e629b_row4_col4" class="data row4 col4" >476</td>
     </tr>
     <tr>
-      <th id="T_7c10b_level0_row5" class="row_heading level0 row5" >å</th>
-      <td id="T_7c10b_row5_col0" class="data row5 col0" >629</td>
-      <td id="T_7c10b_row5_col1" class="data row5 col1" >1541</td>
-      <td id="T_7c10b_row5_col2" class="data row5 col2" >2186</td>
-      <td id="T_7c10b_row5_col3" class="data row5 col3" >803</td>
-      <td id="T_7c10b_row5_col4" class="data row5 col4" >313</td>
+      <th id="T_e629b_level0_row5" class="row_heading level0 row5" >til</th>
+      <td id="T_e629b_row5_col0" class="data row5 col0" >1161</td>
+      <td id="T_e629b_row5_col1" class="data row5 col1" >2740</td>
+      <td id="T_e629b_row5_col2" class="data row5 col2" >678</td>
+      <td id="T_e629b_row5_col3" class="data row5 col3" >901</td>
+      <td id="T_e629b_row5_col4" class="data row5 col4" >216</td>
     </tr>
     <tr>
-      <th id="T_7c10b_level0_row6" class="row_heading level0 row6" >av</th>
-      <td id="T_7c10b_row6_col0" class="data row6 col0" >593</td>
-      <td id="T_7c10b_row6_col1" class="data row6 col1" >2004</td>
-      <td id="T_7c10b_row6_col2" class="data row6 col2" >1748</td>
-      <td id="T_7c10b_row6_col3" class="data row6 col3" >990</td>
-      <td id="T_7c10b_row6_col4" class="data row6 col4" >419</td>
+      <th id="T_e629b_level0_row6" class="row_heading level0 row6" >av</th>
+      <td id="T_e629b_row6_col0" class="data row6 col0" >1134</td>
+      <td id="T_e629b_row6_col1" class="data row6 col1" >1944</td>
+      <td id="T_e629b_row6_col2" class="data row6 col2" >538</td>
+      <td id="T_e629b_row6_col3" class="data row6 col3" >737</td>
+      <td id="T_e629b_row6_col4" class="data row6 col4" >154</td>
     </tr>
     <tr>
-      <th id="T_7c10b_level0_row7" class="row_heading level0 row7" >til</th>
-      <td id="T_7c10b_row7_col0" class="data row7 col0" >588</td>
-      <td id="T_7c10b_row7_col1" class="data row7 col1" >2826</td>
-      <td id="T_7c10b_row7_col2" class="data row7 col2" >1689</td>
-      <td id="T_7c10b_row7_col3" class="data row7 col3" >1040</td>
-      <td id="T_7c10b_row7_col4" class="data row7 col4" >472</td>
+      <th id="T_e629b_level0_row7" class="row_heading level0 row7" >som</th>
+      <td id="T_e629b_row7_col0" class="data row7 col0" >1019</td>
+      <td id="T_e629b_row7_col1" class="data row7 col1" >2710</td>
+      <td id="T_e629b_row7_col2" class="data row7 col2" >752</td>
+      <td id="T_e629b_row7_col3" class="data row7 col3" >906</td>
+      <td id="T_e629b_row7_col4" class="data row7 col4" >286</td>
     </tr>
     <tr>
-      <th id="T_7c10b_level0_row8" class="row_heading level0 row8" >en</th>
-      <td id="T_7c10b_row8_col0" class="data row8 col0" >530</td>
-      <td id="T_7c10b_row8_col1" class="data row8 col1" >1253</td>
-      <td id="T_7c10b_row8_col2" class="data row8 col2" >1316</td>
-      <td id="T_7c10b_row8_col3" class="data row8 col3" >786</td>
-      <td id="T_7c10b_row8_col4" class="data row8 col4" >418</td>
+      <th id="T_e629b_level0_row8" class="row_heading level0 row8" >en</th>
+      <td id="T_e629b_row8_col0" class="data row8 col0" >996</td>
+      <td id="T_e629b_row8_col1" class="data row8 col1" >1599</td>
+      <td id="T_e629b_row8_col2" class="data row8 col2" >889</td>
+      <td id="T_e629b_row8_col3" class="data row8 col3" >737</td>
+      <td id="T_e629b_row8_col4" class="data row8 col4" >217</td>
     </tr>
     <tr>
-      <th id="T_7c10b_level0_row9" class="row_heading level0 row9" >den</th>
-      <td id="T_7c10b_row9_col0" class="data row9 col0" >509</td>
-      <td id="T_7c10b_row9_col1" class="data row9 col1" >1280</td>
-      <td id="T_7c10b_row9_col2" class="data row9 col2" >772</td>
-      <td id="T_7c10b_row9_col3" class="data row9 col3" >948</td>
-      <td id="T_7c10b_row9_col4" class="data row9 col4" >355</td>
+      <th id="T_e629b_level0_row9" class="row_heading level0 row9" >det</th>
+      <td id="T_e629b_row9_col0" class="data row9 col0" >927</td>
+      <td id="T_e629b_row9_col1" class="data row9 col1" >2813</td>
+      <td id="T_e629b_row9_col2" class="data row9 col2" >1010</td>
+      <td id="T_e629b_row9_col3" class="data row9 col3" >1002</td>
+      <td id="T_e629b_row9_col4" class="data row9 col4" >520</td>
     </tr>
   </tbody>
 </table>
@@ -1185,51 +1167,51 @@ document.write(`
   <tbody>
     <tr>
       <th>.</th>
-      <td>113658</td>
+      <td>115180</td>
     </tr>
     <tr>
       <th>,</th>
-      <td>81227</td>
+      <td>83655</td>
     </tr>
     <tr>
-      <th>og</th>
-      <td>57715</td>
+      <th>^</th>
+      <td>1759</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>52350</td>
+      <td>50124</td>
     </tr>
     <tr>
-      <th>var</th>
-      <td>32667</td>
+      <th>en</th>
+      <td>24321</td>
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
     </tr>
     <tr>
-      <th>newsarticle.aspx</th>
+      <th>nazi-stat</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>30.9.44</th>
+      <th>stormester</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>etser</th>
+      <th>Lyngard</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>koordineringen</th>
       <td>2</td>
     </tr>
     <tr>
-      <th>Sipos</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>ambulante</th>
+      <th>Arbeidsløsheten</th>
       <td>1</td>
     </tr>
   </tbody>
 </table>
-<p>133530 rows × 1 columns</p>
+<p>123083 rows × 1 columns</p>
 </div></div></div>
 </div>
 <p>For å lette arbeidet med å tolke forskjeller normaliserer vi frekvensene til tall mellom 0 og 1.</p>
@@ -1290,204 +1272,204 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>1657</th>
-      <td>531.189402</td>
+      <th>Nortraship</th>
+      <td>374.177225</td>
     </tr>
     <tr>
-      <th>Tordenskiold</th>
-      <td>272.705875</td>
+      <th>Administrasjonsrådet</th>
+      <td>361.652298</td>
     </tr>
     <tr>
-      <th>1658</th>
-      <td>226.553103</td>
+      <th>stridsvognene</th>
+      <td>212.685583</td>
     </tr>
     <tr>
-      <th>Krabbe</th>
-      <td>217.375454</td>
+      <th>fremrykningen</th>
+      <td>192.429317</td>
     </tr>
     <tr>
-      <th>riksrådet</th>
-      <td>213.979122</td>
+      <th>Sjømenn</th>
+      <td>181.864313</td>
     </tr>
     <tr>
-      <th>Bohuslån</th>
-      <td>210.198293</td>
+      <th>Ruge</th>
+      <td>151.520184</td>
     </tr>
     <tr>
-      <th>kompanier</th>
-      <td>198.486381</td>
+      <th>jeF</th>
+      <td>140.540655</td>
     </tr>
     <tr>
-      <th>Fæstningen</th>
-      <td>186.544702</td>
+      <th>Terboven</th>
+      <td>135.436769</td>
     </tr>
     <tr>
-      <th>Tirpitz</th>
-      <td>177.537529</td>
+      <th>Starheim</th>
+      <td>128.311689</td>
     </tr>
     <tr>
-      <th>CIAs</th>
-      <td>175.219649</td>
+      <th>tdw</th>
+      <td>123.630821</td>
     </tr>
     <tr>
-      <th>Farah</th>
-      <td>173.697664</td>
+      <th>konvoien</th>
+      <td>121.383054</td>
     </tr>
     <tr>
-      <th>Saddams</th>
-      <td>169.374295</td>
+      <th>jagerne</th>
+      <td>117.36657</td>
     </tr>
     <tr>
-      <th>Vadim</th>
-      <td>164.000476</td>
+      <th>ENSOM</th>
+      <td>116.470445</td>
     </tr>
     <tr>
-      <th>Tordenskiolds</th>
-      <td>162.935491</td>
+      <th>Crow</th>
+      <td>115.579853</td>
     </tr>
     <tr>
-      <th>Jåmtland</th>
-      <td>159.034506</td>
+      <th>Presidentskapet</th>
+      <td>115.547847</td>
     </tr>
     <tr>
-      <th>Brahe</th>
-      <td>158.314895</td>
+      <th>Ropstad</th>
+      <td>105.735748</td>
     </tr>
     <tr>
-      <th>Odderøya</th>
-      <td>141.466729</td>
+      <th>HENDTE</th>
+      <td>105.718891</td>
     </tr>
     <tr>
-      <th>DRA</th>
-      <td>137.719762</td>
+      <th>stridsvogner</th>
+      <td>102.321627</td>
     </tr>
     <tr>
-      <th>kavaleri</th>
-      <td>135.580456</td>
+      <th>Kreyberg</th>
+      <td>101.918331</td>
     </tr>
     <tr>
-      <th>skansen</th>
-      <td>133.631634</td>
+      <th>Falkenhorst</th>
+      <td>101.524668</td>
     </tr>
     <tr>
-      <th>Bjelkes</th>
-      <td>128.494624</td>
+      <th>Paulson</th>
+      <td>96.547861</td>
     </tr>
     <tr>
-      <th>afghanere</th>
-      <td>125.808732</td>
+      <th>Moskvas</th>
+      <td>94.179596</td>
     </tr>
     <tr>
-      <th>masseødeleggelsesvåpen</th>
-      <td>124.502088</td>
+      <th>Burundi</th>
+      <td>93.361429</td>
     </tr>
     <tr>
-      <th>Hjemmefrontens</th>
-      <td>120.398465</td>
+      <th>Rommel</th>
+      <td>92.81173</td>
     </tr>
     <tr>
-      <th>feltmarskalk</th>
-      <td>116.194677</td>
+      <th>riksråd</th>
+      <td>92.649391</td>
     </tr>
     <tr>
-      <th>NRA</th>
-      <td>115.949008</td>
+      <th>sendemannen</th>
+      <td>92.361771</td>
     </tr>
     <tr>
-      <th>fellesprogrammet</th>
-      <td>115.182968</td>
+      <th>skutesiden</th>
+      <td>91.523627</td>
     </tr>
     <tr>
-      <th>Stake</th>
-      <td>113.766603</td>
+      <th>Wehrmacht</th>
+      <td>90.437751</td>
     </tr>
     <tr>
-      <th>Fosby</th>
-      <td>111.838386</td>
+      <th>Tjelmeland</th>
+      <td>89.286192</td>
     </tr>
     <tr>
-      <th>Altafjorden</th>
-      <td>109.539505</td>
+      <th>legasjonen</th>
+      <td>88.282819</td>
     </tr>
     <tr>
-      <th>Afghanistans</th>
-      <td>109.214731</td>
+      <th>kanadierne</th>
+      <td>86.660885</td>
     </tr>
     <tr>
-      <th>1716</th>
-      <td>108.30952</td>
-    </tr>
-    <tr>
-      <th>Northland</th>
-      <td>107.734601</td>
-    </tr>
-    <tr>
-      <th>Sipo</th>
-      <td>105.649754</td>
-    </tr>
-    <tr>
-      <th>Eda</th>
-      <td>103.957965</td>
-    </tr>
-    <tr>
-      <th>Iraq</th>
-      <td>94.681898</td>
-    </tr>
-    <tr>
-      <th>Kyllingmark</th>
-      <td>92.743272</td>
-    </tr>
-    <tr>
-      <th>CIA</th>
-      <td>92.691701</td>
-    </tr>
-    <tr>
-      <th>Moursund</th>
-      <td>92.177354</td>
-    </tr>
-    <tr>
-      <th>Mappe</th>
-      <td>91.143264</td>
-    </tr>
-    <tr>
-      <th>Milorg</th>
-      <td>90.737028</td>
-    </tr>
-    <tr>
-      <th>Trolle</th>
-      <td>89.014351</td>
-    </tr>
-    <tr>
-      <th>Bjelke</th>
-      <td>87.287726</td>
-    </tr>
-    <tr>
-      <th>1660.</th>
-      <td>87.118671</td>
-    </tr>
-    <tr>
-      <th>Langley</th>
-      <td>86.616419</td>
-    </tr>
-    <tr>
-      <th>hjemmestyrkene</th>
-      <td>86.51474</td>
-    </tr>
-    <tr>
-      <th>rettsoppgjøret</th>
-      <td>86.493476</td>
+      <th>Hysing</th>
+      <td>86.202029</td>
     </tr>
     <tr>
       <th>Luftwaffe</th>
-      <td>85.788077</td>
+      <td>85.847187</td>
     </tr>
     <tr>
-      <th>1656</th>
-      <td>84.570521</td>
+      <th>KRIGEN</th>
+      <td>85.03972</td>
     </tr>
     <tr>
-      <th>Hjemmefronten</th>
-      <td>84.452247</td>
+      <th>Omaha</th>
+      <td>84.699097</td>
+    </tr>
+    <tr>
+      <th>Nord-Noreg</th>
+      <td>84.234978</td>
+    </tr>
+    <tr>
+      <th>HOK</th>
+      <td>83.743131</td>
+    </tr>
+    <tr>
+      <th>alliertes</th>
+      <td>81.394871</td>
+    </tr>
+    <tr>
+      <th>konvoi</th>
+      <td>80.885071</td>
+    </tr>
+    <tr>
+      <th>Dachau</th>
+      <td>79.425375</td>
+    </tr>
+    <tr>
+      <th>partisanene</th>
+      <td>77.919277</td>
+    </tr>
+    <tr>
+      <th>übåter</th>
+      <td>77.775187</td>
+    </tr>
+    <tr>
+      <th>indianerne</th>
+      <td>74.933973</td>
+    </tr>
+    <tr>
+      <th>Hannevig</th>
+      <td>74.610472</td>
+    </tr>
+    <tr>
+      <th>Berggrav</th>
+      <td>74.589971</td>
+    </tr>
+    <tr>
+      <th>Freetown</th>
+      <td>73.805431</td>
+    </tr>
+    <tr>
+      <th>bombeflyene</th>
+      <td>73.550555</td>
+    </tr>
+    <tr>
+      <th>Aagesen</th>
+      <td>71.46604</td>
+    </tr>
+    <tr>
+      <th>Justitiarius</th>
+      <td>71.060352</td>
+    </tr>
+    <tr>
+      <th>Colban</th>
+      <td>69.728015</td>
     </tr>
   </tbody>
 </table>
@@ -1504,7 +1486,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0048d00eca7a299d9aeaf5e6364d31c701d9b55930599a3e74b4437ed6004c02.png" src="../_images/0048d00eca7a299d9aeaf5e6364d31c701d9b55930599a3e74b4437ed6004c02.png" />
+<img alt="../_images/bf0b4972204bcb58ef3061e2e93fb1523c13de97610c7116aea32758125609c7.png" src="../_images/bf0b4972204bcb58ef3061e2e93fb1523c13de97610c7116aea32758125609c7.png" />
 </div>
 </div>
 </section>
@@ -1565,14 +1547,16 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#undersok-korpus-med-metadata">1.9.1. Undersøk korpus med metadata</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bygg-korpus">1.9.1.1. Bygg korpus</a></li>
@@ -1633,8 +1617,8 @@ By Nasjonalbiblioteket
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

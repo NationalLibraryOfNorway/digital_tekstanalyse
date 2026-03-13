@@ -16,41 +16,44 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -64,6 +67,7 @@
     <link rel="prev" title="1.3. Korpus" href="2.0.Bygg_korpus.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -79,19 +83,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -99,7 +92,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -107,8 +99,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -124,7 +116,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -142,7 +135,7 @@
     
   
 
-<a class="navbar-brand logo" href="../README.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
@@ -154,28 +147,24 @@
     
     
     <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="DH-lab dokumenter - Home"/>
-    <script>document.write(`<img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark" alt="DH-lab dokumenter - Home"/>`);</script>
+    <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark pst-js-only" alt="DH-lab dokumenter - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../README.html">
-                    DHLAB
+                <a class="reference internal" href="../index.html">
+                    DH-lab – digital tekstanalyse
                 </a>
             </li>
         </ul>
@@ -211,9 +200,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -392,7 +386,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -406,25 +400,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -493,64 +479,49 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_50386">
+<table id="T_b8207">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_50386_level0_col0" class="col_heading level0 col0" >link</th>
-      <th id="T_50386_level0_col1" class="col_heading level0 col1" >concordance</th>
+      <th id="T_b8207_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_b8207_level0_col1" class="col_heading level0 col1" >concordance</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_50386_level0_row0" class="row_heading level0 row0" >6</th>
-      <td id="T_50386_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20141031_122_253_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20141031_122_253_1</a></td>
-      <td id="T_50386_row0_col1" class="data row0 col1" >... Dei lærer <b>demokrati</b> og organisasjonsarbeid . Det finst neppe nokon annan organisasjon i Norge som kan samanliknast her med 4... </td>
+      <th id="T_b8207_level0_row0" class="row_heading level0 row0" >1</th>
+      <td id="T_b8207_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19621112_70_263_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19621112_70_263_1</a></td>
+      <td id="T_b8207_row0_col1" class="data row0 col1" >... Rekordlave skatter , veldige inntekter — og overtrykk i dm okonomiske kjelen . — <b>Demokrati</b> uten parlamentarisme . — » Med rosedyrkere lager man... </td>
     </tr>
     <tr>
-      <th id="T_50386_level0_row1" class="row_heading level0 row1" >7</th>
-      <td id="T_50386_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20141031_122_253_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20141031_122_253_1</a></td>
-      <td id="T_50386_row1_col1" class="data row1 col1" >h Frihet og <b>demokrati</b> . h Ny skule på Ogna . h Flotte turvegar . h Godt å bu på... </td>
+      <th id="T_b8207_level0_row1" class="row_heading level0 row1" >0</th>
+      <td id="T_b8207_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20080912_116_212_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20080912_116_212_1</a></td>
+      <td id="T_b8207_row1_col1" class="data row1 col1" >... Han har støttet mange tiltak som fremmer frihet og <b>demokrati</b> . Framfor alt har regjeringen hans engasjert seg i kampen... </td>
     </tr>
     <tr>
-      <th id="T_50386_level0_row2" class="row_heading level0 row2" >1</th>
-      <td id="T_50386_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20050820_113_191_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20050820_113_191_1</a></td>
-      <td id="T_50386_row2_col1" class="data row2 col1" >... - Vi startet ikke revolusjonen for å skape et <b>demokrati</b> ! Presidenten oversendte denne uken en liste med forslag til... </td>
+      <th id="T_b8207_level0_row2" class="row_heading level0 row2" >5</th>
+      <td id="T_b8207_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19621112_70_263_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19621112_70_263_1</a></td>
+      <td id="T_b8207_row2_col1" class="data row2 col1" >... Sveitserne bekjenner seg helhjertet til - « direkte <b>demokrati</b> * , men ikke til parlamentarisme . Forbundsrådets 7 medlemmer er å... </td>
     </tr>
     <tr>
-      <th id="T_50386_level0_row3" class="row_heading level0 row3" >3</th>
-      <td id="T_50386_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20141031_122_253_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20141031_122_253_1</a></td>
-      <td id="T_50386_row3_col1" class="data row3 col1" >h 1978 Spania vedtok ny grunnlov og ble parlamentarisk <b>demokrati</b> . h 1984 Den indiske statsministeren Indira Gandhi ble myrdet... </td>
+      <th id="T_b8207_level0_row3" class="row_heading level0 row3" >4</th>
+      <td id="T_b8207_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19860613_95_132_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19860613_95_132_1</a></td>
+      <td id="T_b8207_row3_col1" class="data row3 col1" >... hendelser 1 inn- og utland , og igjen og igjen kommer han tilbake til rettspleiens oppgaver i et <b>demokrati</b> .</td>
     </tr>
     <tr>
-      <th id="T_50386_level0_row4" class="row_heading level0 row4" >5</th>
-      <td id="T_50386_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19660208_74_32_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19660208_74_32_1</a></td>
-      <td id="T_50386_row4_col1" class="data row4 col1" >... , fjerne sosial urettferdighet i Sør-Vietnam , opprettholde en stabil og levedyktig økonomi og bygge opp et ekte <b>demokrati</b> .</td>
+      <th id="T_b8207_level0_row4" class="row_heading level0 row4" >3</th>
+      <td id="T_b8207_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19621112_70_263_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19621112_70_263_1</a></td>
+      <td id="T_b8207_row4_col1" class="data row4 col1" >... Selv om et <b>demokrati</b> kan være mindre beslutningsdyktig og handlekraftig i krisesituasjoner , og trenger atskillig lenger tid til å... </td>
     </tr>
     <tr>
-      <th id="T_50386_level0_row5" class="row_heading level0 row5" >10</th>
-      <td id="T_50386_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20241114_132_0_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20241114_132_0_1</a></td>
-      <td id="T_50386_row5_col1" class="data row5 col1" >... på egen eiendom , men at en dose sivil ulydighet også kan være en bra ting i et <b>demokrati</b> .</td>
+      <th id="T_b8207_level0_row5" class="row_heading level0 row5" >6</th>
+      <td id="T_b8207_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19750120_83_16_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19750120_83_16_1</a></td>
+      <td id="T_b8207_row5_col1" class="data row5 col1" >... Det har balt betydning for det direkte <b>demokrati</b> . Dersom man i dag skulle avgjøre hvilken form lønnsoppgjøret</td>
     </tr>
     <tr>
-      <th id="T_50386_level0_row6" class="row_heading level0 row6" >2</th>
-      <td id="T_50386_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19840306_92_56_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19840306_92_56_1</a></td>
-      <td id="T_50386_row6_col1" class="data row6 col1" >... Slik skal det være i et <b>demokrati</b> .</td>
-    </tr>
-    <tr>
-      <th id="T_50386_level0_row7" class="row_heading level0 row7" >9</th>
-      <td id="T_50386_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20050820_113_191_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20050820_113_191_1</a></td>
-      <td id="T_50386_row7_col1" class="data row7 col1" >... Vi kurdere ønsker at Irak skal være et <b>demokrati</b> med sivilt styre , en føderal stat som garanterer rettighetene for... </td>
-    </tr>
-    <tr>
-      <th id="T_50386_level0_row8" class="row_heading level0 row8" >0</th>
-      <td id="T_50386_row8_col0" class="data row8 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19970401_105_73_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19970401_105_73_1</a></td>
-      <td id="T_50386_row8_col1" class="data row8 col1" >... Kommunikasjon og <b>demokrati</b> » . 1 9.30 : De andre - Gjeng eller bare venner ? ( t.tv ) . 20.00... </td>
-    </tr>
-    <tr>
-      <th id="T_50386_level0_row9" class="row_heading level0 row9" >8</th>
-      <td id="T_50386_row9_col0" class="data row9 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19690822_77_193_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19690822_77_193_1</a></td>
-      <td id="T_50386_row9_col1" class="data row9 col1" >... Derfor er « arbeiderbevegelsen » blitt et sentralt begrep i nordisk <b>demokrati</b> , og derfor er det så naturlig for norsk fagbevegelse... </td>
+      <th id="T_b8207_level0_row6" class="row_heading level0 row6" >2</th>
+      <td id="T_b8207_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19690122_77_18_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19690122_77_18_1</a></td>
+      <td id="T_b8207_row6_col1" class="data row6 col1" >Bør elevene bestemme noe ? Dagens ungdom vil ha <b>demokrati</b> i skolen . De vil bestemme mest mulig selv .... </td>
     </tr>
   </tbody>
 </table>
@@ -567,64 +538,54 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_2eb4b">
+<table id="T_cb5b7">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_2eb4b_level0_col0" class="col_heading level0 col0" >link</th>
-      <th id="T_2eb4b_level0_col1" class="col_heading level0 col1" >concordance</th>
+      <th id="T_cb5b7_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_cb5b7_level0_col1" class="col_heading level0 col1" >concordance</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_2eb4b_level0_row0" class="row_heading level0 row0" >6</th>
-      <td id="T_2eb4b_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19680406_76_83_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19680406_76_83_1</a></td>
-      <td id="T_2eb4b_row0_col1" class="data row0 col1" >... på Unge Venstre-landsmøtet i Sandefjord i går formiddag . <b>Demokrati</b> forutsetter nasjonal frigjøring , og dette er Unge Venstres utgangspunkt... </td>
+      <th id="T_cb5b7_level0_row0" class="row_heading level0 row0" >3</th>
+      <td id="T_cb5b7_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19970423_105_92_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19970423_105_92_1</a></td>
+      <td id="T_cb5b7_row0_col1" class="data row0 col1" >... Mitt råd er å sette opp <b>demokrati</b> og deltaking som en overordnet målsetting , sa Gullestad , som er forsker... </td>
     </tr>
     <tr>
-      <th id="T_2eb4b_level0_row1" class="row_heading level0 row1" >10</th>
-      <td id="T_2eb4b_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19720317_80_65_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19720317_80_65_1</a></td>
-      <td id="T_2eb4b_row1_col1" class="data row1 col1" >... i denne saken , men på overbevisningen om at det moderne <b>demokrati</b> bare kan fungere via de folkevalgte organer .</td>
+      <th id="T_cb5b7_level0_row1" class="row_heading level0 row1" >7</th>
+      <td id="T_cb5b7_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19940113_102_10_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19940113_102_10_1</a></td>
+      <td id="T_cb5b7_row1_col1" class="data row1 col1" >... Ingen , ein eller Neiro gudar ? Syn på menneskeverd og <b>demokrati</b> . Kva plass skal kvinnene ha i samfunnet... </td>
     </tr>
     <tr>
-      <th id="T_2eb4b_level0_row2" class="row_heading level0 row2" >5</th>
-      <td id="T_2eb4b_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19840711_92_157_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19840711_92_157_1</a></td>
-      <td id="T_2eb4b_row2_col1" class="data row2 col1" >... nesten nyfødde nasjon , lære dei om tilstridd norsk <b>demokrati</b> så skrøpeleg det kan vera , om fulle menneskerettar for... </td>
+      <th id="T_cb5b7_level0_row2" class="row_heading level0 row2" >5</th>
+      <td id="T_cb5b7_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19940113_102_10_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19940113_102_10_1</a></td>
+      <td id="T_cb5b7_row2_col1" class="data row2 col1" >... bli skjerpet fra midten av januar dersom clet ikke kommer fortgang i innføringen av <b>demokrati</b> på Haiti . li « 21.</td>
     </tr>
     <tr>
-      <th id="T_2eb4b_level0_row3" class="row_heading level0 row3" >9</th>
-      <td id="T_2eb4b_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20221108_130_0_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20221108_130_0_1</a></td>
-      <td id="T_2eb4b_row3_col1" class="data row3 col1" >... tid vært et eksempel i verden på et liberalt <b>demokrati</b> der makten er fordelt blant mange , der politiske ledere... </td>
+      <th id="T_cb5b7_level0_row3" class="row_heading level0 row3" >6</th>
+      <td id="T_cb5b7_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20061127_114_276_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20061127_114_276_1</a></td>
+      <td id="T_cb5b7_row3_col1" class="data row3 col1" >... - Det kan ikke bli noen virkeligfrihet eller noe ekte <b>demokrati</b> så lenge hyllene er tomme og rasjoneringskort er i... </td>
     </tr>
     <tr>
-      <th id="T_2eb4b_level0_row4" class="row_heading level0 row4" >2</th>
-      <td id="T_2eb4b_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20221108_130_0_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20221108_130_0_1</a></td>
-      <td id="T_2eb4b_row4_col1" class="data row4 col1" >Måtålenederlag Ingen land kan i utgangspunktet ta et <b>demokrati</b> for gitt . Et liberalt <b>demokrati</b> vil ikke overleve om folk... </td>
+      <th id="T_cb5b7_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_cb5b7_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19970423_105_92_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19970423_105_92_1</a></td>
+      <td id="T_cb5b7_row4_col1" class="data row4 col1" >og <b>demokrati</b> , sier Egeland .</td>
     </tr>
     <tr>
-      <th id="T_2eb4b_level0_row5" class="row_heading level0 row5" >3</th>
-      <td id="T_2eb4b_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19970712_105_158_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19970712_105_158_1</a></td>
-      <td id="T_2eb4b_row5_col1" class="data row5 col1" >- Det utsatte godterikonsum » kunne gjennomføres fordi det ikke hadde noe som helst med <b>demokrati</b> å gjøre . I autoritære... </td>
+      <th id="T_cb5b7_level0_row5" class="row_heading level0 row5" >1</th>
+      <td id="T_cb5b7_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19951002_103_227_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19951002_103_227_1</a></td>
+      <td id="T_cb5b7_row5_col1" class="data row5 col1" >... Vi hadde Ny <b>Demokrati</b> som blomstret opp og døde igjen . Og vi har fått Kristelig Demokratisk Samling som er... </td>
     </tr>
     <tr>
-      <th id="T_2eb4b_level0_row6" class="row_heading level0 row6" >1</th>
-      <td id="T_2eb4b_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19970712_105_158_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19970712_105_158_1</a></td>
-      <td id="T_2eb4b_row6_col1" class="data row6 col1" >... tsjetsjenernes , karbardinernes og tatarenes rett til selvbestemmelse . <b>Demokrati</b> handler om respekten for de små folk . Hvor galt... </td>
+      <th id="T_cb5b7_level0_row6" class="row_heading level0 row6" >0</th>
+      <td id="T_cb5b7_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19951002_103_227_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19951002_103_227_1</a></td>
+      <td id="T_cb5b7_row6_col1" class="data row6 col1" >... - en italiener Din kaffe - en brasilianer Ditt <b>demokrati</b> - er gresk Din sommerferie - tyrkisk Dine tall -... </td>
     </tr>
     <tr>
-      <th id="T_2eb4b_level0_row7" class="row_heading level0 row7" >8</th>
-      <td id="T_2eb4b_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19680406_76_83_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19680406_76_83_1</a></td>
-      <td id="T_2eb4b_row7_col1" class="data row7 col1" >... er den rette til å garantere Vest-Europas sikkerhet og <b>demokrati</b> . Vi er sikkert fremdeles et stort flertall i dette... </td>
-    </tr>
-    <tr>
-      <th id="T_2eb4b_level0_row8" class="row_heading level0 row8" >0</th>
-      <td id="T_2eb4b_row8_col0" class="data row8 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20221108_130_0_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20221108_130_0_1</a></td>
-      <td id="T_2eb4b_row8_col1" class="data row8 col1" >Skal et <b>demokrati</b> fungere , er taperne nødt til å tåle å tape .</td>
-    </tr>
-    <tr>
-      <th id="T_2eb4b_level0_row9" class="row_heading level0 row9" >7</th>
-      <td id="T_2eb4b_row9_col0" class="data row9 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20221108_130_0_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_20221108_130_0_1</a></td>
-      <td id="T_2eb4b_row9_col1" class="data row9 col1" >– Detteer fantastisk , <b>demokrati</b> i praksis , og viser at bygget har en voldsom kulturell egenverdi , sier Janssen... </td>
+      <th id="T_cb5b7_level0_row7" class="row_heading level0 row7" >2</th>
+      <td id="T_cb5b7_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19951002_103_227_1'>URN:NBN:no-nb_digavis_stavangeraftenblad_null_null_19951002_103_227_1</a></td>
+      <td id="T_cb5b7_row7_col1" class="data row7 col1" >Med et <b>demokrati</b> i fritt fall , er det ikke noe rart at forakten for norske politikere er økende .</td>
     </tr>
   </tbody>
 </table>
@@ -646,24 +607,24 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_f2356">
+<table id="T_f8ee7">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_f2356_level0_col0" class="col_heading level0 col0" >link</th>
-      <th id="T_f2356_level0_col1" class="col_heading level0 col1" >concordance</th>
+      <th id="T_f8ee7_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_f8ee7_level0_col1" class="col_heading level0 col1" >concordance</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_f2356_level0_row0" class="row_heading level0 row0" >17</th>
-      <td id="T_f2356_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2019081926018'>URN:NBN:no-nb_digibok_2019081926018</a></td>
-      <td id="T_f2356_row0_col1" class="data row0 col1" >... vel vidende at det dyre betalte Arbeide skulde deres <b>Vinskibelighed</b> indbringe igien . De agtede derfor ikke paa at uddele... </td>
+      <th id="T_f8ee7_level0_row0" class="row_heading level0 row0" >18</th>
+      <td id="T_f8ee7_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2021121628003'>URN:NBN:no-nb_digibok_2021121628003</a></td>
+      <td id="T_f8ee7_row0_col1" class="data row0 col1" >... stride imod den indenlandske Handel , - eller imod de Varers Omsats , <b>Vinskibelighed</b> ... forfærdiger i Landet , og... </td>
     </tr>
     <tr>
-      <th id="T_f2356_level0_row1" class="row_heading level0 row1" >4</th>
-      <td id="T_f2356_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2017101626006'>URN:NBN:no-nb_digibok_2017101626006</a></td>
-      <td id="T_f2356_row1_col1" class="data row1 col1" >... Saa glædeligt det end er , at see Folkemængden tiltage i et Land , naar <b>Vinskibelighed</b> og nye Næringsveje tiltage... </td>
+      <th id="T_f8ee7_level0_row1" class="row_heading level0 row1" >13</th>
+      <td id="T_f8ee7_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2013011424006'>URN:NBN:no-nb_digibok_2013011424006</a></td>
+      <td id="T_f8ee7_row1_col1" class="data row1 col1" >... saa ugiørligt , at man jo med Flid og <b>Vinskibelighed</b> kan overkomme det . Adskillige brave Mænds Forslag , som... </td>
     </tr>
   </tbody>
 </table>
@@ -740,41 +701,41 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>82</th>
-      <td>100113003</td>
-      <td>URN:NBN:no-nb_digibok_2012092608052</td>
-      <td>Rente, kontantverdi og forsikringsteknisk kont...</td>
-      <td>Hoem , Jan M.</td>
-      <td>oai:nb.bibsys.no:999809913584702202</td>
-      <td>abcc3f62c9511bb29c60bc1cfa5d9720</td>
+      <th>303</th>
+      <td>100523615</td>
+      <td>URN:NBN:no-nb_digibok_2010111205068</td>
+      <td>Nord-Norge : næringsliv og økonomi : studiesel...</td>
       <td></td>
-      <td>Oslo</td>
-      <td>19650101</td>
-      <td>1965</td>
+      <td>oai:nb.bibsys.no:990319291334702202</td>
+      <td>f4b06471892192370da4cf31c707b328</td>
       <td></td>
+      <td>[S.l.]</td>
+      <td>19640101</td>
+      <td>1964</td>
+      <td>Studieselskapet for nord-norsk næringsliv</td>
       <td>nob</td>
       <td></td>
-      <td>330.8</td>
+      <td>330.9484</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
     </tr>
     <tr>
-      <th>72</th>
-      <td>100099807</td>
-      <td>URN:NBN:no-nb_digibok_2012080909523</td>
-      <td>Den Fremtidige matvareetterspørsel i Norge og ...</td>
-      <td></td>
-      <td>oai:nb.bibsys.no:990203081084702202</td>
-      <td>cd4ed47f098fcdbf268a22e52f48000f</td>
+      <th>178</th>
+      <td>100316549</td>
+      <td>URN:NBN:no-nb_digibok_2016112148554</td>
+      <td>Ungdom og arbeid : [årsoversikt fra Generaldir...</td>
+      <td>Morse , David A. / Lindbom , Hans Georg / Borg...</td>
+      <td>oai:nb.bibsys.no:999522382414702202</td>
+      <td>070c6baea565a4769778b01251783559</td>
       <td></td>
       <td>Oslo</td>
-      <td>19670101</td>
-      <td>1967</td>
-      <td></td>
-      <td>nob</td>
-      <td>matforsyning</td>
-      <td>338.19 / 338.1</td>
+      <td>19600101</td>
+      <td>1960</td>
+      <td>Sosialdepartementet, Komiteen for internasjona...</td>
+      <td>nob / eng</td>
+      <td>ungdom / yrkesopplæring</td>
+      <td>331</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -793,64 +754,64 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_e13f9">
+<table id="T_5c198">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_e13f9_level0_col0" class="col_heading level0 col0" >link</th>
-      <th id="T_e13f9_level0_col1" class="col_heading level0 col1" >concordance</th>
+      <th id="T_5c198_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_5c198_level0_col1" class="col_heading level0 col1" >concordance</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_e13f9_level0_row0" class="row_heading level0 row0" >173</th>
-      <td id="T_e13f9_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2016060208041'>URN:NBN:no-nb_digibok_2016060208041</a></td>
-      <td id="T_e13f9_row0_col1" class="data row0 col1" >... De flyttet i mai 1876 til Gmeløkken i Østre Aker , og hadde da 5 <b>barn</b> .</td>
+      <th id="T_5c198_level0_row0" class="row_heading level0 row0" >174</th>
+      <td id="T_5c198_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2016031748084'>URN:NBN:no-nb_digibok_2016031748084</a></td>
+      <td id="T_5c198_row0_col1" class="data row0 col1" >Familietype Enfamiliehusholdning uten <b>barn</b> 23 4 1 2 5 21 2 11 1 5 25 100 617</td>
     </tr>
     <tr>
-      <th id="T_e13f9_level0_row1" class="row_heading level0 row1" >41</th>
-      <td id="T_e13f9_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2008051604100'>URN:NBN:no-nb_digibok_2008051604100</a></td>
-      <td id="T_e13f9_row1_col1" class="data row1 col1" >... 13 471 385. — som forsikringsbidrag , forskudd på forsikring , gravferdsbidrag for voksne og gravferdsbidrag for <b>barn</b> .</td>
+      <th id="T_5c198_level0_row1" class="row_heading level0 row1" >417</th>
+      <td id="T_5c198_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2006081100018'>URN:NBN:no-nb_digibok_2006081100018</a></td>
+      <td id="T_5c198_row1_col1" class="data row1 col1" >... det var moro å være sammen med mange andre <b>barn</b> på fabrikken . Mot en slik bakgrunn er det lett... </td>
     </tr>
     <tr>
-      <th id="T_e13f9_level0_row2" class="row_heading level0 row2" >240</th>
-      <td id="T_e13f9_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007032801077'>URN:NBN:no-nb_digibok_2007032801077</a></td>
-      <td id="T_e13f9_row2_col1" class="data row2 col1" >kontraktmessige tilsagn til sin datter og hennes <b>barn</b> om årlig underhold ikke ansett som regelmessig understøttelse i henhold til overenskomst... </td>
+      <th id="T_5c198_level0_row2" class="row_heading level0 row2" >130</th>
+      <td id="T_5c198_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2016031748084'>URN:NBN:no-nb_digibok_2016031748084</a></td>
+      <td id="T_5c198_row2_col1" class="data row2 col1" >Ektepar med og uten <b>barn</b> 2 9 17 19 13 29 11 100 1953</td>
     </tr>
     <tr>
-      <th id="T_e13f9_level0_row3" class="row_heading level0 row3" >23</th>
-      <td id="T_e13f9_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007052201042'>URN:NBN:no-nb_digibok_2007052201042</a></td>
-      <td id="T_e13f9_row3_col1" class="data row3 col1" >Ektepar med 4 eller flere <b>barn</b> Married</td>
+      <th id="T_5c198_level0_row3" class="row_heading level0 row3" >53</th>
+      <td id="T_5c198_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014030707069'>URN:NBN:no-nb_digibok_2014030707069</a></td>
+      <td id="T_5c198_row3_col1" class="data row3 col1" >... Det trenger å spise ; det produserer <b>barn</b> ; det føler smerte og frykt og glede . Men hva det... </td>
     </tr>
     <tr>
-      <th id="T_e13f9_level0_row4" class="row_heading level0 row4" >150</th>
-      <td id="T_e13f9_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2012061808096'>URN:NBN:no-nb_digibok_2012061808096</a></td>
-      <td id="T_e13f9_row4_col1" class="data row4 col1" ><b>Barn</b> : Signe Menka , Valborg Bolette og sønnen Andreas som ble f odt på Skjervøy 24 / 10 1864.</td>
+      <th id="T_5c198_level0_row4" class="row_heading level0 row4" >129</th>
+      <td id="T_5c198_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2016031748084'>URN:NBN:no-nb_digibok_2016031748084</a></td>
+      <td id="T_5c198_row4_col1" class="data row4 col1" >Husholdninger med <b>barn</b></td>
     </tr>
     <tr>
-      <th id="T_e13f9_level0_row5" class="row_heading level0 row5" >238</th>
-      <td id="T_e13f9_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007041701019'>URN:NBN:no-nb_digibok_2007041701019</a></td>
-      <td id="T_e13f9_row5_col1" class="data row5 col1" >... ? sr avreisen kra lorten kunne kapteinen telegrakere at det var lodt et <b>barn</b> ombord . I ^ an kunne... </td>
+      <th id="T_5c198_level0_row5" class="row_heading level0 row5" >175</th>
+      <td id="T_5c198_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2008052104011'>URN:NBN:no-nb_digibok_2008052104011</a></td>
+      <td id="T_5c198_row5_col1" class="data row5 col1" >4.2.8 Daginstitusjoner for <b>barn</b> 33</td>
     </tr>
     <tr>
-      <th id="T_e13f9_level0_row6" class="row_heading level0 row6" >4</th>
-      <td id="T_e13f9_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2008052104020'>URN:NBN:no-nb_digibok_2008052104020</a></td>
-      <td id="T_e13f9_row6_col1" class="data row6 col1" >... let høyt utviklet land vil et nytt <b>barn</b> i en familie i alminnelighet være en belastning for familiens økonomi i... </td>
+      <th id="T_5c198_level0_row6" class="row_heading level0 row6" >20</th>
+      <td id="T_5c198_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2016031748084'>URN:NBN:no-nb_digibok_2016031748084</a></td>
+      <td id="T_5c198_row6_col1" class="data row6 col1" >med 1 <b>barn</b> 22 5 2 3 5 26 2 12 1 3 19 100 589</td>
     </tr>
     <tr>
-      <th id="T_e13f9_level0_row7" class="row_heading level0 row7" >2</th>
-      <td id="T_e13f9_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2017030248029'>URN:NBN:no-nb_digibok_2017030248029</a></td>
-      <td id="T_e13f9_row7_col1" class="data row7 col1" >... det innført rasjonering av melk over hele landet . <b>Barn</b> skulle få 0,8 liter melk pr. dag , og det... </td>
+      <th id="T_5c198_level0_row7" class="row_heading level0 row7" >342</th>
+      <td id="T_5c198_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007041701019'>URN:NBN:no-nb_digibok_2007041701019</a></td>
+      <td id="T_5c198_row7_col1" class="data row7 col1" >Mor og <b>barn</b> i arbeid på saga i gamle dager</td>
     </tr>
     <tr>
-      <th id="T_e13f9_level0_row8" class="row_heading level0 row8" >213</th>
-      <td id="T_e13f9_row8_col0" class="data row8 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007052401016'>URN:NBN:no-nb_digibok_2007052401016</a></td>
-      <td id="T_e13f9_row8_col1" class="data row8 col1" >vandrerne kra Europa og Israelfødte <b>barn</b> av europeiskjødiske foreldre . Men de avgjort høgste inntektene har veteranene .</td>
+      <th id="T_5c198_level0_row8" class="row_heading level0 row8" >90</th>
+      <td id="T_5c198_row8_col0" class="data row8 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2016031748084'>URN:NBN:no-nb_digibok_2016031748084</a></td>
+      <td id="T_5c198_row8_col1" class="data row8 col1" >Ektepar med og uten <b>barn</b> 51 35 11 3 100 1 953</td>
     </tr>
     <tr>
-      <th id="T_e13f9_level0_row9" class="row_heading level0 row9" >177</th>
-      <td id="T_e13f9_row9_col0" class="data row9 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007052500022'>URN:NBN:no-nb_digibok_2007052500022</a></td>
-      <td id="T_e13f9_row9_col1" class="data row9 col1" >? or økonomer var , <b>Barn</b> vi zer , « terke intellektuelle intereßßer innblandet . I ^ eßten all undervißning og... </td>
+      <th id="T_5c198_level0_row9" class="row_heading level0 row9" >376</th>
+      <td id="T_5c198_row9_col0" class="data row9 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2012091308000'>URN:NBN:no-nb_digibok_2012091308000</a></td>
+      <td id="T_5c198_row9_col1" class="data row9 col1" >... 1.50 for hvert <b>barn</b> . De kjemigrafer som ikke var med i streiken skulle yte en ekstrakontingent av 15 prosent... </td>
     </tr>
   </tbody>
 </table>
@@ -866,64 +827,64 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_9bef2">
+<table id="T_3774d">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_9bef2_level0_col0" class="col_heading level0 col0" >link</th>
-      <th id="T_9bef2_level0_col1" class="col_heading level0 col1" >concordance</th>
+      <th id="T_3774d_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_3774d_level0_col1" class="col_heading level0 col1" >concordance</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_9bef2_level0_row0" class="row_heading level0 row0" >22</th>
-      <td id="T_9bef2_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007050901032'>URN:NBN:no-nb_digibok_2007050901032</a></td>
-      <td id="T_9bef2_row0_col1" class="data row0 col1" >d ) opplysning om arbeideren går på <b>skole</b> og i tilfelle hvilken undervisningstid han har , jfr. lov om yrkesskoler... </td>
+      <th id="T_3774d_level0_row0" class="row_heading level0 row0" >376</th>
+      <td id="T_3774d_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007051401059'>URN:NBN:no-nb_digibok_2007051401059</a></td>
+      <td id="T_3774d_row0_col1" class="data row0 col1" >Har du ikke yrkesskole tra tOr , rna du delta i undervisningen og ikke tor- s ^ innie <b>skolen</b> uten... </td>
     </tr>
     <tr>
-      <th id="T_9bef2_level0_row1" class="row_heading level0 row1" >183</th>
-      <td id="T_9bef2_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007050901032'>URN:NBN:no-nb_digibok_2007050901032</a></td>
-      <td id="T_9bef2_row1_col1" class="data row1 col1" >... Hvis det er knyttet internat til <b>skolen</b> eller anstalten , vil kjøkkenpersonalet og annen hjelp ved internatet komme inn under... </td>
+      <th id="T_3774d_level0_row1" class="row_heading level0 row1" >355</th>
+      <td id="T_3774d_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2017021448034'>URN:NBN:no-nb_digibok_2017021448034</a></td>
+      <td id="T_3774d_row1_col1" class="data row1 col1" >... som skulle føres opp i Gullkroken like nedenfor Smestad <b>skole</b> . Etter samråd med bankens myndigheter besluttet Boliglaget å akseptere... </td>
     </tr>
     <tr>
-      <th id="T_9bef2_level0_row2" class="row_heading level0 row2" >478</th>
-      <td id="T_9bef2_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2012060724042'>URN:NBN:no-nb_digibok_2012060724042</a></td>
-      <td id="T_9bef2_row2_col1" class="data row2 col1" >... ikke noen som var uteksaminert ved Bergen Tekniske <b>Skole</b> . <b>Skolen</b> var heller ikke på noen annen måte representert .... </td>
+      <th id="T_3774d_level0_row2" class="row_heading level0 row2" >153</th>
+      <td id="T_3774d_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2015030906010'>URN:NBN:no-nb_digibok_2015030906010</a></td>
+      <td id="T_3774d_row2_col1" class="data row2 col1" >Grunnleg geren , 1916. <b>Skolen</b> ledes Otto Treider . nå av 3. generasjon : cand. mag. fru Lilian</td>
     </tr>
     <tr>
-      <th id="T_9bef2_level0_row3" class="row_heading level0 row3" >93</th>
-      <td id="T_9bef2_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2017030808073'>URN:NBN:no-nb_digibok_2017030808073</a></td>
-      <td id="T_9bef2_row3_col1" class="data row3 col1" >... Et unntak er gymnastikkskolens lærere som begynner på <b>skolen</b> etter sommerferien ca. 1. august , men de har ferie fra... </td>
+      <th id="T_3774d_level0_row3" class="row_heading level0 row3" >372</th>
+      <td id="T_3774d_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2008052304020'>URN:NBN:no-nb_digibok_2008052304020</a></td>
+      <td id="T_3774d_row3_col1" class="data row3 col1" >Folke- i Ungdomsskolen <b>skolen</b></td>
     </tr>
     <tr>
-      <th id="T_9bef2_level0_row4" class="row_heading level0 row4" >274</th>
-      <td id="T_9bef2_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007052104024'>URN:NBN:no-nb_digibok_2007052104024</a></td>
-      <td id="T_9bef2_row4_col1" class="data row4 col1" >På verdens mest spennende <b>skole</b> , SUMMERHILL , lever 70 elever mellom 5 og 16 år i full frihet — de... </td>
+      <th id="T_3774d_level0_row4" class="row_heading level0 row4" >412</th>
+      <td id="T_3774d_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2014071706061'>URN:NBN:no-nb_digibok_2014071706061</a></td>
+      <td id="T_3774d_row4_col1" class="data row4 col1" >... århundre først og fremst en <b>skole</b> for jurister , for embetsmenn og sakførere . Omkring århundreskiftet begynte kvinner og arbeiderbarn... </td>
     </tr>
     <tr>
-      <th id="T_9bef2_level0_row5" class="row_heading level0 row5" >353</th>
-      <td id="T_9bef2_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2017032408005'>URN:NBN:no-nb_digibok_2017032408005</a></td>
-      <td id="T_9bef2_row5_col1" class="data row5 col1" >... Når en yngling i gammel tid skulle lære skomakeryrket gikk han i en hard <b>skole</b> . Det ble meget slit... </td>
+      <th id="T_3774d_level0_row5" class="row_heading level0 row5" >247</th>
+      <td id="T_3774d_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2008052304020'>URN:NBN:no-nb_digibok_2008052304020</a></td>
+      <td id="T_3774d_row5_col1" class="data row5 col1" >... Den nye <b>skolen</b> i Vefsn er forutsatt å skulle få samme elevkapasitet som Kleiva . Alle skolene har internat .</td>
     </tr>
     <tr>
-      <th id="T_9bef2_level0_row6" class="row_heading level0 row6" >88</th>
-      <td id="T_9bef2_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2016031508017'>URN:NBN:no-nb_digibok_2016031508017</a></td>
-      <td id="T_9bef2_row6_col1" class="data row6 col1" >... ville , etableres en skoleordning med 6 års grunn <b>skole</b> og 3 års ungdomsskole med et frivillig 10. skoleår .</td>
+      <th id="T_3774d_level0_row6" class="row_heading level0 row6" >138</th>
+      <td id="T_3774d_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2010111205068'>URN:NBN:no-nb_digibok_2010111205068</a></td>
+      <td id="T_3774d_row6_col1" class="data row6 col1" >... om bedre utdannelsesmuligheter for ungdommen og ut fra forståelsen av at <b>skolen</b> betyr mye for de mindre sentras utvikling .</td>
     </tr>
     <tr>
-      <th id="T_9bef2_level0_row7" class="row_heading level0 row7" >68</th>
-      <td id="T_9bef2_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2016110148065'>URN:NBN:no-nb_digibok_2016110148065</a></td>
-      <td id="T_9bef2_row7_col1" class="data row7 col1" >... forsørger seg seiv i den tid de går på <b>skole</b> . Det forutsettes da at vedkommende har fritt opphold ,... </td>
+      <th id="T_3774d_level0_row7" class="row_heading level0 row7" >330</th>
+      <td id="T_3774d_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007041701053'>URN:NBN:no-nb_digibok_2007041701053</a></td>
+      <td id="T_3774d_row7_col1" class="data row7 col1" >... Xleplan kor korssk med njelpeundervisning i 9 - arig <b>skole</b> » , og nar dermed også knesatt kramnaldsskoletanken . H .... </td>
     </tr>
     <tr>
-      <th id="T_9bef2_level0_row8" class="row_heading level0 row8" >404</th>
-      <td id="T_9bef2_row8_col0" class="data row8 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2016031508017'>URN:NBN:no-nb_digibok_2016031508017</a></td>
-      <td id="T_9bef2_row8_col1" class="data row8 col1" >Behov for lærere i den høgre <b>skolen</b> Behov for lærere i realfag i ungdomsskolens almenpr . linjer Behov for lærere... </td>
+      <th id="T_3774d_level0_row8" class="row_heading level0 row8" >85</th>
+      <td id="T_3774d_row8_col0" class="data row8 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2013050605020'>URN:NBN:no-nb_digibok_2013050605020</a></td>
+      <td id="T_3774d_row8_col1" class="data row8 col1" >« <b>SKOLEN</b> OG NÆRINGSLIVET » 44 sider . Pris kr . 4 Nr . 2 Studiegrupper i Oslo og Moss diskuterer 9... </td>
     </tr>
     <tr>
-      <th id="T_9bef2_level0_row9" class="row_heading level0 row9" >401</th>
-      <td id="T_9bef2_row9_col0" class="data row9 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007051001055'>URN:NBN:no-nb_digibok_2007051001055</a></td>
-      <td id="T_9bef2_row9_col1" class="data row9 col1" >... Eg peika på at det no var særleg bondesøner som gjekk på <b>skole</b> i landsbyane , og at desse sjølve... </td>
+      <th id="T_3774d_level0_row9" class="row_heading level0 row9" >331</th>
+      <td id="T_3774d_row9_col0" class="data row9 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2016090708247'>URN:NBN:no-nb_digibok_2016090708247</a></td>
+      <td id="T_3774d_row9_col1" class="data row9 col1" >ved <b>skole</b> , kurs , bedrift e.l. , eller gis som tilskott eller</td>
     </tr>
   </tbody>
 </table>
@@ -989,14 +950,16 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konkordans-med-og-uten-korpus">1.4.1. Konkordans med og uten korpus</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konkordans-fra-aviser">1.4.1.1. Konkordans fra aviser</a></li>
@@ -1052,8 +1015,8 @@ By Nasjonalbiblioteket
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

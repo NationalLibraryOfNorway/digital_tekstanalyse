@@ -1,0 +1,1648 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; DH-lab dokumenter</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_build_fresh/_build/.jupyter_cache/executed/8a1015654b61c3eade41f06d6bb14bce/base';</script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="DH-lab dokumenter - Home"/>
+    <img src="../../../../../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark pst-js-only" alt="DH-lab dokumenter - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../../index.html">
+                    DH-lab – digital tekstanalyse
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../bibliography/bibliography.html">DH-lab bibliografi</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kodeeksempler–Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../tutorial.html">1. Læringseksempler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/1.0.Oppstart.html">1.2. Oppstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.0.Bygg_korpus.html">1.3. Korpus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.1.Konkordans.html">1.4. Konkordanser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.2.Kollokasjoner.html">1.5. Kollokasjoner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.3.Frekvenslister.html">1.6. Frekvenslister</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.4.S%C3%B8k_i_aviser.html">1.7. Søk i aviser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.5.n-gram_og_galakser.html">1.8. N-gram og galakser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.6.sammenlign_metadata.html">1.9. Sammenlign metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/3.0.ner_og_pos.html">1.10. NER og POS med Spacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/3.1.ordparadigmer.html">1.11. Ordparadigmer med wordbank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/3.2.dispersion.html">1.12. Ordfordeling</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../cookbook.html">2. Kokebøker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../cookbook/4.0.sentiment_analysis_timeseries.html">2.1. Sentimentanalyse i aviskorpus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../cookbook/4.1.topic_modelling_with_LDA.html">2.2. Topic modelling med gensim og dhlab</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/NationalLibraryOfNorway/digital_tekstanalyse/main?urlpath=tree/_build_fresh/_build/.jupyter_cache/executed/8a1015654b61c3eade41f06d6bb14bce/base.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/NationalLibraryOfNorway/digital_tekstanalyse/blob/main/_build_fresh/_build/.jupyter_cache/executed/8a1015654b61c3eade41f06d6bb14bce/base.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NationalLibraryOfNorway/digital_tekstanalyse" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NationalLibraryOfNorway/digital_tekstanalyse/issues/new?title=Issue%20on%20page%20%2F_build_fresh/_build/.jupyter_cache/executed/8a1015654b61c3eade41f06d6bb14bce/base.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../../_sources/_build_fresh/_build/.jupyter_cache/executed/8a1015654b61c3eade41f06d6bb14bce/base.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dh</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">gensim</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pyLDAvis</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pprint</span><span class="w"> </span><span class="kn">import</span> <span class="n">pprint</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pyLDAvis.gensim_models</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">genvis</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># sprit urn URN:NBN:no-nb_digibok_2020090207537</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bok</span> <span class="o">=</span> <span class="n">dh</span><span class="o">.</span><span class="n">Corpus</span><span class="p">(</span><span class="n">doctype</span><span class="o">=</span><span class="s2">&quot;digibok&quot;</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Norgeshistorie&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bok</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dhlabid</th>
+      <th>urn</th>
+      <th>title</th>
+      <th>authors</th>
+      <th>oaiid</th>
+      <th>sesamid</th>
+      <th>isbn10</th>
+      <th>city</th>
+      <th>timestamp</th>
+      <th>year</th>
+      <th>publisher</th>
+      <th>langs</th>
+      <th>subjects</th>
+      <th>ddc</th>
+      <th>genres</th>
+      <th>literaryform</th>
+      <th>doctype</th>
+      <th>ocr_creator</th>
+      <th>ocr_timestamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>100495494</td>
+      <td>URN:NBN:no-nb_digibok_2014022624019</td>
+      <td>Furet , værbitt - : en Norgeshistorie for de t...</td>
+      <td>Heide-Steen , Harald / Grødum , Inge</td>
+      <td>oai:nb.bibsys.no:998621357104702202</td>
+      <td>63c06d2cd80b0dd355e213368d077fde</td>
+      <td>8205169764</td>
+      <td>Oslo</td>
+      <td>19860101</td>
+      <td>1986</td>
+      <td>Gyldendal</td>
+      <td>nob</td>
+      <td></td>
+      <td>948.100207</td>
+      <td></td>
+      <td>Faglitteratur</td>
+      <td>digibok</td>
+      <td>nb</td>
+      <td>20060101</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urn</span> <span class="o">=</span> <span class="n">bok</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">urn</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">urn</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;URN:NBN:no-nb_digibok_2014022624019&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Chunks </span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">dh</span><span class="o">.</span><span class="n">Chunks</span><span class="p">(</span><span class="n">chunks</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">urn</span><span class="o">=</span><span class="n">urn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">chunks</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">chunks_to_corpus</span><span class="p">(</span><span class="n">chunks_list</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">chunks_list</span><span class="p">:</span>
+        <span class="n">inner_res</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+            <span class="n">inner_res</span> <span class="o">+=</span> <span class="p">(</span><span class="n">y</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="n">y</span><span class="p">]</span>
+            
+        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">inner_res</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">texts</span> <span class="o">=</span> <span class="n">chunks_to_corpus</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">chunks</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">chunks</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>...</th>
+      <th>40</th>
+      <th>41</th>
+      <th>42</th>
+      <th>43</th>
+      <th>44</th>
+      <th>45</th>
+      <th>46</th>
+      <th>47</th>
+      <th>48</th>
+      <th>49</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>!</th>
+      <td>13.0</td>
+      <td>17.0</td>
+      <td>13.0</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>7.0</td>
+      <td>17.0</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>9.0</td>
+      <td>...</td>
+      <td>10.0</td>
+      <td>18.0</td>
+      <td>17.0</td>
+      <td>23.0</td>
+      <td>5.0</td>
+      <td>5.0</td>
+      <td>5.0</td>
+      <td>20.0</td>
+      <td>11.0</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>(</th>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>7.0</td>
+      <td>2.0</td>
+      <td>5.0</td>
+      <td>7.0</td>
+      <td>2.0</td>
+      <td>10.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>7.0</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>6.0</td>
+      <td>11.0</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <th>)</th>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>8.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>7.0</td>
+      <td>2.0</td>
+      <td>11.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>7.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>6.0</td>
+      <td>11.0</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>37.0</td>
+      <td>44.0</td>
+      <td>48.0</td>
+      <td>40.0</td>
+      <td>33.0</td>
+      <td>40.0</td>
+      <td>48.0</td>
+      <td>39.0</td>
+      <td>55.0</td>
+      <td>4.0</td>
+      <td>...</td>
+      <td>43.0</td>
+      <td>43.0</td>
+      <td>43.0</td>
+      <td>48.0</td>
+      <td>44.0</td>
+      <td>34.0</td>
+      <td>32.0</td>
+      <td>37.0</td>
+      <td>48.0</td>
+      <td>45.0</td>
+    </tr>
+    <tr>
+      <th>-</th>
+      <td>8.0</td>
+      <td>10.0</td>
+      <td>5.0</td>
+      <td>15.0</td>
+      <td>8.0</td>
+      <td>21.0</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>16.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>8.0</td>
+      <td>9.0</td>
+      <td>4.0</td>
+      <td>7.0</td>
+      <td>9.0</td>
+      <td>13.0</td>
+      <td>12.0</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>vikingvis</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>vitje</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>vommen</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>øldunstendc</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>øret</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>9353 rows × 50 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import top 50000 tokens from NB collection</span>
+<span class="n">tot</span> <span class="o">=</span> <span class="n">dh</span><span class="o">.</span><span class="n">totals</span><span class="p">(</span><span class="mi">50000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Divide corpus freq count by tot</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span>  <span class="n">tot</span><span class="o">.</span><span class="n">freq</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get top 1000 more frequent tokens</span>
+<span class="n">target_tokens</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">1000</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">target_tokens</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>...</th>
+      <th>40</th>
+      <th>41</th>
+      <th>42</th>
+      <th>43</th>
+      <th>44</th>
+      <th>45</th>
+      <th>46</th>
+      <th>47</th>
+      <th>48</th>
+      <th>49</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Thrane</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>10.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>sinns</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Sigurdsson</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>vikingene</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>Gyda</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Maritim</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>norgesmester</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>svidd</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>sønnene</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>klappe</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1000 rows × 50 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">outer_lst</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">target_tokens</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">inner_str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">target_tokens</span><span class="p">][</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">inner_str</span> <span class="o">+=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="p">)</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        
+    <span class="n">outer_lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">inner_str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">outer_lst</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">outer_lst</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">id2word</span> <span class="o">=</span> <span class="n">gensim</span><span class="o">.</span><span class="n">corpora</span><span class="o">.</span><span class="n">Dictionary</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">corpus</span> <span class="o">=</span> <span class="p">[</span><span class="n">id2word</span><span class="o">.</span><span class="n">doc2bow</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span> <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lda_model</span> <span class="o">=</span> <span class="n">gensim</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">LdaMulticore</span><span class="p">(</span>
+    <span class="n">corpus</span> <span class="o">=</span> <span class="n">corpus</span><span class="p">,</span>
+    <span class="n">id2word</span> <span class="o">=</span> <span class="n">id2word</span><span class="p">,</span>
+    <span class="n">num_topics</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/tita/.local/share/uv/python/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=9710) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pprint</span><span class="p">(</span><span class="n">lda_model</span><span class="o">.</span><span class="n">print_topics</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(0,
+  &#39;0.019*&quot;Nansen&quot; + 0.015*&quot;het&quot; + 0.009*&quot;herrene&quot; + 0.009*&quot;liksom&quot; + &#39;
+  &#39;0.009*&quot;fantes&quot; + 0.008*&quot;Fridtjof&quot; + 0.008*&quot;Wergeland&quot; + 0.008*&quot;svenskene&quot; + &#39;
+  &#39;0.007*&quot;Wessel&quot; + 0.007*&quot;Herr&quot;&#39;),
+ (1,
+  &#39;0.015*&quot;het&quot; + 0.012*&quot;konge&quot; + 0.011*&quot;hu&quot; + 0.011*&quot;øksa&quot; + 0.010*&quot;diverse&quot; + &#39;
+  &#39;0.010*&quot;Hund&quot; + 0.008*&quot;vikingene&quot; + 0.007*&quot;Gaute&quot; + 0.007*&quot;høvdingen&quot; + &#39;
+  &#39;0.007*&quot;Bøndene&quot;&#39;),
+ (2,
+  &#39;0.025*&quot;Thrane&quot; + 0.024*&quot;Marcus&quot; + 0.015*&quot;aldeles&quot; + 0.014*&quot;svenskene&quot; + &#39;
+  &#39;0.013*&quot;het&quot; + 0.009*&quot;fantes&quot; + 0.009*&quot;smule&quot; + 0.009*&quot;likte&quot; + &#39;
+  &#39;0.008*&quot;Bjørnson&quot; + 0.007*&quot;Ibsen&quot;&#39;),
+ (3,
+  &#39;0.021*&quot;Leiv&quot; + 0.019*&quot;Jæren&quot; + 0.017*&quot;Grønland&quot; + 0.014*&quot;Gaute&quot; + &#39;
+  &#39;0.014*&quot;hu&quot; + 0.014*&quot;dreiv&quot; + 0.010*&quot;Gyda&quot; + 0.010*&quot;Hafrsfjord&quot; + &#39;
+  &#39;0.010*&quot;het&quot; + 0.009*&quot;døpe&quot;&#39;),
+ (4,
+  &#39;0.027*&quot;het&quot; + 0.014*&quot;fantes&quot; + 0.011*&quot;konge&quot; + 0.010*&quot;konene&quot; + &#39;
+  &#39;0.010*&quot;nordmenn&quot; + 0.009*&quot;Sigurdsson&quot; + 0.008*&quot;seinere&quot; + &#39;
+  &#39;0.008*&quot;Midt-Østen&quot; + 0.007*&quot;Hellige&quot; + 0.007*&quot;Kyrre&quot;&#39;),
+ (5,
+  &#39;0.015*&quot;Gerhardsen&quot; + 0.013*&quot;het&quot; + 0.013*&quot;nordmenn&quot; + 0.012*&quot;konge&quot; + &#39;
+  &#39;0.012*&quot;kongen&quot; + 0.011*&quot;Skule&quot; + 0.010*&quot;fantes&quot; + 0.009*&quot;vesle&quot; + &#39;
+  &#39;0.009*&quot;drakk&quot; + 0.008*&quot;trist&quot;&#39;),
+ (6,
+  &#39;0.017*&quot;Wergeland&quot; + 0.016*&quot;kongen&quot; + 0.007*&quot;svensker&quot; + 0.007*&quot;Ulrik&quot; + &#39;
+  &#39;0.007*&quot;Welhaven&quot; + 0.006*&quot;het&quot; + 0.006*&quot;begeistret&quot; + 0.005*&quot;fantes&quot; + &#39;
+  &#39;0.005*&quot;helvete&quot; + 0.005*&quot;seinere&quot;&#39;),
+ (7,
+  &#39;0.025*&quot;Nansen&quot; + 0.025*&quot;Wergeland&quot; + 0.018*&quot;Bjørnson&quot; + 0.014*&quot;Welhaven&quot; + &#39;
+  &#39;0.013*&quot;het&quot; + 0.009*&quot;kongen&quot; + 0.009*&quot;svenskene&quot; + 0.009*&quot;Fridtjof&quot; + &#39;
+  &#39;0.008*&quot;tolvte&quot; + 0.007*&quot;likte&quot;&#39;),
+ (8,
+  &#39;0.019*&quot;Wessel&quot; + 0.015*&quot;kongen&quot; + 0.014*&quot;het&quot; + 0.013*&quot;Wergeland&quot; + &#39;
+  &#39;0.011*&quot;Kvart&quot; + 0.011*&quot;svensker&quot; + 0.011*&quot;Frederik&quot; + 0.010*&quot;Bjørnson&quot; + &#39;
+  &#39;0.010*&quot;Ibsen&quot; + 0.009*&quot;herrer&quot;&#39;),
+ (9,
+  &#39;0.016*&quot;het&quot; + 0.013*&quot;fantes&quot; + 0.012*&quot;smule&quot; + 0.012*&quot;Gerhardsen&quot; + &#39;
+  &#39;0.010*&quot;vesle&quot; + 0.010*&quot;Gyda&quot; + 0.010*&quot;seinere&quot; + 0.010*&quot;sangen&quot; + &#39;
+  &#39;0.010*&quot;trist&quot; + 0.008*&quot;nordmenn&quot;&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prep</span> <span class="o">=</span> <span class="n">genvis</span><span class="o">.</span><span class="n">prepare</span><span class="p">(</span><span class="n">lda_model</span><span class="p">,</span> <span class="n">corpus</span><span class="p">,</span> <span class="n">id2word</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save to html</span>
+<span class="c1"># pyLDAvis.save_html(prep, &quot;result.html&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pyLDAvis</span><span class="o">.</span><span class="n">enable_notebook</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pyLDAvis</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">prep</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.4.0/pyLDAvis/js/ldavis.v1.0.0.css">
+
+
+<div id="ldavis_el97101293044863976485145088355" style="background-color:white;"></div>
+<script type="text/javascript">
+
+var ldavis_el97101293044863976485145088355_data = {"mdsDat": {"x": [0.10465811672286425, 0.08198270447313456, -0.004754684178950149, 0.030287044959982357, 0.02589762807171992, -0.10180449241717868, -0.06617718652343406, -0.011023001426696825, -0.07867864235202329, 0.019612512670581908], "y": [0.018681131743059347, 9.167819928312895e-06, -0.09171604188021114, 0.06684205706359793, 0.0404547991349259, 0.032106386541175515, 0.02744837510449563, -0.11052290097664902, 0.019582945233680475, -0.002885919784002428], "topics": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "cluster": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "Freq": [19.770815325096887, 15.360419561543024, 14.4376314501382, 13.384082245917186, 10.136112648936212, 8.641544869315803, 7.091193151956817, 6.982063731895022, 4.012478836016778, 0.18365817918407185]}, "tinfo": {"Term": ["Wergeland", "kongen", "Thrane", "Nansen", "Marcus", "Welhaven", "het", "svensker", "Leiv", "konge", "Kvart", "J\u00e6ren", "Gerhardsen", "Ulrik", "nordmenn", "hu", "svenskene", "Gr\u00f8nland", "Gaute", "seinere", "fantes", "Wessel", "Gyda", "Bj\u00f8rnson", "vesle", "trist", "dreiv", "helvete", "begeistret", "Viktor", "Viktor", "Kvart", "stormakt", "Jespersen", "adferd", "Ibsens", "allting", "Historiske", "Stortorget", "soger", "Maleren", "kongeriket", "unnet", "jernalder", "overg\u00e5", "orkan", "h\u00f8flighet", "uteblitt", "slepe", "Skuffet", "korridorene", "returnerte", "Lasten", "febrilsk", "ferietur", "tj\u00e6re", "motforestillinger", "INNHOLD", "s\u00f8rp\u00e5", "fremad", "fl\u00e5ten", "hevn", "Wessel", "pinne", "kanoner", "festningen", "Frederik", "torget", "Ibsen", "varmere", "spel", "svensker", "Bj\u00f8rnstjerne", "virvar", "engelskmenn", "kongen", "noengang", "Wergeland", "Dog", "Neppe", "uh\u00f8rt", "herrer", "Bj\u00f8rnson", "Sannheten", "herrene", "het", "svenskene", "smule", "nordmenn", "omsider", "seinere", "stolte", "konge", "fantes", "aldeles", "vesle", "Thrane", "Marcus", "skattene", "n\u00f8ytrale", "Borten", "Nordmenn", "arrogant", "n\u00f8ytralitet", "stred", "tja", "oppdrive", "sl\u00f8sing", "hurtigg\u00e5ende", "Halve", "raffinert", "Arbeiderforening", "egge", "reisene", "eve", "kr\u00f8ller", "u\u00e5r", "raid", "oppt\u00f8yer", "tuberkulosen", "gre", "1807", "opphisselse", "fridag", "Cadillac", "kvittet", "bevegelsen", "satellitt", "generalen", "arbeiderbevegelse", "stygge", "svenskene", "aldeles", "greia", "Samt", "unnskyld", "stemmerett", "drikker", "verdenskrigen", "Ibsen", "likte", "feiende", "hyppig", "arbeidsl\u00f8sheten", "digre", "folkeavstemning", "overordentlig", "smule", "liksom", "het", "fantes", "svensker", "Bj\u00f8rnson", "helvete", "sv\u00e6re", "stakkars", "konge", "Dog", "Bj\u00f8rnstjerne", "stolte", "kongen", "seinere", "herrer", "intelligente", "romersk", "Guttorm", "Loke", "Fr\u00f8y", "mordere", "Dyktige", "Hundrevis", "assistenten", "kaltes", "dundrende", "romerne", "Tulla", "kongefamilien", "bongen", "potter", "vikingene", "troskap", "Normandie", "riker", "genial", "lunken", "Oscarsborg", "bergenserne", "Mein", "hygget", "ussel", "Vidkun", "okkupasjon", "v\u00e5gen", "sangen", "hjelmen", "Quisling", "Gerhardsen", "Gyda", "trist", "Selskab", "vasket", "vesle", "stakkars", "seinere", "smule", "sv\u00e6re", "fantes", "het", "l\u00f8nna", "mora", "nordmenn", "kongens", "r\u00f8mme", "triste", "ytterst", "aldeles", "kongen", "drakk", "Welhaven", "diktning", "Henri", "unionen", "brillene", "forkjemper", "diplomat", "rasen", "konservator", "Nansen", "Michelsen", "Gribb", "\u00e5rhundres", "kulene", "framferd", "markedsf\u00f8re", "nystartede", "hovedperson", "upopul\u00e6re", "heading", "disponerte", "h\u00f8ylytt", "inspisere", "kajakk", "n\u00e5levende", "idealisme", "kjedet", "madam", "Ullmann", "t\u00f8rnet", "tolvte", "Wergeland", "Fridtjof", "stemmerett", "bue", "Bj\u00f8rnson", "Hurra", "ferden", "Nordpolen", "folkeavstemning", "erobre", "br\u00f8det", "\u00f8rn", "flagg", "datidens", "r\u00f8tter", "svenskene", "likte", "het", "kongen", "Sigurdsson", "konge", "herrer", "trist", "Bj\u00f8rnstjerne", "stolte", "fantes", "Wessel", "diverse", "nordmenn", "aldeles", "dialekter", "\u00e5rhundreskiftet", "offiseren", "Falsen", "sjokkerte", "hundre\u00e5ret", "f\u00f8rend", "Spr\u00e5ket", "grammatikk", "Krohg", "gruble", "skriftspr\u00e5k", "riksm\u00e5l", "forske", "sp\u00e5dde", "beskjedenhet", "flunkende", "restriksjonene", "1814.", "hardingfele", "Snarere", "Wedel", "fruktbar", "dekt", "PAA", "selvtilliten", "gol", "h\u00f8flige", "dansker", "dalene", "Nicolai", "levnet", "datidens", "Nansen", "borgerskapet", "Munch", "Fridtjof", "herrene", "Herr", "liksom", "stramme", "het", "flagg", "Gyda", "Frederik", "svenskene", "erobre", "Rein", "fantes", "Wessel", "vasket", "Wergeland", "aldeles", "herrer", "likte", "Hafrsfjord", "J\u00e6ren", "Leiv", "Gaute", "dreiv", "872", "forb\u00f8d", "bukta", "raus", "sprutet", "homofil", "ANNET", "jublet", "roret", "Finne", "fagre", "dattera", "d\u00f8pe", "Haralds", "glodde", "keiserens", "Gr\u00f8nland", "ordna", "beskyttes", "innbitt", "ydmyk", "befolket", "forskj\u00f8vet", "Cox", "Monroe", "hu", "latterlige", "inntog", "utafor", "vers", "Gyda", "hete", "diger", "liksom", "oppfunnet", "Herr", "het", "Welhaven", "digre", "Wergeland", "mildt", "Gerhardsen", "fantes", "konene", "jernet", "Kreta", "guden", "jobbene", "pint", "h\u00f8vding", "skjenk", "lysebl\u00e5", "herdet", "skakke", "Nantes", "avtrykk", "smertefullt", "limt", "veska", "s\u00f8mmene", "F\u00d8", "forvist", "sydde", "Midt-\u00d8sten", "Kyrre", "stillest\u00e5ende", "TV-skjermen", "lyng", "nasjoners", "b\u00f8lget", "kulturens", "skallen", "mentalitet", "tilnavnet", "Sole", "likner", "Sigurdsson", "ovenp\u00e5", "intriger", "d\u00f8pt", "Hellige", "het", "kristendommen", "mora", "fantes", "konge", "innerst", "hete", "nordmenn", "seinere", "diverse", "gammal", "hoffet", "trauste", "aldeles", "sinns", "pokker", "underlige", "likte", "herrene", "herrer", "kongen", "Skule", "geistlige", "Sverres", "bark", "Paven", "F\u00e6r\u00f8yane", "leggene", "forbod", "urene", "smug", "prekestolen", "s\u00f8r-", "Begravelser", "begj\u00e6re", "videref\u00f8rt", "disipler", "ringeste", "MIDT", "uviss", "luring", "ROMA", "skulte", "overklassen", "skj\u00e6rende", "bedyrer", "storsl\u00e5tt", "rydda", "minnetale", "avpasset", "hertug", "fattigere", "kloke", "Lovene", "Gerhardsen", "B\u00f8ndene", "vitterlig", "spratt", "kristendommen", "storhetstid", "pokker", "nordmenn", "drakk", "konge", "kongen", "vesle", "trist", "het", "fantes", "knekken", "Sannheten", "sangen", "liksom", "smule", "aldeles", "Bj\u00f8rnson", "underlige", "\u00f8ksa", "Hund", "Kolbein", "stanga", "Gestapo", "metallet", "Nord-Europa", "evnene", "Augustus", "klokere", "roing", "tilvirkning", "Mektige", "Bokn", "\u00e6rb\u00f8dighet", "hande", "h\u00f8vdingen", "armeen", "munk", "helvetes", "knelte", "Helgen", "kristnes", "liknet", "st\u00f8te", "Slaget", "Nordmennene", "skallen", "luktet", "\u00f8ks", "B\u00f8ndene", "hu", "vikingene", "diverse", "kvad", "Gaute", "konge", "het", "rotter", "vers", "sverd", "diger", "triste", "herrer", "stolte", "spyd", "sv\u00e6re", "Hellige", "likte", "stygge", "kasta", "dr\u00f8mte", "vindstille", "tjenerne", "Flekker\u00f8y", "v\u00e5gen", "Ulrik", "d\u00f8dd", "\u00f8let", "regjerte", "nebbet", "tipping", "Kristians", "ankret", "B\u00e6r", "mildest", "lunger", "fjellsiden", "smittsom", "koloniene", "smittsomme", "Magnusson", "Tyskebryggen", "aktualitet", "bergenserne", "Henri", "bergensere", "skrei", "bryggene", "Colombo", "1807", "oppdagelser", "pinne", "Columbus", "Wergeland", "Welhaven", "kongen", "helvete", "brillene", "begeistret", "svensker", "ferden", "gilde", "hogd", "russere", "seile", "kanoner", "seinere", "digre", "Kvart", "het", "fantes", "nordmenn", "vesle", "konge", "trist", "likte", "aldeles", "svenskene", "stolte"], "Freq": [21.0, 20.0, 11.0, 16.0, 11.0, 6.0, 38.0, 11.0, 7.0, 16.0, 7.0, 6.0, 10.0, 4.0, 15.0, 7.0, 16.0, 8.0, 5.0, 13.0, 22.0, 15.0, 9.0, 17.0, 12.0, 10.0, 4.0, 5.0, 7.0, 5.0, 4.453235714813755, 6.00897591655934, 2.021317492789543, 2.6463314993286877, 1.7360570974130165, 4.261919507525492, 2.964489480063401, 1.7034869360487186, 1.5630010649626158, 1.058863679489701, 1.058860735249966, 1.0588521478840716, 1.0588490809676807, 1.0588430698115545, 1.0588374266853953, 1.058837181332084, 1.0588396348651967, 1.0588360772421834, 1.0588316608825805, 1.0588245456365537, 1.058825404373143, 1.0588181664504608, 1.0588125233243015, 1.0588111738810897, 1.0588130140309242, 1.058805653431586, 1.058800623688705, 1.0588013597486388, 1.0587758430042669, 1.0588054080782747, 3.8580316448871357, 3.031125476577491, 9.873197825489786, 1.4439517126820598, 2.8361267614403958, 2.5648651219149605, 5.650172706279854, 2.9007248533510883, 5.123070373548844, 2.0212940615483173, 2.6869894872456475, 5.687229889000633, 4.48885316430401, 1.4873045386933392, 1.4807873413627644, 7.713000299036393, 2.1380821150355653, 6.675821681256553, 3.7583997990136964, 2.0329631877089125, 1.4006034257070388, 4.7237136958629975, 5.178804831736643, 2.5207810203594447, 3.7366492279697257, 7.125625943978981, 4.344661476804505, 4.230296900649313, 3.8322099263492833, 2.405237030836985, 3.0593734940104795, 2.7965117704496394, 3.0527280995747668, 3.2011094402174964, 2.880332558238301, 2.652938864001154, 10.422741408115872, 9.63437699653377, 2.797916194880635, 1.5783781701473583, 2.3497873328668057, 1.3052787152830447, 0.8268021547104643, 0.826789001871188, 0.826787953456463, 0.8267860472478723, 0.8267841410392816, 0.8267832832454157, 0.8267767068257776, 0.8267668898515352, 0.826743824727587, 0.8256470876148937, 0.8256341253964766, 0.8255753188614516, 0.8255163217055677, 0.8254747663582891, 0.8253120714550678, 0.8252268639310609, 0.8251927427972863, 0.8250399601787369, 0.8247870062987432, 1.093176219735291, 0.7967519200023012, 0.7947900501206919, 0.7945340463069529, 0.7917397351337592, 2.027425348149786, 1.215833403647566, 1.0662172834987622, 1.5339924843532504, 1.9751765519187967, 5.726206763842804, 5.952631938878944, 1.2494674058167856, 2.5691949915969254, 1.1702227882130363, 1.7424889097994354, 2.7810147964106693, 1.633557285534492, 3.032278250626119, 3.6053384987114288, 1.603632288730742, 1.7359042934643762, 1.1266973743559379, 2.4832587240457458, 1.3706458484147792, 1.5774270673709991, 3.772083332704646, 2.9962936073332047, 5.314151183821359, 3.8473610349205964, 2.6371423686771114, 3.2097216803349724, 1.7024842632094692, 2.1158515053622153, 2.120121984468093, 2.6099051259863315, 2.034825059278254, 1.9958878894991126, 1.9862628704617926, 2.2525472483724243, 2.065343268195448, 1.9061834288057202, 1.7302727419840933, 2.8835897421985845, 2.9402120392628173, 0.9331963803050366, 0.9232818748028283, 0.9213629729319187, 0.9184046210886393, 0.913621789530003, 1.3995625463751247, 0.9046094904116382, 0.9010515489221403, 1.7986012363067525, 1.7268674526322252, 1.3295551472923013, 1.325492396650489, 1.284458892880407, 2.60318245724508, 1.2587583288216881, 1.720584706319871, 1.7289877406565337, 0.78862396623451, 0.792695854504279, 0.7802520177498177, 1.4055025420545144, 0.765613896101516, 0.7689062192881545, 0.7688185159766876, 0.7643899914628435, 1.1286397609023362, 1.0113711166739923, 3.7523106613027086, 1.332838422435571, 2.2203368086523874, 4.431273327336601, 3.840691590591785, 3.721047073510108, 2.0071245938165587, 2.768356011882365, 4.038380408882565, 3.0288911060601285, 3.778443918920554, 4.437551773588741, 2.8352065396753203, 4.897408813093076, 6.273514799749558, 1.3826181590982192, 1.8453846372608895, 3.211182483736321, 2.1407398273673457, 1.6177519913251395, 1.7991410730329012, 1.7699399016208832, 2.1619891124269164, 2.1826168596162554, 1.7590050276635087, 4.859948063250583, 1.7836494780822951, 1.7313977264057112, 1.709887956237007, 1.1955372359493193, 1.18155571094016, 1.2396919509484576, 0.7623138419876773, 1.2219002951100124, 8.902444138035303, 2.3728673300090826, 0.7675979807964087, 0.7260634937402246, 0.7524703188711226, 0.7205564557587604, 1.0810867324418827, 0.7575157795045807, 0.7420740323813532, 0.6920914673648839, 0.7119978417333087, 0.7364538838658867, 0.6997403803701739, 0.7314495316864162, 0.7378596268974986, 0.6831706837074325, 0.7290135028362792, 0.712247399115597, 0.7055552749959452, 0.9893394730268988, 0.7061563719453636, 2.711321453379672, 8.816444255724692, 3.0506993958253275, 1.7388608624179303, 1.3345798132007112, 6.307928993242393, 2.492789078076431, 1.5656652154988886, 1.4110771649444096, 1.2714959423747076, 1.8967864211519105, 1.1462604906307097, 1.21674579326426, 1.824629374722865, 1.47909064530627, 1.4480498593186986, 3.1757461639178914, 2.6511594385872947, 4.61362853228366, 3.262952226401665, 1.5305972958734062, 2.5341026590970452, 2.3079161388034612, 1.9754228243084537, 1.897546802979608, 1.8983834223037919, 2.1182389084937605, 1.949625151723008, 1.637113867761239, 1.7342904328083286, 1.534276959265895, 1.3333559792625396, 1.7796231752120755, 1.2920198201029578, 1.5986154326618653, 1.1955650503570425, 1.1591420397182786, 0.7025887920522922, 0.7015461992691999, 0.7008303404855144, 1.8449573963061325, 0.6999188186658031, 0.699737495447268, 0.6978774072793275, 0.6972362035981049, 0.6971092836345241, 0.6969968292763067, 0.6955591996789174, 0.6938630131091392, 1.8164870723447453, 0.6893969775819272, 0.6866478836234932, 1.0356996076668015, 0.6834447583384535, 0.6796321908100548, 0.6742998542033765, 0.6724129103246087, 0.6697165843787835, 0.6648160775391746, 0.9938021201251784, 0.6648808582936286, 1.3227875337718187, 1.258738738949152, 1.8374052182155163, 5.038021664133676, 1.7169351535965625, 1.6933859027919749, 2.1675104583991027, 2.533297315499604, 1.9750758939146869, 2.404708901574893, 1.3468545274605477, 4.112258644623726, 1.5397235632573603, 1.9023565410249943, 1.7693421550105342, 2.1104847778743654, 1.2910165360300925, 0.9833259400391022, 2.3493433693943975, 2.0231730254454363, 1.4619248960669782, 2.1500860706933054, 1.8275693612955535, 1.6620809491186999, 1.5537578420053098, 2.2685682484359058, 4.3546921355559265, 4.723275936031875, 3.316402071460522, 3.1238043963493265, 0.8050441734077616, 0.8050175777696911, 0.8050025641030384, 0.8049999367113743, 0.804999668610184, 0.8049457802709484, 0.804928675415012, 1.212282481769157, 1.1950716722423207, 1.4651927368361146, 1.0602570959773376, 1.3946134899018139, 1.9697027683522021, 1.5368841747479516, 1.1056929553683768, 0.9713809079743544, 4.0046261915294075, 0.9597848880541963, 0.6864717570693261, 0.6818257779236508, 0.6812649102336967, 0.6722117764826001, 0.6668149531435762, 0.6629071638150709, 0.6628796030127155, 3.1374582537651885, 1.7808173295613607, 1.176755535128418, 1.1345914754224287, 1.798236292852289, 2.268643960212026, 1.5454678096947234, 1.455786996399632, 1.8608358832011607, 1.3015625374050976, 1.4600365075052, 2.258682177907013, 1.2595255576632758, 1.303899521860065, 1.5119436861854534, 1.2343374508414842, 1.1885675373674227, 1.2213160977536053, 1.9527634466692025, 1.322883320272629, 1.3228675681280218, 1.3228526959914932, 1.003505684336741, 0.6929511853986093, 0.692943221325498, 0.6929430013234783, 0.6929354332540023, 0.6929341572422882, 0.6929337612386529, 0.6929308572119935, 0.692927337179679, 0.69291660108112, 0.692916645081524, 0.6929135210528449, 0.6929110130298208, 0.692907096993871, 0.6928979449098535, 0.6928946448795587, 1.4331811568237562, 1.3326467459023799, 0.5646072871818564, 0.5521478248020728, 0.5472809841237257, 0.5327894510892205, 0.5195835218567562, 0.5075392912888645, 0.692936841266928, 0.5001168631498311, 0.8657749159470739, 0.6929401412972228, 0.8234966878264282, 1.6514842328796173, 0.9813419768704926, 0.8249684133370949, 1.3228841122798995, 1.3516484083405678, 5.194255428064842, 1.3228774242185022, 1.3244885430088207, 2.5844167013433665, 2.1186212092690084, 1.1364866971229197, 1.3228812082532402, 1.8124931509662836, 1.5999949602001637, 1.3200573503297894, 0.9925428076958448, 0.938974427929868, 0.8441399173344545, 1.1398771042473794, 0.9376574958402286, 0.8555309179055941, 0.9160718656808191, 0.9683864099363928, 0.9509410417852263, 0.9180992282923202, 0.8842416214742749, 2.015807330244798, 1.1385059731524705, 1.5250256396043234, 1.4847402039939595, 1.0750979590751704, 1.0305186682423968, 1.003858918661076, 0.6754512140258134, 0.6754424194034655, 0.6754416395847351, 0.6754386502796021, 0.6754425926965167, 0.6754177684669336, 0.675413392817391, 0.6753935940862924, 0.9866521317291715, 0.9728481271504528, 0.5811319652957991, 0.57333694059039, 0.5731845293518675, 0.5696220141287464, 0.550295073362046, 0.5477433765065217, 0.5467846760240705, 0.5445344657543558, 0.5486720106445914, 0.5339141577888546, 0.5418294045485277, 0.5207001294029155, 0.5166775211288824, 1.0487204172277143, 1.0231896718749027, 0.9717499690850556, 2.774068231742938, 1.1757920526328212, 0.96544218866823, 1.2232225340368397, 1.30987737769878, 1.0418065443643483, 1.1996886445129018, 2.393704367702016, 1.6573613980254582, 2.311000778900281, 2.208717848002786, 1.726035701281926, 1.5368627680520246, 2.406546595846625, 1.9406889515867425, 1.015440786444373, 1.1161086261047684, 1.2057613529057867, 1.3764862877246284, 1.4076816363347702, 1.3959336671619065, 1.2819457437682433, 1.0853102918749051, 1.1580872984808628, 1.08163892373177, 0.7264516667324816, 0.42593517415083487, 0.42592561363494796, 0.4259189909859222, 0.4259166506513041, 0.42591470867151454, 0.42590828519990304, 0.42590330576454527, 0.42589563743409437, 0.4258918032688689, 0.39613205847024596, 0.39171786371713546, 0.3871986028779766, 0.38357479389920096, 0.7780211392206128, 0.3828650998748384, 0.37979617427515305, 0.3792840891429626, 0.378689768635839, 0.37496701827650497, 0.37406678615817823, 0.4794505103880656, 0.46881129941964717, 0.7284055971668607, 0.42591749715531485, 0.42593094163078077, 0.5806625632639414, 0.42591525640940386, 0.7451653308996048, 1.1907746027093646, 0.8130764139334903, 1.1208672142462057, 0.7383391723507331, 0.7864428084468131, 1.2758630945138019, 1.5969008360917867, 0.5708550175889735, 0.6282022285114033, 0.5271400068454419, 0.5872441817423942, 0.5909803018856639, 0.6909852400421151, 0.6165203735734266, 0.5298352756158821, 0.5675269123789176, 0.5105312495927447, 0.5473956029654444, 0.48159769270867875, 0.4686261640130462, 0.461297231876103, 0.012281908448979953, 0.012176930801146657, 0.012183228160887067, 0.018406412160163255, 0.035415852040800805, 0.016994227528995366, 0.01604264359536606, 0.010775156300494264, 0.010862396271100003, 0.010614440295392932, 0.01078347414862044, 0.010571688675656872, 0.010772373428165984, 0.010526645345743836, 0.01070924256770648, 0.010542724923365476, 0.010182444380127963, 0.022930455454411015, 0.009695004121133326, 0.009575971942413589, 0.009527832353648819, 0.009329441590491398, 0.018756378298223342, 0.018972554601277357, 0.009235398283358289, 0.00922945134673047, 0.01426940008279513, 0.013188042220009409, 0.012244776134506282, 0.008848849681724773, 0.013828899427077272, 0.020848636756210584, 0.0839417677574639, 0.03360460556901468, 0.07672883618352573, 0.024705959908300254, 0.013061035208958259, 0.027909419742805003, 0.035608590450662454, 0.018059696125248235, 0.021072353708812604, 0.01304956184343773, 0.015004073819111856, 0.017055351576117397, 0.017066497880066173, 0.024431330750891406, 0.01978312941398754, 0.019055069842696754, 0.03156798518460797, 0.0263403241887242, 0.022983402962239267, 0.021186597341453946, 0.02246318361247859, 0.020010828084818476, 0.018289354886334964, 0.018335448915792092, 0.018063999207112113, 0.016998751690806696], "Total": [21.0, 20.0, 11.0, 16.0, 11.0, 6.0, 38.0, 11.0, 7.0, 16.0, 7.0, 6.0, 10.0, 4.0, 15.0, 7.0, 16.0, 8.0, 5.0, 13.0, 22.0, 15.0, 9.0, 17.0, 12.0, 10.0, 4.0, 5.0, 7.0, 5.0, 5.22698912937994, 7.547663597044762, 2.5854468645826785, 3.5248141025974116, 2.4425256539710576, 5.998585684301798, 4.271796287510023, 2.515880014347148, 2.3366495096166986, 1.6229903172076898, 1.6229879289906046, 1.6229776537028473, 1.6229764236405795, 1.6229706255319003, 1.6229629037182633, 1.6229629629023694, 1.6229670639795877, 1.622963555269094, 1.6229574471922004, 1.6229505669210855, 1.6229533336840802, 1.6229441212359434, 1.6229385941671655, 1.6229373766651785, 1.6229414680779233, 1.6229318452532542, 1.622926725421069, 1.6229300492011518, 1.622904932940009, 1.6229503040041675, 5.918058353502292, 4.715518050577733, 15.787706317498177, 2.2270441353536463, 4.689338160084613, 4.236375845459791, 10.109774206415338, 4.900363026769762, 9.176069959119125, 3.3697579946620286, 4.7840585091953525, 11.560247619099407, 9.772145936990674, 2.4715049985244333, 2.470278856338702, 20.200662480104164, 4.052619398657032, 21.03312405810073, 9.621914383624127, 4.061221792513576, 2.4229740067893624, 14.568775767970125, 17.359823849380952, 5.868341749499449, 11.874345481565625, 38.927132127552156, 16.429652219717966, 17.186421141749047, 15.551021579766015, 5.653975955999298, 13.03755871809106, 9.875260612781231, 16.61588438747278, 22.382190066411116, 17.838683395083113, 12.986133392175917, 11.214824945027006, 11.435146851741205, 3.6705006912356617, 2.1636074393461437, 3.730613870952399, 2.1950126486079053, 1.4120272618772018, 1.4120145515262574, 1.4120137931300436, 1.412011726795064, 1.4120099551686331, 1.4120091505604915, 1.4120024893830578, 1.4119929244566471, 1.4119706038092146, 1.4117965905135146, 1.4117837464916185, 1.4117810689860744, 1.4117623691076093, 1.411747084274889, 1.4117110257074286, 1.4116861698988972, 1.41167767742998, 1.4116305229640635, 1.4115930893907294, 1.9053541899850757, 1.4086648624672078, 1.4084141304327873, 1.4084247975285211, 1.4081049804294676, 3.718624841173221, 2.1995607058809257, 1.9299338515912208, 2.8848566193340375, 4.066993032323148, 16.429652219717966, 17.838683395083113, 2.4663570177674234, 6.7829034043907415, 2.2781646328528717, 3.976594318564785, 7.734430311355216, 3.703997937004591, 9.176069959119125, 12.245115585543308, 3.887920610044423, 4.447480143105401, 2.2749209937487436, 8.015904024805486, 3.136595811741262, 3.966687352362372, 17.186421141749047, 12.39486223006528, 38.927132127552156, 22.382190066411116, 11.560247619099407, 17.359823849380952, 5.092991437203805, 9.208179856144067, 9.315509859321919, 16.61588438747278, 9.621914383624127, 9.772145936990674, 9.875260612781231, 20.200662480104164, 13.03755871809106, 14.568775767970125, 2.4171420245427924, 4.03696447145467, 4.78830519629366, 1.544948700581247, 1.542374499322458, 1.5421725312381422, 1.5406623715956969, 1.5399075943027756, 2.3676110105851094, 1.5372466222150292, 1.5362786872339418, 3.0922525057653956, 3.0230938917067967, 2.344743881915969, 2.355454996359491, 2.3007341671705914, 4.713773021305114, 2.292260482918035, 3.1463672512427636, 3.2327420773445263, 1.497515950170096, 1.5187156567701932, 1.5119965191640437, 2.7384014262613086, 1.4953693905943202, 1.5091818033647244, 1.5148524848397096, 1.5118949158972002, 2.2330867469683335, 2.0027127055818705, 8.021324208911011, 2.7411445599400763, 4.88960610981549, 10.553724255737905, 9.109011640593701, 10.57267913285628, 4.911280555064973, 7.598881101982194, 12.986133392175917, 9.315509859321919, 13.03755871809106, 17.186421141749047, 9.208179856144067, 22.382190066411116, 38.927132127552156, 3.079813978796735, 5.207677408776059, 15.551021579766015, 7.105959255616212, 4.280350366455091, 6.729508162909112, 7.271003550442872, 17.838683395083113, 20.200662480104164, 8.331612295259761, 6.7842800291098255, 2.8653602700834013, 2.8205112784663218, 2.9940244957136644, 2.1158921450778467, 2.1851563668178082, 2.3124674678687436, 1.439967367722958, 2.308708137122606, 16.87912288018433, 4.593661657622996, 1.4891952334648906, 1.4218216921558606, 1.4826792960430057, 1.4228596234777138, 2.1397887045823736, 1.511989785825315, 1.4814872687515965, 1.3861710987258993, 1.430719183411573, 1.4799099916873082, 1.4094123896086808, 1.4785242415973368, 1.5067431059562184, 1.4062894825767753, 1.504462096082728, 1.4704029535911383, 1.472555571634376, 2.06770213657054, 1.4975263769914235, 5.800036578548957, 21.03312405810073, 7.158802108355598, 3.976594318564785, 2.9663514663485597, 17.359823849380952, 6.445618243649442, 3.738815523778796, 3.603059395854419, 3.136595811741262, 5.454107495686977, 2.7719126498006905, 3.087815446279942, 6.064075060245606, 4.424798940069749, 4.338411848753525, 16.429652219717966, 12.245115585543308, 38.927132127552156, 20.200662480104164, 4.916214109552784, 16.61588438747278, 14.568775767970125, 10.57267913285628, 9.772145936990674, 9.875260612781231, 22.382190066411116, 15.787706317498177, 8.079097575282598, 15.551021579766015, 17.838683395083113, 2.0053777101406167, 2.748496068716814, 2.026800017777161, 2.6948230011079453, 2.0584573669546553, 2.010266354732215, 1.3326129852704407, 1.3327021352178368, 1.3329478030200597, 3.5096178294315057, 1.3329648027635785, 1.3330176817272408, 1.333261080131578, 1.3332126677355738, 1.333305518438497, 1.3334762065631665, 1.3334826464934608, 1.3336160710206146, 3.5194346555210294, 1.3378418430025372, 1.3345941634735008, 2.024622962798888, 1.3427458747270218, 1.3449581043574852, 1.344932155406401, 1.3470301228236485, 1.3477654036057296, 1.3490490256751027, 2.016659956972853, 1.3500161257660002, 2.6956152846004526, 2.8093743129786604, 4.424798940069749, 16.87912288018433, 4.434311003596779, 4.440077519253012, 7.158802108355598, 11.874345481565625, 8.3650040955138, 12.39486223006528, 4.378423956174335, 38.927132127552156, 6.064075060245606, 9.109011640593701, 10.109774206415338, 16.429652219717966, 5.454107495686977, 2.904862546163618, 22.382190066411116, 15.787706317498177, 7.598881101982194, 21.03312405810073, 17.838683395083113, 14.568775767970125, 12.245115585543308, 2.855778613521509, 6.312099796158848, 7.141730607754729, 5.137994040400466, 4.909451516401202, 1.3922478428963623, 1.3922216820281128, 1.3922072695154795, 1.39220427803939, 1.3922041576605544, 1.3921514671888997, 1.3921351804691366, 2.1101300686663054, 2.099324196340262, 2.5786137544710894, 1.9622486181866505, 2.5826588855377013, 3.6755402549568963, 2.9097687319119987, 2.1047337781187334, 1.913858583182881, 8.010794159809402, 1.9291333823512242, 1.385656084351533, 1.3844020022614383, 1.3841868515613989, 1.383657026744966, 1.3823881508457496, 1.3829971499968285, 1.385619104000254, 7.770673119168184, 4.2947381182903, 2.8767461557844496, 2.9787658685849245, 6.1584613022879395, 9.109011640593701, 6.296765885393459, 6.390570522233575, 12.39486223006528, 5.383623888150769, 8.3650040955138, 38.927132127552156, 6.7842800291098255, 8.015904024805486, 21.03312405810073, 8.17455314729402, 10.553724255737905, 22.382190066411116, 2.5501662459895713, 1.9202836482336483, 1.9202689527486165, 2.3298230520795524, 1.7972362125532577, 1.2903463112512648, 1.2903385170639832, 1.2903397611851168, 1.2903310364904317, 1.290331069430738, 1.2903303561663448, 1.2903267513160168, 1.290325003748896, 1.2903140123787875, 1.2903141365479383, 1.290309604161228, 1.2903070408901285, 1.2903032918751876, 1.290296327549295, 1.2902916359620913, 2.7952023633817586, 2.842808231068769, 1.2408893424409653, 1.2361072641108675, 1.2342134058182221, 1.2286195526635084, 1.223543322876415, 1.2188975016465227, 1.6775395481378537, 1.2160379181618395, 2.1359320817345155, 1.702512448097771, 2.0808300161471034, 4.916214109552784, 2.6114280151796225, 2.1552127966816137, 4.318541675367375, 4.64222524096242, 38.927132127552156, 4.877771996260789, 5.207677408776059, 22.382190066411116, 16.61588438747278, 4.000474168591363, 6.296765885393459, 15.551021579766015, 13.03755871809106, 8.079097575282598, 3.621727564959549, 3.403036386295085, 2.819109347940181, 17.838683395083113, 7.832288043497428, 4.620509868682614, 7.8081071672425, 12.245115585543308, 11.874345481565625, 14.568775767970125, 20.200662480104164, 3.0695199435395275, 1.8744101577736951, 2.51865064582252, 2.5161611046793064, 1.8945477597959446, 1.8867481143310068, 1.8871253168460533, 1.2744557638324274, 1.2744444324002095, 1.2744448319650385, 1.2744396751473475, 1.2744483431843934, 1.274424166070554, 1.2744205009405938, 1.274402848991831, 2.0282541428180507, 2.033972313448742, 1.286670892789227, 1.2872313604018408, 1.2878757843426194, 1.2872337947428472, 1.2565028605222874, 1.2587903230428912, 1.2626315641422052, 1.2626733271699735, 1.287005026432448, 1.2681724193903379, 1.2897759221226965, 1.2557413606814567, 1.259241415196374, 2.66822683101871, 2.6807928601577387, 2.730299352691542, 10.553724255737905, 3.563973257807661, 2.788868572917184, 4.284601450840883, 4.877771996260789, 3.50319694089322, 4.620509868682614, 15.551021579766015, 8.331612295259761, 16.61588438747278, 20.200662480104164, 12.986133392175917, 10.57267913285628, 38.927132127552156, 22.382190066411116, 3.8687273088094174, 5.868341749499449, 8.021324208911011, 12.39486223006528, 17.186421141749047, 17.838683395083113, 17.359823849380952, 7.8081071672425, 1.8525677790629531, 1.908031408180962, 1.4975954860399394, 1.0476086507463915, 1.0475996610218599, 1.0475933691430064, 1.0475909996097554, 1.047589357004629, 1.047583209908758, 1.0475785368826185, 1.0475707405956822, 1.0475674562027062, 1.069196666277883, 1.0723847583508945, 1.075652299282964, 1.0782768078735026, 2.192069155360712, 1.0787752697607236, 1.081028027826604, 1.0813774259495563, 1.0818235093086277, 1.084519209381254, 1.0851489890146215, 1.6487804892909048, 1.8354741767924196, 2.8540939959938356, 1.673823158911197, 1.6775395481378537, 2.3027253932311025, 1.7641170550170313, 3.563973257807661, 7.770673119168184, 4.713773021305114, 8.079097575282598, 4.200168881734843, 5.137994040400466, 16.61588438747278, 38.927132127552156, 3.8440015026621652, 6.1584613022879395, 3.4178172970339764, 6.390570522233575, 6.729508162909112, 14.568775767970125, 9.875260612781231, 4.105661080235416, 9.208179856144067, 4.64222524096242, 12.245115585543308, 4.066993032323148, 3.635617272483014, 3.5606778185996917, 1.311485457243169, 1.3118408674411997, 1.317309271416874, 2.0027127055818705, 4.100985416654045, 2.0363914993945893, 1.9539660593437396, 1.3230518796762267, 1.3582239017934137, 1.3330855912284574, 1.358823845325639, 1.3357827002256033, 1.3615105408404458, 1.3366865410311375, 1.3654227444311196, 1.3647295661862606, 1.3464109306613585, 3.1043225345424803, 1.3635965713334919, 1.3645226510290063, 1.366152738372093, 1.3504332957584524, 2.7384014262613086, 2.8205112784663218, 1.373669052272371, 1.374385740041775, 2.174535637168031, 2.018488294095413, 1.9053541899850757, 1.3825607799918938, 2.2270441353536463, 3.4663246019197445, 21.03312405810073, 6.7842800291098255, 20.200662480104164, 5.092991437203805, 2.1158921450778467, 7.45375476192995, 11.560247619099407, 3.738815523778796, 5.52522613185548, 2.12390683482806, 3.009103031659374, 4.118616553652395, 4.689338160084613, 13.03755871809106, 8.015904024805486, 7.547663597044762, 38.927132127552156, 22.382190066411116, 15.551021579766015, 12.986133392175917, 16.61588438747278, 10.57267913285628, 12.245115585543308, 17.838683395083113, 16.429652219717966, 9.875260612781231], "Category": ["Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Default", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic5", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic6", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic7", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic8", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic9", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10", "Topic10"], "logprob": [30.0, 29.0, 28.0, 27.0, 26.0, 25.0, 24.0, 23.0, 22.0, 21.0, 20.0, 19.0, 18.0, 17.0, 16.0, 15.0, 14.0, 13.0, 12.0, 11.0, 10.0, 9.0, 8.0, 7.0, 6.0, 5.0, 4.0, 3.0, 2.0, 1.0, -4.7734, -4.4737, -5.5632, -5.2938, -5.7154, -4.8173, -5.1803, -5.7343, -5.8204, -6.2098, -6.2098, -6.2098, -6.2098, -6.2098, -6.2098, -6.2098, -6.2098, -6.2098, -6.2098, -6.2098, -6.2098, -6.2098, -6.2098, -6.2098, -6.2098, -6.2099, -6.2099, -6.2099, -6.2099, -6.2099, -4.9168, -5.1581, -3.9772, -5.8996, -5.2246, -5.3251, -4.5353, -5.202, -4.6332, -5.5633, -5.2786, -4.5288, -4.7654, -5.87, -5.8744, -4.2241, -5.5071, -4.3685, -4.943, -5.5575, -5.9301, -4.7144, -4.6224, -5.3424, -4.9488, -4.3033, -4.798, -4.8247, -4.9236, -5.3893, -5.1488, -5.2386, -5.151, -5.1035, -5.2091, -5.2913, -3.6706, -3.7492, -4.9857, -5.5582, -5.1603, -5.7482, -6.2048, -6.2048, -6.2048, -6.2048, -6.2048, -6.2048, -6.2048, -6.2048, -6.2048, -6.2062, -6.2062, -6.2063, -6.2063, -6.2064, -6.2066, -6.2067, -6.2067, -6.2069, -6.2072, -5.9255, -6.2418, -6.2443, -6.2446, -6.2481, -5.3078, -5.8192, -5.9505, -5.5867, -5.3339, -4.2695, -4.2307, -5.7919, -5.071, -5.8574, -5.4593, -4.9918, -5.5238, -4.9053, -4.7322, -5.5423, -5.4631, -5.8953, -5.105, -5.6993, -5.5588, -4.687, -4.9172, -4.3442, -4.6672, -5.0449, -4.8484, -5.4825, -5.2651, -5.2631, -5.0553, -5.3042, -5.3235, -5.3283, -5.2025, -5.2893, -5.3695, -5.4043, -4.8936, -4.8741, -6.0218, -6.0324, -6.0345, -6.0377, -6.043, -5.6165, -6.0529, -6.0568, -5.3656, -5.4063, -5.6678, -5.6708, -5.7023, -4.9959, -5.7225, -5.41, -5.4051, -6.1901, -6.1849, -6.2008, -5.6122, -6.2197, -6.2154, -6.2155, -6.2213, -5.8316, -5.9413, -4.6303, -5.6653, -5.155, -4.4639, -4.607, -4.6386, -5.2559, -4.9344, -4.5568, -4.8444, -4.6233, -4.4625, -4.9105, -4.3639, -4.1163, -5.6286, -5.3399, -4.786, -5.1915, -5.4716, -5.3653, -5.3817, -5.1816, -5.1721, -5.3879, -4.2958, -5.2982, -5.3279, -5.3404, -5.6983, -5.71, -5.662, -6.1483, -5.6764, -3.6905, -5.0128, -6.1413, -6.197, -6.1612, -6.2046, -5.7989, -6.1546, -6.1752, -6.2449, -6.2165, -6.1828, -6.2339, -6.1896, -6.1809, -6.2579, -6.1929, -6.2162, -6.2256, -5.8876, -6.2248, -4.8794, -3.7002, -4.7615, -5.3236, -5.5882, -4.035, -4.9635, -5.4285, -5.5325, -5.6367, -5.2367, -5.7404, -5.6807, -5.2755, -5.4854, -5.5066, -4.7213, -4.9019, -4.3478, -4.6942, -5.4512, -4.947, -5.0405, -5.1961, -5.2363, -5.2359, -5.1263, -5.2092, -5.3839, -5.3263, -5.4488, -5.3112, -5.0225, -5.3427, -5.1298, -5.4203, -5.4512, -5.9519, -5.9534, -5.9544, -4.9864, -5.9557, -5.9559, -5.9586, -5.9595, -5.9597, -5.9599, -5.9619, -5.9644, -5.002, -5.9708, -5.9748, -5.5638, -5.9795, -5.9851, -5.993, -5.9958, -5.9998, -6.0071, -5.6051, -6.007, -5.3192, -5.3688, -4.9905, -3.9819, -5.0584, -5.0722, -4.8253, -4.6694, -4.9183, -4.7215, -5.3011, -4.1849, -5.1673, -4.9558, -5.0283, -4.852, -5.3435, -5.6157, -4.7448, -4.8942, -5.2191, -4.8334, -4.9959, -5.0908, -5.1582, -4.6202, -3.9681, -3.8869, -4.2405, -4.3003, -5.6562, -5.6563, -5.6563, -5.6563, -5.6563, -5.6564, -5.6564, -5.2469, -5.2612, -5.0574, -5.3809, -5.1068, -4.7615, -5.0096, -5.3389, -5.4684, -4.0519, -5.4804, -5.8156, -5.8224, -5.8232, -5.8366, -5.8446, -5.8505, -5.8505, -4.296, -4.8623, -5.2766, -5.3131, -4.8526, -4.6202, -5.004, -5.0638, -4.8183, -5.1758, -5.0609, -4.6246, -5.2086, -5.174, -5.026, -5.2288, -5.2666, -5.2394, -4.5724, -4.9618, -4.9618, -4.9619, -5.2381, -5.6084, -5.6084, -5.6085, -5.6085, -5.6085, -5.6085, -5.6085, -5.6085, -5.6085, -5.6085, -5.6085, -5.6085, -5.6085, -5.6085, -5.6085, -4.8817, -4.9545, -5.8133, -5.8356, -5.8444, -5.8713, -5.8964, -5.9198, -5.6085, -5.9346, -5.3858, -5.6085, -5.4358, -4.74, -5.2605, -5.4341, -4.9618, -4.9403, -3.5941, -4.9618, -4.9606, -4.2921, -4.4909, -5.1137, -4.9618, -4.6469, -4.7716, -4.964, -5.2491, -5.3046, -5.4111, -5.1107, -5.306, -5.3977, -5.3293, -5.2738, -5.2919, -5.3271, -5.3647, -4.5251, -5.0964, -4.8041, -4.8309, -5.1537, -5.1961, -5.2223, -5.6185, -5.6185, -5.6185, -5.6185, -5.6185, -5.6186, -5.6186, -5.6186, -5.2396, -5.2537, -5.7689, -5.7824, -5.7827, -5.7889, -5.8234, -5.8281, -5.8298, -5.834, -5.8264, -5.8537, -5.8389, -5.8787, -5.8865, -5.1786, -5.2032, -5.2548, -4.2058, -5.0642, -5.2613, -5.0246, -4.9562, -5.1852, -5.0441, -4.3533, -4.7209, -4.3885, -4.4337, -4.6803, -4.7964, -4.3479, -4.5631, -5.2108, -5.1163, -5.039, -4.9066, -4.8842, -4.8926, -4.9778, -5.1443, -4.5254, -4.5937, -4.9918, -5.5257, -5.5257, -5.5257, -5.5257, -5.5257, -5.5257, -5.5257, -5.5258, -5.5258, -5.5982, -5.6094, -5.621, -5.6304, -4.9232, -5.6323, -5.6403, -5.6417, -5.6432, -5.6531, -5.6555, -5.4073, -5.4298, -4.9891, -5.5257, -5.5257, -5.2158, -5.5257, -4.9663, -4.4976, -4.8791, -4.5581, -4.9756, -4.9124, -4.4286, -4.2041, -5.2328, -5.1371, -5.3125, -5.2045, -5.1982, -5.0418, -5.1559, -5.3074, -5.2387, -5.3445, -5.2748, -5.4028, -5.4301, -5.4459, -5.9877, -5.9963, -5.9958, -5.5832, -4.9287, -5.663, -5.7206, -6.1186, -6.1106, -6.1337, -6.1179, -6.1377, -6.1189, -6.142, -6.1248, -6.1404, -6.1752, -5.3634, -6.2243, -6.2366, -6.2416, -6.2627, -5.5643, -5.5529, -6.2728, -6.2735, -5.8377, -5.9166, -5.9908, -6.3156, -5.8691, -5.4586, -4.0657, -4.9812, -4.1556, -5.2888, -5.9262, -5.1669, -4.9233, -5.6022, -5.4479, -5.9271, -5.7875, -5.6594, -5.6587, -5.3, -5.511, -5.5485, -5.0437, -5.2248, -5.3611, -5.4425, -5.384, -5.4996, -5.5895, -5.587, -5.6019, -5.6627], "loglift": [30.0, 29.0, 28.0, 27.0, 26.0, 25.0, 24.0, 23.0, 22.0, 21.0, 20.0, 19.0, 18.0, 17.0, 16.0, 15.0, 14.0, 13.0, 12.0, 11.0, 10.0, 9.0, 8.0, 7.0, 6.0, 5.0, 4.0, 3.0, 2.0, 1.0, 1.4608, 1.393, 1.3748, 1.3343, 1.2795, 1.2792, 1.2556, 1.231, 1.2189, 1.1939, 1.1939, 1.1939, 1.1939, 1.1939, 1.1939, 1.1939, 1.1939, 1.1939, 1.1939, 1.1939, 1.1939, 1.1939, 1.1939, 1.1939, 1.1939, 1.1939, 1.1939, 1.1939, 1.1939, 1.1939, 1.1931, 1.179, 1.1516, 1.1877, 1.1181, 1.1192, 1.0391, 1.0966, 1.0381, 1.1099, 1.0441, 0.9116, 0.843, 1.1131, 1.1092, 0.6582, 0.9815, 0.4734, 0.6809, 0.929, 1.0729, 0.4947, 0.4114, 0.776, 0.4648, -0.077, 0.2908, 0.2191, 0.2203, 0.7663, 0.1713, 0.3593, -0.0734, -0.3238, -0.2025, 0.0327, 1.8001, 1.702, 1.6019, 1.558, 1.4111, 1.3536, 1.3382, 1.3382, 1.3382, 1.3382, 1.3382, 1.3381, 1.3381, 1.3381, 1.3381, 1.3369, 1.3369, 1.3368, 1.3368, 1.3368, 1.3366, 1.3365, 1.3365, 1.3363, 1.336, 1.3178, 1.3035, 1.3012, 1.3009, 1.2976, 1.2668, 1.2805, 1.28, 1.2418, 1.1511, 0.8193, 0.7758, 1.1934, 0.9026, 1.2072, 1.0483, 0.8505, 1.0547, 0.7661, 0.6507, 0.9878, 0.9326, 1.1707, 0.7015, 1.0455, 0.9512, 0.3569, 0.4535, -0.1179, 0.1125, 0.3955, 0.1854, 0.7776, 0.4027, 0.3932, 0.0223, 0.3197, 0.2849, 0.2696, -0.3203, 0.0308, -0.1604, 1.601, 1.5989, 1.4476, 1.4312, 1.4222, 1.4202, 1.418, 1.4133, 1.4096, 1.4051, 1.4018, 1.3934, 1.3754, 1.368, 1.3604, 1.3524, 1.3416, 1.3359, 1.3317, 1.3095, 1.2941, 1.2852, 1.2738, 1.2684, 1.2659, 1.261, 1.2571, 1.2533, 1.253, 1.2521, 1.1756, 1.2143, 1.1459, 1.0675, 1.0717, 0.8911, 1.0405, 0.9256, 0.7673, 0.8118, 0.6968, 0.5813, 0.7574, 0.4158, 0.11, 1.1344, 0.8979, 0.3578, 0.7355, 0.9623, 0.6161, 0.5224, -0.175, -0.2899, 0.38, 1.6775, 1.5371, 1.5231, 1.4509, 1.4402, 1.3962, 1.3877, 1.3751, 1.3748, 1.3714, 1.3505, 1.3484, 1.339, 1.3329, 1.3307, 1.3284, 1.32, 1.3198, 1.3165, 1.3132, 1.3132, 1.3109, 1.3073, 1.2972, 1.2891, 1.2866, 1.2862, 1.2753, 1.2739, 1.2594, 1.2507, 1.1416, 1.1581, 1.1839, 1.2124, 0.9988, 1.0611, 1.1406, 1.0737, 1.1082, 0.9549, 1.1281, 1.0798, 0.8101, 0.9153, 0.9138, 0.3676, 0.481, -0.1216, 0.188, 0.8442, 0.1306, 0.1686, 0.3336, 0.3721, 0.3621, -0.3466, -0.0805, 0.4148, -0.1824, -0.4422, 1.8809, 1.8544, 1.8388, 1.7669, 1.7457, 1.7385, 1.6489, 1.6474, 1.6462, 1.646, 1.6449, 1.6446, 1.6417, 1.6408, 1.6406, 1.6403, 1.6382, 1.6357, 1.6277, 1.6261, 1.6245, 1.6188, 1.6137, 1.6065, 1.5986, 1.5943, 1.5897, 1.5814, 1.5814, 1.5808, 1.5772, 1.4862, 1.4102, 1.08, 1.3402, 1.3251, 1.0943, 0.7442, 0.8456, 0.6492, 1.1101, 0.0413, 0.9183, 0.7229, 0.5462, 0.2369, 0.8481, 1.2059, 0.0349, 0.2345, 0.6408, 0.0085, 0.0107, 0.1183, 0.2246, 2.2184, 2.0774, 2.0351, 2.0108, 1.9965, 1.9008, 1.9008, 1.9008, 1.9008, 1.9008, 1.9008, 1.9007, 1.8943, 1.8852, 1.8833, 1.833, 1.8324, 1.8248, 1.8103, 1.8049, 1.7704, 1.7552, 1.7505, 1.7462, 1.7403, 1.7397, 1.7267, 1.7195, 1.7132, 1.7113, 1.5416, 1.5683, 1.5547, 1.4834, 1.2176, 1.0585, 1.0439, 0.9693, 0.5523, 1.0288, 0.703, -0.3983, 0.7647, 0.6325, -0.1841, 0.5581, 0.2649, -0.4597, 2.3794, 2.2737, 2.2737, 2.0803, 2.0636, 2.0246, 2.0246, 2.0246, 2.0246, 2.0246, 2.0246, 2.0246, 2.0246, 2.0246, 2.0246, 2.0246, 2.0246, 2.0246, 2.0246, 2.0246, 1.9783, 1.8887, 1.8589, 1.8404, 1.8331, 1.8108, 1.7898, 1.7702, 1.7622, 1.7578, 1.7433, 1.7474, 1.7194, 1.5555, 1.6676, 1.686, 1.4632, 1.4124, 0.6322, 1.3414, 1.2772, 0.4876, 0.5867, 1.3878, 1.0861, 0.4969, 0.5485, 0.8347, 1.3519, 1.3587, 1.4405, -0.1041, 0.5237, 0.9598, 0.5035, 0.1091, 0.1216, -0.118, -0.4824, 2.2413, 2.1632, 2.1601, 2.1343, 2.0953, 2.057, 2.0306, 2.0269, 2.0269, 2.0269, 2.0269, 2.0269, 2.0269, 2.0269, 2.0269, 1.9412, 1.9243, 1.867, 1.8531, 1.8523, 1.8465, 1.8362, 1.8297, 1.8249, 1.8208, 1.8093, 1.7967, 1.7946, 1.7815, 1.771, 1.728, 1.6986, 1.6288, 1.3257, 1.5529, 1.601, 1.4083, 1.3471, 1.4491, 1.3134, 0.7905, 1.047, 0.6891, 0.4485, 0.6438, 0.7333, -0.1217, 0.2166, 1.3242, 1.0021, 0.7668, 0.4641, 0.1597, 0.114, 0.056, 0.6885, 2.746, 2.6482, 2.4923, 2.3158, 2.3158, 2.3158, 2.3158, 2.3158, 2.3157, 2.3157, 2.3157, 2.3157, 2.2228, 2.2087, 2.194, 2.1822, 2.1799, 2.1799, 2.1697, 2.1681, 2.1661, 2.1537, 2.1507, 1.9806, 1.8509, 1.8501, 1.8471, 1.845, 1.8381, 1.7946, 1.6507, 1.34, 1.4583, 1.2406, 1.4773, 1.3389, 0.649, 0.0221, 1.3086, 0.933, 1.3465, 0.8286, 0.7833, 0.1672, 0.4421, 1.1682, 0.4292, 1.0083, 0.1081, 1.0822, 1.167, 1.1721, 1.6291, 1.6202, 1.6166, 1.6103, 1.548, 1.5138, 1.4975, 1.4894, 1.4712, 1.4668, 1.4635, 1.4608, 1.4605, 1.4558, 1.4517, 1.4366, 1.4153, 1.3918, 1.3536, 1.3405, 1.3343, 1.3248, 1.3163, 1.2982, 1.2977, 1.2965, 1.2734, 1.2691, 1.2525, 1.2484, 1.2182, 1.1863, 0.7761, 0.9921, 0.7267, 0.9713, 1.2123, 0.7123, 0.5171, 0.967, 0.7307, 1.2076, 0.9988, 0.813, 0.6839, 0.0201, 0.2955, 0.3182, -0.8175, -0.4451, -0.2173, -0.1184, -0.3064, 0.0301, -0.2067, -0.5804, -0.5131, -0.0648]}, "token.table": {"Topic": [2, 5, 6, 6, 2, 8, 1, 2, 3, 4, 8, 1, 2, 4, 8, 1, 2, 1, 2, 8, 9, 2, 2, 3, 2, 3, 6, 6, 1, 2, 3, 4, 5, 3, 5, 6, 1, 1, 3, 4, 5, 1, 4, 5, 3, 7, 8, 6, 9, 2, 3, 6, 8, 4, 1, 2, 5, 6, 8, 3, 5, 6, 3, 5, 6, 8, 6, 2, 3, 6, 1, 6, 7, 9, 4, 6, 1, 3, 5, 6, 7, 1, 9, 3, 1, 3, 4, 1, 1, 2, 8, 1, 2, 1, 2, 6, 7, 9, 7, 1, 4, 5, 6, 1, 4, 7, 1, 2, 5, 6, 3, 3, 8, 8, 3, 1, 1, 2, 3, 2, 4, 4, 7, 6, 2, 3, 4, 5, 1, 2, 4, 5, 7, 1, 2, 6, 5, 7, 2, 2, 4, 5, 7, 3, 6, 3, 5, 8, 3, 4, 8, 3, 5, 1, 2, 4, 5, 6, 8, 1, 2, 7, 8, 1, 3, 5, 4, 6, 7, 1, 8, 6, 8, 9, 5, 7, 5, 1, 8, 7, 2, 3, 8, 3, 4, 1, 3, 5, 3, 1, 5, 4, 6, 1, 3, 4, 5, 6, 7, 1, 3, 4, 5, 1, 4, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 2, 4, 1, 2, 2, 3, 8, 7, 8, 8, 6, 1, 2, 3, 4, 5, 8, 3, 3, 5, 6, 1, 2, 5, 3, 1, 4, 5, 4, 1, 3, 2, 4, 4, 6, 7, 5, 5, 2, 4, 5, 6, 5, 5, 1, 3, 4, 6, 8, 9, 1, 2, 4, 6, 8, 4, 4, 5, 3, 8, 4, 2, 3, 4, 6, 7, 9, 1, 2, 3, 4, 5, 8, 5, 6, 7, 1, 2, 3, 4, 5, 6, 1, 3, 5, 3, 3, 4, 1, 6, 1, 2, 4, 7, 2, 1, 1, 3, 4, 5, 2, 6, 1, 2, 3, 4, 5, 6, 7, 8, 2, 8, 1, 1, 2, 4, 1, 3, 4, 1, 1, 4, 1, 2, 3, 4, 5, 5, 1, 2, 4, 2, 4, 8, 6, 4, 5, 6, 7, 4, 1, 2, 5, 5, 1, 2, 4, 7, 8, 2, 3, 1, 2, 3, 4, 5, 8, 6, 5, 5, 2, 2, 5, 7, 5, 4, 1, 2, 3, 4, 7, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 9, 8, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 6, 7, 1, 2, 3, 5, 4, 7, 1, 6, 4, 2, 3, 5, 6, 9, 5, 2, 3, 1, 2, 6, 5, 1, 7, 6, 9, 4, 4, 6, 2, 4, 5, 7, 2, 6, 4, 3, 4, 7, 1, 7, 7, 6, 4, 3, 1, 2, 1, 4, 6, 4, 2, 3, 8, 1, 2, 6, 8, 1, 3, 7, 1, 2, 3, 4, 5, 7, 8, 9, 3, 1, 2, 3, 4, 5, 6, 7, 8, 1, 3, 4, 5, 7, 1, 4, 5, 1, 3, 7, 8, 2, 4, 7, 1, 3, 9, 2, 3, 4, 6, 8, 8, 3, 5, 1, 7, 7, 1, 2, 3, 4, 5, 6, 8, 1, 2, 3, 4, 5, 6, 7, 9, 7, 6, 9, 1, 3, 8, 7, 7, 3, 5, 4, 4, 7, 3, 1, 2, 3, 4, 5, 6, 8, 8, 1, 3, 7, 3, 1, 7, 1, 1, 2, 5, 1, 2, 3, 4, 5, 7, 8, 4, 4, 2, 2, 5, 3, 1, 5, 6, 8, 3, 2, 1, 2, 3, 6, 2, 2, 6, 1, 2, 7, 1, 8, 1, 2, 4, 1, 7, 1, 5, 6, 7, 8, 3, 8, 2, 2, 4, 6, 3, 2, 5, 1, 1, 3, 5, 3, 8, 3, 5, 3, 6, 3, 8, 9, 1, 2, 3, 8, 3, 6, 2, 4, 6, 7, 1, 3, 4, 8, 2, 1, 2, 4, 1, 2, 3, 4, 6, 7, 8, 5, 1, 2, 3, 4, 6, 7, 5, 7, 7, 2, 7, 8, 3, 5, 8, 1, 2, 7, 3, 3, 8, 1, 2, 3, 4, 5, 6, 8, 1, 1, 2, 2, 3, 5, 8, 6, 2, 4, 6, 9, 5, 1, 2, 3, 4, 5, 7, 8, 2, 4, 7, 1, 2, 3, 4, 9, 1, 3, 8, 1, 8, 2, 3, 5, 2, 2, 3, 4, 1, 2, 4, 5, 1, 2, 3, 4, 5, 2, 4, 6, 9, 1, 2, 3, 4, 9, 7, 7, 8, 1, 4, 7, 3, 2, 1, 1, 4, 5, 1, 2, 1, 5, 7, 1, 2, 3, 4, 6, 8, 1, 2, 3, 4, 6, 9, 3, 2, 4, 1, 1, 2, 3, 5, 6, 7, 8, 4, 1, 1, 2, 4, 8, 3, 1, 6, 1, 8, 2, 1, 4, 1, 3, 4, 5, 7, 2, 4, 5, 2, 3, 4, 5, 6, 9, 7, 1, 2, 3, 4, 5, 6, 8, 8, 3, 7, 9, 1, 1, 2, 3, 8, 3, 6, 1, 2, 3, 5, 6, 7, 8, 4, 5, 9, 1, 2, 3, 4], "Freq": [0.5248368021316986, 0.568273088083209, 0.7182629192799828, 0.7183210467125823, 0.7083173360237884, 0.7846681086433812, 0.2880213557108357, 0.17281281342650143, 0.05760427114216714, 0.34562562685300285, 0.05760427114216714, 0.40932667459035077, 0.20466333729517538, 0.20466333729517538, 0.10233166864758769, 0.2680523995759194, 0.5361047991518388, 0.7344783385831966, 0.28058571926971726, 0.28058571926971726, 0.28058571926971726, 0.7100130598060914, 0.4954202622453903, 0.4954202622453903, 0.288490004498186, 0.288490004498186, 0.288490004498186, 0.7230672890412632, 0.4157176878239262, 0.2078588439119631, 0.10392942195598155, 0.10392942195598155, 0.10392942195598155, 0.6490714762925499, 0.7421637707477349, 0.3878052687286291, 0.7591231776000621, 0.5934850647992309, 0.09891417746653848, 0.09891417746653848, 0.19782835493307696, 0.13968817476220244, 0.4190645242866073, 0.2793763495244049, 0.6483509682241797, 0.7750115854906546, 0.5300124549771047, 0.5838854573225962, 0.19462848577419875, 0.0947532809999574, 0.3790131239998296, 0.0947532809999574, 0.2842598429998722, 0.6715036266086573, 0.12483156851252719, 0.12483156851252719, 0.12483156851252719, 0.49932627405010876, 0.12483156851252719, 0.6265264800418571, 0.20884216001395234, 0.20884216001395234, 0.4391255778150801, 0.21956278890754005, 0.21956278890754005, 0.10978139445377003, 0.7003343993579971, 0.7082188463407582, 0.3436699243595568, 0.6873398487191136, 0.21541393364029907, 0.21541393364029907, 0.21541393364029907, 0.21541393364029907, 0.7090912967692573, 0.35454564838462865, 0.2390913354211759, 0.11954566771058794, 0.2390913354211759, 0.11954566771058794, 0.11954566771058794, 0.79495047005212, 0.524100387295699, 0.6493896151299717, 0.3102883112834838, 0.1551441556417419, 0.3102883112834838, 0.6161695018785474, 0.5448955840872844, 0.32693735045237066, 0.10897911681745688, 0.6668238499064764, 0.1667059624766191, 0.851108714581379, 0.15842588556799084, 0.6337035422719633, 0.15842588556799084, 0.6677370553808754, 0.5207603854494598, 0.7359305648337017, 0.2849313083647007, 0.5698626167294014, 0.2849313083647007, 0.7949479892491844, 0.351764846137386, 0.351764846137386, 0.6161662576723456, 0.1400220835709158, 0.1400220835709158, 0.7001104178545791, 0.6472706825953353, 0.3662602047699258, 0.3662602047699258, 0.7771995197872349, 0.7328570172476694, 0.6161475277403551, 0.08744968586457044, 0.8744968586457044, 0.6687310883116041, 0.21769126124919114, 0.4353825224983823, 0.3577558509181267, 0.3577558509181267, 0.7216990564816987, 0.22522129302108168, 0.22522129302108168, 0.22522129302108168, 0.45044258604216336, 0.05924478464304417, 0.05924478464304417, 0.5332030617873975, 0.29622392321522084, 0.7749974949989142, 0.49246263862928735, 0.24623131931464368, 0.24623131931464368, 0.37097281860390596, 0.37097281860390596, 0.4555782403505547, 0.5974346780160986, 0.2775419137276983, 0.2775419137276983, 0.2775419137276983, 0.6356537048273792, 0.3178268524136896, 0.6613771839586525, 0.7435319290866592, 0.5278304517948424, 0.4090309025066787, 0.20451545125333934, 0.7768596536884519, 0.3442503678257258, 0.3442503678257258, 0.14742949152905158, 0.44228847458715476, 0.14742949152905158, 0.14742949152905158, 0.14742949152905158, 0.14742949152905158, 0.5112176706913653, 0.1704058902304551, 0.1704058902304551, 0.1704058902304551, 0.20361288441742678, 0.40722576883485356, 0.20361288441742678, 0.4068171067069199, 0.20340855335345995, 0.4068171067069199, 0.616161712119864, 0.6515676838032719, 0.35037388446339024, 0.35037388446339024, 0.35037388446339024, 0.7492914530641551, 0.5873672178534184, 0.7503552170992396, 0.855926398789726, 0.7940759879966826, 0.8089912817714088, 0.8916768695916474, 0.6615738947065345, 0.33078694735326725, 0.7319825755292922, 0.48362865342809247, 0.4876876645008362, 0.2438438322504181, 0.2438438322504181, 0.6614216302239315, 0.7652589092861776, 0.49391912389335724, 0.7369978801797863, 0.14739957603595724, 0.3328083826569743, 0.04754405466528205, 0.42789649198753843, 0.0950881093305641, 0.0950881093305641, 0.04754405466528205, 0.6334042323118578, 0.06334042323118577, 0.12668084646237154, 0.12668084646237154, 0.8188245624967748, 0.7405030690082057, 0.1681738463292023, 0.3363476926584046, 0.11211589755280153, 0.11211589755280153, 0.11211589755280153, 0.056057948776400766, 0.056057948776400766, 0.056057948776400766, 0.7022806796221696, 0.23409355987405653, 0.7486247574782244, 0.6932753560770363, 0.34663767803851814, 0.439575705155432, 0.439575705155432, 0.7082016240044563, 0.422366679124739, 0.7963423291698596, 0.7749985446260523, 0.3974308314917909, 0.7919704792064448, 0.7227224526532318, 0.2683211433538167, 0.13416057167690834, 0.13416057167690834, 0.13416057167690834, 0.13416057167690834, 0.7846703652851974, 0.7279773817032315, 0.3651765553472131, 0.7499196424189293, 0.7216797957972273, 0.2689166137244706, 0.5378332274489412, 0.2689166137244706, 0.4245464258691273, 0.22551417778069138, 0.22551417778069138, 0.45102835556138277, 0.47261388172657004, 0.4598682968941051, 0.4598682968941051, 0.3607617289353989, 0.3607617289353989, 0.33711446918694143, 0.7182838517629802, 0.8172983999039042, 0.7407318926895035, 0.4958694184125466, 0.22599896934169778, 0.22599896934169778, 0.45199793868339555, 0.3871978624818675, 0.7435175837523363, 0.49865917774157376, 0.15648055154400972, 0.15648055154400972, 0.15648055154400972, 0.15648055154400972, 0.15648055154400972, 0.15648055154400972, 0.249503985303583, 0.249503985303583, 0.1247519926517915, 0.1247519926517915, 0.1247519926517915, 0.697992507567569, 0.4324385159552698, 0.4324385159552698, 0.4930348613071746, 0.4930348613071746, 0.6757167703556468, 0.12377620033448118, 0.24755240066896236, 0.24755240066896236, 0.12377620033448118, 0.12377620033448118, 0.12377620033448118, 0.24004957613520883, 0.12002478806760442, 0.24004957613520883, 0.12002478806760442, 0.12002478806760442, 0.24004957613520883, 0.2036887413307291, 0.6110662239921872, 0.2036887413307291, 0.1292920046783357, 0.3878760140350071, 0.1292920046783357, 0.1292920046783357, 0.1292920046783357, 0.1292920046783357, 0.2808454038656241, 0.2808454038656241, 0.2808454038656241, 0.6509235650469724, 0.49106470946146447, 0.49106470946146447, 0.2720688471990976, 0.5441376943981951, 0.2315596502643293, 0.2315596502643293, 0.2315596502643293, 0.2315596502643293, 0.7083237801009327, 0.4048125973446332, 0.18334805479921037, 0.18334805479921037, 0.36669610959842075, 0.18334805479921037, 0.7083345057795464, 0.5096194186260241, 0.1340351409356536, 0.17871352124753814, 0.22339190155942268, 0.08935676062376907, 0.08935676062376907, 0.044678380311884536, 0.1340351409356536, 0.08935676062376907, 0.3747807301743559, 0.3747807301743559, 0.6161667199105403, 0.2572068980566386, 0.5144137961132772, 0.2572068980566386, 0.26746438641864484, 0.26746438641864484, 0.5349287728372897, 0.6161651665628562, 0.7081524655597213, 0.23605082185324044, 0.7327459042266534, 0.1649056105119349, 0.1649056105119349, 0.3298112210238698, 0.3298112210238698, 0.7499160207518335, 0.6758973570500214, 0.16897433926250535, 0.16897433926250535, 0.31881697866734576, 0.31881697866734576, 0.7846486542560653, 0.7182764159679329, 0.457633153940501, 0.7500678805418743, 0.7233858300855637, 0.7750157685865348, 0.7028100196952866, 0.6161618119376698, 0.7100184373276013, 0.7447425598706818, 0.7504054148152097, 0.27611132589736054, 0.27611132589736054, 0.27611132589736054, 0.27611132589736054, 0.5335011634741332, 0.5181524740734016, 0.6677725201433845, 0.180988067480992, 0.180988067480992, 0.180988067480992, 0.180988067480992, 0.180988067480992, 0.180988067480992, 0.47511947135367705, 0.7419688896336565, 0.7502169235241621, 0.708419449992929, 0.4054563036884304, 0.7502073557581889, 0.42921714552846424, 0.7474725097218413, 0.6989491799610067, 0.19634825864718672, 0.39269651729437344, 0.19634825864718672, 0.19634825864718672, 0.7749949014567054, 0.33686067212797677, 0.08421516803199419, 0.08421516803199419, 0.08421516803199419, 0.2526455040959826, 0.08421516803199419, 0.08421516803199419, 0.08421516803199419, 0.3431997361777401, 0.13727989447109604, 0.06863994723554802, 0.13727989447109604, 0.13727989447109604, 0.06863994723554802, 0.06863994723554802, 0.06863994723554802, 0.7941289000918491, 0.1798231623399116, 0.12844511595707972, 0.15413413914849566, 0.12844511595707972, 0.10275609276566378, 0.05137804638283189, 0.12844511595707972, 0.05137804638283189, 0.05137804638283189, 0.15881168495079187, 0.15881168495079187, 0.15881168495079187, 0.31762336990158374, 0.15881168495079187, 0.6361973314114336, 0.21206577713714456, 0.36481111380052894, 0.36481111380052894, 0.29385521824781563, 0.29385521824781563, 0.47083044491495063, 0.7183126431057455, 0.6749973631853543, 0.1286889803063863, 0.1286889803063863, 0.1286889803063863, 0.38606694091915894, 0.1286889803063863, 0.4974465187889039, 0.7082140488554854, 0.6626106926087352, 0.2248464226535617, 0.4496928453071234, 0.2248464226535617, 0.7412629051783878, 0.6161554489885674, 0.7749904283066624, 0.45618998723397797, 0.45618998723397797, 0.7095155451823771, 0.6646893947037743, 0.7223335406670081, 0.24997036797568364, 0.24997036797568364, 0.24997036797568364, 0.24997036797568364, 0.34761496004408965, 0.34761496004408965, 0.6763500873814833, 0.8274234528599139, 0.4639913058885426, 0.4639913058885426, 0.6161540968569702, 0.5207564001911067, 0.556409888146724, 0.4739044359630607, 0.6636831428310229, 0.6505137077869088, 0.6397491282534994, 0.2132497094178331, 0.2750564553559377, 0.2750564553559377, 0.522504645216226, 0.6800856850550513, 0.37302397169961116, 0.37302397169961116, 0.37302397169961116, 0.25848293771517983, 0.25848293771517983, 0.25848293771517983, 0.25848293771517983, 0.32213147598961767, 0.32213147598961767, 0.7842625958779077, 0.180550124810798, 0.180550124810798, 0.06018337493693267, 0.180550124810798, 0.06018337493693267, 0.12036674987386534, 0.12036674987386534, 0.06018337493693267, 0.42648581267770125, 0.39602661585377613, 0.09900665396344403, 0.09900665396344403, 0.14850998094516604, 0.049503326981722016, 0.049503326981722016, 0.049503326981722016, 0.09900665396344403, 0.2814539076366495, 0.2814539076366495, 0.14072695381832476, 0.14072695381832476, 0.14072695381832476, 0.6161514286524434, 0.433142667070218, 0.433142667070218, 0.6161606617055431, 0.2050116325171783, 0.2050116325171783, 0.2050116325171783, 0.7083421748404933, 0.6744546866397968, 0.8204135283312752, 0.4761713293713841, 0.23808566468569206, 0.23808566468569206, 0.7101743221553006, 0.23284306806536828, 0.23284306806536828, 0.46568613613073656, 0.23284306806536828, 0.5299065149903753, 0.35595114377611803, 0.35595114377611803, 0.4805774581489435, 0.4805774581489435, 0.6065088751930056, 0.16135717871464123, 0.24203576807196184, 0.08067858935732061, 0.08067858935732061, 0.16135717871464123, 0.16135717871464123, 0.08067858935732061, 0.08166521524554728, 0.3266608609821891, 0.08166521524554728, 0.24499564573664184, 0.16333043049109455, 0.08166521524554728, 0.08166521524554728, 0.08166521524554728, 0.7750050717690852, 0.43426802124973984, 0.43426802124973984, 0.7323739142902832, 0.6584511034321394, 0.7764723990912197, 0.8102326512464428, 0.774994921241217, 0.3246949351112089, 0.3246949351112089, 0.6790915190318483, 0.4673358625823627, 0.8223427781854024, 0.7481185523335837, 0.12233084573326491, 0.24466169146652983, 0.12233084573326491, 0.12233084573326491, 0.12233084573326491, 0.12233084573326491, 0.12233084573326491, 0.7753284759372876, 0.19202418304843238, 0.38404836609686477, 0.19202418304843238, 0.6484358784403611, 0.616170763803615, 0.8139216064339143, 0.7362556340523746, 0.49350797675764113, 0.24675398837882057, 0.24675398837882057, 0.25721782839042173, 0.06430445709760543, 0.1929133712928163, 0.12860891419521087, 0.06430445709760543, 0.12860891419521087, 0.12860891419521087, 0.6613801292673105, 0.7110911461612284, 0.9243821053806383, 0.7082079989325126, 0.493388588528198, 0.44781063761074774, 0.35373337551565776, 0.17686668775782888, 0.17686668775782888, 0.17686668775782888, 0.7232955067666994, 0.708210304282573, 0.37149697704588047, 0.18574848852294024, 0.18574848852294024, 0.18574848852294024, 0.7098920592429265, 0.7083770013425041, 0.5183674748198084, 0.616157005956368, 0.38293224786868835, 0.38293224786868835, 0.6161570284255825, 0.7944134791111884, 0.2520995256670398, 0.5041990513340796, 0.2520995256670398, 0.4490256767368482, 0.774985747066838, 0.21642633138344902, 0.21642633138344902, 0.21642633138344902, 0.21642633138344902, 0.21642633138344902, 0.434643869017595, 0.7846585597583365, 0.7082300419726868, 0.7083727398644264, 0.6944601818173942, 0.718285395163616, 0.7558282599203268, 0.7083251234684631, 0.7498409937686948, 0.6161641592678224, 0.30933491632633764, 0.6186698326526753, 0.7500406446285157, 0.4916487768235302, 0.4916487768235302, 0.646777711804282, 0.323388855902141, 0.743132623834806, 0.47634376898208164, 0.26014557988789794, 0.26014557988789794, 0.26014557988789794, 0.33232494516764643, 0.33232494516764643, 0.33232494516764643, 0.7885363099764784, 0.46725146980347876, 0.23362573490173938, 0.2304990938763251, 0.2304990938763251, 0.2304990938763251, 0.2304990938763251, 0.12466769500341163, 0.4986707800136465, 0.12466769500341163, 0.12466769500341163, 0.4546362359203445, 0.48559995181546994, 0.24279997590773497, 0.24279997590773497, 0.23010442866402336, 0.15340295244268223, 0.30680590488536447, 0.07670147622134112, 0.07670147622134112, 0.15340295244268223, 0.07670147622134112, 0.7423738957699009, 0.2553532235909598, 0.1276766117954799, 0.1276766117954799, 0.1276766117954799, 0.1276766117954799, 0.1276766117954799, 0.48580068552958694, 0.7749953298557316, 0.5961111325870356, 0.8173271856788726, 0.7749896810755849, 0.7919966745638666, 0.7275977703098147, 0.7501775960722912, 0.7958597082575144, 0.6161590999998499, 0.7082107078435391, 0.7750051463491646, 0.7427153012704665, 0.7333547333740195, 0.7846553847749705, 0.23274188191997974, 0.23274188191997974, 0.23274188191997974, 0.058185470479994936, 0.058185470479994936, 0.058185470479994936, 0.058185470479994936, 0.6161466210842665, 0.6270826316680187, 0.20902754388933958, 0.23339393674614542, 0.23339393674614542, 0.23339393674614542, 0.23339393674614542, 0.7182854572711446, 0.24356613477278563, 0.24356613477278563, 0.24356613477278563, 0.24356613477278563, 0.7500156462047436, 0.10734785482507025, 0.2146957096501405, 0.32204356447521076, 0.10734785482507025, 0.10734785482507025, 0.10734785482507025, 0.10734785482507025, 0.5029429305028609, 0.5029429305028609, 0.8058736309499528, 0.3037894509960777, 0.2025263006640518, 0.2025263006640518, 0.2025263006640518, 0.1012631503320259, 0.2854535491073554, 0.2854535491073554, 0.2854535491073554, 0.7735606665901539, 0.7769977424035241, 0.22839268421913028, 0.22839268421913028, 0.22839268421913028, 0.7082083793128372, 0.4917638127492832, 0.2458819063746416, 0.5448183432073932, 0.24346224414899179, 0.3651933662234877, 0.18259668311174385, 0.12173112207449589, 0.5190200242845167, 0.25951001214225833, 0.08650333738075278, 0.08650333738075278, 0.08650333738075278, 0.2925843932230702, 0.2925843932230702, 0.2925843932230702, 0.2925843932230702, 0.21719819022274198, 0.21719819022274198, 0.32579728533411295, 0.10859909511137099, 0.10859909511137099, 0.7750185865960151, 0.7750093336777749, 0.7846532229790935, 0.61617903778777, 0.4681796806890672, 0.4681796806890672, 0.7501393808318683, 0.7082094157034842, 0.6161688199814409, 0.3448254115149661, 0.5172381172724492, 0.17241270575748305, 0.6121995418730335, 0.20406651395767783, 0.35472196235689224, 0.35472196235689224, 0.35472196235689224, 0.09458340572280692, 0.09458340572280692, 0.3783336228912277, 0.18916681144561384, 0.09458340572280692, 0.18916681144561384, 0.14859926993055433, 0.14859926993055433, 0.29719853986110867, 0.14859926993055433, 0.14859926993055433, 0.14859926993055433, 0.4362505951884689, 0.7084006641484738, 0.6677678706461456, 0.4127159421429705, 0.2561440253267319, 0.12807201266336596, 0.12807201266336596, 0.12807201266336596, 0.12807201266336596, 0.12807201266336596, 0.12807201266336596, 0.6679972067240132, 0.616151895636814, 0.438949839523991, 0.438949839523991, 0.7214116647787211, 0.784655630780749, 0.6601302833165387, 0.3357094998792417, 0.3357094998792417, 0.6161567810647455, 0.7768611228426143, 0.7083602676396791, 0.5935144313532791, 0.29675721567663954, 0.13159832172385835, 0.39479496517157503, 0.13159832172385835, 0.13159832172385835, 0.13159832172385835, 0.5399571041925019, 0.26997855209625093, 0.26997855209625093, 0.16237822256486184, 0.16237822256486184, 0.16237822256486184, 0.16237822256486184, 0.3247564451297237, 0.16237822256486184, 0.7750077940790456, 0.23101564641307978, 0.1540104309420532, 0.3080208618841064, 0.0770052154710266, 0.0770052154710266, 0.0770052154710266, 0.1540104309420532, 0.7846812338744309, 0.6364328503813667, 0.21214428346045552, 0.21214428346045552, 0.762494158419467, 0.4046117651378539, 0.3585683490828649, 0.3585683490828649, 0.3585683490828649, 0.49932274220503275, 0.7224458163809127, 0.13753259685027808, 0.13753259685027808, 0.27506519370055615, 0.13753259685027808, 0.13753259685027808, 0.13753259685027808, 0.13753259685027808, 0.7033230717444839, 0.7276706787991649, 0.5397913163025051, 0.5117796162415742, 0.5117796162415742, 0.32385355193580434, 0.32385355193580434], "Term": ["1807", "1814.", "872", "ANNET", "Arbeiderforening", "Begravelser", "Bj\u00f8rnson", "Bj\u00f8rnson", "Bj\u00f8rnson", "Bj\u00f8rnson", "Bj\u00f8rnson", "Bj\u00f8rnstjerne", "Bj\u00f8rnstjerne", "Bj\u00f8rnstjerne", "Bj\u00f8rnstjerne", "Borten", "Borten", "B\u00e6r", "B\u00f8ndene", "B\u00f8ndene", "B\u00f8ndene", "Cadillac", "Colombo", "Colombo", "Columbus", "Columbus", "Columbus", "Cox", "Dog", "Dog", "Dog", "Dog", "Dog", "Dyktige", "Falsen", "Finne", "Flekker\u00f8y", "Frederik", "Frederik", "Frederik", "Frederik", "Fridtjof", "Fridtjof", "Fridtjof", "Fr\u00f8y", "F\u00d8", "F\u00e6r\u00f8yane", "Gaute", "Gaute", "Gerhardsen", "Gerhardsen", "Gerhardsen", "Gerhardsen", "Gribb", "Gr\u00f8nland", "Gr\u00f8nland", "Gr\u00f8nland", "Gr\u00f8nland", "Gr\u00f8nland", "Guttorm", "Guttorm", "Guttorm", "Gyda", "Gyda", "Gyda", "Gyda", "Hafrsfjord", "Halve", "Haralds", "Haralds", "Hellige", "Hellige", "Hellige", "Hellige", "Henri", "Henri", "Herr", "Herr", "Herr", "Herr", "Herr", "Historiske", "Hund", "Hundrevis", "Hurra", "Hurra", "Hurra", "INNHOLD", "Ibsen", "Ibsen", "Ibsen", "Ibsens", "Ibsens", "Jespersen", "J\u00e6ren", "J\u00e6ren", "J\u00e6ren", "Kolbein", "Kreta", "Kristians", "Krohg", "Krohg", "Krohg", "Kvart", "Kyrre", "Kyrre", "Lasten", "Leiv", "Leiv", "Leiv", "Loke", "Lovene", "Lovene", "MIDT", "Magnusson", "Maleren", "Marcus", "Marcus", "Mein", "Michelsen", "Michelsen", "Midt-\u00d8sten", "Midt-\u00d8sten", "Monroe", "Munch", "Munch", "Munch", "Munch", "Nansen", "Nansen", "Nansen", "Nansen", "Nantes", "Neppe", "Neppe", "Neppe", "Nicolai", "Nicolai", "Nordmenn", "Nordmennene", "Nordpolen", "Nordpolen", "Nordpolen", "Normandie", "Normandie", "Oscarsborg", "PAA", "Paven", "Quisling", "Quisling", "ROMA", "Rein", "Rein", "Samt", "Samt", "Samt", "Samt", "Samt", "Samt", "Sannheten", "Sannheten", "Sannheten", "Sannheten", "Selskab", "Selskab", "Selskab", "Sigurdsson", "Sigurdsson", "Sigurdsson", "Skuffet", "Skule", "Slaget", "Slaget", "Slaget", "Snarere", "Sole", "Spr\u00e5ket", "Stortorget", "Sverres", "TV-skjermen", "Thrane", "Tulla", "Tulla", "Tyskebryggen", "Ullmann", "Ulrik", "Ulrik", "Ulrik", "Vidkun", "Viktor", "Wedel", "Welhaven", "Welhaven", "Wergeland", "Wergeland", "Wergeland", "Wergeland", "Wergeland", "Wergeland", "Wessel", "Wessel", "Wessel", "Wessel", "adferd", "aktualitet", "aldeles", "aldeles", "aldeles", "aldeles", "aldeles", "aldeles", "aldeles", "aldeles", "allting", "allting", "ankret", "arbeiderbevegelse", "arbeiderbevegelse", "arbeidsl\u00f8sheten", "arbeidsl\u00f8sheten", "arrogant", "assistenten", "avpasset", "avtrykk", "bark", "bedyrer", "befolket", "begeistret", "begeistret", "begeistret", "begeistret", "begeistret", "begj\u00e6re", "bergensere", "bergenserne", "beskjedenhet", "beskyttes", "bevegelsen", "bevegelsen", "bevegelsen", "bongen", "borgerskapet", "borgerskapet", "borgerskapet", "brillene", "bryggene", "bryggene", "br\u00f8det", "br\u00f8det", "bue", "bukta", "b\u00f8lget", "dalene", "dansker", "datidens", "datidens", "datidens", "dattera", "dekt", "dialekter", "diger", "diger", "diger", "diger", "diger", "diger", "digre", "digre", "digre", "digre", "digre", "diktning", "diplomat", "diplomat", "disipler", "disipler", "disponerte", "diverse", "diverse", "diverse", "diverse", "diverse", "diverse", "drakk", "drakk", "drakk", "drakk", "drakk", "drakk", "dreiv", "dreiv", "dreiv", "drikker", "drikker", "drikker", "drikker", "drikker", "drikker", "dr\u00f8mte", "dr\u00f8mte", "dr\u00f8mte", "dundrende", "d\u00f8dd", "d\u00f8dd", "d\u00f8pe", "d\u00f8pe", "d\u00f8pt", "d\u00f8pt", "d\u00f8pt", "d\u00f8pt", "egge", "engelskmenn", "erobre", "erobre", "erobre", "erobre", "eve", "fagre", "fantes", "fantes", "fantes", "fantes", "fantes", "fantes", "fantes", "fantes", "fattigere", "fattigere", "febrilsk", "feiende", "feiende", "feiende", "ferden", "ferden", "ferden", "ferietur", "festningen", "festningen", "fjellsiden", "flagg", "flagg", "flagg", "flagg", "flunkende", "fl\u00e5ten", "fl\u00e5ten", "fl\u00e5ten", "folkeavstemning", "folkeavstemning", "forbod", "forb\u00f8d", "forkjemper", "forske", "forskj\u00f8vet", "forvist", "framferd", "fremad", "fridag", "fruktbar", "f\u00f8rend", "gammal", "gammal", "gammal", "gammal", "geistlige", "generalen", "genial", "gilde", "gilde", "gilde", "gilde", "gilde", "gilde", "glodde", "gol", "grammatikk", "gre", "greia", "gruble", "guden", "hardingfele", "heading", "helvete", "helvete", "helvete", "helvete", "herdet", "herrene", "herrene", "herrene", "herrene", "herrene", "herrene", "herrene", "herrene", "herrer", "herrer", "herrer", "herrer", "herrer", "herrer", "herrer", "herrer", "hertug", "het", "het", "het", "het", "het", "het", "het", "het", "het", "hete", "hete", "hete", "hete", "hete", "hevn", "hevn", "hjelmen", "hjelmen", "hoffet", "hoffet", "hogd", "homofil", "hovedperson", "hu", "hu", "hu", "hu", "hu", "hundre\u00e5ret", "hurtigg\u00e5ende", "hygget", "hyppig", "hyppig", "hyppig", "h\u00f8flige", "h\u00f8flighet", "h\u00f8vding", "h\u00f8vdingen", "h\u00f8vdingen", "h\u00f8ylytt", "idealisme", "innbitt", "innerst", "innerst", "innerst", "innerst", "inntog", "inntog", "inspisere", "intelligente", "intriger", "intriger", "jernalder", "jernet", "jobbene", "jublet", "kajakk", "kaltes", "kanoner", "kanoner", "kasta", "kasta", "keiserens", "kjedet", "kloke", "kloke", "kloke", "knekken", "knekken", "knekken", "knekken", "koloniene", "koloniene", "konene", "konge", "konge", "konge", "konge", "konge", "konge", "konge", "konge", "kongefamilien", "kongen", "kongen", "kongen", "kongen", "kongen", "kongen", "kongen", "kongen", "kongens", "kongens", "kongens", "kongens", "kongens", "kongeriket", "konservator", "konservator", "korridorene", "kristendommen", "kristendommen", "kristendommen", "kr\u00f8ller", "kulene", "kulturens", "kvad", "kvad", "kvad", "kvittet", "latterlige", "latterlige", "latterlige", "latterlige", "leggene", "levnet", "levnet", "likner", "likner", "liknet", "liksom", "liksom", "liksom", "liksom", "liksom", "liksom", "liksom", "likte", "likte", "likte", "likte", "likte", "likte", "likte", "likte", "limt", "luktet", "luktet", "lunger", "lunken", "luring", "lyng", "lysebl\u00e5", "l\u00f8nna", "l\u00f8nna", "madam", "markedsf\u00f8re", "mentalitet", "mildest", "mildt", "mildt", "mildt", "mildt", "mildt", "mildt", "mildt", "minnetale", "mora", "mora", "mora", "mordere", "motforestillinger", "nasjoners", "nebbet", "noengang", "noengang", "noengang", "nordmenn", "nordmenn", "nordmenn", "nordmenn", "nordmenn", "nordmenn", "nordmenn", "nystartede", "n\u00e5levende", "n\u00f8ytrale", "n\u00f8ytralitet", "offiseren", "okkupasjon", "omsider", "omsider", "omsider", "omsider", "oppdagelser", "oppdrive", "oppfunnet", "oppfunnet", "oppfunnet", "oppfunnet", "opphisselse", "oppt\u00f8yer", "ordna", "orkan", "ovenp\u00e5", "ovenp\u00e5", "overg\u00e5", "overklassen", "overordentlig", "overordentlig", "overordentlig", "pinne", "pint", "pokker", "pokker", "pokker", "pokker", "pokker", "potter", "prekestolen", "raffinert", "raid", "rasen", "raus", "regjerte", "reisene", "restriksjonene", "returnerte", "riker", "riker", "riksm\u00e5l", "ringeste", "ringeste", "romerne", "romerne", "romersk", "roret", "rotter", "rotter", "rotter", "russere", "russere", "russere", "rydda", "r\u00f8mme", "r\u00f8mme", "r\u00f8tter", "r\u00f8tter", "r\u00f8tter", "r\u00f8tter", "sangen", "sangen", "sangen", "sangen", "satellitt", "seile", "seile", "seile", "seinere", "seinere", "seinere", "seinere", "seinere", "seinere", "seinere", "selvtilliten", "sinns", "sinns", "sinns", "sinns", "sinns", "sinns", "sjokkerte", "skakke", "skallen", "skattene", "skjenk", "skj\u00e6rende", "skrei", "skriftspr\u00e5k", "skulte", "slepe", "sl\u00f8sing", "smertefullt", "smittsom", "smittsomme", "smug", "smule", "smule", "smule", "smule", "smule", "smule", "smule", "soger", "spel", "spel", "spratt", "spratt", "spratt", "spratt", "sprutet", "spyd", "spyd", "spyd", "spyd", "sp\u00e5dde", "stakkars", "stakkars", "stakkars", "stakkars", "stakkars", "stakkars", "stakkars", "stemmerett", "stemmerett", "stillest\u00e5ende", "stolte", "stolte", "stolte", "stolte", "stolte", "storhetstid", "storhetstid", "storhetstid", "stormakt", "storsl\u00e5tt", "stramme", "stramme", "stramme", "stred", "stygge", "stygge", "st\u00f8te", "svenskene", "svenskene", "svenskene", "svenskene", "svensker", "svensker", "svensker", "svensker", "svensker", "sverd", "sverd", "sverd", "sverd", "sv\u00e6re", "sv\u00e6re", "sv\u00e6re", "sv\u00e6re", "sv\u00e6re", "sydde", "s\u00f8mmene", "s\u00f8r-", "s\u00f8rp\u00e5", "tilnavnet", "tilnavnet", "tipping", "tja", "tj\u00e6re", "tolvte", "tolvte", "tolvte", "torget", "torget", "trauste", "trauste", "trauste", "trist", "trist", "trist", "trist", "trist", "trist", "triste", "triste", "triste", "triste", "triste", "triste", "troskap", "tuberkulosen", "t\u00f8rnet", "uh\u00f8rt", "underlige", "underlige", "underlige", "underlige", "underlige", "underlige", "underlige", "unionen", "unnet", "unnskyld", "unnskyld", "upopul\u00e6re", "urene", "ussel", "utafor", "utafor", "uteblitt", "uviss", "u\u00e5r", "varmere", "varmere", "vasket", "vasket", "vasket", "vasket", "vasket", "verdenskrigen", "verdenskrigen", "verdenskrigen", "vers", "vers", "vers", "vers", "vers", "vers", "veska", "vesle", "vesle", "vesle", "vesle", "vesle", "vesle", "vesle", "videref\u00f8rt", "vikingene", "vikingene", "vikingene", "vindstille", "virvar", "vitterlig", "vitterlig", "vitterlig", "v\u00e5gen", "ydmyk", "ytterst", "ytterst", "ytterst", "ytterst", "ytterst", "ytterst", "ytterst", "\u00e5rhundres", "\u00e5rhundreskiftet", "\u00f8ksa", "\u00f8let", "\u00f8let", "\u00f8rn", "\u00f8rn"]}, "R": 30, "lambda.step": 0.01, "plot.opts": {"xlab": "PC1", "ylab": "PC2"}, "topic.order": [9, 3, 10, 8, 1, 4, 5, 6, 2, 7]};
+
+function LDAvis_load_lib(url, callback){
+  var s = document.createElement('script');
+  s.src = url;
+  s.async = true;
+  s.onreadystatechange = s.onload = callback;
+  s.onerror = function(){console.warn("failed to load library " + url);};
+  document.getElementsByTagName("head")[0].appendChild(s);
+}
+
+if(typeof(LDAvis) !== "undefined"){
+   // already loaded: just create the visualization
+   !function(LDAvis){
+       new LDAvis("#" + "ldavis_el97101293044863976485145088355", ldavis_el97101293044863976485145088355_data);
+   }(LDAvis);
+}else if(typeof define === "function" && define.amd){
+   // require.js is available: use it to load d3/LDAvis
+   require.config({paths: {d3: "https://d3js.org/d3.v5"}});
+   require(["d3"], function(d3){
+      window.d3 = d3;
+      LDAvis_load_lib("https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.4.0/pyLDAvis/js/ldavis.v3.0.0.js", function(){
+        new LDAvis("#" + "ldavis_el97101293044863976485145088355", ldavis_el97101293044863976485145088355_data);
+      });
+    });
+}else{
+    // require.js not available: dynamically load d3 & LDAvis
+    LDAvis_load_lib("https://d3js.org/d3.v5.js", function(){
+         LDAvis_load_lib("https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.4.0/pyLDAvis/js/ldavis.v3.0.0.js", function(){
+                 new LDAvis("#" + "ldavis_el97101293044863976485145088355", ldavis_el97101293044863976485145088355_data);
+            })
+         });
+}
+</script></div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./_build_fresh/_build/.jupyter_cache/executed/8a1015654b61c3eade41f06d6bb14bce"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Nasjonalbiblioteket
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1554 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; DH-lab dokumenter</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_build_fresh/_build/.jupyter_cache/executed/1f69ee5de17079e7bad3f8732a15870d/base';</script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="DH-lab dokumenter - Home"/>
+    <img src="../../../../../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark pst-js-only" alt="DH-lab dokumenter - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../../index.html">
+                    DH-lab – digital tekstanalyse
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../bibliography/bibliography.html">DH-lab bibliografi</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kodeeksempler–Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../tutorial.html">1. Læringseksempler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/1.0.Oppstart.html">1.2. Oppstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.0.Bygg_korpus.html">1.3. Korpus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.1.Konkordans.html">1.4. Konkordanser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.2.Kollokasjoner.html">1.5. Kollokasjoner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.3.Frekvenslister.html">1.6. Frekvenslister</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.4.S%C3%B8k_i_aviser.html">1.7. Søk i aviser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.5.n-gram_og_galakser.html">1.8. N-gram og galakser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/2.6.sammenlign_metadata.html">1.9. Sammenlign metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/3.0.ner_og_pos.html">1.10. NER og POS med Spacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/3.1.ordparadigmer.html">1.11. Ordparadigmer med wordbank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../tutorial/3.2.dispersion.html">1.12. Ordfordeling</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../cookbook.html">2. Kokebøker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../cookbook/4.0.sentiment_analysis_timeseries.html">2.1. Sentimentanalyse i aviskorpus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../cookbook/4.1.topic_modelling_with_LDA.html">2.2. Topic modelling med gensim og dhlab</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/NationalLibraryOfNorway/digital_tekstanalyse/main?urlpath=tree/_build_fresh/_build/.jupyter_cache/executed/1f69ee5de17079e7bad3f8732a15870d/base.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/NationalLibraryOfNorway/digital_tekstanalyse/blob/main/_build_fresh/_build/.jupyter_cache/executed/1f69ee5de17079e7bad3f8732a15870d/base.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NationalLibraryOfNorway/digital_tekstanalyse" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NationalLibraryOfNorway/digital_tekstanalyse/issues/new?title=Issue%20on%20page%20%2F_build_fresh/_build/.jupyter_cache/executed/1f69ee5de17079e7bad3f8732a15870d/base.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../../_sources/_build_fresh/_build/.jupyter_cache/executed/1f69ee5de17079e7bad3f8732a15870d/base.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dhlab.api.dhlab_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_document_frequencies</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">Corpus</span><span class="p">,</span> <span class="n">Counts</span><span class="p">,</span> <span class="n">totals</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">nbtext</span> <span class="k">as</span> <span class="n">nb</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bøker</span> <span class="o">=</span> <span class="n">Corpus</span><span class="p">(</span>
+   <span class="n">doctype</span><span class="o">=</span><span class="s2">&quot;digibok&quot;</span><span class="p">,</span>
+   <span class="n">freetext</span><span class="o">=</span><span class="s2">&quot;krig OR krigen OR soldater&quot;</span><span class="p">,</span>
+   <span class="n">from_year</span><span class="o">=</span><span class="mi">1950</span><span class="p">,</span>
+   <span class="n">to_year</span><span class="o">=</span><span class="mi">2010</span><span class="p">,</span>
+   <span class="n">ddk</span><span class="o">=</span><span class="s2">&quot;9*&quot;</span><span class="p">,</span>
+   <span class="n">lang</span><span class="o">=</span><span class="s1">&#39;nob&#39;</span><span class="p">,</span>
+   <span class="n">limit</span><span class="o">=</span><span class="mi">30</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bøker</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="s2">&quot;authors&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>title</th>
+      <th>authors</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Det hendte under krigen : en familiefortelling-</td>
+      <td>Wiksaas , Arnfinn</td>
+      <td>2008</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Ulvetiden : krig og samarbeid</td>
+      <td>Fjørtoft , Kjell</td>
+      <td>1990</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>En bondegård opplever krigen</td>
+      <td>Steine , Martha</td>
+      <td>1980</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Ensom krig mot Gestapo</td>
+      <td>Skogen , Olav</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Kast ikke kortene : i sanitetet- og utenfor , ...</td>
+      <td>Kreyberg , Leiv</td>
+      <td>1978</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Inger Gulbrandsen : ungdomstid i fangeleir</td>
+      <td>Lund , Maria Konow / Myhr , Eirik</td>
+      <td>1998</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Spenningenes land : Nord-Norge etter 1945</td>
+      <td>Lorås , Jostein / Lorås , Jostein</td>
+      <td>1997</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Kryssild : mitt liv som flyktning : Burundi - ...</td>
+      <td>Ngendakurio , John Bosco / Holmedahl , Jostein</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>D-dagen : den allierte invasjonen i Normandie ...</td>
+      <td>Tamelander , Michael / Zetterling , Niklas / R...</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Moskva 1941 : en by i krig</td>
+      <td>Braithwaite , Rodric / Carlsen , Carsten</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Sjømenn i krig : krigsseilere forteller</td>
+      <td>Wilhelmsen , Aage A. ( Aage Adolf )</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Ti i krig</td>
+      <td>Taraldsen , Kristen</td>
+      <td>1998</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Kampen om Norge : tyskernes bilder fra det nor...</td>
+      <td>Olsen , Per Erik</td>
+      <td>2008</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Stråler fra asken</td>
+      <td>Jungk , Robert / Hagerup , Anders</td>
+      <td>1960</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Etterkrigshistorie : emner fra norsk historie ...</td>
+      <td></td>
+      <td>1973</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>1940 : fra nøytral til okkupert</td>
+      <td>Paulsen , Helge</td>
+      <td>1969</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Vardan og armenernes krig</td>
+      <td>Eghishē / Lindeman , Fredrik Otto</td>
+      <td>1992</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>En bedre dag i morgen : en barnesoldat forteller</td>
+      <td>Beah , Ishmael / Hidle , Mie</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Handelsflåten i krig 1939-1945</td>
+      <td>Nilsen , Tore L. / Thowsen , Atle</td>
+      <td>1990</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Balkan-ekspressen : fragmenter fra den andre s...</td>
+      <td>Drakulić , Slavenka / Henriksen , Ginni Schuls...</td>
+      <td>1994</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Partisanen</td>
+      <td>Hirsti , Reidar</td>
+      <td>1990</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Krigen mot siouxene : nordmenn mot indianere 1...</td>
+      <td>Skarstein , Karl Jakob</td>
+      <td>2005</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>En historiebok om Levanger : fortellinger , in...</td>
+      <td>Eklo , Asbjørn D. K.</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>De historiske hendelsene i Moss i 1814 : krig ...</td>
+      <td>Edfeldt , Per</td>
+      <td>2004</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Berlevåg i krig og fred : fra okkupasjon og ru...</td>
+      <td>Bergheim , Geir</td>
+      <td>1994</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Barn av Hiroshima</td>
+      <td>Vesaas , Halldis Moren / Osada , Arata / Roalk...</td>
+      <td>1982</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Sjøfolk i krig : haugalendinger ser tilbake - ...</td>
+      <td>Bjørkelund , Leif M.</td>
+      <td>1995</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Krigen og Fyllingsdalen 1940-1945</td>
+      <td>Kvinge , Kåre / Hemmingsen , Jan</td>
+      <td>2001</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Krigen i Norge 1940</td>
+      <td>Christophersen , Bjørn</td>
+      <td>1965</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>830 S : med illegal avlytting og sikringstjene...</td>
+      <td>Kristoffersen , Terje</td>
+      <td>2006</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tar de fem første og henter frekvensene for alle bøkene</span>
+
+<span class="n">bøker_dtm</span> <span class="o">=</span> <span class="n">Counts</span><span class="p">(</span><span class="n">bøker</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bøker_dtm</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>100525957</th>
+      <th>100464888</th>
+      <th>100141056</th>
+      <th>100159643</th>
+      <th>100287961</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>.</th>
+      <td>3721</td>
+      <td>10545</td>
+      <td>1874</td>
+      <td>2601</td>
+      <td>958</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>3110</td>
+      <td>3434</td>
+      <td>2475</td>
+      <td>2165</td>
+      <td>1021</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>2176</td>
+      <td>3284</td>
+      <td>1795</td>
+      <td>1784</td>
+      <td>655</td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>1658</td>
+      <td>3653</td>
+      <td>1017</td>
+      <td>1286</td>
+      <td>334</td>
+    </tr>
+    <tr>
+      <th>var</th>
+      <td>1199</td>
+      <td>551</td>
+      <td>1063</td>
+      <td>1184</td>
+      <td>476</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>overlevering</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>troppssjef</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>tolvårsrikets</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>stårkt</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Holand</th>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>33629 rows × 5 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">bøker_dtm</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#045599&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_e629b_row0_col0, #T_e629b_row0_col1, #T_e629b_row0_col3, #T_e629b_row1_col2, #T_e629b_row1_col4 {
+  background-color: #045599;
+  color: #f1f1f1;
+}
+#T_e629b_row0_col2 {
+  background-color: #4d85b5;
+  color: #f1f1f1;
+}
+#T_e629b_row0_col4 {
+  background-color: #15609f;
+  color: #f1f1f1;
+}
+#T_e629b_row1_col0 {
+  background-color: #3777ac;
+  color: #f1f1f1;
+}
+#T_e629b_row1_col1 {
+  background-color: #acc4d9;
+  color: #000000;
+}
+#T_e629b_row1_col3 {
+  background-color: #3b79ae;
+  color: #f1f1f1;
+}
+#T_e629b_row2_col0 {
+  background-color: #86abcb;
+  color: #f1f1f1;
+}
+#T_e629b_row2_col1 {
+  background-color: #afc6da;
+  color: #000000;
+}
+#T_e629b_row2_col2 {
+  background-color: #568bb8;
+  color: #f1f1f1;
+}
+#T_e629b_row2_col3 {
+  background-color: #6c99c0;
+  color: #f1f1f1;
+}
+#T_e629b_row2_col4 {
+  background-color: #6897bf;
+  color: #f1f1f1;
+}
+#T_e629b_row3_col0 {
+  background-color: #b3c8dc;
+  color: #000000;
+}
+#T_e629b_row3_col1 {
+  background-color: #a7c0d7;
+  color: #000000;
+}
+#T_e629b_row3_col2 {
+  background-color: #b6cadd;
+  color: #000000;
+}
+#T_e629b_row3_col3 {
+  background-color: #aac3d8;
+  color: #000000;
+}
+#T_e629b_row3_col4 {
+  background-color: #bfd0e0;
+  color: #000000;
+}
+#T_e629b_row4_col0 {
+  background-color: #dae2ea;
+  color: #000000;
+}
+#T_e629b_row4_col1, #T_e629b_row6_col2, #T_e629b_row6_col3, #T_e629b_row6_col4, #T_e629b_row8_col3, #T_e629b_row9_col0 {
+  background-color: #f0f1f3;
+  color: #000000;
+}
+#T_e629b_row4_col2 {
+  background-color: #b0c7da;
+  color: #000000;
+}
+#T_e629b_row4_col3 {
+  background-color: #b7cbdd;
+  color: #000000;
+}
+#T_e629b_row4_col4 {
+  background-color: #98b7d1;
+  color: #000000;
+}
+#T_e629b_row5_col0 {
+  background-color: #dce4eb;
+  color: #000000;
+}
+#T_e629b_row5_col1 {
+  background-color: #bccedf;
+  color: #000000;
+}
+#T_e629b_row5_col2, #T_e629b_row5_col4, #T_e629b_row6_col0, #T_e629b_row8_col4 {
+  background-color: #dfe6ec;
+  color: #000000;
+}
+#T_e629b_row5_col3 {
+  background-color: #dbe3eb;
+  color: #000000;
+}
+#T_e629b_row6_col1 {
+  background-color: #cfdbe6;
+  color: #000000;
+}
+#T_e629b_row7_col0 {
+  background-color: #e8ecf0;
+  color: #000000;
+}
+#T_e629b_row7_col1 {
+  background-color: #bdcfdf;
+  color: #000000;
+}
+#T_e629b_row7_col2 {
+  background-color: #d6e0e9;
+  color: #000000;
+}
+#T_e629b_row7_col3 {
+  background-color: #dae3eb;
+  color: #000000;
+}
+#T_e629b_row7_col4 {
+  background-color: #cdd9e5;
+  color: #000000;
+}
+#T_e629b_row8_col0 {
+  background-color: #eaedf1;
+  color: #000000;
+}
+#T_e629b_row8_col1 {
+  background-color: #d8e1ea;
+  color: #000000;
+}
+#T_e629b_row8_col2 {
+  background-color: #c5d5e3;
+  color: #000000;
+}
+#T_e629b_row9_col1 {
+  background-color: #bbcedf;
+  color: #000000;
+}
+#T_e629b_row9_col2 {
+  background-color: #b6cbdd;
+  color: #000000;
+}
+#T_e629b_row9_col3 {
+  background-color: #cedbe6;
+  color: #000000;
+}
+#T_e629b_row9_col4 {
+  background-color: #8cafcd;
+  color: #f1f1f1;
+}
+</style>
+<table id="T_e629b">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_e629b_level0_col0" class="col_heading level0 col0" >100525957</th>
+      <th id="T_e629b_level0_col1" class="col_heading level0 col1" >100464888</th>
+      <th id="T_e629b_level0_col2" class="col_heading level0 col2" >100141056</th>
+      <th id="T_e629b_level0_col3" class="col_heading level0 col3" >100159643</th>
+      <th id="T_e629b_level0_col4" class="col_heading level0 col4" >100287961</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_e629b_level0_row0" class="row_heading level0 row0" >.</th>
+      <td id="T_e629b_row0_col0" class="data row0 col0" >3721</td>
+      <td id="T_e629b_row0_col1" class="data row0 col1" >10545</td>
+      <td id="T_e629b_row0_col2" class="data row0 col2" >1874</td>
+      <td id="T_e629b_row0_col3" class="data row0 col3" >2601</td>
+      <td id="T_e629b_row0_col4" class="data row0 col4" >958</td>
+    </tr>
+    <tr>
+      <th id="T_e629b_level0_row1" class="row_heading level0 row1" >,</th>
+      <td id="T_e629b_row1_col0" class="data row1 col0" >3110</td>
+      <td id="T_e629b_row1_col1" class="data row1 col1" >3434</td>
+      <td id="T_e629b_row1_col2" class="data row1 col2" >2475</td>
+      <td id="T_e629b_row1_col3" class="data row1 col3" >2165</td>
+      <td id="T_e629b_row1_col4" class="data row1 col4" >1021</td>
+    </tr>
+    <tr>
+      <th id="T_e629b_level0_row2" class="row_heading level0 row2" >og</th>
+      <td id="T_e629b_row2_col0" class="data row2 col0" >2176</td>
+      <td id="T_e629b_row2_col1" class="data row2 col1" >3284</td>
+      <td id="T_e629b_row2_col2" class="data row2 col2" >1795</td>
+      <td id="T_e629b_row2_col3" class="data row2 col3" >1784</td>
+      <td id="T_e629b_row2_col4" class="data row2 col4" >655</td>
+    </tr>
+    <tr>
+      <th id="T_e629b_level0_row3" class="row_heading level0 row3" >i</th>
+      <td id="T_e629b_row3_col0" class="data row3 col0" >1658</td>
+      <td id="T_e629b_row3_col1" class="data row3 col1" >3653</td>
+      <td id="T_e629b_row3_col2" class="data row3 col2" >1017</td>
+      <td id="T_e629b_row3_col3" class="data row3 col3" >1286</td>
+      <td id="T_e629b_row3_col4" class="data row3 col4" >334</td>
+    </tr>
+    <tr>
+      <th id="T_e629b_level0_row4" class="row_heading level0 row4" >var</th>
+      <td id="T_e629b_row4_col0" class="data row4 col0" >1199</td>
+      <td id="T_e629b_row4_col1" class="data row4 col1" >551</td>
+      <td id="T_e629b_row4_col2" class="data row4 col2" >1063</td>
+      <td id="T_e629b_row4_col3" class="data row4 col3" >1184</td>
+      <td id="T_e629b_row4_col4" class="data row4 col4" >476</td>
+    </tr>
+    <tr>
+      <th id="T_e629b_level0_row5" class="row_heading level0 row5" >til</th>
+      <td id="T_e629b_row5_col0" class="data row5 col0" >1161</td>
+      <td id="T_e629b_row5_col1" class="data row5 col1" >2740</td>
+      <td id="T_e629b_row5_col2" class="data row5 col2" >678</td>
+      <td id="T_e629b_row5_col3" class="data row5 col3" >901</td>
+      <td id="T_e629b_row5_col4" class="data row5 col4" >216</td>
+    </tr>
+    <tr>
+      <th id="T_e629b_level0_row6" class="row_heading level0 row6" >av</th>
+      <td id="T_e629b_row6_col0" class="data row6 col0" >1134</td>
+      <td id="T_e629b_row6_col1" class="data row6 col1" >1944</td>
+      <td id="T_e629b_row6_col2" class="data row6 col2" >538</td>
+      <td id="T_e629b_row6_col3" class="data row6 col3" >737</td>
+      <td id="T_e629b_row6_col4" class="data row6 col4" >154</td>
+    </tr>
+    <tr>
+      <th id="T_e629b_level0_row7" class="row_heading level0 row7" >som</th>
+      <td id="T_e629b_row7_col0" class="data row7 col0" >1019</td>
+      <td id="T_e629b_row7_col1" class="data row7 col1" >2710</td>
+      <td id="T_e629b_row7_col2" class="data row7 col2" >752</td>
+      <td id="T_e629b_row7_col3" class="data row7 col3" >906</td>
+      <td id="T_e629b_row7_col4" class="data row7 col4" >286</td>
+    </tr>
+    <tr>
+      <th id="T_e629b_level0_row8" class="row_heading level0 row8" >en</th>
+      <td id="T_e629b_row8_col0" class="data row8 col0" >996</td>
+      <td id="T_e629b_row8_col1" class="data row8 col1" >1599</td>
+      <td id="T_e629b_row8_col2" class="data row8 col2" >889</td>
+      <td id="T_e629b_row8_col3" class="data row8 col3" >737</td>
+      <td id="T_e629b_row8_col4" class="data row8 col4" >217</td>
+    </tr>
+    <tr>
+      <th id="T_e629b_level0_row9" class="row_heading level0 row9" >det</th>
+      <td id="T_e629b_row9_col0" class="data row9 col0" >927</td>
+      <td id="T_e629b_row9_col1" class="data row9 col1" >2813</td>
+      <td id="T_e629b_row9_col2" class="data row9 col2" >1010</td>
+      <td id="T_e629b_row9_col3" class="data row9 col3" >1002</td>
+      <td id="T_e629b_row9_col4" class="data row9 col4" >520</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_corpus</span> <span class="o">=</span> <span class="n">Counts</span><span class="p">(</span><span class="n">bøker</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">totals</span> <span class="o">=</span> <span class="n">totals</span><span class="p">(</span><span class="mi">150000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Summer tokens fra korpus</span>
+<span class="n">bøker_total</span> <span class="o">=</span> <span class="n">count_corpus</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s2">&quot;count&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Frekvensliste for korpus</span>
+<span class="n">bøker_total</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>.</th>
+      <td>115180</td>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>83655</td>
+    </tr>
+    <tr>
+      <th>^</th>
+      <td>1759</td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>50124</td>
+    </tr>
+    <tr>
+      <th>en</th>
+      <td>24321</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>nazi-stat</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>stormester</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Lyngard</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>koordineringen</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>Arbeidsløsheten</th>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>123083 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span><span class="o">.</span><span class="n">normalize_corpus_dataframe</span><span class="p">(</span><span class="n">totals</span><span class="p">)</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">normalize_corpus_dataframe</span><span class="p">(</span><span class="n">bøker_total</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">forskjell</span> <span class="o">=</span> <span class="n">bøker_total</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;count&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">totals</span><span class="o">.</span><span class="n">freq</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bøker_typiske_ord</span> <span class="o">=</span> <span class="n">forskjell</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s2">&quot;ratio&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bøker_typiske_ord</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ratio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nortraship</th>
+      <td>374.177225</td>
+    </tr>
+    <tr>
+      <th>Administrasjonsrådet</th>
+      <td>361.652298</td>
+    </tr>
+    <tr>
+      <th>stridsvognene</th>
+      <td>212.685583</td>
+    </tr>
+    <tr>
+      <th>fremrykningen</th>
+      <td>192.429317</td>
+    </tr>
+    <tr>
+      <th>Sjømenn</th>
+      <td>181.864313</td>
+    </tr>
+    <tr>
+      <th>Ruge</th>
+      <td>151.520184</td>
+    </tr>
+    <tr>
+      <th>jeF</th>
+      <td>140.540655</td>
+    </tr>
+    <tr>
+      <th>Terboven</th>
+      <td>135.436769</td>
+    </tr>
+    <tr>
+      <th>Starheim</th>
+      <td>128.311689</td>
+    </tr>
+    <tr>
+      <th>tdw</th>
+      <td>123.630821</td>
+    </tr>
+    <tr>
+      <th>konvoien</th>
+      <td>121.383054</td>
+    </tr>
+    <tr>
+      <th>jagerne</th>
+      <td>117.36657</td>
+    </tr>
+    <tr>
+      <th>ENSOM</th>
+      <td>116.470445</td>
+    </tr>
+    <tr>
+      <th>Crow</th>
+      <td>115.579853</td>
+    </tr>
+    <tr>
+      <th>Presidentskapet</th>
+      <td>115.547847</td>
+    </tr>
+    <tr>
+      <th>Ropstad</th>
+      <td>105.735748</td>
+    </tr>
+    <tr>
+      <th>HENDTE</th>
+      <td>105.718891</td>
+    </tr>
+    <tr>
+      <th>stridsvogner</th>
+      <td>102.321627</td>
+    </tr>
+    <tr>
+      <th>Kreyberg</th>
+      <td>101.918331</td>
+    </tr>
+    <tr>
+      <th>Falkenhorst</th>
+      <td>101.524668</td>
+    </tr>
+    <tr>
+      <th>Paulson</th>
+      <td>96.547861</td>
+    </tr>
+    <tr>
+      <th>Moskvas</th>
+      <td>94.179596</td>
+    </tr>
+    <tr>
+      <th>Burundi</th>
+      <td>93.361429</td>
+    </tr>
+    <tr>
+      <th>Rommel</th>
+      <td>92.81173</td>
+    </tr>
+    <tr>
+      <th>riksråd</th>
+      <td>92.649391</td>
+    </tr>
+    <tr>
+      <th>sendemannen</th>
+      <td>92.361771</td>
+    </tr>
+    <tr>
+      <th>skutesiden</th>
+      <td>91.523627</td>
+    </tr>
+    <tr>
+      <th>Wehrmacht</th>
+      <td>90.437751</td>
+    </tr>
+    <tr>
+      <th>Tjelmeland</th>
+      <td>89.286192</td>
+    </tr>
+    <tr>
+      <th>legasjonen</th>
+      <td>88.282819</td>
+    </tr>
+    <tr>
+      <th>kanadierne</th>
+      <td>86.660885</td>
+    </tr>
+    <tr>
+      <th>Hysing</th>
+      <td>86.202029</td>
+    </tr>
+    <tr>
+      <th>Luftwaffe</th>
+      <td>85.847187</td>
+    </tr>
+    <tr>
+      <th>KRIGEN</th>
+      <td>85.03972</td>
+    </tr>
+    <tr>
+      <th>Omaha</th>
+      <td>84.699097</td>
+    </tr>
+    <tr>
+      <th>Nord-Noreg</th>
+      <td>84.234978</td>
+    </tr>
+    <tr>
+      <th>HOK</th>
+      <td>83.743131</td>
+    </tr>
+    <tr>
+      <th>alliertes</th>
+      <td>81.394871</td>
+    </tr>
+    <tr>
+      <th>konvoi</th>
+      <td>80.885071</td>
+    </tr>
+    <tr>
+      <th>Dachau</th>
+      <td>79.425375</td>
+    </tr>
+    <tr>
+      <th>partisanene</th>
+      <td>77.919277</td>
+    </tr>
+    <tr>
+      <th>übåter</th>
+      <td>77.775187</td>
+    </tr>
+    <tr>
+      <th>indianerne</th>
+      <td>74.933973</td>
+    </tr>
+    <tr>
+      <th>Hannevig</th>
+      <td>74.610472</td>
+    </tr>
+    <tr>
+      <th>Berggrav</th>
+      <td>74.589971</td>
+    </tr>
+    <tr>
+      <th>Freetown</th>
+      <td>73.805431</td>
+    </tr>
+    <tr>
+      <th>bombeflyene</th>
+      <td>73.550555</td>
+    </tr>
+    <tr>
+      <th>Aagesen</th>
+      <td>71.46604</td>
+    </tr>
+    <tr>
+      <th>Justitiarius</th>
+      <td>71.060352</td>
+    </tr>
+    <tr>
+      <th>Colban</th>
+      <td>69.728015</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span><span class="o">.</span><span class="n">cloud</span><span class="p">((</span><span class="n">bøker_typiske_ord</span><span class="o">/</span><span class="n">bøker_typiske_ord</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../../_images/bf0b4972204bcb58ef3061e2e93fb1523c13de97610c7116aea32758125609c7.png" src="../../../../../_images/bf0b4972204bcb58ef3061e2e93fb1523c13de97610c7116aea32758125609c7.png" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./_build_fresh/_build/.jupyter_cache/executed/1f69ee5de17079e7bad3f8732a15870d"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Nasjonalbiblioteket
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

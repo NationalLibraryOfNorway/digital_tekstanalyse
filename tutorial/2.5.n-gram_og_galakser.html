@@ -16,41 +16,44 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -64,6 +67,7 @@
     <link rel="prev" title="1.7. Søk i aviser" href="2.4.S%C3%B8k_i_aviser.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -79,19 +83,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -99,7 +92,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -107,8 +99,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -124,7 +116,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -142,7 +135,7 @@
     
   
 
-<a class="navbar-brand logo" href="../README.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
@@ -154,28 +147,24 @@
     
     
     <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="DH-lab dokumenter - Home"/>
-    <script>document.write(`<img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark" alt="DH-lab dokumenter - Home"/>`);</script>
+    <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark pst-js-only" alt="DH-lab dokumenter - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../README.html">
-                    DHLAB
+                <a class="reference internal" href="../index.html">
+                    DH-lab – digital tekstanalyse
                 </a>
             </li>
         </ul>
@@ -211,9 +200,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -392,7 +386,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -406,25 +400,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -513,7 +499,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5816f9806642d61ec6d94198e1f78fe2c7f831118e2bd4a39440bf60dd548a49.png" src="../_images/5816f9806642d61ec6d94198e1f78fe2c7f831118e2bd4a39440bf60dd548a49.png" />
+<img alt="../_images/9e366763c5d807899f62eb8f5a5940e69f029f9376b57d442b7d9205c2b821a0.png" src="../_images/9e366763c5d807899f62eb8f5a5940e69f029f9376b57d442b7d9205c2b821a0.png" />
 </div>
 </div>
 <p>Visualisering kan konfigurerers med <code class="docutils literal notranslate"><span class="pre">Ngram.plot()</span></code></p>
@@ -538,7 +524,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/16b1ff8963428d761983be595bf3658a7da6d575e14763688ad487ff44d9ea18.png" src="../_images/16b1ff8963428d761983be595bf3658a7da6d575e14763688ad487ff44d9ea18.png" />
+<img alt="../_images/c717f2ab8100c9810c7a2cf13bf8d276287698ff572f6243eeaf0895c8c96b00.png" src="../_images/c717f2ab8100c9810c7a2cf13bf8d276287698ff572f6243eeaf0895c8c96b00.png" />
 </div>
 </div>
 <section id="dataramme">
@@ -627,7 +613,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1232c46c8c53e6127c2393438c5648dfa11c5b695ddbf6a10cb3c872b774dc4b.png" src="../_images/1232c46c8c53e6127c2393438c5648dfa11c5b695ddbf6a10cb3c872b774dc4b.png" />
+<img alt="../_images/82bea48ea5c1ad011e051ccb3ce06feeb17352fe27b948a273dd26e660fa7f78.png" src="../_images/82bea48ea5c1ad011e051ccb3ce06feeb17352fe27b948a273dd26e660fa7f78.png" />
 </div>
 </div>
 </section>
@@ -644,7 +630,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/cbd155d9783fbf02ca962c571675d4bed24cb34c8e8f267fbbd669f374353ef7.png" src="../_images/cbd155d9783fbf02ca962c571675d4bed24cb34c8e8f267fbbd669f374353ef7.png" />
+<img alt="../_images/304393b1840b17b7b485a3c026d5d4d3379fb0f8785b4d98006fd6662c6bf461.png" src="../_images/304393b1840b17b7b485a3c026d5d4d3379fb0f8785b4d98006fd6662c6bf461.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -657,7 +643,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2f5556e38c6a45563d4d7175d8f75bde0bf7b63a6985b9d6c18a735f63561c65.png" src="../_images/2f5556e38c6a45563d4d7175d8f75bde0bf7b63a6985b9d6c18a735f63561c65.png" />
+<img alt="../_images/0b7ccc69defa4a548c89e9298c057c51305346126bf0b716d985c03d7b29eba1.png" src="../_images/0b7ccc69defa4a548c89e9298c057c51305346126bf0b716d985c03d7b29eba1.png" />
 </div>
 </div>
 </section>
@@ -679,7 +665,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f0b287eaa3daee220b3e9f8a7fc0a35b0f77978ae6051e5fd1014c46b53b850b.png" src="../_images/f0b287eaa3daee220b3e9f8a7fc0a35b0f77978ae6051e5fd1014c46b53b850b.png" />
+<img alt="../_images/1883e2be8cb5546624f17215acda639e346622982bf478e02dd141c56d49bcfe.png" src="../_images/1883e2be8cb5546624f17215acda639e346622982bf478e02dd141c56d49bcfe.png" />
 </div>
 </div>
 <p>Bruk kommando <code class="docutils literal notranslate"><span class="pre">show_communities</span></code> fra <code class="docutils literal notranslate"><span class="pre">gnl</span></code> for å se på clustre.</p>
@@ -690,17 +676,17 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 isdannelse, kornsne, skiføre, is, dårlig, avkjøles, Eld, skare, skummes, minusgrader, siles, Vatn, sludd, hålke, holke, hagl, nysne, Snø, rim, tomtønner, papir, snøbyger, ,, isdekke, barfrost, vanskelige, ), snø, Kulde, fokksnø, Sludd, ising, glatt, sjøis, Agnsild, allmennkunnskaper, Glod, Vinter, granskog, Sno, hardpakket, regn, Ski, isete, slaps, stov, sno, dugg, tomkasser, sne, kondens, eld, slud, kuldegrader, ski
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 Vatn, is, Ski, skiføre, nysne, slud, kondens, slaps, sno, snøbyger, barfrost, Sno, hagl, snø, fokksnø, Agnsild, isete, dugg, ski, ), dårlig, isdekke, holke, eld, ,, isdannelse, Vinter, glatt, kuldegrader, skare, papir, sludd, avkjøles, hålke, stov, sjøis, Kulde, hardpakket, regn, Eld, granskog, Sludd, ising, tomtønner, vanskelige, skummes, tomkasser, rim, siles, minusgrader, Snø, Glod, sne, kornsne, allmennkunnskaper
 
-2 skinker, boller, snacks, pizza, pinnebrød, Pølser, kaker, brus, karbonader, lettøl, hamburgarar, Kaffe, godteri, kaffe, øl, hamburgere, koteletter, pølser, burgere, opskjær, vørterøl, polser, mineralvann
+2 snacks, lettøl, Kaffe, brus, mineralvann, karbonader, burgere, skinker, koteletter, øl, boller, pølser, opskjær, godteri, hamburgarar, kaker, vørterøl, pizza, pinnebrød, Pølser, polser, hamburgere, kaffe
 
-3 røk, vann, isvann, overvann, ild, snøslaps, Blod, sørpe, småstykker, svovel, røyk, rok, isflak, søle
+3 isflak, overvann, søle, røyk, ild, småstykker, røk, isvann, sørpe, vann, rok, Blod, snøslaps, svovel
 
-4 fuktighet, snøstorm, frost, kulde, vind, snestorm, varme, væte, sult, mørke
+4 kulde, snøstorm, fuktighet, frost, varme, væte, vind, snestorm, mørke, sult
 
-5 fjord, fjell, himmel, kontinenter, kyst, land, hav
+5 hav, kyst, land, fjord, fjell, himmel, kontinenter
 
-6 Frost, Is, Hagel, Slud, Regn, Sne, Storm, lis, Hagl
+6 Sne, Frost, lis, Storm, Hagl, Is, Slud, Regn, Hagel
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
@@ -766,14 +752,16 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">1.8.1. Plotting</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataramme">1.8.1.1. Dataramme</a></li>
@@ -830,8 +818,8 @@ By Nasjonalbiblioteket
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

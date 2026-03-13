@@ -16,41 +16,44 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -64,6 +67,7 @@
     <link rel="prev" title="2. Kokebøker" href="../cookbook.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -79,19 +83,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -99,7 +92,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -107,8 +99,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -124,7 +116,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -142,7 +135,7 @@
     
   
 
-<a class="navbar-brand logo" href="../README.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
@@ -154,28 +147,24 @@
     
     
     <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="DH-lab dokumenter - Home"/>
-    <script>document.write(`<img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark" alt="DH-lab dokumenter - Home"/>`);</script>
+    <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark pst-js-only" alt="DH-lab dokumenter - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../README.html">
-                    DHLAB
+                <a class="reference internal" href="../index.html">
+                    DH-lab – digital tekstanalyse
                 </a>
             </li>
         </ul>
@@ -211,9 +200,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -392,7 +386,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -406,25 +400,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -474,25 +460,6 @@ document.write(`
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dh</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">digital_tekstanalyse.sentiment</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_corpus_from_file</span><span class="p">,</span> <span class="n">compute_sentiment_analysis</span><span class="p">,</span> <span class="n">add_urls</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dh</span>
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="kn">from</span><span class="w"> </span><span class="nn">digital_tekstanalyse.sentiment</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_corpus_from_file</span><span class="p">,</span> <span class="n">compute_sentiment_analysis</span><span class="p">,</span> <span class="n">add_urls</span>
-
-<span class="n">File</span> <span class="o">~/</span><span class="n">prosjekter</span><span class="o">/</span><span class="n">digital_tekstanalyse</span><span class="o">/</span><span class="n">digital_tekstanalyse</span><span class="o">/</span><span class="n">sentiment</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">13</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span><span class="w"> </span><span class="nn">dhlab.api.dhlab_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">concordance</span><span class="p">,</span> <span class="n">get_chunks_para</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="kn">from</span><span class="w"> </span><span class="nn">dhlab.constants</span><span class="w"> </span><span class="kn">import</span> <span class="n">BASE_URL</span>
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="kn">from</span><span class="w"> </span><span class="nn">dhlab.nbtokenizer</span><span class="w"> </span><span class="kn">import</span> <span class="n">tokenize</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="c1"># File handling util functions</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="k">def</span><span class="w"> </span><span class="nf">load_corpus_from_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;dhlab.nbtokenizer&#39;
 </pre></div>
 </div>
 </div>
@@ -630,7 +597,6 @@ corpus består av 3441 utgivelser
       <th>doctype</th>
       <th>word</th>
       <th>count</th>
-      <th>index</th>
       <th>positive</th>
       <th>negative</th>
       <th>sentimentscore</th>
@@ -639,80 +605,75 @@ corpus består av 3441 utgivelser
   <tbody>
     <tr>
       <th>0</th>
-      <td>200881788</td>
-      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
-      <td>kristiansandavis</td>
+      <td>200272124</td>
+      <td>URN:NBN:no-nb_digavis_budstikkasoegne_null_nul...</td>
+      <td>budstikkasoegne</td>
       <td>Kristiansand</td>
-      <td>20100204</td>
+      <td>20100519</td>
       <td>2010</td>
       <td>digavis</td>
       <td>biblioteket</td>
       <td>1</td>
-      <td>107</td>
-      <td>1</td>
-      <td>2</td>
-      <td>-1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>200881788</td>
-      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
-      <td>kristiansandavis</td>
+      <td>200272130</td>
+      <td>URN:NBN:no-nb_digavis_budstikkasoegne_null_nul...</td>
+      <td>budstikkasoegne</td>
       <td>Kristiansand</td>
-      <td>20100204</td>
+      <td>20100630</td>
       <td>2010</td>
       <td>digavis</td>
       <td>biblioteket</td>
       <td>1</td>
-      <td>108</td>
+      <td>1</td>
       <td>1</td>
       <td>0</td>
-      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>200881806</td>
-      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
-      <td>kristiansandavis</td>
+      <td>200272204</td>
+      <td>URN:NBN:no-nb_digavis_budstikkasoegne_null_nul...</td>
+      <td>budstikkasoegne</td>
       <td>Kristiansand</td>
-      <td>20100610</td>
-      <td>2010</td>
+      <td>20111214</td>
+      <td>2011</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>1</td>
-      <td>135</td>
+      <td>2</td>
       <td>1</td>
       <td>0</td>
       <td>1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>200881806</td>
-      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
-      <td>kristiansandavis</td>
+      <td>200272204</td>
+      <td>URN:NBN:no-nb_digavis_budstikkasoegne_null_nul...</td>
+      <td>budstikkasoegne</td>
       <td>Kristiansand</td>
-      <td>20100610</td>
-      <td>2010</td>
+      <td>20111214</td>
+      <td>2011</td>
       <td>digavis</td>
       <td>biblioteket</td>
+      <td>2</td>
       <td>1</td>
-      <td>134</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>200881974</td>
-      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
-      <td>kristiansandavis</td>
+      <td>200272191</td>
+      <td>URN:NBN:no-nb_digavis_budstikkasoegne_null_nul...</td>
+      <td>budstikkasoegne</td>
       <td>Kristiansand</td>
-      <td>20131017</td>
-      <td>2013</td>
+      <td>20110914</td>
+      <td>2011</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>9</td>
-      <td>217</td>
+      <td>5</td>
       <td>0</td>
       <td>2</td>
       <td>-2</td>
@@ -737,7 +698,7 @@ Ved å bytte ut “URN” i følgende adresse med en reell verdi kan du lese avi
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://www.nb.no/items/URN:NBN:no-nb_digavis_kristiansandavis_null_null_20100204_4_5_1?searchText=biblioteket
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://www.nb.no/items/URN:NBN:no-nb_digavis_budstikkasoegne_null_null_20100630_12_25_1?searchText=biblioteket
 </pre></div>
 </div>
 </div>
@@ -776,7 +737,6 @@ Ved å bytte ut “URN” i følgende adresse med en reell verdi kan du lese avi
       <th>doctype</th>
       <th>word</th>
       <th>count</th>
-      <th>index</th>
       <th>positive</th>
       <th>negative</th>
       <th>sentimentscore</th>
@@ -786,50 +746,47 @@ Ved å bytte ut “URN” i følgende adresse med en reell verdi kan du lese avi
   <tbody>
     <tr>
       <th>0</th>
-      <td>200881788</td>
-      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
-      <td>kristiansandavis</td>
+      <td>200272124</td>
+      <td>URN:NBN:no-nb_digavis_budstikkasoegne_null_nul...</td>
+      <td>budstikkasoegne</td>
       <td>Kristiansand</td>
-      <td>20100204</td>
+      <td>20100519</td>
       <td>2010</td>
       <td>digavis</td>
       <td>biblioteket</td>
       <td>1</td>
-      <td>107</td>
-      <td>1</td>
-      <td>2</td>
-      <td>-1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>200881788</td>
-      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
-      <td>kristiansandavis</td>
+      <td>200272130</td>
+      <td>URN:NBN:no-nb_digavis_budstikkasoegne_null_nul...</td>
+      <td>budstikkasoegne</td>
       <td>Kristiansand</td>
-      <td>20100204</td>
+      <td>20100630</td>
       <td>2010</td>
       <td>digavis</td>
       <td>biblioteket</td>
       <td>1</td>
-      <td>108</td>
+      <td>1</td>
       <td>1</td>
       <td>0</td>
-      <td>1</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>200881806</td>
-      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
-      <td>kristiansandavis</td>
+      <td>200272204</td>
+      <td>URN:NBN:no-nb_digavis_budstikkasoegne_null_nul...</td>
+      <td>budstikkasoegne</td>
       <td>Kristiansand</td>
-      <td>20100610</td>
-      <td>2010</td>
+      <td>20111214</td>
+      <td>2011</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>1</td>
-      <td>135</td>
+      <td>2</td>
       <td>1</td>
       <td>0</td>
       <td>1</td>
@@ -837,33 +794,31 @@ Ved å bytte ut “URN” i følgende adresse med en reell verdi kan du lese avi
     </tr>
     <tr>
       <th>3</th>
-      <td>200881806</td>
-      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
-      <td>kristiansandavis</td>
+      <td>200272204</td>
+      <td>URN:NBN:no-nb_digavis_budstikkasoegne_null_nul...</td>
+      <td>budstikkasoegne</td>
       <td>Kristiansand</td>
-      <td>20100610</td>
-      <td>2010</td>
+      <td>20111214</td>
+      <td>2011</td>
       <td>digavis</td>
       <td>biblioteket</td>
+      <td>2</td>
       <td>1</td>
-      <td>134</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>200881974</td>
-      <td>URN:NBN:no-nb_digavis_kristiansandavis_null_nu...</td>
-      <td>kristiansandavis</td>
+      <td>200272191</td>
+      <td>URN:NBN:no-nb_digavis_budstikkasoegne_null_nul...</td>
+      <td>budstikkasoegne</td>
       <td>Kristiansand</td>
-      <td>20131017</td>
-      <td>2013</td>
+      <td>20110914</td>
+      <td>2011</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>9</td>
-      <td>217</td>
+      <td>5</td>
       <td>0</td>
       <td>2</td>
       <td>-2</td>
@@ -884,54 +839,50 @@ Ved å bytte ut “URN” i følgende adresse med en reell verdi kan du lese avi
       <td>...</td>
       <td>...</td>
       <td>...</td>
-      <td>...</td>
     </tr>
     <tr>
       <th>5577</th>
-      <td>200486068</td>
+      <td>200486771</td>
       <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
       <td>faedrelandsvennen</td>
       <td>Kristiansand</td>
-      <td>20160910</td>
-      <td>2016</td>
+      <td>20190105</td>
+      <td>2019</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>3</td>
-      <td>6179</td>
       <td>1</td>
       <td>0</td>
       <td>1</td>
+      <td>-1</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>5578</th>
-      <td>200484713</td>
+      <td>200482428</td>
       <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
       <td>faedrelandsvennen</td>
       <td>Kristiansand</td>
-      <td>20120310</td>
-      <td>2012</td>
+      <td>20000816</td>
+      <td>2000</td>
       <td>digavis</td>
       <td>biblioteket</td>
       <td>2</td>
-      <td>5234</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>1</td>
+      <td>-1</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>5579</th>
-      <td>200484713</td>
+      <td>200482428</td>
       <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
       <td>faedrelandsvennen</td>
       <td>Kristiansand</td>
-      <td>20120310</td>
-      <td>2012</td>
+      <td>20000816</td>
+      <td>2000</td>
       <td>digavis</td>
       <td>biblioteket</td>
       <td>2</td>
-      <td>5235</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -939,41 +890,39 @@ Ved å bytte ut “URN” i følgende adresse med en reell verdi kan du lese avi
     </tr>
     <tr>
       <th>5580</th>
-      <td>200484713</td>
+      <td>200482815</td>
       <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
       <td>faedrelandsvennen</td>
       <td>Kristiansand</td>
-      <td>20120310</td>
-      <td>2012</td>
+      <td>20011124</td>
+      <td>2001</td>
       <td>digavis</td>
       <td>biblioteket</td>
-      <td>2</td>
-      <td>5237</td>
-      <td>2</td>
+      <td>1</td>
       <td>0</td>
-      <td>2</td>
+      <td>0</td>
+      <td>0</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
     <tr>
       <th>5581</th>
-      <td>200484713</td>
+      <td>200486238</td>
       <td>URN:NBN:no-nb_digavis_faedrelandsvennen_null_n...</td>
       <td>faedrelandsvennen</td>
       <td>Kristiansand</td>
-      <td>20120310</td>
-      <td>2012</td>
+      <td>20170330</td>
+      <td>2017</td>
       <td>digavis</td>
       <td>biblioteket</td>
+      <td>1</td>
       <td>2</td>
-      <td>5236</td>
-      <td>1</td>
       <td>0</td>
-      <td>1</td>
+      <td>2</td>
       <td>https://www.nb.no/items/URN:NBN:no-nb_digavis_...</td>
     </tr>
   </tbody>
 </table>
-<p>5582 rows × 14 columns</p>
+<p>5582 rows × 13 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -992,7 +941,7 @@ Ved å bytte ut “URN” i følgende adresse med en reell verdi kan du lese avi
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;year&#39;&gt;
 </pre></div>
 </div>
-<img alt="../_images/3504f2404f24bd13baea613a81cf310f3e08d70ae5cd8e098a7f4f04e31c25f3.png" src="../_images/3504f2404f24bd13baea613a81cf310f3e08d70ae5cd8e098a7f4f04e31c25f3.png" />
+<img alt="../_images/a5be5ab7e67e91c87723cf38d96ad46a61f1fd7229b20f615eba2e4e72770e62.png" src="../_images/a5be5ab7e67e91c87723cf38d96ad46a61f1fd7229b20f615eba2e4e72770e62.png" />
 </div>
 </div>
 </section>
@@ -1114,14 +1063,16 @@ Ved å bytte ut “URN” i følgende adresse med en reell verdi kan du lese avi
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#korpusdefinisjon">2.1.1. Korpusdefinisjon</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentimentscore">2.1.2. Sentimentscore</a><ul class="nav section-nav flex-column">
@@ -1178,8 +1129,8 @@ By Nasjonalbiblioteket
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

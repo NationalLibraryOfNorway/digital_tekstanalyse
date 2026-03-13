@@ -16,41 +16,44 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -66,6 +69,7 @@
     <link rel="prev" title="1.4. Konkordanser" href="2.1.Konkordans.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -81,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -101,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -109,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -126,7 +118,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -144,7 +137,7 @@
     
   
 
-<a class="navbar-brand logo" href="../README.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
@@ -156,28 +149,24 @@
     
     
     <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-light" alt="DH-lab dokumenter - Home"/>
-    <script>document.write(`<img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark" alt="DH-lab dokumenter - Home"/>`);</script>
+    <img src="../_static/DHlab_logo_web_en_black.png" class="logo__image only-dark pst-js-only" alt="DH-lab dokumenter - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../README.html">
-                    DHLAB
+                <a class="reference internal" href="../index.html">
+                    DH-lab – digital tekstanalyse
                 </a>
             </li>
         </ul>
@@ -213,9 +202,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -394,7 +388,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -408,25 +402,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -485,19 +471,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dh</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">dhlab.api.dhlab_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">totals</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">dhlab.nbtext</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dh</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span><span class="w"> </span><span class="nn">dhlab.api.dhlab_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">totals</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">dhlab.nbtext</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nb</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;dhlab.nbtext&#39;
+<span class="kn">from</span><span class="w"> </span><span class="nn">dhlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">nbtext</span> <span class="k">as</span> <span class="n">nb</span>
 </pre></div>
 </div>
 </div>
@@ -569,20 +543,20 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>100571871</td>
-      <td>URN:NBN:no-nb_digibok_2010032412009</td>
-      <td>Den magnetiske banankokeboka</td>
-      <td>Steen , Gina</td>
-      <td>oai:nb.bibsys.no:999619010474702202</td>
-      <td>0fe48491edba7d8a2b9120d0635aacb3</td>
-      <td>8258811541</td>
-      <td>[Oslo]</td>
-      <td>19950101</td>
-      <td>1995</td>
-      <td>Aventura</td>
-      <td>nob / eng</td>
+      <td>100433299</td>
+      <td>URN:NBN:no-nb_digibok_2021011907576</td>
+      <td>Magevennlig mat : lavFODMAP : kokeboka for deg...</td>
+      <td>Edin , Julia Døhlen / Døhlen , Espen Edin</td>
+      <td>oai:nb.bibsys.no:991509321114702202</td>
+      <td>88fb22d487fa4cdf813f0393a02123bb</td>
       <td></td>
-      <td>641.64</td>
+      <td>[Oslo]</td>
+      <td>20150101</td>
+      <td>2015</td>
+      <td>Cappelen Damm</td>
+      <td>nob</td>
+      <td>matlaging / mageproblemer / fodmap</td>
+      <td>641.5631 / 641.563</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -591,20 +565,20 @@ document.write(`
     </tr>
     <tr>
       <th>1</th>
-      <td>100029242</td>
-      <td>URN:NBN:no-nb_digibok_2010120808024</td>
-      <td>Tradisjonsmat fra nord . 2 : 114 matoppskrifte...</td>
-      <td></td>
-      <td>oai:nb.bibsys.no:999726415724702202</td>
-      <td>8e240b51ba69e701785a2bc3d55238a3</td>
-      <td>8299418917</td>
-      <td>[Tromsø]</td>
-      <td>19970101</td>
-      <td>1997</td>
-      <td>Victus</td>
+      <td>100501604</td>
+      <td>URN:NBN:no-nb_digibok_2007112201099</td>
+      <td>Matglede</td>
+      <td>Kielland , Ruth Marcussen</td>
+      <td>oai:nb.bibsys.no:999106591254702202</td>
+      <td>103dfbfebcd99698141cbdef29ad0341</td>
+      <td>8205201978 / 8252520561</td>
+      <td>[Oslo]</td>
+      <td>19910101</td>
+      <td>1991</td>
+      <td>Gyldendal</td>
       <td>nob</td>
-      <td>kokebøker / mattradisjoner / nord-norge</td>
-      <td>641.594843</td>
+      <td>kokebøker</td>
+      <td>641.5</td>
       <td></td>
       <td>Faglitteratur</td>
       <td>digibok</td>
@@ -645,64 +619,64 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_2ab14">
+<table id="T_34804">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_2ab14_level0_col0" class="col_heading level0 col0" >link</th>
-      <th id="T_2ab14_level0_col1" class="col_heading level0 col1" >concordance</th>
+      <th id="T_34804_level0_col0" class="col_heading level0 col0" >link</th>
+      <th id="T_34804_level0_col1" class="col_heading level0 col1" >concordance</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_2ab14_level0_row0" class="row_heading level0 row0" >57</th>
-      <td id="T_2ab14_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2009021700049'>URN:NBN:no-nb_digibok_2009021700049</a></td>
-      <td id="T_2ab14_row0_col1" class="data row0 col1" ><b>Sei</b> selges som filet ,</td>
+      <th id="T_34804_level0_row0" class="row_heading level0 row0" >2</th>
+      <td id="T_34804_row0_col0" class="data row0 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2007112201099'>URN:NBN:no-nb_digibok_2007112201099</a></td>
+      <td id="T_34804_row0_col1" class="data row0 col1" >IV2 kg pale ( <b>sei</b> ) IV2 l vann</td>
     </tr>
     <tr>
-      <th id="T_2ab14_level0_row1" class="row_heading level0 row1" >10</th>
-      <td id="T_2ab14_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2009021700049'>URN:NBN:no-nb_digibok_2009021700049</a></td>
-      <td id="T_2ab14_row1_col1" class="data row1 col1" >torskefikt ( hyse , <b>sei</b> ) kajennepepper</td>
+      <th id="T_34804_level0_row1" class="row_heading level0 row1" >84</th>
+      <td id="T_34804_row1_col0" class="data row1 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2017010648124'>URN:NBN:no-nb_digibok_2017010648124</a></td>
+      <td id="T_34804_row1_col1" class="data row1 col1" >bovine , and porcine proteinases . J . <b>Sei</b> . Food . Agric . press ) .</td>
     </tr>
     <tr>
-      <th id="T_2ab14_level0_row2" class="row_heading level0 row2" >59</th>
-      <td id="T_2ab14_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2009082700011'>URN:NBN:no-nb_digibok_2009082700011</a></td>
-      <td id="T_2ab14_row2_col1" class="data row2 col1" >... . 11. Food consumption . Ann . Acad . <b>Sei</b> . ferm . AV . 169 : 1 - 40... </td>
+      <th id="T_34804_level0_row2" class="row_heading level0 row2" >43</th>
+      <td id="T_34804_row2_col0" class="data row2 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011030803010'>URN:NBN:no-nb_digibok_2011030803010</a></td>
+      <td id="T_34804_row2_col1" class="data row2 col1" >... klare å komme langt inn , så både her og i visse saltvannsstrømmer kan større <b>sei</b> fiskes fra land .</td>
     </tr>
     <tr>
-      <th id="T_2ab14_level0_row3" class="row_heading level0 row3" >33</th>
-      <td id="T_2ab14_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2017010648152'>URN:NBN:no-nb_digibok_2017010648152</a></td>
-      <td id="T_2ab14_row3_col1" class="data row3 col1" >... 1700 Stekt <b>sei</b> , brun saus , poteter , vaniljepudding , jordbærsaus Kl . 2200 2 skiver brød m rekesalat... </td>
+      <th id="T_34804_level0_row3" class="row_heading level0 row3" >20</th>
+      <td id="T_34804_row3_col0" class="data row3 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2015042348028'>URN:NBN:no-nb_digibok_2015042348028</a></td>
+      <td id="T_34804_row3_col1" class="data row3 col1" >... gjedde , 2 løk abbor , flyndre , torsk eller <b>sei</b> abbor , flyndre , makrell , torsk eller 2... </td>
     </tr>
     <tr>
-      <th id="T_2ab14_level0_row4" class="row_heading level0 row4" >8</th>
-      <td id="T_2ab14_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2009021700049'>URN:NBN:no-nb_digibok_2009021700049</a></td>
-      <td id="T_2ab14_row4_col1" class="data row4 col1" ><b>Sei</b> . Om sommeren er det størst forekomster</td>
+      <th id="T_34804_level0_row4" class="row_heading level0 row4" >86</th>
+      <td id="T_34804_row4_col0" class="data row4 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2021021007602'>URN:NBN:no-nb_digibok_2021021007602</a></td>
+      <td id="T_34804_row4_col1" class="data row4 col1" >200 g fersk eller frossen filet av <b>sei</b> eller torsk 4 poteter</td>
     </tr>
     <tr>
-      <th id="T_2ab14_level0_row5" class="row_heading level0 row5" >38</th>
-      <td id="T_2ab14_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2016012548102'>URN:NBN:no-nb_digibok_2016012548102</a></td>
-      <td id="T_2ab14_row5_col1" class="data row5 col1" >... Vask og pill rekene , og fjern den mørke tarmen , <b>sei</b> , mulle K a K a J 500... </td>
+      <th id="T_34804_level0_row5" class="row_heading level0 row5" >68</th>
+      <td id="T_34804_row5_col0" class="data row5 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_pliktmonografi_000027143'>URN:NBN:no-nb_pliktmonografi_000027143</a></td>
+      <td id="T_34804_row5_col1" class="data row5 col1" >... 400 g filet av f.eks torsk eller <b>sei</b> Fres grønnsaker et par minutter i smør i en stor kjele mens... </td>
     </tr>
     <tr>
-      <th id="T_2ab14_level0_row6" class="row_heading level0 row6" >13</th>
-      <td id="T_2ab14_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011102605018'>URN:NBN:no-nb_digibok_2011102605018</a></td>
-      <td id="T_2ab14_row6_col1" class="data row6 col1" >... Det var tørrfisk som ble brukt , men også saltet torsk og <b>sei</b> ble ofte brukt , spesielt torskenakker egnet... </td>
+      <th id="T_34804_level0_row6" class="row_heading level0 row6" >70</th>
+      <td id="T_34804_row6_col0" class="data row6 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011030803010'>URN:NBN:no-nb_digibok_2011030803010</a></td>
+      <td id="T_34804_row6_col1" class="data row6 col1" ><b>Sei</b> i rømmesaus</td>
     </tr>
     <tr>
-      <th id="T_2ab14_level0_row7" class="row_heading level0 row7" >46</th>
-      <td id="T_2ab14_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2021062448687'>URN:NBN:no-nb_digibok_2021062448687</a></td>
-      <td id="T_2ab14_row7_col1" class="data row7 col1" >... 57 Gammeldags sildesalat 14 Melboller 32 Sjokoladepletter 59 Gammelsaltet <b>sei</b> 13 Melkering 29 Smultringer 44 Glassmestersild 14 Middagspølse 39 Små... </td>
+      <th id="T_34804_level0_row7" class="row_heading level0 row7" >16</th>
+      <td id="T_34804_row7_col0" class="data row7 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2017082348021'>URN:NBN:no-nb_digibok_2017082348021</a></td>
+      <td id="T_34804_row7_col1" class="data row7 col1" >Stell og steik <b>sei</b> som forklart ovanfor . Server seibiff med steikt lauk .</td>
     </tr>
     <tr>
-      <th id="T_2ab14_level0_row8" class="row_heading level0 row8" >52</th>
-      <td id="T_2ab14_row8_col0" class="data row8 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2023030748125'>URN:NBN:no-nb_digibok_2023030748125</a></td>
-      <td id="T_2ab14_row8_col1" class="data row8 col1" >... Jeg fisket alt fra flyndre og kveite til <b>sei</b> og torsk . Interessen for og kunnskapen om råvarene fra sjøen... </td>
+      <th id="T_34804_level0_row8" class="row_heading level0 row8" >29</th>
+      <td id="T_34804_row8_col0" class="data row8 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2017010648124'>URN:NBN:no-nb_digibok_2017010648124</a></td>
+      <td id="T_34804_row8_col1" class="data row8 col1" >diarrhea in calves led rnilk replacer . Can . J . Anim . <b>Sei</b> . 49 : 305 , 1969.</td>
     </tr>
     <tr>
-      <th id="T_2ab14_level0_row9" class="row_heading level0 row9" >16</th>
-      <td id="T_2ab14_row9_col0" class="data row9 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2016012548102'>URN:NBN:no-nb_digibok_2016012548102</a></td>
-      <td id="T_2ab14_row9_col1" class="data row9 col1" >kolje , torsk , <b>sei</b> , uer</td>
+      <th id="T_34804_level0_row9" class="row_heading level0 row9" >11</th>
+      <td id="T_34804_row9_col0" class="data row9 col0" ><a target='_blank' href = 'https://urn.nb.no/URN:NBN:no-nb_digibok_2011030803010'>URN:NBN:no-nb_digibok_2011030803010</a></td>
+      <td id="T_34804_row9_col1" class="data row9 col1" >Oppskrifter på <b>sei</b></td>
     </tr>
   </tbody>
 </table>
@@ -752,23 +726,23 @@ document.write(`
   <tbody>
     <tr>
       <th>dl</th>
-      <td>130</td>
+      <td>122</td>
     </tr>
     <tr>
       <th>,</th>
-      <td>123</td>
-    </tr>
-    <tr>
-      <th>og</th>
-      <td>103</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>100</td>
+      <td>108</td>
     </tr>
     <tr>
       <th>.</th>
-      <td>95</td>
+      <td>106</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>92</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>89</td>
     </tr>
   </tbody>
 </table>
@@ -806,43 +780,43 @@ document.write(`
   <tbody>
     <tr>
       <th>dl</th>
-      <td>130</td>
+      <td>122</td>
     </tr>
     <tr>
       <th>,</th>
-      <td>123</td>
-    </tr>
-    <tr>
-      <th>og</th>
-      <td>103</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>100</td>
+      <td>108</td>
     </tr>
     <tr>
       <th>.</th>
-      <td>95</td>
+      <td>106</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>92</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>89</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>83</td>
+      <td>87</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>60</td>
+      <td>63</td>
     </tr>
     <tr>
-      <th>ss</th>
-      <td>47</td>
+      <th>en</th>
+      <td>43</td>
     </tr>
     <tr>
       <th>med</th>
-      <td>45</td>
+      <td>33</td>
     </tr>
     <tr>
-      <th>/</th>
-      <td>40</td>
+      <th>ss</th>
+      <td>28</td>
     </tr>
   </tbody>
 </table>
@@ -977,43 +951,43 @@ document.write(`
   <tbody>
     <tr>
       <th>.</th>
-      <td>110996</td>
+      <td>130687</td>
     </tr>
     <tr>
       <th>,</th>
-      <td>81221</td>
+      <td>99945</td>
     </tr>
     <tr>
       <th>og</th>
-      <td>69996</td>
+      <td>82952</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>55908</td>
+      <td>64064</td>
     </tr>
     <tr>
       <th>med</th>
-      <td>28137</td>
+      <td>35683</td>
     </tr>
     <tr>
       <th>til</th>
-      <td>23496</td>
-    </tr>
-    <tr>
-      <th>en</th>
-      <td>22829</td>
+      <td>30498</td>
     </tr>
     <tr>
       <th>er</th>
-      <td>21912</td>
+      <td>30239</td>
     </tr>
     <tr>
-      <th>på</th>
-      <td>20538</td>
+      <th>en</th>
+      <td>25947</td>
     </tr>
     <tr>
       <th>av</th>
-      <td>20474</td>
+      <td>25087</td>
+    </tr>
+    <tr>
+      <th>på</th>
+      <td>24693</td>
     </tr>
   </tbody>
 </table>
@@ -1055,51 +1029,51 @@ document.write(`
   <tbody>
     <tr>
       <th>dl</th>
-      <td>130</td>
+      <td>122</td>
     </tr>
     <tr>
       <th>,</th>
-      <td>123</td>
-    </tr>
-    <tr>
-      <th>og</th>
-      <td>103</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>100</td>
+      <td>108</td>
     </tr>
     <tr>
       <th>.</th>
-      <td>95</td>
+      <td>106</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>92</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>89</td>
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
     </tr>
     <tr>
-      <th>jeg</th>
+      <th>hvitløkkløfter</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>japansk</th>
+      <th>hvitløksfedd</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>ja</th>
+      <th>hvitpepperkorn</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>Rein</th>
+      <th>Mosten</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>Plomme</th>
+      <th>!</th>
       <td>1</td>
     </tr>
   </tbody>
 </table>
-<p>748 rows × 1 columns</p>
+<p>862 rows × 1 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -1140,51 +1114,51 @@ document.write(`
   <tbody>
     <tr>
       <th>dl</th>
-      <td>130</td>
+      <td>122</td>
     </tr>
     <tr>
       <th>,</th>
-      <td>123</td>
-    </tr>
-    <tr>
-      <th>og</th>
-      <td>103</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>100</td>
+      <td>108</td>
     </tr>
     <tr>
       <th>.</th>
-      <td>95</td>
+      <td>106</td>
+    </tr>
+    <tr>
+      <th>og</th>
+      <td>92</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>89</td>
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
     </tr>
     <tr>
-      <th>jeg</th>
+      <th>hvitløkkløfter</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>japansk</th>
+      <th>hvitløksfedd</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>ja</th>
+      <th>hvitpepperkorn</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>Rein</th>
+      <th>Mosten</th>
       <td>1</td>
     </tr>
     <tr>
-      <th>Plomme</th>
+      <th>!</th>
       <td>1</td>
     </tr>
   </tbody>
 </table>
-<p>748 rows × 1 columns</p>
+<p>862 rows × 1 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -1236,23 +1210,23 @@ document.write(`
   <tbody>
     <tr>
       <th>.</th>
-      <td>0.0561</td>
+      <td>0.054504</td>
     </tr>
     <tr>
       <th>,</th>
-      <td>0.041051</td>
+      <td>0.041683</td>
     </tr>
     <tr>
       <th>og</th>
-      <td>0.035378</td>
+      <td>0.034596</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>0.028257</td>
+      <td>0.026718</td>
     </tr>
     <tr>
       <th>med</th>
-      <td>0.014221</td>
+      <td>0.014882</td>
     </tr>
   </tbody>
 </table>
@@ -1352,7 +1326,7 @@ document.write(`
     </tr>
     <tr>
       <th>%</th>
-      <td>1</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>'</th>
@@ -1360,11 +1334,11 @@ document.write(`
     </tr>
     <tr>
       <th>(</th>
-      <td>16</td>
+      <td>18</td>
     </tr>
     <tr>
       <th>)</th>
-      <td>18</td>
+      <td>16</td>
     </tr>
   </tbody>
 </table>
@@ -1415,84 +1389,84 @@ document.write(`
   </thead>
   <tbody>
     <tr>
+      <th>timian</th>
+      <td>3203.673338</td>
+    </tr>
+    <tr>
       <th>hvitvin</th>
-      <td>2350.803006</td>
+      <td>2484.872240</td>
     </tr>
     <tr>
       <th>dl</th>
-      <td>2293.312623</td>
-    </tr>
-    <tr>
-      <th>timian</th>
-      <td>1852.168867</td>
-    </tr>
-    <tr>
-      <th>Tilsett</th>
-      <td>1501.565860</td>
-    </tr>
-    <tr>
-      <th>konjakk</th>
-      <td>1350.283560</td>
-    </tr>
-    <tr>
-      <th>plommer</th>
-      <td>1039.702480</td>
-    </tr>
-    <tr>
-      <th>olivenolje</th>
-      <td>1008.837956</td>
-    </tr>
-    <tr>
-      <th>kjele</th>
-      <td>936.131202</td>
-    </tr>
-    <tr>
-      <th>pepper</th>
-      <td>804.357939</td>
-    </tr>
-    <tr>
-      <th>Mariner</th>
-      <td>796.114548</td>
-    </tr>
-    <tr>
-      <th>krydder</th>
-      <td>795.305956</td>
+      <td>2068.115939</td>
     </tr>
     <tr>
       <th>buljong</th>
-      <td>788.195891</td>
-    </tr>
-    <tr>
-      <th>hakket</th>
-      <td>779.007518</td>
-    </tr>
-    <tr>
-      <th>sirup</th>
-      <td>727.853524</td>
-    </tr>
-    <tr>
-      <th>løk</th>
-      <td>722.895085</td>
-    </tr>
-    <tr>
-      <th>finhakket</th>
-      <td>705.380701</td>
-    </tr>
-    <tr>
-      <th>rødvin</th>
-      <td>675.943326</td>
-    </tr>
-    <tr>
-      <th>tørr</th>
-      <td>645.746589</td>
-    </tr>
-    <tr>
-      <th>selleri</th>
-      <td>634.523589</td>
+      <td>1893.517473</td>
     </tr>
     <tr>
       <th>eddik</th>
-      <td>631.984947</td>
+      <td>1012.163391</td>
+    </tr>
+    <tr>
+      <th>burgunder</th>
+      <td>909.053282</td>
+    </tr>
+    <tr>
+      <th>kylling</th>
+      <td>723.024847</td>
+    </tr>
+    <tr>
+      <th>Tilsett</th>
+      <td>721.455472</td>
+    </tr>
+    <tr>
+      <th>Rens</th>
+      <td>710.985229</td>
+    </tr>
+    <tr>
+      <th>alkoholen</th>
+      <td>695.823191</td>
+    </tr>
+    <tr>
+      <th>hvitløk</th>
+      <td>684.052590</td>
+    </tr>
+    <tr>
+      <th>finhakket</th>
+      <td>677.826767</td>
+    </tr>
+    <tr>
+      <th>kanel</th>
+      <td>592.364523</td>
+    </tr>
+    <tr>
+      <th>hvetemel</th>
+      <td>563.964309</td>
+    </tr>
+    <tr>
+      <th>Kok</th>
+      <td>524.740942</td>
+    </tr>
+    <tr>
+      <th>Curacao</th>
+      <td>492.278000</td>
+    </tr>
+    <tr>
+      <th>tomater</th>
+      <td>465.204114</td>
+    </tr>
+    <tr>
+      <th>konjakk</th>
+      <td>432.512703</td>
+    </tr>
+    <tr>
+      <th>Vinmonopolets</th>
+      <td>424.149894</td>
+    </tr>
+    <tr>
+      <th>Hell</th>
+      <td>393.080611</td>
     </tr>
   </tbody>
 </table>
@@ -1533,51 +1507,51 @@ document.write(`
   <tbody>
     <tr>
       <th>.</th>
-      <td>0.0561</td>
+      <td>0.054504</td>
     </tr>
     <tr>
       <th>,</th>
-      <td>0.041051</td>
+      <td>0.041683</td>
     </tr>
     <tr>
       <th>og</th>
-      <td>0.035378</td>
+      <td>0.034596</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>0.028257</td>
+      <td>0.026718</td>
     </tr>
     <tr>
       <th>med</th>
-      <td>0.014221</td>
+      <td>0.014882</td>
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
     </tr>
     <tr>
-      <th>nødhjelpsmat</th>
-      <td>0.000001</td>
+      <th>eggnudlene</th>
+      <td>0.0</td>
     </tr>
     <tr>
-      <th>steine-</th>
-      <td>0.000001</td>
+      <th>storfelever</th>
+      <td>0.0</td>
     </tr>
     <tr>
-      <th>EYLL</th>
-      <td>0.000001</td>
+      <th>gagnlegare</th>
+      <td>0.0</td>
     </tr>
     <tr>
-      <th>brødsaus</th>
-      <td>0.000001</td>
+      <th>cateringvirksomheter</th>
+      <td>0.0</td>
     </tr>
     <tr>
-      <th>pepperrotfamilien</th>
-      <td>0.000001</td>
+      <th>kaldeste</th>
+      <td>0.0</td>
     </tr>
   </tbody>
 </table>
-<p>111164 rows × 1 columns</p>
+<p>124014 rows × 1 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -1617,84 +1591,84 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>har</th>
-      <td>0.026891</td>
+      <th>ca.</th>
+      <td>0.031865</td>
     </tr>
     <tr>
-      <th>opp</th>
-      <td>0.037225</td>
+      <th>skal</th>
+      <td>0.041399</td>
     </tr>
     <tr>
-      <th>minutter</th>
-      <td>0.038755</td>
+      <th>vi</th>
+      <td>0.052083</td>
     </tr>
     <tr>
-      <th>men</th>
-      <td>0.041737</td>
+      <th>Legg</th>
+      <td>0.055557</td>
     </tr>
     <tr>
-      <th>for</th>
-      <td>0.041761</td>
+      <th>*</th>
+      <td>0.058861</td>
+    </tr>
+    <tr>
+      <th>etter</th>
+      <td>0.061036</td>
+    </tr>
+    <tr>
+      <th>:</th>
+      <td>0.075639</td>
+    </tr>
+    <tr>
+      <th>°</th>
+      <td>0.078831</td>
     </tr>
     <tr>
       <th>om</th>
-      <td>0.043783</td>
+      <td>0.080771</td>
     </tr>
     <tr>
-      <th>var</th>
-      <td>0.045263</td>
+      <th>vil</th>
+      <td>0.085918</td>
     </tr>
     <tr>
-      <th>at</th>
-      <td>0.054856</td>
+      <th>C</th>
+      <td>0.085956</td>
     </tr>
     <tr>
-      <th>blir</th>
-      <td>0.058007</td>
+      <th>ut</th>
+      <td>0.086047</td>
     </tr>
     <tr>
-      <th>før</th>
-      <td>0.071289</td>
+      <th>mer</th>
+      <td>0.086682</td>
     </tr>
     <tr>
-      <th>ble</th>
-      <td>0.072577</td>
+      <th>andre</th>
+      <td>0.08959</td>
     </tr>
     <tr>
-      <th>være</th>
-      <td>0.07625</td>
+      <th>men</th>
+      <td>0.093036</td>
     </tr>
     <tr>
-      <th>s</th>
-      <td>0.080353</td>
+      <th>side</th>
+      <td>0.093321</td>
     </tr>
     <tr>
-      <th>varme</th>
-      <td>0.080776</td>
+      <th>30</th>
+      <td>0.094773</td>
     </tr>
     <tr>
-      <th>^</th>
-      <td>0.083784</td>
+      <th>!</th>
+      <td>0.096845</td>
     </tr>
     <tr>
-      <th>'</th>
-      <td>0.084514</td>
+      <th>ikke</th>
+      <td>0.097388</td>
     </tr>
     <tr>
-      <th>under</th>
-      <td>0.086093</td>
-    </tr>
-    <tr>
-      <th>når</th>
-      <td>0.087431</td>
-    </tr>
-    <tr>
-      <th>Den</th>
-      <td>0.089708</td>
-    </tr>
-    <tr>
-      <th>noen</th>
-      <td>0.091113</td>
+      <th>små</th>
+      <td>0.098409</td>
     </tr>
   </tbody>
 </table>
@@ -1715,7 +1689,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f4b6eb3c79d479f0a79940a175096fd3be3c31187751e20b44c95229aac3bfba.png" src="../_images/f4b6eb3c79d479f0a79940a175096fd3be3c31187751e20b44c95229aac3bfba.png" />
+<img alt="../_images/7009c9754ad4b9a20945270c6d5a3635b09b9d415ba48344355104ebe62c2c39.png" src="../_images/7009c9754ad4b9a20945270c6d5a3635b09b9d415ba48344355104ebe62c2c39.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1727,7 +1701,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/323193d70cb1705ed2e0784e230d76de4a3ac2161129f1269e75a01c9b08be15.png" src="../_images/323193d70cb1705ed2e0784e230d76de4a3ac2161129f1269e75a01c9b08be15.png" />
+<img alt="../_images/c9dc3ffd5609c42c7165c365bacc636db2564aae7a54d820e3f495c6177217fe.png" src="../_images/c9dc3ffd5609c42c7165c365bacc636db2564aae7a54d820e3f495c6177217fe.png" />
 </div>
 </div>
 </section>
@@ -1798,14 +1772,16 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konstruer-et-korpus-med-dewey">1.5.1. Konstruer et korpus med Dewey</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lager-kollokasjoner-fra-korpuset">1.5.2. Lager kollokasjoner fra korpuset</a><ul class="nav section-nav flex-column">
@@ -1875,8 +1851,8 @@ By Nasjonalbiblioteket
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>
