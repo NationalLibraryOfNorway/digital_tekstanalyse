@@ -1,19 +1,49 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NationalLibraryOfNorway/digital_tekstanalyse/HEAD)
-# DHLAB
+# DHLAB – digital tekstanalyse
 
-[Launch NBviewer](https://nbviewer.org/github/NationalLibraryOfNorway/digital_tekstanalyse/tree/main/) 
+Dette repoet inneholder koden som lager jupyterboka som kjører på https://nationallibraryofnorway.github.io/digital_tekstanalyse/
 
-Nasjonalbiblioteket har utviklet et API (Application Programming Interface) mot tekstene i NB Digital (bøker og aviser) og en funksjonalitet for bruk av API-et i Jupyter Notebook som kan benyttes av forskere. Jupyter Notebook kan benyttes uten kjennskap til programmering. Med API-et er det mulig å studere data fra de digitale tekstene for eksempel ved generering av ordfrekvenslister, konkordanser, kollokasjoner og n-grammer og ved uttrekk av navn og narrative grafer. Alle uttrekk kan gjøres på enkeltverk eller definerte korpus. Bak API-et er det en kobling til metadata slik at korpus kan defineres på bakgrunn av bibliografisk informasjon.
+## Installasjon
 
-Klikk på "launch binder"-ikonet over for å åpne repositoriet i Binder
+### Med uv
 
+```bash
+uv sync
+```
+
+### Med Poetry
+
+```bash
+poetry install
+```
+
+### Med venv og pip
+
+```bash
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -e .
+```
+
+## Bruk
+Start Jupyter og åpne notatbøkene i `tutorial/` eller `cookbook/`:
+
+```bash
+uv run jupyter notebook
+```
+
+Eller bruk [Binder](https://mybinder.org/v2/gh/NationalLibraryOfNorway/digital_tekstanalyse/HEAD) for å kjøre notatbøkene i nettleseren uten lokal installasjon.
+
+## Bygg jupyter-book
+```bash
+uv run jupyter-book build .
+```
+Deretter kan du åpne `_build/html/index.html` i browseren. 
 
 ## Deploy
 
-Build with jupyter-book. Deploy to gh-pages with ghp-import.
+Bygg og deploy til gh-pages med ghp-import:
 
-```python
-jupyter-book build .
-# pip install ghp-import
-ghp-import -n -p -f _build/html
+```bash
+uv run jupyter-book build .
+uv run ghp-import -n -p -f _build/html
 ```

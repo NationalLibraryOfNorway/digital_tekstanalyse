@@ -10,7 +10,7 @@ from typing import Generator, List, Union
 import dhlab as dh
 from dhlab.api.dhlab_api import concordance, get_chunks_para
 from dhlab.constants import BASE_URL
-from dhlab.nbtokenizer import tokenize
+from nb_tokenizer import tokenize
 
 
 # File handling util functions
@@ -115,9 +115,7 @@ def group_index_terms(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def count_terms_in_doc(
-    urns: List[str],
-    words: Union[list, str],
-    docid_column="dhlabid"
+    urns: List[str], words: Union[list, str], docid_column="dhlabid"
 ):
     """Similar functionality as ``dhlab.api.dhlab_api.get_document_frequencies``,
     except the dataframe isn't pivoted.
@@ -131,7 +129,7 @@ def count_terms_in_doc(
         df = pd.DataFrame(result, columns=cols)
     except requests.exceptions.JSONDecodeError as e:
         logging.error(f"Couldn't decode JSON object: {e}")
-        logging.info(f"Returning empty dataframe instead of word counts")
+        logging.info("Returning empty dataframe instead of word counts")
         df = pd.DataFrame(columns=cols)
 
     df = df.drop("urncount", axis=1)
@@ -187,9 +185,7 @@ def coll_sentiment(coll, word="barnevern", return_score_only=False):
 
 
 def sentiment_by_place(
-    cities=["Kristiansand", "Stavanger"],
-    from_year=1999,
-    to_year=2010
+    cities=["Kristiansand", "Stavanger"], from_year=1999, to_year=2010
 ):
 
     for city in cities:
@@ -261,6 +257,7 @@ def compute_sentiment_analysis(*args, **kwargs):
 
 
 # DUMPING GROUND
+
 
 # Unnecessary function
 def unpivot(frame):
