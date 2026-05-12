@@ -4,4 +4,4 @@ Dette er eksempler på grunnleggende bruk av Pythonbiblioteket `dhlab`, laget me
 
 ## Kjør eksemplene selv
 
-Notebøkene kan åpnes i [binder](https://mybinder.org/v2/gh/nationallibraryofnorway/digital_tekstanalyse/main) eller [colab](https://colab.research.google.com/github/NationalLibraryOfNorway/digital_tekstanalyse) for en interaktiv opplevelse.
+Notebøkene kan åpnes i [binder](https://mybinder.org/v2/gh/nationallibraryofnorway/digital_tekstanalyse/update_binder_link) eller [colab](https://colab.research.google.com/github/NationalLibraryOfNorway/digital_tekstanalyse) for en interaktiv opplevelse.
