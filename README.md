@@ -31,7 +31,7 @@ Start Jupyter og åpne notatbøkene i `tutorial/` eller `cookbook/`:
 uv run jupyter notebook
 ```
 
-Eller bruk [Binder](https://mybinder.org/v2/gh/NationalLibraryOfNorway/digital_tekstanalyse/update_binder_link) for å kjøre notatbøkene i nettleseren uten lokal installasjon.
+Eller bruk [Binder](https://mybinder.org/v2/gh/NationalLibraryOfNorway/digital_tekstanalyse/HEAD) for å kjøre notatbøkene i nettleseren uten lokal installasjon.
 
 ## Bygg jupyter-book
 ```bash
